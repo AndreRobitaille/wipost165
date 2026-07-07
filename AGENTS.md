@@ -2,6 +2,7 @@
 
 - This is an early-stage repo for a WordPress-based website for American Legion Post 165 in Two Rivers, WI.
 - Project context documents live under `docs/` and should be read before major architecture, design, content, or communication decisions.
+- Current project handoff/status for developers and designers lives at `docs/HANDOFF.md`.
 - Superpowers design specs and implementation plans live under `docs/superpowers/`.
 - The repository owns the custom WordPress theme, validation scripts, documentation, and deployment workflow. WordPress owns live wp-admin content, events, posts, media, menus, and plugin settings unless explicitly exported.
 - Install command: no dependency install is required yet; use Node.js 20+.
