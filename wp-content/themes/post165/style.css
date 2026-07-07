@@ -13,8 +13,10 @@ Text Domain: post165
 Tags: block-patterns, full-site-editing, accessibility-ready
 */
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
