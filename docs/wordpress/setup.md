@@ -29,7 +29,13 @@ Create these pages:
 
 Set **Home** as the static front page in Settings → Reading.
 
-The homepage content comes from the theme's `front-page.html` template and starter patterns, not from page body content.
+The homepage content comes from `wp-content/themes/post165/templates/front-page.html` and starter patterns, not from page body content.
+
+In v1, homepage sections are theme/pattern-driven; routine editors should update events, contact, and page content instead of rebuilding homepage sections.
+
+If homepage copy or section order must change, use the Site Editor/template workflow or change the theme pattern files in Git and redeploy.
+
+The Events item in the header Navigation block should link to The Events Calendar archive/landing URL (commonly `/events/`, adjusted if plugin settings differ), not to a normal page created by editors.
 
 The Events section should use The Events Calendar events archive/landing page. Do not create a normal Events page unless later plugin configuration requires one.
 
@@ -61,6 +67,6 @@ Confirm these details before publishing:
 
 - Use events for dated activities.
 - Use posts only for occasional updates that should remain visible as articles.
-- Do not rebuild the homepage by typing content into the Home page body; edit homepage copy through the theme/Site Editor workflow when needed in v1.
+- Do not rebuild the homepage by typing content into the Home page body; edit homepage copy through the theme/Site Editor workflow or by updating theme pattern files in Git and redeploying when needed in v1.
 - Do not add online donations until payment processing and treasurer workflow are approved.
 - Do not add member-only resources until v2.
