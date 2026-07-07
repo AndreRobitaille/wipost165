@@ -1032,7 +1032,13 @@ Configure these repository secrets:
 
 The workflow runs static validation, then uploads `wp-content/themes/post165/` to `FTP_SERVER_DIR`.
 
+The workflow uses FTPS by default. Verify NixiHost/your host secure FTP mode before the first deployment.
+
 The workflow is manual by default through `workflow_dispatch`. Automatic deployment on every push can be added later after the first successful manual deployment.
+
+Use `ftps-legacy` only if the host requires it.
+
+The third-party deploy action is pinned to an immutable commit for safety.
 
 ## Safety notes
 
@@ -1048,6 +1054,9 @@ Create `.github/workflows/deploy-theme.yml` with this content:
 
 ```yaml
 name: Deploy WordPress Theme
+
+permissions:
+  contents: read
 
 on:
   workflow_dispatch:
@@ -1068,11 +1077,13 @@ jobs:
         run: npm test
 
       - name: Deploy theme over FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        # v4.3.5 tag target
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
           local-dir: ./wp-content/themes/post165/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
 ```
