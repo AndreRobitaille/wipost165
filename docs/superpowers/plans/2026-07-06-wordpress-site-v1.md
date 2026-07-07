@@ -887,19 +887,24 @@ Posts are allowed for occasional updates. The homepage must not depend on a rece
 
 ## Pages
 
-Create these pages in WordPress:
+Create these WordPress pages:
 
 - Home: assign as the static front page.
-- Events: The Events Calendar archive/landing page (not a normal editor-created page unless later plugin configuration requires one).
 - Membership: use the `Membership page starter` pattern.
 - About: use the `About page starter` pattern.
 - Contact: use the `Contact page starter` pattern.
 
+Events is plugin-owned: use The Events Calendar archive/landing URL, commonly `/events/` and adjusted if plugin settings differ. Do not create a normal Events page for v1 unless later plugin configuration requires one.
+
 ## Editing rules
 
 - Edit event details in the event plugin.
-- Edit ordinary page text in the block editor.
-- Use Post 165 patterns instead of manually rebuilding homepage sections.
+- Edit ordinary page text on Membership, About, and Contact in the block editor.
+- Routine editors should not edit the Home page body or rebuild homepage sections.
+- Homepage sections come from `wp-content/themes/post165/templates/front-page.html` and Post 165 theme patterns.
+- Assigned site/theme editors can inspect the homepage through Appearance → Editor → Templates → Front Page, Preview changes, and Save only when they are intentionally changing the front page template.
+- Structural homepage changes or default pattern copy changes should be made in Git theme files and redeployed.
+- If unsure, do not save Front Page template changes; ask the theme maintainer.
 - Keep support messaging contact-oriented until donation processing is approved.
 - Keep member-only resources out of v1.
 ```
@@ -931,7 +936,7 @@ Create these event categories:
 
 ## Pages
 
-Create these pages:
+Create these WordPress pages:
 
 - Home
 - Membership
@@ -942,11 +947,15 @@ Set **Home** as the static front page in Settings → Reading.
 
 The Events section is plugin-owned: use The Events Calendar archive/landing URL, commonly `/events/` and adjusted if plugin settings differ. Do not create a normal Events page for v1 unless later plugin configuration requires one.
 
-For Membership, About, and Contact, insert the matching Post 165 starter pattern and edit the text as needed.
+For Membership, About, and Contact, insert the matching starter pattern from the **Post 165** pattern category and edit the text as needed.
+
+The Home page only needs to be assigned as the static front page. Do not rebuild homepage sections by typing content into the Home page body. The homepage comes from `wp-content/themes/post165/templates/front-page.html` and Post 165 theme patterns.
+
+Routine editors should update events, contact facts, and page body text on Membership, About, and Contact. Assigned site/theme editors can inspect or edit the homepage through Appearance → Editor → Templates → Front Page, then Preview and Save only if they intentionally mean to change the front page template. Structural homepage changes or default pattern copy changes should be made in Git theme files and redeployed. If unsure, do not save Front Page template changes; ask the theme maintainer.
 
 ## Menu
 
-Create a primary navigation menu with:
+In Appearance → Editor, populate the header Navigation block with:
 
 - Home
 - Events
