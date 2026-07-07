@@ -57,6 +57,8 @@ Update the header Navigation block in the Site Editor with:
 - About
 - Contact
 
+The shipped theme seeds these five v1 navigation links by default. Editors can adjust the Events URL in the Navigation block if The Events Calendar uses a different archive URL or a staging/subdirectory path.
+
 ## Verify contact facts before launch
 
 Confirm these details before publishing:
