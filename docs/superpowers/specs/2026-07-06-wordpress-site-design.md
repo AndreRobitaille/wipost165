@@ -129,6 +129,8 @@ Events should be CMS-managed through a WordPress event/calendar plugin. The even
 
 The homepage should show both public events and member/post events, but keep them visually separated. Honor guard and ceremonial items can be highlighted when relevant.
 
+The Events navigation item should point to the event plugin archive/landing URL, commonly `/events/`, adjusted if plugin settings differ.
+
 ### Membership
 
 Membership should speak first to eligible veterans. It should lead with welcome, belonging, service, family connection, and flexible involvement before explaining eligibility mechanics.

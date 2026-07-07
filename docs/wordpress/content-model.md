@@ -30,7 +30,7 @@ Block theme navigation:
 
 Populate the header Navigation block in the Site Editor with these links.
 
-The Events item should link to The Events Calendar archive/landing URL (commonly `/events/`, adjusted if plugin settings differ), not to a normal page created by editors.
+The Events item should point to The Events Calendar archive/landing URL, commonly `/events/` and adjusted if plugin settings differ, not to a normal page created by editors.
 
 Do not add Programs, Four Pillars, News, Support, or Member Resources to the top-level navigation until there is enough real content to justify the page.
 
@@ -57,19 +57,20 @@ Create these WordPress pages:
 - About: use the `About page starter` pattern.
 - Contact: use the `Contact page starter` pattern.
 
-Events is plugin-owned: use The Events Calendar events archive/landing page; do not create a normal Events page unless later plugin configuration requires one.
+Events is plugin-owned: use The Events Calendar events archive/landing page, commonly `/events/` and adjusted if plugin settings differ; do not create a normal Events page unless later plugin configuration requires one.
 
 ## Editing rules
 
 - Edit event details in the event plugin.
 - Edit ordinary page text in the block editor.
+- Routine editors: update events, contact facts, and page body text on Membership/About/Contact. Do not edit the Front Page template.
+- Site/theme editor: if assigned, use Appearance → Editor → Templates → Front Page for small copy or order adjustments, then Preview and Save.
+- Structural changes or default pattern copy changes: edit the Git theme pattern/template files and redeploy.
+- If unsure, do not save Front Page template changes; ask the theme maintainer.
 - Homepage sections come from the theme template and patterns in `wp-content/themes/post165/templates/front-page.html`.
 - Do not type homepage content into the Home page body.
 - To inspect or edit the homepage template, use Appearance → Editor → Templates → Front Page.
 - To inspect available Post 165 patterns, use Appearance → Editor → Patterns → Post 165, if supported by the installed WordPress version.
-- Routine content editors should avoid changing the Front Page template unless assigned to theme/site editing.
-- In v1, homepage sections are theme/pattern-driven; routine editors should update events, contact, and page content instead of rebuilding homepage sections.
-- If homepage copy or section order must change structurally, update the theme pattern files in Git and redeploy.
 - Use Post 165 patterns instead of manually rebuilding homepage sections.
 - Keep support messaging contact-oriented until donation processing is approved.
 - Keep member-only resources out of v1.

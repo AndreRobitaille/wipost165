@@ -934,12 +934,13 @@ Create these event categories:
 Create these pages:
 
 - Home
-- Events
 - Membership
 - About
 - Contact
 
 Set **Home** as the static front page in Settings → Reading.
+
+The Events section is plugin-owned: use The Events Calendar archive/landing URL, commonly `/events/` and adjusted if plugin settings differ. Do not create a normal Events page for v1 unless later plugin configuration requires one.
 
 For Membership, About, and Contact, insert the matching Post 165 starter pattern and edit the text as needed.
 
@@ -952,6 +953,8 @@ Create a primary navigation menu with:
 - Membership
 - About
 - Contact
+
+The Events navigation item should point to The Events Calendar archive/landing URL, commonly `/events/` and adjusted if plugin settings differ.
 
 ## Verify contact facts before launch
 

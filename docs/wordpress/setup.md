@@ -31,17 +31,17 @@ Set **Home** as the static front page in Settings → Reading.
 
 The homepage content comes from `wp-content/themes/post165/templates/front-page.html` and starter patterns, not from page body content.
 
-In v1, homepage sections are theme/pattern-driven; routine editors should update events, contact, and page content instead of rebuilding homepage sections.
+Routine editors: update events, contact facts, and page body text on Membership/About/Contact. Do not edit the Front Page template.
 
-To inspect or edit the homepage template, go to Appearance → Editor → Templates → Front Page.
+Site/theme editor: if assigned, use Appearance → Editor → Templates → Front Page for small copy or order adjustments, then Preview and Save.
+
+Structural changes or default pattern copy changes: edit the Git theme pattern/template files and redeploy.
+
+If unsure, do not save Front Page template changes; ask the theme maintainer.
 
 To inspect available Post 165 patterns, go to Appearance → Editor → Patterns → Post 165, if the installed WordPress version supports pattern browsing.
 
-Routine content editors should avoid changing the Front Page template unless they are assigned to theme/site editing. Normal updates should be events, contact, and page text.
-
-If homepage copy or section order must change structurally, update the theme pattern files in Git and redeploy.
-
-The Events item in the header Navigation block should link to The Events Calendar archive/landing URL (commonly `/events/`, adjusted if plugin settings differ), not to a normal page created by editors.
+The Events item in the header Navigation block should link to The Events Calendar archive/landing URL, commonly `/events/` and adjusted if plugin settings differ, not to a normal page created by editors.
 
 The Events section should use The Events Calendar events archive/landing page. Do not create a normal Events page unless later plugin configuration requires one.
 
