@@ -15,7 +15,13 @@ Configure these repository secrets:
 
 The workflow runs static validation, then uploads `wp-content/themes/post165/` to `FTP_SERVER_DIR`.
 
+The workflow uses FTPS by default. Verify NixiHost/your host secure FTP mode before the first deployment.
+
 The workflow is manual by default through `workflow_dispatch`. Automatic deployment on every push can be added later after the first successful manual deployment.
+
+Use `ftps-legacy` only if the host requires it.
+
+The third-party deploy action is pinned to an immutable commit for safety.
 
 ## Safety notes
 

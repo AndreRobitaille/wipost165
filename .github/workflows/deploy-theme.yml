@@ -1,5 +1,8 @@
 name: Deploy WordPress Theme
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
 
@@ -19,10 +22,12 @@ jobs:
         run: npm test
 
       - name: Deploy theme over FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        # v4.3.5 tag target
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
           local-dir: ./wp-content/themes/post165/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
