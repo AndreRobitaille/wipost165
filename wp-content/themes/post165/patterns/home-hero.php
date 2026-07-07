@@ -21,11 +21,11 @@
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
 <div class="wp-block-buttons" style="margin-top:2rem"><!-- wp:button {"backgroundColor":"red","textColor":"white"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-red-background-color has-text-color has-background wp-element-button" href="/membership/">Learn About Membership</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-red-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/membership/' ) ); ?>">Learn About Membership</a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"backgroundColor":"cream","textColor":"navy","className":"is-style-fill"} -->
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-navy-color has-cream-background-color has-text-color has-background wp-element-button" href="/events/">View Events</a></div>
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-navy-color has-cream-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/events/' ) ); ?>">View Events</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>

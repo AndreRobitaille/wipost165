@@ -29,6 +29,6 @@
 <!-- /wp:columns -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"red","textColor":"white"} --><div class="wp-block-button"><a class="wp-block-button__link has-white-color has-red-background-color has-text-color has-background wp-element-button" href="/events/">View Events</a></div><!-- /wp:button --></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"red","textColor":"white"} --><div class="wp-block-button"><a class="wp-block-button__link has-white-color has-red-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( home_url( '/events/' ) ); ?>">View Events</a></div><!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
