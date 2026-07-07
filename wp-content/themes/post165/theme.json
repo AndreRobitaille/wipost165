@@ -7,12 +7,15 @@
       "contentSize": "760px",
       "wideSize": "1160px"
     },
+    "custom": {
+      "goldLight": "#d9b45b"
+    },
     "color": {
       "defaultDuotone": false,
       "defaultGradients": false,
       "defaultPalette": false,
       "palette": [
-        { "slug": "navy", "name": "Navy", "color": "#10264a" },
+        { "slug": "navy", "name": "Navy", "color": "#0e2340" },
         { "slug": "cream", "name": "Cream", "color": "#f7f1e3" },
         { "slug": "gold", "name": "Gold", "color": "#c49a3a" },
         { "slug": "red", "name": "Red", "color": "#9f1d2e" },
@@ -32,24 +35,43 @@
     },
     "typography": {
       "defaultFontSizes": false,
+      "fluid": true,
       "fontFamilies": [
         {
           "slug": "serif",
           "name": "Serif",
-          "fontFamily": "Georgia, 'Times New Roman', serif"
+          "fontFamily": "Fraunces, Georgia, 'Times New Roman', serif",
+          "fontFace": [
+            {
+              "fontFamily": "Fraunces",
+              "fontStyle": "normal",
+              "fontWeight": "300 700",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/fraunces-latin.woff2"]
+            }
+          ]
         },
         {
           "slug": "sans",
           "name": "Sans",
-          "fontFamily": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          "fontFamily": "'Public Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Public Sans",
+              "fontStyle": "normal",
+              "fontWeight": "300 700",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/public-sans-latin.woff2"]
+            }
+          ]
         }
       ],
       "fontSizes": [
         { "slug": "small", "name": "Small", "size": "0.9rem" },
         { "slug": "medium", "name": "Medium", "size": "1.05rem" },
-        { "slug": "large", "name": "Large", "size": "1.35rem" },
-        { "slug": "x-large", "name": "Extra Large", "size": "2rem" },
-        { "slug": "hero", "name": "Hero", "size": "clamp(2.6rem, 7vw, 5.25rem)" }
+        { "slug": "large", "name": "Large", "size": "1.3rem", "fluid": { "min": "1.15rem", "max": "1.35rem" } },
+        { "slug": "x-large", "name": "Extra Large", "size": "2rem", "fluid": { "min": "1.7rem", "max": "2.4rem" } },
+        { "slug": "hero", "name": "Hero", "size": "clamp(2.4rem, 6vw, 4.5rem)" }
       ]
     }
   },
@@ -67,19 +89,23 @@
       "button": {
         "border": { "radius": "999px" },
         "color": { "background": "var(--wp--preset--color--red)", "text": "var(--wp--preset--color--white)" },
-        "spacing": { "padding": { "top": "0.75rem", "right": "1.25rem", "bottom": "0.75rem", "left": "1.25rem" } }
+        "spacing": { "padding": { "top": "0.8rem", "right": "1.4rem", "bottom": "0.8rem", "left": "1.4rem" } },
+        "typography": { "fontWeight": "700", "letterSpacing": "0.02em" },
+        ":hover": { "color": { "background": "var(--wp--preset--color--navy)", "text": "var(--wp--preset--color--white)" } },
+        ":focus": { "color": { "background": "var(--wp--preset--color--navy)", "text": "var(--wp--preset--color--white)" } }
       },
       "heading": {
         "color": { "text": "var(--wp--preset--color--navy)" },
-        "typography": { "fontFamily": "var(--wp--preset--font-family--serif)", "lineHeight": "1.12" }
+        "typography": { "fontFamily": "var(--wp--preset--font-family--serif)", "fontWeight": "600", "lineHeight": "1.1", "letterSpacing": "-0.01em" }
       },
       "link": {
-        "color": { "text": "var(--wp--preset--color--red)" }
+        "color": { "text": "var(--wp--preset--color--red)" },
+        ":hover": { "color": { "text": "var(--wp--preset--color--navy)" } }
       }
     },
     "blocks": {
       "core/navigation": {
-        "typography": { "fontSize": "var(--wp--preset--font-size--small)", "fontWeight": "700" }
+        "typography": { "fontSize": "var(--wp--preset--font-size--small)", "fontWeight": "700", "letterSpacing": "0.04em", "textTransform": "uppercase" }
       }
     }
   },
