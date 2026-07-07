@@ -76,7 +76,7 @@ a { text-underline-offset: 0.18em; }
   text-transform: uppercase;
 }
 .post165-eyebrow::before { content: "\2605"; font-size: 0.85em; }
-.has-text-align-center.post165-eyebrow { justify-content: center; }
+.has-text-align-center.post165-eyebrow { display: flex; justify-content: center; }
 
 /* On navy surfaces the eyebrow uses the lighter gold */
 .has-navy-background-color .post165-eyebrow,
@@ -89,6 +89,11 @@ a { text-underline-offset: 0.18em; }
   width: 64px;
   margin: 0 0 1.25rem;
   background: linear-gradient(90deg, var(--wp--preset--color--gold), transparent);
+}
+.wp-block-separator.post165-ribbon:not(.is-style-dots) {
+  width: 64px;
+  max-width: 64px;
+  opacity: 1;
 }
 .post165-ribbon--center { margin-left: auto; margin-right: auto; }
 .has-navy-background-color .post165-ribbon,
