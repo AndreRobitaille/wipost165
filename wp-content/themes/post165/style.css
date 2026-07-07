@@ -30,6 +30,12 @@ a { text-underline-offset: 0.18em; }
 
 .wp-site-blocks { min-height: 100vh; }
 
+/* Links on navy surfaces need contrast — red on navy fails WCAG (~2:1). Buttons excluded. */
+.has-navy-background-color a:not(.wp-block-button__link) {
+  color: var(--p165-gold-light);
+  text-decoration: underline;
+}
+
 /* ---------- Header + wordmark ---------- */
 .post165-header .wp-block-navigation a { color: rgba(247, 241, 227, 0.82); }
 .post165-header .wp-block-navigation a:hover,
