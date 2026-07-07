@@ -3,7 +3,7 @@ Theme Name: Post 165
 Theme URI: https://wipost165.org
 Author: Robert E. Burns American Legion Post 165
 Description: Custom block theme for Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin.
-Version: 0.1.0
+Version: 0.2.0
 Requires at least: 6.5
 Requires PHP: 8.0
 Tested up to: 6.6
@@ -13,10 +13,12 @@ Text Domain: post165
 Tags: block-patterns, full-site-editing, accessibility-ready
 */
 
+:root {
+  --p165-gold-light: var(--wp--custom--gold-light, #d9b45b);
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
 }
 
 body {
@@ -24,32 +26,166 @@ body {
   color: var(--wp--preset--color--ink);
 }
 
-a {
-  text-underline-offset: 0.18em;
+a { text-underline-offset: 0.18em; }
+
+.wp-site-blocks { min-height: 100vh; }
+
+/* ---------- Header + wordmark ---------- */
+.post165-header .wp-block-navigation a { color: rgba(247, 241, 227, 0.82); }
+.post165-header .wp-block-navigation a:hover,
+.post165-header .wp-block-navigation .current-menu-item a { color: var(--p165-gold-light); }
+
+.post165-seal {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  background: center / contain no-repeat url('assets/images/seal.svg');
 }
 
-.wp-site-blocks {
-  min-height: 100vh;
+.post165-wordmark { line-height: 1.06; }
+.post165-wordmark__org {
+  display: block;
+  font-family: var(--wp--preset--font-family--sans);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--p165-gold-light);
+}
+.post165-wordmark__name {
+  display: block;
+  font-family: var(--wp--preset--font-family--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--wp--preset--color--white);
 }
 
-.post165-top-rule {
-  border-top: 0.35rem solid var(--wp--preset--color--red);
-}
-
-.post165-card {
-  border: 1px solid color-mix(in srgb, var(--wp--preset--color--navy) 18%, transparent);
-  border-radius: 0.75rem;
-  box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--wp--preset--color--navy) 10%, transparent);
-}
-
+/* ---------- Eyebrow (gold, star-prefixed) ---------- */
 .post165-eyebrow {
-  color: var(--wp--preset--color--red);
-  font-size: var(--wp--preset--font-size--small);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--wp--preset--color--gold);
+  font-family: var(--wp--preset--font-family--sans);
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
+.post165-eyebrow::before { content: "\2605"; font-size: 0.85em; }
+.has-text-align-center.post165-eyebrow { justify-content: center; }
 
-.post165-section-divider {
-  border-top: 1px solid color-mix(in srgb, var(--wp--preset--color--navy) 18%, transparent);
+/* On navy surfaces the eyebrow uses the lighter gold */
+.has-navy-background-color .post165-eyebrow,
+.post165-hero .post165-eyebrow { color: var(--p165-gold-light); }
+
+/* ---------- Ribbon rule (the connective thread) ---------- */
+.post165-ribbon {
+  border: 0;
+  height: 3px;
+  width: 64px;
+  margin: 0 0 1.25rem;
+  background: linear-gradient(90deg, var(--wp--preset--color--gold), transparent);
 }
+.post165-ribbon--center { margin-left: auto; margin-right: auto; }
+.has-navy-background-color .post165-ribbon,
+.post165-hero .post165-ribbon,
+.post165-footer .post165-ribbon {
+  background: linear-gradient(90deg, var(--p165-gold-light), transparent);
+}
+
+/* ---------- Hero (full dress) ---------- */
+.post165-hero { position: relative; overflow: hidden; }
+.post165-hero::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 12px;
+  background: linear-gradient(
+    to bottom,
+    var(--wp--preset--color--red) 0 33.33%,
+    var(--wp--preset--color--cream) 33.33% 66.66%,
+    var(--wp--preset--color--gold) 66.66% 100%
+  );
+}
+.post165-hero-watermark {
+  position: absolute;
+  right: -3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22rem;
+  height: 22rem;
+  opacity: 0.07;
+  pointer-events: none;
+  background: center / contain no-repeat url('assets/images/seal.svg');
+}
+.post165-hero__content { position: relative; z-index: 1; }
+
+/* Outlined secondary button on the navy hero */
+.post165-hero .is-style-outline .wp-block-button__link {
+  background: transparent;
+  border: 1.5px solid var(--p165-gold-light);
+  color: var(--p165-gold-light);
+}
+.post165-hero .is-style-outline .wp-block-button__link:hover {
+  background: var(--p165-gold-light);
+  color: var(--wp--preset--color--navy);
+}
+
+/* ---------- Hero meeting-info strip ---------- */
+.post165-strip { border-top: 1px solid color-mix(in srgb, var(--p165-gold-light) 45%, transparent); }
+.post165-strip .wp-block-column {
+  padding: 0.9rem 1.3rem;
+  border-right: 1px solid color-mix(in srgb, var(--p165-gold-light) 25%, transparent);
+}
+.post165-strip .wp-block-column:last-child { border-right: 0; }
+.post165-strip__k {
+  margin: 0 0 0.3rem;
+  font-family: var(--wp--preset--font-family--sans);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--p165-gold-light);
+}
+.post165-strip__v {
+  margin: 0;
+  font-family: var(--wp--preset--font-family--serif);
+  font-size: 0.95rem;
+  color: var(--wp--preset--color--cream);
+}
+
+/* ---------- Cards ---------- */
+.post165-card {
+  border: 1px solid color-mix(in srgb, var(--wp--preset--color--navy) 15%, transparent);
+  border-top: 3px solid var(--wp--preset--color--gold);
+  border-radius: 0.65rem;
+  box-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--wp--preset--color--navy) 8%, transparent);
+}
+
+/* ---------- Star lists ---------- */
+.post165-star-list { list-style: none; padding-left: 0; }
+.post165-star-list li { position: relative; padding-left: 1.6rem; margin-bottom: 0.4rem; }
+.post165-star-list li::before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--gold);
+}
+
+/* ---------- Interior page eyebrow ---------- */
+.post165-page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--wp--preset--color--gold);
+  font-family: var(--wp--preset--font-family--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.post165-page-eyebrow::before { content: "\2605"; font-size: 0.85em; }
