@@ -41,13 +41,26 @@ const patternFiles = {
   'post165/contact-card': 'patterns/contact-card.php',
 };
 
+const renderDynamicBlocks = (s) => {
+  // site-title (self-closing dynamic block) -> a styled anchor
+  s = s.replace(/<!-- wp:site-title[^>]*?\/-->/g, '<a class="wp-block-site-title" href="#">Robert E. Burns American Legion Post 165</a>');
+  // navigation region -> a <nav> with anchors built from the navigation-link labels/urls
+  s = s.replace(/<!-- wp:navigation[\s\S]*?<!-- \/wp:navigation -->/g, (block) => {
+    const links = [...block.matchAll(/"label":"([^"]*)","url":"([^"]*)"/g)]
+      .map(([, label, url]) => `<a href="${url}">${label}</a>`)
+      .join('');
+    return `<nav class="wp-block-navigation">${links}</nav>`;
+  });
+  return s;
+};
+
 const stripPhp = (s) =>
   s
     .replace(/<\?php\s+echo\s+esc_url\([^?]*\)\s*;\s*\?>/g, '#') // links -> '#'
     .replace(/<\?php[\s\S]*?\?>/g, '') // pattern header + anything else
     .trim();
 
-const readPart = (rel) => stripPhp(readFileSync(path.join(theme, rel), 'utf8'));
+const readPart = (rel) => renderDynamicBlocks(stripPhp(readFileSync(path.join(theme, rel), 'utf8')));
 
 // assemble main from the front-page pattern list, in order
 const main = Object.keys(patternFiles).map((slug) => readPart(patternFiles[slug])).join('\n');
@@ -74,6 +87,8 @@ body{margin:0;font-family:var(--wp--preset--font-family--sans);}
 h1,h2,h3{font-family:var(--wp--preset--font-family--serif);color:var(--wp--preset--color--navy);line-height:1.1;letter-spacing:-0.01em;}
 .has-white-color h1,.has-white-color h2,.has-white-color h3,.has-navy-background-color h2{color:#fff;}
 a{color:var(--wp--preset--color--red);}
+.wp-block-navigation{display:flex;gap:1.15rem;flex-wrap:wrap;list-style:none;margin:0;padding:0;align-items:center;}
+.wp-block-site-title{font-family:var(--wp--preset--font-family--serif);font-weight:700;font-size:1.15rem;text-decoration:none;color:inherit;}
 ${css}</style></head><body>${header}<main>${main}</main>${footer}</body></html>`;
 
 writeFileSync(out, html);
