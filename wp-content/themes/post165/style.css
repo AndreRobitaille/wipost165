@@ -15,6 +15,7 @@ Tags: block-patterns, full-site-editing, accessibility-ready
 
 :root {
   --p165-gold-light: var(--wp--custom--gold-light, #d9b45b);
+  --p165-gold-deep: #7a5a12;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -74,7 +75,7 @@ a { text-underline-offset: 0.18em; }
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  color: var(--wp--preset--color--gold);
+  color: var(--p165-gold-deep);
   font-family: var(--wp--preset--font-family--sans);
   font-size: 0.72rem;
   font-weight: 700;
@@ -192,7 +193,7 @@ a { text-underline-offset: 0.18em; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--wp--preset--color--gold);
+  color: var(--p165-gold-deep);
   font-family: var(--wp--preset--font-family--sans);
   font-size: 0.7rem;
   font-weight: 700;
