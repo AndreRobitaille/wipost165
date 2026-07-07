@@ -70,7 +70,7 @@ V1 is a public site. It includes:
 
 - custom block theme;
 - homepage;
-- Events page backed by an event/calendar plugin;
+- Events archive/landing page backed by an event/calendar plugin;
 - Membership page;
 - About page;
 - Contact page;

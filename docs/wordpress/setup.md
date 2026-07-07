@@ -33,7 +33,13 @@ The homepage content comes from `wp-content/themes/post165/templates/front-page.
 
 In v1, homepage sections are theme/pattern-driven; routine editors should update events, contact, and page content instead of rebuilding homepage sections.
 
-If homepage copy or section order must change, use the Site Editor/template workflow or change the theme pattern files in Git and redeploy.
+To inspect or edit the homepage template, go to Appearance → Editor → Templates → Front Page.
+
+To inspect available Post 165 patterns, go to Appearance → Editor → Patterns → Post 165, if the installed WordPress version supports pattern browsing.
+
+Routine content editors should avoid changing the Front Page template unless they are assigned to theme/site editing. Normal updates should be events, contact, and page text.
+
+If homepage copy or section order must change structurally, update the theme pattern files in Git and redeploy.
 
 The Events item in the header Navigation block should link to The Events Calendar archive/landing URL (commonly `/events/`, adjusted if plugin settings differ), not to a normal page created by editors.
 

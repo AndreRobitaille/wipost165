@@ -65,8 +65,11 @@ Events is plugin-owned: use The Events Calendar events archive/landing page; do 
 - Edit ordinary page text in the block editor.
 - Homepage sections come from the theme template and patterns in `wp-content/themes/post165/templates/front-page.html`.
 - Do not type homepage content into the Home page body.
+- To inspect or edit the homepage template, use Appearance → Editor → Templates → Front Page.
+- To inspect available Post 165 patterns, use Appearance → Editor → Patterns → Post 165, if supported by the installed WordPress version.
+- Routine content editors should avoid changing the Front Page template unless assigned to theme/site editing.
 - In v1, homepage sections are theme/pattern-driven; routine editors should update events, contact, and page content instead of rebuilding homepage sections.
-- If homepage copy or section order must change, use the Site Editor/template workflow or change the theme pattern files in Git and redeploy.
+- If homepage copy or section order must change structurally, update the theme pattern files in Git and redeploy.
 - Use Post 165 patterns instead of manually rebuilding homepage sections.
 - Keep support messaging contact-oriented until donation processing is approved.
 - Keep member-only resources out of v1.

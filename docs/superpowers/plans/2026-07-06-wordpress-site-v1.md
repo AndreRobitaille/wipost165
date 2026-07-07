@@ -890,7 +890,7 @@ Posts are allowed for occasional updates. The homepage must not depend on a rece
 Create these pages in WordPress:
 
 - Home: assign as the static front page.
-- Events: event plugin landing page or calendar page.
+- Events: The Events Calendar archive/landing page (not a normal editor-created page unless later plugin configuration requires one).
 - Membership: use the `Membership page starter` pattern.
 - About: use the `About page starter` pattern.
 - Contact: use the `Contact page starter` pattern.
