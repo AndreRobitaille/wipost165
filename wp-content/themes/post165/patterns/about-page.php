@@ -7,6 +7,12 @@
  */
 ?>
 <!-- wp:paragraph {"fontSize":"large"} --><p class="has-large-font-size">Robert E. Burns American Legion Post 165 is a local veterans organization serving Two Rivers, Wisconsin.</p><!-- /wp:paragraph -->
+<!-- wp:heading {"level":2} --><h2 class="wp-block-heading">Our Namesake</h2><!-- /wp:heading -->
+<!-- wp:paragraph --><p>Post 165 carries the name of Robert E. Burns. Honoring a name is how a community keeps a promise across generations — the post exists to remember, and to keep serving in that spirit.</p><!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2} --><h2 class="wp-block-heading">Our History</h2><!-- /wp:heading -->
+<!-- wp:paragraph --><p>For generations, Post 165 has been part of Two Rivers — showing up for veterans, families, and the community through steady, practical service. We are here now, and we are building for the veterans who come next.</p><!-- /wp:paragraph -->
+
 <!-- wp:heading {"level":2} --><h2 class="wp-block-heading">What the Legion Does</h2><!-- /wp:heading -->
 <!-- wp:paragraph --><p>The American Legion continues service after military life by supporting veterans, families, youth, responsible citizenship, remembrance, and community service.</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":2} --><h2 class="wp-block-heading">The Four Pillars</h2><!-- /wp:heading -->
