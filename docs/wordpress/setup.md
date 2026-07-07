@@ -23,18 +23,21 @@ Create these event categories:
 Create these pages:
 
 - Home
-- Events
 - Membership
 - About
 - Contact
 
 Set **Home** as the static front page in Settings → Reading.
 
-For Membership, About, and Contact, insert the matching Post 165 starter pattern and edit the text as needed.
+The homepage content comes from the theme's `front-page.html` template and starter patterns, not from page body content.
+
+The Events section should use The Events Calendar events archive/landing page. Do not create a normal Events page unless later plugin configuration requires one.
+
+For Membership, About, and Contact, insert the matching Post 165 starter pattern from the `Post 165` pattern category and edit the text as needed.
 
 ## Menu
 
-Create a primary navigation menu with:
+Update the header Navigation block in the Site Editor with:
 
 - Home
 - Events
@@ -58,5 +61,6 @@ Confirm these details before publishing:
 
 - Use events for dated activities.
 - Use posts only for occasional updates that should remain visible as articles.
+- Do not rebuild the homepage by typing content into the Home page body; edit homepage copy through the theme/Site Editor workflow when needed in v1.
 - Do not add online donations until payment processing and treasurer workflow are approved.
 - Do not add member-only resources until v2.
