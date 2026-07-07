@@ -78,3 +78,9 @@ Confirm these details before publishing:
 - Do not rebuild the homepage by typing content into the Home page body; edit homepage copy through the theme/Site Editor workflow or by updating theme pattern files in Git and redeploying when needed in v1.
 - Do not add online donations until payment processing and treasurer workflow are approved.
 - Do not add member-only resources until v2.
+
+## Design assets and content to complete
+
+- Fonts (Fraunces and Public Sans) are bundled with the theme at `wp-content/themes/post165/assets/fonts/` and load automatically through `theme.json`. Do not install a fonts plugin (e.g. a Google Fonts plugin) — it is unnecessary and would duplicate what the theme already self-hosts.
+- The header/hero mark at `wp-content/themes/post165/assets/images/seal.svg` is a custom placeholder mark, not the official American Legion emblem. It may be replaced with the official emblem only where American Legion usage guidelines permit. The preferred way to swap it is Appearance → Customize → site logo (custom-logo theme support is enabled), rather than editing the SVG file directly.
+- The About page's "Our Namesake" and "Our History" sections currently use placeholder text and need the real Robert E. Burns biography, the Post's charter year, and 1–2 real milestones before launch.
