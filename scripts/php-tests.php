@@ -169,6 +169,16 @@ $dupe = post165_apply_meeting_overrides(
 );
 eq( $dupe[0]['start']->format( 'H:i' ), '20:00', 'the later duplicate override wins' );
 
+// Venue-only override: the old venue's address must NOT be carried over.
+$venue_only = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-10', 'venue' => 'VFW Hall' ] ], $rule );
+eq( $venue_only[2]['venue'], 'VFW Hall', 'venue-only override applies the venue' );
+eq( $venue_only[2]['address'], '', 'a new venue does not inherit the old address' );
+
+// Address-only override: applies, and leaves the venue alone.
+$addr_only = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-10', 'address' => '9 Elm St' ] ], $rule );
+eq( $addr_only[2]['address'], '9 Elm St', 'address-only override is applied, not dropped' );
+eq( $addr_only[2]['venue'], 'Test Hall', 'address-only override leaves the venue inherited' );
+
 // --- summary ---------------------------------------------------------------
 if ($fails > 0) {
     fwrite(STDERR, "\n{$fails} of {$tests} assertions failed.\n");
