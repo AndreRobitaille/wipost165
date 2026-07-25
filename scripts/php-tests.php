@@ -5,6 +5,7 @@ $root = dirname(__DIR__);
 $pure = $root . '/wp-content/themes/post165/inc/pure';
 
 require $pure . '/format.php';
+require $pure . '/meetings.php';
 
 $tests = 0;
 $fails = 0;
@@ -36,6 +37,62 @@ eq(post165_format_member_count(''),  null,   'empty string omits the row');
 eq(post165_format_member_count(null), null,  'null omits the row');
 eq(post165_format_member_count(-3),  null,   'negative omits the row');
 eq(post165_format_member_count('183'), '180+', 'numeric string is accepted');
+
+// --- post165_meeting_dates -------------------------------------------------
+$tz   = new DateTimeZone( 'America/Chicago' );
+$rule = [
+	'ordinal' => 'first',
+	'weekday' => 'tuesday',
+	'time'    => '18:30',
+	'venue'   => 'Test Hall',
+	'address' => '1 Test St',
+];
+
+$from  = new DateTimeImmutable( '2026-07-24 09:00:00', $tz );
+$dates = post165_meeting_dates( $rule, $from, 3 );
+
+eq( count( $dates ), 3, 'returns the requested number of meetings' );
+eq( $dates[0]->format( 'Y-m-d H:i' ), '2026-08-04 18:30', 'July is already past, so first is Aug 4' );
+eq( $dates[1]->format( 'Y-m-d H:i' ), '2026-09-01 18:30', 'second is Sep 1' );
+eq( $dates[2]->format( 'Y-m-d H:i' ), '2026-10-06 18:30', 'third is Oct 6' );
+
+// Same day, before the start time: today's meeting still counts.
+$before = post165_meeting_dates( $rule, new DateTimeImmutable( '2026-08-04 17:00:00', $tz ), 1 );
+eq( $before[0]->format( 'Y-m-d' ), '2026-08-04', 'before start time, today still counts' );
+
+// Same day, after the start time: roll to next month.
+$after = post165_meeting_dates( $rule, new DateTimeImmutable( '2026-08-04 19:00:00', $tz ), 1 );
+eq( $after[0]->format( 'Y-m-d' ), '2026-09-01', 'after start time, rolls to next month' );
+
+// Crossing a year boundary.
+$ny = post165_meeting_dates( $rule, new DateTimeImmutable( '2026-12-15 09:00:00', $tz ), 2 );
+eq( $ny[0]->format( 'Y-m-d' ), '2027-01-05', 'crosses into the new year' );
+eq( $ny[1]->format( 'Y-m-d' ), '2027-02-02', 'and continues correctly' );
+
+// A different standing rule.
+$third = post165_meeting_dates(
+	[ 'ordinal' => 'third', 'weekday' => 'thursday', 'time' => '19:00' ],
+	new DateTimeImmutable( '2026-07-01 09:00:00', $tz ),
+	1
+);
+eq( $third[0]->format( 'Y-m-d H:i' ), '2026-07-16 19:00', 'third Thursday rule is honoured' );
+
+$last = post165_meeting_dates(
+	[ 'ordinal' => 'last', 'weekday' => 'monday', 'time' => '18:00' ],
+	new DateTimeImmutable( '2026-07-01 09:00:00', $tz ),
+	1
+);
+eq( $last[0]->format( 'Y-m-d' ), '2026-07-27', 'last Monday rule is honoured' );
+
+// Timezone is preserved.
+eq( $dates[0]->getTimezone()->getName(), 'America/Chicago', 'keeps the timezone it was given' );
+
+// Invalid rules degrade to empty rather than fataling.
+eq( post165_meeting_dates( [ 'ordinal' => 'ninth', 'weekday' => 'tuesday', 'time' => '18:30' ], $from, 2 ), [], 'invalid ordinal yields no meetings' );
+eq( post165_meeting_dates( [ 'ordinal' => 'first', 'weekday' => 'funday', 'time' => '18:30' ], $from, 2 ), [], 'invalid weekday yields no meetings' );
+eq( post165_meeting_dates( [ 'ordinal' => 'first', 'weekday' => 'tuesday', 'time' => '25:00' ], $from, 2 ), [], 'invalid hour yields no meetings' );
+eq( post165_meeting_dates( [ 'ordinal' => 'first', 'weekday' => 'tuesday', 'time' => 'evening' ], $from, 2 ), [], 'unparseable time yields no meetings' );
+eq( post165_meeting_dates( $rule, $from, 0 ), [], 'zero count yields no meetings' );
 
 // --- summary ---------------------------------------------------------------
 if ($fails > 0) {
