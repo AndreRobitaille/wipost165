@@ -200,34 +200,52 @@ history. In outline:
   photographs are configured. See `docs/wordpress/setup.md` for the editor
   workflow, including alt text guidance.
 
-#### Source order is a hard constraint, not a stylistic choice
+#### Photos last is a hard constraint; the exact sequence of the rest is not
 
 `patterns/home-board.php` renders its four `.post165-board__*` wrapper
-`<div>`s — **events, then ask, then photos, then year** — in that exact
-order in the markup. Desktop's two-column layout is achieved entirely with
+`<div>`s in this order in the markup: **events, then ask, then year, then
+photos**. Desktop's two-column layout is achieved entirely with
 `grid-template-areas` in `style.css` (`.post165-board`, around the block
 starting `display: grid;`); the mobile layout re-declares the same areas as
 a single column in the same order, rather than removing them, specifically
 so DOM order and visual order always match.
 
-This ordering was an **explicit requirement from the post**, not a design
-preference: a phone user must reach the dated events list and the ask for
-help before reaching any photograph. The whole point of this redesign is
-"here's what's happening and how you can help," not a gallery. On narrow
-viewports the four blocks stack in source order with no other re-layout, so
-source order *is* the mobile reading order.
+The year strip sits right after events, not after photos, because it's
+calendar content — a year-at-a-glance view that pairs with the dated event
+list ("when is this happening" / "what does the year look like") — and a
+row of photographs wedged between them broke that pairing. This grouping
+was moved into place at the post owner's explicit request (see
+`f125a5b`); the events→ask→year→photos order is the current reality, not
+an incidental snapshot.
+
+What has **not** changed, and is the actual reason this section exists, is
+the constraint the ordering serves: **photographs must remain last**, so a
+phone user always reaches the dated events list and the ask for help before
+reaching any photograph. The whole point of this redesign is "here's what's
+happening and how you can help," not a gallery. On narrow viewports the four
+blocks stack in source order with no other re-layout, so source order *is*
+the mobile reading order — the invariant is "photos never precede the data,"
+not "these four blocks are frozen in this exact sequence." The relative
+order of events/ask/year can legitimately change again for a good reason;
+photos moving off last cannot.
 
 **Do not**, even for a seemingly harmless visual tweak:
 
 - add a CSS `order` property to any `.post165-board__*` rule;
 - switch to `flex-direction: row-reverse` or similar on `.post165-board`;
-- reorder the four `<!-- wp:group -->` blocks inside
-  `patterns/home-board.php` to match some other visual grouping.
+- achieve a desktop-only rearrangement by leaving DOM order alone and only
+  editing `grid-template-areas` (or vice versa) — DOM order must remain
+  mobile order, so any reordering has to move the actual
+  `<!-- wp:group -->` blocks in `patterns/home-board.php` and update both
+  `grid-template-areas` declarations (desktop and the 52.5rem mobile
+  breakpoint) together;
+- let photographs land anywhere but last, in the markup or in either
+  `grid-template-areas` declaration.
 
-Any of these would silently break the mobile guarantee — events-then-ask
-before any photo — while leaving the desktop layout looking unchanged. It is
-the kind of regression that only shows up if someone actually checks a
-phone.
+Any of these would silently break the mobile guarantee — the dated events
+and the ask reaching the visitor before any photo — while potentially
+leaving the desktop layout looking unchanged. It is the kind of regression
+that only shows up if someone actually checks a phone.
 
 ### Local WordPress via Docker (works, not committed)
 
