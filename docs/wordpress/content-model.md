@@ -18,6 +18,16 @@ WordPress owns:
 - menus;
 - plugin settings unless a reliable export/import path is documented.
 
+### Homepage facts
+
+Dues, member count, charter year, meeting rule, venue, and the contact person
+are **owned by WordPress**, stored in the `post165_facts` option and edited at
+Settings → Post 165. They are not in Git and a deploy will not overwrite them.
+
+The twelve-month year map is **owned by Git**, in
+`inc/pure/year-map.php`, because it is editorial content that changes at most
+once a year.
+
 ## Navigation
 
 Block theme navigation:

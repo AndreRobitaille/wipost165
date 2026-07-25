@@ -66,15 +66,18 @@ Key files:
 
 Current pattern set:
 
-- `home-hero.php`
-- `home-events.php`
-- `home-membership.php`
-- `how-we-serve.php`
-- `support-post-165.php`
-- `contact-card.php`
+- `home-board.php`
+- `home-proof.php`
+- `home-what-we-do.php`
 - `membership-page.php`
 - `about-page.php`
 - `contact-page.php`
+
+The six original homepage patterns (`home-hero.php`, `home-events.php`,
+`home-membership.php`, `how-we-serve.php`, `support-post-165.php`,
+`contact-card.php`) were deleted in the 2026-07-24 homepage redesign. See
+"Homepage: 'The Board'" below. `contact-card.php`'s markup was inlined into
+`contact-page.php` rather than deleted outright.
 
 ## V1 navigation and content model
 
@@ -139,13 +142,40 @@ Use the American Legion brand mark where appropriate for public identity. Treat 
 A visual redesign has been implemented on top of the v1 theme foundation described above. Full detail lives in the spec and plan; this section summarizes what changed for anyone picking up the work.
 
 - **Narrative spine:** the site's visual and content direction is organized around the line **"Still here. Still serving."** — continuity through service, expressed across the homepage and interior pages. See `docs/superpowers/specs/2026-07-07-visual-design-and-narrative-direction.md` for the full narrative rationale.
-- **Motif intensity dial:** rather than one fixed decorative frame, the ceremonial red/cream/gold stripe "spine" motif is applied at different intensities depending on context:
-  - **Full dress** — the homepage hero (and similarly prominent moments) use the full stripe spine treatment.
-  - **Quiet** — interior pages (About, Membership, Contact) and most homepage sections drop the loud motif elements in favor of content-first, understated layouts.
-  - The dial is implemented as a motif system in `wp-content/themes/post165/style.css`.
+- **Motif intensity dial:** rather than one fixed decorative frame, the ceremonial red/cream/gold stripe "spine" motif was applied at different intensities depending on context:
+  - **Full dress** — the homepage hero (and similarly prominent moments) used the full stripe spine treatment.
+  - **Quiet** — interior pages (About, Membership, Contact) and most homepage sections dropped the loud motif elements in favor of content-first, understated layouts.
+  - The full-screen homepage hero and its stripe-spine CSS were removed in the 2026-07-24 homepage redesign (see "Homepage: 'The Board'" below), so the "Full dress" tier no longer has anywhere to apply. The "Still here. Still serving." line survives as the strap headline in `patterns/home-board.php`. The "Quiet" treatment on interior pages is unaffected.
 - **Typography:** the theme now self-hosts **Fraunces** (display/headlines) and **Public Sans** (UI/nav/labels/body, the USWDS federal typeface) as woff2 files under `wp-content/themes/post165/assets/fonts/`, loaded via `theme.json`. No fonts plugin is required or should be added — see the new "Design assets and content to complete" section in `docs/wordpress/setup.md`.
 - **Local visual checks:** `scripts/preview.mjs` renders static HTML previews of the theme's templates/patterns for quick visual review without a running WordPress install. This is separate from the WordPress Playground investigation described below, which remains unresolved.
 - Implementation plan and task-by-task history: `docs/superpowers/plans/2026-07-07-visual-design-implementation.md`.
+
+## Homepage: "The Board" (2026-07-24)
+
+The homepage was rebuilt from six brochure bands into a two-column answer
+board. See `docs/superpowers/specs/2026-07-24-homepage-density-design.md`.
+
+- Pure, WordPress-free logic lives in `wp-content/themes/post165/inc/pure/`
+  and is unit tested by `scripts/php-tests.php`.
+- Run those tests with `npm run test:php`. There is no PHP on the dev machine;
+  the runner falls back to the `php:8.3-cli` Docker image automatically.
+- `npm test` runs the static validator **and** the PHP tests.
+
+### What the automated tests do not cover
+
+The validator is a static string checker and the PHP tests boot no WordPress.
+Neither can verify:
+
+- Rendering inside a real WordPress install.
+- The Events Calendar integration (`post165_public_event_entries`).
+- That `scripts/preview.mjs` shows the board — **it does not**. The preview
+  strips PHP and cannot execute dynamic blocks, so the board renders empty
+  there. Use a real install to review the homepage.
+
+Check manually against a live site: meeting dates across a month boundary and
+either side of the start time; TEC absent and TEC present-but-empty; the
+October–March quiet season; each override kind; and member-count rounding at
+0, 3, 5, 183, 200.
 
 ## Deployment state
 
