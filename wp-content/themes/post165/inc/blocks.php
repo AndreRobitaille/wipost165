@@ -77,8 +77,9 @@ function post165_render_upcoming(): string {
 
 		$out .= '<li class="' . esc_attr( $classes ) . '">';
 		$out .= '<time class="post165-ev__date" datetime="' . esc_attr( $start->format( 'c' ) ) . '">';
-		$out .= '<b>' . esc_html( $start->format( 'j' ) ) . '</b>';
-		$out .= '<span>' . esc_html( $start->format( 'M' ) ) . '</span>';
+		$out .= '<span class="post165-ev__mo">' . esc_html( wp_date( 'M', $start->getTimestamp() ) ) . '</span>';
+		$out .= '<span class="post165-ev__dy">' . esc_html( wp_date( 'j', $start->getTimestamp() ) ) . '</span>';
+		$out .= '<span class="post165-ev__wd">' . esc_html( wp_date( 'D', $start->getTimestamp() ) ) . '</span>';
 		$out .= '</time>';
 		$out .= '<div class="post165-ev__body">';
 		$out .= '<p class="post165-ev__title">' . $title;
