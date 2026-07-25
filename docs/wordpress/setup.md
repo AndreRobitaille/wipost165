@@ -66,15 +66,45 @@ user with `manage_options` can update them; no developer or deploy is needed.
 
 | Field | Notes |
 | --- | --- |
-| Who can join, Dues | Free text, shown verbatim. |
-| Member count | Enter the **true** number. The page rounds down to the nearest 5 and adds a plus (183 → "180+"), so it stays accurate as the roster changes. Counts under 5 show exactly; 0 or blank hides the row. |
-| Charter year | Shown in the strap. Blank hides it. |
+| Who can join, Dues | Free text. **Not shown on the homepage** as of the 2026-07-25 "ask" redesign — kept here for the future Membership page. See "Why dues and eligibility left the homepage" below before putting them back. |
+| Member count | Enter the **true** number if you want it on file. **Not shown on the homepage** either, for the same reason. The nearest-5 rounding formatter (`post165_format_member_count()` in `inc/pure/format.php`) still exists and is unit tested, ready for the Membership page to call. |
+| Charter year | Shown in the strap ("1919 · Chartered"). Blank hides it. |
 | Meeting rule | Which week, which day, start time (24-hour), venue, address. **Meeting dates are calculated from this rule** — they are never entered by hand and never go stale, but see the warning below: this rule only drives the homepage. |
 | Individual meeting changes | Six rows, each keyed by month (`2026-11`). Fill only what differs; blanks inherit from the rule. Ticking **Cancelled** leaves that month off the homepage entirely. |
-| Contact | Name, role, email, phone. The email is obfuscated against scrapers on output. |
+| Contact | Name, role, email, phone. The email is obfuscated against scrapers on output. Shown on the homepage ask panel when at least one of these is filled in. |
+| Photographs | Up to three, each chosen from the Media Library with the **Choose** button, plus a one-line caption. The attachment ID field is the value that actually gets saved — the Choose button is a convenience that fills the ID in for you. If JavaScript fails to load, the row still works: type or paste the attachment ID by hand (visible in the Media Library's URL or the image's "Attachment Details" panel) and fill in the caption. **The photo row renders nothing at all — no boxes, no placeholders — until images are set.** |
 
 **Anything left blank is left off the page.** The site never invents a
 placeholder value.
+
+**Photographs display deliberately small on the homepage.** The post's
+available photographs are amateur snapshots and sometimes low resolution;
+shown small, that reads as authentic — a post that actually shows up and
+takes pictures. Enlarged, the same photos read as careless. Do not "fix"
+the image size upward without re-checking this against real source photos
+first.
+
+**Alt text.** If a photograph has no alt text set in the Media Library, it
+renders on the homepage with `alt=""`. That is correct, not a bug: the
+caption underneath is already read aloud by a screen reader, so repeating
+it as alt text would announce the same words twice. Where a caption is
+just a bare label — "Brat fry", "Honor guard" — rather than a description
+of what is actually happening in the photo, an officer should add real alt
+text to that image in the Media Library (Media → Library → open the image
+→ Alternative Text field). It flows through to the homepage automatically;
+no developer or deploy is needed.
+
+### Why dues and eligibility left the homepage
+
+The 2026-07-25 redesign rewrote the second homepage column from a facts
+table into an invitation to help — see `post165_render_join_panel()` in
+`inc/blocks.php`. The homepage now asks people to volunteer for a morning,
+not to join as a member. A dues figure or an eligibility rule shown before
+anyone has been given a reason to care is just an exit: people leave on the
+first hurdle rather than reading further. Those facts still belong on the
+Membership page, where someone has already decided they are interested and
+a hurdle is no longer the first thing they see. Please do not add the Dues
+or Who can join fields back onto the homepage.
 
 **The meeting rule only updates the homepage.** Two other places state the
 meeting day, time, and location in plain text and will not change when you

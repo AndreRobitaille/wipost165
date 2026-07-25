@@ -177,6 +177,117 @@ either side of the start time; TEC absent and TEC present-but-empty; the
 October–March quiet season; each override kind; and member-count rounding at
 0, 3, 5, 183, 200.
 
+### Homepage v2: "The Ask" (2026-07-25)
+
+The homepage's second column was rewritten from a membership facts table into
+an invitation to volunteer, and a third homepage block (a small row of work
+photographs) was added. See
+`docs/superpowers/plans/2026-07-25-homepage-v2-the-ask.md` for the task-level
+history. In outline:
+
+- `post165_render_join_panel()` in `inc/blocks.php` no longer shows dues,
+  eligibility, or member count. It shows a short list of what volunteers
+  actually do (honor guard, brat fry, flags on graves, youth programs) and,
+  if a contact person is set in Settings → Post 165, their name/role and a
+  way to reach them. Dues, eligibility, and member count remain in
+  Settings → Post 165 for the future Membership page; see
+  `docs/wordpress/setup.md` ("Why dues and eligibility left the homepage")
+  for the reasoning — do not reintroduce them on the homepage.
+- `post165_render_work_photos()` in `inc/blocks.php` renders up to three
+  photographs chosen in Settings → Post 165, deliberately small (the
+  available photographs are amateur/low-resolution; small reads as
+  authentic, enlarged reads as careless), and renders nothing at all until
+  photographs are configured. See `docs/wordpress/setup.md` for the editor
+  workflow, including alt text guidance.
+
+#### Source order is a hard constraint, not a stylistic choice
+
+`patterns/home-board.php` renders its four `.post165-board__*` wrapper
+`<div>`s — **events, then ask, then photos, then year** — in that exact
+order in the markup. Desktop's two-column layout is achieved entirely with
+`grid-template-areas` in `style.css` (`.post165-board`, around the block
+starting `display: grid;`); the mobile layout re-declares the same areas as
+a single column in the same order, rather than removing them, specifically
+so DOM order and visual order always match.
+
+This ordering was an **explicit requirement from the post**, not a design
+preference: a phone user must reach the dated events list and the ask for
+help before reaching any photograph. The whole point of this redesign is
+"here's what's happening and how you can help," not a gallery. On narrow
+viewports the four blocks stack in source order with no other re-layout, so
+source order *is* the mobile reading order.
+
+**Do not**, even for a seemingly harmless visual tweak:
+
+- add a CSS `order` property to any `.post165-board__*` rule;
+- switch to `flex-direction: row-reverse` or similar on `.post165-board`;
+- reorder the four `<!-- wp:group -->` blocks inside
+  `patterns/home-board.php` to match some other visual grouping.
+
+Any of these would silently break the mobile guarantee — events-then-ask
+before any photo — while leaving the desktop layout looking unchanged. It is
+the kind of regression that only shows up if someone actually checks a
+phone.
+
+### Local WordPress via Docker (works, not committed)
+
+A local, LAN-reachable WordPress environment was assembled to test homepage
+v2 against a real WordPress install (referenced above as the "live test
+site" in the v2 task ledger). It is **deliberately not committed** to the
+repo — no `docker-compose.yml` lives in Git — since it is a personal testing
+convenience rather than a supported dev environment, and is recorded here
+only so the recipe is not lost.
+
+Recipe:
+
+- `docker compose` with three services: `wordpress:php8.3-apache`,
+  `mariadb:11`, and `wordpress:cli-php8.3` (WP-CLI, for seeding
+  content/events from the command line).
+- Bind-mount the theme directory into the WordPress container at
+  `/var/www/html/wp-content/themes/post165` so edits made in the repo show
+  up immediately, with no redeploy step.
+
+Three settings are essential — get any of them wrong and the environment
+misbehaves in a way that is easy to misdiagnose as a theme bug:
+
+- **`WP_HOME` / `WP_SITEURL` must be set to the LAN address** (e.g.
+  `http://192.168.x.x:8080`), not `localhost`. Left as `localhost`,
+  WordPress redirects every request there, and the site becomes unreachable
+  from any other machine on the network — including whatever device you
+  meant to test mobile layout on.
+- **Site timezone must be `America/Chicago`.** The meeting-date logic is
+  timezone-sensitive; testing under UTC or another timezone produces
+  meeting dates that look plausible in wp-admin but land on the wrong day
+  on the front end.
+- **Permalinks must be `/%postname%/`.** The theme assumes pretty
+  permalinks; WordPress's default query-string permalinks break links the
+  theme generates.
+
+Events created via WP-CLI need `_EventTimezone`, `_EventStartDateUTC`, and
+`_EventEndDateUTC` post meta set explicitly. Without them, The Events
+Calendar rejects the event from its own custom tables at save time, and
+`tribe_get_events()` silently returns nothing for it — the post exists in
+`wp_posts`, but never surfaces as an event anywhere, including the
+homepage's upcoming list. This is the single most common cause of "I added
+an event and the homepage still shows the old one."
+
+### Known issue: the stylesheet version is static
+
+`functions.php` enqueues `style.css` with `wp_get_theme()->get( 'Version' )`
+as its `?ver=` query string — the `Version:` header at the top of
+`style.css` (currently `0.2.0`). A CSS-only FTP deploy that does not bump
+that header leaves the same `?ver=0.2.0` URL in place, so a browser that
+already cached the old stylesheet keeps serving it to a returning visitor
+until the cache expires on its own — the deploy can finish cleanly and
+still not visually change anything for anyone who has been to the site
+before.
+
+Current workaround: **bump the `Version:` line in
+`wp-content/themes/post165/style.css` on every deploy that touches CSS**,
+even for a one-line change. A more robust fix (e.g. `filemtime()`-based
+versioning so this can't be forgotten) has been discussed but not
+implemented.
+
 ## Deployment state
 
 Workflow: `.github/workflows/deploy-theme.yml`

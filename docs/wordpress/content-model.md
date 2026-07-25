@@ -20,9 +20,13 @@ WordPress owns:
 
 ### Homepage facts
 
-Dues, member count, charter year, meeting rule, venue, and the contact person
-are **owned by WordPress**, stored in the `post165_facts` option and edited at
-Settings → Post 165. They are not in Git and a deploy will not overwrite them.
+Charter year, meeting rule, venue, contact person, and up to three
+photographs feed the homepage. Dues, eligibility, and member count are
+stored the same way but are reserved for the future Membership page — they
+are not shown on the homepage (see `docs/wordpress/setup.md`, "Why dues and
+eligibility left the homepage"). All of it is **owned by WordPress**, stored
+in the `post165_facts` option and edited at Settings → Post 165. None of it
+is in Git and a deploy will not overwrite it.
 
 The twelve-month year map is **owned by Git**, in
 `inc/pure/year-map.php`, because it is editorial content that changes at most
