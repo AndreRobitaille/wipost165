@@ -31,15 +31,11 @@ const sealUri = `data:image/svg+xml,${encodeURIComponent(seal)}`;
 let css = readFileSync(path.join(theme, 'style.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//, '');
 css = css.replace(/url\((['"]?)assets\/images\/seal\.svg\1\)/g, `url("${sealUri}")`);
 
-// pattern slug -> file
-const patternFiles = {
-  'post165/home-hero': 'patterns/home-hero.php',
-  'post165/home-events': 'patterns/home-events.php',
-  'post165/home-membership': 'patterns/home-membership.php',
-  'post165/how-we-serve': 'patterns/how-we-serve.php',
-  'post165/support-post-165': 'patterns/support-post-165.php',
-  'post165/contact-card': 'patterns/contact-card.php',
-};
+// pattern slug -> file, discovered from front-page.html so this list can't go
+// stale when patterns are added, removed, or renamed there.
+const frontPageHtml = readFileSync(path.join(theme, 'templates/front-page.html'), 'utf8');
+const patternSlugs = [...frontPageHtml.matchAll(/wp:pattern \{"slug":"post165\/([a-z0-9-]+)"\}/g)].map(([, slug]) => slug);
+const patternFiles = Object.fromEntries(patternSlugs.map((slug) => [`post165/${slug}`, `patterns/${slug}.php`]));
 
 const renderDynamicBlocks = (s) => {
   // site-title (self-closing dynamic block) -> a styled anchor

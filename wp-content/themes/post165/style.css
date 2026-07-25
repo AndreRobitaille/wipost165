@@ -86,8 +86,7 @@ a { text-underline-offset: 0.18em; }
 .has-text-align-center.post165-eyebrow { display: flex; justify-content: center; }
 
 /* On navy surfaces the eyebrow uses the lighter gold */
-.has-navy-background-color .post165-eyebrow,
-.post165-hero .post165-eyebrow { color: var(--p165-gold-light); }
+.has-navy-background-color .post165-eyebrow { color: var(--p165-gold-light); }
 
 /* ---------- Ribbon rule (the connective thread) ---------- */
 .post165-ribbon {
@@ -104,47 +103,8 @@ a { text-underline-offset: 0.18em; }
 }
 .post165-ribbon--center { margin-left: auto; margin-right: auto; }
 .has-navy-background-color .post165-ribbon,
-.post165-hero .post165-ribbon,
 .post165-footer .post165-ribbon {
   background: linear-gradient(90deg, var(--p165-gold-light), transparent);
-}
-
-/* ---------- Hero (full dress) ---------- */
-.post165-hero { position: relative; overflow: hidden; }
-.post165-hero::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 12px;
-  background: linear-gradient(
-    to bottom,
-    var(--wp--preset--color--red) 0 33.33%,
-    var(--wp--preset--color--cream) 33.33% 66.66%,
-    var(--wp--preset--color--gold) 66.66% 100%
-  );
-}
-.post165-hero-watermark {
-  position: absolute;
-  right: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 22rem;
-  height: 22rem;
-  opacity: 0.07;
-  pointer-events: none;
-  background: center / contain no-repeat url('assets/images/seal.svg');
-}
-.post165-hero__content { position: relative; z-index: 1; }
-
-/* Outlined secondary button on the navy hero */
-.post165-hero .is-style-outline .wp-block-button__link {
-  background: transparent;
-  border: 1.5px solid var(--p165-gold-light);
-  color: var(--p165-gold-light);
-}
-.post165-hero .is-style-outline .wp-block-button__link:hover {
-  background: var(--p165-gold-light);
-  color: var(--wp--preset--color--navy);
 }
 
 /* ---------- Hero meeting-info strip ---------- */
