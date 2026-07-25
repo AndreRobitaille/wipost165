@@ -5,7 +5,8 @@
   "description": "Custom WordPress theme and documentation for Robert E. Burns American Legion Post 165.",
   "type": "module",
   "scripts": {
-    "test": "node scripts/validate-theme.mjs",
+    "test": "node scripts/validate-theme.mjs && sh scripts/php-tests.sh",
+    "test:php": "sh scripts/php-tests.sh",
     "lint": "node scripts/validate-theme.mjs",
     "typecheck": "node scripts/validate-theme.mjs",
     "build": "node scripts/validate-theme.mjs",
