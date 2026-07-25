@@ -2773,6 +2773,27 @@ user with `manage_options` can update them; no developer or deploy is needed.
 **Anything left blank is left off the page.** The site never invents a
 placeholder value.
 
+## Pages you must create
+
+None of these pages exist yet. The homepage links to the first three, so
+until they are created those links return 404. Create each as a WordPress
+page with **exactly** the slug shown — the links are hardcoded to these paths.
+
+| Page | Slug | Starter pattern | Linked from |
+| --- | --- | --- | --- |
+| Membership | `membership` | `post165/membership-page` | Join panel button |
+| Support | `support` | none yet | "What we do" row |
+| Contact | `contact` | `post165/contact-page` | "What we do" row |
+| About | `about` | `post165/about-page` | Header navigation |
+| Events | `events` | none — The Events Calendar owns this URL | Header navigation |
+
+To apply a starter pattern: create the page, then in the editor insert the
+named pattern and edit its content. The patterns are starting points owned by
+Git; once inserted, the page content belongs to WordPress.
+
+There is no `support` pattern. Either write that page from scratch or drop the
+link from `patterns/home-what-we-do.php`.
+
 ### Events
 
 Public events come from The Events Calendar. The **monthly post meeting does
