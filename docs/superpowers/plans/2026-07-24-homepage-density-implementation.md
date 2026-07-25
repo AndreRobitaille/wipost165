@@ -2460,13 +2460,29 @@ git rm wp-content/themes/post165/patterns/home-hero.php \
        wp-content/themes/post165/patterns/contact-card.php
 ```
 
-- [ ] **Step 6: Remove the now-dead hero styles**
+- [ ] **Step 6: Rescue the Contact page's dangling reference**
+
+`patterns/contact-page.php` references `post165/contact-card`, which Step 5 just deleted. WordPress renders an unregistered pattern slug as an empty string — no warning, no placeholder — so the Contact page starter would silently lose its meeting time, venue, mailing address, phone, email, and Facebook link. Nothing in the validator catches this.
+
+Recover the deleted markup and inline it:
+
+```bash
+git show HEAD~1:wp-content/themes/post165/patterns/contact-card.php
+```
+
+Replace the `<!-- wp:pattern {"slug":"post165/contact-card"} /-->` line in `contact-page.php` with the recovered **block markup only** — not the recovered file's PHP docblock header, since `contact-page.php` already has one and a second would corrupt registration. Preserve every fact verbatim; these are real contact details.
+
+Then add a guard to `scripts/validate-theme.mjs` so this class of breakage cannot recur. Scan `templates/`, `parts/`, and `patterns/` for every `wp:pattern` reference with a `post165/<slug>` slug, and assert `patterns/<slug>.php` exists, pushing to the existing `failures` array on a miss. Write the regex tolerantly — allow other JSON attributes and flexible whitespace. A too-strict regex silently matches nothing, which is precisely how this defect survived.
+
+Verify the guard can fail: point a reference at a nonexistent slug, confirm `npm test` fails with your message, then revert.
+
+- [ ] **Step 7: Remove the now-dead hero styles**
 
 Deleting `home-hero.php` orphans its CSS. In `style.css`, delete the rules for `.post165-hero`, `.post165-hero::before`, `.post165-hero-watermark`, and `.post165-hero__content`, plus any `@media` overrides that target only those selectors.
 
 Leave `.post165-eyebrow`, `.post165-ribbon`, `.post165-seal`, `.post165-strip`, `.post165-card`, `.post165-star-list`, and `.post165-page-eyebrow` alone — the interior page and 404 templates still use them.
 
-- [ ] **Step 7: Run the validator to verify it passes**
+- [ ] **Step 8: Run the validator to verify it passes**
 
 ```bash
 npm test
@@ -2474,7 +2490,7 @@ npm test
 
 Expected: `Theme validation passed.` and all PHP assertions pass. (Task 10 already removed `.post165-hero` from the validator's required strings, so deleting those rules will not fail the gate.)
 
-- [ ] **Step 8: Rebuild the static preview and check it renders**
+- [ ] **Step 9: Rebuild the static preview and check it renders**
 
 ```bash
 node scripts/preview.mjs
@@ -2484,7 +2500,7 @@ Expected: `Preview written to …/theme-preview.html`.
 
 **Known limitation to note, not fix:** `scripts/preview.mjs` strips PHP and does not execute WordPress, so the three dynamic blocks render as empty comments in the static preview. The preview remains useful for the strap and page chrome only. Real verification of the board requires a WordPress install — record this in Task 13's docs rather than trying to teach the preview script to run PHP.
 
-- [ ] **Step 9: Commit**
+- [ ] **Step 10: Commit**
 
 ```bash
 git add -A wp-content/themes/post165 scripts/validate-theme.mjs
