@@ -3,7 +3,7 @@ Theme Name: Post 165
 Theme URI: https://wipost165.org
 Author: Robert E. Burns American Legion Post 165
 Description: Custom block theme for Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin.
-Version: 0.4.2
+Version: 0.4.3
 Requires at least: 6.5
 Requires PHP: 8.0
 Tested up to: 6.6
@@ -256,8 +256,8 @@ a { text-underline-offset: 0.18em; }
 }
 
 .post165-board__events  { padding-block: 1.5rem 0.6rem; }
-.post165-board__year    { padding-block: 0.6rem 0.6rem; align-self: start; }
-.post165-board__pillars { padding-block: 0.6rem 1.8rem; align-self: start; }
+.post165-board__year    { padding-block: 0.85rem 0.6rem; align-self: start; border-top: 1px solid #e0d6bf; }
+.post165-board__pillars { padding-block: 0.85rem 1.8rem; align-self: start; border-top: 1px solid #e0d6bf; }
 
 .post165-board__ask {
 	background: #fff;

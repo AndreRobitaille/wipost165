@@ -3,7 +3,7 @@
  * Title: Home What We Do
  * Slug: post165/home-what-we-do
  * Categories: post165
- * Description: The four pillars in one condensed row, plus support and contact lines.
+ * Description: The four pillars in one condensed row.
  *
  * @package post165
  */
@@ -60,29 +60,3 @@
 		<!-- /wp:column -->
 	</div>
 	<!-- /wp:columns -->
-
-	<!-- wp:separator {"className":"post165-ribbon"} -->
-	<hr class="wp-block-separator has-alpha-channel-opacity post165-ribbon" />
-	<!-- /wp:separator -->
-
-	<!-- wp:paragraph {"fontSize":"small"} -->
-	<p class="has-small-font-size"><?php
-		printf(
-			/* translators: 1: opening link tag, 2: closing link tag */
-			esc_html__( 'The post runs on volunteers and local support. %1$sWays to support Post 165%2$s.', 'post165' ),
-			'<a href="' . esc_url( home_url( '/support/' ) ) . '">',
-			'</a>'
-		);
-	?></p>
-	<!-- /wp:paragraph -->
-
-	<!-- wp:paragraph {"fontSize":"small"} -->
-	<p class="has-small-font-size"><?php
-		printf(
-			/* translators: 1: opening link tag, 2: closing link tag */
-			esc_html__( 'Questions about the post or an event? %1$sGet in touch%2$s.', 'post165' ),
-			'<a href="' . esc_url( home_url( '/contact/' ) ) . '">',
-			'</a>'
-		);
-	?></p>
-	<!-- /wp:paragraph -->
