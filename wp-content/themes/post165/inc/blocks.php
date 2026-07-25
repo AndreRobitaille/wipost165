@@ -28,6 +28,13 @@ function post165_register_blocks(): void {
 			'render_callback' => 'post165_render_year_strip',
 		]
 	);
+	register_block_type(
+		'post165/join-panel',
+		[
+			'api_version'     => 3,
+			'render_callback' => 'post165_render_join_panel',
+		]
+	);
 }
 add_action( 'init', 'post165_register_blocks' );
 
@@ -150,6 +157,100 @@ function post165_render_year_strip(): string {
 
 	$out .= '</ul>';
 	$out .= '<p class="post165-year__foot">' . esc_html__( 'Meetings run every month, year round.', 'post165' ) . '</p>';
+	$out .= '</div>';
+
+	return $out;
+}
+
+/**
+ * Render one definition row, or nothing when the value is empty.
+ *
+ * Absent facts are omitted rather than rendered as an empty row or a
+ * plausible-looking placeholder.
+ */
+function post165_fact_row( string $label, string $value ): string {
+	$value = trim( $value );
+
+	if ( '' === $value ) {
+		return '';
+	}
+
+	return '<div class="post165-fact"><dt>' . esc_html( $label ) . '</dt><dd>' . wp_kses_post( $value ) . '</dd></div>';
+}
+
+/**
+ * Render the membership panel.
+ */
+function post165_render_join_panel(): string {
+	$rule    = post165_meeting_rule();
+	$members = post165_format_member_count( post165_fact( 'member_count', 0 ) );
+
+	$when = '';
+	if ( '' !== $rule['ordinal'] && '' !== $rule['weekday'] && '' !== $rule['time'] ) {
+		// Build the time in the site's timezone. strtotime() would parse against
+		// the server's timezone, shifting the displayed hour when the two differ.
+		$parsed  = DateTimeImmutable::createFromFormat( 'H:i', $rule['time'], wp_timezone() );
+		$display = $parsed instanceof DateTimeImmutable
+			? $parsed->format( 'g:i a' )
+			: $rule['time'];
+
+		$when = ucfirst( $rule['ordinal'] ) . ' ' . ucfirst( $rule['weekday'] )
+			. ', ' . esc_html( $display );
+
+		if ( '' !== $rule['venue'] ) {
+			$when .= '<br />' . esc_html( $rule['venue'] );
+		}
+		if ( '' !== $rule['address'] ) {
+			$when .= '<br />' . esc_html( $rule['address'] );
+		}
+	}
+
+	$rows  = post165_fact_row( __( 'Who', 'post165' ), esc_html( (string) post165_fact( 'eligibility', '' ) ) );
+	$rows .= post165_fact_row( __( 'Dues', 'post165' ), esc_html( (string) post165_fact( 'dues', '' ) ) );
+	$rows .= post165_fact_row( __( 'We meet', 'post165' ), $when );
+	$rows .= post165_fact_row( __( 'Size', 'post165' ), null === $members ? '' : esc_html( $members . ' ' . __( 'members', 'post165' ) ) );
+
+	$out  = '<div class="post165-join">';
+	$out .= '<p class="post165-eyebrow">' . esc_html__( 'Thinking about joining', 'post165' ) . '</p>';
+	$out .= '<p class="post165-join__head">' . esc_html__( "You served. That doesn't have to be past tense.", 'post165' ) . '</p>';
+	$out .= '<p class="post165-join__lede">' . esc_html__( 'Straight answers, no pitch.', 'post165' ) . '</p>';
+
+	if ( '' !== $rows ) {
+		$out .= '<dl class="post165-facts">' . $rows . '</dl>';
+	}
+
+	$out .= '<p class="post165-join__cta"><a class="wp-block-button__link wp-element-button" href="'
+		. esc_url( home_url( '/membership/' ) ) . '">' . esc_html__( 'How to join', 'post165' ) . '</a></p>';
+
+	// The named contact: with this audience a person's name outperforms a form.
+	$name  = trim( (string) post165_fact( 'contact_name', '' ) );
+	$role  = trim( (string) post165_fact( 'contact_role', '' ) );
+	$email = trim( (string) post165_fact( 'contact_email', '' ) );
+	$phone = trim( (string) post165_fact( 'contact_phone', '' ) );
+
+	if ( '' !== $name || '' !== $email || '' !== $phone ) {
+		$out .= '<div class="post165-join__who">';
+		$out .= '<p>' . esc_html__( 'Questions? Talk to a person.', 'post165' ) . '</p>';
+
+		if ( '' !== $name ) {
+			$out .= '<p class="post165-join__name">' . esc_html( '' !== $role ? $name . ', ' . $role : $name ) . '</p>';
+		}
+
+		$bits = [];
+		if ( '' !== $email ) {
+			$safe   = antispambot( $email );
+			$bits[] = '<a href="mailto:' . esc_attr( $safe ) . '">' . esc_html( $safe ) . '</a>';
+		}
+		if ( '' !== $phone ) {
+			$bits[] = '<a href="tel:' . esc_attr( preg_replace( '/[^0-9+]/', '', $phone ) ) . '">' . esc_html( $phone ) . '</a>';
+		}
+		if ( $bits ) {
+			$out .= '<p class="post165-join__contact">' . implode( ' · ', $bits ) . '</p>';
+		}
+
+		$out .= '</div>';
+	}
+
 	$out .= '</div>';
 
 	return $out;
