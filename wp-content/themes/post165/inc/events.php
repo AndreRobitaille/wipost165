@@ -60,10 +60,14 @@ function post165_public_event_entries( int $limit ): array {
 		]
 	);
 
+	if ( ! is_array( $events ) ) {
+		return [];
+	}
+
 	$tz      = wp_timezone();
 	$entries = [];
 
-	foreach ( (array) $events as $event ) {
+	foreach ( $events as $event ) {
 		$raw = function_exists( 'tribe_get_start_date' )
 			? tribe_get_start_date( $event, true, 'Y-m-d H:i:s' )
 			: '';
@@ -115,13 +119,17 @@ function post165_upcoming_entries( int $limit = 5 ): array {
  * Appears automatically when no public event falls inside the window, so
  * nobody toggles it in October or May.
  *
- * @param array[] $entries Merged entries.
+ * Deliberately queries public events directly rather than reading the board's
+ * display list: that list is truncated to what fits, so an event pushed off
+ * the end would produce a false "quiet season" note while a real event was
+ * imminent. The question is "is anything coming?", not "is anything shown?".
+ *
  * @return array{label:string, month_name:string}|null
  */
-function post165_quiet_season_note( array $entries ): ?array {
+function post165_quiet_season_note(): ?array {
 	$now = post165_now();
 
-	if ( post165_has_public_event_within( $entries, $now, POST165_QUIET_WINDOW_DAYS ) ) {
+	if ( post165_has_public_event_within( post165_public_event_entries( 20 ), $now, POST165_QUIET_WINDOW_DAYS ) ) {
 		return null;
 	}
 
