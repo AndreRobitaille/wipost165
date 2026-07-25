@@ -9,6 +9,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+require_once get_theme_file_path( 'inc/pure/format.php' );
+require_once get_theme_file_path( 'inc/pure/meetings.php' );
+require_once get_theme_file_path( 'inc/pure/overrides.php' );
+require_once get_theme_file_path( 'inc/pure/year-map.php' );
+require_once get_theme_file_path( 'inc/settings.php' );
+
 function post165_setup(): void {
     add_theme_support( 'wp-block-styles' );
     add_theme_support( 'editor-styles' );
