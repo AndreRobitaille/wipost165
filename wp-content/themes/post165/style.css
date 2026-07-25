@@ -594,3 +594,29 @@ a { text-underline-offset: 0.18em; }
 	color: #5b6572;
 	margin-top: 0.35rem;
 }
+
+.post165-work__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.7rem;
+}
+
+.post165-work__grid figure {
+	margin: 0;
+}
+
+.post165-work__img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: 3px;
+	display: block;
+}
+
+.post165-work__cap {
+	font-size: 0.7rem;
+	color: #5b6572;
+	margin: 0.3rem 0 0;
+	line-height: 1.3;
+}

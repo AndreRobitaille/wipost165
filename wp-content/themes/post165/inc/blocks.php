@@ -35,6 +35,13 @@ function post165_register_blocks(): void {
 			'render_callback' => 'post165_render_join_panel',
 		]
 	);
+	register_block_type(
+		'post165/work-photos',
+		array(
+			'api_version'     => 3,
+			'render_callback' => 'post165_render_work_photos',
+		)
+	);
 }
 add_action( 'init', 'post165_register_blocks' );
 
@@ -246,4 +253,55 @@ function post165_render_join_panel(): string {
 	$out .= '</div>';
 
 	return $out;
+}
+
+/**
+ * Render the row of work photographs.
+ *
+ * Renders nothing at all until the post supplies images — an empty frame or a
+ * stock photograph would both be worse than absence here, since the page's
+ * whole argument is that this post actually shows up.
+ *
+ * Images are deliberately displayed small: the available photographs are
+ * amateur and sometimes low resolution, which reads as authentic at this size
+ * and as careless when enlarged.
+ */
+function post165_render_work_photos(): string {
+	$photos = post165_photos();
+
+	if ( empty( $photos ) ) {
+		return '';
+	}
+
+	$items = '';
+
+	foreach ( $photos as $photo ) {
+		$img = wp_get_attachment_image(
+			$photo['id'],
+			'medium',
+			false,
+			array(
+				'class'   => 'post165-work__img',
+				'loading' => 'lazy',
+			)
+		);
+
+		if ( ! $img ) {
+			continue;
+		}
+
+		$items .= '<figure>' . $img;
+
+		if ( '' !== trim( (string) $photo['caption'] ) ) {
+			$items .= '<figcaption class="post165-work__cap">' . esc_html( $photo['caption'] ) . '</figcaption>';
+		}
+
+		$items .= '</figure>';
+	}
+
+	if ( '' === $items ) {
+		return '';
+	}
+
+	return '<div class="post165-work"><div class="post165-work__grid">' . $items . '</div></div>';
 }

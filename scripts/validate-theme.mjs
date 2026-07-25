@@ -26,14 +26,14 @@ const requiredFiles = [
 ];
 
 const requiredText = new Map([
-  ['wp-content/themes/post165/style.css', ['Theme Name: Post 165', 'Text Domain: post165', 'Requires at least: 6.5', '.post165-ribbon', '.post165-seal', '.post165-strap', '.post165-board', '.post165-year', '.post165-ask', '.post165-proof', '.post165-ev__dy']],
+  ['wp-content/themes/post165/style.css', ['Theme Name: Post 165', 'Text Domain: post165', 'Requires at least: 6.5', '.post165-ribbon', '.post165-seal', '.post165-strap', '.post165-board', '.post165-year', '.post165-ask', '.post165-proof', '.post165-ev__dy', '.post165-work']],
   ['wp-content/themes/post165/functions.php', ['post165_setup', 'post165_register_pattern_categories', 'add_theme_support', 'wp_enqueue_style', "add_theme_support( 'custom-logo'", 'inc/settings.php', 'inc/events.php', 'inc/blocks.php']],
   ['wp-content/themes/post165/templates/front-page.html', ['wp:pattern {"slug":"post165/home-board"', 'wp:pattern {"slug":"post165/home-what-we-do"']],
   ['wp-content/themes/post165/parts/header.html', ['wp:navigation', 'Robert E. Burns American Legion Post 165']],
   ['wp-content/themes/post165/parts/footer.html', ['wipost165@gmail.com', 'PO Box 11', 'First Tuesday']],
   ['wp-content/themes/post165/inc/settings.php', ['post165_fact', 'post165_meeting_rule', 'post165_meeting_overrides', 'sanitize_email', 'manage_options', 'post165_photos', 'wp_enqueue_media']],
   ['wp-content/themes/post165/inc/events.php', ['post165_upcoming_entries', 'post165_quiet_season_note', 'post165_year_map', 'tribe_get_events']],
-  ['wp-content/themes/post165/inc/blocks.php', ['post165/upcoming', 'post165/year-strip', 'post165/join-panel', 'register_block_type', 'render_callback', 'antispambot', 'post165-ev__mo', 'post165-ev__wd', 'post165-ask', "Where you"]],
+  ['wp-content/themes/post165/inc/blocks.php', ['post165/upcoming', 'post165/year-strip', 'post165/join-panel', 'post165/work-photos', 'register_block_type', 'render_callback', 'antispambot', 'post165-ev__mo', 'post165-ev__wd', 'post165-ask', "Where you"]],
   ['docs/wordpress/content-model.md', ['Git owns', 'WordPress owns', 'Event categories']],
   ['docs/wordpress/setup.md', ['The Events Calendar', 'Home', 'Events', 'Membership', 'About', 'Contact']],
   ['docs/deployment/ftp-github-actions.md', ['FTP_SERVER', 'FTP_USERNAME', 'FTP_PASSWORD']],
