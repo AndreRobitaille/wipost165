@@ -265,11 +265,17 @@ function post165_render_join_panel(): string {
  * `<figure>`, no visible `<figcaption>`.
  *
  * Because there is no visible caption any more, the stored description is
- * the only text alternative available, so it is passed through as `alt`
- * on purpose. This is the reverse of the row this replaced, where a
- * visible figcaption already carried the description and an empty alt was
- * correct to avoid a screen reader announcing the same text twice. Do not
- * "restore" that behaviour here.
+ * the primary text alternative, so it is passed through as `alt` when set.
+ * This is the reverse of the row this replaced, where a visible figcaption
+ * already carried the description and an empty alt was correct to avoid a
+ * screen reader announcing the same text twice. Do not "restore" that
+ * behaviour here. But the `alt` key is only added when the description is
+ * non-empty: passing an explicit empty string would override whatever alt
+ * text is already stored against the attachment in the Media Library, and
+ * silently destroy it. Leaving the key out lets wp_get_attachment_image()
+ * fall back to the attachment's own alt text (or `alt=""` if it truly has
+ * none, which is still correct — a photograph with neither a description
+ * nor Media Library alt text has no text to give a screen reader).
  *
  * Still renders nothing at all until the post supplies images — an empty
  * frame or a stock photograph would both be worse than absence here, since
@@ -285,18 +291,22 @@ function post165_render_work_photos(): string {
 	$items = '';
 
 	foreach ( $photos as $photo ) {
-		$caption = (string) ( $photo['caption'] ?? '' );
-
-		$img = wp_get_attachment_image(
-			$photo['id'],
-			'thumbnail',
-			false,
-			array(
-				'class'   => 'post165-strap__shot',
-				'loading' => 'lazy',
-				'alt'     => $caption,
-			)
+		$attr = array(
+			'class'   => 'post165-strap__shot',
+			'loading' => 'lazy',
 		);
+
+		$caption = trim( (string) ( $photo['caption'] ?? '' ) );
+
+		// Only override WordPress's own alt text when a description was
+		// supplied. Passing an empty alt would discard whatever the Media
+		// Library holds, and with no visible caption these images would then
+		// have no text alternative at all.
+		if ( '' !== $caption ) {
+			$attr['alt'] = $caption;
+		}
+
+		$img = wp_get_attachment_image( $photo['id'], 'thumbnail', false, $attr );
 
 		if ( ! $img ) {
 			continue;

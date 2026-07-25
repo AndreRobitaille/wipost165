@@ -92,14 +92,25 @@ looks broken. Below 68rem the strip is hidden entirely with `display: none`
 rather than shrunk — there is no small-screen fallback, and none is needed,
 since the photographs were never the point of the page on a phone.
 
-**Alt text is the description field, not a separate field.** There is no
-visible caption anywhere on the homepage any more, so the description
-entered in Settings → Post 165 is passed straight through as the image's
-`alt` attribute (`post165_render_work_photos()` in `inc/blocks.php`). Write
-what is actually happening in the photograph — "Honor guard folding a flag
-at a cemetery," not just "Honor guard" — because for a screen reader user
-that description is the only text the photograph has at all. Leaving it
-blank is legal but means the image announces nothing.
+**Alt text is the description field, not a separate field — but only when
+you fill it in.** There is no visible caption anywhere on the homepage any
+more, so a non-empty description entered in Settings → Post 165 is passed
+straight through as the image's `alt` attribute
+(`post165_render_work_photos()` in `inc/blocks.php`). Write what is
+actually happening in the photograph — "Honor guard folding a flag at a
+cemetery," not just "Honor guard" — because for a screen reader user that
+description is the only text the photograph has at all.
+
+**Leaving the description blank does not blank the alt text.** If the
+description field is empty, the homepage falls back to whatever alt text
+is already set on that image in the Media Library (Media → Library → open
+the image → Alternative Text field), so an image that already has good alt
+text there is not silently overridden by an empty one. Only if **both** are
+empty — no description here and no alt text in the Media Library — does
+the photograph render with `alt=""` and announce nothing to a screen
+reader. That is acceptable (an image genuinely has no text alternative to
+give), but it means an officer should fill in the description here for any
+photograph that does not already have alt text set in the Media Library.
 
 ### Why dues and eligibility left the homepage
 
