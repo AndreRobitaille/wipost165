@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
 const root = process.cwd();
@@ -74,6 +74,47 @@ if (existsSync(themeJsonPath)) {
     }
   } catch (error) {
     failures.push(`theme.json must be valid JSON: ${error.message}`);
+  }
+}
+
+// Every wp:pattern {"slug":"post165/x", ...} reference in templates/parts/patterns
+// must resolve to an actual patterns/x.php file, or WordPress will silently render
+// nothing for it (render_block_core_pattern() returns '' for an unregistered slug).
+const patternRefDirs = [
+  'wp-content/themes/post165/templates',
+  'wp-content/themes/post165/parts',
+  'wp-content/themes/post165/patterns'
+];
+
+for (const relativeDir of patternRefDirs) {
+  const absoluteDir = path.join(root, relativeDir);
+  if (!existsSync(absoluteDir)) {
+    continue;
+  }
+
+  const entries = readdirSync(absoluteDir, { recursive: true });
+  for (const entry of entries) {
+    if (!/\.(html|php)$/.test(entry)) {
+      continue;
+    }
+
+    const relativePath = path.join(relativeDir, entry);
+    const absolutePath = path.join(root, relativePath);
+    const content = readFileSync(absolutePath, 'utf8');
+
+    const patternBlocks = content.match(/<!--\s*wp:pattern\b[\s\S]*?-->/g) ?? [];
+    for (const block of patternBlocks) {
+      const slugMatch = block.match(/"slug"\s*:\s*"post165\/([a-z0-9-]+)"/);
+      if (!slugMatch) {
+        continue;
+      }
+
+      const slug = slugMatch[1];
+      const patternPath = `wp-content/themes/post165/patterns/${slug}.php`;
+      if (!existsSync(path.join(root, patternPath))) {
+        failures.push(`${relativePath} references missing pattern: post165/${slug}`);
+      }
+    }
   }
 }
 

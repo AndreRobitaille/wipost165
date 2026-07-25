@@ -107,7 +107,7 @@ a { text-underline-offset: 0.18em; }
   background: linear-gradient(90deg, var(--p165-gold-light), transparent);
 }
 
-/* ---------- Hero meeting-info strip ---------- */
+/* ---------- Key/value strip (bordered columns, e.g. meeting info) ---------- */
 .post165-strip { border-top: 1px solid color-mix(in srgb, var(--p165-gold-light) 45%, transparent); }
 .post165-strip .wp-block-column {
   padding: 0.9rem 1.3rem;
