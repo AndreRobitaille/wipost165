@@ -86,14 +86,31 @@ Because free TEC cannot express recurrence, and because a volunteer will eventua
 Assembly:
 
 1. Generate the next **6** monthly meetings from the rule.
-2. If `function_exists('tribe_get_events')`, fetch upcoming published TEC events from now forward.
-3. Merge, sort ascending by start time, render the first **5**.
+2. **Apply per-meeting overrides** (§4.3.1) — an individual meeting may be moved, retimed, relocated, or cancelled.
+3. If `function_exists('tribe_get_events')`, fetch upcoming published TEC events from now forward.
+4. Merge, sort ascending by start time, render the first **5**.
 4. Meetings render with a `Members` pill; TEC events render with a `Public` pill. The next chronological entry is highlighted.
 5. Dates use `<time datetime="…">` with a machine-readable value.
 
 **Quiet-season fallback (automatic).** If no TEC event falls within the next 60 days, render a short bordered note stating that public events run in the warm months, that meetings continue monthly and visitors are welcome, and naming the **next annual milestone** resolved from the year map (§4.4). No human toggles this seasonally.
 
 **Failure modes are explicit:** TEC absent or empty → meetings still render, page still valid. Meeting rule misconfigured → falls back to rendering TEC events only rather than fataling.
+
+#### 4.3.1 Changing the pattern, and changing one meeting
+
+Two distinct needs, deliberately handled by two different mechanisms.
+
+**The standing rule changes** (the post moves off first-Tuesday-1830, or changes its regular venue). Edit the rule fields in `Settings → Post 165`: ordinal, weekday, time, venue name, street address. All future computed meetings follow the new rule immediately. This is a rare, sitewide change.
+
+**One meeting changes** (November's meeting moves a week for a holiday; December's is cancelled; one meeting is held elsewhere). This uses an **override table keyed by calendar month** (`YYYY-MM`), because the rule produces exactly one meeting per month, making the month an unambiguous key. No fragile matching on computed dates.
+
+Each override row carries: target month, plus optional replacement date, replacement time, replacement venue, and a **Cancelled** checkbox. Any field left blank inherits from the standing rule, so relocating a single meeting does not require restating its date and time.
+
+- A cancelled month is **omitted from the list entirely** rather than displayed struck through. A visitor scanning for the next meeting should not have to parse a negation.
+- The table holds **6 rows**, matching the 6 months generated — the override window and the generation window are deliberately the same, so an override can never silently apply to a meeting that is never computed.
+- Rows whose month is in the past are ignored at render and may be safely reused or cleared.
+
+If both an override and a TEC event exist for the same slot, the override applies to the computed meeting and the TEC event remains a separate entry; they are not merged. Duplicate-looking output is the editor's signal that the meeting was entered in TEC by hand and the override is redundant.
 
 ### 4.4 The year strip ("Our year")
 
@@ -113,7 +130,15 @@ A narrower right-hand column (~340px desktop) on white to separate it from the c
 
 - Heading: **"You served. That doesn't have to be past tense."**
 - Subhead: **"Straight answers, no pitch."** — then it must actually deliver that. No adjectives.
-- A definition list: **Who** (eligibility), **Dues**, **We meet** (time, venue, street address), **Size** (member count).
+- A definition list: **Who** (eligibility), **Dues**, **We meet** (time, venue, street address), **Size** (member count, displayed per §4.5.1).
+
+#### 4.5.1 Member count is rounded, not exact
+
+An officer enters the true roster number; the page **rounds down to the nearest 5 and appends a plus** — `183 → "180+"`, `200 → "200+"`.
+
+This is deliberate on two counts. It stays true as the roster drifts, so the figure does not quietly become a lie between updates; and rounding down means the post is never overstating itself, which suits an audience that prefers understatement to marketing.
+
+Edge case: a value below 5 would round to `"0+"`, which is absurd. Counts under 5 render the exact integer with no plus. A count of 0 or an empty field omits the Size row entirely (§4.6).
 - A single primary button: *How to join*.
 - **A named human**: first name, role, email, phone.
 
@@ -127,10 +152,12 @@ Dues, member count, and the contact person go stale, and stale facts are worse t
 |---|---|
 | Eligibility text | `sanitize_text_field` |
 | Dues text | `sanitize_text_field` |
-| Member count | `absint` |
+| Member count (true figure; displayed rounded per §4.5.1) | `absint` |
 | Charter year | `absint` |
-| Meeting rule (ordinal, weekday, time) | whitelist / `sanitize_text_field` |
+| Meeting rule — ordinal, weekday | whitelist |
+| Meeting rule — time | `sanitize_text_field`, parsed to 24h |
 | Venue name, street address | `sanitize_text_field` |
+| Meeting overrides ×6 — month (`YYYY-MM`), date, time, venue, cancelled | `sanitize_text_field` / date validation / `absint` bool |
 | Contact name, role | `sanitize_text_field` |
 | Contact email | `sanitize_email`, output through `antispambot()` |
 | Contact phone | `sanitize_text_field` |
@@ -225,4 +252,13 @@ These are **required from the post**; none may be invented in code:
 
 Until supplied, fields render omitted rather than filled with plausible-looking placeholders.
 
-**Manual verification required** (outside the validator): correct meeting dates across a month boundary, correct behaviour with TEC absent, with TEC present but empty, and in the October–March quiet season.
+**Manual verification required** (outside the validator), since none of this is reachable by static string checking:
+
+- Correct meeting dates across a month boundary, and on the meeting day itself before and after the start time.
+- Behaviour with TEC absent, and with TEC present but empty.
+- The October–March quiet season, including that the note names the correct next milestone.
+- Changing the standing rule (ordinal, weekday, time, venue) propagates to all future meetings.
+- Each override kind in isolation: moved date, changed time, changed venue, cancelled.
+- A cancelled month disappears cleanly and the list still renders five entries.
+- A past-month override row is ignored rather than resurrecting an old meeting.
+- Member count rounding at boundary values: 0, 3, 5, 183, 200.
