@@ -472,6 +472,16 @@ eq( $baddate[0]['start']->format( 'Y-m-d' ), '2026-08-04', 'unparseable override
 $blank = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-08', 'venue' => '' ] ], $rule );
 eq( $blank[0]['venue'], 'Test Hall', 'blank override field inherits from the rule' );
 
+// Venue-only override: the old venue's address must NOT be carried over.
+$venue_only = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-10', 'venue' => 'VFW Hall' ] ], $rule );
+eq( $venue_only[2]['venue'], 'VFW Hall', 'venue-only override applies the venue' );
+eq( $venue_only[2]['address'], '', 'a new venue does not inherit the old address' );
+
+// Address-only override: applies, and leaves the venue alone.
+$addr_only = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-10', 'address' => '9 Elm St' ] ], $rule );
+eq( $addr_only[2]['address'], '9 Elm St', 'address-only override is applied, not dropped' );
+eq( $addr_only[2]['venue'], 'Test Hall', 'address-only override leaves the venue inherited' );
+
 // Last override wins when two target the same month.
 $dupe = post165_apply_meeting_overrides(
 	$base,
@@ -511,10 +521,11 @@ declare(strict_types=1);
 /**
  * Apply per-month overrides to computed meeting dates.
  *
- * Blank fields inherit from the standing rule, so relocating one meeting does
- * not require restating its date and time. A cancelled month is omitted
- * entirely — a visitor scanning for the next meeting should not have to parse
- * a negation.
+ * Blank date, time and venue fields inherit from the standing rule, so
+ * retiming one meeting does not require restating its date. A changed venue
+ * clears the address unless a new one is supplied, because the rule's address
+ * belongs to the usual venue. A cancelled month is omitted entirely — a
+ * visitor scanning for the next meeting should not have to parse a negation.
  *
  * @param DateTimeImmutable[] $dates     Computed meeting datetimes.
  * @param array               $overrides Rows with month, and optional date, time, venue, address, cancelled.
@@ -571,10 +582,22 @@ function post165_apply_meeting_overrides( array $dates, array $overrides, array 
 				$start = $start->setTime( (int) $m[1], (int) $m[2] );
 			}
 
-			$new_venue = trim( (string) ( $override['venue'] ?? '' ) );
+			$new_venue   = trim( (string) ( $override['venue'] ?? '' ) );
+			$new_address = trim( (string) ( $override['address'] ?? '' ) );
+
 			if ( '' !== $new_venue ) {
-				$venue   = $new_venue;
-				$address = trim( (string) ( $override['address'] ?? '' ) );
+				$venue = $new_venue;
+				/*
+				 * A new venue deliberately does NOT inherit the standing rule's
+				 * address: that address belongs to the usual venue, and printing
+				 * it against a different hall would send people to the wrong
+				 * place. Supply an address alongside the venue, or the row shows
+				 * the venue name alone.
+				 */
+				$address = $new_address;
+			} elseif ( '' !== $new_address ) {
+				// Same venue, corrected address.
+				$address = $new_address;
 			}
 		}
 
