@@ -3,7 +3,7 @@
  * Title: Home Board
  * Slug: post165/home-board
  * Categories: post165
- * Description: Compact strap plus the two-column answer board.
+ * Description: Compact strap plus the two-column answer board, with the four pillars in the board's left column.
  *
  * @package post165
  */
@@ -49,6 +49,12 @@ $post165_charter = absint( post165_fact( 'charter_year', 0 ) );
 	<!-- wp:group {"className":"post165-board__year","layout":{"type":"default"}} -->
 	<div class="wp-block-group post165-board__year">
 		<!-- wp:post165/year-strip /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"className":"post165-board__pillars","layout":{"type":"default"}} -->
+	<div class="wp-block-group post165-board__pillars">
+		<!-- wp:pattern {"slug":"post165/home-what-we-do"} /-->
 	</div>
 	<!-- /wp:group -->
 </div>

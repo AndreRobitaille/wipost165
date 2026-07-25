@@ -3,7 +3,7 @@ Theme Name: Post 165
 Theme URI: https://wipost165.org
 Author: Robert E. Burns American Legion Post 165
 Description: Custom block theme for Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin.
-Version: 0.4.1
+Version: 0.4.2
 Requires at least: 6.5
 Requires PHP: 8.0
 Tested up to: 6.6
@@ -235,25 +235,29 @@ a { text-underline-offset: 0.18em; }
 .post165-board {
 	display: grid;
 	grid-template-columns: 1fr 20rem;
-	grid-template-rows: min-content 1fr;
+	grid-template-rows: min-content min-content 1fr;
 	grid-template-areas:
-		"events ask"
-		"year   ask";
+		"events  ask"
+		"year    ask"
+		"pillars ask";
 	align-items: start;
 }
 
-.post165-board__events { grid-area: events; }
-.post165-board__year   { grid-area: year; }
-.post165-board__ask    { grid-area: ask; }
+.post165-board__events  { grid-area: events; }
+.post165-board__year    { grid-area: year; }
+.post165-board__pillars { grid-area: pillars; }
+.post165-board__ask     { grid-area: ask; }
 
 .post165-board__events,
-.post165-board__year {
+.post165-board__year,
+.post165-board__pillars {
 	background: var(--wp--preset--color--cream);
 	padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
-.post165-board__events { padding-block: 1.5rem 0.6rem; }
-.post165-board__year   { padding-block: 0.6rem 1.8rem; align-self: start; }
+.post165-board__events  { padding-block: 1.5rem 0.6rem; }
+.post165-board__year    { padding-block: 0.6rem 0.6rem; align-self: start; }
+.post165-board__pillars { padding-block: 0.6rem 1.8rem; align-self: start; }
 
 .post165-board__ask {
 	background: #fff;
@@ -613,9 +617,10 @@ a { text-underline-offset: 0.18em; }
 /*
  * Single column below this width. The areas are re-declared rather than
  * removed so the stacking order is explicit and matches DOM order: events,
- * then the ask, then the year. There are no photographs left in the board to
- * worry about pushing below the fold — the only photographs on the page now
- * live in the strap, and are hidden entirely below 68rem (see above).
+ * then the ask, then the year, then the pillars. There are no photographs
+ * left in the board to worry about pushing below the fold — the only
+ * photographs on the page now live in the strap, and are hidden entirely
+ * below 68rem (see above).
  */
 @media (max-width: 52.5rem) {
 	.post165-board {
@@ -624,7 +629,8 @@ a { text-underline-offset: 0.18em; }
 		grid-template-areas:
 			"events"
 			"ask"
-			"year";
+			"year"
+			"pillars";
 	}
 
 	.post165-board__ask {

@@ -28,7 +28,7 @@ const requiredFiles = [
 const requiredText = new Map([
   ['wp-content/themes/post165/style.css', ['Theme Name: Post 165', 'Text Domain: post165', 'Requires at least: 6.5', '.post165-ribbon', '.post165-seal', '.post165-strap', '.post165-board', '.post165-year', '.post165-ask', '.post165-proof', '.post165-ev__dy', '.post165-strap__shots', '.post165-strap__shot', 'grid-template-areas']],
   ['wp-content/themes/post165/functions.php', ['post165_setup', 'post165_register_pattern_categories', 'add_theme_support', 'wp_enqueue_style', "add_theme_support( 'custom-logo'", 'inc/settings.php', 'inc/events.php', 'inc/blocks.php']],
-  ['wp-content/themes/post165/templates/front-page.html', ['wp:pattern {"slug":"post165/home-board"', 'wp:pattern {"slug":"post165/home-what-we-do"']],
+  ['wp-content/themes/post165/templates/front-page.html', ['wp:pattern {"slug":"post165/home-board"']],
   ['wp-content/themes/post165/parts/header.html', ['wp:navigation', 'Robert E. Burns American Legion Post 165']],
   ['wp-content/themes/post165/parts/footer.html', ['wipost165@gmail.com', 'PO Box 11', 'First Tuesday']],
   ['wp-content/themes/post165/inc/settings.php', ['post165_fact', 'post165_meeting_rule', 'post165_meeting_overrides', 'sanitize_email', 'manage_options', 'post165_photos', 'wp_enqueue_media']],
@@ -37,7 +37,7 @@ const requiredText = new Map([
   ['docs/wordpress/content-model.md', ['Git owns', 'WordPress owns', 'Event categories']],
   ['docs/wordpress/setup.md', ['The Events Calendar', 'Home', 'Events', 'Membership', 'About', 'Contact']],
   ['docs/deployment/ftp-github-actions.md', ['FTP_SERVER', 'FTP_USERNAME', 'FTP_PASSWORD']],
-  ['wp-content/themes/post165/patterns/home-board.php', ['wp:post165/upcoming', 'wp:post165/year-strip', 'wp:post165/join-panel', 'wp:post165/work-photos', 'Still here. Still serving.']],
+  ['wp-content/themes/post165/patterns/home-board.php', ['wp:post165/upcoming', 'wp:post165/year-strip', 'wp:post165/join-panel', 'wp:post165/work-photos', 'Still here. Still serving.', 'wp:pattern {"slug":"post165/home-what-we-do"']],
   ['wp-content/themes/post165/patterns/home-proof.php', ['post165-proof']],
   ['wp-content/themes/post165/patterns/home-what-we-do.php', ['Veterans', 'Youth', 'Remembrance', 'Community']]
 ]);
