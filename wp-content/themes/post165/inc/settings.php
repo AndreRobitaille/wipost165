@@ -10,6 +10,7 @@ defined( 'ABSPATH' ) || exit;
 
 const POST165_OPTION         = 'post165_facts';
 const POST165_OVERRIDE_ROWS  = 6;
+const POST165_PHOTO_ROWS     = 4;
 
 /**
  * Defaults. Every content value is deliberately empty: absent facts omit their
@@ -126,7 +127,7 @@ function post165_sanitize_facts( $input ): array {
 	$photos     = array();
 	$raw_photos = is_array( $input['photos'] ?? null ) ? $input['photos'] : array();
 
-	foreach ( array_slice( $raw_photos, 0, 3 ) as $row ) {
+	foreach ( array_slice( $raw_photos, 0, POST165_PHOTO_ROWS ) as $row ) {
 		if ( ! is_array( $row ) ) {
 			continue;
 		}
@@ -327,21 +328,24 @@ function post165_render_settings_page(): void {
 			</table>
 
 			<h2><?php esc_html_e( 'Photographs', 'post165' ); ?></h2>
-			<p><?php esc_html_e( 'Choose up to three photographs for the homepage. The attachment ID is the value that is actually saved; the picker button is a convenience for finding it.', 'post165' ); ?></p>
+			<p><?php esc_html_e( 'Choose up to four photographs for the strap at the top of the homepage. The attachment ID is the value that is actually saved; the picker button is a convenience for finding it. There is no visible caption on the homepage — the description you enter is used as the image\'s alt text instead.', 'post165' ); ?></p>
 			<table class="widefat striped">
 				<thead>
 					<tr>
 						<th scope="col"><?php esc_html_e( 'Attachment ID', 'post165' ); ?></th>
-						<th scope="col"><?php esc_html_e( 'Caption', 'post165' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Description (used as alt text)', 'post165' ); ?></th>
 						<th scope="col"><?php esc_html_e( 'Picker', 'post165' ); ?></th>
 					</tr>
 				</thead>
 				<tbody>
-				<?php for ( $i = 0; $i < 3; $i++ ) : ?>
+				<?php for ( $i = 0; $i < POST165_PHOTO_ROWS; $i++ ) : ?>
 					<?php $row = $photos[ $i ] ?? []; ?>
 					<tr>
 						<td><input type="number" class="post165-pick-id" name="<?php echo esc_attr( POST165_OPTION ); ?>[photos][<?php echo (int) $i; ?>][id]" value="<?php echo esc_attr( (string) ( $row['id'] ?? '' ) ); ?>" /></td>
-						<td><input type="text" name="<?php echo esc_attr( POST165_OPTION ); ?>[photos][<?php echo (int) $i; ?>][caption]" value="<?php echo esc_attr( $row['caption'] ?? '' ); ?>" class="regular-text" /></td>
+						<td>
+							<input type="text" name="<?php echo esc_attr( POST165_OPTION ); ?>[photos][<?php echo (int) $i; ?>][caption]" value="<?php echo esc_attr( $row['caption'] ?? '' ); ?>" class="regular-text" />
+							<p class="description"><?php esc_html_e( 'Describe what is in the photograph, for someone using a screen reader — for example "Honor guard folding a flag at a cemetery," not just "Honor guard."', 'post165' ); ?></p>
+						</td>
 						<?php $preview_url = ! empty( $row['id'] ) ? (string) wp_get_attachment_image_url( (int) $row['id'], 'thumbnail' ) : ''; ?>
 						<td>
 							<button type="button" class="button post165-pick"><?php esc_html_e( 'Choose', 'post165' ); ?></button>

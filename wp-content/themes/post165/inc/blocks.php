@@ -256,15 +256,24 @@ function post165_render_join_panel(): string {
 }
 
 /**
- * Render the row of work photographs.
+ * Render the photo strip inside the navy strap at the top of the page.
  *
- * Renders nothing at all until the post supplies images — an empty frame or a
- * stock photograph would both be worse than absence here, since the page's
- * whole argument is that this post actually shows up.
+ * This block no longer renders a full-width row below the board: it now
+ * sits between the tagline and the charter year inside `.post165-strap`
+ * (see `patterns/home-board.php`), producing a bare
+ * `.post165-strap__shots` wrapper around plain `<img>` elements — no
+ * `<figure>`, no visible `<figcaption>`.
  *
- * Images are deliberately displayed small: the available photographs are
- * amateur and sometimes low resolution, which reads as authentic at this size
- * and as careless when enlarged.
+ * Because there is no visible caption any more, the stored description is
+ * the only text alternative available, so it is passed through as `alt`
+ * on purpose. This is the reverse of the row this replaced, where a
+ * visible figcaption already carried the description and an empty alt was
+ * correct to avoid a screen reader announcing the same text twice. Do not
+ * "restore" that behaviour here.
+ *
+ * Still renders nothing at all until the post supplies images — an empty
+ * frame or a stock photograph would both be worse than absence here, since
+ * the page's whole argument is that this post actually shows up.
  */
 function post165_render_work_photos(): string {
 	$photos = post165_photos();
@@ -276,13 +285,16 @@ function post165_render_work_photos(): string {
 	$items = '';
 
 	foreach ( $photos as $photo ) {
+		$caption = (string) ( $photo['caption'] ?? '' );
+
 		$img = wp_get_attachment_image(
 			$photo['id'],
-			'medium',
+			'thumbnail',
 			false,
 			array(
-				'class'   => 'post165-work__img',
+				'class'   => 'post165-strap__shot',
 				'loading' => 'lazy',
+				'alt'     => $caption,
 			)
 		);
 
@@ -290,18 +302,12 @@ function post165_render_work_photos(): string {
 			continue;
 		}
 
-		$items .= '<figure>' . $img;
-
-		if ( '' !== trim( (string) ( $photo['caption'] ?? '' ) ) ) {
-			$items .= '<figcaption class="post165-work__cap">' . esc_html( $photo['caption'] ?? '' ) . '</figcaption>';
-		}
-
-		$items .= '</figure>';
+		$items .= $img;
 	}
 
 	if ( '' === $items ) {
 		return '';
 	}
 
-	return '<div class="post165-work"><div class="post165-work__grid">' . $items . '</div></div>';
+	return '<div class="post165-strap__shots">' . $items . '</div>';
 }

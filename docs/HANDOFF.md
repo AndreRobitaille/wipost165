@@ -200,34 +200,38 @@ history. In outline:
   photographs are configured. See `docs/wordpress/setup.md` for the editor
   workflow, including alt text guidance.
 
-#### Photos last is a hard constraint; the exact sequence of the rest is not
+#### Photographs left the board entirely; the remaining source order is events → ask → year
 
-`patterns/home-board.php` renders its four `.post165-board__*` wrapper
-`<div>`s in this order in the markup: **events, then ask, then year, then
-photos**. Desktop's two-column layout is achieved entirely with
-`grid-template-areas` in `style.css` (`.post165-board`, around the block
-starting `display: grid;`); the mobile layout re-declares the same areas as
-a single column in the same order, rather than removing them, specifically
-so DOM order and visual order always match.
+`patterns/home-board.php` now renders three `.post165-board__*` wrapper
+`<div>`s, in this order in the markup: **events, then ask, then year**.
+Desktop's two-column layout is achieved entirely with `grid-template-areas`
+in `style.css` (`.post165-board`, around the block starting
+`display: grid;`); the mobile layout re-declares the same areas as a single
+column in the same order, rather than removing them, specifically so DOM
+order and visual order always match.
 
-The year strip sits right after events, not after photos, because it's
+The year strip sits right after events, not after the ask, because it's
 calendar content — a year-at-a-glance view that pairs with the dated event
-list ("when is this happening" / "what does the year look like") — and a
-row of photographs wedged between them broke that pairing. This grouping
-was moved into place at the post owner's explicit request (see
-`f125a5b`); the events→ask→year→photos order is the current reality, not
-an incidental snapshot.
+list ("when is this happening" / "what does the year look like"). This
+grouping was moved into place at the post owner's explicit request (see
+`f125a5b`); events→ask→year is the current reality, not an incidental
+snapshot.
 
-What has **not** changed, and is the actual reason this section exists, is
-the constraint the ordering serves: **photographs must remain last**, so a
-phone user always reaches the dated events list and the ask for help before
-reaching any photograph. The whole point of this redesign is "here's what's
-happening and how you can help," not a gallery. On narrow viewports the four
-blocks stack in source order with no other re-layout, so source order *is*
-the mobile reading order — the invariant is "photos never precede the data,"
-not "these four blocks are frozen in this exact sequence." The relative
-order of events/ask/year can legitimately change again for a good reason;
-photos moving off last cannot.
+**Photographs used to be a fourth board block, always last, on the
+constraint that a phone user must reach the dated events and the ask before
+any photograph.** As of the homepage "v3" strap redesign, that constraint
+is satisfied structurally rather than by ordering: `post165/work-photos`
+was moved out of `.post165-board` entirely and now renders inside
+`.post165-strap` at the very top of the page (between the tagline and the
+charter year — see `patterns/home-board.php`). There is no photograph
+anywhere in the board any more, on any viewport, so there is nothing left
+that could be reordered to precede the events list. Below 68rem the strap
+photo strip is hidden outright (`display: none` on `.post165-strap__shots`)
+rather than stacked into the board, so this remains true at every width.
+
+The old prohibition on reordering the board still applies to the three
+blocks that remain — it was never really about photographs specifically,
+it was about DOM order and visual order silently diverging:
 
 **Do not**, even for a seemingly harmless visual tweak:
 
@@ -238,14 +242,67 @@ photos moving off last cannot.
   mobile order, so any reordering has to move the actual
   `<!-- wp:group -->` blocks in `patterns/home-board.php` and update both
   `grid-template-areas` declarations (desktop and the 52.5rem mobile
-  breakpoint) together;
-- let photographs land anywhere but last, in the markup or in either
-  `grid-template-areas` declaration.
+  breakpoint) together.
 
-Any of these would silently break the mobile guarantee — the dated events
-and the ask reaching the visitor before any photo — while potentially
-leaving the desktop layout looking unchanged. It is the kind of regression
-that only shows up if someone actually checks a phone.
+Any of these would silently break the mobile guarantee that events and the
+ask reach the visitor in a predictable order, while potentially leaving the
+desktop layout looking unchanged. It is the kind of regression that only
+shows up if someone actually checks a phone.
+
+### Homepage v3: photographs move into the strap (2026-07-25)
+
+The full-width photo row below the board (`.post165-work`,
+`.post165-board__photos`) was removed outright. `post165/work-photos`
+still exists as a block and still reads the same `photos` setting, but its
+render callback now produces a bare `.post165-strap__shots` wrapper of
+plain `<img class="post165-strap__shot">` elements — no `<figure>`, no
+visible caption — placed as a third sibling inside `.post165-strap`,
+between the tagline `wp:html` block and the charter-year `wp:html` block.
+The Photographs setting on Settings → Post 165 now holds four rows instead
+of three (`POST165_PHOTO_ROWS` in `inc/settings.php`), and the field
+previously labeled "Caption" is relabeled "Description (used as alt text)"
+in the admin UI — the stored option key is still `caption`, so no data
+migration was needed.
+
+Because the strap has no visible caption, the description is now passed to
+`wp_get_attachment_image()` as `alt` on purpose
+(`post165_render_work_photos()` in `inc/blocks.php`). This is the reverse
+of the row it replaced, where a visible `figcaption` already carried the
+text and an empty `alt` was correct to avoid a screen reader announcing the
+same words twice. Do not "restore" the old empty-alt behavior here — with
+no caption on the page, the description is the photograph's only text
+alternative.
+
+**Grid-gap fix.** With the photo row gone, `.post165-board__ask` still
+spans both grid rows (it must, to look right next to the shorter
+`.post165-board__year`), and CSS Grid's default track sizing distributes
+any surplus height across *all* spanned rows evenly. Before this fix, that
+inflated the `events` row to match whichever of `events`/`ask` was taller,
+pushing the "Our year" heading down and leaving a large empty band under
+the last event row on desktop — exactly the gap the post owner complained
+about. The fix is `grid-template-rows: min-content 1fr;` on `.post165-board`
+plus `align-self: start;` on `.post165-board__year`: the first row is
+pinned to the height its own content actually needs, and all surplus height
+is pushed into the second (`1fr`) row, where `align-self: start` keeps the
+year content pinned to the top of that now-taller track instead of being
+stretched or centered into it. **Do not simplify this back to a bare
+`display: grid` with implicit row sizing** — that reintroduces the exact
+band this fix closes.
+
+Also removed: the heavy navy `border-top` under `.post165-year` (the
+eyebrow already announces the section, so the rule was a redundant
+separator), and the `.post165-board__photos` / `.post165-work*` CSS rules,
+since nothing emits that markup any more.
+
+**Breakpoints are intentionally two different numbers.** Photographs are
+hidden below **68rem** (`.post165-strap__shots { display: none; }`)
+because the strap needs roughly 1090px to hold the tagline, four images,
+and the charter year on one line without wrapping — a wrapped strap looks
+broken. The board's own single-column breakpoint stays at **52.5rem**. Do
+not merge these into one breakpoint: between 52.5rem and 68rem the board is
+already single-column while the strap still has the width to stay on one
+line without the photos, so collapsing them to the lower value would leave
+the strap wrapping and stacking across that whole middle range.
 
 ### Local WordPress via Docker (works, not committed)
 

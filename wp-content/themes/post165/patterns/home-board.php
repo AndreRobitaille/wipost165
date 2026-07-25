@@ -17,6 +17,11 @@ $post165_charter = absint( post165_fact( 'charter_year', 0 ) );
 		<p class="post165-strap__title"><?php esc_html_e( 'Still here. Still serving.', 'post165' ); ?></p>
 		<p class="post165-strap__lede"><?php esc_html_e( 'Veterans serving Two Rivers — ceremonies, community events, and each other.', 'post165' ); ?></p>
 	</div>
+	<!-- /wp:html -->
+
+	<!-- wp:post165/work-photos /-->
+
+	<!-- wp:html -->
 	<?php if ( $post165_charter ) : ?>
 	<div class="post165-strap__since">
 		<b><?php echo esc_html( (string) $post165_charter ); ?></b>
@@ -44,12 +49,6 @@ $post165_charter = absint( post165_fact( 'charter_year', 0 ) );
 	<!-- wp:group {"className":"post165-board__year","layout":{"type":"default"}} -->
 	<div class="wp-block-group post165-board__year">
 		<!-- wp:post165/year-strip /-->
-	</div>
-	<!-- /wp:group -->
-
-	<!-- wp:group {"className":"post165-board__photos","layout":{"type":"default"}} -->
-	<div class="wp-block-group post165-board__photos">
-		<!-- wp:post165/work-photos /-->
 	</div>
 	<!-- /wp:group -->
 </div>

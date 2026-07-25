@@ -3,7 +3,7 @@ Theme Name: Post 165
 Theme URI: https://wipost165.org
 Author: Robert E. Burns American Legion Post 165
 Description: Custom block theme for Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin.
-Version: 0.3.1
+Version: 0.4.0
 Requires at least: 6.5
 Requires PHP: 8.0
 Tested up to: 6.6
@@ -172,11 +172,11 @@ a { text-underline-offset: 0.18em; }
 	background: var(--wp--preset--color--navy);
 	color: #fff;
 	border-bottom: 3px solid var(--wp--preset--color--gold);
-	padding: 1.25rem clamp(1rem, 4vw, 2.25rem);
+	padding: 1.05rem clamp(1rem, 4vw, 2.25rem);
 	display: flex;
 	align-items: center;
-	gap: 1.75rem;
-	flex-wrap: wrap;
+	gap: 1.4rem;
+	flex-wrap: nowrap;
 }
 
 .post165-strap__title {
@@ -195,8 +195,25 @@ a { text-underline-offset: 0.18em; }
 }
 
 .post165-strap__since {
-	margin-left: auto;
 	text-align: right;
+	padding-left: 1.2rem;
+	border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.post165-strap__shots {
+	display: flex;
+	gap: 0.45rem;
+	margin-left: auto;
+	flex: none;
+}
+
+.post165-strap__shot {
+	width: 112px;
+	height: 84px;
+	object-fit: cover;
+	border-radius: 2px;
+	display: block;
+	border: 1px solid rgba(217, 180, 91, 0.28);
 }
 
 .post165-strap__since b {
@@ -218,28 +235,25 @@ a { text-underline-offset: 0.18em; }
 .post165-board {
 	display: grid;
 	grid-template-columns: 1fr 20rem;
+	grid-template-rows: min-content 1fr;
 	grid-template-areas:
 		"events ask"
-		"year   ask"
-		"photos ask";
+		"year   ask";
 	align-items: start;
 }
 
 .post165-board__events { grid-area: events; }
-.post165-board__photos { grid-area: photos; }
 .post165-board__year   { grid-area: year; }
 .post165-board__ask    { grid-area: ask; }
 
 .post165-board__events,
-.post165-board__photos,
 .post165-board__year {
 	background: var(--wp--preset--color--cream);
 	padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
 .post165-board__events { padding-block: 1.5rem 0.6rem; }
-.post165-board__year   { padding-block: 0.6rem 0.6rem; }
-.post165-board__photos { padding-block: 0.6rem 1.8rem; }
+.post165-board__year   { padding-block: 0.6rem 1.8rem; align-self: start; }
 
 .post165-board__ask {
 	background: #fff;
@@ -373,9 +387,7 @@ a { text-underline-offset: 0.18em; }
 /* Year strip ------------------------------------------------------------- */
 
 .post165-year {
-	margin-top: 1.4rem;
-	border-top: 2px solid var(--wp--preset--color--navy);
-	padding-top: 0.9rem;
+	margin-top: 0.5rem;
 }
 
 .post165-year__lede,
@@ -575,19 +587,35 @@ a { text-underline-offset: 0.18em; }
 /* Collapse: on narrow screens the "when is it?" answer comes first -------- */
 
 /*
+ * Photos leave the strap before it has room to wrap. This is deliberately a
+ * different breakpoint from the board's 52.5rem: the strap needs roughly
+ * 1090px to hold the tagline, four images and the charter year on one line,
+ * and between 52.5rem and 68rem the board is already single-column while the
+ * strap still has the width to stay on one line without the photos. Dropping
+ * this rule to 52.5rem would let the strap wrap and stack across that whole
+ * middle range, which is exactly what must not happen.
+ */
+@media (max-width: 68rem) {
+	.post165-strap__shots {
+		display: none;
+	}
+}
+
+/*
  * Single column below this width. The areas are re-declared rather than
- * removed so the stacking order is explicit and matches DOM order:
- * events, then the ask, then the year, then photographs. Photographs must
- * never push the answer below the fold on a phone.
+ * removed so the stacking order is explicit and matches DOM order: events,
+ * then the ask, then the year. There are no photographs left in the board to
+ * worry about pushing below the fold — the only photographs on the page now
+ * live in the strap, and are hidden entirely below 68rem (see above).
  */
 @media (max-width: 52.5rem) {
 	.post165-board {
 		grid-template-columns: 1fr;
+		grid-template-rows: none;
 		grid-template-areas:
 			"events"
 			"ask"
-			"year"
-			"photos";
+			"year";
 	}
 
 	.post165-board__ask {
@@ -606,36 +634,12 @@ a { text-underline-offset: 0.18em; }
 	.post165-strap__since {
 		margin-left: 0;
 		text-align: left;
+		border-left: 0;
+		padding-left: 0;
 	}
 }
 
 .post165-proof {
 	padding: 1.75rem 1rem 2rem;
 	background: #fff;
-}
-
-.post165-work__grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 0.7rem;
-}
-
-.post165-work__grid figure {
-	margin: 0;
-}
-
-.post165-work__img {
-	width: 100%;
-	height: auto;
-	aspect-ratio: 4 / 3;
-	object-fit: cover;
-	border-radius: 3px;
-	display: block;
-}
-
-.post165-work__cap {
-	font-size: 0.7rem;
-	color: #5b6572;
-	margin: 0.3rem 0 0;
-	line-height: 1.3;
 }

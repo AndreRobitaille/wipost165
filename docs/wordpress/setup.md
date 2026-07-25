@@ -72,7 +72,7 @@ user with `manage_options` can update them; no developer or deploy is needed.
 | Meeting rule | Which week, which day, start time (24-hour), venue, address. **Meeting dates are calculated from this rule** — they are never entered by hand and never go stale, but see the warning below: this rule only drives the homepage. |
 | Individual meeting changes | Six rows, each keyed by month (`2026-11`). Fill only what differs; blanks inherit from the rule. Ticking **Cancelled** leaves that month off the homepage entirely. |
 | Contact | Name, role, email, phone. The email is obfuscated against scrapers on output. Shown on the homepage ask panel when at least one of these is filled in. |
-| Photographs | Up to three, each chosen from the Media Library with the **Choose** button, plus a one-line caption. The attachment ID field is the value that actually gets saved — the Choose button is a convenience that fills the ID in for you. If JavaScript fails to load, the row still works: type or paste the attachment ID by hand (visible in the Media Library's URL or the image's "Attachment Details" panel) and fill in the caption. **The photo row renders nothing at all — no boxes, no placeholders — until images are set.** |
+| Photographs | Up to four, each chosen from the Media Library with the **Choose** button, plus a short description. The attachment ID field is the value that actually gets saved — the Choose button is a convenience that fills the ID in for you. If JavaScript fails to load, the row still works: type or paste the attachment ID by hand (visible in the Media Library's URL or the image's "Attachment Details" panel) and fill in the description. **There is no visible caption on the homepage: the description you enter is used as the image's `alt` text instead, so write what is actually happening in the photograph, for someone using a screen reader** — "Honor guard folding a flag at a cemetery," not just "Honor guard." The photographs render in the navy strap at the very top of the homepage, between the tagline and the charter year — **not** as a full-width row lower on the page. The strip renders nothing at all — no boxes, no placeholders — until images are set. |
 
 **Anything left blank is left off the page.** The site never invents a
 placeholder value.
@@ -84,15 +84,22 @@ takes pictures. Enlarged, the same photos read as careless. Do not "fix"
 the image size upward without re-checking this against real source photos
 first.
 
-**Alt text.** If a photograph has no alt text set in the Media Library, it
-renders on the homepage with `alt=""`. That is correct, not a bug: the
-caption underneath is already read aloud by a screen reader, so repeating
-it as alt text would announce the same words twice. Where a caption is
-just a bare label — "Brat fry", "Honor guard" — rather than a description
-of what is actually happening in the photo, an officer should add real alt
-text to that image in the Media Library (Media → Library → open the image
-→ Alternative Text field). It flows through to the homepage automatically;
-no developer or deploy is needed.
+**Photographs disappear below 68rem (about 1088px) wide**, on tablets and
+phones, and on any browser window narrower than that. This is deliberate:
+the strap needs roughly that much width to hold the tagline, four images,
+and the charter year on a single line without wrapping, and a wrapped strap
+looks broken. Below 68rem the strip is hidden entirely with `display: none`
+rather than shrunk — there is no small-screen fallback, and none is needed,
+since the photographs were never the point of the page on a phone.
+
+**Alt text is the description field, not a separate field.** There is no
+visible caption anywhere on the homepage any more, so the description
+entered in Settings → Post 165 is passed straight through as the image's
+`alt` attribute (`post165_render_work_photos()` in `inc/blocks.php`). Write
+what is actually happening in the photograph — "Honor guard folding a flag
+at a cemetery," not just "Honor guard" — because for a screen reader user
+that description is the only text the photograph has at all. Leaving it
+blank is legal but means the image announces nothing.
 
 ### Why dues and eligibility left the homepage
 
