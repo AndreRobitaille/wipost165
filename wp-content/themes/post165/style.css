@@ -438,19 +438,50 @@ a { text-underline-offset: 0.18em; }
 
 /* Join panel ------------------------------------------------------------- */
 
-.post165-join__head {
+.post165-ask__head {
 	font-family: var(--wp--preset--font-family--serif);
-	font-size: 1.3rem;
+	font-size: 1.45rem;
 	font-weight: 600;
 	color: var(--wp--preset--color--navy);
-	line-height: 1.2;
-	margin: 0 0 0.3rem;
+	line-height: 1.15;
+	margin: 0 0 0.4rem;
 }
 
-.post165-join__lede {
+.post165-ask__lede {
+	font-size: 0.88rem;
+	color: #5b6572;
+	margin: 0 0 1rem;
+}
+
+.post165-ask__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.post165-ask__list li {
+	padding: 0.55rem 0;
+	border-top: 1px solid #eae3d2;
+	font-size: 0.87rem;
+}
+
+.post165-ask__list b {
+	display: block;
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--wp--preset--color--navy);
+}
+
+.post165-ask__list span {
+	color: #5b6572;
+	font-size: 0.8rem;
+}
+
+.post165-ask__foot {
+	margin: 1rem 0 0;
 	font-size: 0.85rem;
 	color: #5b6572;
-	margin: 0 0 0.9rem;
 }
 
 .post165-facts {
@@ -481,16 +512,16 @@ a { text-underline-offset: 0.18em; }
 	color: var(--wp--preset--color--ink);
 }
 
-.post165-join__cta {
+.post165-ask__cta {
 	margin: 1rem 0 0;
 }
 
-.post165-join__cta a {
+.post165-ask__cta a {
 	display: block;
 	text-align: center;
 }
 
-.post165-join__who {
+.post165-ask__who {
 	margin-top: 0.9rem;
 	padding-top: 0.85rem;
 	border-top: 1px solid #eae3d2;
@@ -498,11 +529,11 @@ a { text-underline-offset: 0.18em; }
 	color: #5b6572;
 }
 
-.post165-join__who p {
+.post165-ask__who p {
 	margin: 0;
 }
 
-.post165-join__name {
+.post165-ask__name {
 	font-family: var(--wp--preset--font-family--serif);
 	font-size: 1rem;
 	font-weight: 600;
@@ -510,7 +541,16 @@ a { text-underline-offset: 0.18em; }
 	margin-top: 0.15rem !important;
 }
 
-.post165-join__contact a {
+.post165-ask__contact a {
+	color: var(--wp--preset--color--red);
+}
+
+.post165-ask__fine {
+	margin-top: 0.8rem;
+	font-size: 0.76rem;
+}
+
+.post165-ask__fine a {
 	color: var(--wp--preset--color--red);
 }
 

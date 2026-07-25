@@ -180,80 +180,53 @@ function post165_fact_row( string $label, string $value ): string {
 }
 
 /**
- * Render the membership panel.
+ * Render the invitation to help.
+ *
+ * Deliberately asks for contribution rather than membership. The audience is
+ * veterans in their 30s and 40s with jobs and families; some are struggling
+ * and withdraw rather than ask. "We need hands for a morning" can be accepted
+ * without admitting anything, where "come and belong" cannot. Dues and
+ * eligibility live on the membership page: they are hurdles, and a hurdle
+ * shown before a reason is just an exit.
  */
 function post165_render_join_panel(): string {
-	$rule         = post165_meeting_rule();
-	$member_count = (int) post165_fact( 'member_count', 0 );
-	$members      = post165_format_member_count( $member_count );
+	$work = array(
+		array( __( 'Honor guard', 'post165' ), __( 'Parades and civic ceremonies', 'post165' ) ),
+		array( __( 'Brat fry', 'post165' ), __( "The post's main fundraiser", 'post165' ) ),
+		array( __( 'Flags on graves', 'post165' ), __( 'Before Memorial Day', 'post165' ) ),
+		array( __( 'Youth programs', 'post165' ), __( 'Baseball, Boys State, scholarships', 'post165' ) ),
+	);
 
-	$when = '';
-	if ( '' !== $rule['ordinal'] && '' !== $rule['weekday'] && '' !== $rule['time'] ) {
-		// Build the time in the site's timezone. strtotime() would parse against
-		// the server's timezone, shifting the displayed hour when the two differ.
-		$parsed  = DateTimeImmutable::createFromFormat( 'H:i', $rule['time'], wp_timezone() );
-		$display = $parsed instanceof DateTimeImmutable
-			? $parsed->format( 'g:i a' )
-			: $rule['time'];
+	$out  = '<div class="post165-ask">';
+	$out .= '<p class="post165-eyebrow">' . esc_html__( "Where you'd help", 'post165' ) . '</p>';
+	$out .= '<p class="post165-ask__head">' . esc_html__( "A handful of mornings a year. That's the whole ask.", 'post165' ) . '</p>';
+	$out .= '<p class="post165-ask__lede">' . esc_html__( 'Most of what this post does gets done by a dozen people showing up once.', 'post165' ) . '</p>';
 
-		$when = ucfirst( $rule['ordinal'] ) . ' ' . ucfirst( $rule['weekday'] )
-			. ', ' . esc_html( $display );
-
-		if ( '' !== $rule['venue'] ) {
-			$when .= '<br />' . esc_html( $rule['venue'] );
-		}
-		if ( '' !== $rule['address'] ) {
-			$when .= '<br />' . esc_html( $rule['address'] );
-		}
+	$out .= '<ul class="post165-ask__list">';
+	foreach ( $work as $item ) {
+		$out .= '<li><b>' . esc_html( $item[0] ) . '</b><span>' . esc_html( $item[1] ) . '</span></li>';
 	}
+	$out .= '</ul>';
 
-	$size = '';
-	if ( null !== $members ) {
-		// The displayed value may be a rounded string like "180+", but the
-		// plural form must be decided from the true, unrounded count.
-		// post165_format_member_count() returns null for any count <= 0, so
-		// $member_count is a positive integer whenever we reach this branch.
-		$size = esc_html(
-			sprintf(
-				/* translators: %s: formatted member count, e.g. "180+" or "3" */
-				_n( '%s member', '%s members', $member_count, 'post165' ),
-				$members
-			)
-		);
-	}
+	$out .= '<p class="post165-ask__foot">' . esc_html__( "Come to one. If it isn't for you, nobody will chase you.", 'post165' ) . '</p>';
+	$out .= '<p class="post165-ask__cta"><a class="wp-block-button__link wp-element-button" href="'
+		. esc_url( home_url( '/contact/' ) ) . '">' . esc_html__( 'Get in touch', 'post165' ) . '</a></p>';
 
-	$rows  = post165_fact_row( __( 'Who', 'post165' ), esc_html( (string) post165_fact( 'eligibility', '' ) ) );
-	$rows .= post165_fact_row( __( 'Dues', 'post165' ), esc_html( (string) post165_fact( 'dues', '' ) ) );
-	$rows .= post165_fact_row( __( 'We meet', 'post165' ), $when );
-	$rows .= post165_fact_row( __( 'Size', 'post165' ), $size );
-
-	$out  = '<div class="post165-join">';
-	$out .= '<p class="post165-eyebrow">' . esc_html__( 'Thinking about joining', 'post165' ) . '</p>';
-	$out .= '<p class="post165-join__head">' . esc_html__( "You served. That doesn't have to be past tense.", 'post165' ) . '</p>';
-	$out .= '<p class="post165-join__lede">' . esc_html__( 'Straight answers, no pitch.', 'post165' ) . '</p>';
-
-	if ( '' !== $rows ) {
-		$out .= '<dl class="post165-facts">' . $rows . '</dl>';
-	}
-
-	$out .= '<p class="post165-join__cta"><a class="wp-block-button__link wp-element-button" href="'
-		. esc_url( home_url( '/membership/' ) ) . '">' . esc_html__( 'How to join', 'post165' ) . '</a></p>';
-
-	// The named contact: with this audience a person's name outperforms a form.
+	// A name beats a form with this audience: trust here is earned slowly and
+	// travels by word of mouth.
 	$name  = trim( (string) post165_fact( 'contact_name', '' ) );
 	$role  = trim( (string) post165_fact( 'contact_role', '' ) );
 	$email = trim( (string) post165_fact( 'contact_email', '' ) );
 	$phone = trim( (string) post165_fact( 'contact_phone', '' ) );
 
 	if ( '' !== $name || '' !== $email || '' !== $phone ) {
-		$out .= '<div class="post165-join__who">';
-		$out .= '<p>' . esc_html__( 'Questions? Talk to a person.', 'post165' ) . '</p>';
+		$out .= '<div class="post165-ask__who"><p>' . esc_html__( 'Ask a person, not a form.', 'post165' ) . '</p>';
 
 		if ( '' !== $name ) {
-			$out .= '<p class="post165-join__name">' . esc_html( '' !== $role ? $name . ', ' . $role : $name ) . '</p>';
+			$out .= '<p class="post165-ask__name">' . esc_html( '' !== $role ? $name . ', ' . $role : $name ) . '</p>';
 		}
 
-		$bits = [];
+		$bits = array();
 		if ( '' !== $email ) {
 			$safe   = antispambot( $email );
 			$bits[] = '<a href="mailto:' . esc_attr( $safe ) . '">' . esc_html( $safe ) . '</a>';
@@ -262,12 +235,14 @@ function post165_render_join_panel(): string {
 			$bits[] = '<a href="tel:' . esc_attr( preg_replace( '/[^0-9+]/', '', $phone ) ) . '">' . esc_html( $phone ) . '</a>';
 		}
 		if ( $bits ) {
-			$out .= '<p class="post165-join__contact">' . implode( ' · ', $bits ) . '</p>';
+			$out .= '<p class="post165-ask__contact">' . implode( ' &middot; ', $bits ) . '</p>';
 		}
 
 		$out .= '</div>';
 	}
 
+	$out .= '<p class="post165-ask__fine"><a href="' . esc_url( home_url( '/membership/' ) ) . '">'
+		. esc_html__( 'What membership involves', 'post165' ) . ' &rarr;</a></p>';
 	$out .= '</div>';
 
 	return $out;
