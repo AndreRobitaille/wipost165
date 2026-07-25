@@ -14,6 +14,7 @@ require_once get_theme_file_path( 'inc/pure/meetings.php' );
 require_once get_theme_file_path( 'inc/pure/overrides.php' );
 require_once get_theme_file_path( 'inc/pure/year-map.php' );
 require_once get_theme_file_path( 'inc/settings.php' );
+require_once get_theme_file_path( 'inc/events.php' );
 
 function post165_setup(): void {
     add_theme_support( 'wp-block-styles' );
