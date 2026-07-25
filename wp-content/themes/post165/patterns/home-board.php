@@ -41,15 +41,15 @@ $post165_charter = absint( post165_fact( 'charter_year', 0 ) );
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"className":"post165-board__photos","layout":{"type":"default"}} -->
-	<div class="wp-block-group post165-board__photos">
-		<!-- wp:post165/work-photos /-->
-	</div>
-	<!-- /wp:group -->
-
 	<!-- wp:group {"className":"post165-board__year","layout":{"type":"default"}} -->
 	<div class="wp-block-group post165-board__year">
 		<!-- wp:post165/year-strip /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"className":"post165-board__photos","layout":{"type":"default"}} -->
+	<div class="wp-block-group post165-board__photos">
+		<!-- wp:post165/work-photos /-->
 	</div>
 	<!-- /wp:group -->
 </div>

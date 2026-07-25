@@ -3,7 +3,7 @@ Theme Name: Post 165
 Theme URI: https://wipost165.org
 Author: Robert E. Burns American Legion Post 165
 Description: Custom block theme for Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin.
-Version: 0.3.0
+Version: 0.3.1
 Requires at least: 6.5
 Requires PHP: 8.0
 Tested up to: 6.6
@@ -220,8 +220,8 @@ a { text-underline-offset: 0.18em; }
 	grid-template-columns: 1fr 20rem;
 	grid-template-areas:
 		"events ask"
-		"photos ask"
-		"year   ask";
+		"year   ask"
+		"photos ask";
 	align-items: start;
 }
 
@@ -238,8 +238,8 @@ a { text-underline-offset: 0.18em; }
 }
 
 .post165-board__events { padding-block: 1.5rem 0.6rem; }
-.post165-board__photos { padding-block: 0.4rem 1.2rem; }
-.post165-board__year   { padding-block: 0 1.8rem; }
+.post165-board__year   { padding-block: 0.6rem 0.6rem; }
+.post165-board__photos { padding-block: 0.6rem 1.8rem; }
 
 .post165-board__ask {
 	background: #fff;
@@ -577,7 +577,7 @@ a { text-underline-offset: 0.18em; }
 /*
  * Single column below this width. The areas are re-declared rather than
  * removed so the stacking order is explicit and matches DOM order:
- * events, then the ask, then photographs, then the year. Photographs must
+ * events, then the ask, then the year, then photographs. Photographs must
  * never push the answer below the fold on a phone.
  */
 @media (max-width: 52.5rem) {
@@ -586,8 +586,8 @@ a { text-underline-offset: 0.18em; }
 		grid-template-areas:
 			"events"
 			"ask"
-			"photos"
-			"year";
+			"year"
+			"photos";
 	}
 
 	.post165-board__ask {
