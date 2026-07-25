@@ -7,6 +7,7 @@ $pure = $root . '/wp-content/themes/post165/inc/pure';
 require $pure . '/format.php';
 require $pure . '/meetings.php';
 require $pure . '/overrides.php';
+require $pure . '/year-map.php';
 
 $tests = 0;
 $fails = 0;
@@ -178,6 +179,55 @@ eq( $venue_only[2]['address'], '', 'a new venue does not inherit the old address
 $addr_only = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-10', 'address' => '9 Elm St' ] ], $rule );
 eq( $addr_only[2]['address'], '9 Elm St', 'address-only override is applied, not dropped' );
 eq( $addr_only[2]['venue'], 'Test Hall', 'address-only override leaves the venue inherited' );
+
+// --- post165_default_year_map ----------------------------------------------
+$map = post165_default_year_map();
+eq( count( $map ), 12, 'year map covers twelve months' );
+ok( array_key_exists( 1, $map ) && array_key_exists( 12, $map ), 'year map is keyed 1..12' );
+eq( $map[8]['label'], 'Brat Fry', 'August carries the brat fry' );
+eq( $map[9]['label'], 'Car Show', 'September carries the car show' );
+eq( $map[1]['label'], '', 'January is quiet by default' );
+
+// --- post165_next_annual_milestone -----------------------------------------
+$m = post165_next_annual_milestone( $map, new DateTimeImmutable( '2027-01-15 09:00:00', $tz ) );
+eq( $m['label'], 'Memorial Day', 'from January the next milestone is Memorial Day' );
+eq( $m['month'], 5, 'and it is in month 5' );
+eq( $m['year'], 2027, 'in the same year' );
+
+$m2 = post165_next_annual_milestone( $map, new DateTimeImmutable( '2026-11-20 09:00:00', $tz ) );
+eq( $m2['label'], 'Memorial Day', 'from November it wraps to next May' );
+eq( $m2['year'], 2027, 'and rolls the year forward' );
+
+$m3 = post165_next_annual_milestone( $map, new DateTimeImmutable( '2026-05-02 09:00:00', $tz ) );
+eq( $m3['month'], 6, 'the current month is excluded, so May yields June' );
+
+eq( post165_next_annual_milestone( [], new DateTimeImmutable( '2026-01-01 09:00:00', $tz ) ), null, 'an empty map yields null' );
+eq(
+	post165_next_annual_milestone(
+		[ 1 => [ 'label' => '' ], 2 => [ 'label' => '' ] ],
+		new DateTimeImmutable( '2026-01-01 09:00:00', $tz )
+	),
+	null,
+	'a map with no labels yields null'
+);
+
+// --- post165_has_public_event_within ---------------------------------------
+$now      = new DateTimeImmutable( '2026-07-24 09:00:00', $tz );
+$meetings = post165_apply_meeting_overrides( post165_meeting_dates( $rule, $now, 3 ), [], $rule );
+
+ok( ! post165_has_public_event_within( $meetings, $now, 60 ), 'meetings alone do not count as public events' );
+
+$with_public   = $meetings;
+$with_public[] = [
+	'start'   => new DateTimeImmutable( '2026-08-16 10:00:00', $tz ),
+	'title'   => 'Brat Fry',
+	'venue'   => '',
+	'address' => '',
+	'kind'    => 'public',
+];
+ok( post165_has_public_event_within( $with_public, $now, 60 ), 'a public event inside the window is found' );
+ok( ! post165_has_public_event_within( $with_public, $now, 7 ), 'a public event outside the window is not found' );
+ok( ! post165_has_public_event_within( [], $now, 60 ), 'an empty list has no public events' );
 
 // --- summary ---------------------------------------------------------------
 if ($fails > 0) {
