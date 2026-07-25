@@ -148,12 +148,35 @@ function post165_sanitize_facts( $input ): array {
 /**
  * Photographs chosen for the homepage, newest selection order preserved.
  *
+ * Stored rows are filtered to a well-formed shape rather than trusted as-is:
+ * a malformed row (not an array, or missing a positive integer id) would
+ * otherwise throw a TypeError when a consumer reads $photo['id'] on PHP 8.
+ *
  * @return array<int, array{id:int, caption:string}>
  */
 function post165_photos(): array {
 	$rows = post165_fact( 'photos', array() );
+	$rows = is_array( $rows ) ? $rows : array();
 
-	return is_array( $rows ) ? $rows : array();
+	$photos = array();
+
+	foreach ( $rows as $row ) {
+		if ( ! is_array( $row ) ) {
+			continue;
+		}
+
+		$id = $row['id'] ?? 0;
+		if ( ! is_int( $id ) || $id <= 0 ) {
+			continue;
+		}
+
+		$photos[] = array(
+			'id'      => $id,
+			'caption' => (string) ( $row['caption'] ?? '' ),
+		);
+	}
+
+	return $photos;
 }
 
 /**
@@ -319,9 +342,10 @@ function post165_render_settings_page(): void {
 					<tr>
 						<td><input type="number" class="post165-pick-id" name="<?php echo esc_attr( POST165_OPTION ); ?>[photos][<?php echo (int) $i; ?>][id]" value="<?php echo esc_attr( (string) ( $row['id'] ?? '' ) ); ?>" /></td>
 						<td><input type="text" name="<?php echo esc_attr( POST165_OPTION ); ?>[photos][<?php echo (int) $i; ?>][caption]" value="<?php echo esc_attr( $row['caption'] ?? '' ); ?>" class="regular-text" /></td>
+						<?php $preview_url = ! empty( $row['id'] ) ? (string) wp_get_attachment_image_url( (int) $row['id'], 'thumbnail' ) : ''; ?>
 						<td>
 							<button type="button" class="button post165-pick"><?php esc_html_e( 'Choose', 'post165' ); ?></button>
-							<img src="<?php echo ! empty( $row['id'] ) ? esc_url( (string) wp_get_attachment_image_url( (int) $row['id'], 'thumbnail' ) ) : ''; ?>" class="post165-pick-preview" style="max-width:80px;height:auto;margin-left:8px;vertical-align:middle;<?php echo empty( $row['id'] ) ? 'display:none;' : ''; ?>" alt="" />
+							<img src="<?php echo esc_url( $preview_url ); ?>" class="post165-pick-preview" style="max-width:80px;height:auto;margin-left:8px;vertical-align:middle;<?php echo '' === $preview_url ? 'display:none;' : ''; ?>" alt="" />
 						</td>
 					</tr>
 				<?php endfor; ?>

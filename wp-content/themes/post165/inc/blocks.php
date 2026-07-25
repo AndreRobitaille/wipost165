@@ -292,8 +292,8 @@ function post165_render_work_photos(): string {
 
 		$items .= '<figure>' . $img;
 
-		if ( '' !== trim( (string) $photo['caption'] ) ) {
-			$items .= '<figcaption class="post165-work__cap">' . esc_html( $photo['caption'] ) . '</figcaption>';
+		if ( '' !== trim( (string) ( $photo['caption'] ?? '' ) ) ) {
+			$items .= '<figcaption class="post165-work__cap">' . esc_html( $photo['caption'] ?? '' ) . '</figcaption>';
 		}
 
 		$items .= '</figure>';
