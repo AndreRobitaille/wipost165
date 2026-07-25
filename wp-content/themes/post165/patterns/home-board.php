@@ -29,16 +29,27 @@ $post165_charter = absint( post165_fact( 'charter_year', 0 ) );
 
 <!-- wp:group {"className":"post165-board","layout":{"type":"default"}} -->
 <div class="wp-block-group post165-board">
-	<!-- wp:group {"className":"post165-board__main","layout":{"type":"default"}} -->
-	<div class="wp-block-group post165-board__main">
+	<!-- wp:group {"className":"post165-board__events","layout":{"type":"default"}} -->
+	<div class="wp-block-group post165-board__events">
 		<!-- wp:post165/upcoming /-->
-		<!-- wp:post165/year-strip /-->
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"className":"post165-board__side","layout":{"type":"default"}} -->
-	<div class="wp-block-group post165-board__side">
+	<!-- wp:group {"className":"post165-board__ask","layout":{"type":"default"}} -->
+	<div class="wp-block-group post165-board__ask">
 		<!-- wp:post165/join-panel /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"className":"post165-board__photos","layout":{"type":"default"}} -->
+	<div class="wp-block-group post165-board__photos">
+		<!-- wp:post165/work-photos /-->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"className":"post165-board__year","layout":{"type":"default"}} -->
+	<div class="wp-block-group post165-board__year">
+		<!-- wp:post165/year-strip /-->
 	</div>
 	<!-- /wp:group -->
 </div>

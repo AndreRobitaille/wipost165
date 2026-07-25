@@ -217,19 +217,36 @@ a { text-underline-offset: 0.18em; }
 
 .post165-board {
 	display: grid;
-	grid-template-columns: 1fr 21rem;
+	grid-template-columns: 1fr 20rem;
+	grid-template-areas:
+		"events ask"
+		"photos ask"
+		"year   ask";
 	align-items: start;
 }
 
-.post165-board__main {
+.post165-board__events { grid-area: events; }
+.post165-board__photos { grid-area: photos; }
+.post165-board__year   { grid-area: year; }
+.post165-board__ask    { grid-area: ask; }
+
+.post165-board__events,
+.post165-board__photos,
+.post165-board__year {
 	background: var(--wp--preset--color--cream);
-	padding: 1.5rem clamp(1rem, 4vw, 2rem) 2rem;
+	padding-inline: clamp(1rem, 4vw, 2rem);
 }
 
-.post165-board__side {
+.post165-board__events { padding-block: 1.5rem 0.6rem; }
+.post165-board__photos { padding-block: 0.4rem 1.2rem; }
+.post165-board__year   { padding-block: 0 1.8rem; }
+
+.post165-board__ask {
+	grid-area: ask;
 	background: #fff;
 	border-left: 1px solid #e2d9c4;
 	padding: 1.5rem clamp(1rem, 3vw, 1.6rem) 2rem;
+	height: 100%;
 }
 
 /* Event list ------------------------------------------------------------- */
@@ -556,12 +573,23 @@ a { text-underline-offset: 0.18em; }
 
 /* Collapse: on narrow screens the "when is it?" answer comes first -------- */
 
+/*
+ * Single column below this width. The areas are re-declared rather than
+ * removed so the stacking order is explicit and matches DOM order:
+ * events, then the ask, then photographs, then the year. Photographs must
+ * never push the answer below the fold on a phone.
+ */
 @media (max-width: 52.5rem) {
 	.post165-board {
 		grid-template-columns: 1fr;
+		grid-template-areas:
+			"events"
+			"ask"
+			"photos"
+			"year";
 	}
 
-	.post165-board__side {
+	.post165-board__ask {
 		border-left: 0;
 		border-top: 2px solid var(--wp--preset--color--navy);
 	}
