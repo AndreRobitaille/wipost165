@@ -182,8 +182,9 @@ function post165_fact_row( string $label, string $value ): string {
  * Render the membership panel.
  */
 function post165_render_join_panel(): string {
-	$rule    = post165_meeting_rule();
-	$members = post165_format_member_count( post165_fact( 'member_count', 0 ) );
+	$rule         = post165_meeting_rule();
+	$member_count = (int) post165_fact( 'member_count', 0 );
+	$members      = post165_format_member_count( $member_count );
 
 	$when = '';
 	if ( '' !== $rule['ordinal'] && '' !== $rule['weekday'] && '' !== $rule['time'] ) {
@@ -205,10 +206,25 @@ function post165_render_join_panel(): string {
 		}
 	}
 
+	$size = '';
+	if ( null !== $members ) {
+		// The displayed value may be a rounded string like "180+", but the
+		// plural form must be decided from the true, unrounded count.
+		// post165_format_member_count() returns null for any count <= 0, so
+		// $member_count is a positive integer whenever we reach this branch.
+		$size = esc_html(
+			sprintf(
+				/* translators: %s: formatted member count, e.g. "180+" or "3" */
+				_n( '%s member', '%s members', $member_count, 'post165' ),
+				$members
+			)
+		);
+	}
+
 	$rows  = post165_fact_row( __( 'Who', 'post165' ), esc_html( (string) post165_fact( 'eligibility', '' ) ) );
 	$rows .= post165_fact_row( __( 'Dues', 'post165' ), esc_html( (string) post165_fact( 'dues', '' ) ) );
 	$rows .= post165_fact_row( __( 'We meet', 'post165' ), $when );
-	$rows .= post165_fact_row( __( 'Size', 'post165' ), null === $members ? '' : esc_html( $members . ' ' . __( 'members', 'post165' ) ) );
+	$rows .= post165_fact_row( __( 'Size', 'post165' ), $size );
 
 	$out  = '<div class="post165-join">';
 	$out .= '<p class="post165-eyebrow">' . esc_html__( 'Thinking about joining', 'post165' ) . '</p>';

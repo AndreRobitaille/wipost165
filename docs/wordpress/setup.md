@@ -69,12 +69,29 @@ user with `manage_options` can update them; no developer or deploy is needed.
 | Who can join, Dues | Free text, shown verbatim. |
 | Member count | Enter the **true** number. The page rounds down to the nearest 5 and adds a plus (183 → "180+"), so it stays accurate as the roster changes. Counts under 5 show exactly; 0 or blank hides the row. |
 | Charter year | Shown in the strap. Blank hides it. |
-| Meeting rule | Which week, which day, start time (24-hour), venue, address. **Meeting dates are calculated from this rule** — they are never entered by hand and never go stale. |
+| Meeting rule | Which week, which day, start time (24-hour), venue, address. **Meeting dates are calculated from this rule** — they are never entered by hand and never go stale, but see the warning below: this rule only drives the homepage. |
 | Individual meeting changes | Six rows, each keyed by month (`2026-11`). Fill only what differs; blanks inherit from the rule. Ticking **Cancelled** leaves that month off the homepage entirely. |
 | Contact | Name, role, email, phone. The email is obfuscated against scrapers on output. |
 
 **Anything left blank is left off the page.** The site never invents a
 placeholder value.
+
+**The meeting rule only updates the homepage.** Two other places state the
+meeting day, time, and location in plain text and will not change when you
+edit the rule above:
+
+- **The site footer**, shown on every page, hard-codes the meeting day, time,
+  venue, and address. It is part of the theme (`parts/footer.html`), so
+  changing it needs a developer to edit the file and redeploy.
+- **The Contact page**, if it was created from the Contact starter pattern,
+  hard-codes the same details as ordinary page content. Once the pattern is
+  inserted into a page, that text lives in the database like any other page
+  content — updating the rule in Settings → Post 165 will not touch it. Edit
+  the Contact page directly in wp-admin instead.
+
+If an officer ever changes the standing meeting rule (a different weekday,
+week, or time), check the footer and the Contact page and update both by
+hand so the site does not contradict itself.
 
 ## Pages you must create
 

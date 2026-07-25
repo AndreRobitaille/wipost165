@@ -229,7 +229,7 @@ function post165_render_settings_page(): void {
 				<?php
 				post165_settings_select( 'meeting_ordinal', __( 'Which week', 'post165' ), POST165_ORDINALS );
 				post165_settings_select( 'meeting_weekday', __( 'Which day', 'post165' ), POST165_WEEKDAYS );
-				post165_settings_field( 'meeting_time', __( 'Start time', 'post165' ), 'text', __( '24-hour clock, for example 18:30.', 'post165' ) );
+				post165_settings_field( 'meeting_time', __( 'Start time', 'post165' ), 'time', __( '24-hour clock, for example 18:30.', 'post165' ) );
 				post165_settings_field( 'venue', __( 'Venue name', 'post165' ) );
 				post165_settings_field( 'address', __( 'Street address', 'post165' ) );
 				?>
