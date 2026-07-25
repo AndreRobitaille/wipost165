@@ -41,7 +41,7 @@ const requiredText = new Map([
   ['wp-content/themes/post165/patterns/support-post-165.php', ['Support Post 165']],
   ['wp-content/themes/post165/inc/settings.php', ['post165_fact', 'post165_meeting_rule', 'post165_meeting_overrides', 'sanitize_email', 'manage_options']],
   ['wp-content/themes/post165/inc/events.php', ['post165_upcoming_entries', 'post165_quiet_season_note', 'post165_year_map', 'tribe_get_events']],
-  ['wp-content/themes/post165/inc/blocks.php', ['post165/upcoming', 'register_block_type', 'render_callback']],
+  ['wp-content/themes/post165/inc/blocks.php', ['post165/upcoming', 'post165/year-strip', 'register_block_type', 'render_callback']],
   ['docs/wordpress/content-model.md', ['Git owns', 'WordPress owns', 'Event categories']],
   ['docs/wordpress/setup.md', ['The Events Calendar', 'Home', 'Events', 'Membership', 'About', 'Contact']],
   ['docs/deployment/ftp-github-actions.md', ['FTP_SERVER', 'FTP_USERNAME', 'FTP_PASSWORD']]

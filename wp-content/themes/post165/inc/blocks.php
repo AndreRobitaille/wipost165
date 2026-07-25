@@ -21,6 +21,13 @@ function post165_register_blocks(): void {
 			'render_callback' => 'post165_render_upcoming',
 		]
 	);
+	register_block_type(
+		'post165/year-strip',
+		[
+			'api_version'     => 3,
+			'render_callback' => 'post165_render_year_strip',
+		]
+	);
 }
 add_action( 'init', 'post165_register_blocks' );
 
@@ -91,6 +98,58 @@ function post165_render_upcoming(): string {
 		$out .= '</div>';
 	}
 
+	$out .= '</div>';
+
+	return $out;
+}
+
+/**
+ * Render the twelve-month rhythm.
+ *
+ * Editorial content rather than calendar data, which is why it stays true in
+ * February when the calendar is empty.
+ */
+function post165_render_year_strip(): string {
+	$map = post165_year_map();
+
+	if ( empty( $map ) ) {
+		return '';
+	}
+
+	$now       = post165_now();
+	$now_month = (int) $now->format( 'n' );
+
+	$out  = '<div class="post165-year">';
+	$out .= '<p class="post165-eyebrow">' . esc_html__( 'Our year', 'post165' ) . '</p>';
+	$out .= '<p class="post165-year__lede">' . esc_html__( "The post's rhythm — the same every year, whether or not a date is posted yet.", 'post165' ) . '</p>';
+	$out .= '<ul class="post165-year__grid">';
+
+	for ( $month = 1; $month <= 12; $month++ ) {
+		$label = trim( (string) ( $map[ $month ]['label'] ?? '' ) );
+		$stamp = mktime( 0, 0, 0, $month, 1, (int) $now->format( 'Y' ) );
+
+		$classes = 'post165-year__mo';
+		if ( '' !== $label ) {
+			$classes .= ' post165-year__mo--has';
+		}
+		if ( $month === $now_month ) {
+			$classes .= ' post165-year__mo--now';
+		}
+
+		$out .= '<li class="' . esc_attr( $classes ) . '"';
+		$out .= $month === $now_month ? ' aria-current="date"' : '';
+		$out .= '>';
+		$out .= '<b><abbr title="' . esc_attr( wp_date( 'F', $stamp ) ) . '">' . esc_html( wp_date( 'M', $stamp ) ) . '</abbr></b>';
+
+		if ( '' !== $label ) {
+			$out .= '<span>' . esc_html( $label ) . '</span>';
+		}
+
+		$out .= '</li>';
+	}
+
+	$out .= '</ul>';
+	$out .= '<p class="post165-year__foot">' . esc_html__( 'Meetings run every month, year round.', 'post165' ) . '</p>';
 	$out .= '</div>';
 
 	return $out;
