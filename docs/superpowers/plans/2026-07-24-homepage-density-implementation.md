@@ -1230,7 +1230,7 @@ the page rather than rendered as a placeholder."
 - Produces:
   - `post165_upcoming_entries(int $limit = 5): array` — merged, sorted entry arrays.
   - `post165_year_map(): array` — the filtered map.
-  - `post165_quiet_season_note(array $entries): ?array` — `['label' => string, 'month_name' => string]` or `null`.
+  - `post165_quiet_season_note(): ?array` — `['label' => string, 'month_name' => string]` or `null`. Takes no argument: it queries public events itself rather than reading the truncated display list.
 
 - [ ] **Step 1: Add the validator assertions first**
 
@@ -1323,10 +1323,14 @@ function post165_public_event_entries( int $limit ): array {
 		]
 	);
 
+	if ( ! is_array( $events ) ) {
+		return [];
+	}
+
 	$tz      = wp_timezone();
 	$entries = [];
 
-	foreach ( (array) $events as $event ) {
+	foreach ( $events as $event ) {
 		$raw = function_exists( 'tribe_get_start_date' )
 			? tribe_get_start_date( $event, true, 'Y-m-d H:i:s' )
 			: '';
@@ -1378,13 +1382,17 @@ function post165_upcoming_entries( int $limit = 5 ): array {
  * Appears automatically when no public event falls inside the window, so
  * nobody toggles it in October or May.
  *
- * @param array[] $entries Merged entries.
+ * Deliberately queries public events directly rather than reading the board's
+ * display list: that list is truncated to what fits, so an event pushed off
+ * the end would produce a false "quiet season" note while a real event was
+ * imminent. The question is "is anything coming?", not "is anything shown?".
+ *
  * @return array{label:string, month_name:string}|null
  */
-function post165_quiet_season_note( array $entries ): ?array {
+function post165_quiet_season_note(): ?array {
 	$now = post165_now();
 
-	if ( post165_has_public_event_within( $entries, $now, POST165_QUIET_WINDOW_DAYS ) ) {
+	if ( post165_has_public_event_within( post165_public_event_entries( 20 ), $now, POST165_QUIET_WINDOW_DAYS ) ) {
 		return null;
 	}
 
@@ -1556,7 +1564,7 @@ function post165_render_upcoming(): string {
 
 	$out .= '</ul>';
 
-	$quiet = post165_quiet_season_note( $entries );
+	$quiet = post165_quiet_season_note();
 
 	if ( null !== $quiet ) {
 		$out .= '<div class="post165-quiet">';
