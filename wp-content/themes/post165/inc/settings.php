@@ -31,6 +31,7 @@ function post165_default_facts(): array {
 		'contact_email'   => '',
 		'contact_phone'   => '',
 		'overrides'       => [],
+		'photos'          => array(),
 	];
 }
 
@@ -122,7 +123,37 @@ function post165_sanitize_facts( $input ): array {
 
 	$out['overrides'] = $overrides;
 
+	$photos     = array();
+	$raw_photos = is_array( $input['photos'] ?? null ) ? $input['photos'] : array();
+
+	foreach ( array_slice( $raw_photos, 0, 3 ) as $row ) {
+		if ( ! is_array( $row ) ) {
+			continue;
+		}
+		$id = absint( $row['id'] ?? 0 );
+		if ( ! $id ) {
+			continue;
+		}
+		$photos[] = array(
+			'id'      => $id,
+			'caption' => sanitize_text_field( (string) ( $row['caption'] ?? '' ) ),
+		);
+	}
+
+	$out['photos'] = $photos;
+
 	return $out;
+}
+
+/**
+ * Photographs chosen for the homepage, newest selection order preserved.
+ *
+ * @return array<int, array{id:int, caption:string}>
+ */
+function post165_photos(): array {
+	$rows = post165_fact( 'photos', array() );
+
+	return is_array( $rows ) ? $rows : array();
 }
 
 /**
@@ -205,6 +236,7 @@ function post165_render_settings_page(): void {
 	}
 
 	$overrides = post165_meeting_overrides();
+	$photos    = post165_photos();
 	?>
 	<div class="wrap">
 		<h1><?php esc_html_e( 'Post 165', 'post165' ); ?></h1>
@@ -271,8 +303,60 @@ function post165_render_settings_page(): void {
 				?>
 			</table>
 
+			<h2><?php esc_html_e( 'Photographs', 'post165' ); ?></h2>
+			<p><?php esc_html_e( 'Choose up to three photographs for the homepage. The attachment ID is the value that is actually saved; the picker button is a convenience for finding it.', 'post165' ); ?></p>
+			<table class="widefat striped">
+				<thead>
+					<tr>
+						<th scope="col"><?php esc_html_e( 'Attachment ID', 'post165' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Caption', 'post165' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Picker', 'post165' ); ?></th>
+					</tr>
+				</thead>
+				<tbody>
+				<?php for ( $i = 0; $i < 3; $i++ ) : ?>
+					<?php $row = $photos[ $i ] ?? []; ?>
+					<tr>
+						<td><input type="number" class="post165-pick-id" name="<?php echo esc_attr( POST165_OPTION ); ?>[photos][<?php echo (int) $i; ?>][id]" value="<?php echo esc_attr( (string) ( $row['id'] ?? '' ) ); ?>" /></td>
+						<td><input type="text" name="<?php echo esc_attr( POST165_OPTION ); ?>[photos][<?php echo (int) $i; ?>][caption]" value="<?php echo esc_attr( $row['caption'] ?? '' ); ?>" class="regular-text" /></td>
+						<td>
+							<button type="button" class="button post165-pick"><?php esc_html_e( 'Choose', 'post165' ); ?></button>
+							<img src="<?php echo ! empty( $row['id'] ) ? esc_url( (string) wp_get_attachment_image_url( (int) $row['id'], 'thumbnail' ) ) : ''; ?>" class="post165-pick-preview" style="max-width:80px;height:auto;margin-left:8px;vertical-align:middle;<?php echo empty( $row['id'] ) ? 'display:none;' : ''; ?>" alt="" />
+						</td>
+					</tr>
+				<?php endfor; ?>
+				</tbody>
+			</table>
+
 			<?php submit_button(); ?>
 		</form>
 	</div>
 	<?php
 }
+
+/**
+ * Enqueue the media modal on the Post 165 settings screen only.
+ */
+function post165_settings_assets( $hook ): void {
+	if ( 'settings_page_post165-settings' !== $hook ) {
+		return;
+	}
+
+	wp_enqueue_media();
+	wp_add_inline_script( 'jquery-core', "
+jQuery(function($){
+  $('.post165-pick').on('click', function(e){
+    e.preventDefault();
+    var row = $(this).closest('tr');
+    var frame = wp.media({ title: 'Choose a photograph', multiple: false });
+    frame.on('select', function(){
+      var a = frame.state().get('selection').first().toJSON();
+      row.find('.post165-pick-id').val(a.id);
+      row.find('.post165-pick-preview').attr('src', (a.sizes && a.sizes.thumbnail ? a.sizes.thumbnail.url : a.url)).show();
+    });
+    frame.open();
+  });
+});
+" );
+}
+add_action( 'admin_enqueue_scripts', 'post165_settings_assets' );

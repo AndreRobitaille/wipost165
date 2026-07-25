@@ -31,7 +31,7 @@ const requiredText = new Map([
   ['wp-content/themes/post165/templates/front-page.html', ['wp:pattern {"slug":"post165/home-board"', 'wp:pattern {"slug":"post165/home-what-we-do"']],
   ['wp-content/themes/post165/parts/header.html', ['wp:navigation', 'Robert E. Burns American Legion Post 165']],
   ['wp-content/themes/post165/parts/footer.html', ['wipost165@gmail.com', 'PO Box 11', 'First Tuesday']],
-  ['wp-content/themes/post165/inc/settings.php', ['post165_fact', 'post165_meeting_rule', 'post165_meeting_overrides', 'sanitize_email', 'manage_options']],
+  ['wp-content/themes/post165/inc/settings.php', ['post165_fact', 'post165_meeting_rule', 'post165_meeting_overrides', 'sanitize_email', 'manage_options', 'post165_photos', 'wp_enqueue_media']],
   ['wp-content/themes/post165/inc/events.php', ['post165_upcoming_entries', 'post165_quiet_season_note', 'post165_year_map', 'tribe_get_events']],
   ['wp-content/themes/post165/inc/blocks.php', ['post165/upcoming', 'post165/year-strip', 'post165/join-panel', 'register_block_type', 'render_callback', 'antispambot', 'post165-ev__mo', 'post165-ev__wd', 'post165-ask', "Where you"]],
   ['docs/wordpress/content-model.md', ['Git owns', 'WordPress owns', 'Event categories']],
