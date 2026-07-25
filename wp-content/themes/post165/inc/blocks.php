@@ -126,7 +126,7 @@ function post165_render_year_strip(): string {
 
 	for ( $month = 1; $month <= 12; $month++ ) {
 		$label = trim( (string) ( $map[ $month ]['label'] ?? '' ) );
-		$stamp = mktime( 0, 0, 0, $month, 1, (int) $now->format( 'Y' ) );
+		$stamp = post165_month_timestamp( $month, (int) $now->format( 'Y' ) );
 
 		$classes = 'post165-year__mo';
 		if ( '' !== $label ) {

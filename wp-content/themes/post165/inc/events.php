@@ -141,6 +141,28 @@ function post165_quiet_season_note(): ?array {
 
 	return [
 		'label'      => $milestone['label'],
-		'month_name' => wp_date( 'F', mktime( 0, 0, 0, $milestone['month'], 1, $milestone['year'] ) ),
+		'month_name' => wp_date( 'F', post165_month_timestamp( $milestone['month'], $milestone['year'] ) ),
 	];
+}
+
+/**
+ * A timestamp safely inside the given month, in the site's timezone.
+ *
+ * mktime() builds its timestamp in PHP's default timezone, which WordPress
+ * fixes to UTC at boot. Formatting that instant with wp_date() in a
+ * negative-offset site timezone rolls midnight on the 1st back into the
+ * previous month, so every month name would print one month early.
+ * Anchoring at midday in the site's own timezone removes both that error
+ * and any daylight-saving edge.
+ *
+ * @param int $month 1-12.
+ * @param int $year  Four-digit year.
+ */
+function post165_month_timestamp( int $month, int $year ): int {
+	$date = new DateTimeImmutable(
+		sprintf( '%04d-%02d-01 12:00:00', $year, $month ),
+		wp_timezone()
+	);
+
+	return $date->getTimestamp();
 }
