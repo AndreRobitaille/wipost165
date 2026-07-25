@@ -6,6 +6,7 @@ $pure = $root . '/wp-content/themes/post165/inc/pure';
 
 require $pure . '/format.php';
 require $pure . '/meetings.php';
+require $pure . '/overrides.php';
 
 $tests = 0;
 $fails = 0;
@@ -93,6 +94,80 @@ eq( post165_meeting_dates( [ 'ordinal' => 'first', 'weekday' => 'funday', 'time'
 eq( post165_meeting_dates( [ 'ordinal' => 'first', 'weekday' => 'tuesday', 'time' => '25:00' ], $from, 2 ), [], 'invalid hour yields no meetings' );
 eq( post165_meeting_dates( [ 'ordinal' => 'first', 'weekday' => 'tuesday', 'time' => 'evening' ], $from, 2 ), [], 'unparseable time yields no meetings' );
 eq( post165_meeting_dates( $rule, $from, 0 ), [], 'zero count yields no meetings' );
+
+// --- post165_apply_meeting_overrides ---------------------------------------
+$base = post165_meeting_dates( $rule, new DateTimeImmutable( '2026-07-24 09:00:00', $tz ), 4 );
+// Aug 4, Sep 1, Oct 6, Nov 3
+
+$none = post165_apply_meeting_overrides( $base, [], $rule );
+eq( count( $none ), 4, 'no overrides leaves every meeting' );
+eq( $none[0]['start']->format( 'Y-m-d H:i' ), '2026-08-04 18:30', 'unchanged start' );
+eq( $none[0]['venue'], 'Test Hall', 'venue inherits from the rule' );
+eq( $none[0]['address'], '1 Test St', 'address inherits from the rule' );
+eq( $none[0]['kind'], 'meeting', 'entries are marked as meetings' );
+eq( $none[0]['title'], 'Post Meeting', 'entries carry a title' );
+
+// Cancelled month disappears entirely.
+$cancelled = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-09', 'cancelled' => true ] ], $rule );
+eq( count( $cancelled ), 3, 'cancelled month is omitted, not struck through' );
+eq( $cancelled[1]['start']->format( 'Y-m-d' ), '2026-10-06', 'the month after a cancellation is untouched' );
+
+// Moved date keeps the rule's time.
+$moved = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-11', 'date' => '2026-11-10' ] ], $rule );
+eq( $moved[3]['start']->format( 'Y-m-d H:i' ), '2026-11-10 18:30', 'moved date inherits the rule time' );
+
+// Changed time only.
+$retimed = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-10', 'time' => '19:00' ] ], $rule );
+eq( $retimed[2]['start']->format( 'Y-m-d H:i' ), '2026-10-06 19:00', 'time override applies to the rule date' );
+
+// Changed venue only — date and time untouched.
+$moved_venue = post165_apply_meeting_overrides(
+	$base,
+	[ [ 'month' => '2026-10', 'venue' => 'VFW Hall', 'address' => '9 Elm St' ] ],
+	$rule
+);
+eq( $moved_venue[2]['venue'], 'VFW Hall', 'venue override applies' );
+eq( $moved_venue[2]['address'], '9 Elm St', 'address override applies' );
+eq( $moved_venue[2]['start']->format( 'Y-m-d H:i' ), '2026-10-06 18:30', 'venue override leaves date and time alone' );
+
+// Date, time and venue together.
+$all = post165_apply_meeting_overrides(
+	$base,
+	[ [ 'month' => '2026-09', 'date' => '2026-09-08', 'time' => '17:45', 'venue' => 'Legion Hall' ] ],
+	$rule
+);
+eq( $all[1]['start']->format( 'Y-m-d H:i' ), '2026-09-08 17:45', 'combined override applies both' );
+eq( $all[1]['venue'], 'Legion Hall', 'combined override applies the venue' );
+
+// Irrelevant and malformed overrides are ignored.
+$stale = post165_apply_meeting_overrides(
+	$base,
+	[
+		[ 'month' => '2019-01', 'cancelled' => true ],
+		[ 'month' => 'nonsense', 'cancelled' => true ],
+		[ 'cancelled' => true ],
+		[ 'month' => '', 'date' => '2026-08-11' ],
+	],
+	$rule
+);
+eq( count( $stale ), 4, 'past and malformed overrides are ignored' );
+eq( $stale[0]['start']->format( 'Y-m-d' ), '2026-08-04', 'and do not disturb real meetings' );
+
+// A malformed date inside an otherwise valid override is ignored.
+$baddate = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-08', 'date' => '11/08/2026' ] ], $rule );
+eq( $baddate[0]['start']->format( 'Y-m-d' ), '2026-08-04', 'unparseable override date falls back to the rule date' );
+
+// Empty strings inherit rather than blanking the venue.
+$blank = post165_apply_meeting_overrides( $base, [ [ 'month' => '2026-08', 'venue' => '' ] ], $rule );
+eq( $blank[0]['venue'], 'Test Hall', 'blank override field inherits from the rule' );
+
+// Last override wins when two target the same month.
+$dupe = post165_apply_meeting_overrides(
+	$base,
+	[ [ 'month' => '2026-08', 'time' => '17:00' ], [ 'month' => '2026-08', 'time' => '20:00' ] ],
+	$rule
+);
+eq( $dupe[0]['start']->format( 'H:i' ), '20:00', 'the later duplicate override wins' );
 
 // --- summary ---------------------------------------------------------------
 if ($fails > 0) {
