@@ -29,7 +29,7 @@ const requiredFiles = [
 ];
 
 const requiredText = new Map([
-  ['wp-content/themes/post165/style.css', ['Theme Name: Post 165', 'Text Domain: post165', 'Requires at least: 6.5', '.post165-hero', '.post165-ribbon', '.post165-seal']],
+  ['wp-content/themes/post165/style.css', ['Theme Name: Post 165', 'Text Domain: post165', 'Requires at least: 6.5', '.post165-ribbon', '.post165-seal', '.post165-strap', '.post165-board', '.post165-year', '.post165-join']],
   ['wp-content/themes/post165/functions.php', ['post165_setup', 'post165_register_pattern_categories', 'add_theme_support', 'wp_enqueue_style', "add_theme_support( 'custom-logo'", 'inc/settings.php', 'inc/events.php', 'inc/blocks.php']],
   ['wp-content/themes/post165/templates/front-page.html', ['wp:pattern {"slug":"post165/home-hero"', 'wp:pattern {"slug":"post165/home-events"']],
   ['wp-content/themes/post165/parts/header.html', ['wp:navigation', 'Robert E. Burns American Legion Post 165']],

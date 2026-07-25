@@ -201,3 +201,369 @@ a { text-underline-offset: 0.18em; }
   text-transform: uppercase;
 }
 .post165-page-eyebrow::before { content: "\2605"; font-size: 0.85em; }
+
+/* ---------------------------------------------------------------------------
+   The Board — homepage answer layout
+   Replaces the full-screen hero. See docs/superpowers/specs/
+   2026-07-24-homepage-density-design.md
+--------------------------------------------------------------------------- */
+
+.post165-strap {
+	background: var(--wp--preset--color--navy);
+	color: #fff;
+	border-bottom: 3px solid var(--wp--preset--color--gold);
+	padding: 1.25rem clamp(1rem, 4vw, 2.25rem);
+	display: flex;
+	align-items: center;
+	gap: 1.75rem;
+	flex-wrap: wrap;
+}
+
+.post165-strap__title {
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: clamp(1.4rem, 3vw, 1.75rem);
+	font-weight: 600;
+	line-height: 1.2;
+	margin: 0;
+}
+
+.post165-strap__lede {
+	font-size: 0.9rem;
+	opacity: 0.85;
+	max-width: 46ch;
+	margin: 0.25rem 0 0;
+}
+
+.post165-strap__since {
+	margin-left: auto;
+	text-align: right;
+}
+
+.post165-strap__since b {
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: clamp(1.6rem, 4vw, 2.1rem);
+	font-weight: 600;
+	color: var(--p165-gold-light);
+	display: block;
+	line-height: 1;
+}
+
+.post165-strap__since span {
+	font-size: 0.62rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	opacity: 0.75;
+}
+
+.post165-board {
+	display: grid;
+	grid-template-columns: 1fr 21rem;
+	align-items: start;
+}
+
+.post165-board__main {
+	background: var(--wp--preset--color--cream);
+	padding: 1.5rem clamp(1rem, 4vw, 2rem) 2rem;
+}
+
+.post165-board__side {
+	background: #fff;
+	border-left: 1px solid #e2d9c4;
+	padding: 1.5rem clamp(1rem, 3vw, 1.6rem) 2rem;
+}
+
+/* Event list ------------------------------------------------------------- */
+
+.post165-ev-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.post165-ev {
+	display: grid;
+	grid-template-columns: 3.6rem 1fr;
+	gap: 1rem;
+	align-items: start;
+	padding: 0.7rem 0;
+	border-top: 1px solid #e0d6bf;
+}
+
+.post165-ev:first-child {
+	border-top: 2px solid var(--wp--preset--color--navy);
+}
+
+.post165-ev--next {
+	background: linear-gradient(90deg, rgba(196, 154, 58, 0.13), transparent 72%);
+	padding-inline: 0.6rem;
+	margin-inline: -0.6rem;
+}
+
+.post165-ev__date {
+	text-align: center;
+	font-family: var(--wp--preset--font-family--serif);
+	display: block;
+}
+
+.post165-ev__date b {
+	display: block;
+	font-size: 1.55rem;
+	font-weight: 600;
+	line-height: 1;
+	color: var(--wp--preset--color--navy);
+}
+
+.post165-ev__date span {
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.62rem;
+	letter-spacing: 0.11em;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--p165-gold-deep);
+}
+
+.post165-ev__title {
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: 1.05rem;
+	font-weight: 600;
+	color: var(--wp--preset--color--navy);
+	line-height: 1.25;
+	margin: 0;
+}
+
+.post165-ev__meta {
+	font-size: 0.8rem;
+	color: #5b6572;
+	margin: 0.15rem 0 0;
+}
+
+.post165-pill {
+	display: inline-block;
+	font-size: 0.6rem;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 0.15rem 0.45rem;
+	border-radius: 2px;
+	vertical-align: 0.15em;
+	white-space: nowrap;
+}
+
+.post165-pill--public {
+	background: var(--wp--preset--color--red);
+	color: #fff;
+}
+
+.post165-pill--members {
+	background: #dfe4ea;
+	color: #3d4652;
+}
+
+/* Quiet season ----------------------------------------------------------- */
+
+.post165-quiet {
+	margin-top: 0.9rem;
+	padding: 0.8rem 0.9rem;
+	background: #fff;
+	border-left: 3px solid var(--wp--preset--color--gold);
+	font-size: 0.85rem;
+	color: #5b6572;
+}
+
+.post165-quiet p {
+	margin: 0;
+}
+
+.post165-quiet__head {
+	font-family: var(--wp--preset--font-family--serif);
+	color: var(--wp--preset--color--navy);
+	font-size: 0.98rem;
+	font-weight: 600;
+	margin-bottom: 0.2rem !important;
+}
+
+/* Year strip ------------------------------------------------------------- */
+
+.post165-year {
+	margin-top: 1.4rem;
+	border-top: 2px solid var(--wp--preset--color--navy);
+	padding-top: 0.9rem;
+}
+
+.post165-year__lede,
+.post165-year__foot {
+	font-size: 0.8rem;
+	color: #5b6572;
+	margin: 0;
+}
+
+.post165-year__foot {
+	margin-top: 0.5rem;
+	color: #6b7280;
+}
+
+.post165-year__grid {
+	list-style: none;
+	margin: 0.6rem 0 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+.post165-year__mo {
+	text-align: center;
+	padding: 0.45rem 0.15rem 0.5rem;
+	border-right: 1px solid #e0d6bf;
+	min-width: 0;
+}
+
+.post165-year__mo:last-child {
+	border-right: 0;
+}
+
+.post165-year__mo b {
+	display: block;
+	font-size: 0.62rem;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #8d93a0;
+	font-weight: 700;
+	margin-bottom: 0.3rem;
+}
+
+.post165-year__mo abbr {
+	text-decoration: none;
+	border: 0;
+}
+
+.post165-year__mo span {
+	display: block;
+	font-size: 0.6rem;
+	line-height: 1.3;
+	color: var(--p165-gold-deep);
+	font-weight: 600;
+}
+
+.post165-year__mo--has {
+	background: #fff;
+}
+
+.post165-year__mo--has b {
+	color: var(--wp--preset--color--navy);
+}
+
+.post165-year__mo--now {
+	background: var(--wp--preset--color--navy);
+}
+
+.post165-year__mo--now b {
+	color: var(--p165-gold-light);
+}
+
+.post165-year__mo--now span {
+	color: #fff;
+}
+
+/* Join panel ------------------------------------------------------------- */
+
+.post165-join__head {
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--wp--preset--color--navy);
+	line-height: 1.2;
+	margin: 0 0 0.3rem;
+}
+
+.post165-join__lede {
+	font-size: 0.85rem;
+	color: #5b6572;
+	margin: 0 0 0.9rem;
+}
+
+.post165-facts {
+	margin: 0;
+}
+
+.post165-fact {
+	display: grid;
+	grid-template-columns: 4.75rem 1fr;
+	gap: 0.6rem;
+	padding: 0.5rem 0;
+	border-top: 1px solid #eae3d2;
+	font-size: 0.85rem;
+}
+
+.post165-fact dt {
+	font-size: 0.62rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--p165-gold-deep);
+	font-weight: 700;
+	padding-top: 0.2rem;
+	margin: 0;
+}
+
+.post165-fact dd {
+	margin: 0;
+	color: var(--wp--preset--color--ink);
+}
+
+.post165-join__cta {
+	margin: 1rem 0 0;
+}
+
+.post165-join__cta a {
+	display: block;
+	text-align: center;
+}
+
+.post165-join__who {
+	margin-top: 0.9rem;
+	padding-top: 0.85rem;
+	border-top: 1px solid #eae3d2;
+	font-size: 0.8rem;
+	color: #5b6572;
+}
+
+.post165-join__who p {
+	margin: 0;
+}
+
+.post165-join__name {
+	font-family: var(--wp--preset--font-family--serif);
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--wp--preset--color--navy);
+	margin-top: 0.15rem !important;
+}
+
+.post165-join__contact a {
+	color: var(--wp--preset--color--red);
+}
+
+/* Collapse: on narrow screens the "when is it?" answer comes first -------- */
+
+@media (max-width: 52.5rem) {
+	.post165-board {
+		grid-template-columns: 1fr;
+	}
+
+	.post165-board__side {
+		border-left: 0;
+		border-top: 2px solid var(--wp--preset--color--navy);
+	}
+
+	.post165-year__grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.post165-year__mo:nth-child(6) {
+		border-right: 0;
+	}
+
+	.post165-strap__since {
+		margin-left: 0;
+		text-align: left;
+	}
+}
