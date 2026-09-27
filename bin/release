@@ -186,7 +186,7 @@ release_preflight() {
   release_ssh 'hostname; docker --version' || return
   bin/kamal config -c "$release_temp_config" >/dev/null || return
   bin/kamal server exec hostname -c "$release_temp_config" || return
-  release_ssh 'docker ps --filter label=service=legion_post_165_wi_tools --filter label=service=two_rivers_reporter --format "{{.ID}} {{.Names}}" | sort' > "$release_temp_dir/protected-before.txt" || return
+  release_ssh '{ docker ps --filter label=service=legion_post_165_wi_tools --format "{{.ID}} {{.Names}}"; docker ps --filter label=service=two_rivers_reporter --format "{{.ID}} {{.Names}}"; } | sort' > "$release_temp_dir/protected-before.txt" || return
   [[ -s "$release_temp_dir/protected-before.txt" ]] || return 1
   release_ssh 'docker exec kamal-proxy kamal-proxy list' || return
   export RELEASE_PREFLIGHT_OK=1
@@ -217,7 +217,7 @@ release_verify() (
   head="$(git rev-parse HEAD)"
   container_names="$(release_ssh "docker ps --filter label=service=$PROD_SERVICE --filter label=role=web --format '{{.Names}}'")"
   grep -Fxq "$PROD_SERVICE-web-$head" <<< "$container_names" || fail "public container does not match $head"
-  release_ssh 'docker ps --filter label=service=legion_post_165_wi_tools --filter label=service=two_rivers_reporter --format "{{.ID}} {{.Names}}" | sort' > "$release_temp_dir/protected-after.txt"
+  release_ssh '{ docker ps --filter label=service=legion_post_165_wi_tools --format "{{.ID}} {{.Names}}"; docker ps --filter label=service=two_rivers_reporter --format "{{.ID}} {{.Names}}"; } | sort' > "$release_temp_dir/protected-after.txt"
   diff -u "$release_temp_dir/protected-before.txt" "$release_temp_dir/protected-after.txt" || fail "protected service containers changed"
   release_ssh 'docker exec kamal-proxy kamal-proxy list'
   assert_http_status "$PROD_URL/up" 200
