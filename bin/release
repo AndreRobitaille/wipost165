@@ -152,6 +152,8 @@ WRAPPER
   export PATH="$release_temp_dir/bin:$PATH"
   ssh -o BatchMode=yes "$PROD_HOST" 'hostname; docker --version'
 
+  # Net::SSH otherwise probes the desktop signing agent despite keys_only.
+  unset SSH_AUTH_SOCK
   prepare_kamal_config "$release_temp_config" "$control_path" "$identity_file"
   bin/kamal config -c "$release_temp_config" >/dev/null
   bin/kamal server exec 'hostname' -c "$release_temp_config"

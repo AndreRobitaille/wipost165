@@ -42,7 +42,9 @@ host stanza for `178.156.250.235`, root, and its configured identity file. Keep
 
 It creates an owned temporary SSH master, verifies it, opens a localhost-only forward on port 22222 to remote localhost:22, and routes
 Kamal Net::SSH and Docker/buildx OpenSSH through `socat - TCP:127.0.0.1:22222`.
-An occupied local port is preserved; choose RELEASE_TUNNEL_PORT explicitly if needed. The builder is remote, not local. The proxy command fails closed when the forward disappears; there is no direct
+An occupied local port is preserved; choose RELEASE_TUNNEL_PORT explicitly if needed. The builder is remote, not local. The wrapper unsets SSH_AUTH_SOCK before
+Kamal so Net::SSH uses the configured file key instead of the desktop signing
+agent, which otherwise failed with FrozenError in this environment. The proxy command fails closed when the forward disappears; there is no direct
 connection fallback. Stop
 if the tunnel fails. Cleanup closes only this release's master and removes its
 temporary configuration; do not close another application's active connection.
