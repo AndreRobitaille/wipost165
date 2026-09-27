@@ -69,6 +69,11 @@ Useful current references: [prototype intent](design/2026-09-in-good-company/REA
 [phone story](design/2026-09-rails-implementation/previews/story-mobile.png).
 These are starting points, not pixel-perfect targets. Sample people are fictional.
 
+The owner approved the [September 27 Rails desktop refinement](design/2026-09-visitor-paths/README.md#owner-review)
+without requesting changes. Use that implementation as the accepted visual
+baseline; tightening its vertical spacing was an agent suggestion, not a pending
+owner request. This approval does not freeze future improvements or authorize launch.
+
 ## Visitor paths and interaction
 
 | Surface | What it must accomplish | Interaction guidance |

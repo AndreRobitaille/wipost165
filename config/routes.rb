@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   root "public_site#home"
+  get "people/:id/portrait/:revision/:size.webp", to: "portraits#show", as: :published_portrait,
+    constraints: { id: /[A-Za-z0-9_-]+/, revision: /[A-Za-z0-9_-]+/, size: /small|large/ }, format: false
   get "people/:slug", to: "public_site#person", as: :person
   get "events", to: "public_site#events", as: :events
   get "events/:slug", to: "public_site#event", as: :event

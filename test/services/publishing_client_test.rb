@@ -6,6 +6,81 @@ class PublishingClientTest < ActiveSupport::TestCase
 
   setup { build_client }
 
+  test "every origin request including revalidation authenticates with the website token" do
+    @replies << publisher_response(fixture("featured"))
+    @client.featured
+    @now += 301
+    @replies << publisher_response(nil, status: 304)
+    @client.featured
+    assert @requests.all? { |_uri, headers| headers["Authorization"] == "Bearer website-test-token" }
+    assert @requests.all? { |uri, _headers| uri.query.nil? }
+  end
+
+  test "missing and malformed tokens fail before contacting the publisher or using cache" do
+    @replies << publisher_response(fixture("featured"))
+    @client.featured
+    [ nil, "", "unsafe\r\nHeader: value" ].each do |token|
+      client = Publishing::Client.new(token: token, cache: @cache, transport: @transport)
+      assert_raises(Publishing::Unavailable) { client.featured }
+    end
+    assert_equal 1, @requests.size
+  end
+
+  test "a replacement credential cannot reuse another credential's cached content" do
+    @replies << publisher_response(fixture("featured"))
+    @client.featured
+    replacement = Publishing::Client.new(token: "replacement-token", cache: @cache, transport: @transport, clock: -> { @now })
+    @replies << publisher_response(nil, status: 401)
+    assert_raises(Publishing::Unavailable) { replacement.featured }
+    assert_equal 2, @requests.size
+    assert_equal "Bearer replacement-token", @requests.last.last["Authorization"]
+    assert_equal 1, @client.featured.size
+  end
+
+  test "authentication denial discards all cached access for that credential" do
+    @replies << publisher_response(fixture("featured"))
+    @client.featured
+    @replies << publisher_response(nil, status: 401)
+    assert_raises(Publishing::Unavailable) { @client.story("story_example_avery") }
+    assert @client.expired?
+    @replies << publisher_response(nil, status: 401)
+    assert_raises(Publishing::Unavailable) { @client.featured }
+    assert_equal 3, @requests.size
+  end
+
+  test "portraits authenticate cache privately and fail closed after expiry" do
+    @replies << portrait_response(headers: { "age" => "240" })
+    assert_equal portrait_bytes, @client.portrait(id: "story_example_avery", revision: "portrait_example_2", size: "large")
+    assert_equal "Bearer website-test-token", @requests.last.last["Authorization"]
+    assert_equal "image/webp", @requests.last.last["Accept"]
+    @now += 59
+    @client.portrait(id: "story_example_avery", revision: "portrait_example_2", size: "large")
+    assert_equal 1, @requests.size
+    @now += 2
+    @replies << Publishing::Unavailable.new("offline")
+    assert_raises(Publishing::Unavailable) { @client.portrait(id: "story_example_avery", revision: "portrait_example_2", size: "large") }
+  end
+
+  test "obsolete portrait revisions evict the corresponding cached page content" do
+    @replies << publisher_response(fixture("featured"))
+    @client.featured
+    @replies << publisher_response(nil, status: 404)
+    assert_raises(Publishing::NotFound) { @client.portrait(id: "story_example_avery", revision: "old", size: "large") }
+    @replies << publisher_response(fixture("featured").merge("members" => []))
+    assert_empty @client.featured
+    assert_equal 3, @requests.size
+  end
+
+  test "portrait paths cannot request arbitrary destinations and image bodies are validated" do
+    [ "../private", "https://elsewhere.example", "id?query=yes" ].each do |id|
+      assert_raises(Publishing::NotFound) { @client.portrait(id: id, revision: "rev", size: "large") }
+    end
+    assert_raises(Publishing::NotFound) { @client.portrait(id: "id", revision: "rev", size: "original") }
+    assert_empty @requests
+    @replies << Publishing::Response.new(status: 200, headers: portrait_response.headers, body: "<html>error</html>")
+    assert_raises(Publishing::Unavailable) { @client.portrait(id: "id", revision: "rev", size: "large") }
+  end
+
   test "fresh cache saves requests and never renews the original freshness" do
     @replies << publisher_response(fixture("featured"))
     assert_equal "Avery", @client.featured.first["display_name"]
@@ -103,7 +178,7 @@ class PublishingClientTest < ActiveSupport::TestCase
   end
 
   test "invalid cache metadata and aged responses fail closed" do
-    [ { "cache-control" => "no-store" }, { "age" => "-1" }, { "age" => "301" },
+    [ { "cache-control" => "no-store" }, { "cache-control" => "public, max-age=300" }, { "age" => "-1" }, { "age" => "301" },
       { "date" => "invalid" }, { "cache-control" => "max-age=300, max-age=600" } ].each do |headers|
       @now += 11
       @replies << publisher_response(fixture("featured"), headers: headers)
@@ -135,7 +210,7 @@ class PublishingClientTest < ActiveSupport::TestCase
     assert_empty @requests
   end
   test "network delay counts against origin Age" do
-    client = Publishing::Client.new(cache: @cache, clock: -> { @now }, transport: lambda { |_uri, _headers|
+    client = Publishing::Client.new(token: "website-test-token", cache: @cache, clock: -> { @now }, transport: lambda { |_uri, _headers|
       reply = publisher_response(fixture("featured"), headers: { "age" => "298" })
       @now += 4
       reply

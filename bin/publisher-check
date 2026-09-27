@@ -1,11 +1,21 @@
 #!/usr/bin/env ruby
+# This read-only command uses production credentials but never signs sessions.
+ENV["RAILS_ENV"] ||= "production"
+ENV["SECRET_KEY_BASE_DUMMY"] ||= "1"
 require_relative "../config/environment"
 
 client = Publishing::Client.new
 begin
   people = client.featured
   events = client.events(from: Date.current, to: Date.current + 90)
-  puts "Publishing v1 verified: #{people.size} featured introductions; #{events.fetch('events').size} events in the next 90 days."
+  people.each do |person|
+    client.story(person.fetch("id"))
+    person.fetch("portrait").fetch("variants").each do |variant|
+      client.portrait(id: person.fetch("id"), revision: person.fetch("portrait").fetch("revision"), size: variant.fetch("size"))
+    end
+  end
+  events.fetch("events").first(10).each { |event| client.event(event.fetch("id")) }
+  puts "Authenticated publishing v1 verified: #{people.size} featured introductions and their portraits; #{events.fetch('events').size} events in the next 90 days (up to 10 event details checked)."
 rescue Publishing::Unavailable, Publishing::NotFound => error
   warn "Publishing v1 is not ready: #{error.message}"
   exit 1

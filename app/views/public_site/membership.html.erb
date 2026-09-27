@@ -1,1 +1,12 @@
-<section aria-labelledby="membership-title"><p class="eyebrow">GETTING INVOLVED</p><h1 id="membership-title">Let’s talk.</h1><p class="body-copy">Interested in the Legion? Ask about membership, eligibility, dues, and ways to take part.</p><p class="body-copy compact">You can also start by asking about a public occasion and meeting a few people.</p><%= link_to "Ask about membership →", contact_path, class: "main-action" %></section>
+<section aria-labelledby="membership-title">
+  <p class="eyebrow">GETTING INVOLVED</p><h1 id="membership-title">Let’s talk.</h1>
+  <p class="body-copy">Interested in the Legion? National’s membership questions explain eligibility and how membership works.</p>
+  <%= link_to "Read membership questions ↗", "https://www.legion.org/faq", class: "main-action" %>
+  <p class="small-note">On The American Legion’s national website.</p>
+  <% if public_contact_available? %>
+    <p class="quiet-link"><%= link_to "Ask about joining Post 165 →", contact_path, class: "text-action" %></p>
+  <% else %>
+    <p class="body-copy compact">Post 165’s local dues and public contact details are being confirmed.</p>
+  <% end %>
+  <p class="quiet-link"><%= link_to "Explore a first visit →", visit_path %></p>
+</section>

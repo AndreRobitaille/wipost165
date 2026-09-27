@@ -8,15 +8,18 @@ module Publishing
     LOCK = Mutex.new
     MAX_AGE = 300
 
-    def initialize(origin: Rails.configuration.x.publisher_origin, cache: Rails.cache, transport: Transport.new, clock: -> { Time.now.to_f })
+    def initialize(origin: Rails.configuration.x.publisher_origin,
+      token: ENV["PUBLISHER_TOKEN"].presence || Rails.application.credentials.dig(:legion_post_tools, :website_token),
+      cache: Rails.cache, transport: Transport.new, clock: -> { Time.now.to_f })
       @origin = origin.delete_suffix("/")
       uri = URI.parse(@origin)
       unless uri.is_a?(URI::HTTPS) && uri.host.present? && uri.userinfo.nil? && uri.query.nil? && uri.fragment.nil? && uri.path.empty?
         raise ArgumentError, "PUBLISHER_ORIGIN must be an HTTPS origin without a path or credentials"
       end
       @cache, @transport, @clock = cache, transport, clock
+      @token = token.to_s
       @deadlines = []
-      @prefix = "publishing:#{Digest::SHA256.hexdigest(@origin)}:"
+      @prefix = "publishing:#{Digest::SHA256.hexdigest([ @origin, @token ].join("\0"))}:"
       @contract = Contract.new(origin: @origin)
     end
 
@@ -37,13 +40,23 @@ module Publishing
       fetch("/public/v1/events/#{ERB::Util.url_encode(id)}", kind: :event, id: id)
     end
 
+    def portrait(id:, revision:, size:)
+      unless [ id, revision ].all? { |value| value.is_a?(String) && value.match?(/\A[A-Za-z0-9_-]+\z/) } && %w[small large].include?(size)
+        raise NotFound
+      end
+
+      fetch("/public/v1/member_stories/#{id}/portrait/#{revision}/#{size}.webp", kind: :portrait)
+    end
+
     def expired?
-      @deadlines.any? { |deadline| deadline <= @clock.call }
+      @access_denied || @deadlines.any? { |deadline| deadline <= @clock.call }
     end
 
     private
 
     def fetch(path, **validation)
+      raise Unavailable, "Website token missing or malformed" unless @token.match?(/\A[!-~]+\z/)
+
       key = @prefix + path
       LOCK.synchronize do
         cached = @cache.read(key)
@@ -64,12 +77,18 @@ module Publishing
     end
 
     def refresh(path, key, cached, validation)
-      headers = { "Accept" => "application/json", "Cache-Control" => "no-cache" }
+      headers = { "Accept" => validation[:kind] == :portrait ? "image/webp" : "application/json",
+        "Authorization" => "Bearer #{@token}", "Cache-Control" => "no-cache" }
       headers["If-None-Match"] = cached[:headers]["etag"] if cached && cached[:headers]["etag"].present?
       sent = @clock.call
       response = @transport.call(URI.parse(@origin + path), headers)
       received = @clock.call
-      if response.status == 404 && %i[story event].include?(validation[:kind])
+      if response.status == 401
+        @cache.delete_matched(/\A#{Regexp.escape(@prefix)}/)
+        @access_denied = true
+        raise Unavailable, "Website authentication rejected"
+      end
+      if response.status == 404 && %i[story event portrait].include?(validation[:kind])
         # Clearing collections too prevents a known withdrawal being reused here.
         @cache.delete_matched(/\A#{Regexp.escape(@prefix)}/)
         raise NotFound
@@ -80,8 +99,7 @@ module Publishing
         metadata = cached[:headers].except("age").merge(response.headers)
         data = cached[:data]
       elsif response.status == 200
-        raise Unavailable, "Unexpected content type" unless response.headers["content-type"].to_s.split(";").first == "application/json"
-        data = @contract.validate!(JSON.parse(response.body), **validation)
+        data = validated_body(response, validation)
         metadata = response.headers
       else
         raise Unavailable, "HTTP #{response.status}"
@@ -95,9 +113,26 @@ module Publishing
       raise Unavailable, "Invalid publisher metadata or JSON"
     end
 
+    def validated_body(response, validation)
+      content_type = response.headers["content-type"].to_s.split(";").first
+      if validation[:kind] == :portrait
+        body = response.body
+        unless content_type == "image/webp" && body.bytesize >= 12 && body.byteslice(0, 4) == "RIFF" &&
+          body.byteslice(8, 4) == "WEBP" && body.byteslice(4, 4).unpack1("V") == body.bytesize - 8
+          raise Unavailable, "Invalid publisher portrait"
+        end
+        body
+      else
+        raise Unavailable, "Unexpected content type" unless content_type == "application/json"
+        @contract.validate!(JSON.parse(response.body), **validation)
+      end
+    end
+
     def remaining_lifetime(headers, sent, received)
       directives = headers.fetch("cache-control", "").split(",").map(&:strip)
-      raise Unavailable, "Uncacheable publishing response" if directives.any? { |value| %w[no-store no-cache private].include?(value.downcase) }
+      if directives.any? { |value| %w[no-store no-cache public].include?(value.downcase) } || !directives.any? { |value| value.casecmp?("private") }
+        raise Unavailable, "Expected private publishing cache policy"
+      end
       max_age = directives.filter_map { |value| value[/\Amax-age=(\d+)\z/i, 1] }
       raise Unavailable, "Missing or ambiguous max-age" unless max_age.one?
       date = Time.httpdate(headers.fetch("date")).to_f

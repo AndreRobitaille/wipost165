@@ -2,23 +2,124 @@
 
 ## Session entry point — September 27, 2026
 
+**Latest integration update:** the owner's revised publisher now requires a
+Post-owned read-only website token, including portraits. The local consumer sends
+that token server-side, serves portraits through its own route, and keeps caches
+private and separated by credential. Production encrypted credentials are prepared;
+the key stays ignored. Live authenticated checks returned valid empty featured and
+event collections. CI passed with 46 tests / 293 assertions. The owner authorized
+commit, push, and deployment; release results will be recorded separately.
+The three fictional introductions currently exist only in the synthetic companion
+database. The [content-session prompt](publisher-content-prompt.md) authorizes and
+describes creating/publishing them in the real workspace with editorial access.
+Older anonymous-feed and pending-authorization notes below are historical.
+
 Follow [ROADMAP](ROADMAP.md) for current work and record session progress there.
 Read [PURPOSE](PURPOSE.md) for why the public site exists and
 [UI/UX and visual guidance](UI_UX_GUIDE.md) for the owner's design intent,
 rejected approaches, and review criteria. [Development](development.md) covers
 the runtime and verification. These entry points avoid needing the old conversation.
 The development and release histories are consolidated on `main` in
-`/home/andre/Development/wipost165`; SITE-01 is complete. Continue with
-**SITE-02** (public experience) and **SITE-03** (content preparation) while the
-companion implements its publisher.
-The [companion work queue](companion-work-queue.md) tracks that separate delivery;
-[contract revision 3](public-publishing-api-v1.md) remains its specification.
+`/home/andre/Development/wipost165`; SITE-01 and the local SITE-02 refinement are
+complete. Continue with **SITE-03** (content preparation). Companion publisher
+delivery is tracked separately; recheck its status before integration work.
+The [companion work queue](companion-work-queue.md) tracks that separate delivery.
+Use the [API output request](publisher-api-request.md) for the companion session;
+revision 3 remains the external-interface baseline, with implementation and
+site/admin choices left to LegionPostTools under the owner's clarified scope.
 
 Current architecture: separate Rails public service, no database or public editor,
 content administration in LegionPostTools, and a readonly publishing API. The
 coming-soon site is live; the full consumer exists locally; end-to-end publishing
 integration and full-site launch remain open. Older entries below preserve how
 we arrived here, not alternative current setup instructions.
+
+## Resume next session
+
+- **Accepted design:** the owner reviewed the desktop capture and said, “Looks
+  good. No real feedback on it other than I like it.” Keep the current shared-table
+  composition. The agent's optional spacing critique is not unfinished work.
+  [Approval and screenshots](design/2026-09-visitor-paths/README.md#owner-review).
+- **Preserve the local work:** this session's application, tests, documentation,
+  and screenshots remain uncommitted on `main`. At handoff, Git reports `main`
+  ahead of the locally known `origin/main` by 90 commits; no remote refresh was
+  performed. Inspect the worktree before editing. Do not discard the new portrait
+  partial, visitor-path review directory, or content-readiness worksheet as debris.
+- **Next conversation:** use [launch content readiness](launch-content-readiness.md).
+  Public email/phone, postal address, meeting venue/time, unarranged meeting
+  attendance, gravel parking/no steps, and content responsibility are now recorded.
+  The owner supplied the current public source and answered the arrival questions.
+  Next: approved introductions/photos, which the owner plans to collect at the
+  next PEC and possibly member meeting. Do not repeat resolved contact questions.
+  Remaining unknowns stay omitted. Keep private evidence and publishing grants
+  in the companion's appropriate private workflow.
+- **Verification already completed:** `bin/ci` passed with 36 tests and 234
+  assertions; the [review note](design/2026-09-visitor-paths/README.md#verification)
+  records desktop/phone, sparse-content, keyboard, reduced-motion, and
+  no-JavaScript checks. Repeat checks for new changes or unresolved risks, not
+  merely to reopen the session. SITE-03 reran CI with the same passing counts;
+  [contact/visit evidence](design/2026-09-content-intake/README.md) adds desktop,
+  320px, keyboard disclosure, link-target, and blank-contact-override checks.
+- **Local preview:** the temporary QA servers/browser sessions were stopped and
+  generated production assets were clobbered after verification. To preview again,
+  follow [development](development.md), explicitly using `PUBLIC_SITE_PREVIEW=1`
+  and `PUBLIC_SITE_COMING_SOON=0`. Screenshots remain reviewable without a server.
+- **Remaining delivery:** SITE-04 awaits the companion publisher; SITE-05 awaits
+  verified real content, integration evidence, and release authorization. No
+  commit, push, deployment, companion edit, or live-data change was authorized by
+  the design approval. Production was not inspected or changed in this session;
+  the coming-soon revision below is prior recorded evidence.
+
+## Companion handoff scope — September 27, 2026
+
+The owner will run publisher work in the other repository. This public-site
+session prepared [the requested output handoff](publisher-api-request.md), checked
+against the current consumer and synthetic fixtures. It specifies JSON, portraits,
+public lifecycle/freshness behavior, and evidence/access details to return.
+It leaves companion architecture, permissions design, and site/admin operation
+to that repository and adds no internal/admin requirements. The owner clarified
+that the earlier contract was coauthored by the companion agent: the new handoff
+does not unilaterally revoke those jointly reviewed decisions. Proposed departures
+should be identified, with external-interface changes coordinated with the consumer.
+No companion inspection, edit, or deployment was performed for this handoff.
+Documentation and fixture compatibility checks only; runtime code is unchanged.
+
+## SITE-03 owner intake — September 27, 2026
+
+Resumed content preparation with focused contact and first-visit questions.
+The [worksheet](launch-content-readiness.md) now provides a public fact/provenance
+record, ownership/correction follow-up, and a mapping to existing configuration,
+static visit copy, and publisher fields. Published introductions require an
+approved portrait under v1; missing-image fallback is a display behavior.
+
+The owner supplied the existing public contact page, then confirmed that visitors
+may attend a regular meeting without arranging it, while an event is the preferred
+first experience. Gravel parking and no steps are the known club access details.
+Contact defaults, mailing address, and meeting/visit copy are implemented locally.
+The owner is the current content contact and monitors enquiries along with the
+service officer; those responsibilities are not added to public copy.
+
+Introductions/photos await collection at the next PEC and possibly member meeting.
+SITE-03 remains active for that material and the separately authorized publishing
+workflow. CI passed (36 tests, 234 assertions); [focused browser evidence](design/2026-09-content-intake/README.md)
+covers contact/visit content. Prior changes and screenshots were preserved; no
+layout redesign, companion change, commit, push, or deployment occurred.
+
+## Visitor-path refinement — September 27, 2026
+
+SITE-02 is complete for the local refinement: implementation and QA passed, and
+the owner approved the desktop visual direction without requesting changes.
+See [rendered phone/desktop paths and states](design/2026-09-visitor-paths/README.md).
+Interior pages now lead with their destination; the welcome supports sparse/long
+introductions, phone quick navigation stays visible, and calendar/contact states
+remain useful without invented facts. CI passed (36 tests, 234 assertions), with
+browser, keyboard, reduced-motion, and no-JavaScript evidence in the review note.
+
+SITE-03 has [verified resource links and a local fact checklist](launch-content-readiness.md).
+Next inputs: a monitored public contact and actual first-visit
+arrival/access information. Approved introductions and content ownership remain
+open. Companion publishing/integration is still separate. No commit, push,
+deployment, or companion changes were made in this refinement session.
 
 ## Source consolidation — September 27, 2026
 

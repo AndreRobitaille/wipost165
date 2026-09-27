@@ -1,0 +1,6 @@
+<span class="portrait">
+  <span class="face" data-controller="portrait">
+    <span class="portrait-fallback" role="img" aria-label="Portrait temporarily unavailable" hidden>Portrait<br>unavailable</span>
+    <%= image_tag person.portrait, alt: person.portrait_alt, width: 160, height: 180, data: { portrait: person.portrait, action: "error->portrait#unavailable" } %>
+  </span>
+</span>

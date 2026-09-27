@@ -1,1 +1,8 @@
-<section aria-labelledby="help-title"><p class="eyebrow">VETERANS HELPING VETERANS</p><h1 id="help-title">A place to ask.</h1><p class="body-copy">Looking for help finding the right veterans resource? Get in touch with the Post to ask about a connection.</p><%= link_to "Contact the Post →", contact_path, class: "main-action" %><p class="small-note">The Post’s contact channels are not emergency services.</p></section>
+<section aria-labelledby="help-title">
+  <p class="eyebrow">VETERANS HELPING VETERANS</p><h1 id="help-title">A place to ask.</h1>
+  <p class="body-copy">For questions about veterans benefits, start with the Manitowoc County Veteran Services Office.</p>
+  <%= link_to "County veterans services ↗", "https://manitowoccountywi.gov/departments/veteran-s-services/", class: "main-action" %>
+  <p class="small-note">The county’s website has current contact information and office hours.</p>
+  <% if public_contact_available? %><p class="quiet-link"><%= link_to "Contact the Post →", contact_path %></p><% end %>
+  <p class="small-note">The Post’s contact channels are not emergency services.</p>
+</section>

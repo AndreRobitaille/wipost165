@@ -1,5 +1,5 @@
 <% if @remembered_person %>
-  <p class="recognition"><span data-controller="portrait"><span class="portrait-fallback" hidden aria-label="Portrait unavailable">—</span><%= image_tag @remembered_person.portrait, alt: "", width: 42, height: 42, data: { action: "error->portrait#unavailable" } %></span><span>You’ve met <%= @remembered_person.name %> here. Ask the Post whether they’ll be at the occasion you’re considering.</span></p>
+  <p class="recognition"><span data-controller="portrait"><span class="portrait-fallback" hidden aria-label="Portrait unavailable">—</span><%= image_tag @remembered_person.portrait, alt: "", width: 42, height: 42, data: { action: "error->portrait#unavailable" } %></span><span>You’ve read <%= link_to "#{@remembered_person.name}’s introduction", person_path(@remembered_person) %>. That’s a conversation starter if you meet; it doesn’t tell us who will be at an event.</span></p>
 <% else %>
   <p class="recognition">Coming on your own? Ask who you can look for when you arrive.</p>
 <% end %>

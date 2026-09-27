@@ -1,4 +1,5 @@
 <section aria-labelledby="event-title">
+  <p class="back-link"><%= link_to "← All events", events_path(person_context) %></p>
   <p class="eyebrow"><%= preview_mode? ? "EXAMPLE INVITATION · NOT SCHEDULED" : "AT POST 165" %></p>
   <h1 id="event-title"><%= @event.title %></h1>
   <% if @event.cancelled? %><p class="event-notice" role="status">This event has been cancelled.</p><% elsif @event.past? %><p class="event-notice">This event has already taken place. <%= link_to "See upcoming events", events_path(person_context) %>.</p><% end %>
@@ -8,5 +9,5 @@
     <div><dt>Where</dt><dd><%= @event.location_name.presence || "To be confirmed" %></dd></div>
     <div><dt>Guests &amp; children</dt><dd>Please check with the Post before making plans.</dd></div>
   </dl>
-  <% unless @event.cancelled? || @event.past? %><%= render "recognition" %><%= link_to "Thinking of coming? →", visit_path(person_context), class: "main-action" %><% end %>
+  <% unless @event.cancelled? || @event.past? %><%= render "recognition" %><%= link_to "Plan your first visit →", visit_path(person_context), class: "main-action" %><% end %>
 </section>

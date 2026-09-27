@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <title><%= public_page_title %> · American Legion Post 165 · Two Rivers</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Get to know Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin. Meet a few people, find an occasion, and plan your first visit.">
@@ -15,22 +16,22 @@
   </head>
   <body>
     <div id="company">
-      <a class="skip" href="#table-content" data-turbo="false">Skip to the table</a>
+      <a class="skip" href="#table-content" data-turbo="false">Skip to main content</a>
       <% if preview_mode? %><div class="preview-note">DESIGN PREVIEW <span>Placeholder people and sample events · not the live Post calendar</span></div><% end %>
       <header class="masthead">
         <%= link_to root_path, class: "brand", aria: { label: "Post 165 welcome" } do %><%= image_tag "legion-white.png", alt: "The American Legion", width: 172, height: 83 %><% end %>
         <div class="post-name">ROBERT E. BURNS <strong>POST 165</strong><span>Two Rivers, Wisconsin</span></div>
         <nav class="quick-nav" aria-label="Quick links"><%= link_to "Find an event ↗", events_path(person_context) %><%= link_to "Get in touch ↗", contact_path(person_context) %></nav>
       </header>
-      <main data-people-count="<%= @people.size %>" class="gathering <%= "without-people" if @people.empty? %>">
+      <main data-people-count="<%= @people.size %>" class="gathering <%= "interior" unless action_name == "home" %> <%= "without-people" if @people.empty? %>">
         <div class="table-shape" aria-hidden="true"><div class="table-inlay"></div></div>
-        <% if @people.any? %>
+        <% if action_name == "home" && @people.any? %>
           <div class="welcome-label" aria-hidden="true">THERE’S ROOM HERE.</div>
-          <nav class="people" aria-label="Meet a few people">
-            <% @people.each_with_index do |person, index| %>
-              <%= link_to person_path(person), class: "person #{%w[frank ron jo][index]}", aria: { current: @profile&.slug == person.slug ? "page" : nil } do %>
-                <span class="portrait"><span class="face" data-controller="portrait"><span class="portrait-fallback" role="img" aria-label="Portrait temporarily unavailable" hidden>Portrait<br>unavailable</span><%= image_tag person.portrait, alt: person.portrait_alt, width: 160, height: 180, data: { portrait: person.portrait, action: "error->portrait#unavailable" } %></span><span class="portrait-action" aria-hidden="true">↗</span></span>
-                <span class="person-name"><%= person.name %><span aria-hidden="true"> ↗</span></span><span class="person-prompt"><%= person.sample? ? "Placeholder" : "Say hello" %></span>
+          <nav class="people <%= "long-names" if @people.any? { |person| person.name.length > 20 } %>" aria-label="Meet a few people">
+            <% @people.each do |person| %>
+              <%= link_to person_path(person), class: "person" do %>
+                <%= render "public_site/portrait", person: person %>
+                <span class="person-name"><%= person.name %><span aria-hidden="true"> ↗</span></span><span class="person-prompt"><%= person.sample? ? "Placeholder" : "Read introduction" %></span>
               <% end %>
             <% end %>
           </nav>

@@ -14,7 +14,7 @@ module Publishing
         http.start do
           request = Net::HTTP::Get.new(uri.request_uri, headers)
           http.request(request) do |response|
-            body = +""
+            body = +"".b
             response.read_body do |chunk|
               body << chunk
               raise Unavailable, "Publisher response too large" if body.bytesize > 2.megabytes

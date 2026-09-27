@@ -73,8 +73,12 @@ Generate a unique `POST165_PUBLIC_SECRET_KEY_BASE` once. Store it outside Git in
 a mode-0600 operator file, such as `.env.production.local` in the development
 checkout. Export it into the release shell. Use an authenticated GHCR-capable
 GitHub CLI token for `KAMAL_REGISTRY_PASSWORD`; do not print or commit it.
-`.kamal/secrets` only maps these environment variables. Never source secrets from
-the members app. Check that Git ignores local secret files before saving them.
+`.kamal/secrets` maps these environment variables and reads this application's
+`config/credentials/production.key` into `RAILS_MASTER_KEY`. Its encrypted
+`production.yml.enc` stores `legion_post_tools.website_token`, the Post-owned
+read-only credential for published website content. Keep the key ignored and
+mode 0600; include only the encrypted file in Git. Never source Rails keys or
+database secrets from the members app. Check that Git ignores local secret files.
 
 Run `bin/ci`, review the intended changes, commit and push the clean release
 branch with `bin/release push`, then run `bin/release session` once and

@@ -15,7 +15,7 @@ class PublicSiteTest < ActionDispatch::IntegrationTest
 
   def using_feed(&block)
     constructor = Publishing::Client.method(:new)
-    factory = -> { constructor.call(cache: @cache, transport: @transport, clock: -> { @now }) }
+    factory = -> { constructor.call(token: "website-test-token", cache: @cache, transport: @transport, clock: -> { @now }) }
     Publishing::Client.stub(:new, factory, &block)
   end
 
@@ -28,6 +28,9 @@ class PublicSiteTest < ActionDispatch::IntegrationTest
     assert_select ".sample-tag", count: 0
     assert_equal "no-store", response.headers["Cache-Control"]
     assert_select 'meta[name="turbo-cache-control"][content="no-cache"]'
+    assert_select 'img[src="/people/story_example_avery/portrait/portrait_example_2/large.webp"]'
+    assert_select 'img[src^="https://members.wipost165.org"]', count: 0
+    assert_not_includes response.body, "website-test-token"
   end
 
   test "all static routes remain usable during publisher failure" do
@@ -49,6 +52,8 @@ class PublicSiteTest < ActionDispatch::IntegrationTest
     using_feed { get person_path(member["id"]) }
     assert_response :success
     assert_select "h1", text: "Meet Avery."
+    assert_select ".table-content .portrait img[alt]", count: 1
+    assert_select ".people", count: 0
     assert_select ".member-story script", count: 0
     assert_includes response.body, "&lt;script&gt;"
   end
@@ -94,7 +99,8 @@ class PublicSiteTest < ActionDispatch::IntegrationTest
     assert_includes response.body, "October 11, 2026"
     assert_includes response.body, "All day"
     assert_includes response.body, "has been cancelled"
-    assert_select "a", text: "Thinking of coming? →", count: 0
+    assert_select "a", text: "Plan your first visit →", count: 0
+    assert_select "a", text: "← All events", count: 1
   end
 
   test "preview content cannot be requested by query string or accidentally substituted" do
@@ -151,7 +157,7 @@ class PublicSiteTest < ActionDispatch::IntegrationTest
         publisher_response({ "schema_version" => 1, "member" => fixture("featured")["members"].first })
       end
     end
-    factory = -> { constructor.call(cache: @cache, transport: transport, clock: -> { @now }) }
+    factory = -> { constructor.call(token: "website-test-token", cache: @cache, transport: transport, clock: -> { @now }) }
     Publishing::Client.stub(:new, factory) { get person_path("story_example_avery") }
     assert_response :service_unavailable
     assert_select ".person", count: 0
@@ -173,5 +179,52 @@ class PublicSiteTest < ActionDispatch::IntegrationTest
     end
   ensure
     ActionController::Base.allow_forgery_protection = old_protection
+  end
+
+  test "introduction context survives the event visit and contact journey" do
+    Rails.configuration.x.public_site_preview = true
+    previous_email = Rails.configuration.x.public_contact_email
+    Rails.configuration.x.public_contact_email = "public@example.org"
+    using_feed do
+      get person_path("frank")
+      assert_select 'a[href="/events?person=frank"]', minimum: 1
+      get events_path(person: "frank")
+      assert_select 'a[href="/events/example-gathering?person=frank"]'
+      get event_path("example-gathering", person: "frank")
+      assert_select '.recognition a[href="/people/frank"]'
+      assert_select 'a[href="/visit?person=frank"]', text: "Plan your first visit →"
+      get visit_path(person: "frank")
+      assert_select 'a[href="/contact?person=frank"]', text: "Ask about a first visit →"
+      get contact_path(person: "frank")
+      assert_select 'a[href^="mailto:public@example.org"]'
+      assert_includes response.body, "I read Frank’s introduction"
+    end
+  ensure
+    Rails.configuration.x.public_contact_email = previous_email
+  end
+
+  test "first visit does not offer an enquiry without a public contact" do
+    Rails.configuration.x.public_site_preview = true
+    previous_email = Rails.configuration.x.public_contact_email
+    previous_phone = Rails.configuration.x.public_contact_phone
+    Rails.configuration.x.public_contact_email = nil
+    Rails.configuration.x.public_contact_phone = nil
+    using_feed { get visit_path }
+    assert_select "a", text: "Ask about a first visit →", count: 0
+    assert_includes response.body, "Email and phone contact details aren’t available here"
+    assert_select 'a[href="/events"]', minimum: 1
+  ensure
+    Rails.configuration.x.public_contact_email = previous_email
+    Rails.configuration.x.public_contact_phone = previous_phone
+  end
+
+  test "event list shows time and cancellation even in a labelled preview" do
+    Rails.configuration.x.public_site_preview = true
+    event = PublicOccasion.new({ "id" => "sample", "title" => "Sample cancelled occasion",
+      "starts_at" => "2026-10-10T18:00:00-05:00", "cancelled" => true }, timezone: "America/Chicago")
+    PreviewContent.stub(:events, [ event ]) { using_feed { get events_path } }
+    assert_select ".cancelled-tag", text: "CANCELLED"
+    assert_select ".occasion-time", text: /6:00 PM CDT/
+    assert_select ".sample-tag", text: "EXAMPLE OCCASION"
   end
 end

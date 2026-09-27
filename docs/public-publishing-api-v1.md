@@ -1,5 +1,14 @@
 # Publishing API v1 — reviewed implementation contract
 
+**Handoff scope — September 27, 2026:** This contract was jointly developed with
+the companion agent, including its implementation and policy contributions.
+The owner requested an [output-focused handoff](publisher-api-request.md) for
+the next companion session. That handoff adds no internal implementation or admin
+requirements and does not revoke the jointly reviewed decisions below. The
+companion owns its implementation and should assess those decisions against its
+current code and guidance. Return proposed departures explicitly; coordinate
+external-interface changes with the public consumer before assuming compatibility.
+
 Revision 3, September 27, 2026. Incorporates both rounds of companion review,
 including source ownership, publication races, and concrete eligibility rules.
 Review is complete with no blocking contract changes, as confirmed in the owner's
@@ -177,9 +186,14 @@ preview behavior; implement a separate website publishing policy.
 
 ## 3. Transport, identities, and routes
 
-Anonymous HTTPS GET/HEAD only, under the configured publisher origin. This is a
-separate publication surface; private API authentication is unchanged. Server-side
-consumption needs neither a member token nor browser CORS access. All JSON is UTF-8
+HTTPS GET/HEAD only, under the configured publisher origin, authenticated with a
+Post-owned website bearer token. The owner's September 27 change supersedes
+revision 3's anonymous-access policy; payload shapes remain unchanged. This token
+has fixed read-only access to published website content, inherits no person/role
+permissions, and cannot access private `/api` endpoints or write actions. Send
+`Authorization: Bearer <website token>` server-side on JSON, portrait, HEAD, and
+conditional requests. This is a separate publication surface; private editorial
+API authentication is unchanged. There is no browser CORS access. All JSON is UTF-8
 with `Content-Type: application/json`; text fields are plain text, never trusted
 HTML. Consumers escape them and tolerate additive unknown fields.
 
@@ -195,7 +209,8 @@ JSON schema version is integer `1`. IDs and revisions are opaque nonempty string
 clients do not parse them. Story/event update timestamps are RFC 3339 UTC strings
 for the last *public* change, not draft saves. Collections contain full objects,
 so the homepage needs one request for its three stories. Unknown/withdrawn/draft
-IDs all produce the same 404, including for an anonymous conditional request.
+IDs all produce the same 404 for authenticated reads, including conditional requests.
+Missing, invalid, and revoked credentials return 401 before resource/ETag lookup.
 
 ## 4. JSON objects and calendar semantics
 
@@ -325,6 +340,7 @@ Errors use a fixed envelope, for example HTTP 400:
 | Status | Code / behavior |
 | --- | --- |
 | 400 | `invalid_interval` for missing, malformed, reversed, or too-wide dates. |
+| 401 | `unauthorized`; `WWW-Authenticate: Bearer realm="website"`; no-store. Clear cached access for that credential and fail closed. |
 | 404 | `not_found` for unknown, withdrawn, ineligible, or unpublished records and obsolete/unsupported portraits. |
 | 405 | `method_not_allowed`, with `Allow: GET, HEAD`, for mutations on publishing routes. |
 | 429 | `rate_limited`, with `Retry-After` when throttled. |
@@ -366,10 +382,13 @@ approved transformed bytes through this controlled route; do not redirect to a
 permanent blob URL that bypasses the publication check. HEAD uses the same checks.
 
 Successful responses have `Content-Type: image/webp`, ETag, Date, and
-`Cache-Control: public, max-age=300, must-revalidate`. Revisioned URLs are not
-`immutable`. No stale-on-error extension. Browser/CDN copies can remain usable for
-their remaining lifetime, up to five minutes; an already downloaded/displayed
-image cannot be recalled. URLs do not contain expiring storage credentials.
+`Cache-Control: private, max-age=300, must-revalidate` and `Vary: Authorization`.
+Revisioned URLs are not `immutable`. The consumer fetches portraits with its
+website token and serves them through its own constrained image route, with
+no-store browser responses. Never put the token in a URL or browser HTML, and
+never use shared CDN/proxy caches for publisher responses. Private consumer caches
+can retain images only for their remaining five-minute lifetime; an already
+downloaded/displayed image cannot be recalled.
 
 ## 6. One freshness budget
 
@@ -379,8 +398,9 @@ to subsequent requests and cache reuse, not text/images already displayed in an
 open tab. Live removal from an open tab would require additional client behavior.
 
 Successful publisher JSON responses use ETag, Date, and
-`Cache-Control: public, max-age=300, must-revalidate`. Publisher caches must check
-current publication/consent/revision state before originating a new success or
+`Cache-Control: private, max-age=300, must-revalidate` and `Vary: Authorization`.
+Consumer caches are private and separated by credential as well as origin.
+Publisher caches must check authentication and current publication/consent/revision state before originating a new success or
 304. Downstream cache hits do not reset age. Consumers account for Date, Age,
 network delay, and resident time when calculating freshness; a local cache read
 is not origin validation. Send `Cache-Control: no-cache` on conditional refresh

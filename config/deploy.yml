@@ -19,6 +19,7 @@ registry:
 env:
   secret:
     - SECRET_KEY_BASE
+    - RAILS_MASTER_KEY
   clear:
     PUBLIC_SITE_COMING_SOON: "1"
     PUBLIC_SITE_PREVIEW: "0"

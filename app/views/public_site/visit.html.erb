@@ -1,12 +1,22 @@
 <section aria-labelledby="visit-title">
   <p class="eyebrow">YOUR FIRST VISIT</p><h1 id="visit-title">Start with hello.</h1>
-  <p class="body-copy compact">You don’t need a speech. Just a place to start.</p>
+  <p class="body-copy compact">Start with a public event—it’s a good way to get to know us. You can also come to a regular Post meeting.</p>
   <%= render "recognition" %>
   <div class="visit-questions">
     <details><summary>Coming on your own?</summary><p>Ask who will be there and how to find them when you arrive. Knowing one name can make the first hello easier.</p></details>
     <details><summary>Bringing someone along?</summary><p>Guest and child attendance depends on the occasion. Check the event details or ask the Post before making plans. Attending an event and joining the Legion are separate questions.</p></details>
-    <details><summary>Where should I go?</summary><p>Check the location on the event invitation. If the address or entrance isn’t clear, get in touch before heading over.</p></details>
-    <details><summary>Do I need to join first?</summary><p>Ask about an occasion open to visitors. Membership eligibility and participation vary; we can help you find a starting point.</p></details>
+    <details>
+      <summary>Where and when does the Post meet?</summary>
+      <p>Regular Post meetings are on the first Tuesday of each month at 6:30 p.m. at Manitowoc Rifle &amp; Pistol Club, 7227 Sandy Hill Ln, Two Rivers, WI 54241.</p>
+      <p>You can come to a regular meeting without arranging it first. For other occasions, check the location and time in the event details.</p>
+    </details>
+    <details><summary>What about access or parking?</summary><p>The club has a gravel parking lot and no steps. Contact the Post if you need more detail about access. Other event locations may have different arrangements.</p></details>
+    <details><summary>Do I need to join first?</summary><p>Ask about an occasion open to visitors. Attending a public event and becoming a member are separate steps.</p></details>
   </div>
-  <%= link_to "Ask about a first visit →", contact_path(person_context), class: "main-action" %>
+  <% if public_contact_available? %>
+    <%= link_to "Ask about a first visit →", contact_path(person_context), class: "main-action" %>
+  <% else %>
+    <p class="small-note">Email and phone contact details aren’t available here. Please check back before travelling if an event listing doesn’t answer your questions.</p>
+  <% end %>
+  <p class="quiet-link"><%= link_to "See upcoming events →", events_path(person_context) %></p>
 </section>

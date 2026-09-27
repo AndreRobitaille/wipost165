@@ -30,6 +30,10 @@ module PublicSiteHelper
     Rails.configuration.x.public_contact_phone.presence
   end
 
+  def public_contact_available?
+    public_contact_email.present? || public_contact_phone.present?
+  end
+
   def public_phone_href
     "tel:#{public_contact_phone.to_s.gsub(/[^+0-9]/, '')}"
   end

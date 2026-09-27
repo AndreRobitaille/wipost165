@@ -6,7 +6,16 @@ module PublishingHelpers
   def publisher_response(data = nil, status: 200, headers: {})
     Publishing::Response.new(status: status, body: data ? JSON.generate(data) : "",
       headers: { "content-type" => "application/json", "date" => Time.at(@now).httpdate,
-        "cache-control" => "public, max-age=300, must-revalidate", "etag" => '"revision-1"' }.merge(headers))
+        "cache-control" => "private, max-age=300, must-revalidate", "vary" => "Authorization", "etag" => '"revision-1"' }.merge(headers))
+  end
+
+  def portrait_bytes
+    Rails.root.join("test/fixtures/publishing/portrait.webp").binread
+  end
+
+  def portrait_response(headers: {})
+    Publishing::Response.new(status: 200, body: portrait_bytes,
+      headers: publisher_response.headers.merge("content-type" => "image/webp").merge(headers))
   end
 
   def build_client
@@ -20,6 +29,6 @@ module PublishingHelpers
       result
     end
     @cache = ActiveSupport::Cache::MemoryStore.new
-    @client = Publishing::Client.new(cache: @cache, transport: @transport, clock: -> { @now })
+    @client = Publishing::Client.new(token: "website-test-token", cache: @cache, transport: @transport, clock: -> { @now })
   end
 end

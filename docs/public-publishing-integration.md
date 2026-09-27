@@ -1,5 +1,12 @@
 # Public publishing integration — review and implementation baseline
 
+**Current handoff:** [Public API output request](publisher-api-request.md).
+The contract and review below include contributions from both agents. The new
+handoff adds no requirements for how the companion builds or operates its own
+site/admin, and does not discard those jointly reviewed decisions. Its session
+owns implementation and evaluates proposed changes against its current context;
+consumer interface changes still require coordination.
+
 Reviewed September 27, 2026. This records a read-only inspection and the reviewed
 revision 3 contract for coordination between the two repositories. It is not an implemented
 API, an approved deployment, or a request for the companion agent to start coding.

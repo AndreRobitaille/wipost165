@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "avery",
+    "draft": {
+      "display_name": "Avery (fictional preview)",
+      "introduction": "A cup of coffee, an old radio, and a story worth hearing.",
+      "story": "Fictional website placeholder. This introduction and its AI-generated portrait do not represent a real Post member.\n\nAvery likes finding out how things work, especially when an old radio or a stubborn small repair is involved. A quiet afternoon can turn into a good conversation over a workbench or a cup of coffee.\n\nIn this sample introduction, the opening is simple: ask what Avery is fixing lately. You do not need to know the right people or have a remarkable story of your own to join a conversation.",
+      "conversation_starter": "What is the most satisfying thing you have fixed?",
+      "portrait_alt": "AI-generated fictional Avery, smiling with glasses and silver hair, wearing a blue shirt."
+    }
+  },
+  {
+    "slug": "morgan",
+    "draft": {
+      "display_name": "Morgan (fictional preview)",
+      "introduction": "Good company, a walk outdoors, and a little room to try something new.",
+      "story": "Fictional website placeholder. This introduction and its AI-generated portrait do not represent a real Post member.\n\nMorgan enjoys a walk with no particular destination and the kind of conversation that wanders just as easily. Gardening experiments, books, and recipes that did not quite go to plan all make good starting points.\n\nThis sample profile shows how a short introduction can make someone feel familiar before a first visit. It does not promise that a particular person will attend or host an activity.",
+      "conversation_starter": "Have you grown or cooked anything new lately?",
+      "portrait_alt": "AI-generated fictional Morgan, smiling with shoulder-length brown hair, wearing a green shirt."
+    }
+  },
+  {
+    "slug": "sam",
+    "draft": {
+      "display_name": "Sam (fictional preview)",
+      "introduction": "A favorite song and a friendly question can get a conversation started.",
+      "story": "Fictional website placeholder. This introduction and its AI-generated portrait do not represent a real Post member.\n\nSam enjoys a good playlist, a close ballgame, and learning the story behind somebody else's favorite meal. There is usually a new song to recommend or a recipe worth trying again.\n\nThis sample introduction is a reminder that an easy conversation can begin with everyday interests. Real member stories and approved photographs will take the place of these fictional profiles when they are ready.",
+      "conversation_starter": "What song always makes it onto your playlist?",
+      "portrait_alt": "AI-generated fictional Sam, smiling with short salt-and-pepper hair, wearing a burgundy shirt."
+    }
+  }
+]

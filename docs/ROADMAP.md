@@ -34,11 +34,11 @@ not authorize commits, pushes, companion edits, publishing grants, or deployment
 | Area | Evidence and state |
 | --- | --- |
 | Hosting | Coming-soon page deployed with apex/www HTTPS; see [release evidence](deployment/2026-09-27-coming-soon-status.md). Do not redo DNS or provisioning as website development. |
-| Public experience | Rails “In good company” pages, event/story details, visit/contact paths, and synthetic preview exist. [Local verification and screenshots](design/2026-09-rails-implementation/README.md) are evidence of that slice, not full-site launch approval. |
+| Public experience | SITE-02 local refinement is complete, with owner approval of the desktop direction. [Current verification and screenshots](design/2026-09-visitor-paths/README.md) cover visitor paths and sparse content; full-site launch remains separate. |
 | Public consumer | Database-free v1 client, validation, bounded caching, and failure states exist. See [development](development.md). Cross-application verification remains open. |
 | Publisher | Contract revision 3 reviewed. Local companion checkout at `9d278b7` was clean on September 27; no v1 publisher implementation was found. Recheck before assigning work. This is not a new live-server check. |
-| Content | Real introductions/portraits, publishing grants, contact details, and first-visit facts still need preparation/confirmation. Preview people are fictional. |
-| Source continuity | Full-site work and coming-soon release history through `0ea76e1` are consolidated on local `main` in `/home/andre/Development/wipost165`. Live revision `2828f88` was rechecked without deployment. See [handoff](HANDOFF.md#source-consolidation--september-27-2026). |
+| Content | Public contact, mailing/meeting details, first-visit practice, basic club access, and content responsibility are recorded and implemented locally. Introductions/photos await owner collection; publishing grants remain separate. [Facts and remaining work](launch-content-readiness.md). Preview people are fictional. |
+| Source continuity | Full-site work and coming-soon release history through `0ea76e1` are consolidated on local `main` in `/home/andre/Development/wipost165`. Subsequent SITE-02/03 changes remain uncommitted. Live revision `2828f88` was checked during consolidation, not this refinement. See [next-session handoff](HANDOFF.md#resume-next-session). |
 
 ## Work order
 
@@ -48,13 +48,13 @@ Status vocabulary: **ready**, **active**, **blocked** (name the dependency),
 | ID | Outcome | Status | Depends on |
 | --- | --- | --- | --- |
 | SITE-01 | One understood development/release baseline | done — consolidated on local `main`; see handoff | Local source inspection |
-| SITE-02 | Distinctive, intuitive public experience refined | ready | Can review now; use SITE-01 baseline for implementation |
-| SITE-03 | Truthful, maintainable launch content | ready — fact gathering can start now | Owner/officer input; publisher needed only for entry/publication |
+| SITE-02 | Distinctive, intuitive public experience refined | done — local QA complete; [owner approved desktop direction](design/2026-09-visitor-paths/README.md#owner-review) | Real-content integration and launch checks remain SITE-04/05 |
+| SITE-03 | Truthful, maintainable launch content | active — September 27 [contact/visit content verified locally; ownership recorded; introductions/photos await collection](launch-content-readiness.md) | Owner's PEC/member meeting collection; publisher needed for entry/publication |
 | SITE-04 | Public site and real publisher verified together | blocked | Companion CP-01 through CP-04; SITE-01 |
 | SITE-05 | Full website launched and verified | blocked | SITE-02/03/04; explicit release authorization |
 | SITE-06 | Improvements based on use | later | Evidence of an actual visitor or editor need |
 
-The companion can build its publisher while SITE-02 and SITE-03 progress here.
+The companion can build its publisher while SITE-03 progresses here.
 That work belongs in its own authorized session, following the companion queue.
 
 ### SITE-01 — Establish the next development baseline
@@ -115,6 +115,12 @@ not fabricate listings or require three people to exist before the UI can work.
 
 ### SITE-04 — Verify the publishing connection
 
+Publisher delivery belongs to the separately run companion session. The public
+repository supplies [the required API output and handback](publisher-api-request.md)
+and can address consumer compatibility after that result returns. Per the owner's
+September 27 clarification, do not prescribe the companion's implementation or
+site/admin operation from this roadmap.
+
 Follow [contract revision 3](public-publishing-api-v1.md) and the
 [companion queue](companion-work-queue.md). Use synthetic test content for lifecycle
 exercises; do not cancel real events or withdraw real stories just to test behavior.
@@ -163,6 +169,30 @@ Keep entries short: date; task ID; changed/evidence; remaining blocker; next act
 Move lengthy histories to dated notes and link them instead of growing this file
 into another transcript.
 
+- **2026-09-27 — Authenticated website connection:** implemented the owner's
+  Post-owned read-only bearer contract for JSON, conditional requests, and portraits.
+  Images now pass through the website server; caches are private, credential-scoped,
+  and cleared on authentication denial. Live featured/events reads succeeded with
+  empty collections. CI passed (46 tests, 293 assertions), security/style/autoload
+  and production assets passed. Commit/push/deploy authorized. Live placeholder
+  creation is delegated through the [content-session prompt](publisher-content-prompt.md)
+  and requires separate editorial authentication. Existing design/content work is
+  included in this release; no companion application code is changed.
+
+- **2026-09-27 — Synthetic API placeholders:** generated three fictional portraits
+  and created authored drafts through the companion's local editorial API
+  (ids 5, 6, 7). [Assets, content, and API evidence](design/2026-09-api-placeholders/README.md)
+  record both crop sizes and API readback. The owner subsequently explicitly
+  authorized synthetic-only consent, publication, and homepage placement: all three
+  are published and featured in Avery/Morgan/Sam order. Verified audit history,
+  anonymous collection/details, and all six public portrait responses/browser
+  decodes. No production or consumer configuration change. Next: SITE-04 HTTPS
+  consumer integration using the available synthetic content.
+
+- **2026-09-27 — Companion output handoff:** prepared [the API request](publisher-api-request.md) against the current consumer and synthetic fixtures. Reframed the companion queue as delivery outcomes without adding internal/admin requirements. The owner clarified that the earlier contract was coauthored by the companion agent; corrected an overly broad disclaimer so the handoff does not revoke jointly reviewed decisions. No runtime or companion changes. Documentation/fixture compatibility checks only; next: owner runs the task in LegionPostTools and returns interface, access, examples, and verification evidence.
+
+- **2026-09-27 — SITE-03 owner intake:** sourced contact, postal address, and regular meeting details from the owner's supplied page. Added the owner's meeting attendance and gravel/no-steps details; recorded the owner as content contact and shared enquiry monitoring with the service officer. [Local implementation and browser evidence](design/2026-09-content-intake/README.md): CI passed (36 tests, 234 assertions), contact/visit at 320/1440px, keyboard disclosures, link targets, and blank overrides. Existing design/work preserved. Next: approved introductions/photos collected at the next PEC and possibly member meeting; grants/publication remain separate. No companion, commit, push, or deployment action.
+
 - **2026-09-27 — Roadmap created:** compared current local source, release notes,
   and companion checkout; no runtime or production changes. Next: SITE-01, then
   SITE-02; companion publisher work is separately scoped in CP-01 through CP-04.
@@ -172,3 +202,6 @@ into another transcript.
   documentation checks only. SITE-01 and rendered SITE-02 work remain open.
 
 - **2026-09-27 — SITE-01 complete:** consolidated the full-site files, design/history documents, and original release commits onto local `main`. Runtime files match the release baseline. CI passed (33 tests, 206 assertions); live revision `2828f88` confirmed through one read-only release session. No push or deployment. Next: SITE-02 and SITE-03.
+- **2026-09-27 — SITE-02/03 local preparation:** refined phone navigation, table/detail layouts, portrait and sparse-content states, event timing/cancellations, and first-visit/contact paths. [Review captures and verification](design/2026-09-visitor-paths/README.md): CI passed (36 tests, 234 assertions), browser checks at 320/390/1440px, keyboard, reduced motion, and no-JavaScript navigation. [Content readiness](launch-content-readiness.md) records verified National/county links and outstanding local facts. Next: owner visual review and public contact/arrival confirmation; companion integration remains blocked separately. No commit, push, or deployment.
+- **2026-09-27 — SITE-02 accepted:** owner reviewed the desktop capture and liked the current design without requesting changes. Recorded approval of the visual direction; the agent's optional spacing critique is not requested work. SITE-02 is complete for this local refinement. Next: SITE-03 public contact/arrival facts and content ownership; SITE-04/05 dependencies remain. Documentation-only update; no release authorization implied.
+- **2026-09-27 — Session handoff requested:** added an explicit [resume checklist](HANDOFF.md#resume-next-session), preserving the accepted design, uncommitted work, verification evidence, stopped preview processes, and next content questions. Updated baseline links to the current screenshots. Documentation checks only; no runtime or release action.

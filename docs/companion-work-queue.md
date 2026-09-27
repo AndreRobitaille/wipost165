@@ -5,96 +5,52 @@ from [ROADMAP](ROADMAP.md). It is not permission to edit or deploy LegionPostToo
 Its own agent/session owns implementation there and must read its current guidance.
 No message has been sent and no issue has been opened by creating this file.
 
-The initial API is already designed: [revision 3](public-publishing-api-v1.md)
-is the shared implementation baseline. This queue records delivery and new needs;
-it must not become a second, subtly different API specification.
+Start the companion handoff with [what the public site needs](publisher-api-request.md).
+The owner clarified that this repository should specify public output, not how
+LegionPostTools builds its internals or operates its site/admin. Revision 3 remains
+the jointly developed baseline, including the companion agent's contributions.
+This output-focused queue adds no internal/admin requirements and does not revoke
+that agreement. The companion evaluates implementation choices in its own context;
+coordinate interface differences rather than silently changing either side.
 
 ## Ownership and current state
 
 | Owner | Responsibility |
 | --- | --- |
-| LegionPostTools | Existing-account editor, publication grants, consent, draft/published snapshots, event eligibility, controlled portraits, anonymous publishing endpoints, audit history |
+| LegionPostTools | Producing approved public content and API output; all internal implementation, content administration, and operating decisions |
 | Public site | Visitor experience, readonly API client, validation, bounded caching, accessible empty/error states, its own deployment |
-| Owner/designated Post publishers | Select initial grants, approve public content and consent, confirm Post facts; technical administration alone does not imply publishing authority |
+| Owner/designated Post publishers | Approve public content and consent, confirm Post facts, and authorize publication under the companion's own access model |
 
-On September 27 the local companion was clean at `9d278b7`; the v1 publishing
-routes/capability were not found. Recheck before starting; another session may
-have advanced it. Public consumer code and synthetic contract fixtures exist.
-The public production service is in coming-soon mode and does not call the feed.
+The latest September 27 companion handoff and live reads supersede the earlier
+`9d278b7` inspection: the publishing service is available, with a Post-owned
+read-only website bearer token required on JSON and portraits, private caching,
+and unchanged v1 payload shapes. The local public consumer now supports that
+contract. Live featured and upcoming-event collections were valid and empty.
+The [content-session prompt](publisher-content-prompt.md) covers live placeholder
+entry with separate editorial authority. Production full-site exposure remains a
+public-site deployment setting; an empty collection is not a connectivity failure.
 
-## Initial delivery slices
+## Delivery outcomes
 
-Status vocabulary: **needs companion session**, **active**, **ready for integration**,
-**verified together**. Add source revision, test evidence, and environment as each
-slice progresses. A local implementation is not a deployed endpoint.
+The IDs below track dependencies for the public site, not an implementation order
+or instructions for the companion's architecture, permissions, or screens.
+Its session chooses how to deliver them after checking its current code.
 
-| ID | Deliverable | Status | Dependency |
-| --- | --- | --- | --- |
-| CP-01 | Publication authority and lifecycle foundation | needs companion session | Reviewed v1 contract |
-| CP-02 | Member stories, featured selection, controlled portraits | needs companion session | CP-01 |
-| CP-03 | Explicitly approved public events | needs companion session | CP-01 |
-| CP-04 | Publisher integration environment and operating handoff | needs companion session | CP-02 and CP-03 |
+| ID | Output needed | Recorded status |
+| --- | --- | --- |
+| CP-01 | Only approved public content is exposed; unpublished/private/restricted content stays out, including under concurrent changes | Awaiting companion handback; current code not rechecked here |
+| CP-02 | Featured introductions, story details, and approved portrait bytes with rotation/replacement/withdrawal behavior | Awaiting companion handback |
+| CP-03 | Complete public event intervals and details, with the agreed dates, cancellation, and removal behavior | Awaiting companion handback |
+| CP-04 | A usable integration environment, sanitized response examples, interface differences, and verification evidence | Awaiting companion handback |
 
-### CP-01 — Publication foundation
+See the [API request](publisher-api-request.md) for exact accepted payloads,
+external behavior, and what to return. Internal design, publication authority
+management, consent mechanisms, editing/upload workflows, and operational choices
+belong to LegionPostTools. This queue does not dictate them.
 
-Implement explicit `publish_public_content` authority, separate drafts/published
-snapshots, stable publication identities, audit records, and atomic publication
-and restriction checks. Do not silently grant existing users publication rights.
-Keep the existing private API behavior and generic-upload restrictions intact.
-
-Return the implementation revision and permission/lifecycle/concurrency test
-evidence. Show how initial grants will be selected before enabling publication;
-no real grants or public content are prerequisites for synthetic development tests.
-Follow the contract for exact locking/version requirements, including restrictions
-made through HTML and the private API.
-
-### CP-02 — Introductions and portraits
-
-Deliver the existing-account workflow for authored public profiles, consent,
-portrait upload/review, explicit publication/withdrawal, and manually ordered
-selection of zero to three featured people. A private Person link is optional;
-private roster fields are never automatically public. Rotating a published story
-off the homepage must preserve its detail URL.
-
-Implement the contract's featured collection, story detail, and revisioned portrait
-routes. Return synthetic examples and tests for draft isolation, rotation,
-withdrawal, consent revocation, old portrait URLs, and conditional requests.
-The public app already has neutral portrait fallback; do not serve an old image
-indefinitely to disguise a withdrawn or replaced portrait.
-
-### CP-03 — Public events
-
-Deliver publication records requiring a source CalendarEvent, reviewed eligibility,
-and authored public title/description. Schedules/location come from the reviewed
-source. Pending changes leave the old approved schedule public until republished;
-cancellation and restrictions act immediately at the publisher.
-
-Implement collection/detail routes and the v1 calendar semantics without changing
-the private calendar's existing overlap behavior. Existing `visibility: public`
-events must not automatically launch. Internal designations/categories cannot be
-bypassed with presentation overrides; optional Endeavor linkage never leaks parent
-content. Source deletion withdraws while retaining publication identity/history.
-
-Return synthetic fixtures and evidence for interval boundaries, all-day/unknown-end
-events, rescheduling across intervals, cancellation, deletion, persistent
-restrictions, and publish/restriction races. See contract section 7 for coverage.
-
-### CP-04 — Integration and operation
-
-Provide a reachable test publisher or reproducible local setup, configuration
-requirements, implementation/contract revisions, and sanitized sample responses.
-Specify what is local, deployed, or still pending. Do not include private exports,
-credentials, real consent records, or private member identifiers in this repo.
-
-Demonstrate the one five-minute freshness budget across JSON/portrait delivery,
-including 304 behavior and unavailable responses. Provide officer instructions
-for publish/withdraw/rotate and identifying pending calendar changes, plus the
-publisher's release/rollback and upload persistence/backup arrangements.
-
-Coordinate synthetic end-to-end scenarios with SITE-04. Production publishing
-grants/content and companion deployment need their own authorization. Mark
-**verified together** only with evidence from both applications, not a successful
-health endpoint or collection check alone.
+Record the returned revision or working-tree state, environment, test evidence,
+and gaps. A local implementation is not a deployed endpoint, and a successful
+collection check alone does not prove details, images, or withdrawal behavior.
 
 ## New needs discovered during development
 
@@ -122,12 +78,12 @@ of copying its implementation checklist. Do not infer acceptance from silence.
 
 ## Brief to give a companion session
 
-> The public Post 165 site has a Rails consumer implemented against
-> `~/Development/wipost165/docs/public-publishing-api-v1.md` revision 3. Production
-> currently serves coming-soon content. Read that contract and
-> `~/Development/wipost165/docs/companion-work-queue.md`, then check current
-> LegionPostTools code before selecting CP-01 through CP-04. Public administration
-> stays in LegionPostTools; this site has no editor, member accounts, or database.
-> Return implementation revisions, tests, environment readiness, and any concrete
-> contract questions. Initial publishing grants remain an owner decision. This
-> brief describes scope; the user's session instruction supplies authorization.
+> Work in `/home/andre/Development/LegionPostTools`. Read your repository guidance,
+> then `/home/andre/Development/wipost165/docs/publisher-api-request.md`.
+> Provide the public API output and behavior described there, using your own
+> judgment about implementation and how your site/admin should work. Inspect what
+> already exists first. The existing public consumer is a compatibility reference;
+> return any proposed interface differences so it can be adapted. Return the
+> test access details, sanitized examples, and verification evidence requested in
+> the file. Keep the work local; commits, pushes, deployment, and live grants or
+> publication need separate authorization.
