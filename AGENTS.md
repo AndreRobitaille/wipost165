@@ -57,6 +57,14 @@ Preserve logical reading order, keyboard access, visible focus, text alternative
 and AA contrast. Apply authorization, input validation, and output escaping to
 new application behavior. These quality expectations do not prescribe a design.
 
+## Production operations
+
+Read `docs/DEPLOYMENT.md` before server work. Use `bin/release` and its owned
+persistent SSH tunnel for SSH, Kamal, and Docker/buildx. Stop on tunnel failure;
+never fall back to repeated direct connections. Preserve the members and
+Two Rivers services. The latest launch result is in
+`docs/deployment/2026-09-27-coming-soon-status.md`.
+
 ## Verification
 
 Read `docs/development.md` for the runtime and commands. `bin/ci` runs style,
