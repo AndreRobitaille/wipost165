@@ -116,6 +116,7 @@ assert_http_status() {
 }
 
 with_production_connection() {
+  [[ -z "${RELEASE_CONTROL_PATH:-}" ]] || fail "already inside a release session; use its release_* commands"
   local control_path identity_file
 
   [[ -n "${KAMAL_REGISTRY_PASSWORD:-}" ]] || fail "export KAMAL_REGISTRY_PASSWORD"

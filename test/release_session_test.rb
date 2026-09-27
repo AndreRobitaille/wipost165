@@ -55,7 +55,7 @@ class ReleaseSessionTest < ActiveSupport::TestCase
       refute blocked_status.success?, blocked_output
       refute File.exist?("#{root}/events"), "Standalone setup must not open SSH"
       output, status = Open3.capture2e(environment, "bash", "#{root}/bin/release", "session",
-        stdin_data: "release_setup\nrelease_ssh hostname\nrelease_deploy\nexit\n")
+        stdin_data: "bin/release session\nrelease_setup\nrelease_ssh hostname\nrelease_deploy\nexit\n")
       assert status.success?, output
       events = File.readlines("#{root}/events", chomp: true)
       assert_equal 1, events.count("OPEN"), events.inspect
