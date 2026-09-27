@@ -1,0 +1,22 @@
+<section aria-labelledby="events-title">
+  <p class="eyebrow">AROUND THE TABLE</p><h1 id="events-title">Come on by.</h1>
+  <p class="calendar-window">Public occasions over the next three months.</p>
+  <% if @events.any? %>
+    <% @events.each do |event| %>
+      <%= link_to event_path(event, **person_context), class: "occasion" do %>
+        <span class="occasion-date"><%= event.date ? event.date.strftime("%b").upcase : "DATE" %><br><strong><%= event.date ? event.date.day : "TBC" %></strong></span>
+        <span><% if preview_mode? %><span class="sample-tag">EXAMPLE OCCASION</span><% elsif event.cancelled? %><span class="sample-tag">CANCELLED</span><% end %><strong><%= event.title %></strong><span><%= event.location_name.presence || "Location to be confirmed" %></span></span><span class="occasion-arrow" aria-hidden="true">↗</span>
+      <% end %>
+    <% end %>
+    <% if preview_mode? %><p class="small-note">This sample invitation is not a scheduled event.</p><% end %>
+  <% elsif @content.events_unavailable %>
+    <p class="body-copy">The public calendar is temporarily unavailable.</p>
+    <p class="body-copy compact">Please check back shortly or contact the Post before making plans.</p>
+    <%= link_to "Get in touch →", contact_path(person_context), class: "main-action" %>
+  <% else %>
+    <p class="body-copy">There aren’t any upcoming public dates listed right now.</p>
+    <p class="body-copy compact">Get in touch to ask about a good time for a first visit.</p>
+    <%= link_to "Ask about visiting →", contact_path(person_context), class: "main-action" %>
+  <% end %>
+  <p class="table-aside">A familiar face is a good place to start.</p>
+</section>

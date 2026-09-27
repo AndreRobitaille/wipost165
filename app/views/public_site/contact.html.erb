@@ -1,0 +1,12 @@
+<section aria-labelledby="contact-title">
+  <p class="eyebrow">A SIMPLE FIRST STEP</p><h1 id="contact-title">Say hello.</h1>
+  <p class="body-copy">Questions about coming along, membership, or the Post? Start here.</p>
+  <% if public_contact_email || public_contact_phone %>
+    <% if public_contact_email %><p><%= mail_to public_contact_email, "Email the Post →", subject: first_visit_subject, class: "main-action" %></p><p class="contact-detail"><%= public_contact_email %></p><% end %>
+    <% if public_contact_phone %><p><%= link_to "Call #{public_contact_phone}", public_phone_href, class: "text-action" %></p><% end %>
+    <p class="small-note">The Post is run by volunteers. Please allow time for a reply.</p>
+  <% else %>
+    <p class="contact-pending">Public contact details are being confirmed. Please check back before making plans.</p>
+  <% end %>
+  <% if @remembered_person %><div class="conversation"><span class="eyebrow">SOMETHING YOU COULD ASK</span><p>“I saw <%= @remembered_person.name %> on your website. Will they be at the next gathering?”</p></div><% end %>
+</section>

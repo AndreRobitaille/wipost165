@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "members": [
+    {
+      "id": "story_example_avery",
+      "display_name": "Avery",
+      "introduction": "A fictional introduction for contract testing.",
+      "story": "A fictional longer story. No real member is represented.",
+      "conversation_starter": null,
+      "updated_at": "2026-09-27T14:00:00Z",
+      "portrait": {
+        "revision": "portrait_example_2",
+        "alt": "Example portrait of Avery",
+        "variants": [
+          {
+            "size": "small",
+            "width": 320,
+            "height": 400,
+            "content_type": "image/webp",
+            "url": "https://members.wipost165.org/public/v1/member_stories/story_example_avery/portrait/portrait_example_2/small.webp"
+          },
+          {
+            "size": "large",
+            "width": 640,
+            "height": 800,
+            "content_type": "image/webp",
+            "url": "https://members.wipost165.org/public/v1/member_stories/story_example_avery/portrait/portrait_example_2/large.webp"
+          }
+        ]
+      }
+    }
+  ]
+}
