@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>In good company — Post 165 design preview</title>
+  <link rel="stylesheet" href="company.css">
+  <script src="company.js" defer></script>
+</head>
+<body>
+<div id="company">
+  <a class="skip" href="#table-content">Skip to the table</a>
+  <div class="preview-note">DESIGN PREVIEW <span>Stock portraits · fictional names &amp; sample content</span></div>
+  <header class="masthead">
+    <a class="brand" href="#welcome" aria-label="Post 165 welcome"><img src="assets/legion-white.png" alt="The American Legion" width="172" height="83"></a>
+    <div class="post-name">ROBERT E. BURNS <strong>POST 165</strong><span>Two Rivers, Wisconsin</span></div>
+    <nav class="quick-nav" aria-label="Quick links"><a href="#events">Find an event <span aria-hidden="true">↗</span></a><a href="#contact">Get in touch <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main class="gathering" id="gathering">
+    <div class="table-shape" aria-hidden="true"><div class="table-inlay"></div></div>
+    <div class="welcome-label" aria-hidden="true">THERE’S ROOM HERE.</div>
+    <nav class="people" aria-label="Meet three people — fictional demonstration profiles">
+      <a class="person frank" href="#person-frank" data-person="frank"><span class="portrait"><span class="face"><img src="assets/sample-frank.jpg" alt="Stock portrait standing in for a future member photo" width="640" height="960"></span><span class="portrait-action" aria-hidden="true">↗</span></span><span class="person-name">Frank<span aria-hidden="true"> ↗</span></span><span class="person-prompt">Start with hello</span></a>
+      <a class="person ron" href="#person-ron" data-person="ron"><span class="portrait"><span class="face"><img src="assets/sample-ron.jpg" alt="Stock portrait standing in for a future member photo" width="640" height="427"></span><span class="portrait-action" aria-hidden="true">↗</span></span><span class="person-name">Ron<span aria-hidden="true"> ↗</span></span><span class="person-prompt">A story or two</span></a>
+      <a class="person jo" href="#person-jo" data-person="jo"><span class="portrait"><span class="face"><img src="assets/sample-jo.jpg" alt="Stock portrait standing in for a future member photo" width="640" height="427"></span><span class="portrait-action" aria-hidden="true">↗</span></span><span class="person-name">Jo<span aria-hidden="true"> ↗</span></span><span class="person-prompt">Glad you came</span></a>
+    </nav>
+    <div class="table-content" id="table-content" tabindex="-1">
+      <section data-view="welcome" aria-labelledby="welcome-title">
+        <p class="eyebrow">VETERANS. NEIGHBORS. GOOD COMPANY.</p>
+        <h1 id="welcome-title">In good<br><span>company.</span></h1>
+        <p class="welcome-copy">A few faces to know<br>before you walk in.</p>
+        <a class="main-action" href="#person-frank">Meet someone <span aria-hidden="true">↗</span></a>
+        <p class="quiet-link"><a href="#events">Or see what’s coming up <span aria-hidden="true">→</span></a></p>
+      </section>
+      <section data-view="person" hidden aria-labelledby="person-title">
+        <p class="eyebrow">A LITTLE INTRODUCTION <span class="sample-tag">SAMPLE</span></p>
+        <h1 id="person-title">Meet Frank.</h1>
+        <p class="person-intro" id="person-intro"></p>
+        <div class="conversation"><span class="eyebrow">AN EASY CONVERSATION STARTER</span><p id="conversation-prompt"></p></div>
+        <p class="often"><strong>Often around for</strong><span id="person-often"></span></p>
+        <a class="main-action" href="#events">Find a time to come by <span aria-hidden="true">→</span></a>
+        <p class="small-note">Example introduction, not a real member or attendance promise.</p>
+      </section>
+      <section data-view="events" hidden aria-labelledby="events-title">
+        <p class="eyebrow">AROUND THE TABLE</p>
+        <h1 id="events-title">Come on by.</h1>
+        <div id="calendar-sample">
+          <a class="occasion" href="#gathering"><span class="occasion-date">DATE<br><strong>TBC</strong></span><span><span class="sample-tag">EXAMPLE OCCASION</span><strong>A Post gathering</strong><span>Get together. Catch up. Say hello.</span></span><span class="occasion-arrow" aria-hidden="true">↗</span></a>
+          <p class="small-note">This demonstrates an invitation. No event date or attendance details have been confirmed.</p>
+        </div>
+        <div id="calendar-quiet" hidden><p class="body-copy">There aren’t any public dates listed right now. Get in touch to ask about a good time for a first visit.</p><a class="main-action" href="#contact">Ask about visiting <span aria-hidden="true">→</span></a></div>
+        <div id="calendar-unavailable" hidden><p class="body-copy">The calendar couldn’t be loaded. Please check with the Post before making plans.</p><a class="main-action" href="#contact">Get in touch <span aria-hidden="true">→</span></a></div>
+        <p class="table-aside">A familiar face is a good place to start.</p>
+      </section>
+      <section data-view="gathering" hidden aria-labelledby="gathering-title">
+        <p class="eyebrow">EXAMPLE INVITATION <span class="sample-tag">NOT SCHEDULED</span></p>
+        <h1 id="gathering-title">A Post gathering.</h1>
+        <p class="body-copy compact">A chance to meet a few people and get to know the Post.</p>
+        <dl class="event-details"><div><dt>When</dt><dd>Date &amp; time to be confirmed</dd></div><div><dt>Where</dt><dd>Gun club <small>Exact address to be confirmed</small></dd></div><div><dt>Guests &amp; children</dt><dd>Check with us before making plans</dd></div></dl>
+        <p class="recognition" id="event-recognition"></p>
+        <a class="main-action" href="#visit">Thinking of coming? <span aria-hidden="true">→</span></a>
+      </section>
+      <section data-view="visit" hidden aria-labelledby="visit-title">
+        <p class="eyebrow">YOUR FIRST VISIT</p>
+        <h1 id="visit-title">Start with hello.</h1>
+        <p class="body-copy compact">You don’t need a speech. Just a place to start.</p>
+        <p class="recognition" id="visit-recognition"></p>
+        <div class="visit-questions"><details><summary>Coming on your own?</summary><p>Ask the Post who will be there and how to find them when you arrive. The finished invitation should explain the actual welcome arrangements.</p></details><details><summary>Bringing someone along?</summary><p>Guest and child attendance depends on the occasion. Check the invitation or ask the Post. Attending as a guest and joining the Legion are separate questions.</p></details><details><summary>What happens when I arrive?</summary><p>The meeting location is the gun club. Directions, the right entrance and an introduction contact still need confirmation for this preview.</p></details></div>
+        <a class="main-action" href="#contact">Ask us about a first visit <span aria-hidden="true">→</span></a>
+      </section>
+      <section data-view="contact" hidden aria-labelledby="contact-title">
+        <p class="eyebrow">A SIMPLE FIRST STEP</p>
+        <h1 id="contact-title">Say hello.</h1>
+        <form id="contact-form"><label for="visitor-name">Your name</label><input id="visitor-name" name="name" autocomplete="name" required maxlength="100"><label for="visitor-question">What would you like to ask?</label><textarea id="visitor-question" name="question" rows="3" required maxlength="1200">I’m thinking about coming to a Post event. Is there someone I could say hello to when I arrive?</textarea><button class="main-action" type="submit">Preview your message <span aria-hidden="true">→</span></button><p class="small-note">Preview only. Nothing is sent or saved.</p></form>
+        <div id="message-preview" hidden><p class="eyebrow">YOUR MESSAGE PREVIEW</p><p id="message-text" class="body-copy"></p><p class="small-note">Nothing has been sent. The Post’s contact details will be added before launch.</p><button class="text-action" id="edit-message" type="button">← Edit message</button></div>
+      </section>
+      <section data-view="purpose" hidden aria-labelledby="purpose-title">
+        <p class="eyebrow">ROBERT E. BURNS POST 165</p>
+        <h1 id="purpose-title">Still serving.<br>Together.</h1>
+        <p class="body-copy">The American Legion brings veterans together through fellowship, mutual helpfulness and service to their communities.</p><p class="body-copy compact">Here in Two Rivers, this is our Post.</p><a class="main-action" href="#visit">Get to know us <span aria-hidden="true">→</span></a>
+      </section>
+      <section data-view="membership" hidden aria-labelledby="membership-title"><p class="eyebrow">GETTING INVOLVED</p><h1 id="membership-title">Let’s talk.</h1><p class="body-copy">Ask about membership, eligibility and ways to take part. You can also start by asking about an upcoming public occasion.</p><a class="main-action" href="#contact">Ask about membership <span aria-hidden="true">→</span></a><p class="small-note">Current dues and local joining details still need confirmation.</p></section>
+      <section data-view="help" hidden aria-labelledby="help-title"><p class="eyebrow">VETERANS HELPING VETERANS</p><h1 id="help-title">A place to ask.</h1><p class="body-copy">Looking for help finding the right veterans resource? Get in touch with the Post.</p><a class="main-action" href="#contact">Ask for a connection <span aria-hidden="true">→</span></a><p class="small-note">This preview does not offer a monitored contact or emergency service.</p></section>
+    </div>
+    <nav class="table-nav" aria-label="Explore the Post"><a href="#welcome" data-nav="people"><span aria-hidden="true">◎</span> People</a><a href="#events" data-nav="events"><span aria-hidden="true">▦</span> Events</a><a href="#visit" data-nav="visit"><span aria-hidden="true">↗</span> First visit</a></nav>
+    <p class="near-edge">PULL UP A CHAIR.</p>
+  </main>
+  <footer class="footer"><a class="service-line" href="#purpose">Service doesn’t end with a uniform.</a><nav aria-label="More about the Post"><a href="#help">Veteran help</a><a href="#membership">Membership</a><a href="#contact">Contact</a><a href="https://members.wipost165.org/" target="_blank" rel="noopener">Members site ↗</a></nav><p class="credits">Preview portraits: <a href="https://www.pexels.com/photo/elderly-man-in-gray-long-sleeves-smiling-7322315/">Alena Darmel</a>, <a href="https://www.pexels.com/photo/a-close-up-shot-of-an-elderly-man-smiling-11346735/">Picas Joe</a>, <a href="https://www.pexels.com/photo/professional-portrait-of-smiling-middle-aged-woman-29405854/">Alimi Sandrine</a> / Pexels. Models are not Post members.</p></footer>
+  <p id="view-status" class="sr-only" role="status" aria-live="polite"></p>
+  <noscript><p class="noscript-note">This concept uses JavaScript to change the table view. Its introductions and event are sample content. The public Rails implementation will use normal server-rendered pages.</p></noscript>
+</div>
+</body>
+</html>

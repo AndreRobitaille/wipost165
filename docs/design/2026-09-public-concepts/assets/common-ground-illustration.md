@@ -1,0 +1,12 @@
+# Illustration provenance
+
+Created September 7, 2026 using the built-in image generation tool (one generation).
+The image is a fictional editorial illustration, not a photograph of Post members,
+an event, or a Post-owned location. No official mark appears inside the generated
+image. The webpage places the unchanged official brandmark separately in its header.
+
+Workspace asset: `common-ground-illustration.png` (1536 × 1024).
+
+## Final generation prompt
+
+Create one polished editorial illustration asset for an authentic Midwestern veterans fellowship website design exploration. This is NOT a website screenshot or poster. NO TEXT, NO LETTERING, NO LOGOS, NO EMBLEMS, NO FLAGS, NO PATCHES, NO BRAND NAMES anywhere. Wide 3:2 composition on a completely pure white background (#ffffff) with generous white negative space around a compact scene, organic paint edges that naturally dissolve into white, not inside a rectangle. Sophisticated hand-painted gouache and charcoal illustration, confident gestural observational drawing, screenprint-like navy ink detail, tactile brush marks, warm humanity, restrained detail rather than cartoon or flat corporate vector. Three fictional adult civilian people around a simple outdoor picnic table: a gray-haired man about 65 wearing an ordinary navy short sleeve work shirt and jeans, warmly handing an enamel coffee mug toward a bearded man about 35 in a faded poppy red casual shirt, both sharing a relaxed laugh. A woman about 40 with short hair in a plain pale blue overshirt is seated at the end of the table listening with her own mug; equal natural participant, not serving them. These are everyday neighbors with the ease of people who understand each other. Natural anatomy, credible hands, dignified faces, no sentimentality, no military uniforms, no heroic poses, no salutes. Sunlit outdoor feeling, faint wisps of lakeside grasses at the feet, simple tabletop and folding chairs. No building, no identifiable location. Dominant artwork navy blue #00467F with a few poppy red #B5121B accents, muted natural skin tones, gray and offwhite. The group spans the center and lower half; leave top and side white areas for flexible page overlap but add no text yourself. Gallery-quality contemporary editorial illustration with lively irregular silhouette, human warmth and visible material texture. Avoid ornamental icons, geometric background blobs, gradients, isometric art and childish proportions.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-label="Stylized illustration of two rivers meeting a lake, with trees and neighborhood buildings. This is an illustration, not a map.">
+<defs><pattern id="water" width="58" height="29" patternUnits="userSpaceOnUse"><path d="M0 15q14-10 29 0t29 0" fill="none" stroke="#91cddd" stroke-width="2"/></pattern></defs>
+<rect width="640" height="520" fill="#c8e7ed"/><circle cx="485" cy="91" r="50" fill="#f4bd48"/>
+<path d="M0 0h260l70 60 27 86 67 78 216 37v259H0z" fill="#e9eee2"/>
+<path d="M0 90l122 60 55 69 108 5 80 50L640 390v130H0V405l127-65 11-77L0 226z" fill="#83b5c0"/>
+<path d="M0 102l119 60 54 71 113 5 75 51 279 116v115H0v-101l143-69 11-91L0 212z" fill="#2a7591"/>
+<path d="M260 0l67 65 19 91 77 86 217 63v89L350 275l-80-79-42-105L182 0z" fill="#2a7591"/>
+<path d="M0 435l255-105 94-50 291 98v142H0z" fill="#17617a"/>
+<path d="M0 435l255-105 94-50 291 98v142H0z" fill="url(#water)" opacity=".65"/>
+<g fill="#386855"><path d="M62 20l-25 63h50zM114 25l-29 79h58zM45 264l-27 67h54zM90 275l-28 77h56zM180 370l-25 66h50z"/><path d="M390 35l-24 56h48zM430 118l-25 62h50z"/></g>
+<g stroke="#244b42" stroke-width="5"><path d="M62 64v42m52-24v49M45 310v38m45-20v39m90 51v44m210-396v39m40 54v36"/></g>
+<g stroke="#173f4b" stroke-width="3"><path d="M46 131v-39l39-16 31 37v46z" fill="#f8f7ed"/><path d="M46 92l39-16v50l-39 10z" fill="#df734e"/><path d="M150 109V58l33-22 43 28v52z" fill="#f8f7ed"/><path d="M150 58l33-22v65l-33 8z" fill="#e5b048"/><path d="M447 224v-39l32-23 54 17v49z" fill="#f8f7ed"/><path d="M447 185l32-23v52l-32 10z" fill="#df734e"/></g>
+<g fill="#173f4b"><path d="M57 103h10v19H57zm31 0h9v10h-9zm77-31h10v21h-10zm29-9h12v12h-12zm7 25h12v11h-12zm291 101h12v12h-12zm23 4h10v12h-10z"/></g>
+<g stroke="#f3debc" stroke-width="15"><path d="M190 195l-16 105M293 117l74-27"/></g><g stroke="#173f4b" stroke-width="3"><path d="M181 194l-16 105m35-102l-16 105m105-194l74-27m-67 48l74-27"/></g>
+<path d="M458 407q30 12 67 0l-13 20h-40z" fill="#f9eee0"/><path d="M489 405v-48l24 43z" fill="#e77650"/><path d="M487 399h-20l20-31z" fill="#f9eee0"/>
+<circle cx="562" cy="469" r="5" fill="#f4bd48"/><circle cx="312" cy="429" r="4" fill="#f4bd48"/>
+</svg>

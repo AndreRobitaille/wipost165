@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-label="An illustrated round table with six different chairs and one place marked for you, suggesting an open invitation rather than a real venue.">
+<rect width="640" height="520" fill="#e6dded"/>
+<g fill="none" stroke="#d1bfdc" stroke-width="2"><ellipse cx="320" cy="275" rx="279" ry="219"/><ellipse cx="320" cy="275" rx="243" ry="190"/></g>
+<g stroke="#522c5d" stroke-width="4">
+<g transform="translate(263 16)"><rect width="114" height="87" rx="23" fill="#99b9a7"/><path d="M14 58h86M25 12v38m22-38v38m23-38v38m22-38v38"/></g>
+<g transform="translate(540 112) rotate(58)"><rect width="114" height="87" rx="23" fill="#e49c77"/><path d="M14 58h86M25 12v38m22-38v38m23-38v38m22-38v38"/></g>
+<g transform="translate(622 334) rotate(116)"><rect width="114" height="87" rx="23" fill="#f3cb57"/><path d="M14 58h86M25 12v38m22-38v38m23-38v38m22-38v38"/></g>
+<g transform="translate(378 509) rotate(180)"><rect width="114" height="87" rx="23" fill="#fbf6ec"/><path d="M14 58h86M25 12v38m22-38v38m23-38v38m22-38v38"/></g>
+<g transform="translate(55 430) rotate(238)"><rect width="114" height="87" rx="23" fill="#e49c77"/><path d="M14 58h86M25 12v38m22-38v38m23-38v38m22-38v38"/></g>
+<g transform="translate(13 197) rotate(300)"><rect width="114" height="87" rx="23" fill="#99b9a7"/><path d="M14 58h86M25 12v38m22-38v38m23-38v38m22-38v38m22-38v38"/></g>
+<ellipse cx="325" cy="270" rx="194" ry="167" fill="#baa2c6" stroke="none"/><ellipse cx="320" cy="252" rx="194" ry="167" fill="#fbf6ec"/>
+</g>
+<g fill="none" stroke="#d7c9b7" stroke-width="2"><ellipse cx="320" cy="252" rx="177" ry="150"/><path d="M231 141q-56 108 0 221m28-241q-61 128 0 257m52-265q-30 130 0 278m55-270q-18 134 0 257m56-239q38 116 0 217"/></g>
+<g transform="translate(201 247)" fill="#f3cb57" stroke="#522c5d" stroke-width="3"><circle r="24"/><circle r="14" fill="#522c5d"/><path d="M23-9q23 10 0 19" fill="none"/></g>
+<g transform="translate(410 201)" fill="#99b9a7" stroke="#522c5d" stroke-width="3"><circle r="24"/><circle r="14" fill="#522c5d"/><path d="M23-9q23 10 0 19" fill="none"/></g>
+<g transform="translate(275 182) rotate(8 45 50)"><rect width="87" height="119" fill="#fff" stroke="#522c5d" stroke-width="3"/><path d="M15 26h55M15 45h55M15 64h43M15 83h51" stroke="#a88fae" stroke-width="3"/></g>
+<rect x="275" y="338" width="91" height="43" rx="3" fill="#522c5d"/>
+<text x="320" y="367" text-anchor="middle" font-family="sans-serif" font-size="23" font-weight="bold" fill="#fff">You</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 520" role="img" aria-label="Graphic illustration of a folding chair, work gloves, and a cup: everyday objects of people gathering and helping.">
+<rect width="620" height="520" fill="#eed45d"/>
+<path d="M0 449L620 77v86L0 520z" fill="#f6e7a0"/><path d="M0 0h134L0 81zM620 420v100H447z" fill="#193d81"/>
+<g transform="translate(270 52) rotate(13 120 180)" stroke="#193d81" stroke-width="10" stroke-linejoin="round">
+<path d="M32 40h166l-11 189H45z" fill="#f9f8ef"/><path d="M50 56h129l-4 80H55z" fill="#e88c67"/><path d="M32 40L0 386m198-346l38 346M13 277l199-115M33 183l195 94" fill="none"/>
+<path d="M34 186h151l40 46H-3z" fill="#193d81"/><path d="M57 100h116" fill="none" stroke="#f9f8ef" stroke-width="6"/>
+</g>
+<g transform="translate(47 155) rotate(-12 85 100)" stroke="#193d81" stroke-width="5" stroke-linejoin="round">
+<path d="M51 156l-28-51c-9-21 9-30 19-10l17 25-3-93c-1-20 18-20 19 0l3 52 4-66c1-18 19-17 18 2l-1 67 11-56c4-18 21-12 17 5l-8 61 15-38c7-16 23-8 16 7l-25 87-13 25z" fill="#f5f3e9"/>
+<path d="M49 156l65 15-8 35-63-15z" fill="#e88c67"/><path d="M62 117l13 25m13-36l4 38m20-31l-8 32" fill="none"/>
+</g>
+<g transform="translate(83 387)" stroke="#193d81" stroke-width="6"><ellipse cx="61" cy="45" rx="64" ry="20" fill="#e88c67"/><path d="M20 0h75v36q-38 36-75 0z" fill="#f9f8ef"/><path d="M95 6c42-3 33 31 0 25" fill="none"/><ellipse cx="58" cy="1" rx="38" ry="11" fill="#193d81"/></g>
+<g fill="#193d81"><circle cx="543" cy="66" r="9"/><path d="M507 40h6v19h-6zm-7 6h20v6h-20z"/><circle cx="177" cy="75" r="5"/></g>
+</svg>

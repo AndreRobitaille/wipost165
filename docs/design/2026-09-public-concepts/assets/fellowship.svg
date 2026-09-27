@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" fill="none">
+<path d="M0 520 600 290V520Z" fill="#F5F8FA" opacity=".09"/>
+<ellipse cx="300" cy="431" rx="242" ry="28" fill="#003764"/>
+<!-- Ordinary chairs and coffee, no official marks or depiction of an actual venue. -->
+<g stroke="#F5F8FA" stroke-width="9" stroke-linejoin="round">
+<path d="m75 235 60 194m87-210-95 210m-35-54 141-19"/>
+<path d="m85 190 17 89 111-15 15-93Z" fill="#B5121B"/>
+<path d="m102 279-13 47 141-15-17-47Z" fill="#F5F8FA"/>
+<path d="m383 220 82 207m84-184-98 204m-49-58 144-9"/>
+<path d="m397 174 4 92 126 8 25-89Z" fill="#F5F8FA"/>
+<path d="m401 266-18 47 152 9-8-48Z" fill="#B5121B"/>
+</g>
+<path d="m243 349-18 88m131-89 15 89" stroke="#F5F8FA" stroke-width="10"/>
+<ellipse cx="296" cy="341" rx="89" ry="22" fill="#B5121B"/>
+<path d="M207 331v10c0 28 178 28 178 0v-10" fill="#B5121B"/>
+<ellipse cx="296" cy="331" rx="89" ry="22" fill="#F5F8FA"/>
+<g stroke="#00467F" stroke-width="5"><path d="M248 292h29v28c0 13-29 13-29 0Z" fill="#00467F"/><path d="M277 295c23-3 24 22 0 22"/><path d="M311 301h29v25c0 13-29 13-29 0Z" fill="#B5121B" stroke="#B5121B"/><path d="M340 305c20-3 21 18 0 18" stroke="#B5121B"/></g>
+<path d="M260 277c-12-12 12-16 0-29m63 39c-12-12 12-16 0-29" stroke="#F5F8FA" stroke-width="4" stroke-linecap="round"/>
+</svg>
