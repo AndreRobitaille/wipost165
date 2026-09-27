@@ -7,9 +7,10 @@ Read [PURPOSE](PURPOSE.md) for why the public site exists and
 [UI/UX and visual guidance](UI_UX_GUIDE.md) for the owner's design intent,
 rejected approaches, and review criteria. [Development](development.md) covers
 the runtime and verification. These entry points avoid needing the old conversation.
-The recommended next task is **SITE-01**, reconciling the local full-site work
-with the coming-soon release/operator baseline without losing either. UI review
-and content preparation can proceed while the companion implements its publisher.
+The development and release histories are consolidated on `main` in
+`/home/andre/Development/wipost165`; SITE-01 is complete. Continue with
+**SITE-02** (public experience) and **SITE-03** (content preparation) while the
+companion implements its publisher.
 The [companion work queue](companion-work-queue.md) tracks that separate delivery;
 [contract revision 3](public-publishing-api-v1.md) remains its specification.
 
@@ -18,6 +19,22 @@ content administration in LegionPostTools, and a readonly publishing API. The
 coming-soon site is live; the full consumer exists locally; end-to-end publishing
 integration and full-site launch remain open. Older entries below preserve how
 we arrived here, not alternative current setup instructions.
+
+## Source consolidation — September 27, 2026
+
+`main` includes the full Rails site, design research, current project guides, and
+all coming-soon release commits through `0ea76e1`. The application and operator
+files already matched the release checkout; reconciliation preserved the newer
+local documentation and historical cleanup. Local secret files remain ignored.
+Use this checkout and branch for future development and authorized releases.
+
+`bin/ci` passed: 33 tests, 206 assertions, 39 Ruby files linted, security checks,
+autoloading, and production assets. No runtime behavior changed in consolidation;
+existing browser evidence remains applicable. A read-only check through one
+`bin/release session` confirmed the running revision remains `2828f88` and the
+public container remains `b1f32010efbf`. The owned tunnel was closed afterward.
+No deployment or push was performed. Local commits are unsigned because the
+configured SSH signing agent failed; Git signing settings were not changed.
 
 ## Coming-soon deployment — September 27, 2026
 

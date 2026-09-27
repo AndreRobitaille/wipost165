@@ -38,7 +38,7 @@ not authorize commits, pushes, companion edits, publishing grants, or deployment
 | Public consumer | Database-free v1 client, validation, bounded caching, and failure states exist. See [development](development.md). Cross-application verification remains open. |
 | Publisher | Contract revision 3 reviewed. Local companion checkout at `9d278b7` was clean on September 27; no v1 publisher implementation was found. Recheck before assigning work. This is not a new live-server check. |
 | Content | Real introductions/portraits, publishing grants, contact details, and first-visit facts still need preparation/confirmation. Preview people are fictional. |
-| Source continuity | Main checkout still has the Rails pivot as extensive local changes on historical WordPress HEAD `10e46c6`. Clean release checkout `/tmp/wipost165-coming-soon` is at `0ea76e1`; recorded running app revision is `2828f88`. Do not equate these three states. |
+| Source continuity | Full-site work and coming-soon release history through `0ea76e1` are consolidated on local `main` in `/home/andre/Development/wipost165`. Live revision `2828f88` was rechecked without deployment. See [handoff](HANDOFF.md#source-consolidation--september-27-2026). |
 
 ## Work order
 
@@ -47,7 +47,7 @@ Status vocabulary: **ready**, **active**, **blocked** (name the dependency),
 
 | ID | Outcome | Status | Depends on |
 | --- | --- | --- | --- |
-| SITE-01 | One understood development/release baseline | ready — recommended next session | Local source inspection |
+| SITE-01 | One understood development/release baseline | done — consolidated on local `main`; see handoff | Local source inspection |
 | SITE-02 | Distinctive, intuitive public experience refined | ready | Can review now; use SITE-01 baseline for implementation |
 | SITE-03 | Truthful, maintainable launch content | ready — fact gathering can start now | Owner/officer input; publisher needed only for entry/publication |
 | SITE-04 | Public site and real publisher verified together | blocked | Companion CP-01 through CP-04; SITE-01 |
@@ -170,3 +170,5 @@ into another transcript.
   preserving owner feedback, visual/interaction direction, audience scenarios,
   content constraints, and review criteria. Linked agent and session entry points;
   documentation checks only. SITE-01 and rendered SITE-02 work remain open.
+
+- **2026-09-27 — SITE-01 complete:** consolidated the full-site files, design/history documents, and original release commits onto local `main`. Runtime files match the release baseline. CI passed (33 tests, 206 assertions); live revision `2828f88` confirmed through one read-only release session. No push or deployment. Next: SITE-02 and SITE-03.
