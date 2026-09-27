@@ -52,8 +52,9 @@ public-app key is in ignored, mode-0600
 `/home/andre/Development/wipost165/.env.production.local`. Do not display it.
 
 After SSH access recovers, read `docs/DEPLOYMENT.md`, export that file's key and a
-GHCR-capable registry token, and run `bin/release setup` from the clean release
-branch. The wrapper performs its transport preflight within the same connection.
+GHCR-capable registry token, and run `bin/release session` from the clean release branch. Run `release_setup`
+inside that shell and retain it through all verification and any diagnosis.
+Standalone setup/deploy commands are now disabled.
 On this workstation, use
 `BUNDLE_PATH=/home/andre/Development/wipost165/vendor/bundle` for the isolated
 checkout's already-installed gems. Use host access outside the sandbox.

@@ -21,7 +21,7 @@ release_control_path=""
 cd "$APP_ROOT"
 
 usage() {
-  echo "Usage: bin/release check|push|setup|deploy|push-deploy" >&2
+  echo "Usage: bin/release check|push|session" >&2
   exit 64
 }
 
@@ -43,7 +43,7 @@ current_branch() {
 
 remote_head() {
   local branch="$1"
-  git ls-remote --heads origin "refs/heads/$branch" | awk 'NR == 1 { print $1 }'
+  PATH="${RELEASE_ORIGINAL_PATH:-$PATH}" git ls-remote --heads origin "refs/heads/$branch" | awk 'NR == 1 { print $1 }'
 }
 
 assert_remote_matches_head() {
@@ -116,7 +116,7 @@ assert_http_status() {
 }
 
 with_production_connection() {
-  local action="$1" control_path identity_file
+  local control_path identity_file
 
   [[ -n "${KAMAL_REGISTRY_PASSWORD:-}" ]] || fail "export KAMAL_REGISTRY_PASSWORD"
   [[ -n "${POST165_PUBLIC_SECRET_KEY_BASE:-}" ]] || fail "export a unique POST165_PUBLIC_SECRET_KEY_BASE"
@@ -137,7 +137,7 @@ with_production_connection() {
   release_temp_config="$release_temp_dir/deploy.yml"
   trap cleanup_release EXIT
   echo "Starting an owned public-site SSH control master..."
-  "$SYSTEM_SSH" -F "$SSH_CONFIG" -S "$control_path" -o ControlMaster=yes -o ControlPersist=60 -o BatchMode=yes -o ConnectTimeout=15 -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=6 -L "127.0.0.1:$TUNNEL_PORT:127.0.0.1:22" -Nf "$PROD_HOST"
+  timeout --signal=TERM 45 "$SYSTEM_SSH" -F "$SSH_CONFIG" -S "$control_path" -o ControlMaster=yes -o ControlPersist=yes -o BatchMode=yes -o ConnectTimeout=15 -o ExitOnForwardFailure=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=6 -L "127.0.0.1:$TUNNEL_PORT:127.0.0.1:22" -Nf "$PROD_HOST"
   "$SYSTEM_SSH" -F "$SSH_CONFIG" -S "$control_path" -O check "$PROD_HOST"
 
   # Docker's remote builder invokes OpenSSH itself; force it through our socket too.
@@ -149,65 +149,101 @@ with_production_connection() {
 exec "$RELEASE_SYSTEM_SSH" -F /dev/null -o BatchMode=yes -o ConnectTimeout=20 -o IdentityAgent=none -o IdentitiesOnly=yes -o "ProxyCommand=socat - TCP:127.0.0.1:$RELEASE_TUNNEL_PORT" -i "$RELEASE_IDENTITY_FILE" -l root "$@"
 WRAPPER
   chmod 700 "$release_temp_dir/bin/ssh"
+  export RELEASE_ORIGINAL_PATH="$PATH"
   export PATH="$release_temp_dir/bin:$PATH"
-  ssh -o BatchMode=yes "$PROD_HOST" 'hostname; docker --version'
+  export DOCKER_HOST="ssh://root@$PROD_HOST"
+  unset DOCKER_CONTEXT BUILDX_BUILDER
 
   # Net::SSH otherwise probes the desktop signing agent despite keys_only.
   unset SSH_AUTH_SOCK
   prepare_kamal_config "$release_temp_config" "$control_path" "$identity_file"
-  bin/kamal config -c "$release_temp_config" >/dev/null
-  bin/kamal server exec 'hostname' -c "$release_temp_config"
+  export APP_ROOT PROD_HOST PROD_SERVICE PROD_URL MEMBERS_URL COHOSTED_URL SSH_CONFIG SYSTEM_SSH
+  export release_temp_config release_temp_dir release_control_path
+  export -f fail current_branch remote_head assert_remote_matches_head assert_clean_worktree
+  export -f assert_http_status release_ssh release_preflight release_run release_setup release_deploy release_verify
+  cat > "$release_temp_dir/session.rc" <<'SESSION'
+PS1='post165-release> '
+echo "One tunnel is open. Keep this shell for the entire operation."
+echo "Commands: release_setup, release_deploy, release_verify, release_ssh <command>. Exit only when finished."
+if ! release_preflight; then
+  echo "Preflight failed. Keep this session open for diagnosis; do not start another tunnel."
+fi
+SESSION
+  # The parent owns cleanup. A failed build/deploy returns to this same shell.
+  bash --noprofile --rcfile "$release_temp_dir/session.rc" -i
+}
 
-  if [[ "$action" == "check" ]]; then
-    echo "Release transport preflight passed; production was not changed."
-    return
-  fi
+release_ssh() {
+  "$SYSTEM_SSH" -F "$SSH_CONFIG" -S "$release_control_path" -O check "$PROD_HOST" >/dev/null 2>&1 || {
+    echo "Release tunnel is unavailable; no direct fallback or automatic reconnect." >&2
+    return 1
+  }
+  ssh -o BatchMode=yes "$PROD_HOST" "$@"
+}
 
-  local head container_names
-  head="$(git rev-parse HEAD)"
+release_preflight() {
+  release_ssh 'hostname; docker --version' || return
+  bin/kamal config -c "$release_temp_config" >/dev/null || return
+  bin/kamal server exec hostname -c "$release_temp_config" || return
+  release_ssh 'docker ps --filter label=service=legion_post_165_wi_tools --filter label=service=two_rivers_reporter --format "{{.ID}} {{.Names}}" | sort' > "$release_temp_dir/protected-before.txt" || return
+  [[ -s "$release_temp_dir/protected-before.txt" ]] || return 1
+  release_ssh 'docker exec kamal-proxy kamal-proxy list' || return
+  export RELEASE_PREFLIGHT_OK=1
+  echo "Transport and protected-service baseline verified. Keep this tunnel open."
+}
+
+release_run() (
+  set -Eeuo pipefail
+  [[ "${RELEASE_PREFLIGHT_OK:-}" == "1" ]] || fail "run release_preflight successfully in this session first"
+  assert_clean_worktree
+  assert_remote_matches_head
+  release_ssh true
   if ruby -ryaml -e 'exit(YAML.safe_load_file("config/deploy.yml").dig("env", "clear", "PUBLIC_SITE_COMING_SOON") == "1" ? 0 : 1)'; then
     echo "Coming-soon release: publishing feed is intentionally unused."
   else
     bin/publisher-check
   fi
-  echo "Releasing $head as the public Post 165 site..."
-  bin/kamal "$action" -c "$release_temp_config"
+  bin/kamal "$1" -c "$release_temp_config"
+  release_verify
+)
 
-  container_names="$(ssh -o BatchMode=yes "$PROD_HOST" \
-    "docker ps --filter label=service=$PROD_SERVICE --filter label=role=web --format '{{.Names}}'")"
-  grep -Fxq "$PROD_SERVICE-web-$head" <<< "$container_names" || \
-    fail "the running $PROD_SERVICE web container does not match $head"
+release_setup() { release_run setup; }
+release_deploy() { release_run deploy; }
 
+release_verify() (
+  set -Eeuo pipefail
+  local head container_names
+  head="$(git rev-parse HEAD)"
+  container_names="$(release_ssh "docker ps --filter label=service=$PROD_SERVICE --filter label=role=web --format '{{.Names}}'")"
+  grep -Fxq "$PROD_SERVICE-web-$head" <<< "$container_names" || fail "public container does not match $head"
+  release_ssh 'docker ps --filter label=service=legion_post_165_wi_tools --filter label=service=two_rivers_reporter --format "{{.ID}} {{.Names}}" | sort' > "$release_temp_dir/protected-after.txt"
+  diff -u "$release_temp_dir/protected-before.txt" "$release_temp_dir/protected-after.txt" || fail "protected service containers changed"
+  release_ssh 'docker exec kamal-proxy kamal-proxy list'
   assert_http_status "$PROD_URL/up" 200
   assert_http_status "$PROD_URL/" 200
+  assert_http_status "https://www.wipost165.org/up" 200
   assert_http_status "https://www.wipost165.org/" 200
   assert_http_status "$MEMBERS_URL/up" 200
   assert_http_status "$MEMBERS_URL/session/new" 200
   assert_http_status "$COHOSTED_URL/" 200
-  echo "Production verified at $head; the SSH control master will now close."
+  echo "Production verified at $head. Tunnel remains open for final checks; exit when finished."
+)
+
+local_check() {
+  bash -n bin/release
+  ruby -ryaml -e 'c=YAML.safe_load_file("config/deploy.yml"); abort "wrong service" unless c["service"] == "legion_post_165_wi_public"; abort "wrong hosts" unless c.dig("proxy", "hosts").sort == %w[wipost165.org www.wipost165.org]; abort "TLS required" unless c.dig("proxy", "ssl") == true'
+  echo "Local release checks passed. No SSH connection opened. Use one bin/release session for all production work."
 }
 
 command="${1:-}"
 [[ $# -eq 1 ]] || usage
 
 case "$command" in
-  check)
-    with_production_connection check
+  check) local_check ;;
+  push) push_head ;;
+  session) with_production_connection ;;
+  setup|deploy|push-deploy)
+    fail "standalone production commands are disabled: use bin/release session, then release_setup or release_deploy inside that same shell"
     ;;
-  push)
-    push_head
-    ;;
-  setup|deploy)
-    assert_clean_worktree
-    assert_remote_matches_head
-    with_production_connection "$command"
-    ;;
-  push-deploy)
-    assert_clean_worktree
-    push_head
-    with_production_connection deploy
-    ;;
-  *)
-    usage
-    ;;
+  *) usage ;;
 esac

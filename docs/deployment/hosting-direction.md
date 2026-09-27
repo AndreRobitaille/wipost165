@@ -52,11 +52,11 @@ connection fallback. It never copies or runs the member app's deployment identit
 
 | Command | Effect |
 | --- | --- |
-| `bin/release check` | Read-only SSH/Kamal transport preflight; not a container build or CI run. |
+| `bin/release check` | Local-only validation; opens no SSH connection. |
 | `bin/release push` | Push current branch and verify the exact remote SHA. |
-| `bin/release setup` | First provisioning; requires clean, pushed revision and a working publisher. |
-| `bin/release deploy` | Repeat deployment with the same guards. |
-| `bin/release push-deploy` | Push then repeat deployment. |
+| `bin/release session` then `release_setup` | First provisioning inside one persistent session. |
+| `release_deploy` inside the existing session | Repeat deployment without reconnecting. |
+| `release_verify` inside the existing session | Final checks before closing the tunnel once. |
 
 Commands require authorization appropriate to their effects. None has been run
 against Hetzner during this implementation. The wrapper uses the configured

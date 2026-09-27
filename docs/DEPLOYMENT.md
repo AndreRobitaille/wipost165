@@ -30,11 +30,25 @@ replace the shared proxy, prune shared images/builders, or modify databases.
 
 ## Required persistent SSH transport
 
-Use `bin/release check`, then `bin/release push` and `bin/release setup` for the
-first provisioning. Later releases use `bin/release push-deploy`. Do not run raw
-Kamal deployment commands or repeated direct SSH sessions. Run with host access
-outside Codex's restricted sandbox; synthetic system-file ownership can make
-OpenSSH reject valid host configuration. Never chown system SSH files to fix it.
+**One operation uses one outer connection from first inspection to final
+verification.** Finish local checks and push first. Run `bin/release session`
+once. It opens and verifies the persistent tunnel and leaves an interactive
+`post165-release>` shell. Run `release_setup` for first provisioning or
+`release_deploy` for later releases. Run `release_verify` and `release_ssh` for
+follow-up checks in that same shell. Exit once, only after the operation is done.
+
+`bin/release check` now performs local validation only. Standalone setup/deploy
+commands are disabled to prevent preflight/disconnect/reconnect sequences.
+Failed build or deployment commands return to the existing shell with the tunnel
+still open. Do not start another session to diagnose them. If the tunnel itself
+fails, stop dependent work, wait at least five minutes, and make at most one
+explicit replacement attempt. Never loop retries or fall back to direct SSH.
+Do not start parallel outer connections, even for read-only inspection.
+
+Run with host access outside Codex's restricted sandbox; synthetic system-file
+ownership can make OpenSSH reject valid host configuration. Never chown system
+SSH files to fix it. Tunnel startup has a 45-second overall limit. The owned
+master has no idle expiry and stays open until the session exits.
 
 The wrapper reads `${RELEASE_SSH_CONFIG:-$HOME/.ssh/config}`, using the existing
 host stanza for `178.156.250.235`, root, and its configured identity file. Keep
@@ -63,8 +77,8 @@ GitHub CLI token for `KAMAL_REGISTRY_PASSWORD`; do not print or commit it.
 the members app. Check that Git ignores local secret files before saving them.
 
 Run `bin/ci`, review the intended changes, commit and push the clean release
-branch with `bin/release push`, then run `bin/release check` and `bin/release setup`
-for this first install. `setup` requires a clean checkout and exact pushed SHA.
+branch with `bin/release push`, then run `bin/release session` once and
+`release_setup` within it. Setup requires a clean checkout and exact pushed SHA.
 The shared proxy already exists; Kamal should add only the public application's
 route. Do not run proxy reboot/upgrade or change global proxy settings.
 

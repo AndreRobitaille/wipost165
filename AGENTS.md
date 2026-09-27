@@ -59,10 +59,21 @@ new application behavior. These quality expectations do not prescribe a design.
 
 ## Production operations
 
-Read `docs/DEPLOYMENT.md` before server work. Use `bin/release` and its owned
-persistent SSH tunnel for SSH, Kamal, and Docker/buildx. Stop on tunnel failure;
-never fall back to repeated direct connections. Preserve the members and
-Two Rivers services. The latest launch result is in
+Read `docs/DEPLOYMENT.md` before server work. **One operation means one outer SSH
+connection**, from the first production inspection through build, deployment,
+certificate issuance, and final verification. Use `bin/release session` and keep
+that same shell/tunnel open throughout. Use `release_setup`, `release_deploy`,
+`release_verify`, and `release_ssh` inside it. A failed command returns to the
+same session for diagnosis; it is not permission to close and recreate the tunnel.
+
+`bin/release check` is local-only. Never sequence a standalone remote preflight,
+close its tunnel, and then create another for deployment. Standalone setup/deploy
+commands are disabled. SSH, Net::SSH, and Docker must all use the session's local
+forward. No direct fallback, parallel outer connections, or automatic reconnect.
+If the tunnel itself fails, stop. Wait at least five minutes before one explicitly
+chosen replacement attempt; preserve the next successful tunnel until finished.
+Close only the tunnel owned by this operation, once, at the end. Preserve the
+members and Two Rivers services. Latest status:
 `docs/deployment/2026-09-27-coming-soon-status.md`.
 
 ## Verification
