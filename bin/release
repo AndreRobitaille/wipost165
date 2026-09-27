@@ -242,7 +242,7 @@ command="${1:-}"
 case "$command" in
   check) local_check ;;
   push) push_head ;;
-  session) with_production_connection ;;
+  session) with_production_connection; exit ;;
   setup|deploy|push-deploy)
     fail "standalone production commands are disabled: use bin/release session, then release_setup or release_deploy inside that same shell"
     ;;

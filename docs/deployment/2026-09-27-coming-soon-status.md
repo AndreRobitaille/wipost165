@@ -1,67 +1,83 @@
-# September 27, 2026 coming-soon release status
+# September 27, 2026 coming-soon release
 
-## Outcome
+## Final outcome: deployed and verified
 
-Prepared and pushed on `codex/public-coming-soon`; **not deployed**. Runtime and
-transport revision: `1f5af582c9b23b076ba3bd8a2e9649dc904c80b5`. The final subsequent
-commit records this status and operator guidance only.
+The public app runs revision `2828f88c4df71ac5e289b28b3055c1c408de5a10` from
+`codex/public-coming-soon`. Subsequent operator-documentation and release-wrapper-only commits record the
+result and cleanup safeguards; they do not change the running web application.
 
-`bin/release check` passed using the owned SSH master, localhost port 22222,
-socat routing, configured file key, and remote Kamal hostname probe. Net::SSH
-initially contacted the unavailable desktop agent despite keys_only; unsetting
-SSH_AUTH_SOCK fixed that. The duplicate ControlMaster option was also fixed.
+Both https://wipost165.org and https://www.wipost165.org serve the simple
+coming-soon page and members-site link with HTTP 200. Direct requests to
+178.156.250.235 preserved each hostname and validated TLS normally. Both public
+certificates expire December 26, 2026. HTTP redirects to the matching HTTPS
+hostname with 301. Both `/up` endpoints return 200.
 
-The first setup attempt stalled while establishing the outer SSH master. It was
-stopped before build/provisioning. After a cooldown, one controlled retry failed:
-`ssh: connect to host 178.156.250.235 port 22: Connection timed out`.
-No application deployment, proxy-route change, certificate issuance, database
-operation, DNS edit, or email test was performed. No SSH tunnel remains open.
+The public service is `legion_post_165_wi_public-web`, container `b1f32010efbf`,
+with both hostnames on the existing kamal-proxy v0.9.2. The public container is
+running with zero restarts. The shared proxy was not restarted: its start time
+remains June 30, 2026, with zero restarts.
 
-## Verified
+## Protected services and DNS
 
-- Exact isolated release checkout: CI passed; 32 tests, 194 assertions, zero
-  failures/errors/skips; 38 Ruby files linted; gem/JS audits and Brakeman clean;
-  autoload validation and production assets passed.
-- Coming-soon page inspected at 1365x900 and 390x844; no horizontal overflow;
-  keyboard focus reaches the members link. No publishing requests in this mode.
-- Before release: public container/route absent; kamal-proxy v0.9.2 served only
-  members.wipost165.org and tworiversmatters.com with TLS.
-- Protected live revisions observed: members
-  `9d278b7ce449ea54d60b151b32f6e23cac97eacf`; Two Rivers
-  `48cf3bbde3d5282666b9c1024d6b3855e824902b`.
-- Final direct-to-Hetzner HTTPS checks at approximately 10:29 CDT: members `/up`
-  and `/session/new` both 200, certificate expires December 9, 2026; Two Rivers
-  root 200, certificate expires November 4, 2026. Public apex and www still fail
-  TLS negotiation. Final container revisions could not be re-read after SSH
-  stopped responding, but no deployment action reached the server.
-- Google and Cloudflare DNS returned apex 178.156.250.235; www is the existing
-  apex CNAME. No AAAA or CAA conflicts were returned. Direct local DNS queries
-  still returned the old address; authoritative queries attempted from Hetzner
-  timed out. Do not claim all caches or authoritative views were reconciled.
-- Public MX is `0 mail.wipost165.org`; mail, ftp, cpcontacts, cpcalendars, cpanel,
-  and webmail A records point to 104.225.208.23. SPF is
-  `v=spf1 mx ip4:104.225.208.23 ~all`; the four SRV targets show the requested
-  cpcontacts/cpcalendars separation. No zone records were changed in this session.
-  Local Mail Exchanger and a complete cPanel zone inventory were not re-inspected.
+Container IDs and revisions matched the pre-deployment baseline exactly:
 
-## Resume
+- Members: `ad61ba0e20c7`, revision
+  `9d278b7ce449ea54d60b151b32f6e23cac97eacf`. HTTPS `/up` and `/session/new` both
+  return 200; its certificate still expires December 9, 2026.
+- Two Rivers: `085c9aab95a5`, revision
+  `48cf3bbde3d5282666b9c1024d6b3855e824902b`. HTTPS homepage returns 200;
+  certificate still expires November 4, 2026.
 
-The clean release checkout is `/tmp/wipost165-coming-soon`; it is also pushed to
-origin. Preserve the original development checkout's unrelated work. The unique
-public-app key is in ignored, mode-0600
-`/home/andre/Development/wipost165/.env.production.local`. Do not display it.
+No DNS or mail settings were changed by this session. Before/after Google DNS
+snapshots showed no record-value changes across the 20 queried record sets.
+Google and Cloudflare returned apex 178.156.250.235; www remains its CNAME.
+There were no AAAA or CAA conflicts in those responses. Local direct DNS queries
+previously returned the old address, so this does not claim every cache expired.
 
-After SSH access recovers, read `docs/DEPLOYMENT.md`, export that file's key and a
-GHCR-capable registry token, and run `bin/release session` from the clean release branch. Run `release_setup`
-inside that shell and retain it through all verification and any diagnosis.
-Standalone setup/deploy commands are now disabled.
-On this workstation, use
-`BUNDLE_PATH=/home/andre/Development/wipost165/vendor/bundle` for the isolated
-checkout's already-installed gems. Use host access outside the sandbox.
+MX is priority 0 to mail.wipost165.org; mail, ftp, cpcontacts, cpcalendars, cpanel,
+and webmail A records remain 104.225.208.23. SPF remains
+`v=spf1 mx ip4:104.225.208.23 ~all`. The four SRV records retain the requested
+cpcontacts/cpcalendars targets. Full zone inventory, private cPanel Email Routing,
+and unqueried SES/DKIM records were not re-inspected; all were left untouched.
+No test emails were sent.
 
-Complete the remote build/container boot, apex and www routes, Let's Encrypt
-issuance, direct hostname-preserving HTTPS and browser checks, unchanged protected
-service revisions, public DNS checks, and tunnel cleanup. Do not change DNS or
-NixiHost mail as a workaround for SSH. Deployment authorization remains given;
-no additional permission ceremony is required to resume the agreed coming-soon
-release. Unsigned release commits were explicitly authorized for this task only.
+## Validation and connection discipline
+
+- Application CI passed: 32 tests, 194 assertions, no failures/errors/skips;
+  38 Ruby files linted; gem and JavaScript audits and Brakeman clean; autoload
+  validation and production assets passed.
+- Added offline release-lifecycle regression: 1 test, 12 assertions passed.
+  It covers local-only checks, blocked standalone commands, nested-session
+  rejection, and a failed setup followed by deployment using one tunnel.
+- Production image built and uploaded with the existing remote Docker builder.
+- Live desktop 1365x900 and mobile 390x844 browser checks passed. Keyboard focus
+  and no horizontal overflow were also verified on the same page locally.
+- After the user's requested five-minute cooldown (15:33:20–15:38:20 UTC), one
+  successful outer SSH master was retained through preflight, a baseline-query
+  repair, image build, deployment, certificate issuance, and all server checks.
+  Build/deploy did not open replacement outer SSH connections.
+- Final cleanup confirmed the owned master process and localhost port 22222 were
+  gone. Editing the wrapper during the open session exposed a local parser error
+  on exit; cleanup still succeeded. Explicit session termination and an offline
+  regression now cover wrapper edits while a release shell remains open.
+
+Earlier attempts had failed before deployment because of SSH connection churn
+and a failed desktop signing agent. These are historical failures, not current
+launch blockers. The release script now requires `bin/release session`; failed
+commands return to its open shell. Local checks never open SSH and standalone
+setup/deploy commands are disabled. `SSH_AUTH_SOCK` is unset for Kamal so it uses
+the configured file key. Git signing was bypassed only for the commits expressly
+authorized by the owner, without changing global settings.
+
+## Remaining work
+
+The complete public website and publishing feed are not launched. Production
+intentionally uses `PUBLIC_SITE_COMING_SOON=1`; the unfinished feed is not called.
+Disable that mode only in a separately reviewed full-site release.
+
+The release branch and operator guide are pushed. The clean release checkout is
+`/tmp/wipost165-coming-soon`; the original development checkout retains unrelated
+work. The unique public-app Rails key is in ignored, mode-0600
+`/home/andre/Development/wipost165/.env.production.local`; never print it.
+Future releases use `docs/DEPLOYMENT.md` and one `bin/release session` from first
+server inspection through final verification.
