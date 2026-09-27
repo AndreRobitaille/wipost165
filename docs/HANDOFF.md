@@ -7,8 +7,10 @@ Post-owned read-only website token, including portraits. The local consumer send
 that token server-side, serves portraits through its own route, and keeps caches
 private and separated by credential. Production encrypted credentials are prepared;
 the key stays ignored. Live authenticated checks returned valid empty featured and
-event collections. CI passed with 46 tests / 293 assertions. The owner authorized
-commit, push, and deployment; release results will be recorded separately.
+event collections. CI passed with 46 tests / 293 assertions. Revision `5d15332`
+was committed, pushed to `origin/main`, and deployed; both public domains remain
+in coming-soon mode. The deployed container's authenticated feed check passed and
+protected services were unchanged. See [release results](deployment/2026-09-27-authenticated-publisher-release.md).
 The three fictional introductions currently exist only in the synthetic companion
 database. The [content-session prompt](publisher-content-prompt.md) authorizes and
 describes creating/publishing them in the real workspace with editorial access.

@@ -50,7 +50,7 @@ Status vocabulary: **ready**, **active**, **blocked** (name the dependency),
 | SITE-01 | One understood development/release baseline | done — consolidated on local `main`; see handoff | Local source inspection |
 | SITE-02 | Distinctive, intuitive public experience refined | done — local QA complete; [owner approved desktop direction](design/2026-09-visitor-paths/README.md#owner-review) | Real-content integration and launch checks remain SITE-04/05 |
 | SITE-03 | Truthful, maintainable launch content | active — September 27 [contact/visit content verified locally; ownership recorded; introductions/photos await collection](launch-content-readiness.md) | Owner's PEC/member meeting collection; publisher needed for entry/publication |
-| SITE-04 | Public site and real publisher verified together | blocked | Companion CP-01 through CP-04; SITE-01 |
+| SITE-04 | Public site and real publisher verified together | active — authenticated empty feeds verified locally and in deployed container; real stories/portraits await publishing | Editorial content creation; populated-feed verification |
 | SITE-05 | Full website launched and verified | blocked | SITE-02/03/04; explicit release authorization |
 | SITE-06 | Improvements based on use | later | Evidence of an actual visitor or editor need |
 
@@ -177,7 +177,10 @@ into another transcript.
   and production assets passed. Commit/push/deploy authorized. Live placeholder
   creation is delegated through the [content-session prompt](publisher-content-prompt.md)
   and requires separate editorial authentication. Existing design/content work is
-  included in this release; no companion application code is changed.
+  included in this release; no companion application code is changed. Deployed
+  `5d15332` through one persistent session; both public domains healthy and still
+  showing coming soon. Container feed check passed; members/Two Rivers unchanged.
+  [Release evidence](deployment/2026-09-27-authenticated-publisher-release.md).
 
 - **2026-09-27 — Synthetic API placeholders:** generated three fictional portraits
   and created authored drafts through the companion's local editorial API

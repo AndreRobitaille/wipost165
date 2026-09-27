@@ -7,6 +7,10 @@ the members application's service name or reuse its Rails key or database secret
 
 ## Current launch scope
 
+Latest release: [`5d15332`, authenticated publisher integration](deployment/2026-09-27-authenticated-publisher-release.md).
+The authenticated client is deployed and verified against the empty live feed;
+the coming-soon setting remains enabled.
+
 The first release is a simple coming-soon page with the Post name, Two Rivers
 location, and a members-site link. White background, Legion blue, large readable
 type, no animation or sample content. `PUBLIC_SITE_COMING_SOON: "1"` in
