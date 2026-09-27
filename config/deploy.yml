@@ -1,0 +1,33 @@
+# Public app only. Separate from legion_post_165_wi_tools and its database.
+service: legion_post_165_wi_public
+image: andrerobitaille/legion-post-165-wi-public
+servers:
+  web:
+    - 178.156.250.235
+proxy:
+  ssl: true
+  hosts:
+    - wipost165.org
+    - www.wipost165.org
+  healthcheck:
+    path: /up
+registry:
+  server: ghcr.io
+  username: andrerobitaille
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+env:
+  secret:
+    - SECRET_KEY_BASE
+  clear:
+    PUBLIC_SITE_COMING_SOON: "1"
+    PUBLIC_SITE_PREVIEW: "0"
+    PUBLISHER_ORIGIN: https://members.wipost165.org
+    WEB_CONCURRENCY: 1
+    RAILS_MAX_THREADS: 3
+    RAILS_LOG_LEVEL: info
+asset_path: /rails/public/assets
+builder:
+  arch: amd64
+  local: false
+  remote: ssh://root@178.156.250.235

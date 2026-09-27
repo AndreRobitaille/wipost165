@@ -1,19 +1,9 @@
 # Local agent/session state
 .superpowers/
 
-# WordPress/local development
-wp-config.php
-wp-content/uploads/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/backup*/
-wp-content/ai1wm-backups/
-wp-content/debug.log
-.htaccess
-
 # Build artifacts and dependencies
 node_modules/
-vendor/
+/vendor/bundle/
 dist/
 build/
 .cache/
@@ -41,5 +31,16 @@ Thumbs.db
 .idea/
 .vscode/
 
-theme-preview.html
 mockups.html
+
+# Rails local files and secrets
+/.bundle/
+/log/*
+!/log/.keep
+/tmp/*
+!/tmp/.keep
+/storage/*
+!/storage/.keep
+/public/assets/
+/config/master.key
+/config/credentials/*.key

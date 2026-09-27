@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require_relative "../config/environment"
+
+client = Publishing::Client.new
+begin
+  people = client.featured
+  events = client.events(from: Date.current, to: Date.current + 90)
+  puts "Publishing v1 verified: #{people.size} featured introductions; #{events.fetch('events').size} events in the next 90 days."
+rescue Publishing::Unavailable, Publishing::NotFound => error
+  warn "Publishing v1 is not ready: #{error.message}"
+  exit 1
+end

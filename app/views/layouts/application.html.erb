@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= public_page_title %> · American Legion Post 165 · Two Rivers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Get to know Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin. Meet a few people, find an occasion, and plan your first visit.">
+    <% if preview_mode? %><meta name="robots" content="noindex,nofollow"><% end %>
+    <meta name="turbo-cache-control" content="no-cache">
+    <%= favicon_link_tag "legion-white.png", type: "image/png" %>
+    <meta name="theme-color" content="#00467f">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <div id="company">
+      <a class="skip" href="#table-content" data-turbo="false">Skip to the table</a>
+      <% if preview_mode? %><div class="preview-note">DESIGN PREVIEW <span>Placeholder people and sample events · not the live Post calendar</span></div><% end %>
+      <header class="masthead">
+        <%= link_to root_path, class: "brand", aria: { label: "Post 165 welcome" } do %><%= image_tag "legion-white.png", alt: "The American Legion", width: 172, height: 83 %><% end %>
+        <div class="post-name">ROBERT E. BURNS <strong>POST 165</strong><span>Two Rivers, Wisconsin</span></div>
+        <nav class="quick-nav" aria-label="Quick links"><%= link_to "Find an event ↗", events_path(person_context) %><%= link_to "Get in touch ↗", contact_path(person_context) %></nav>
+      </header>
+      <main data-people-count="<%= @people.size %>" class="gathering <%= "without-people" if @people.empty? %>">
+        <div class="table-shape" aria-hidden="true"><div class="table-inlay"></div></div>
+        <% if @people.any? %>
+          <div class="welcome-label" aria-hidden="true">THERE’S ROOM HERE.</div>
+          <nav class="people" aria-label="Meet a few people">
+            <% @people.each_with_index do |person, index| %>
+              <%= link_to person_path(person), class: "person #{%w[frank ron jo][index]}", aria: { current: @profile&.slug == person.slug ? "page" : nil } do %>
+                <span class="portrait"><span class="face" data-controller="portrait"><span class="portrait-fallback" role="img" aria-label="Portrait temporarily unavailable" hidden>Portrait<br>unavailable</span><%= image_tag person.portrait, alt: person.portrait_alt, width: 160, height: 180, data: { portrait: person.portrait, action: "error->portrait#unavailable" } %></span><span class="portrait-action" aria-hidden="true">↗</span></span>
+                <span class="person-name"><%= person.name %><span aria-hidden="true"> ↗</span></span><span class="person-prompt"><%= person.sample? ? "Placeholder" : "Say hello" %></span>
+              <% end %>
+            <% end %>
+          </nav>
+        <% end %>
+        <div class="table-content" id="table-content" tabindex="-1"><%= yield %></div>
+        <nav class="table-nav" aria-label="Explore the Post">
+          <%= link_to "People", root_path, aria: { current: table_navigation == :people ? "page" : nil } %>
+          <%= link_to "Events", events_path(person_context), aria: { current: table_navigation == :events ? "page" : nil } %>
+          <%= link_to "First visit", visit_path(person_context), aria: { current: table_navigation == :visit ? "page" : nil } %>
+        </nav>
+        <p class="near-edge">PULL UP A CHAIR.</p>
+      </main>
+      <footer class="footer">
+        <%= link_to "Service doesn’t end with a uniform.", about_path, class: "service-line" %>
+        <nav aria-label="More about the Post"><%= link_to "Veteran help", veteran_help_path %><%= link_to "Membership", membership_path %><%= link_to "Contact", contact_path(person_context) %><%= link_to "Members site ↗", "https://members.wipost165.org/" %></nav>
+        <% if preview_mode? %><p class="credits">Placeholder portraits: <a href="https://www.pexels.com/photo/elderly-man-in-gray-long-sleeves-smiling-7322315/">Alena Darmel</a>, <a href="https://www.pexels.com/photo/a-close-up-shot-of-an-elderly-man-smiling-11346735/">Picas Joe</a>, <a href="https://www.pexels.com/photo/professional-portrait-of-smiling-middle-aged-woman-29405854/">Alimi Sandrine</a> / Pexels. Models are not Post members.</p><% end %>
+      </footer>
+    </div>
+  </body>
+</html>

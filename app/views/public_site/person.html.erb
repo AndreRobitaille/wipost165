@@ -1,0 +1,9 @@
+<section aria-labelledby="person-title">
+  <p class="eyebrow">A LITTLE INTRODUCTION <% if @profile.sample? %><span class="sample-tag">PLACEHOLDER</span><% end %></p>
+  <h1 id="person-title">Meet <%= @profile.name %>.</h1>
+  <p class="person-intro"><%= @profile.introduction %></p>
+  <% if @profile.conversation_starter.present? %><div class="conversation"><span class="eyebrow">AN EASY CONVERSATION STARTER</span><p>“<%= @profile.conversation_starter %>”</p></div><% end %>
+  <div class="member-story body-copy compact"><%= simple_format(h(@profile.story), {}, sanitize: false) %></div>
+  <%= link_to "Find a time to come by →", events_path(person_context), class: "main-action" %>
+  <% if @profile.sample? %><p class="small-note">An example introduction, not a real member or attendance promise.</p><% end %>
+</section>
