@@ -69,6 +69,10 @@ new application behavior. These quality expectations do not prescribe a design.
 
 ## Production operations
 
+Do not deploy this site until Andre says so. Agents may work on the code. A merge
+is not a deploy; production updates only when Kamal runs. Do not copy production
+data anywhere without Andre's explicit yes.
+
 Read `docs/DEPLOYMENT.md` before server work. **One operation means one outer SSH
 connection**, from the first production inspection through build, deployment,
 certificate issuance, and final verification. Use `bin/release session` and keep
