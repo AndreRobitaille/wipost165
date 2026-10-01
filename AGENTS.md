@@ -67,24 +67,19 @@ Preserve logical reading order, keyboard access, visible focus, text alternative
 and AA contrast. Apply authorization, input validation, and output escaping to
 new application behavior. These quality expectations do not prescribe a design.
 
-## Production operations
+## Production and deploys
 
-Read `docs/DEPLOYMENT.md` before server work. **One operation means one outer SSH
-connection**, from the first production inspection through build, deployment,
-certificate issuance, and final verification. Use `bin/release session` and keep
-that same shell/tunnel open throughout. Use `release_setup`, `release_deploy`,
-`release_verify`, and `release_ssh` inside it. A failed command returns to the
-same session for diagnosis; it is not permission to close and recreate the tunnel.
+Do not deploy this site until Andre says so. Agents may work on the code. A merge
+is not a deploy; production updates only when Kamal runs. When deploys are allowed,
+follow `docs/DEPLOYMENT.md` exactly. Finish local checks and `bin/release push`
+first. Open `bin/release session` once, then run `release_deploy` inside it. First
+provisioning uses `release_setup` in that same session.
 
-`bin/release check` is local-only. Never sequence a standalone remote preflight,
-close its tunnel, and then create another for deployment. Standalone setup/deploy
-commands are disabled. SSH, Net::SSH, and Docker must all use the session's local
-forward. No direct fallback, parallel outer connections, or automatic reconnect.
-If the tunnel itself fails, stop. Wait at least five minutes before one explicitly
-chosen replacement attempt; preserve the next successful tunnel until finished.
-Close only the tunnel owned by this operation, once, at the end. Preserve the
-members and Two Rivers services. Latest status:
-`docs/deployment/2026-09-27-coming-soon-status.md`.
+The production server throttles SSH. Use one persistent connection for the whole
+operation, including read-only checks. No direct or parallel ssh to the server, and
+no retry loops. If a command fails, stay in that session and report. If the tunnel
+fails, stop and wait at least 5 minutes before one further attempt. Do not copy
+production data anywhere without Andre's explicit yes.
 
 ## Verification
 
