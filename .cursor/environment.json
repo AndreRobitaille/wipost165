@@ -1,0 +1,14 @@
+{
+  "name": "Post 165 public site",
+  "user": "ubuntu",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "install": "bash .cursor/install.sh",
+  "ports": [
+    {
+      "name": "web",
+      "port": 3000
+    }
+  ]
+}
