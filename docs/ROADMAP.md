@@ -9,7 +9,8 @@ change to the reviewed API contract.
 
 The current design is now shareable at the owner's authorized public
 [V1 Sites preview](https://post165-v1-launch-preview.andretr.chatgpt.site), generated
-from Rails with labelled sample events. The people-based Site remains available
+from Rails with the live public events feed and server-only website credentials.
+The initial sample-only export was rejected and replaced. The people-based Site remains available
 for V2. [Refresh instructions and evidence](design/2026-10-harbor-study/sites-preview/README.md).
 This is independent of the actual Rails production service and its launch gates.
 
@@ -423,3 +424,13 @@ for V2. [Published URL, identities, refresh procedure, and checks](design/2026-1
 All 24 page/width combinations and modal keyboard checks pass; CI passes 76 tests /
 738 assertions and local release checks pass. Added `main` to GitHub push checks
 alongside `master`; retained local-only development credentials. Production unchanged.
+
+### October 7 — correct the working Sites deployment
+
+Replaced the rejected static/sample calendar export with Rails-generated page
+templates and a Sites Worker using the authenticated live public events feed.
+The read-only website token is stored only as a server-side Sites secret. The same
+public V1 URL now serves real dates and event dialogs; the V2 concept and Hetzner
+production are unchanged. CI passes Rails 76/738 plus nine adapter tests. Eight
+routes match Rails at 1440/390/320px; hosted calendar and asset checks pass.
+[Deployment identity and refresh instructions](design/2026-10-harbor-study/sites-preview/README.md).

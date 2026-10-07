@@ -4,8 +4,11 @@
 
 The owner authorized committing/pushing the current work and publishing a separate
 public Sites preview. [The new V1 preview](https://post165-v1-launch-preview.andretr.chatgpt.site)
-is live without sign-in. It exports the current Rails pages with a clearly labelled
-sample calendar; the [older people-based Site](https://post165-in-good-company.andretr.chatgpt.site)
+is public without sign-in. The initial deployment incorrectly replaced the live
+calendar with sample content. The owner requested the working site, with attention
+to API keys. The corrected build uses Rails-generated templates and assets with
+a Sites Worker that reads the same live public events feed; the read-only website
+token is a server-side Sites secret. No AI API key is needed. The [older people-based Site](https://post165-in-good-company.andretr.chatgpt.site)
 remains unchanged for V2. [Identity, refresh procedure, and verification](design/2026-10-harbor-study/sites-preview/README.md)
 record the successful Sites deployment. This does not deploy the Rails production
 service. The three footer content issues remain for Grok enrichment and can be

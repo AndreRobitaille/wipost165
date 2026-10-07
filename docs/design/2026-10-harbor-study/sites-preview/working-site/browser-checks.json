@@ -1,0 +1,153 @@
+[
+  {
+    "path": "/",
+    "width": 1440,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/events",
+    "width": 1440,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/visit",
+    "width": 1440,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/contact",
+    "width": 1440,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/about",
+    "width": 1440,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/membership",
+    "width": 1440,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/veteran-help",
+    "width": 1440,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/events/23b9b0650ff6469f9fe5365d74b6145c",
+    "width": 1440,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/",
+    "width": 390,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/events",
+    "width": 390,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/visit",
+    "width": 390,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/contact",
+    "width": 390,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/about",
+    "width": 390,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/membership",
+    "width": 390,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/veteran-help",
+    "width": 390,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/events/23b9b0650ff6469f9fe5365d74b6145c",
+    "width": 390,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/",
+    "width": 320,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/events",
+    "width": 320,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/visit",
+    "width": 320,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/contact",
+    "width": 320,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/about",
+    "width": 320,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/membership",
+    "width": 320,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/veteran-help",
+    "width": 320,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "path": "/events/23b9b0650ff6469f9fe5365d74b6145c",
+    "width": 320,
+    "rails_and_worker_match": true,
+    "no_overflow": true
+  },
+  {
+    "url": "/events",
+    "open": true,
+    "title": "Old Glory Honor Flight fundraiser",
+    "focus": "event-title",
+    "when": "Saturday, October 24, 2026 \u00b7 8:30 AM CDT"
+  }
+]

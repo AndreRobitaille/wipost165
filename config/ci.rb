@@ -7,4 +7,5 @@ CI.run do
   step "Tests", "bin/rails test"
   step "Autoloading", "env RAILS_ENV=test bin/rails zeitwerk:check"
   step "Production assets", "env RAILS_ENV=production SECRET_KEY_BASE_DUMMY=1 bin/rails assets:precompile"
+  step "Tests: Sites runtime adapter", "node --test sites/worker.test.mjs"
 end

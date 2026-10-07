@@ -45,3 +45,6 @@ mockups.html
 /config/master.key
 /config/credentials/*.key
 /config/credentials/development.yml.enc
+
+# Local Sites/Workers verification state
+/.wrangler/

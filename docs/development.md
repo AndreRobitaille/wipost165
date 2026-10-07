@@ -148,3 +148,21 @@ server afterward. Do not remove another process's PID file or stop another app.
 See [hosting and releases](deployment/hosting-direction.md) for Kamal setup and
 [implementation preview notes](design/2026-09-rails-implementation/README.md) for
 browser evidence and current launch limits.
+
+## Working preview on Sites
+
+Sites hosts a Worker adapter, with HTML templates and assets generated from these
+Rails views. It serves the same V1 routes, live published events, and Turbo dialogs.
+It never fetches people or uses the private editorial API. The read-only website
+token lives in the Site's secret `PUBLISHER_TOKEN`, outside source and browser
+code. No AI API key is used. Static information is exported at build time; the
+calendar is fetched server-side on each page/detail request, bounded to four
+seconds and 2 MiB, validated against the reviewed v1 contract and five-minute
+freshness limit. Browser HTML is no-store; there is no stale/sample fallback.
+
+See [identity and refresh procedure](design/2026-10-harbor-study/sites-preview/README.md).
+`sites/worker.mjs` contains only the Sites transport/rendering adapter. Change
+visual design and copy in Rails, then regenerate; do not maintain a second design
+in the Sites checkout. `bin/ci` includes nine focused adapter tests after compiling
+assets. Node 22 or newer is required for these tests; no npm dependencies are
+needed for the published Worker.
