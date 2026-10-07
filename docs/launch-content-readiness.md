@@ -66,7 +66,7 @@ newly verified official minutes.
 
 | Fact | Approved public use | Source / recheck trigger |
 | --- | --- | --- |
-| Annual dues | $45 at Post 165 | Adjutant, October 2026, recorded in the fact sheet; recheck when dues change. |
+| Annual dues | Confirmed in the source record; omit the amount from public pages and metadata at the owner's subsequent October 7 request | Adjutant, October 2026, recorded in the fact sheet; recheck when dues change. |
 | Join / renew | Join with a paper application, proof of eligibility and dues at a meeting; renew at a meeting or online through National | Commander, October 7; recheck when local procedures change. |
 | Service Officer | A first point of contact for any veteran; ask through the Post's configured public phone/email; connect claims, appeals and formal benefits applications with the county office | Commander, October 7; recheck on role or contact-practice changes. No promise of Post claims representation, direct payments or office hours. |
 | Meeting exceptions | First Tuesday is the usual pattern; summer months can be skipped | Supplied September minutes summary; confirm the next meeting through the Post. The public calendar excludes regular member meetings under the publishing contract. |
@@ -90,7 +90,7 @@ out of this table. Confirmation for local preparation does not authorize deploym
 
 | Item | Source checked September 27, 2026 | Public use |
 | --- | --- | --- |
-| National membership questions | [The American Legion FAQ](https://www.legion.org/faq), membership eligibility and general membership sections | Supporting eligibility link from `/membership`. The October 7 [fact sheets](public-page-facts.md) now support a concise eligibility summary, $45 local annual dues, and joining at a Post meeting. National signup is explicitly distinguished from joining Post 165. |
+| National membership questions | [The American Legion FAQ](https://www.legion.org/faq), membership eligibility and general membership sections | Supporting eligibility link from `/membership`. The October 7 [fact sheets](public-page-facts.md) support a concise eligibility summary and joining at a Post meeting. Dues are confirmed but the owner subsequently chose to omit the amount from the public site. National signup is explicitly distinguished from joining Post 165. |
 | Local veterans resource | [Manitowoc County Veteran Services Office](https://manitowoccountywi.gov/departments/veteran-s-services/) | `/veteran-help` now includes the office's role, phone and address, rechecked October 7; current hours stay on the county's maintained page. |
 | Incomplete content behavior | [Visitor-path review](design/2026-09-visitor-paths/README.md) | Real names can be long, fewer than three people work, contact can be absent, and calendars distinguish empty from unavailable. |
 
@@ -105,7 +105,7 @@ destinations in the owner's content checks and review them after reported proble
 | Before publishing | Individual publishing grants in the companion | Owner is the current content contact; formal grants remain a separate private action | No permissions assigned here. General enquiries/corrections can use the monitored public channels. |
 | Final prelaunch content step | Willing regulars and their approved introductions/photos | Public display name, introduction, story, optional conversation starter, approved portrait and alt text | Add real material after technical readiness. Fictional records currently support live-feed development behind coming-soon; full public launch needs approved content or an honest empty state. |
 | Per occasion | Guest/child participation, costs, timing/location changes, and cancellations | Accurate event-specific details in the publisher's supported fields/description | No blanket promise that every event suits every household. |
-| Confirmed October 7 | Post dues and local joining/contact process are settled | $45 annual dues; paper application and payment at a meeting; proof of eligibility; renew at a meeting or online | `/membership` now gives the local process, optional participation, transfers and renewals. See the [editorial source record](public-page-facts.md#8-membership). |
+| Confirmed October 7 | Post dues and local joining/contact process are settled | Paper application and payment at a meeting; proof of eligibility; renew at a meeting or online. Keep the dues amount off the public site at the owner's request. | `/membership` leads with visiting and optional participation, then gives the local process, transfers and renewals. The confirmed amount stays in the [editorial source record](public-page-facts.md#8-membership). |
 
 For each confirmed fact, record the public wording, verification date, source or
 approving role, content owner, and the trigger for rechecking. Store personal

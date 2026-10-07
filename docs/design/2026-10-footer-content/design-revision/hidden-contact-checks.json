@@ -1,0 +1,46 @@
+[
+  {
+    "edition": "v1",
+    "page": "/membership",
+    "width": 390,
+    "pageWidth": 375,
+    "postContacts": 0,
+    "visit": true,
+    "fallback": false,
+    "crisis": false,
+    "county": false
+  },
+  {
+    "edition": "v1",
+    "page": "/veteran-help",
+    "width": 390,
+    "pageWidth": 375,
+    "postContacts": 0,
+    "visit": false,
+    "fallback": true,
+    "crisis": true,
+    "county": true
+  },
+  {
+    "edition": "v2",
+    "page": "/membership",
+    "width": 390,
+    "pageWidth": 375,
+    "postContacts": 0,
+    "visit": true,
+    "fallback": false,
+    "crisis": false,
+    "county": false
+  },
+  {
+    "edition": "v2",
+    "page": "/veteran-help",
+    "width": 390,
+    "pageWidth": 375,
+    "postContacts": 0,
+    "visit": false,
+    "fallback": true,
+    "crisis": true,
+    "county": true
+  }
+]

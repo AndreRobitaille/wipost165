@@ -1,5 +1,10 @@
 # October 7 — About, Membership and Veteran help
 
+**Superseded layout:** the owner requested the current V1 design for these pages
+and removal of the dues amount. See the [revised implementation and screenshots](design-revision/README.md).
+The original content/source review below is retained as history; its price callout
+and narrow V1 composition are no longer current.
+
 Scope: one review PR from `main` for issues #7, #8 and #9. No deployment to Sites
 or Hetzner, no merge, no companion changes. Both editions use these shared views.
 

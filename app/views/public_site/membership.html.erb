@@ -1,56 +1,62 @@
-<section class="post-page" aria-labelledby="membership-title">
-  <header class="post-page-heading">
-    <p class="eyebrow">MEMBERSHIP AT POST 165</p>
-    <h1 id="membership-title">Start with a meeting.</h1>
-    <p class="post-lead">Meet a few people, ask questions, and see how the Post fits into your life. You can visit before deciding to join.</p>
+<section class="post-page post-membership-page" aria-labelledby="membership-title">
+  <header class="post-page-heading launch-page-heading">
+    <div>
+      <p class="eyebrow">MEMBERSHIP AT POST 165</p>
+      <h1 id="membership-title">Start with a meeting.</h1>
+      <p class="post-lead">Meet a few people, ask questions, and see how the Post fits into your life. You can visit before deciding to join.</p>
+    </div>
+    <% if public_site_v1? %><span class="launch-post-number" aria-hidden="true">Post<strong>165</strong></span><% end %>
   </header>
 
-  <div class="post-join">
-    <p class="post-dues"><strong>$45</strong><span>Annual Post dues</span></p>
-    <%= link_to "Plan a meeting visit", visit_path, class: "main-action" %>
-  </div>
-
-  <div class="post-questions">
-    <section aria-labelledby="membership-join">
-      <h2 id="membership-join">How do I join Post 165?</h2>
-      <p>Come to a meeting with your DD214 or other proof of eligibility. Paper applications are available there, and you can fill one out and pay your dues at the meeting.</p>
-      <p><strong>Joining on the national website does not make you a member of Post 165.</strong> To join this Post, start with a meeting.</p>
-    </section>
-    <section aria-labelledby="membership-eligibility">
-      <h2 id="membership-eligibility">Am I eligible?</h2>
-      <p>If you served at least one day of federal active duty from December 7, 1941, onward and were discharged honorably or under honorable conditions, you’re eligible. Current active-duty service also qualifies. You don’t need to have served in a combat zone.</p>
-      <p><%= link_to "National’s eligibility questions", "https://www.legion.org/faq", class: "post-inline-link" %> cover Guard and Reserve service and other circumstances. If you need a replacement DD214, <%= link_to "request your records from the National Archives", "https://www.archives.gov/veterans", class: "post-inline-link" %>.</p>
-    </section>
-    <section aria-labelledby="membership-visit">
-      <h2 id="membership-visit">When can I visit?</h2>
-      <p>Regular meetings are on the first Tuesday, though we sometimes skip summer months. You don’t need to arrange an introduction before visiting.</p>
+  <div class="post-membership-body">
+    <aside class="post-join" aria-labelledby="membership-invitation">
+      <p class="post-label">A GOOD FIRST STEP</p>
+      <h2 id="membership-invitation">Come say hello.</h2>
+      <p>Find the meeting location and what to expect when you arrive. You can visit without applying to join.</p>
+      <%= link_to "Plan a meeting visit", visit_path, class: "main-action" %>
       <% if public_contact_available? %>
-        <p><%= link_to "Check with the Post", contact_path, class: "post-inline-link" %> to confirm the next meeting date. <%= link_to "First-visit information", visit_path, class: "post-inline-link" %> covers the venue and arrival.</p>
-      <% else %>
-        <p><%= link_to "First-visit information", visit_path, class: "post-inline-link" %> covers the venue and arrival. Meeting dates can vary, especially in summer.</p>
+        <div class="post-join-contact">
+          <h3>Membership questions?</h3>
+          <p>Ask for our membership chair or Adjutant.</p>
+          <%= render "public_contact_links" %>
+        </div>
       <% end %>
-      <p>Prefer a public occasion first? <%= link_to "See the public events calendar", events_path, class: "post-inline-link" %>.</p>
-    </section>
-    <section aria-labelledby="membership-participation">
-      <h2 id="membership-participation">What’s expected of me?</h2>
-      <p>There’s no attendance or volunteer requirement. You can help at a Car Show or brat fry, make Buddy Check calls, or join a planning group when it fits your interests and time.</p>
-      <p>Meetings bring together the Post’s traditions, officer reports, and business for members to discuss and vote on. Our Sergeant-at-Arms welcomes and introduces newcomers.</p>
-    </section>
-    <section aria-labelledby="membership-transfer">
-      <h2 id="membership-transfer">Already a Legion member?</h2>
-      <p>To transfer, come to a meeting with your nine-digit member ID and be ready to show your DD214. Once you’re accepted, the Post files the transfer with Department and National. If you’ve already paid this year’s dues to another post, you won’t pay twice.</p>
-    </section>
-    <section aria-labelledby="membership-renew">
-      <h2 id="membership-renew">How do I renew?</h2>
-      <p>Pay at a Post meeting or <%= link_to "renew on the national website", "https://www.legion.org/renew", class: "post-inline-link" %>. You can also use <%= link_to "MyLegion.org", "https://www.mylegion.org", class: "post-inline-link" %> to print a membership card or update your address.</p>
-    </section>
-  </div>
+    </aside>
 
-  <% if public_contact_available? %>
-    <section class="post-next" aria-labelledby="membership-questions">
-      <h2 id="membership-questions">A question before you visit?</h2>
-      <p>Contact the Post and ask for our membership chair or Adjutant.</p>
-      <%= render "public_contact_links" %>
-    </section>
-  <% end %>
+    <div class="post-questions">
+      <section aria-labelledby="membership-participation">
+        <h2 id="membership-participation">What’s expected of me?</h2>
+        <p>There’s no attendance or volunteer requirement. You can help at a Car Show or brat fry, make Buddy Check calls, or join a planning group when it fits your interests and time.</p>
+        <p>Meetings bring together the Post’s traditions, officer reports, and business for members to discuss and vote on. Our Sergeant-at-Arms welcomes and introduces newcomers.</p>
+      </section>
+      <section aria-labelledby="membership-join">
+        <h2 id="membership-join">How do I join Post 165?</h2>
+        <p>Come to a meeting with your DD214 or other proof of eligibility. Paper applications are available there, and you can fill one out and pay your dues at the meeting.</p>
+        <p><strong>Joining on the national website does not make you a member of Post 165.</strong> To join this Post, start with a meeting.</p>
+      </section>
+      <section aria-labelledby="membership-eligibility">
+        <h2 id="membership-eligibility">Am I eligible?</h2>
+        <p>If you served at least one day of federal active duty from December 7, 1941, onward and were discharged honorably or under honorable conditions, you’re eligible. Current active-duty service also qualifies. You don’t need to have served in a combat zone.</p>
+        <p><%= link_to "National’s eligibility questions", "https://www.legion.org/faq", class: "post-inline-link" %> cover Guard and Reserve service and other circumstances. If you need a replacement DD214, <%= link_to "request your records from the National Archives", "https://www.archives.gov/veterans", class: "post-inline-link" %>.</p>
+      </section>
+      <section aria-labelledby="membership-visit">
+        <h2 id="membership-visit">When can I visit?</h2>
+        <p>Regular meetings are on the first Tuesday, though we sometimes skip summer months. You don’t need to arrange an introduction before visiting.</p>
+        <% if public_contact_available? %>
+          <p><%= link_to "Check with the Post", contact_path, class: "post-inline-link" %> to confirm the next meeting date. <%= link_to "First-visit information", visit_path, class: "post-inline-link" %> covers the venue and arrival.</p>
+        <% else %>
+          <p><%= link_to "First-visit information", visit_path, class: "post-inline-link" %> covers the venue and arrival. Meeting dates can vary, especially in summer.</p>
+        <% end %>
+        <p>Prefer a public occasion first? <%= link_to "See the public events calendar", events_path, class: "post-inline-link" %>.</p>
+      </section>
+      <section aria-labelledby="membership-transfer">
+        <h2 id="membership-transfer">Already a Legion member?</h2>
+        <p>To transfer, come to a meeting with your nine-digit member ID and be ready to show your DD214. Once you’re accepted, the Post files the transfer with Department and National. If you’ve already paid this year’s dues to another post, you won’t pay twice.</p>
+      </section>
+      <section aria-labelledby="membership-renew">
+        <h2 id="membership-renew">How do I renew?</h2>
+        <p>Pay at a Post meeting or <%= link_to "renew on the national website", "https://www.legion.org/renew", class: "post-inline-link" %>. You can also use <%= link_to "MyLegion.org", "https://www.mylegion.org", class: "post-inline-link" %> to print a membership card or update your address.</p>
+      </section>
+    </div>
+  </div>
 </section>

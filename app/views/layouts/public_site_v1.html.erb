@@ -31,7 +31,7 @@
         </nav>
       </header>
       <main id="main-content" class="launch-main <%= "launch-interior" unless action_name == "home" %>" tabindex="-1">
-        <% if %w[home events visit contact].include?(action_name) && @page_error.nil? %>
+        <% if %w[home events visit contact about membership help].include?(action_name) && @page_error.nil? %>
           <%= yield %>
         <% else %>
           <div class="launch-reading"><%= yield %></div>

@@ -62,6 +62,13 @@ illustrated veterans. Do not invent local members, programs, or official marks.
 V1 now uses National’s Emblem Blue/Poppy Red and recommended Noto Sans web fonts;
 the earlier study’s gold accent is superseded. See [brand evidence](brand/README.md).
 
+October 7 footer-page revision: About, Membership and Veteran help must carry the
+same current V1 design as Events and First visit, including the heading treatment
+and page composition. The narrow fallback article wrapper was insufficient.
+Keep About substantive with local service and supported history. Membership should
+lead with visiting and participation; the owner requested that the dues amount
+stay off the public site. See the [current review](design/2026-10-footer-content/design-revision/README.md).
+
 ## The experience we are trying to create
 
 **“I can picture myself here, and I know how to take the next step.”**

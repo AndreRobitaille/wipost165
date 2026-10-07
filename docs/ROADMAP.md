@@ -51,7 +51,10 @@ Current content follow-up: the owner supplied local facts for
 [Membership #8](https://github.com/AndreRobitaille/wipost165/issues/8), and
 [Veteran help #9](https://github.com/AndreRobitaille/wipost165/issues/9).
 The shared pages are rewritten on `codex/public-page-content`, with the
-[source record](public-page-facts.md) and [local verification](design/2026-10-footer-content/README.md).
+[source record](public-page-facts.md) and [current layout verification](design/2026-10-footer-content/design-revision/README.md).
+The owner requested that these pages match the current V1 design and omit the
+dues amount. The revision retains a substantive About page and leads Membership
+with visiting and participation.
 Next: owner reviews and merges the one PR into `main`; no deployment in this pass.
 Home and First visit retain their existing meeting schedule and need a separate
 follow-up for the confirmed possibility of skipped summer months.
@@ -450,3 +453,16 @@ tests / 902 assertions plus nine Sites adapter tests; browser checks cover all
 three pages at 1440/390/320px, keyboard focus, enlarged text and hidden channels.
 Prepared on a new branch from `main` for one owner-reviewed PR targeting `main`.
 No merge, Sites refresh, production deployment or companion change.
+
+### October 7 — align the footer pages with the current V1 design
+
+Owner feedback identified that the three pages still used the narrow article
+wrapper. Removed that wrapper for these routes and reused the current V1 heading,
+type, colors and open layouts. About keeps the sourced service examples and 1928
+memorial history; Membership replaces the price callout with a visit invitation
+and moves optional participation first; Veteran help has a wide crisis panel and
+two clear local routes. The dues amount is removed from public copy and metadata,
+while the supplied fact sheet is unchanged. Both editions and hidden contact
+states are verified; CI passes 78/902 plus nine adapter tests.
+[Current screenshots and decisions](design/2026-10-footer-content/design-revision/README.md).
+This updates PR #10 for owner review, with no merge or deployment.

@@ -4,11 +4,14 @@
 
 The owner supplied the complete [public page fact sheets](public-page-facts.md)
 for issues #7, #8 and #9. Branch `codex/public-page-content`, created from `main`,
-implements About's local service/history narrative, Membership's $45 dues and
-meeting-based joining guide, and Veteran help's crisis-first Service Officer and
-county routes. The shared templates preserve both editions and independently
-configured contact channels. The [readiness worksheet](launch-content-readiness.md)
-now records the confirmed local answers.
+implements About's local service/history narrative, Membership's meeting-based
+joining guide, and Veteran help's crisis-first Service Officer and county routes.
+The owner then requested the current V1 design for these pages and removal of the
+dues amount. The [revised layouts](design/2026-10-footer-content/design-revision/README.md)
+now use V1's full-width headings and page compositions, preserving V2's table and
+independently configured contact channels. Membership leads with visiting and
+optional participation; the dues amount remains only in the supplied source record.
+The [readiness worksheet](launch-content-readiness.md) records these decisions.
 
 [Review notes and screenshots](design/2026-10-footer-content/README.md) include
 two source conflicts: regular meetings are excluded from the public calendar,
@@ -16,7 +19,8 @@ and National's renewal opening date differs from the supplied fall wording.
 The pages avoid those misleading claims. Home/First visit still need a separate
 follow-up for skipped summer meetings. Local CI passes 78 tests / 902 assertions
 plus nine Sites adapter tests; both editions pass desktop/phone and hidden-contact
-checks. Next: owner reviews and merges the single PR into `main`. No deployment
+checks. Next: owner reviews and merges [PR #10](https://github.com/AndreRobitaille/wipost165/pull/10)
+into `main`. No deployment
 was requested or performed; Sites and the coming-soon production service retain
 their existing content.
 
