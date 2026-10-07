@@ -41,17 +41,13 @@
       </section>
       <section aria-labelledby="membership-visit">
         <h2 id="membership-visit">When can I visit?</h2>
-        <p>Regular meetings are on the first Tuesday, though we sometimes skip summer months. You don’t need to arrange an introduction before visiting.</p>
-        <% if public_contact_available? %>
-          <p><%= link_to "Check with the Post", contact_path, class: "post-inline-link" %> to confirm the next meeting date. <%= link_to "First-visit information", visit_path, class: "post-inline-link" %> covers the venue and arrival.</p>
-        <% else %>
-          <p><%= link_to "First-visit information", visit_path, class: "post-inline-link" %> covers the venue and arrival. Meeting dates can vary, especially in summer.</p>
-        <% end %>
+        <p>Regular meetings are on the first Tuesday of every month at 6:30 p.m. at the Manitowoc Rifle &amp; Pistol Club. You don’t need to arrange an introduction before visiting.</p>
+        <p><%= link_to "First-visit information", visit_path, class: "post-inline-link" %> has the address and arrival details.</p>
         <p>Prefer a public occasion first? <%= link_to "See the public events calendar", events_path, class: "post-inline-link" %>.</p>
       </section>
       <section aria-labelledby="membership-transfer">
         <h2 id="membership-transfer">Already a Legion member?</h2>
-        <p>To transfer, come to a meeting with your nine-digit member ID and be ready to show your DD214. Once you’re accepted, the Post files the transfer with Department and National. If you’ve already paid this year’s dues to another post, you won’t pay twice.</p>
+        <p>To transfer, come to a meeting<% if public_contact_available? %> or <%= link_to "contact the Post", contact_path, class: "post-inline-link" %><% end %>. Have your nine-digit member ID and be ready to show your DD214. Once you’re accepted, the Post files the transfer with Department and National. If you’ve already paid this year’s dues to another post, you won’t pay twice.</p>
       </section>
       <section aria-labelledby="membership-renew">
         <h2 id="membership-renew">How do I renew?</h2>

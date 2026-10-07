@@ -4,7 +4,7 @@ module PublicSiteHelper
   SITE_DESCRIPTION = "Get to know Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin. Find an occasion, plan a first visit, or contact the Post.".freeze
   PAGE_TITLES = {
     "home" => "In good company", "events" => "Events", "visit" => "Your first visit",
-    "about" => "Still serving, together", "contact" => "Say hello",
+    "about" => "Service, close to home", "contact" => "Say hello",
     "membership" => "Membership", "help" => "Veteran help"
   }.freeze
 

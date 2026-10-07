@@ -60,8 +60,9 @@ obscured it. No form was submitted and no email or call was sent.
 
 October 7 content confirmation: the owner supplied [the full editorial source
 record](public-page-facts.md), including the Commander's answers about joining,
-renewal and Service Officer scope. The file is retained as supplied; its source
-notes distinguish approved, attested and draft meeting records. They are not
+renewal and Service Officer scope. The record includes the Commander’s October 7 publication and
+meeting-schedule clarifications; its source notes distinguish approved, attested
+and draft meeting records. They are not
 newly verified official minutes.
 
 | Fact | Approved public use | Source / recheck trigger |
@@ -69,9 +70,9 @@ newly verified official minutes.
 | Annual dues | Confirmed in the source record; omit the amount from public pages and metadata at the owner's subsequent October 7 request | Adjutant, October 2026, recorded in the fact sheet; recheck when dues change. |
 | Join / renew | Join with a paper application, proof of eligibility and dues at a meeting; renew at a meeting or online through National | Commander, October 7; recheck when local procedures change. |
 | Service Officer | A first point of contact for any veteran; ask through the Post's configured public phone/email; connect claims, appeals and formal benefits applications with the county office | Commander, October 7; recheck on role or contact-practice changes. No promise of Post claims representation, direct payments or office hours. |
-| Meeting exceptions | First Tuesday is the usual pattern; summer months can be skipped | Supplied September minutes summary; confirm the next meeting through the Post. The public calendar excludes regular member meetings under the publishing contract. |
+| Meeting schedule | First Tuesday of every month at 6:30 p.m. at the Manitowoc Rifle & Pistol Club | Commander, October 7; supersedes the skipped-month wording. The public calendar excludes regular member meetings under the publishing contract; no calendar integration in this PR. |
 
-The [content review](design/2026-10-footer-content/README.md) records source
+The [content review](design/2026-10-footer-content/design-revision/README.md) records source
 differences and deliberate omissions. County hours remain on the county website;
 crisis contact details were checked against the official Veterans Crisis Line.
 

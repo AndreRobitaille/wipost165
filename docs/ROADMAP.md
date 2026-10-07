@@ -55,9 +55,11 @@ The shared pages are rewritten on `codex/public-page-content`, with the
 The owner requested that these pages match the current V1 design and omit the
 dues amount. The revision retains a substantive About page and leads Membership
 with visiting and participation.
-Next: owner reviews and merges the one PR into `main`; no deployment in this pass.
-Home and First visit retain their existing meeting schedule and need a separate
-follow-up for the confirmed possibility of skipped summer months.
+Next: owner reviews and merges PR #10 into `main`. The latest instruction
+also authorizes pushing and refreshing the existing public V1 Sites preview.
+The Commander confirmed the first Tuesday of every month at 6:30 p.m. at the
+Manitowoc Rifle & Pistol Club. Membership now matches Home and First visit;
+the skipped-summer follow-up is superseded. Calendar integration is outside this PR.
 
 1. Read `AGENTS.md`, the current section of [HANDOFF](HANDOFF.md), and this roadmap.
    Inspect the checkout and preserve existing work before editing.
@@ -447,7 +449,7 @@ Added the owner's complete fact sheets verbatim and updated the readiness
 worksheet's stale dues/joining rows. Reworked the three shared pages into an
 editorial local-service narrative, visible membership questions, and a crisis-first
 help guide. Retained role-based contacts and graceful hidden-contact states.
-[Review notes](design/2026-10-footer-content/README.md) record source differences,
+[Review notes](design/2026-10-footer-content/design-revision/README.md) record source differences,
 omissions and desktop/phone screenshots for both editions. CI passes 78 Rails
 tests / 902 assertions plus nine Sites adapter tests; browser checks cover all
 three pages at 1440/390/320px, keyboard focus, enlarged text and hidden channels.
@@ -466,3 +468,12 @@ while the supplied fact sheet is unchanged. Both editions and hidden contact
 states are verified; CI passes 78/902 plus nine adapter tests.
 [Current screenshots and decisions](design/2026-10-footer-content/design-revision/README.md).
 This updates PR #10 for owner review, with no merge or deployment.
+
+### October 7 — final PR #10 review corrections
+
+Applied the Commander’s monthly meeting and dues-publication decisions, corrected
+About’s pillar/grouping and title, and refined transfer and unavailable-contact
+copy. Consolidated still-valid source notes, including the renewal-date conflict,
+into the design revision and removed the superseded first-pass evidence set.
+The owner requested code/PR updates, push and a V1 Sites refresh without new
+screenshots. No merge, preserved V2 Site update or Hetzner deployment.

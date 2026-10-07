@@ -13,16 +13,20 @@ independently configured contact channels. Membership leads with visiting and
 optional participation; the dues amount remains only in the supplied source record.
 The [readiness worksheet](launch-content-readiness.md) records these decisions.
 
-[Review notes and screenshots](design/2026-10-footer-content/README.md) include
-two source conflicts: regular meetings are excluded from the public calendar,
-and National's renewal opening date differs from the supplied fall wording.
-The pages avoid those misleading claims. Home/First visit still need a separate
-follow-up for skipped summer meetings. Local CI passes 78 tests / 902 assertions
-plus nine Sites adapter tests; both editions pass desktop/phone and hidden-contact
-checks. Next: owner reviews and merges [PR #10](https://github.com/AndreRobitaille/wipost165/pull/10)
-into `main`. No deployment
-was requested or performed; Sites and the coming-soon production service retain
-their existing content.
+[Consolidated source and review notes](design/2026-10-footer-content/design-revision/README.md)
+retain the National renewal-date discrepancy and the public calendar boundary:
+regular member meetings are excluded from that feed. The Commander confirmed
+that pages should state the first Tuesday of every month at 6:30 p.m. at the
+Manitowoc Rifle & Pistol Club. Membership now matches Home and First visit;
+there is no remaining skipped-summer follow-up or calendar integration in this PR.
+The source record retains $45 with an explicit instruction not to print the amount.
+Final review also separates About’s Community and youth work, corrects the
+Americanism label and About title, and refines hidden-contact and transfer copy.
+
+The owner authorized pushing the updates to
+[PR #10](https://github.com/AndreRobitaille/wipost165/pull/10) and refreshing the
+existing public V1 Sites preview, without new screenshots. Owner review and merge
+remain next. The preserved V2 Site and Hetzner production service are unchanged.
 
 ## October 7 — shareable V1 preview and source handoff
 
@@ -35,8 +39,8 @@ a Sites Worker that reads the same live public events feed; the read-only websit
 token is a server-side Sites secret. No AI API key is needed. The [older people-based Site](https://post165-in-good-company.andretr.chatgpt.site)
 remains unchanged for V2. [Identity, refresh procedure, and verification](design/2026-10-harbor-study/sites-preview/README.md)
 record the successful Sites deployment. This does not deploy the Rails production
-service. The footer content pass above can be reflected in a later authorized
-refresh of this same V1 Site after review and merge.
+service. The owner subsequently authorized refreshing this same V1 Site with the footer
+content pass above before merge.
 
 The incoming `main` deploy-hold guidance was fast-forwarded from GitHub. The current
 work was on `main`; GitHub's default branch remains `master`. CI now covers pushes
