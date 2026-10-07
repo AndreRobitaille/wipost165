@@ -53,6 +53,10 @@ and [county veterans services](https://manitowoccountywi.gov/departments/veteran
 - **History:** use “hundreds of elms” and 1928, without an exact tree count. Omit
   the unconfirmed charter date, namesake biography, awards and optional 2021 plaque
   passage. The linked Historical Society article supports the printed history.
+- **Guard homecoming example:** the Commander clarified on October 7 that the
+  flag welcome was a recent activity, not a recurring commitment. About uses
+  “have also turned out” to describe completed participation. Its original written
+  source remains the October 6 draft minutes; no approval of those minutes is implied.
 - **Service boundaries:** crisis help is first; Post phone/email are never labelled
   emergency or direct Service Officer lines. The page promises only the confirmed
   first-contact/referral role. County hours and specialized legal/accreditation

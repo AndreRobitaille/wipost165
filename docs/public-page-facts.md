@@ -5,7 +5,7 @@ Legend: CONFIRMED = a source is cited. NEEDS-CONFIRMING = a real local gap, with
 
 Writing rules for the pages (agreed 7 Oct 2026):
 - Name roles, not people: "our Commander", "our Adjutant", "our membership chair (1st Vice Commander)", "our Service Officer", "our Chaplain", "our Historian".
-- Write examples as ongoing work ("the Honor Guard provides funeral honors"), not this year's dates and counts. Dated facts below are kept only as the source line behind each example.
+- Use ongoing tense for confirmed recurring work ("the Honor Guard provides funeral honors"). Describe specific past activities as completed examples, without implying a regular program or future commitment. Dated facts below are kept as the source line behind each example.
 
 Source shorthand:
 - OG26 = The American Legion, 2026 Officer's Guide and Manual of Ceremonies, 63rd ed., rev. Feb 2026. https://www.legion.org/getmedia/9886852f-7570-4d04-85e8-2832116fdb63/27ia0226-post-officers-guide.pdf (page numbers are the printed page numbers).
@@ -19,12 +19,13 @@ Left out on purpose: sick call, Service Officer case details, any individual vet
 
 - Formal name: Robert E. Burns American Legion Post 165, Two Rivers, WI. CONFIRMED: repo docs/PURPOSE.md; Post knowledge; public Post site https://wiamericanlegionpost165.org/ and Seehafer News 12 Apr 2021 https://www.seehafernews.com/2021/04/12/two-rivers-american-legion-post-to-honor-wwi-vets-in-june/
 - What the Legion is: a veterans organization built on "devotion to mutual helpfulness" and four pillars: Veterans Affairs & Rehabilitation, National Security, Americanism, Children & Youth. CONFIRMED: https://www.legion.org/about
-- How Post 165's work maps to the pillars (page copy, ongoing tense):
+- How Post 165's work maps to the pillars:
   - Veterans Affairs & Rehabilitation: a Post Service Officer who connects veterans and families with benefits help (see #9); Buddy Checks, where members reach out to fellow veterans. CONFIRMED: PEC 29 Sep; Min 7 Jul; Min 1 Sep.
   - Americanism: the Honor Guard provides military funeral honors (shared with the local VFW) and presents the colors at community and sports events; the Post holds a public U.S. flag retirement ceremony at Paddler's Park; the Post hosts the Veterans Day Salute and takes part in Memorial Day observances. CONFIRMED: Min 7 Jul; Min 1 Sep; Min 6 Oct (draft); Events 20, 24, 31, 43.
   - Children & Youth: the Post sponsors young people to Badger Boys State and supports a local scholarship. CONFIRMED: Min 7 Jul.
   - Community: the Post runs a yearly Car & Bike Show at Walsh Field with free admission, holds brat fries, and staffs information booths at the Manitowoc County Fair, National Night Out, SnowFest and Ethnic Fest. It supports the Old Glory Honor Flight and turns out flag lines to welcome home deploying Guard units. CONFIRMED: Event 27; Min 1 Sep; PEC 29 Sep; Min 6 Oct (draft).
   - Source lines for the dated facts behind these (do not print on the page): 2026 flag retirement 4 Aug (Event 24); 2026 Car Show 5 Sep (Event 27); colors at a Green Bay Rockers game 12 Jul and a TRHS game (Events 20, 31); troop welcome-home lines (Min 6 Oct draft).
+  - Welcome-home clarification: the Commander confirmed on Oct 7 2026 that members did this recently, not as a regular activity. Use it only as a completed example: "Members have also turned out with flags to welcome National Guard troops home." The original written source is Min 6 Oct (draft); this clarification does not establish approval of those minutes or promise future participation.
 - History, 1928: the Burns Post raised community donations, planted roughly 900 memorial elms along the lakeshore highway for WWI dead, and won the name "American Legion Memorial Drive" from the County Board on 21 Nov 1928. CONFIRMED: https://www.manitowoccountyhistory.org/stories/american-legion-memorial-trees ; Seehafer News 2021 (above) gives 925 trees, Roosevelt Ave to Reed Ave. Use "hundreds of elms" on the page to avoid the count mismatch.
 - History, 2021: the Post dedicated a plaque honoring Two Rivers' WWI dead at the Memorial Drive wayside (4815 Memorial Drive) next to the "Spirit of the Rivers" monument. CONFIRMED: Seehafer News 2021.
 - History, 1936: the Post fielded a drill team and color guard (photo). CONFIRMED: https://search.library.wisc.edu/digital/APHSNMUI24BSZY8X
