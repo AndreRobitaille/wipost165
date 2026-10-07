@@ -104,3 +104,9 @@ The owner authorized pushing these corrections to PR #10 and refreshing the
 existing public V1 Sites preview. Merge remains for the owner; the preserved V2
 Site and Hetzner production service are outside this update. Deployment evidence
 is recorded in the [Sites handoff](../../2026-10-harbor-study/sites-preview/README.md).
+
+Final correction verification: `bin/ci` passed 78 Rails tests / 902 assertions
+and nine Sites adapter tests, with style, security, autoload and production assets
+passing. The regenerated V1 pages contain the reviewed copy. Sites version 3
+reported a successful deployment at the existing public V1 URL; the publisher
+secret revision is unchanged. No new screenshots were taken.

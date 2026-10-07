@@ -477,3 +477,8 @@ copy. Consolidated still-valid source notes, including the renewal-date conflict
 into the design revision and removed the superseded first-pass evidence set.
 The owner requested code/PR updates, push and a V1 Sites refresh without new
 screenshots. No merge, preserved V2 Site update or Hetzner deployment.
+
+CI passed 78 Rails tests / 902 assertions and nine adapter tests plus all other
+checks. Pushed the fixes to PR #10 and published Sites version 3 successfully at
+the existing public V1 URL, preserving the runtime secret.
+[Deployment record](design/2026-10-harbor-study/sites-preview/README.md).

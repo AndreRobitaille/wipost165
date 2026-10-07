@@ -7,9 +7,11 @@ incorrect interpretation; the current build replaces it with live calendar reads
 - V1: https://post165-v1-launch-preview.andretr.chatgpt.site
 - Preserved V2 concept: https://post165-in-good-company.andretr.chatgpt.site
 - V1 project: `appgprj_6ac6808b104481919e5be6d86d23188e`
-- Corrected saved version: `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_aa1b84f34a1481919c6da4a178b98949`
-- Sites source commit: `cb581dd3a7e00a00d11d7d308521815d61435568`
-- Successful corrected deployment: `appgdep_6ac68430e21c819193c5d8558e2d133b`, runtime secret revision 1.
+- Current saved version (3): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_12f88377c8848191afcc492ff49bf825`
+- Sites source commit: `6dd14964b8b6c44d5b9712dc550a629a67041f88`
+- Successful content-review deployment: `appgdep_6ac69359456c81919f0b12222b4acb5f`, October 7, 2026; runtime secret revision 1 (unchanged).
+- Rails content commit: `77ea58d` on `codex/public-page-content` / PR #10.
+- Earlier live-calendar correction: version 2, `appgdep_6ac68430e21c819193c5d8558e2d133b` (superseded by the content refresh).
 - Local Site checkout: `tmp/sites-v1-preview` (ignored by the Rails repository).
 - Original sample-only deployment: version 1, `appgdep_6ac6813c3d4881918d15652c6d8b5176` (superseded).
 
@@ -65,7 +67,26 @@ copy/design changes need a new export and deployment. No automation is necessary
 Run `bin/rails assets:clobber` afterward if compiled assets mask development/V2
 assets, as described in development guidance.
 
-## Verification
+## October 7 — footer content refresh
+
+The owner authorized pushing the final PR #10 corrections and publishing them to
+this existing public V1 Site before merge, without new screenshots. Rails views
+were re-exported with live-calendar mode and the previously compiled V1 assets;
+the Worker source and runtime settings did not change. Sites reported the version
+3 deployment succeeded at 18:45 UTC, with the same public URL and secret revision.
+
+`bin/ci` passed 78 Rails tests / 902 assertions, nine Sites adapter tests, style,
+security, autoloading and production asset compilation. The first local run hit
+the documented compiled-asset masking of V2 sample assets; clearing generated
+assets and rerunning CI passed. Export checks confirmed the monthly meeting copy,
+conditional transfer contact in the configured-contact build, distinct Community
+group, visible visit link/answers, and no dues amount in Membership.
+No new screenshots or hosted browser checks were taken for this copy refresh.
+The prior browser evidence below describes version 2; see the
+[consolidated content review](../../2026-10-footer-content/design-revision/README.md)
+for the page changes and editorial provenance.
+
+## Earlier live-calendar verification (version 2)
 
 - Full `bin/ci` passed: Rails 76 tests / 738 assertions, nine Sites adapter tests,
   Ruby style, security checks, autoloading and production assets.

@@ -26,7 +26,12 @@ Americanism label and About title, and refines hidden-contact and transfer copy.
 The owner authorized pushing the updates to
 [PR #10](https://github.com/AndreRobitaille/wipost165/pull/10) and refreshing the
 existing public V1 Sites preview, without new screenshots. Owner review and merge
-remain next. The preserved V2 Site and Hetzner production service are unchanged.
+remain next. CI passed 78 Rails tests / 902 assertions and nine Sites adapter
+tests plus style/security, autoload and production assets. The existing
+[V1 preview](https://post165-v1-launch-preview.andretr.chatgpt.site) now serves the
+reviewed pages: Sites version 3 reported a successful deployment with the existing
+server-side secret revision unchanged. [Deployment record](design/2026-10-harbor-study/sites-preview/README.md).
+The preserved V2 Site and Hetzner production service are unchanged.
 
 ## October 7 — shareable V1 preview and source handoff
 
