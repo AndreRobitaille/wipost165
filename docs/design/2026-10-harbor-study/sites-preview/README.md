@@ -7,10 +7,10 @@ incorrect interpretation; the current build replaces it with live calendar reads
 - V1: https://post165-v1-launch-preview.andretr.chatgpt.site
 - Preserved V2 concept: https://post165-in-good-company.andretr.chatgpt.site
 - V1 project: `appgprj_6ac6808b104481919e5be6d86d23188e`
-- Current saved version (3): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_12f88377c8848191afcc492ff49bf825`
-- Sites source commit: `6dd14964b8b6c44d5b9712dc550a629a67041f88`
-- Successful content-review deployment: `appgdep_6ac69359456c81919f0b12222b4acb5f`, October 7, 2026; runtime secret revision 1 (unchanged).
-- Rails content commit: `77ea58d` on `codex/public-page-content` / PR #10.
+- Current saved version (4): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_41af522b87fc8191957d0f0b6cea2e7f`
+- Sites source commit: `df12fe85c4d94bb46020363759872216c6a23fce`
+- Successful homecoming-copy deployment: `appgdep_6ac6991058048191b7c31020bab92dc5`, October 7, 2026; runtime secret revision 1 (unchanged).
+- Rails content commit: `72732ca` on `codex/public-page-content` / PR #10.
 - Earlier live-calendar correction: version 2, `appgdep_6ac68430e21c819193c5d8558e2d133b` (superseded by the content refresh).
 - Local Site checkout: `tmp/sites-v1-preview` (ignored by the Rails repository).
 - Original sample-only deployment: version 1, `appgdep_6ac6813c3d4881918d15652c6d8b5176` (superseded).
@@ -67,7 +67,18 @@ copy/design changes need a new export and deployment. No automation is necessary
 Run `bin/rails assets:clobber` afterward if compiled assets mask development/V2
 assets, as described in development guidance.
 
-## October 7 — footer content refresh
+## October 7 — clarify the homecoming example
+
+The Commander clarified that the Guard welcome-home activity happened recently
+and is not routine. About now says “Members have also turned out with flags to
+welcome National Guard troops home.” The source notes preserve the original
+October 6 draft-minutes provenance and the Commander’s October 7 clarification.
+CI passed 78 Rails tests / 902 assertions and nine adapter tests, plus all other
+checks. The exported About template contains the correction. Sites version 4
+reported success at 19:10 UTC with runtime secret revision 1 unchanged. No new
+screenshots or hosted browser checks were needed for this one-line correction.
+
+## October 7 — footer content refresh (version 3)
 
 The owner authorized pushing the final PR #10 corrections and publishing them to
 this existing public V1 Site before merge, without new screenshots. Rails views

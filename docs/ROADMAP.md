@@ -482,3 +482,11 @@ CI passed 78 Rails tests / 902 assertions and nine adapter tests plus all other
 checks. Pushed the fixes to PR #10 and published Sites version 3 successfully at
 the existing public V1 URL, preserving the runtime secret.
 [Deployment record](design/2026-10-harbor-study/sites-preview/README.md).
+
+### October 7 — qualify the Guard homecoming example
+
+Changed About’s habitual wording to completed participation after the Commander
+clarified this was a recent activity. Recorded the distinction in the source and
+review notes, retaining draft-minutes provenance. CI passed 78/902 plus nine
+adapter tests. Pushed to PR #10 and published Sites version 4 successfully with
+the existing secret unchanged.
