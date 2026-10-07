@@ -1,0 +1,225 @@
+[
+  {
+    "page": "/",
+    "width": 1440,
+    "pageWidth": 1425,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/events.html",
+    "width": 1440,
+    "pageWidth": 1440,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/visit.html",
+    "width": 1440,
+    "pageWidth": 1425,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/contact.html",
+    "width": 1440,
+    "pageWidth": 1440,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/about.html",
+    "width": 1440,
+    "pageWidth": 1440,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/membership.html",
+    "width": 1440,
+    "pageWidth": 1440,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/veteran-help.html",
+    "width": 1440,
+    "pageWidth": 1440,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/events/example-gathering.html",
+    "width": 1440,
+    "pageWidth": 1440,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/",
+    "width": 390,
+    "pageWidth": 375,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/events.html",
+    "width": 390,
+    "pageWidth": 375,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/visit.html",
+    "width": 390,
+    "pageWidth": 375,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/contact.html",
+    "width": 390,
+    "pageWidth": 375,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/about.html",
+    "width": 390,
+    "pageWidth": 390,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/membership.html",
+    "width": 390,
+    "pageWidth": 375,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/veteran-help.html",
+    "width": 390,
+    "pageWidth": 390,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/events/example-gathering.html",
+    "width": 390,
+    "pageWidth": 375,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/events.html",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/visit.html",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/contact.html",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/about.html",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/membership.html",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/veteran-help.html",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "page": "/events/example-gathering.html",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "sample": true,
+    "images": true,
+    "noindex": true
+  },
+  {
+    "url": "/events.html",
+    "open": true,
+    "title": "A Post gathering",
+    "focus": "event-title",
+    "sample": true
+  }
+]

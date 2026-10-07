@@ -1,1 +1,4 @@
-# See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+# Allow crawlers to read each page's noindex directive during preparation.
+# This file is not access control; the coming-soon setting controls public exposure.
+User-agent: *
+Disallow:

@@ -1,0 +1,103 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "pageWidth": 1425,
+      "headings": 1,
+      "answers": 5,
+      "panelWidth": 300,
+      "panelBackground": "rgb(255, 255, 255)",
+      "directions": "https://www.google.com/maps/search/?api=1&query=Manitowoc+Rifle+%26+Pistol+Club%2C+7227+Sandy+Hill+Ln%2C+Two+Rivers%2C+WI+54241",
+      "linkHeight": 44,
+      "text": "REGULAR POST MEETINGS\n\nFirst Tuesday\n\nEach month at 6:30 p.m.\n\nManitowoc Rifle & Pistol Club\n7227 Sandy Hill Ln\nTwo Rivers, WI 54241\nGet directions \u2197\n\nOther occasions may have a different time or location. Check the event details."
+    },
+    {
+      "width": 1024,
+      "pageWidth": 1009,
+      "headings": 1,
+      "answers": 5,
+      "panelWidth": 300,
+      "panelBackground": "rgb(255, 255, 255)",
+      "directions": "https://www.google.com/maps/search/?api=1&query=Manitowoc+Rifle+%26+Pistol+Club%2C+7227+Sandy+Hill+Ln%2C+Two+Rivers%2C+WI+54241",
+      "linkHeight": 44,
+      "text": "REGULAR POST MEETINGS\n\nFirst Tuesday\n\nEach month at 6:30 p.m.\n\nManitowoc Rifle & Pistol Club\n7227 Sandy Hill Ln\nTwo Rivers, WI 54241\nGet directions \u2197\n\nOther occasions may have a different time or location. Check the event details."
+    },
+    {
+      "width": 814,
+      "pageWidth": 799,
+      "headings": 1,
+      "answers": 5,
+      "panelWidth": 500,
+      "panelBackground": "rgb(255, 255, 255)",
+      "directions": "https://www.google.com/maps/search/?api=1&query=Manitowoc+Rifle+%26+Pistol+Club%2C+7227+Sandy+Hill+Ln%2C+Two+Rivers%2C+WI+54241",
+      "linkHeight": 44,
+      "text": "REGULAR POST MEETINGS\n\nFirst Tuesday\n\nEach month at 6:30 p.m.\n\nManitowoc Rifle & Pistol Club\n7227 Sandy Hill Ln\nTwo Rivers, WI 54241\nGet directions \u2197\n\nOther occasions may have a different time or location. Check the event details."
+    },
+    {
+      "width": 390,
+      "pageWidth": 375,
+      "headings": 1,
+      "answers": 5,
+      "panelWidth": 330,
+      "panelBackground": "rgb(255, 255, 255)",
+      "directions": "https://www.google.com/maps/search/?api=1&query=Manitowoc+Rifle+%26+Pistol+Club%2C+7227+Sandy+Hill+Ln%2C+Two+Rivers%2C+WI+54241",
+      "linkHeight": 44,
+      "text": "REGULAR POST MEETINGS\n\nFirst Tuesday\n\nEach month at 6:30 p.m.\n\nManitowoc Rifle & Pistol Club\n7227 Sandy Hill Ln\nTwo Rivers, WI 54241\nGet directions \u2197\n\nOther occasions may have a different time or location. Check the event details."
+    },
+    {
+      "width": 320,
+      "pageWidth": 305,
+      "headings": 1,
+      "answers": 5,
+      "panelWidth": 268.40625,
+      "panelBackground": "rgb(255, 255, 255)",
+      "directions": "https://www.google.com/maps/search/?api=1&query=Manitowoc+Rifle+%26+Pistol+Club%2C+7227+Sandy+Hill+Ln%2C+Two+Rivers%2C+WI+54241",
+      "linkHeight": 44,
+      "text": "REGULAR POST MEETINGS\n\nFirst Tuesday\n\nEach month at 6:30 p.m.\n\nManitowoc Rifle & Pistol Club\n7227 Sandy Hill Ln\nTwo Rivers, WI 54241\nGet directions \u2197\n\nOther occasions may have a different time or location. Check the event details."
+    }
+  ],
+  "keyboard": [
+    {
+      "text": "Skip to main content",
+      "href": "#main-content",
+      "outline": "solid",
+      "outlineWidth": "3px"
+    },
+    {
+      "text": "",
+      "href": "/",
+      "outline": "solid",
+      "outlineWidth": "3px"
+    },
+    {
+      "text": "Home",
+      "href": "/",
+      "outline": "solid",
+      "outlineWidth": "3px"
+    },
+    {
+      "text": "Events",
+      "href": "/events",
+      "outline": "solid",
+      "outlineWidth": "3px"
+    },
+    {
+      "text": "First visit",
+      "href": "/visit",
+      "outline": "solid",
+      "outlineWidth": "3px"
+    },
+    {
+      "text": "Contact",
+      "href": "/contact",
+      "outline": "solid",
+      "outlineWidth": "3px"
+    },
+    {
+      "text": "Get directions \u2197",
+      "href": "https://www.google.com/maps/search/?api=1&query=Manitowoc+Rifle+%26+Pistol+Club%2C+7227+Sandy+Hill+Ln%2C+Two+Rivers%2C+WI+54241",
+      "outline": "solid",
+      "outlineWidth": "3px"
+    }
+  ]
+}

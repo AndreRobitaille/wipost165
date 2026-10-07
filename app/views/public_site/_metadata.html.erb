@@ -1,0 +1,18 @@
+<% title = "#{public_page_title} · #{PublicSiteHelper::SITE_NAME}" %>
+<% description = public_page_description %>
+<title><%= title %></title>
+<%= tag.meta name: "description", content: description %>
+<% unless public_page_indexable? %>
+  <meta name="robots" content="noindex, nofollow, nosnippet, noimageindex">
+<% end %>
+<% if (canonical = public_canonical_url) %>
+  <%= tag.link rel: "canonical", href: canonical %>
+  <%= tag.meta property: "og:url", content: canonical %>
+<% end %>
+<meta property="og:type" content="website">
+<%= tag.meta property: "og:site_name", content: PublicSiteHelper::SITE_NAME %>
+<%= tag.meta property: "og:title", content: title %>
+<%= tag.meta property: "og:description", content: description %>
+<meta name="twitter:card" content="summary">
+<%= tag.meta name: "twitter:title", content: title %>
+<%= tag.meta name: "twitter:description", content: description %>

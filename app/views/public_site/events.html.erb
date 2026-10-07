@@ -1,5 +1,5 @@
 <section aria-labelledby="events-title">
-  <p class="eyebrow">AROUND THE TABLE</p><h1 id="events-title">Come on by.</h1>
+  <p class="eyebrow"><%= public_site_v1? ? "PUBLIC OCCASIONS" : "AROUND THE TABLE" %></p><h1 id="events-title">Come on by.</h1>
   <p class="calendar-window">Public occasions over the next three months.</p>
   <% if @events.any? %>
     <% @events.each do |event| %>

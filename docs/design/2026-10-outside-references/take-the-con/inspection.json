@@ -1,0 +1,448 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "1000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 1000,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://takethecon.org/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Take the Con | Space Security Conference",
+        "url": "https://takethecon.org/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "2000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 2000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/take-the-con/home-desktop.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/take-the-con/home-desktop.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://takethecon.org/",
+        "refs": {
+          "e1": {
+            "name": "Take the Con \u2014 home",
+            "role": "link"
+          },
+          "e10": {
+            "name": "Venue",
+            "role": "link"
+          },
+          "e11": {
+            "name": "Section dividers",
+            "role": "navigation"
+          },
+          "e12": {
+            "name": "PHOTO \u2014 NASA / JSC \u00b7 2019E035230 \u00b7 RESTORED APOLLO MISSION CONTROL (opens in a new tab)",
+            "role": "link"
+          },
+          "e13": {
+            "name": "HOME",
+            "role": "link"
+          },
+          "e14": {
+            "name": "CFP",
+            "role": "link"
+          },
+          "e15": {
+            "name": "SCHEDULE",
+            "role": "link"
+          },
+          "e16": {
+            "name": "SPONSORS",
+            "role": "link"
+          },
+          "e17": {
+            "name": "MERCH",
+            "role": "link"
+          },
+          "e18": {
+            "name": "ABOUT",
+            "role": "link"
+          },
+          "e19": {
+            "name": "CONTACT",
+            "role": "link"
+          },
+          "e2": {
+            "name": "TICKETS SOON",
+            "role": "link"
+          },
+          "e20": {
+            "name": "VENUE",
+            "role": "link"
+          },
+          "e21": {
+            "name": "TICKETS",
+            "role": "link"
+          },
+          "e22": {
+            "name": "Take the Con",
+            "role": "heading"
+          },
+          "e23": {
+            "name": "NASA \u00b7 ISS038-E-056389 (opens in a new tab)",
+            "role": "link"
+          },
+          "e24": {
+            "name": "Email address",
+            "role": "textbox"
+          },
+          "e25": {
+            "name": "TRANSMIT ADDRESS",
+            "role": "button"
+          },
+          "e3": {
+            "name": "Home",
+            "role": "link"
+          },
+          "e4": {
+            "name": "Call for Papers",
+            "role": "link"
+          },
+          "e5": {
+            "name": "Schedule SOON",
+            "role": "link"
+          },
+          "e6": {
+            "name": "Sponsors",
+            "role": "link"
+          },
+          "e7": {
+            "name": "Merch",
+            "role": "link"
+          },
+          "e8": {
+            "name": "About",
+            "role": "link"
+          },
+          "e9": {
+            "name": "Contact",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"Take the Con \u2014 home\" [ref=e1]\n- link \"TICKETS SOON\" [ref=e2]\n- link \"Home\" [ref=e3]\n- link \"Call for Papers\" [ref=e4]\n- link \"Schedule SOON\" [ref=e5]\n- link \"Sponsors\" [ref=e6]\n- link \"Merch\" [ref=e7]\n- link \"About\" [ref=e8]\n- link \"Contact\" [ref=e9]\n- link \"Venue\" [ref=e10]\n- navigation \"Section dividers\" [ref=e11]\n  - link \"HOME\" [ref=e13]\n  - link \"CFP\" [ref=e14]\n  - link \"SCHEDULE\" [ref=e15]\n  - link \"SPONSORS\" [ref=e16]\n  - link \"MERCH\" [ref=e17]\n  - link \"ABOUT\" [ref=e18]\n  - link \"CONTACT\" [ref=e19]\n  - link \"VENUE\" [ref=e20]\n  - link \"TICKETS\" [ref=e21]\n- heading \"Take the Con\" [level=1, ref=e22]\n- textbox \"Email address\" [required, ref=e24]\n- button \"TRANSMIT ADDRESS\" [ref=e25]\n- link \"NASA \u00b7 ISS038-E-056389 (opens in a new tab)\" [ref=e23]\n- link \"PHOTO \u2014 NASA / JSC \u00b7 2019E035230 \u00b7 RESTORED APOLLO MISSION CONTROL (opens in a new tab)\" [ref=e12]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "scrollintoview",
+      "@e18"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "scrolled": "@e18"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "click",
+      "@e18"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "clicked": "@e18"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "900"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 900,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/take-the-con/about-desktop.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/take-the-con/about-desktop.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://takethecon.org/about/",
+        "refs": {
+          "e1": {
+            "name": "Take the Con \u2014 home",
+            "role": "link"
+          },
+          "e10": {
+            "name": "Venue",
+            "role": "link"
+          },
+          "e11": {
+            "name": "Section dividers",
+            "role": "navigation"
+          },
+          "e12": {
+            "name": "PHOTO \u2014 NASA / NACA \u00b7 LEWIS LAB COMPUTER SECTION \u00b7 1957 \u00b7 COLORIZED BY ANDRE (opens in a new tab)",
+            "role": "link"
+          },
+          "e13": {
+            "name": "HOME",
+            "role": "link"
+          },
+          "e14": {
+            "name": "CFP",
+            "role": "link"
+          },
+          "e15": {
+            "name": "SCHEDULE",
+            "role": "link"
+          },
+          "e16": {
+            "name": "SPONSORS",
+            "role": "link"
+          },
+          "e17": {
+            "name": "MERCH",
+            "role": "link"
+          },
+          "e18": {
+            "name": "ABOUT",
+            "role": "link"
+          },
+          "e19": {
+            "name": "CONTACT",
+            "role": "link"
+          },
+          "e2": {
+            "name": "TICKETS SOON",
+            "role": "link"
+          },
+          "e20": {
+            "name": "VENUE",
+            "role": "link"
+          },
+          "e21": {
+            "name": "TICKETS",
+            "role": "link"
+          },
+          "e22": {
+            "name": "About",
+            "role": "heading"
+          },
+          "e23": {
+            "name": "TOURING CLUB ITALIANO \u00b7 1963 (opens in a new tab)",
+            "role": "link"
+          },
+          "e24": {
+            "name": "CC BY-SA 4.0 (opens in a new tab)",
+            "role": "link"
+          },
+          "e25": {
+            "name": "Michael Butler",
+            "role": "heading"
+          },
+          "e26": {
+            "name": "Dr. Jacob Oakley",
+            "role": "heading"
+          },
+          "e27": {
+            "name": "Henry Danielson",
+            "role": "heading"
+          },
+          "e28": {
+            "name": "The Business of Hacking",
+            "role": "link"
+          },
+          "e29": {
+            "name": "Theoretical Cybersecurity",
+            "role": "link"
+          },
+          "e3": {
+            "name": "Home",
+            "role": "link"
+          },
+          "e4": {
+            "name": "Call for Papers",
+            "role": "link"
+          },
+          "e5": {
+            "name": "Schedule SOON",
+            "role": "link"
+          },
+          "e6": {
+            "name": "Sponsors",
+            "role": "link"
+          },
+          "e7": {
+            "name": "Merch",
+            "role": "link"
+          },
+          "e8": {
+            "name": "About",
+            "role": "link"
+          },
+          "e9": {
+            "name": "Contact",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"Take the Con \u2014 home\" [ref=e1]\n- link \"TICKETS SOON\" [ref=e2]\n- link \"Home\" [ref=e3]\n- link \"Call for Papers\" [ref=e4]\n- link \"Schedule SOON\" [ref=e5]\n- link \"Sponsors\" [ref=e6]\n- link \"Merch\" [ref=e7]\n- link \"About\" [ref=e8]\n- link \"Contact\" [ref=e9]\n- link \"Venue\" [ref=e10]\n- navigation \"Section dividers\" [ref=e11]\n  - link \"HOME\" [ref=e13]\n  - link \"CFP\" [ref=e14]\n  - link \"SCHEDULE\" [ref=e15]\n  - link \"SPONSORS\" [ref=e16]\n  - link \"MERCH\" [ref=e17]\n  - link \"ABOUT\" [ref=e18]\n  - link \"CONTACT\" [ref=e19]\n  - link \"VENUE\" [ref=e20]\n  - link \"TICKETS\" [ref=e21]\n- heading \"About\" [level=1, ref=e22]\n- heading \"Michael Butler\" [level=2, ref=e25]\n- link \"The Business of Hacking\" [ref=e28]\n- link \"Theoretical Cybersecurity\" [ref=e29]\n- heading \"Dr. Jacob Oakley\" [level=2, ref=e26]\n- heading \"Henry Danielson\" [level=2, ref=e27]\n- link \"TOURING CLUB ITALIANO \u00b7 1963 (opens in a new tab)\" [ref=e23]\n- link \"CC BY-SA 4.0 (opens in a new tab)\" [ref=e24]\n- link \"PHOTO \u2014 NASA / NACA \u00b7 LEWIS LAB COMPUTER SECTION \u00b7 1957 \u00b7 COLORIZED BY ANDRE (opens in a new tab)\" [ref=e12]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "set",
+      "viewport",
+      "390",
+      "900"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 900,
+        "mobile": false,
+        "width": 390
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://takethecon.org/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Take the Con | Space Security Conference",
+        "url": "https://takethecon.org/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "900"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 900,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/take-the-con/home-phone.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/take-the-con/home-phone.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "scroll",
+      "down",
+      "680"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "scrolled": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/take-the-con/home-phone-details.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/take-the-con/home-phone-details.png"
+      },
+      "error": null
+    }
+  }
+]

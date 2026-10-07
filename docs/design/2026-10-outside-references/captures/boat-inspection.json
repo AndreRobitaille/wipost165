@@ -1,0 +1,85 @@
+[
+  {
+    "success": true,
+    "data": {
+      "deviceScaleFactor": 1.0,
+      "height": 960,
+      "mobile": false,
+      "width": 1440
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "title": "The Boat | SBS",
+      "url": "https://www.sbs.com.au/theboat/"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://www.sbs.com.au/theboat/",
+      "refs": {
+        "e1": {
+          "name": "Terms & Conditions",
+          "role": "link"
+        },
+        "e2": {
+          "name": "Privacy",
+          "role": "link"
+        },
+        "e3": {
+          "name": "Complaints",
+          "role": "link"
+        }
+      },
+      "snapshot": "- link \"Terms & Conditions\" [ref=e1]\n- link \"Privacy\" [ref=e2]\n- link \"Complaints\" [ref=e3]"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/boat-initial.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "scrolled": true
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/boat-scroll.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://www.sbs.com.au/theboat/",
+      "refs": {
+        "e1": {
+          "name": "Terms & Conditions",
+          "role": "link"
+        },
+        "e2": {
+          "name": "Privacy",
+          "role": "link"
+        },
+        "e3": {
+          "name": "Complaints",
+          "role": "link"
+        }
+      },
+      "snapshot": "- generic\n  - Canvas\n  - generic\n    - paragraph\n      - StaticText \"The crosswind surged in, filtering through the apertures in the rotten wood, sounding like a chorus of low moans.\"\n    - paragraph\n      - StaticText \"Hugging a beam at the top of the hatch, Mai looked out and her breath stopped. The boat had heeled so steeply that all she saw was an enormous wall of black-green water bearing down.\"\n    - paragraph\n      - StaticText \"She shut her eyes, opened them again \u2014 now the gunwale had crested the water, the ocean completely vanished.\"\n    - StaticText \"A body collided into hers, slammed her against the side of the hatch door.\"\n    - StaticText \"Other bodies \u2014 she was on top of them \u2014 thighs and ribs and arms and heads \u2014 jammed this way and that with each groaning tilt,\"\n- generic\n  - generic\n    - image \"This site uses audio. Headphones are recommended.\"\n- generic\n  - link \"Terms & Conditions\" [ref=e1]\n  - link \"Privacy\" [ref=e2]\n  - link \"Complaints\" [ref=e3]\n  - StaticText \"SBS acknowledges the Traditional Owners of Country throughout Australia\""
+    },
+    "error": null
+  }
+]

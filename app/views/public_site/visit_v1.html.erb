@@ -1,0 +1,54 @@
+<section class="launch-visit-page" aria-labelledby="visit-title">
+  <header class="launch-page-heading">
+    <div>
+      <p class="eyebrow">YOUR FIRST VISIT</p>
+      <h1 id="visit-title">Start with hello.</h1>
+      <p class="launch-page-lead">Start with a public event—it’s a good way to get to know us. You can also come to a regular Post meeting.</p>
+    </div>
+    <span class="launch-post-number" aria-hidden="true">Post<strong>165</strong></span>
+  </header>
+  <div class="launch-visit-body">
+    <div class="launch-faq-grid">
+      <section class="launch-faq-card" aria-labelledby="visit-alone">
+        <h2 id="visit-alone">Coming on your own?</h2>
+        <p>Ask who will be there and how to find them when you arrive. Knowing one name can make the first hello easier.</p>
+      </section>
+      <section class="launch-faq-card" aria-labelledby="visit-guests">
+        <h2 id="visit-guests">Bringing someone along?</h2>
+        <p>Guest and child attendance depends on the occasion. Check the event details or ask the Post before making plans. Attending an event and joining the Legion are separate questions.</p>
+      </section>
+      <section class="launch-faq-card" aria-labelledby="visit-meeting">
+        <h2 id="visit-meeting">Where and when does the Post meet?</h2>
+        <p>We meet the first Tuesday of each month at 6:30 p.m. at the Manitowoc Rifle &amp; Pistol Club. You can come to a regular meeting without arranging it first. For other occasions, check the location and time in the event details.</p>
+      </section>
+      <section class="launch-faq-card" aria-labelledby="visit-access">
+        <h2 id="visit-access">What about access or parking?</h2>
+        <p>The club has a gravel parking lot and no steps. Contact the Post if you need more detail about access. Other event locations may have different arrangements.</p>
+      </section>
+      <section class="launch-faq-card" aria-labelledby="visit-membership">
+        <h2 id="visit-membership">Do I need to join first?</h2>
+        <p>Ask about an occasion open to visitors. Attending a public event and becoming a member are separate steps.</p>
+      </section>
+    </div>
+    <aside class="launch-visit-meeting-details" aria-labelledby="meeting-summary">
+      <div class="launch-meeting-schedule">
+        <p class="eyebrow">REGULAR POST MEETINGS</p>
+        <h2 id="meeting-summary">First Tuesday</h2>
+        <p>Each month at <strong>6:30 p.m.</strong></p>
+      </div>
+      <div class="launch-meeting-place">
+        <address><strong>Manitowoc Rifle &amp; Pistol Club</strong><br>7227 Sandy Hill Ln<br>Two Rivers, WI 54241</address>
+        <%= link_to "Get directions ↗", "https://www.google.com/maps/search/?api=1&query=Manitowoc+Rifle+%26+Pistol+Club%2C+7227+Sandy+Hill+Ln%2C+Two+Rivers%2C+WI+54241", class: "text-action" %>
+      </div>
+      <p class="small-note">Other occasions may have a different time or location. Check the event details.</p>
+    </aside>
+  </div>
+  <div class="launch-help-bar">
+    <div><h2>Still have a question?</h2><p>Ask about visiting or find an upcoming public occasion.</p></div>
+    <div class="launch-detail-actions">
+      <% if public_contact_available? %><%= link_to "Ask about a first visit →", contact_path, class: "main-action" %><% end %>
+      <%= link_to "See upcoming events →", events_path, class: "text-action" %>
+    </div>
+    <% unless public_contact_available? %><p class="small-note">Email and phone contact details aren’t available here. Please check back before travelling if an event listing doesn’t answer your questions.</p><% end %>
+  </div>
+</section>

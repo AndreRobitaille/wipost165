@@ -6,6 +6,13 @@ decisions. [UI/UX and visual guidance](UI_UX_GUIDE.md) translates that intent in
 an experience; [ROADMAP](ROADMAP.md) records the work. Neither document proves
 visitor behavior or freezes a layout.
 
+October 7 staged-launch direction: V1 establishes the Post and supports public
+events, first visits, contact, membership, and veteran help without people/photos/
+personal stories. Recognizable regulars and the full introduction experience arrive
+with V2 roughly one or two months later. The purpose below remains the longer-term
+aim; remembering a real person is a V2 review criterion. See the
+[V1 first pass](design/2026-10-v1-launch/README.md).
+
 ## The job
 
 Help someone picture themselves in good company at Robert E. Burns American Legion

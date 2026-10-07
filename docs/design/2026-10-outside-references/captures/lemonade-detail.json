@@ -1,0 +1,1142 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://www.lemonade.com/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Lemonade: An Insurance Company Built for the 21st Century",
+        "url": "https://www.lemonade.com/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://www.lemonade.com/",
+        "refs": {
+          "e1": {
+            "name": "Skip to main content",
+            "role": "link"
+          },
+          "e10": {
+            "name": "1-844-733-8666",
+            "role": "link"
+          },
+          "e100": {
+            "name": "Giveback",
+            "role": "link"
+          },
+          "e101": {
+            "name": "Policy 2.0",
+            "role": "link"
+          },
+          "e102": {
+            "name": "API",
+            "role": "link"
+          },
+          "e103": {
+            "name": "Agents",
+            "role": "link"
+          },
+          "e104": {
+            "name": "Vet Clinics",
+            "role": "link"
+          },
+          "e105": {
+            "name": "Join the Team",
+            "role": "link"
+          },
+          "e106": {
+            "name": "Partners Program",
+            "role": "link"
+          },
+          "e107": {
+            "name": "Investor Relations",
+            "role": "link"
+          },
+          "e108": {
+            "name": "Transparency",
+            "role": "link"
+          },
+          "e109": {
+            "name": "Reviews",
+            "role": "link"
+          },
+          "e11": {
+            "name": "help@lemonade.com",
+            "role": "link"
+          },
+          "e110": {
+            "name": "facebook",
+            "role": "link"
+          },
+          "e111": {
+            "name": "X",
+            "role": "link"
+          },
+          "e112": {
+            "name": "instagram",
+            "role": "link"
+          },
+          "e113": {
+            "name": "linkedin",
+            "role": "link"
+          },
+          "e114": {
+            "name": "youtube",
+            "role": "link"
+          },
+          "e115": {
+            "name": "tiktok",
+            "role": "link"
+          },
+          "e116": {
+            "name": "Select your language",
+            "role": "button"
+          },
+          "e117": {
+            "name": "Terms of Service",
+            "role": "link"
+          },
+          "e118": {
+            "name": "Telematics Terms of Service",
+            "role": "link"
+          },
+          "e119": {
+            "name": "Legal Stuff",
+            "role": "link"
+          },
+          "e12": {
+            "name": "Download apple app",
+            "role": "link"
+          },
+          "e120": {
+            "name": "Privacy Pledge",
+            "role": "link"
+          },
+          "e121": {
+            "name": "Accessibility",
+            "role": "link"
+          },
+          "e122": {
+            "name": "Renters",
+            "role": "checkbox"
+          },
+          "e123": {
+            "name": "Homeowners",
+            "role": "checkbox"
+          },
+          "e124": {
+            "name": "Car",
+            "role": "checkbox"
+          },
+          "e125": {
+            "name": "Pet",
+            "role": "checkbox"
+          },
+          "e126": {
+            "name": "Term Life",
+            "role": "checkbox"
+          },
+          "e13": {
+            "name": "Download android app",
+            "role": "link"
+          },
+          "e14": {
+            "name": "Renters",
+            "role": "link"
+          },
+          "e15": {
+            "name": "Homeowners",
+            "role": "link"
+          },
+          "e16": {
+            "name": "Car",
+            "role": "link"
+          },
+          "e17": {
+            "name": "Pet",
+            "role": "link"
+          },
+          "e18": {
+            "name": "Life",
+            "role": "link"
+          },
+          "e19": {
+            "name": "Giveback",
+            "role": "link"
+          },
+          "e2": {
+            "name": "RENTERS",
+            "role": "heading"
+          },
+          "e20": {
+            "name": "Lemonade Insurance",
+            "role": "link"
+          },
+          "e21": {
+            "name": "My Account",
+            "role": "link"
+          },
+          "e22": {
+            "name": "Check our prices",
+            "role": "link"
+          },
+          "e23": {
+            "name": "Forget everything you know about insurance",
+            "role": "heading"
+          },
+          "e24": {
+            "name": "",
+            "role": "paragraph"
+          },
+          "e25": {
+            "name": "Check our Prices",
+            "role": "link"
+          },
+          "e26": {
+            "name": "Incredible Prices. Pay Monthly. Bundle Discounts.",
+            "role": "heading"
+          },
+          "e27": {
+            "name": "Renters",
+            "role": "generic"
+          },
+          "e28": {
+            "name": "Homeowners",
+            "role": "generic"
+          },
+          "e29": {
+            "name": "Car",
+            "role": "generic"
+          },
+          "e3": {
+            "name": "CAR",
+            "role": "heading"
+          },
+          "e30": {
+            "name": "Pet",
+            "role": "generic"
+          },
+          "e31": {
+            "name": "Term Life",
+            "role": "generic"
+          },
+          "e32": {
+            "name": "CHECK OUR PRICES",
+            "role": "link"
+          },
+          "e33": {
+            "name": "Instant everything",
+            "role": "heading"
+          },
+          "e34": {
+            "name": "",
+            "role": "paragraph"
+          },
+          "e35": {
+            "name": "Already insured? We\u2019ll help you switch!",
+            "role": "heading"
+          },
+          "e36": {
+            "name": "",
+            "role": "paragraph"
+          },
+          "e37": {
+            "name": "CHECK PRICES AND SWITCH",
+            "role": "link"
+          },
+          "e38": {
+            "name": "How Lemonade Works",
+            "role": "heading"
+          },
+          "e39": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e4": {
+            "name": "PET",
+            "role": "heading"
+          },
+          "e40": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e41": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e42": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e43": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e44": {
+            "name": "",
+            "role": "generic"
+          },
+          "e45": {
+            "name": "Renters",
+            "role": "heading"
+          },
+          "e46": {
+            "name": "",
+            "role": "generic"
+          },
+          "e47": {
+            "name": "Homeowners",
+            "role": "heading"
+          },
+          "e48": {
+            "name": "",
+            "role": "generic"
+          },
+          "e49": {
+            "name": "Car",
+            "role": "heading"
+          },
+          "e5": {
+            "name": "RESOURCES",
+            "role": "heading"
+          },
+          "e50": {
+            "name": "",
+            "role": "generic"
+          },
+          "e51": {
+            "name": "Pet",
+            "role": "heading"
+          },
+          "e52": {
+            "name": "",
+            "role": "generic"
+          },
+          "e53": {
+            "name": "Term Life",
+            "role": "heading"
+          },
+          "e54": {
+            "name": "The (Almost) 5 Star Insurance Company",
+            "role": "heading"
+          },
+          "e55": {
+            "name": "",
+            "role": "paragraph"
+          },
+          "e56": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e57": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e58": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e59": {
+            "name": "Renters Insurance",
+            "role": "link"
+          },
+          "e6": {
+            "name": "HOMEOWNERS",
+            "role": "heading"
+          },
+          "e60": {
+            "name": "Renters Insurance Hub",
+            "role": "link"
+          },
+          "e61": {
+            "name": "What is Renters Insurance",
+            "role": "link"
+          },
+          "e62": {
+            "name": "Renters Insurance Coverage",
+            "role": "link"
+          },
+          "e63": {
+            "name": "Renters Insurance Cost",
+            "role": "link"
+          },
+          "e64": {
+            "name": "How to Get Renters Insurance",
+            "role": "link"
+          },
+          "e65": {
+            "name": "Car and Renters Bundle",
+            "role": "link"
+          },
+          "e66": {
+            "name": "Car Insurance",
+            "role": "link"
+          },
+          "e67": {
+            "name": "Car Insurance Hub",
+            "role": "link"
+          },
+          "e68": {
+            "name": "Pay Per Mile Car Insurance",
+            "role": "link"
+          },
+          "e69": {
+            "name": "Car Insurance Coverage",
+            "role": "link"
+          },
+          "e7": {
+            "name": "LIFE",
+            "role": "heading"
+          },
+          "e70": {
+            "name": "Car Insurance Cost",
+            "role": "link"
+          },
+          "e71": {
+            "name": "Comprehensive Car Insurance",
+            "role": "link"
+          },
+          "e72": {
+            "name": "Car Insurance by Vehicle",
+            "role": "link"
+          },
+          "e73": {
+            "name": "Pet Insurance",
+            "role": "link"
+          },
+          "e74": {
+            "name": "Pet Insurance Hub",
+            "role": "link"
+          },
+          "e75": {
+            "name": "Dog Insurance",
+            "role": "link"
+          },
+          "e76": {
+            "name": "Cat Insurance",
+            "role": "link"
+          },
+          "e77": {
+            "name": "Compare Pet Insurance",
+            "role": "link"
+          },
+          "e78": {
+            "name": "Pet Insurance Coverage",
+            "role": "link"
+          },
+          "e79": {
+            "name": "Pet Insurance Cost",
+            "role": "link"
+          },
+          "e8": {
+            "name": "FEATURES",
+            "role": "heading"
+          },
+          "e80": {
+            "name": "Blog",
+            "role": "link"
+          },
+          "e81": {
+            "name": "FAQ",
+            "role": "link"
+          },
+          "e82": {
+            "name": "Where We're Live",
+            "role": "link"
+          },
+          "e83": {
+            "name": "Insurance Dictionary",
+            "role": "link"
+          },
+          "e84": {
+            "name": "Sitemap",
+            "role": "link"
+          },
+          "e85": {
+            "name": "Homeowners Insurance",
+            "role": "link"
+          },
+          "e86": {
+            "name": "Home Insurance Hub",
+            "role": "link"
+          },
+          "e87": {
+            "name": "What is Homeowners Insurance",
+            "role": "link"
+          },
+          "e88": {
+            "name": "Homeowners Insurance Coverage",
+            "role": "link"
+          },
+          "e89": {
+            "name": "Homeowners Insurance Cost",
+            "role": "link"
+          },
+          "e9": {
+            "name": "COMPANY",
+            "role": "heading"
+          },
+          "e90": {
+            "name": "How Much Home Insurance Do I Need",
+            "role": "link"
+          },
+          "e91": {
+            "name": "Car and Home Bundle",
+            "role": "link"
+          },
+          "e92": {
+            "name": "Term Life Insurance",
+            "role": "link"
+          },
+          "e93": {
+            "name": "Life Insurance Hub",
+            "role": "link"
+          },
+          "e94": {
+            "name": "Life Insurance Coverage",
+            "role": "link"
+          },
+          "e95": {
+            "name": "No Exam Life Insurance",
+            "role": "link"
+          },
+          "e96": {
+            "name": "How Does Life Insurance Work",
+            "role": "link"
+          },
+          "e97": {
+            "name": "How Much Life Insurance Do I Need",
+            "role": "link"
+          },
+          "e98": {
+            "name": "Contingent Beneficiary",
+            "role": "link"
+          },
+          "e99": {
+            "name": "Claims",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"Skip to main content\" [ref=e1]\n- link \"Renters\" [ref=e14]\n- link \"Homeowners\" [ref=e15]\n- link \"Car\" [ref=e16]\n- link \"Pet\" [ref=e17]\n- link \"Life\" [ref=e18]\n- link \"Giveback\" [ref=e19]\n- link \"Lemonade Insurance\" [ref=e20]\n- link \"My Account\" [ref=e21]\n- link \"Check our prices\" [ref=e22]\n- heading \"Forget everything you know about insurance\" [level=1, ref=e23] focusable [tabindex]\n- paragraph \"Instant everything. Incredible prices. Big heart.\" [ref=e24] focusable [tabindex]\n- link \"Check our Prices\" [ref=e25]\n- heading \"Incredible Prices. Pay Monthly. Bundle Discounts.\" [level=2, ref=e26]\n- generic \"Renters\" [ref=e27] clickable [cursor:pointer, onclick]\n  - generic [ref=e44] clickable [cursor:pointer, onclick]\n    - checkbox \"Renters\" [checked=false, ref=e122]\n  - heading \"Renters\" [level=3, ref=e45]\n- generic \"Homeowners\" [ref=e28] clickable [cursor:pointer, onclick]\n  - generic [ref=e46] clickable [cursor:pointer, onclick]\n    - checkbox \"Homeowners\" [checked=false, ref=e123]\n  - heading \"Homeowners\" [level=3, ref=e47]\n- generic \"Car\" [ref=e29] clickable [cursor:pointer, onclick]\n  - generic [ref=e48] clickable [cursor:pointer, onclick]\n    - checkbox \"Car\" [checked=false, ref=e124]\n  - heading \"Car\" [level=3, ref=e49]\n- generic \"Pet\" [ref=e30] clickable [cursor:pointer, onclick]\n  - generic [ref=e50] clickable [cursor:pointer, onclick]\n    - checkbox \"Pet\" [checked=false, ref=e125]\n  - heading \"Pet\" [level=3, ref=e51]\n- generic \"Term Life\" [ref=e31] clickable [cursor:pointer, onclick]\n  - generic [ref=e52] clickable [cursor:pointer, onclick]\n    - checkbox \"Term Life\" [checked=false, ref=e126]\n  - heading \"Term Life\" [level=3, ref=e53]\n- link \"CHECK OUR PRICES\" [ref=e32]\n- heading \"The (Almost) 5 Star Insurance Company\" [level=2, ref=e54] focusable [tabindex]\n- paragraph \"Lemonade has earned 4.9 stars in the App store, and\\nis also top-rated by Supermoney, Clearsurance, a\" [ref=e55] focusable [tabindex]\n- heading \"Instant everything\" [level=2, ref=e33] focusable [tabindex]\n- paragraph \"We use AI to craft the perfect policy for you, and to pay out claims. \\n It couldn\u2019t be easier or fas\" [ref=e34] focusable [tabindex]\n- heading \"Already insured? We\u2019ll help you switch!\" [level=2, ref=e35] focusable [tabindex]\n- paragraph \"People left these insurance companies to join Lemonade:\" [ref=e36] focusable [tabindex]\n- link \"CHECK PRICES AND SWITCH\" [ref=e37]\n- heading \"How Lemonade Works\" [level=2, ref=e38] focusable [tabindex]\n- listitem \"Designed for Social ImpactLemonade Inc. is a Public Benefit Corporation and certified B-Corp. Social\" [level=1, ref=e56] focusable [tabindex]\n- listitem \"NYSE:LMNDLemonade is a publicly traded company, listed on the New York Stock Exchange under the LMND\" [level=1, ref=e57] focusable [tabindex]\n- listitem \"A-Rated and Backed by GiantsLemonade is A-rated, fully regulated and reinsured by the most trusted n\" [level=1, ref=e58] focusable [tabindex]\n- heading \"RENTERS\" [level=3, ref=e2]\n- link \"Renters Insurance\" [ref=e59]\n- link \"Renters Insurance Hub\" [ref=e60]\n- link \"What is Renters Insurance\" [ref=e61]\n- link \"Renters Insurance Coverage\" [ref=e62]\n- link \"Renters Insurance Cost\" [ref=e63]\n- link \"How to Get Renters Insurance\" [ref=e64]\n- link \"Car and Renters Bundle\" [ref=e65]\n- heading \"CAR\" [level=3, ref=e3]\n- link \"Car Insurance\" [ref=e66]\n- link \"Car Insurance Hub\" [ref=e67]\n- link \"Pay Per Mile Car Insurance\" [ref=e68]\n- link \"Car Insurance Coverage\" [ref=e69]\n- link \"Car Insurance Cost\" [ref=e70]\n- link \"Comprehensive Car Insurance\" [ref=e71]\n- link \"Car Insurance by Vehicle\" [ref=e72]\n- heading \"PET\" [level=3, ref=e4]\n- link \"Pet Insurance\" [ref=e73]\n- link \"Pet Insurance Hub\" [ref=e74]\n- link \"Dog Insurance\" [ref=e75]\n- link \"Cat Insurance\" [ref=e76]\n- link \"Compare Pet Insurance\" [ref=e77]\n- link \"Pet Insurance Coverage\" [ref=e78]\n- link \"Pet Insurance Cost\" [ref=e79]\n- heading \"RESOURCES\" [level=3, ref=e5]\n- link \"Blog\" [ref=e80]\n- link \"FAQ\" [ref=e81]\n- link \"Where We're Live\" [ref=e82]\n- link \"Insurance Dictionary\" [ref=e83]\n- link \"Sitemap\" [ref=e84]\n- heading \"HOMEOWNERS\" [level=3, ref=e6]\n- link \"Homeowners Insurance\" [ref=e85]\n- link \"Home Insurance Hub\" [ref=e86]\n- link \"What is Homeowners Insurance\" [ref=e87]\n- link \"Homeowners Insurance Coverage\" [ref=e88]\n- link \"Homeowners Insurance Cost\" [ref=e89]\n- link \"How Much Home Insurance Do I Need\" [ref=e90]\n- link \"Car and Home Bundle\" [ref=e91]\n- heading \"LIFE\" [level=3, ref=e7]\n- link \"Term Life Insurance\" [ref=e92]\n- link \"Life Insurance Hub\" [ref=e93]\n- link \"Life Insurance Coverage\" [ref=e94]\n- link \"No Exam Life Insurance\" [ref=e95]\n- link \"How Does Life Insurance Work\" [ref=e96]\n- link \"How Much Life Insurance Do I Need\" [ref=e97]\n- link \"Contingent Beneficiary\" [ref=e98]\n- heading \"FEATURES\" [level=3, ref=e8]\n- link \"Claims\" [ref=e99]\n- link \"Giveback\" [ref=e100]\n- link \"Policy 2.0\" [ref=e101]\n- link \"API\" [ref=e102]\n- link \"Agents\" [ref=e103]\n- link \"Vet Clinics\" [ref=e104]\n- heading \"COMPANY\" [level=3, ref=e9]\n- link \"Join the Team\" [ref=e105]\n- link \"Partners Program\" [ref=e106]\n- link \"Investor Relations\" [ref=e107]\n- link \"Transparency\" [ref=e108]\n- link \"Reviews\" [ref=e109]\n- link \"facebook\" [ref=e110]\n- link \"X\" [ref=e111]\n- link \"instagram\" [ref=e112]\n- link \"linkedin\" [ref=e113]\n- link \"youtube\" [ref=e114]\n- link \"tiktok\" [ref=e115]\n- link \"1-844-733-8666\" [ref=e10]\n- link \"help@lemonade.com\" [ref=e11]\n- button \"Select your language\" [ref=e116]\n- link \"Download apple app\" [ref=e12]\n- link \"Download android app\" [ref=e13]\n- listitem \"Terms of Service\" [level=1, ref=e39] clickable [cursor:pointer]\n  - link \"Terms of Service\" [ref=e117]\n- listitem \"Telematics Terms of Service\" [level=1, ref=e40] clickable [cursor:pointer]\n  - link \"Telematics Terms of Service\" [ref=e118]\n- listitem \"Legal Stuff\" [level=1, ref=e41] clickable [cursor:pointer]\n  - link \"Legal Stuff\" [ref=e119]\n- listitem \"Privacy Pledge\" [level=1, ref=e42] clickable [cursor:pointer]\n  - link \"Privacy Pledge\" [ref=e120]\n- listitem \"Accessibility\" [level=1, ref=e43] clickable [cursor:pointer]\n  - link \"Accessibility\" [ref=e121]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/lemonade-hero.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/lemonade-hero.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "scroll",
+      "down",
+      "1200"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "scrolled": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "2000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 2000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/lemonade-interior.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/lemonade-interior.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://www.lemonade.com/",
+        "refs": {
+          "e1": {
+            "name": "Skip to main content",
+            "role": "link"
+          },
+          "e10": {
+            "name": "1-844-733-8666",
+            "role": "link"
+          },
+          "e100": {
+            "name": "Giveback",
+            "role": "link"
+          },
+          "e101": {
+            "name": "Policy 2.0",
+            "role": "link"
+          },
+          "e102": {
+            "name": "API",
+            "role": "link"
+          },
+          "e103": {
+            "name": "Agents",
+            "role": "link"
+          },
+          "e104": {
+            "name": "Vet Clinics",
+            "role": "link"
+          },
+          "e105": {
+            "name": "Join the Team",
+            "role": "link"
+          },
+          "e106": {
+            "name": "Partners Program",
+            "role": "link"
+          },
+          "e107": {
+            "name": "Investor Relations",
+            "role": "link"
+          },
+          "e108": {
+            "name": "Transparency",
+            "role": "link"
+          },
+          "e109": {
+            "name": "Reviews",
+            "role": "link"
+          },
+          "e11": {
+            "name": "help@lemonade.com",
+            "role": "link"
+          },
+          "e110": {
+            "name": "facebook",
+            "role": "link"
+          },
+          "e111": {
+            "name": "X",
+            "role": "link"
+          },
+          "e112": {
+            "name": "instagram",
+            "role": "link"
+          },
+          "e113": {
+            "name": "linkedin",
+            "role": "link"
+          },
+          "e114": {
+            "name": "youtube",
+            "role": "link"
+          },
+          "e115": {
+            "name": "tiktok",
+            "role": "link"
+          },
+          "e116": {
+            "name": "Select your language",
+            "role": "button"
+          },
+          "e117": {
+            "name": "Terms of Service",
+            "role": "link"
+          },
+          "e118": {
+            "name": "Telematics Terms of Service",
+            "role": "link"
+          },
+          "e119": {
+            "name": "Legal Stuff",
+            "role": "link"
+          },
+          "e12": {
+            "name": "Download apple app",
+            "role": "link"
+          },
+          "e120": {
+            "name": "Privacy Pledge",
+            "role": "link"
+          },
+          "e121": {
+            "name": "Accessibility",
+            "role": "link"
+          },
+          "e122": {
+            "name": "Renters",
+            "role": "checkbox"
+          },
+          "e123": {
+            "name": "Homeowners",
+            "role": "checkbox"
+          },
+          "e124": {
+            "name": "Car",
+            "role": "checkbox"
+          },
+          "e125": {
+            "name": "Pet",
+            "role": "checkbox"
+          },
+          "e126": {
+            "name": "Term Life",
+            "role": "checkbox"
+          },
+          "e13": {
+            "name": "Download android app",
+            "role": "link"
+          },
+          "e14": {
+            "name": "Renters",
+            "role": "link"
+          },
+          "e15": {
+            "name": "Homeowners",
+            "role": "link"
+          },
+          "e16": {
+            "name": "Car",
+            "role": "link"
+          },
+          "e17": {
+            "name": "Pet",
+            "role": "link"
+          },
+          "e18": {
+            "name": "Life",
+            "role": "link"
+          },
+          "e19": {
+            "name": "Giveback",
+            "role": "link"
+          },
+          "e2": {
+            "name": "RENTERS",
+            "role": "heading"
+          },
+          "e20": {
+            "name": "Lemonade Insurance",
+            "role": "link"
+          },
+          "e21": {
+            "name": "My Account",
+            "role": "link"
+          },
+          "e22": {
+            "name": "Check our prices",
+            "role": "link"
+          },
+          "e23": {
+            "name": "Forget everything you know about insurance",
+            "role": "heading"
+          },
+          "e24": {
+            "name": "",
+            "role": "paragraph"
+          },
+          "e25": {
+            "name": "Check our Prices",
+            "role": "link"
+          },
+          "e26": {
+            "name": "Incredible Prices. Pay Monthly. Bundle Discounts.",
+            "role": "heading"
+          },
+          "e27": {
+            "name": "Renters",
+            "role": "generic"
+          },
+          "e28": {
+            "name": "Homeowners",
+            "role": "generic"
+          },
+          "e29": {
+            "name": "Car",
+            "role": "generic"
+          },
+          "e3": {
+            "name": "CAR",
+            "role": "heading"
+          },
+          "e30": {
+            "name": "Pet",
+            "role": "generic"
+          },
+          "e31": {
+            "name": "Term Life",
+            "role": "generic"
+          },
+          "e32": {
+            "name": "CHECK OUR PRICES",
+            "role": "link"
+          },
+          "e33": {
+            "name": "Instant everything",
+            "role": "heading"
+          },
+          "e34": {
+            "name": "",
+            "role": "paragraph"
+          },
+          "e35": {
+            "name": "Already insured? We\u2019ll help you switch!",
+            "role": "heading"
+          },
+          "e36": {
+            "name": "",
+            "role": "paragraph"
+          },
+          "e37": {
+            "name": "CHECK PRICES AND SWITCH",
+            "role": "link"
+          },
+          "e38": {
+            "name": "How Lemonade Works",
+            "role": "heading"
+          },
+          "e39": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e4": {
+            "name": "PET",
+            "role": "heading"
+          },
+          "e40": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e41": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e42": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e43": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e44": {
+            "name": "",
+            "role": "generic"
+          },
+          "e45": {
+            "name": "Renters",
+            "role": "heading"
+          },
+          "e46": {
+            "name": "",
+            "role": "generic"
+          },
+          "e47": {
+            "name": "Homeowners",
+            "role": "heading"
+          },
+          "e48": {
+            "name": "",
+            "role": "generic"
+          },
+          "e49": {
+            "name": "Car",
+            "role": "heading"
+          },
+          "e5": {
+            "name": "RESOURCES",
+            "role": "heading"
+          },
+          "e50": {
+            "name": "",
+            "role": "generic"
+          },
+          "e51": {
+            "name": "Pet",
+            "role": "heading"
+          },
+          "e52": {
+            "name": "",
+            "role": "generic"
+          },
+          "e53": {
+            "name": "Term Life",
+            "role": "heading"
+          },
+          "e54": {
+            "name": "The (Almost) 5 Star Insurance Company",
+            "role": "heading"
+          },
+          "e55": {
+            "name": "",
+            "role": "paragraph"
+          },
+          "e56": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e57": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e58": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e59": {
+            "name": "Renters Insurance",
+            "role": "link"
+          },
+          "e6": {
+            "name": "HOMEOWNERS",
+            "role": "heading"
+          },
+          "e60": {
+            "name": "Renters Insurance Hub",
+            "role": "link"
+          },
+          "e61": {
+            "name": "What is Renters Insurance",
+            "role": "link"
+          },
+          "e62": {
+            "name": "Renters Insurance Coverage",
+            "role": "link"
+          },
+          "e63": {
+            "name": "Renters Insurance Cost",
+            "role": "link"
+          },
+          "e64": {
+            "name": "How to Get Renters Insurance",
+            "role": "link"
+          },
+          "e65": {
+            "name": "Car and Renters Bundle",
+            "role": "link"
+          },
+          "e66": {
+            "name": "Car Insurance",
+            "role": "link"
+          },
+          "e67": {
+            "name": "Car Insurance Hub",
+            "role": "link"
+          },
+          "e68": {
+            "name": "Pay Per Mile Car Insurance",
+            "role": "link"
+          },
+          "e69": {
+            "name": "Car Insurance Coverage",
+            "role": "link"
+          },
+          "e7": {
+            "name": "LIFE",
+            "role": "heading"
+          },
+          "e70": {
+            "name": "Car Insurance Cost",
+            "role": "link"
+          },
+          "e71": {
+            "name": "Comprehensive Car Insurance",
+            "role": "link"
+          },
+          "e72": {
+            "name": "Car Insurance by Vehicle",
+            "role": "link"
+          },
+          "e73": {
+            "name": "Pet Insurance",
+            "role": "link"
+          },
+          "e74": {
+            "name": "Pet Insurance Hub",
+            "role": "link"
+          },
+          "e75": {
+            "name": "Dog Insurance",
+            "role": "link"
+          },
+          "e76": {
+            "name": "Cat Insurance",
+            "role": "link"
+          },
+          "e77": {
+            "name": "Compare Pet Insurance",
+            "role": "link"
+          },
+          "e78": {
+            "name": "Pet Insurance Coverage",
+            "role": "link"
+          },
+          "e79": {
+            "name": "Pet Insurance Cost",
+            "role": "link"
+          },
+          "e8": {
+            "name": "FEATURES",
+            "role": "heading"
+          },
+          "e80": {
+            "name": "Blog",
+            "role": "link"
+          },
+          "e81": {
+            "name": "FAQ",
+            "role": "link"
+          },
+          "e82": {
+            "name": "Where We're Live",
+            "role": "link"
+          },
+          "e83": {
+            "name": "Insurance Dictionary",
+            "role": "link"
+          },
+          "e84": {
+            "name": "Sitemap",
+            "role": "link"
+          },
+          "e85": {
+            "name": "Homeowners Insurance",
+            "role": "link"
+          },
+          "e86": {
+            "name": "Home Insurance Hub",
+            "role": "link"
+          },
+          "e87": {
+            "name": "What is Homeowners Insurance",
+            "role": "link"
+          },
+          "e88": {
+            "name": "Homeowners Insurance Coverage",
+            "role": "link"
+          },
+          "e89": {
+            "name": "Homeowners Insurance Cost",
+            "role": "link"
+          },
+          "e9": {
+            "name": "COMPANY",
+            "role": "heading"
+          },
+          "e90": {
+            "name": "How Much Home Insurance Do I Need",
+            "role": "link"
+          },
+          "e91": {
+            "name": "Car and Home Bundle",
+            "role": "link"
+          },
+          "e92": {
+            "name": "Term Life Insurance",
+            "role": "link"
+          },
+          "e93": {
+            "name": "Life Insurance Hub",
+            "role": "link"
+          },
+          "e94": {
+            "name": "Life Insurance Coverage",
+            "role": "link"
+          },
+          "e95": {
+            "name": "No Exam Life Insurance",
+            "role": "link"
+          },
+          "e96": {
+            "name": "How Does Life Insurance Work",
+            "role": "link"
+          },
+          "e97": {
+            "name": "How Much Life Insurance Do I Need",
+            "role": "link"
+          },
+          "e98": {
+            "name": "Contingent Beneficiary",
+            "role": "link"
+          },
+          "e99": {
+            "name": "Claims",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"Skip to main content\" [ref=e1]\n- link \"Renters\" [ref=e14]\n- link \"Homeowners\" [ref=e15]\n- link \"Car\" [ref=e16]\n- link \"Pet\" [ref=e17]\n- link \"Life\" [ref=e18]\n- link \"Giveback\" [ref=e19]\n- link \"Lemonade Insurance\" [ref=e20]\n- link \"My Account\" [ref=e21]\n- link \"Check our prices\" [ref=e22]\n- heading \"Forget everything you know about insurance\" [level=1, ref=e23] focusable [tabindex]\n- paragraph \"Instant everything. Incredible prices. Big heart.\" [ref=e24] focusable [tabindex]\n- link \"Check our Prices\" [ref=e25]\n- heading \"Incredible Prices. Pay Monthly. Bundle Discounts.\" [level=2, ref=e26]\n- generic \"Renters\" [ref=e27] clickable [cursor:pointer, onclick]\n  - generic [ref=e44] clickable [cursor:pointer, onclick]\n    - checkbox \"Renters\" [checked=false, ref=e122]\n  - heading \"Renters\" [level=3, ref=e45]\n- generic \"Homeowners\" [ref=e28] clickable [cursor:pointer, onclick]\n  - generic [ref=e46] clickable [cursor:pointer, onclick]\n    - checkbox \"Homeowners\" [checked=false, ref=e123]\n  - heading \"Homeowners\" [level=3, ref=e47]\n- generic \"Car\" [ref=e29] clickable [cursor:pointer, onclick]\n  - generic [ref=e48] clickable [cursor:pointer, onclick]\n    - checkbox \"Car\" [checked=false, ref=e124]\n  - heading \"Car\" [level=3, ref=e49]\n- generic \"Pet\" [ref=e30] clickable [cursor:pointer, onclick]\n  - generic [ref=e50] clickable [cursor:pointer, onclick]\n    - checkbox \"Pet\" [checked=false, ref=e125]\n  - heading \"Pet\" [level=3, ref=e51]\n- generic \"Term Life\" [ref=e31] clickable [cursor:pointer, onclick]\n  - generic [ref=e52] clickable [cursor:pointer, onclick]\n    - checkbox \"Term Life\" [checked=false, ref=e126]\n  - heading \"Term Life\" [level=3, ref=e53]\n- link \"CHECK OUR PRICES\" [ref=e32]\n- heading \"The (Almost) 5 Star Insurance Company\" [level=2, ref=e54] focusable [tabindex]\n- paragraph \"Lemonade has earned 4.9 stars in the App store, and\\nis also top-rated by Supermoney, Clearsurance, a\" [ref=e55] focusable [tabindex]\n- heading \"Instant everything\" [level=2, ref=e33] focusable [tabindex]\n- paragraph \"We use AI to craft the perfect policy for you, and to pay out claims. \\n It couldn\u2019t be easier or fas\" [ref=e34] focusable [tabindex]\n- heading \"Already insured? We\u2019ll help you switch!\" [level=2, ref=e35] focusable [tabindex]\n- paragraph \"People left these insurance companies to join Lemonade:\" [ref=e36] focusable [tabindex]\n- link \"CHECK PRICES AND SWITCH\" [ref=e37]\n- heading \"How Lemonade Works\" [level=2, ref=e38] focusable [tabindex]\n- listitem \"Designed for Social ImpactLemonade Inc. is a Public Benefit Corporation and certified B-Corp. Social\" [level=1, ref=e56] focusable [tabindex]\n- listitem \"NYSE:LMNDLemonade is a publicly traded company, listed on the New York Stock Exchange under the LMND\" [level=1, ref=e57] focusable [tabindex]\n- listitem \"A-Rated and Backed by GiantsLemonade is A-rated, fully regulated and reinsured by the most trusted n\" [level=1, ref=e58] focusable [tabindex]\n- heading \"RENTERS\" [level=3, ref=e2]\n- link \"Renters Insurance\" [ref=e59]\n- link \"Renters Insurance Hub\" [ref=e60]\n- link \"What is Renters Insurance\" [ref=e61]\n- link \"Renters Insurance Coverage\" [ref=e62]\n- link \"Renters Insurance Cost\" [ref=e63]\n- link \"How to Get Renters Insurance\" [ref=e64]\n- link \"Car and Renters Bundle\" [ref=e65]\n- heading \"CAR\" [level=3, ref=e3]\n- link \"Car Insurance\" [ref=e66]\n- link \"Car Insurance Hub\" [ref=e67]\n- link \"Pay Per Mile Car Insurance\" [ref=e68]\n- link \"Car Insurance Coverage\" [ref=e69]\n- link \"Car Insurance Cost\" [ref=e70]\n- link \"Comprehensive Car Insurance\" [ref=e71]\n- link \"Car Insurance by Vehicle\" [ref=e72]\n- heading \"PET\" [level=3, ref=e4]\n- link \"Pet Insurance\" [ref=e73]\n- link \"Pet Insurance Hub\" [ref=e74]\n- link \"Dog Insurance\" [ref=e75]\n- link \"Cat Insurance\" [ref=e76]\n- link \"Compare Pet Insurance\" [ref=e77]\n- link \"Pet Insurance Coverage\" [ref=e78]\n- link \"Pet Insurance Cost\" [ref=e79]\n- heading \"RESOURCES\" [level=3, ref=e5]\n- link \"Blog\" [ref=e80]\n- link \"FAQ\" [ref=e81]\n- link \"Where We're Live\" [ref=e82]\n- link \"Insurance Dictionary\" [ref=e83]\n- link \"Sitemap\" [ref=e84]\n- heading \"HOMEOWNERS\" [level=3, ref=e6]\n- link \"Homeowners Insurance\" [ref=e85]\n- link \"Home Insurance Hub\" [ref=e86]\n- link \"What is Homeowners Insurance\" [ref=e87]\n- link \"Homeowners Insurance Coverage\" [ref=e88]\n- link \"Homeowners Insurance Cost\" [ref=e89]\n- link \"How Much Home Insurance Do I Need\" [ref=e90]\n- link \"Car and Home Bundle\" [ref=e91]\n- heading \"LIFE\" [level=3, ref=e7]\n- link \"Term Life Insurance\" [ref=e92]\n- link \"Life Insurance Hub\" [ref=e93]\n- link \"Life Insurance Coverage\" [ref=e94]\n- link \"No Exam Life Insurance\" [ref=e95]\n- link \"How Does Life Insurance Work\" [ref=e96]\n- link \"How Much Life Insurance Do I Need\" [ref=e97]\n- link \"Contingent Beneficiary\" [ref=e98]\n- heading \"FEATURES\" [level=3, ref=e8]\n- link \"Claims\" [ref=e99]\n- link \"Giveback\" [ref=e100]\n- link \"Policy 2.0\" [ref=e101]\n- link \"API\" [ref=e102]\n- link \"Agents\" [ref=e103]\n- link \"Vet Clinics\" [ref=e104]\n- heading \"COMPANY\" [level=3, ref=e9]\n- link \"Join the Team\" [ref=e105]\n- link \"Partners Program\" [ref=e106]\n- link \"Investor Relations\" [ref=e107]\n- link \"Transparency\" [ref=e108]\n- link \"Reviews\" [ref=e109]\n- link \"facebook\" [ref=e110]\n- link \"X\" [ref=e111]\n- link \"instagram\" [ref=e112]\n- link \"linkedin\" [ref=e113]\n- link \"youtube\" [ref=e114]\n- link \"tiktok\" [ref=e115]\n- link \"1-844-733-8666\" [ref=e10]\n- link \"help@lemonade.com\" [ref=e11]\n- button \"Select your language\" [ref=e116]\n- link \"Download apple app\" [ref=e12]\n- link \"Download android app\" [ref=e13]\n- listitem \"Terms of Service\" [level=1, ref=e39] clickable [cursor:pointer]\n  - link \"Terms of Service\" [ref=e117]\n- listitem \"Telematics Terms of Service\" [level=1, ref=e40] clickable [cursor:pointer]\n  - link \"Telematics Terms of Service\" [ref=e118]\n- listitem \"Legal Stuff\" [level=1, ref=e41] clickable [cursor:pointer]\n  - link \"Legal Stuff\" [ref=e119]\n- listitem \"Privacy Pledge\" [level=1, ref=e42] clickable [cursor:pointer]\n  - link \"Privacy Pledge\" [ref=e120]\n- listitem \"Accessibility\" [level=1, ref=e43] clickable [cursor:pointer]\n  - link \"Accessibility\" [ref=e121]"
+      },
+      "error": null
+    }
+  }
+]

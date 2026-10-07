@@ -20,6 +20,12 @@ class PublicOccasion
   def all_day? = @all_day == true
   def date = starts_on || starts_at&.to_date
 
+  def upcoming?
+    return false if cancelled? || date.nil?
+
+    all_day? ? !past? : starts_at > Time.current
+  end
+
   def past?
     today = Time.current.in_time_zone(timezone).to_date
     if all_day?

@@ -1,0 +1,946 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://pudding.cool/2025/08/onions/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Dicing an Onion, the Mathematically Optimal Way",
+        "url": "https://pudding.cool/2025/08/onions/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://pudding.cool/2025/08/onions/",
+        "refs": {
+          "e1": {
+            "name": "Skip to main content",
+            "role": "link"
+          },
+          "e10": {
+            "name": "EXPLODE",
+            "role": "switch"
+          },
+          "e100": {
+            "name": "STANDARD DEVIATION \u2191",
+            "role": "button"
+          },
+          "e11": {
+            "name": "EXPLODE",
+            "role": "switch"
+          },
+          "e12": {
+            "name": "source",
+            "role": "link"
+          },
+          "e13": {
+            "name": "another source",
+            "role": "link"
+          },
+          "e14": {
+            "name": "this more recent New York Times article",
+            "role": "link"
+          },
+          "e15": {
+            "name": "EXPLODE",
+            "role": "switch"
+          },
+          "e16": {
+            "name": "which Kenji recommended in 2016",
+            "role": "link"
+          },
+          "e17": {
+            "name": "EXPLODE",
+            "role": "switch"
+          },
+          "e18": {
+            "name": "NUMBER OF LAYERS",
+            "role": "combobox"
+          },
+          "e19": {
+            "name": "The importance of optimal",
+            "role": "heading"
+          },
+          "e2": {
+            "name": "The Pudding",
+            "role": "link"
+          },
+          "e20": {
+            "name": "mowing experiment",
+            "role": "link"
+          },
+          "e21": {
+            "name": "english vocab lists",
+            "role": "link"
+          },
+          "e22": {
+            "name": "ethical nba champions",
+            "role": "link"
+          },
+          "e23": {
+            "name": "donate sticker",
+            "role": "link"
+          },
+          "e24": {
+            "name": "donate sticker",
+            "role": "link"
+          },
+          "e25": {
+            "name": "",
+            "role": "link"
+          },
+          "e26": {
+            "name": "according to YouTube",
+            "role": "link"
+          },
+          "e27": {
+            "name": "broke out some math",
+            "role": "link"
+          },
+          "e28": {
+            "name": "number of cuts",
+            "role": "slider"
+          },
+          "e29": {
+            "name": "number of cuts",
+            "role": "slider"
+          },
+          "e3": {
+            "name": "Dicing an ONION the Mathematically Optimal Way",
+            "role": "heading"
+          },
+          "e30": {
+            "name": "number of cuts",
+            "role": "slider"
+          },
+          "e31": {
+            "name": "cut target depth percentage",
+            "role": "slider"
+          },
+          "e32": {
+            "name": "number of layers",
+            "role": "slider"
+          },
+          "e33": {
+            "name": "number of cuts",
+            "role": "slider"
+          },
+          "e34": {
+            "name": "horizontal cuts",
+            "role": "slider"
+          },
+          "e35": {
+            "name": "10",
+            "role": "cell"
+          },
+          "e36": {
+            "name": "radial, 96%\u00a0depth radial, 96%\u00a0depth",
+            "role": "cell"
+          },
+          "e37": {
+            "name": "29.5%",
+            "role": "cell"
+          },
+          "e38": {
+            "name": "9",
+            "role": "cell"
+          },
+          "e39": {
+            "name": "radial, 76%\u00a0depth radial, 76%\u00a0depth",
+            "role": "cell"
+          },
+          "e4": {
+            "name": "Optimal techniques",
+            "role": "heading"
+          },
+          "e40": {
+            "name": "32.5%",
+            "role": "cell"
+          },
+          "e41": {
+            "name": "6",
+            "role": "cell"
+          },
+          "e42": {
+            "name": "radial, 69%\u00a0depth radial, 69%\u00a0depth",
+            "role": "cell"
+          },
+          "e43": {
+            "name": "33.2%",
+            "role": "cell"
+          },
+          "e44": {
+            "name": "7",
+            "role": "cell"
+          },
+          "e45": {
+            "name": "radial, 87%\u00a0depth radial, 87%\u00a0depth",
+            "role": "cell"
+          },
+          "e46": {
+            "name": "33.2%",
+            "role": "cell"
+          },
+          "e47": {
+            "name": "8",
+            "role": "cell"
+          },
+          "e48": {
+            "name": "radial, 53%\u00a0depth radial, 53%\u00a0depth",
+            "role": "cell"
+          },
+          "e49": {
+            "name": "34.2%",
+            "role": "cell"
+          },
+          "e5": {
+            "name": "Insights",
+            "role": "heading"
+          },
+          "e50": {
+            "name": "5",
+            "role": "cell"
+          },
+          "e51": {
+            "name": "radial, 96%\u00a0depth radial, 96%\u00a0depth",
+            "role": "cell"
+          },
+          "e52": {
+            "name": "35.4%",
+            "role": "cell"
+          },
+          "e53": {
+            "name": "4",
+            "role": "cell"
+          },
+          "e54": {
+            "name": "radial, 53%\u00a0depth radial, 53%\u00a0depth",
+            "role": "cell"
+          },
+          "e55": {
+            "name": "41.0%",
+            "role": "cell"
+          },
+          "e56": {
+            "name": "3",
+            "role": "cell"
+          },
+          "e57": {
+            "name": "radial, 69%\u00a0depth radial, 69%\u00a0depth",
+            "role": "cell"
+          },
+          "e58": {
+            "name": "41.6%",
+            "role": "cell"
+          },
+          "e59": {
+            "name": "1",
+            "role": "cell"
+          },
+          "e6": {
+            "name": "Andrew Aquino",
+            "role": "link"
+          },
+          "e60": {
+            "name": "vertical, 1 horizontal\u00a0cut vertical, 1 horizontal\u00a0cut",
+            "role": "cell"
+          },
+          "e61": {
+            "name": "43.5%",
+            "role": "cell"
+          },
+          "e62": {
+            "name": "2",
+            "role": "cell"
+          },
+          "e63": {
+            "name": "vertical vertical",
+            "role": "cell"
+          },
+          "e64": {
+            "name": "43.5%",
+            "role": "cell"
+          },
+          "e65": {
+            "name": "Support us on Patreon",
+            "role": "link"
+          },
+          "e66": {
+            "name": "Subscribe to our newsletter",
+            "role": "link"
+          },
+          "e67": {
+            "name": "VERTICAL",
+            "role": "radio"
+          },
+          "e68": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e69": {
+            "name": "RADIAL",
+            "role": "radio"
+          },
+          "e7": {
+            "name": "Russell Samora",
+            "role": "link"
+          },
+          "e70": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e71": {
+            "name": "VERTICAL",
+            "role": "radio"
+          },
+          "e72": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e73": {
+            "name": "RADIAL",
+            "role": "radio"
+          },
+          "e74": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e75": {
+            "name": "VERTICAL",
+            "role": "radio"
+          },
+          "e76": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e77": {
+            "name": "RADIAL",
+            "role": "radio"
+          },
+          "e78": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e79": {
+            "name": "7",
+            "role": "option"
+          },
+          "e8": {
+            "name": "Jan Diehm",
+            "role": "link"
+          },
+          "e80": {
+            "name": "8",
+            "role": "option"
+          },
+          "e81": {
+            "name": "9",
+            "role": "option"
+          },
+          "e82": {
+            "name": "10",
+            "role": "option"
+          },
+          "e83": {
+            "name": "11",
+            "role": "option"
+          },
+          "e84": {
+            "name": "12",
+            "role": "option"
+          },
+          "e85": {
+            "name": "13",
+            "role": "option"
+          },
+          "e86": {
+            "name": "CUTS \u21c5",
+            "role": "columnheader"
+          },
+          "e87": {
+            "name": "METHOD",
+            "role": "columnheader"
+          },
+          "e88": {
+            "name": "STANDARD DEVIATION \u2191",
+            "role": "columnheader"
+          },
+          "e89": {
+            "name": "Our Team",
+            "role": "link"
+          },
+          "e9": {
+            "name": "standard deviation",
+            "role": "link"
+          },
+          "e90": {
+            "name": "Our Resources",
+            "role": "link"
+          },
+          "e91": {
+            "name": "Pitch a Story",
+            "role": "link"
+          },
+          "e92": {
+            "name": "Brand Partnerships",
+            "role": "link"
+          },
+          "e93": {
+            "name": "Privacy Policy",
+            "role": "link"
+          },
+          "e94": {
+            "name": "Instagram",
+            "role": "link"
+          },
+          "e95": {
+            "name": "Twitter/X",
+            "role": "link"
+          },
+          "e96": {
+            "name": "TikTok",
+            "role": "link"
+          },
+          "e97": {
+            "name": "YouTube",
+            "role": "link"
+          },
+          "e98": {
+            "name": "RSS",
+            "role": "link"
+          },
+          "e99": {
+            "name": "CUTS \u21c5",
+            "role": "button"
+          }
+        },
+        "snapshot": "- link \"Skip to main content\" [ref=e1]\n- link \"The Pudding\" [ref=e2]\n- link \"according to YouTube\" [ref=e26]\n- link \"broke out some math\" [ref=e27]\n- heading \"Dicing an ONION the Mathematically Optimal Way\" [level=1, ref=e3]\n- link \"Andrew Aquino\" [ref=e6]\n- link \"Russell Samora\" [ref=e7]\n- link \"Jan Diehm\" [ref=e8]\n- link \"standard deviation\" [ref=e9]\n- switch \"EXPLODE\" [checked=false, ref=e10]\n- slider \"number of cuts\" [ref=e28]: 10\n- switch \"EXPLODE\" [checked=false, ref=e11]\n- slider \"number of cuts\" [ref=e29]: 10\n- radio \"VERTICAL\" [checked=false, ref=e67]\n- LabelText \"vertical\" [ref=e68] clickable [cursor:pointer]\n- radio \"RADIAL\" [checked=true, ref=e69]\n- LabelText \"radial\" [ref=e70] clickable [cursor:pointer]\n- link \"source\" [ref=e12]\n- link \"another source\" [ref=e13]\n- link \"this more recent New York Times article\" [ref=e14]\n- switch \"EXPLODE\" [checked=false, ref=e15]\n- slider \"number of cuts\" [ref=e30]: 10\n- radio \"VERTICAL\" [checked=false, ref=e71]\n- LabelText \"vertical\" [ref=e72] clickable [cursor:pointer]\n- radio \"RADIAL\" [checked=true, ref=e73]\n- LabelText \"radial\" [ref=e74] clickable [cursor:pointer]\n- slider \"cut target depth percentage\" [ref=e31]: 0.959999978542328\n- link \"which Kenji recommended in 2016\" [ref=e16]\n- switch \"EXPLODE\" [checked=false, ref=e17]\n- slider \"number of layers\" [ref=e32]: 10\n- slider \"number of cuts\" [ref=e33]: 10\n- slider \"horizontal cuts\" [ref=e34]: 0\n- radio \"VERTICAL\" [checked=true, ref=e75]\n- LabelText \"vertical\" [ref=e76] clickable [cursor:pointer]\n- radio \"RADIAL\" [checked=false, ref=e77]\n- LabelText \"radial\" [ref=e78] clickable [cursor:pointer]\n- heading \"Optimal techniques\" [level=3, ref=e4]\n- combobox \"NUMBER OF LAYERS\" [expanded=false, ref=e18]: 10\n  - option \"7\" [ref=e79]\n  - option \"8\" [ref=e80]\n  - option \"9\" [ref=e81]\n  - option \"10\" [selected, ref=e82]\n  - option \"11\" [ref=e83]\n  - option \"12\" [ref=e84]\n  - option \"13\" [ref=e85]\n- columnheader \"CUTS \u21c5\" [ref=e86]\n  - button \"CUTS \u21c5\" [ref=e99]\n- columnheader \"METHOD\" [ref=e87]\n- columnheader \"STANDARD DEVIATION \u2191\" [ref=e88]\n  - button \"STANDARD DEVIATION \u2191\" [ref=e100]\n- cell \"10\" [ref=e35]\n- cell \"radial, 96%depth radial, 96%depth\" [ref=e36]\n- cell \"29.5%\" [ref=e37]\n- cell \"9\" [ref=e38]\n- cell \"radial, 76%depth radial, 76%depth\" [ref=e39]\n- cell \"32.5%\" [ref=e40]\n- cell \"6\" [ref=e41]\n- cell \"radial, 69%depth radial, 69%depth\" [ref=e42]\n- cell \"33.2%\" [ref=e43]\n- cell \"7\" [ref=e44]\n- cell \"radial, 87%depth radial, 87%depth\" [ref=e45]\n- cell \"33.2%\" [ref=e46]\n- cell \"8\" [ref=e47]\n- cell \"radial, 53%depth radial, 53%depth\" [ref=e48]\n- cell \"34.2%\" [ref=e49]\n- cell \"5\" [ref=e50]\n- cell \"radial, 96%depth radial, 96%depth\" [ref=e51]\n- cell \"35.4%\" [ref=e52]\n- cell \"4\" [ref=e53]\n- cell \"radial, 53%depth radial, 53%depth\" [ref=e54]\n- cell \"41.0%\" [ref=e55]\n- cell \"3\" [ref=e56]\n- cell \"radial, 69%depth radial, 69%depth\" [ref=e57]\n- cell \"41.6%\" [ref=e58]\n- cell \"1\" [ref=e59]\n- cell \"vertical, 1 horizontalcut vertical, 1 horizontalcut\" [ref=e60]\n- cell \"43.5%\" [ref=e61]\n- cell \"2\" [ref=e62]\n- cell \"vertical vertical\" [ref=e63]\n- cell \"43.5%\" [ref=e64]\n- heading \"Insights\" [level=3, ref=e5]\n- heading \"The importance of optimal\" [level=2, ref=e19]\n- link \"mowing experiment\" [ref=e20]\n- link \"english vocab lists\" [ref=e21]\n- link \"ethical nba champions\" [ref=e22]\n- link \"donate sticker\" [ref=e23]\n- link \"Support us on Patreon\" [ref=e65]\n- link \"donate sticker\" [ref=e24]\n- link \"Subscribe to our newsletter\" [ref=e66]\n- link [ref=e25]\n- link \"Our Team\" [ref=e89]\n- link \"Our Resources\" [ref=e90]\n- link \"Pitch a Story\" [ref=e91]\n- link \"Brand Partnerships\" [ref=e92]\n- link \"Privacy Policy\" [ref=e93]\n- link \"Instagram\" [ref=e94]\n- link \"Twitter/X\" [ref=e95]\n- link \"TikTok\" [ref=e96]\n- link \"YouTube\" [ref=e97]\n- link \"RSS\" [ref=e98]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://pudding.cool/2025/08/onions/",
+        "refs": {
+          "e1": {
+            "name": "Skip to main content",
+            "role": "link"
+          },
+          "e10": {
+            "name": "EXPLODE",
+            "role": "switch"
+          },
+          "e100": {
+            "name": "STANDARD DEVIATION \u2191",
+            "role": "button"
+          },
+          "e11": {
+            "name": "EXPLODE",
+            "role": "switch"
+          },
+          "e12": {
+            "name": "source",
+            "role": "link"
+          },
+          "e13": {
+            "name": "another source",
+            "role": "link"
+          },
+          "e14": {
+            "name": "this more recent New York Times article",
+            "role": "link"
+          },
+          "e15": {
+            "name": "EXPLODE",
+            "role": "switch"
+          },
+          "e16": {
+            "name": "which Kenji recommended in 2016",
+            "role": "link"
+          },
+          "e17": {
+            "name": "EXPLODE",
+            "role": "switch"
+          },
+          "e18": {
+            "name": "NUMBER OF LAYERS",
+            "role": "combobox"
+          },
+          "e19": {
+            "name": "The importance of optimal",
+            "role": "heading"
+          },
+          "e2": {
+            "name": "The Pudding",
+            "role": "link"
+          },
+          "e20": {
+            "name": "mowing experiment",
+            "role": "link"
+          },
+          "e21": {
+            "name": "english vocab lists",
+            "role": "link"
+          },
+          "e22": {
+            "name": "ethical nba champions",
+            "role": "link"
+          },
+          "e23": {
+            "name": "donate sticker",
+            "role": "link"
+          },
+          "e24": {
+            "name": "donate sticker",
+            "role": "link"
+          },
+          "e25": {
+            "name": "",
+            "role": "link"
+          },
+          "e26": {
+            "name": "according to YouTube",
+            "role": "link"
+          },
+          "e27": {
+            "name": "broke out some math",
+            "role": "link"
+          },
+          "e28": {
+            "name": "number of cuts",
+            "role": "slider"
+          },
+          "e29": {
+            "name": "number of cuts",
+            "role": "slider"
+          },
+          "e3": {
+            "name": "Dicing an ONION the Mathematically Optimal Way",
+            "role": "heading"
+          },
+          "e30": {
+            "name": "number of cuts",
+            "role": "slider"
+          },
+          "e31": {
+            "name": "cut target depth percentage",
+            "role": "slider"
+          },
+          "e32": {
+            "name": "number of layers",
+            "role": "slider"
+          },
+          "e33": {
+            "name": "number of cuts",
+            "role": "slider"
+          },
+          "e34": {
+            "name": "horizontal cuts",
+            "role": "slider"
+          },
+          "e35": {
+            "name": "10",
+            "role": "cell"
+          },
+          "e36": {
+            "name": "radial, 96%\u00a0depth radial, 96%\u00a0depth",
+            "role": "cell"
+          },
+          "e37": {
+            "name": "29.5%",
+            "role": "cell"
+          },
+          "e38": {
+            "name": "9",
+            "role": "cell"
+          },
+          "e39": {
+            "name": "radial, 76%\u00a0depth radial, 76%\u00a0depth",
+            "role": "cell"
+          },
+          "e4": {
+            "name": "Optimal techniques",
+            "role": "heading"
+          },
+          "e40": {
+            "name": "32.5%",
+            "role": "cell"
+          },
+          "e41": {
+            "name": "6",
+            "role": "cell"
+          },
+          "e42": {
+            "name": "radial, 69%\u00a0depth radial, 69%\u00a0depth",
+            "role": "cell"
+          },
+          "e43": {
+            "name": "33.2%",
+            "role": "cell"
+          },
+          "e44": {
+            "name": "7",
+            "role": "cell"
+          },
+          "e45": {
+            "name": "radial, 87%\u00a0depth radial, 87%\u00a0depth",
+            "role": "cell"
+          },
+          "e46": {
+            "name": "33.2%",
+            "role": "cell"
+          },
+          "e47": {
+            "name": "8",
+            "role": "cell"
+          },
+          "e48": {
+            "name": "radial, 53%\u00a0depth radial, 53%\u00a0depth",
+            "role": "cell"
+          },
+          "e49": {
+            "name": "34.2%",
+            "role": "cell"
+          },
+          "e5": {
+            "name": "Insights",
+            "role": "heading"
+          },
+          "e50": {
+            "name": "5",
+            "role": "cell"
+          },
+          "e51": {
+            "name": "radial, 96%\u00a0depth radial, 96%\u00a0depth",
+            "role": "cell"
+          },
+          "e52": {
+            "name": "35.4%",
+            "role": "cell"
+          },
+          "e53": {
+            "name": "4",
+            "role": "cell"
+          },
+          "e54": {
+            "name": "radial, 53%\u00a0depth radial, 53%\u00a0depth",
+            "role": "cell"
+          },
+          "e55": {
+            "name": "41.0%",
+            "role": "cell"
+          },
+          "e56": {
+            "name": "3",
+            "role": "cell"
+          },
+          "e57": {
+            "name": "radial, 69%\u00a0depth radial, 69%\u00a0depth",
+            "role": "cell"
+          },
+          "e58": {
+            "name": "41.6%",
+            "role": "cell"
+          },
+          "e59": {
+            "name": "1",
+            "role": "cell"
+          },
+          "e6": {
+            "name": "Andrew Aquino",
+            "role": "link"
+          },
+          "e60": {
+            "name": "vertical, 1 horizontal\u00a0cut vertical, 1 horizontal\u00a0cut",
+            "role": "cell"
+          },
+          "e61": {
+            "name": "43.5%",
+            "role": "cell"
+          },
+          "e62": {
+            "name": "2",
+            "role": "cell"
+          },
+          "e63": {
+            "name": "vertical vertical",
+            "role": "cell"
+          },
+          "e64": {
+            "name": "43.5%",
+            "role": "cell"
+          },
+          "e65": {
+            "name": "Support us on Patreon",
+            "role": "link"
+          },
+          "e66": {
+            "name": "Subscribe to our newsletter",
+            "role": "link"
+          },
+          "e67": {
+            "name": "VERTICAL",
+            "role": "radio"
+          },
+          "e68": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e69": {
+            "name": "RADIAL",
+            "role": "radio"
+          },
+          "e7": {
+            "name": "Russell Samora",
+            "role": "link"
+          },
+          "e70": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e71": {
+            "name": "VERTICAL",
+            "role": "radio"
+          },
+          "e72": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e73": {
+            "name": "RADIAL",
+            "role": "radio"
+          },
+          "e74": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e75": {
+            "name": "VERTICAL",
+            "role": "radio"
+          },
+          "e76": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e77": {
+            "name": "RADIAL",
+            "role": "radio"
+          },
+          "e78": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e79": {
+            "name": "7",
+            "role": "option"
+          },
+          "e8": {
+            "name": "Jan Diehm",
+            "role": "link"
+          },
+          "e80": {
+            "name": "8",
+            "role": "option"
+          },
+          "e81": {
+            "name": "9",
+            "role": "option"
+          },
+          "e82": {
+            "name": "10",
+            "role": "option"
+          },
+          "e83": {
+            "name": "11",
+            "role": "option"
+          },
+          "e84": {
+            "name": "12",
+            "role": "option"
+          },
+          "e85": {
+            "name": "13",
+            "role": "option"
+          },
+          "e86": {
+            "name": "CUTS \u21c5",
+            "role": "columnheader"
+          },
+          "e87": {
+            "name": "METHOD",
+            "role": "columnheader"
+          },
+          "e88": {
+            "name": "STANDARD DEVIATION \u2191",
+            "role": "columnheader"
+          },
+          "e89": {
+            "name": "Our Team",
+            "role": "link"
+          },
+          "e9": {
+            "name": "standard deviation",
+            "role": "link"
+          },
+          "e90": {
+            "name": "Our Resources",
+            "role": "link"
+          },
+          "e91": {
+            "name": "Pitch a Story",
+            "role": "link"
+          },
+          "e92": {
+            "name": "Brand Partnerships",
+            "role": "link"
+          },
+          "e93": {
+            "name": "Privacy Policy",
+            "role": "link"
+          },
+          "e94": {
+            "name": "Instagram",
+            "role": "link"
+          },
+          "e95": {
+            "name": "Twitter/X",
+            "role": "link"
+          },
+          "e96": {
+            "name": "TikTok",
+            "role": "link"
+          },
+          "e97": {
+            "name": "YouTube",
+            "role": "link"
+          },
+          "e98": {
+            "name": "RSS",
+            "role": "link"
+          },
+          "e99": {
+            "name": "CUTS \u21c5",
+            "role": "button"
+          }
+        },
+        "snapshot": "- link \"Skip to main content\" [ref=e1]\n- link \"The Pudding\" [ref=e2]\n- link \"according to YouTube\" [ref=e26]\n- link \"broke out some math\" [ref=e27]\n- heading \"Dicing an ONION the Mathematically Optimal Way\" [level=1, ref=e3]\n- link \"Andrew Aquino\" [ref=e6]\n- link \"Russell Samora\" [ref=e7]\n- link \"Jan Diehm\" [ref=e8]\n- link \"standard deviation\" [ref=e9]\n- switch \"EXPLODE\" [checked=false, ref=e10]\n- slider \"number of cuts\" [ref=e28]: 10\n- switch \"EXPLODE\" [checked=false, ref=e11]\n- slider \"number of cuts\" [ref=e29]: 10\n- radio \"VERTICAL\" [checked=false, ref=e67]\n- LabelText \"vertical\" [ref=e68] clickable [cursor:pointer]\n- radio \"RADIAL\" [checked=true, ref=e69]\n- LabelText \"radial\" [ref=e70] clickable [cursor:pointer]\n- link \"source\" [ref=e12]\n- link \"another source\" [ref=e13]\n- link \"this more recent New York Times article\" [ref=e14]\n- switch \"EXPLODE\" [checked=false, ref=e15]\n- slider \"number of cuts\" [ref=e30]: 10\n- radio \"VERTICAL\" [checked=false, ref=e71]\n- LabelText \"vertical\" [ref=e72] clickable [cursor:pointer]\n- radio \"RADIAL\" [checked=true, ref=e73]\n- LabelText \"radial\" [ref=e74] clickable [cursor:pointer]\n- slider \"cut target depth percentage\" [ref=e31]: 0.959999978542328\n- link \"which Kenji recommended in 2016\" [ref=e16]\n- switch \"EXPLODE\" [checked=false, ref=e17]\n- slider \"number of layers\" [ref=e32]: 10\n- slider \"number of cuts\" [ref=e33]: 10\n- slider \"horizontal cuts\" [ref=e34]: 0\n- radio \"VERTICAL\" [checked=true, ref=e75]\n- LabelText \"vertical\" [ref=e76] clickable [cursor:pointer]\n- radio \"RADIAL\" [checked=false, ref=e77]\n- LabelText \"radial\" [ref=e78] clickable [cursor:pointer]\n- heading \"Optimal techniques\" [level=3, ref=e4]\n- combobox \"NUMBER OF LAYERS\" [expanded=false, ref=e18]: 10\n  - option \"7\" [ref=e79]\n  - option \"8\" [ref=e80]\n  - option \"9\" [ref=e81]\n  - option \"10\" [selected, ref=e82]\n  - option \"11\" [ref=e83]\n  - option \"12\" [ref=e84]\n  - option \"13\" [ref=e85]\n- columnheader \"CUTS \u21c5\" [ref=e86]\n  - button \"CUTS \u21c5\" [ref=e99]\n- columnheader \"METHOD\" [ref=e87]\n- columnheader \"STANDARD DEVIATION \u2191\" [ref=e88]\n  - button \"STANDARD DEVIATION \u2191\" [ref=e100]\n- cell \"10\" [ref=e35]\n- cell \"radial, 96%depth radial, 96%depth\" [ref=e36]\n- cell \"29.5%\" [ref=e37]\n- cell \"9\" [ref=e38]\n- cell \"radial, 76%depth radial, 76%depth\" [ref=e39]\n- cell \"32.5%\" [ref=e40]\n- cell \"6\" [ref=e41]\n- cell \"radial, 69%depth radial, 69%depth\" [ref=e42]\n- cell \"33.2%\" [ref=e43]\n- cell \"7\" [ref=e44]\n- cell \"radial, 87%depth radial, 87%depth\" [ref=e45]\n- cell \"33.2%\" [ref=e46]\n- cell \"8\" [ref=e47]\n- cell \"radial, 53%depth radial, 53%depth\" [ref=e48]\n- cell \"34.2%\" [ref=e49]\n- cell \"5\" [ref=e50]\n- cell \"radial, 96%depth radial, 96%depth\" [ref=e51]\n- cell \"35.4%\" [ref=e52]\n- cell \"4\" [ref=e53]\n- cell \"radial, 53%depth radial, 53%depth\" [ref=e54]\n- cell \"41.0%\" [ref=e55]\n- cell \"3\" [ref=e56]\n- cell \"radial, 69%depth radial, 69%depth\" [ref=e57]\n- cell \"41.6%\" [ref=e58]\n- cell \"1\" [ref=e59]\n- cell \"vertical, 1 horizontalcut vertical, 1 horizontalcut\" [ref=e60]\n- cell \"43.5%\" [ref=e61]\n- cell \"2\" [ref=e62]\n- cell \"vertical vertical\" [ref=e63]\n- cell \"43.5%\" [ref=e64]\n- heading \"Insights\" [level=3, ref=e5]\n- heading \"The importance of optimal\" [level=2, ref=e19]\n- link \"mowing experiment\" [ref=e20]\n- link \"english vocab lists\" [ref=e21]\n- link \"ethical nba champions\" [ref=e22]\n- link \"donate sticker\" [ref=e23]\n- link \"Support us on Patreon\" [ref=e65]\n- link \"donate sticker\" [ref=e24]\n- link \"Subscribe to our newsletter\" [ref=e66]\n- link [ref=e25]\n- link \"Our Team\" [ref=e89]\n- link \"Our Resources\" [ref=e90]\n- link \"Pitch a Story\" [ref=e91]\n- link \"Brand Partnerships\" [ref=e92]\n- link \"Privacy Policy\" [ref=e93]\n- link \"Instagram\" [ref=e94]\n- link \"Twitter/X\" [ref=e95]\n- link \"TikTok\" [ref=e96]\n- link \"YouTube\" [ref=e97]\n- link \"RSS\" [ref=e98]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "scrollintoview",
+      "@e10"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "scrolled": "@e10"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/onions-diagram-before.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/onions-diagram-before.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "click",
+      "@e10"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "clicked": "@e10"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "600"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 600,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/onions-diagram-after.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/onions-diagram-after.png"
+      },
+      "error": null
+    }
+  }
+]

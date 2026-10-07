@@ -1,0 +1,42 @@
+{
+  "app/assets/stylesheets/company.css": {
+    "sha256": "3c727e717b1edbf84be50690ca0e792a6c0e83d41a3053522cf29474d010af0a",
+    "unchanged": true
+  },
+  "app/views/layouts/application.html.erb": {
+    "sha256": "a2bf8083f851992a981df291d9ef7e0ffd3906f9c756bd8e4dd82fa8e0dabeff",
+    "unchanged": true
+  },
+  "app/views/public_site/home.html.erb": {
+    "sha256": "23b18dcf48577e4f284b86e1592e8c5b9558bfea5d0cb708a80944c4914478ff",
+    "unchanged": true
+  },
+  "app/views/public_site/events.html.erb": {
+    "sha256": "e92812db2e6b4ead84f4dc9b95750b49b5c85144e802430b7b901ef38d3d1309",
+    "unchanged": true
+  },
+  "app/views/public_site/visit.html.erb": {
+    "sha256": "8db89bcbe26be1984438b8c3a45e0e3ead361db850ae7d75a36581ef92ef25c9",
+    "unchanged": true
+  },
+  "app/views/public_site/contact.html.erb": {
+    "sha256": "9371b655dd5facb3fe68d261143cf2fb8ecd7eb3bfe1aadc6ce696ccba6ed700",
+    "unchanged": true
+  },
+  "app/views/public_site/about.html.erb": {
+    "sha256": "9cfae150bcff01e5e8e0bacfb116f27fd39f9a928628dee950fae63e32a53d95",
+    "unchanged": true
+  },
+  "app/views/public_site/membership.html.erb": {
+    "sha256": "eae1d8ca5ccedd315a28798f09a0af89643c292ab1f3618bed16473beb12841b",
+    "unchanged": true
+  },
+  "app/views/public_site/help.html.erb": {
+    "sha256": "6f4157217a5bfd52c3483940af8e6959a818b594f5c4caba61daa5028010cb30",
+    "unchanged": true
+  },
+  "app/javascript/controllers/event_dialog_controller.js": {
+    "sha256": "cd0fce70ebd57b00b539f9c9ad9bc4eac3a18d15a0d729ad7cc1f1ee9f1cb96e",
+    "unchanged": true
+  }
+}

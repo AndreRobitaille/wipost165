@@ -9,5 +9,5 @@
     <div><dt>Where</dt><dd><%= @event.location_name.presence || "To be confirmed" %></dd></div>
     <div><dt>Guests &amp; children</dt><dd>Please check with the Post before making plans.</dd></div>
   </dl>
-  <% unless @event.cancelled? || @event.past? %><%= render "recognition" %><%= link_to "Plan your first visit →", visit_path(person_context), class: "main-action" %><% end %>
+  <% unless @event.cancelled? || @event.past? %><%= render "recognition" unless public_site_v1? %><%= link_to "Plan your first visit →", visit_path(person_context), class: "main-action" %><% end %>
 </section>

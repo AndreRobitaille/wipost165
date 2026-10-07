@@ -1,5 +1,11 @@
 # LegionPostTools companion work queue
 
+October 7 staged-launch scope: CP-01's event eligibility/private-field exclusion,
+CP-03 event lifecycle, and their CP-04 provenance remain V1 launch dependencies.
+CP-02's story/portrait/consent evidence moves to V2 while V1 disables those routes.
+Existing publisher functionality is preserved; this scope change requests no
+companion mutation or API change. See the [V1/V2 plan](design/2026-10-v1-launch/README.md).
+
 Updated September 27, 2026. This is the public site's dependency handoff, linked
 from [ROADMAP](ROADMAP.md). It is not permission to edit or deploy LegionPostTools.
 Its own agent/session owns implementation there and must read its current guidance.
@@ -21,36 +27,52 @@ coordinate interface differences rather than silently changing either side.
 | Public site | Visitor experience, readonly API client, validation, bounded caching, accessible empty/error states, its own deployment |
 | Owner/designated Post publishers | Approve public content and consent, confirm Post facts, and authorize publication under the companion's own access model |
 
-The latest September 27 companion handoff and live reads supersede the earlier
-`9d278b7` inspection: the publishing service is available, with a Post-owned
-read-only website bearer token required on JSON and portraits, private caching,
-and unchanged v1 payload shapes. The local public consumer now supports that
-contract. Live featured and upcoming-event collections were valid and empty.
-The [content-session prompt](publisher-content-prompt.md) covers live placeholder
-entry with separate editorial authority. Production full-site exposure remains a
-public-site deployment setting; an empty collection is not a connectivity failure.
+## Current access and evidence
 
-## Delivery outcomes
+The publisher is delivered and requires a Post-owned read-only website bearer
+token on JSON, portraits, and conditional requests. There is no anonymous API
+access. The public consumer supports private credential-scoped caching and serves
+portraits through its own origin. The [populated-feed follow-up](deployment/2026-09-27-authenticated-publisher-release.md#populated-feed-follow-up)
+records three fictional stories, six portraits, and local desktop/phone rendering;
+the checked 90-day event interval was empty. This is recorded evidence, not a new
+production read.
 
-The IDs below track dependencies for the public site, not an implementation order
-or instructions for the companion's architecture, permissions, or screens.
-Its session chooses how to deliver them after checking its current code.
+Editorial API changes require a personal API token with the appropriate role.
+The public-site session has only the website read token, and must not put editorial
+credentials in this application. An authorized companion session owns any editorial
+exercise. Production mutations are not required when scoped local/test publisher
+evidence can establish the behavior. See the [roadmap verification matrix](ROADMAP.md#site-04--verify-within-the-actual-access-boundary).
 
-| ID | Output needed | Recorded status |
+## Remaining evidence handback
+
+The [public consumer coverage review](verification/2026-09-27-consumer-coverage.md)
+is complete: conditional validator handling was repaired and simulated lifecycle
+coverage added; local CI passed 53 tests / 333 assertions. CP-01/02/03 below remain
+publisher evidence requests. This consumer result does not close them.
+
+These IDs track evidence dependencies, not a request to rebuild the delivered
+publisher or prescribe its internal administration. Inspect existing results first.
+
+| ID | Output needed | Recorded status / next evidence |
 | --- | --- | --- |
-| CP-01 | Only approved public content is exposed; unpublished/private/restricted content stays out, including under concurrent changes | Awaiting companion handback; current code not rechecked here |
-| CP-02 | Featured introductions, story details, and approved portrait bytes with rotation/replacement/withdrawal behavior | Awaiting companion handback |
-| CP-03 | Complete public event intervals and details, with the agreed dates, cancellation, and removal behavior | Awaiting companion handback |
-| CP-04 | A usable integration environment, sanitized response examples, interface differences, and verification evidence | Awaiting companion handback |
+| CP-01 | Publication eligibility, role enforcement, private-field exclusion, and atomic restrictions | Public reads alone cannot prove these; request companion test evidence, tested revision/environment, and deployment applicability. |
+| CP-02 | Story edits/publication/rotation/withdrawal, consent revocation, and portrait replacement | Steady-state reads of three stories and six portraits passed. Request synthetic lifecycle evidence from companion tests; private consent/audit results were reported by the other agent, not independently verified here. |
+| CP-03 | Complete event intervals, rescheduling/cancellation/restriction/deletion, and date boundaries | Empty live interval passed. Consumer fixture tests exist; populated publisher/event lifecycle evidence remains to be supplied. |
+| CP-04 | Environment, interface, access boundary, and evidence provenance | Token transport and populated story/portrait compatibility delivered. Remaining handback: revisions, commands/results, sanitized headers/examples, and explicit unverified cases for CP-01/02/03. |
 
-See the [API request](publisher-api-request.md) for exact accepted payloads,
-external behavior, and what to return. Internal design, publication authority
-management, consent mechanisms, editing/upload workflows, and operational choices
-belong to LegionPostTools. This queue does not dictate them.
+For each requirement, return existing automated test or controlled synthetic
+exercise evidence first. Specify revision, environment, commands/results, and
+what remains unverified; omit credentials and private records. If a material gap
+needs a coordinated exercise, propose the smallest synthetic scenario in an
+isolated environment. Live changes require authorization for that particular
+operation in the session performing it. Do not revoke the working website token
+or mutate real records merely to test the public consumer.
 
-Record the returned revision or working-tree state, environment, test evidence,
-and gaps. A local implementation is not a deployed endpoint, and a successful
-collection check alone does not prove details, images, or withdrawal behavior.
+The public session can continue consumer tests and technical release preparation
+while this evidence is pending. Material unresolved publisher behavior needs an
+explicit launch decision; lack of a personal token here does not make it verified.
+Real introductions/photos are the final SITE-05 content step after technical
+readiness, not a prerequisite for this handback.
 
 ## New needs discovered during development
 
@@ -78,12 +100,14 @@ of copying its implementation checklist. Do not infer acceptance from silence.
 
 ## Brief to give a companion session
 
-> Work in `/home/andre/Development/LegionPostTools`. Read your repository guidance,
-> then `/home/andre/Development/wipost165/docs/publisher-api-request.md`.
-> Provide the public API output and behavior described there, using your own
-> judgment about implementation and how your site/admin should work. Inspect what
-> already exists first. The existing public consumer is a compatibility reference;
-> return any proposed interface differences so it can be adapted. Return the
-> test access details, sanitized examples, and verification evidence requested in
-> the file. Keep the work local; commits, pushes, deployment, and live grants or
-> publication need separate authorization.
+> Work in `/home/andre/Development/LegionPostTools` and read your repository guidance.
+> The public website already consumes the authenticated publisher using its read-only
+> website token. It has no personal editorial token. Review existing evidence for
+> CP-01 through CP-04 above and return test results for the remaining publisher-owned
+> behavior, including tested revision/environment, deployment applicability, and
+> unverified cases. Prefer existing tests and synthetic local/test records. Read
+> `docs/publisher-api-request.md` in the public repo for current output compatibility.
+> Do not send personal credentials or private evidence to the public repository.
+> Propose any missing coordinated scenario before live mutations; this handoff does
+> not authorize production content changes, grants, token revocation, or deployment.
+> Real people/photos will be added after technical readiness, as the final content step.

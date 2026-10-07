@@ -5,7 +5,13 @@ require_relative "../support/publishing_helpers"
 class PortraitsTest < ActionDispatch::IntegrationTest
   include PublishingHelpers
 
-  setup { build_client }
+  setup do
+    build_client
+    @edition = Rails.configuration.x.public_site_edition
+    Rails.configuration.x.public_site_edition = "v2"
+  end
+
+  teardown { Rails.configuration.x.public_site_edition = @edition }
 
   def portrait_path
     published_portrait_path(id: "story_example_avery", revision: "portrait_example_2", size: "small")

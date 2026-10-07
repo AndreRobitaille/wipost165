@@ -1,0 +1,403 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "736",
+      "850"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 850,
+        "mobile": false,
+        "width": 736
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "http://127.0.0.1:3006/post165-reference-preview.html"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Website Reference Study",
+        "url": "http://127.0.0.1:3006/post165-reference-preview.html"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "600"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 600,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "http://127.0.0.1:3006/post165-reference-preview.html",
+        "refs": {
+          "e1": {
+            "name": "Website Reference Study",
+            "role": "Iframe"
+          },
+          "e10": {
+            "name": "The Pudding \u2014 Dicing an Onion",
+            "role": "option"
+          },
+          "e11": {
+            "name": "SBS \u2014 The Boat",
+            "role": "option"
+          },
+          "e12": {
+            "name": "Lusion",
+            "role": "option"
+          },
+          "e13": {
+            "name": "Moooi \u2014 Play With Peaks",
+            "role": "option"
+          },
+          "e14": {
+            "name": "WindowSwap",
+            "role": "option"
+          },
+          "e15": {
+            "name": "Lemonade",
+            "role": "option"
+          },
+          "e16": {
+            "name": "Cameron\u2019s World",
+            "role": "option"
+          },
+          "e17": {
+            "name": "Desktop with music library",
+            "role": "option"
+          },
+          "e18": {
+            "name": "Event calendar",
+            "role": "option"
+          },
+          "e2": {
+            "name": "Previous website",
+            "role": "button"
+          },
+          "e3": {
+            "name": "Next website",
+            "role": "button"
+          },
+          "e4": {
+            "name": "Visit Poolsuite \u2197",
+            "role": "link"
+          },
+          "e5": {
+            "name": "Choose one of ten website references",
+            "role": "combobox"
+          },
+          "e6": {
+            "name": "Choose screenshot",
+            "role": "combobox"
+          },
+          "e7": {
+            "name": "Poolsuite",
+            "role": "option"
+          },
+          "e8": {
+            "name": "KIKK Festival \u2014 2025 edition",
+            "role": "option"
+          },
+          "e9": {
+            "name": "Oatly",
+            "role": "option"
+          }
+        },
+        "snapshot": "- Iframe \"Website Reference Study\" [ref=e1]\n  - combobox \"Choose one of ten website references\" [expanded=false, ref=e5]: Poolsuite\n    - option \"Poolsuite\" [selected, ref=e7]\n    - option \"KIKK Festival \u2014 2025 edition\" [ref=e8]\n    - option \"Oatly\" [ref=e9]\n    - option \"The Pudding \u2014 Dicing an Onion\" [ref=e10]\n    - option \"SBS \u2014 The Boat\" [ref=e11]\n    - option \"Lusion\" [ref=e12]\n    - option \"Moooi \u2014 Play With Peaks\" [ref=e13]\n    - option \"WindowSwap\" [ref=e14]\n    - option \"Lemonade\" [ref=e15]\n    - option \"Cameron\u2019s World\" [ref=e16]\n  - combobox \"Choose screenshot\" [expanded=false, ref=e6]: Desktop with music library\n    - option \"Desktop with music library\" [selected, ref=e17]\n    - option \"Event calendar\" [ref=e18]\n  - button \"Previous website\" [ref=e2]\n  - button \"Next website\" [ref=e3]\n  - link \"Visit Poolsuite \u2197\" [ref=e4]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "select",
+      "@e5",
+      "3"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "selected": [
+          "3"
+        ]
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "100"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 100,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "http://127.0.0.1:3006/post165-reference-preview.html",
+        "refs": {
+          "e1": {
+            "name": "Website Reference Study",
+            "role": "Iframe"
+          },
+          "e10": {
+            "name": "The Pudding \u2014 Dicing an Onion",
+            "role": "option"
+          },
+          "e11": {
+            "name": "SBS \u2014 The Boat",
+            "role": "option"
+          },
+          "e12": {
+            "name": "Lusion",
+            "role": "option"
+          },
+          "e13": {
+            "name": "Moooi \u2014 Play With Peaks",
+            "role": "option"
+          },
+          "e14": {
+            "name": "WindowSwap",
+            "role": "option"
+          },
+          "e15": {
+            "name": "Lemonade",
+            "role": "option"
+          },
+          "e16": {
+            "name": "Cameron\u2019s World",
+            "role": "option"
+          },
+          "e17": {
+            "name": "Exploded diagram",
+            "role": "option"
+          },
+          "e18": {
+            "name": "Diagram before interaction",
+            "role": "option"
+          },
+          "e19": {
+            "name": "Opening typography",
+            "role": "option"
+          },
+          "e2": {
+            "name": "Previous website",
+            "role": "button"
+          },
+          "e3": {
+            "name": "Next website",
+            "role": "button"
+          },
+          "e4": {
+            "name": "Visit The Pudding \u2014 Dicing an Onion \u2197",
+            "role": "link"
+          },
+          "e5": {
+            "name": "Choose one of ten website references",
+            "role": "combobox"
+          },
+          "e6": {
+            "name": "Choose screenshot",
+            "role": "combobox"
+          },
+          "e7": {
+            "name": "Poolsuite",
+            "role": "option"
+          },
+          "e8": {
+            "name": "KIKK Festival \u2014 2025 edition",
+            "role": "option"
+          },
+          "e9": {
+            "name": "Oatly",
+            "role": "option"
+          }
+        },
+        "snapshot": "- Iframe \"Website Reference Study\" [ref=e1]\n  - combobox \"Choose one of ten website references\" [expanded=false, ref=e5]: The Pudding \u2014 Dicing an Onion\n    - option \"Poolsuite\" [ref=e7]\n    - option \"KIKK Festival \u2014 2025 edition\" [ref=e8]\n    - option \"Oatly\" [ref=e9]\n    - option \"The Pudding \u2014 Dicing an Onion\" [selected, ref=e10]\n    - option \"SBS \u2014 The Boat\" [ref=e11]\n    - option \"Lusion\" [ref=e12]\n    - option \"Moooi \u2014 Play With Peaks\" [ref=e13]\n    - option \"WindowSwap\" [ref=e14]\n    - option \"Lemonade\" [ref=e15]\n    - option \"Cameron\u2019s World\" [ref=e16]\n  - combobox \"Choose screenshot\" [expanded=false, ref=e6]: Exploded diagram\n    - option \"Exploded diagram\" [selected, ref=e17]\n    - option \"Diagram before interaction\" [ref=e18]\n    - option \"Opening typography\" [ref=e19]\n  - button \"Previous website\" [ref=e2]\n  - button \"Next website\" [ref=e3]\n  - link \"Visit The Pudding \u2014 Dicing an Onion \u2197\" [ref=e4]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "select",
+      "@e6",
+      "1"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "selected": [
+          "1"
+        ]
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "http://127.0.0.1:3006/post165-reference-preview.html",
+        "refs": {
+          "e1": {
+            "name": "Website Reference Study",
+            "role": "Iframe"
+          },
+          "e10": {
+            "name": "The Pudding \u2014 Dicing an Onion",
+            "role": "option"
+          },
+          "e11": {
+            "name": "SBS \u2014 The Boat",
+            "role": "option"
+          },
+          "e12": {
+            "name": "Lusion",
+            "role": "option"
+          },
+          "e13": {
+            "name": "Moooi \u2014 Play With Peaks",
+            "role": "option"
+          },
+          "e14": {
+            "name": "WindowSwap",
+            "role": "option"
+          },
+          "e15": {
+            "name": "Lemonade",
+            "role": "option"
+          },
+          "e16": {
+            "name": "Cameron\u2019s World",
+            "role": "option"
+          },
+          "e17": {
+            "name": "Exploded diagram",
+            "role": "option"
+          },
+          "e18": {
+            "name": "Diagram before interaction",
+            "role": "option"
+          },
+          "e19": {
+            "name": "Opening typography",
+            "role": "option"
+          },
+          "e2": {
+            "name": "Previous website",
+            "role": "button"
+          },
+          "e3": {
+            "name": "Next website",
+            "role": "button"
+          },
+          "e4": {
+            "name": "Visit The Pudding \u2014 Dicing an Onion \u2197",
+            "role": "link"
+          },
+          "e5": {
+            "name": "Choose one of ten website references",
+            "role": "combobox"
+          },
+          "e6": {
+            "name": "Choose screenshot",
+            "role": "combobox"
+          },
+          "e7": {
+            "name": "Poolsuite",
+            "role": "option"
+          },
+          "e8": {
+            "name": "KIKK Festival \u2014 2025 edition",
+            "role": "option"
+          },
+          "e9": {
+            "name": "Oatly",
+            "role": "option"
+          }
+        },
+        "snapshot": "- Iframe \"Website Reference Study\" [ref=e1]\n  - combobox \"Choose one of ten website references\" [expanded=false, ref=e5]: The Pudding \u2014 Dicing an Onion\n    - option \"Poolsuite\" [ref=e7]\n    - option \"KIKK Festival \u2014 2025 edition\" [ref=e8]\n    - option \"Oatly\" [ref=e9]\n    - option \"The Pudding \u2014 Dicing an Onion\" [selected, ref=e10]\n    - option \"SBS \u2014 The Boat\" [ref=e11]\n    - option \"Lusion\" [ref=e12]\n    - option \"Moooi \u2014 Play With Peaks\" [ref=e13]\n    - option \"WindowSwap\" [ref=e14]\n    - option \"Lemonade\" [ref=e15]\n    - option \"Cameron\u2019s World\" [ref=e16]\n  - combobox \"Choose screenshot\" [expanded=false, ref=e6]: Diagram before interaction\n    - option \"Exploded diagram\" [ref=e17]\n    - option \"Diagram before interaction\" [selected, ref=e18]\n    - option \"Opening typography\" [ref=e19]\n  - button \"Previous website\" [ref=e2]\n  - button \"Next website\" [ref=e3]\n  - link \"Visit The Pudding \u2014 Dicing an Onion \u2197\" [ref=e4]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "press",
+      "Tab"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "pressed": "Tab"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "errors"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "errors": []
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "close"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "closed": true
+      },
+      "error": null
+    }
+  }
+]

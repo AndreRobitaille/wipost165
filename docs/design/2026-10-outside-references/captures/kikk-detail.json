@@ -1,0 +1,1305 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://2025.kikk.be/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Home Page - Kikk Festival",
+        "url": "https://2025.kikk.be/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://2025.kikk.be/",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "link"
+          },
+          "e10": {
+            "name": "KIKK FESTIVAL",
+            "role": "heading"
+          },
+          "e11": {
+            "name": "Get tickets",
+            "role": "link"
+          },
+          "e12": {
+            "name": "View full schedule",
+            "role": "link"
+          },
+          "e13": {
+            "name": "ART EXHIBITION",
+            "role": "heading"
+          },
+          "e14": {
+            "name": "BOOM BOOM TCHAK",
+            "role": "heading"
+          },
+          "e15": {
+            "name": "FESTIVAL PASSES",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "KIKK IN TOWN",
+            "role": "heading"
+          },
+          "e17": {
+            "name": "An art journey throughout Namur",
+            "role": "heading"
+          },
+          "e18": {
+            "name": "View town map",
+            "role": "link"
+          },
+          "e19": {
+            "name": "Email",
+            "role": "textbox"
+          },
+          "e2": {
+            "name": "ART TRAIL",
+            "role": "menuitem"
+          },
+          "e20": {
+            "name": "SUBSCRIBE",
+            "role": "button"
+          },
+          "e21": {
+            "name": "footer navigation",
+            "role": "navigation"
+          },
+          "e22": {
+            "name": "footer navigation",
+            "role": "navigation"
+          },
+          "e23": {
+            "name": "close",
+            "role": "button"
+          },
+          "e24": {
+            "name": "KIKK FESTIVAL 2026",
+            "role": "heading"
+          },
+          "e25": {
+            "name": "choose a language (EN)",
+            "role": "button"
+          },
+          "e26": {
+            "name": "TALKS",
+            "role": "heading"
+          },
+          "e27": {
+            "name": "AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN",
+            "role": "tab"
+          },
+          "e28": {
+            "name": "M\u00d3NICA RIKI\u0106 M\u00d3NICA RIKI\u0106",
+            "role": "tab"
+          },
+          "e29": {
+            "name": "DANIEL SIMU WITH ACROBOT DANIEL SIMU WITH ACROBOT",
+            "role": "tab"
+          },
+          "e3": {
+            "name": "TALKS",
+            "role": "menuitem"
+          },
+          "e30": {
+            "name": "IOANA VREME MOSER IOANA VREME MOSER",
+            "role": "tab"
+          },
+          "e31": {
+            "name": "INES ALPHA INES ALPHA",
+            "role": "tab"
+          },
+          "e32": {
+            "name": "ROBERT HODGIN ROBERT HODGIN",
+            "role": "tab"
+          },
+          "e33": {
+            "name": "\u2018How to make the logo bigger when the world is burning\u2019",
+            "role": "heading"
+          },
+          "e34": {
+            "name": "ersatz",
+            "role": "link"
+          },
+          "e35": {
+            "name": "Alexis Choplain",
+            "role": "link"
+          },
+          "e36": {
+            "name": "My Name is Fuzzy",
+            "role": "link"
+          },
+          "e37": {
+            "name": "View all events",
+            "role": "link"
+          },
+          "e38": {
+            "name": "UNSEEN STUDIO",
+            "role": "link"
+          },
+          "e39": {
+            "name": "ABOUT",
+            "role": "link"
+          },
+          "e4": {
+            "name": "MARKET",
+            "role": "menuitem"
+          },
+          "e40": {
+            "name": "CONFERENCE PASS",
+            "role": "heading"
+          },
+          "e41": {
+            "name": "FULL PASS",
+            "role": "heading"
+          },
+          "e42": {
+            "name": "EXHIBITION PASS",
+            "role": "heading"
+          },
+          "e43": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e44": {
+            "name": "TICKETS",
+            "role": "menuitem"
+          },
+          "e45": {
+            "name": "SCHEDULE",
+            "role": "menuitem"
+          },
+          "e46": {
+            "name": "TALKS",
+            "role": "menuitem"
+          },
+          "e47": {
+            "name": "ART TRAIL",
+            "role": "menuitem"
+          },
+          "e48": {
+            "name": "MARKET",
+            "role": "menuitem"
+          },
+          "e49": {
+            "name": "FOR KIDS",
+            "role": "menuitem"
+          },
+          "e5": {
+            "name": "ABOUT KIKK",
+            "role": "menuitem"
+          },
+          "e50": {
+            "name": "PARTIES",
+            "role": "menuitem"
+          },
+          "e51": {
+            "name": "CONTACT US",
+            "role": "menuitem"
+          },
+          "e52": {
+            "name": "PARTNERS",
+            "role": "menuitem"
+          },
+          "e53": {
+            "name": "VOLUNTEERS",
+            "role": "menuitem"
+          },
+          "e54": {
+            "name": "PRIVACY POLICY",
+            "role": "menuitem"
+          },
+          "e55": {
+            "name": "",
+            "role": "link"
+          },
+          "e56": {
+            "name": "",
+            "role": "link"
+          },
+          "e57": {
+            "name": "",
+            "role": "link"
+          },
+          "e58": {
+            "name": "",
+            "role": "link"
+          },
+          "e59": {
+            "name": "Threads",
+            "role": "link"
+          },
+          "e6": {
+            "name": "SCHEDULE",
+            "role": "menuitem"
+          },
+          "e60": {
+            "name": "",
+            "role": "link"
+          },
+          "e61": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e62": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e63": {
+            "name": "",
+            "role": "link"
+          },
+          "e64": {
+            "name": "",
+            "role": "link"
+          },
+          "e65": {
+            "name": "",
+            "role": "link"
+          },
+          "e66": {
+            "name": "",
+            "role": "link"
+          },
+          "e67": {
+            "name": "Threads",
+            "role": "link"
+          },
+          "e68": {
+            "name": "",
+            "role": "link"
+          },
+          "e7": {
+            "name": "TICKETS",
+            "role": "menuitem"
+          },
+          "e8": {
+            "name": "Open search form",
+            "role": "button"
+          },
+          "e9": {
+            "name": "",
+            "role": "button"
+          }
+        },
+        "snapshot": "- link [ref=e1]\n- menuitem \"ART TRAIL\" [ref=e2]\n- menuitem \"TALKS\" [ref=e3]\n- menuitem \"MARKET\" [ref=e4]\n- menuitem \"ABOUT KIKK\" [ref=e5]\n- menuitem \"SCHEDULE\" [ref=e6]\n- menuitem \"TICKETS\" [ref=e7]\n- button \"choose a language (EN)\" [ref=e25]\n- button \"Open search form\" [ref=e8]\n- button [expanded=false, ref=e9]\n- heading \"KIKK FESTIVAL\" [level=1, ref=e10]\n- link \"Get tickets\" [ref=e11]\n- heading \"TALKS\" [level=2, ref=e26]\n- tab \"AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN\" [selected, ref=e27]\n- tab \"M\u00d3NICA RIKI\u0106 M\u00d3NICA RIKI\u0106\" [ref=e28]\n- tab \"DANIEL SIMU WITH ACROBOT DANIEL SIMU WITH ACROBOT\" [ref=e29]\n- tab \"IOANA VREME MOSER IOANA VREME MOSER\" [ref=e30]\n- tab \"INES ALPHA INES ALPHA\" [ref=e31]\n- tab \"ROBERT HODGIN ROBERT HODGIN\" [ref=e32]\n- heading \"\u2018How to make the logo bigger when the world is burning\u2019\" [level=3, ref=e33]\n- link \"ABOUT\" [ref=e39]\n- link \"View full schedule\" [ref=e12]\n- heading \"ART EXHIBITION\" [level=2, ref=e13]\n- link \"ersatz\" [ref=e34]\n- link \"Alexis Choplain\" [ref=e35]\n- link \"My Name is Fuzzy\" [ref=e36]\n- link \"View all events\" [ref=e37]\n- heading \"BOOM BOOM TCHAK\" [level=2, ref=e14]\n- heading \"FESTIVAL PASSES\" [level=2, ref=e15]\n- heading \"CONFERENCE PASS\" [level=2, ref=e40]\n- link \"GET TICKETS GET TICKETS\" [ref=e61]\n- heading \"FULL PASS\" [level=2, ref=e41]\n- link \"GET TICKETS GET TICKETS\" [ref=e62]\n- heading \"KIKK IN TOWN\" [level=2, ref=e16]\n- heading \"An art journey throughout Namur\" [level=3, ref=e17]\n- heading \"EXHIBITION PASS\" [level=2, ref=e42]\n- link \"GET TICKETS GET TICKETS\" [ref=e43]\n- link \"View town map\" [ref=e18]\n- textbox \"Email\" [required, ref=e19]\n- button \"SUBSCRIBE\" [ref=e20]\n- link [ref=e63]\n- link [ref=e64]\n- link [ref=e65]\n- link [ref=e66]\n- link \"Threads\" [ref=e67]\n- link [ref=e68]\n- navigation \"footer navigation\" [ref=e21]\n  - menuitem \"TICKETS\" [ref=e44]\n  - menuitem \"SCHEDULE\" [ref=e45]\n  - menuitem \"TALKS\" [ref=e46]\n  - menuitem \"ART TRAIL\" [ref=e47]\n  - menuitem \"MARKET\" [ref=e48]\n  - menuitem \"FOR KIDS\" [ref=e49]\n  - menuitem \"PARTIES\" [ref=e50]\n- navigation \"footer navigation\" [ref=e22]\n  - menuitem \"CONTACT US\" [ref=e51]\n  - menuitem \"PARTNERS\" [ref=e52]\n  - menuitem \"VOLUNTEERS\" [ref=e53]\n  - menuitem \"PRIVACY POLICY\" [ref=e54]\n- link \"UNSEEN STUDIO\" [ref=e38]\n- link [ref=e55]\n- link [ref=e56]\n- link [ref=e57]\n- link [ref=e58]\n- link \"Threads\" [ref=e59]\n- link [ref=e60]\n- button \"close\" [ref=e23]\n- heading \"KIKK FESTIVAL 2026\" [level=2, ref=e24]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://2025.kikk.be/",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "link"
+          },
+          "e10": {
+            "name": "KIKK FESTIVAL",
+            "role": "heading"
+          },
+          "e11": {
+            "name": "Get tickets",
+            "role": "link"
+          },
+          "e12": {
+            "name": "View full schedule",
+            "role": "link"
+          },
+          "e13": {
+            "name": "ART EXHIBITION",
+            "role": "heading"
+          },
+          "e14": {
+            "name": "BOOM BOOM TCHAK",
+            "role": "heading"
+          },
+          "e15": {
+            "name": "FESTIVAL PASSES",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "KIKK IN TOWN",
+            "role": "heading"
+          },
+          "e17": {
+            "name": "An art journey throughout Namur",
+            "role": "heading"
+          },
+          "e18": {
+            "name": "View town map",
+            "role": "link"
+          },
+          "e19": {
+            "name": "Email",
+            "role": "textbox"
+          },
+          "e2": {
+            "name": "ART TRAIL",
+            "role": "menuitem"
+          },
+          "e20": {
+            "name": "SUBSCRIBE",
+            "role": "button"
+          },
+          "e21": {
+            "name": "footer navigation",
+            "role": "navigation"
+          },
+          "e22": {
+            "name": "footer navigation",
+            "role": "navigation"
+          },
+          "e23": {
+            "name": "close",
+            "role": "button"
+          },
+          "e24": {
+            "name": "KIKK FESTIVAL 2026",
+            "role": "heading"
+          },
+          "e25": {
+            "name": "choose a language (EN)",
+            "role": "button"
+          },
+          "e26": {
+            "name": "TALKS",
+            "role": "heading"
+          },
+          "e27": {
+            "name": "AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN",
+            "role": "tab"
+          },
+          "e28": {
+            "name": "M\u00d3NICA RIKI\u0106 M\u00d3NICA RIKI\u0106",
+            "role": "tab"
+          },
+          "e29": {
+            "name": "DANIEL SIMU WITH ACROBOT DANIEL SIMU WITH ACROBOT",
+            "role": "tab"
+          },
+          "e3": {
+            "name": "TALKS",
+            "role": "menuitem"
+          },
+          "e30": {
+            "name": "IOANA VREME MOSER IOANA VREME MOSER",
+            "role": "tab"
+          },
+          "e31": {
+            "name": "INES ALPHA INES ALPHA",
+            "role": "tab"
+          },
+          "e32": {
+            "name": "ROBERT HODGIN ROBERT HODGIN",
+            "role": "tab"
+          },
+          "e33": {
+            "name": "\u2018How to make the logo bigger when the world is burning\u2019",
+            "role": "heading"
+          },
+          "e34": {
+            "name": "ersatz",
+            "role": "link"
+          },
+          "e35": {
+            "name": "Alexis Choplain",
+            "role": "link"
+          },
+          "e36": {
+            "name": "My Name is Fuzzy",
+            "role": "link"
+          },
+          "e37": {
+            "name": "View all events",
+            "role": "link"
+          },
+          "e38": {
+            "name": "UNSEEN STUDIO",
+            "role": "link"
+          },
+          "e39": {
+            "name": "ABOUT",
+            "role": "link"
+          },
+          "e4": {
+            "name": "MARKET",
+            "role": "menuitem"
+          },
+          "e40": {
+            "name": "CONFERENCE PASS",
+            "role": "heading"
+          },
+          "e41": {
+            "name": "FULL PASS",
+            "role": "heading"
+          },
+          "e42": {
+            "name": "EXHIBITION PASS",
+            "role": "heading"
+          },
+          "e43": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e44": {
+            "name": "TICKETS",
+            "role": "menuitem"
+          },
+          "e45": {
+            "name": "SCHEDULE",
+            "role": "menuitem"
+          },
+          "e46": {
+            "name": "TALKS",
+            "role": "menuitem"
+          },
+          "e47": {
+            "name": "ART TRAIL",
+            "role": "menuitem"
+          },
+          "e48": {
+            "name": "MARKET",
+            "role": "menuitem"
+          },
+          "e49": {
+            "name": "FOR KIDS",
+            "role": "menuitem"
+          },
+          "e5": {
+            "name": "ABOUT KIKK",
+            "role": "menuitem"
+          },
+          "e50": {
+            "name": "PARTIES",
+            "role": "menuitem"
+          },
+          "e51": {
+            "name": "CONTACT US",
+            "role": "menuitem"
+          },
+          "e52": {
+            "name": "PARTNERS",
+            "role": "menuitem"
+          },
+          "e53": {
+            "name": "VOLUNTEERS",
+            "role": "menuitem"
+          },
+          "e54": {
+            "name": "PRIVACY POLICY",
+            "role": "menuitem"
+          },
+          "e55": {
+            "name": "",
+            "role": "link"
+          },
+          "e56": {
+            "name": "",
+            "role": "link"
+          },
+          "e57": {
+            "name": "",
+            "role": "link"
+          },
+          "e58": {
+            "name": "",
+            "role": "link"
+          },
+          "e59": {
+            "name": "Threads",
+            "role": "link"
+          },
+          "e6": {
+            "name": "SCHEDULE",
+            "role": "menuitem"
+          },
+          "e60": {
+            "name": "",
+            "role": "link"
+          },
+          "e61": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e62": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e63": {
+            "name": "",
+            "role": "link"
+          },
+          "e64": {
+            "name": "",
+            "role": "link"
+          },
+          "e65": {
+            "name": "",
+            "role": "link"
+          },
+          "e66": {
+            "name": "",
+            "role": "link"
+          },
+          "e67": {
+            "name": "Threads",
+            "role": "link"
+          },
+          "e68": {
+            "name": "",
+            "role": "link"
+          },
+          "e7": {
+            "name": "TICKETS",
+            "role": "menuitem"
+          },
+          "e8": {
+            "name": "Open search form",
+            "role": "button"
+          },
+          "e9": {
+            "name": "",
+            "role": "button"
+          }
+        },
+        "snapshot": "- link [ref=e1]\n- menuitem \"ART TRAIL\" [ref=e2]\n- menuitem \"TALKS\" [ref=e3]\n- menuitem \"MARKET\" [ref=e4]\n- menuitem \"ABOUT KIKK\" [ref=e5]\n- menuitem \"SCHEDULE\" [ref=e6]\n- menuitem \"TICKETS\" [ref=e7]\n- button \"choose a language (EN)\" [ref=e25]\n- button \"Open search form\" [ref=e8]\n- button [expanded=false, ref=e9]\n- heading \"KIKK FESTIVAL\" [level=1, ref=e10]\n- link \"Get tickets\" [ref=e11]\n- heading \"TALKS\" [level=2, ref=e26]\n- tab \"AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN\" [selected, ref=e27]\n- tab \"M\u00d3NICA RIKI\u0106 M\u00d3NICA RIKI\u0106\" [ref=e28]\n- tab \"DANIEL SIMU WITH ACROBOT DANIEL SIMU WITH ACROBOT\" [ref=e29]\n- tab \"IOANA VREME MOSER IOANA VREME MOSER\" [ref=e30]\n- tab \"INES ALPHA INES ALPHA\" [ref=e31]\n- tab \"ROBERT HODGIN ROBERT HODGIN\" [ref=e32]\n- heading \"\u2018How to make the logo bigger when the world is burning\u2019\" [level=3, ref=e33]\n- link \"ABOUT\" [ref=e39]\n- link \"View full schedule\" [ref=e12]\n- heading \"ART EXHIBITION\" [level=2, ref=e13]\n- link \"ersatz\" [ref=e34]\n- link \"Alexis Choplain\" [ref=e35]\n- link \"My Name is Fuzzy\" [ref=e36]\n- link \"View all events\" [ref=e37]\n- heading \"BOOM BOOM TCHAK\" [level=2, ref=e14]\n- heading \"FESTIVAL PASSES\" [level=2, ref=e15]\n- heading \"CONFERENCE PASS\" [level=2, ref=e40]\n- link \"GET TICKETS GET TICKETS\" [ref=e61]\n- heading \"FULL PASS\" [level=2, ref=e41]\n- link \"GET TICKETS GET TICKETS\" [ref=e62]\n- heading \"KIKK IN TOWN\" [level=2, ref=e16]\n- heading \"An art journey throughout Namur\" [level=3, ref=e17]\n- heading \"EXHIBITION PASS\" [level=2, ref=e42]\n- link \"GET TICKETS GET TICKETS\" [ref=e43]\n- link \"View town map\" [ref=e18]\n- textbox \"Email\" [required, ref=e19]\n- button \"SUBSCRIBE\" [ref=e20]\n- link [ref=e63]\n- link [ref=e64]\n- link [ref=e65]\n- link [ref=e66]\n- link \"Threads\" [ref=e67]\n- link [ref=e68]\n- navigation \"footer navigation\" [ref=e21]\n  - menuitem \"TICKETS\" [ref=e44]\n  - menuitem \"SCHEDULE\" [ref=e45]\n  - menuitem \"TALKS\" [ref=e46]\n  - menuitem \"ART TRAIL\" [ref=e47]\n  - menuitem \"MARKET\" [ref=e48]\n  - menuitem \"FOR KIDS\" [ref=e49]\n  - menuitem \"PARTIES\" [ref=e50]\n- navigation \"footer navigation\" [ref=e22]\n  - menuitem \"CONTACT US\" [ref=e51]\n  - menuitem \"PARTNERS\" [ref=e52]\n  - menuitem \"VOLUNTEERS\" [ref=e53]\n  - menuitem \"PRIVACY POLICY\" [ref=e54]\n- link \"UNSEEN STUDIO\" [ref=e38]\n- link [ref=e55]\n- link [ref=e56]\n- link [ref=e57]\n- link [ref=e58]\n- link \"Threads\" [ref=e59]\n- link [ref=e60]\n- button \"close\" [ref=e23]\n- heading \"KIKK FESTIVAL 2026\" [level=2, ref=e24]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "click",
+      "@e23"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "clicked": "@e23"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "600"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 600,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/kikk-hero.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/kikk-hero.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "scroll",
+      "down",
+      "1600"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "scrolled": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "1200"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 1200,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/kikk-interior.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/kikk-interior.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://2025.kikk.be/",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "link"
+          },
+          "e10": {
+            "name": "KIKK FESTIVAL",
+            "role": "heading"
+          },
+          "e11": {
+            "name": "Get tickets",
+            "role": "link"
+          },
+          "e12": {
+            "name": "View full schedule",
+            "role": "link"
+          },
+          "e13": {
+            "name": "ART EXHIBITION",
+            "role": "heading"
+          },
+          "e14": {
+            "name": "BOOM BOOM TCHAK",
+            "role": "heading"
+          },
+          "e15": {
+            "name": "FESTIVAL PASSES",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "KIKK IN TOWN",
+            "role": "heading"
+          },
+          "e17": {
+            "name": "An art journey throughout Namur",
+            "role": "heading"
+          },
+          "e18": {
+            "name": "View town map",
+            "role": "link"
+          },
+          "e19": {
+            "name": "Email",
+            "role": "textbox"
+          },
+          "e2": {
+            "name": "ART TRAIL",
+            "role": "menuitem"
+          },
+          "e20": {
+            "name": "SUBSCRIBE",
+            "role": "button"
+          },
+          "e21": {
+            "name": "footer navigation",
+            "role": "navigation"
+          },
+          "e22": {
+            "name": "footer navigation",
+            "role": "navigation"
+          },
+          "e23": {
+            "name": "choose a language (EN)",
+            "role": "button"
+          },
+          "e24": {
+            "name": "TALKS",
+            "role": "heading"
+          },
+          "e25": {
+            "name": "AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN",
+            "role": "tab"
+          },
+          "e26": {
+            "name": "M\u00d3NICA RIKI\u0106 M\u00d3NICA RIKI\u0106",
+            "role": "tab"
+          },
+          "e27": {
+            "name": "DANIEL SIMU WITH ACROBOT DANIEL SIMU WITH ACROBOT",
+            "role": "tab"
+          },
+          "e28": {
+            "name": "IOANA VREME MOSER IOANA VREME MOSER",
+            "role": "tab"
+          },
+          "e29": {
+            "name": "INES ALPHA INES ALPHA",
+            "role": "tab"
+          },
+          "e3": {
+            "name": "TALKS",
+            "role": "menuitem"
+          },
+          "e30": {
+            "name": "ROBERT HODGIN ROBERT HODGIN",
+            "role": "tab"
+          },
+          "e31": {
+            "name": "\u2018How to make the logo bigger when the world is burning\u2019",
+            "role": "heading"
+          },
+          "e32": {
+            "name": "ersatz",
+            "role": "link"
+          },
+          "e33": {
+            "name": "Alexis Choplain",
+            "role": "link"
+          },
+          "e34": {
+            "name": "My Name is Fuzzy",
+            "role": "link"
+          },
+          "e35": {
+            "name": "View all events",
+            "role": "link"
+          },
+          "e36": {
+            "name": "UNSEEN STUDIO",
+            "role": "link"
+          },
+          "e37": {
+            "name": "ABOUT",
+            "role": "link"
+          },
+          "e38": {
+            "name": "CONFERENCE PASS",
+            "role": "heading"
+          },
+          "e39": {
+            "name": "FULL PASS",
+            "role": "heading"
+          },
+          "e4": {
+            "name": "MARKET",
+            "role": "menuitem"
+          },
+          "e40": {
+            "name": "EXHIBITION PASS",
+            "role": "heading"
+          },
+          "e41": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e42": {
+            "name": "TICKETS",
+            "role": "menuitem"
+          },
+          "e43": {
+            "name": "SCHEDULE",
+            "role": "menuitem"
+          },
+          "e44": {
+            "name": "TALKS",
+            "role": "menuitem"
+          },
+          "e45": {
+            "name": "ART TRAIL",
+            "role": "menuitem"
+          },
+          "e46": {
+            "name": "MARKET",
+            "role": "menuitem"
+          },
+          "e47": {
+            "name": "FOR KIDS",
+            "role": "menuitem"
+          },
+          "e48": {
+            "name": "PARTIES",
+            "role": "menuitem"
+          },
+          "e49": {
+            "name": "CONTACT US",
+            "role": "menuitem"
+          },
+          "e5": {
+            "name": "ABOUT KIKK",
+            "role": "menuitem"
+          },
+          "e50": {
+            "name": "PARTNERS",
+            "role": "menuitem"
+          },
+          "e51": {
+            "name": "VOLUNTEERS",
+            "role": "menuitem"
+          },
+          "e52": {
+            "name": "PRIVACY POLICY",
+            "role": "menuitem"
+          },
+          "e53": {
+            "name": "",
+            "role": "link"
+          },
+          "e54": {
+            "name": "",
+            "role": "link"
+          },
+          "e55": {
+            "name": "",
+            "role": "link"
+          },
+          "e56": {
+            "name": "",
+            "role": "link"
+          },
+          "e57": {
+            "name": "Threads",
+            "role": "link"
+          },
+          "e58": {
+            "name": "",
+            "role": "link"
+          },
+          "e59": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e6": {
+            "name": "SCHEDULE",
+            "role": "menuitem"
+          },
+          "e60": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e61": {
+            "name": "",
+            "role": "link"
+          },
+          "e62": {
+            "name": "",
+            "role": "link"
+          },
+          "e63": {
+            "name": "",
+            "role": "link"
+          },
+          "e64": {
+            "name": "",
+            "role": "link"
+          },
+          "e65": {
+            "name": "Threads",
+            "role": "link"
+          },
+          "e66": {
+            "name": "",
+            "role": "link"
+          },
+          "e7": {
+            "name": "TICKETS",
+            "role": "menuitem"
+          },
+          "e8": {
+            "name": "Open search form",
+            "role": "button"
+          },
+          "e9": {
+            "name": "",
+            "role": "button"
+          }
+        },
+        "snapshot": "- link [ref=e1]\n- menuitem \"ART TRAIL\" [ref=e2]\n- menuitem \"TALKS\" [ref=e3]\n- menuitem \"MARKET\" [ref=e4]\n- menuitem \"ABOUT KIKK\" [ref=e5]\n- menuitem \"SCHEDULE\" [ref=e6]\n- menuitem \"TICKETS\" [ref=e7]\n- button \"choose a language (EN)\" [ref=e23]\n- button \"Open search form\" [ref=e8]\n- button [expanded=false, ref=e9]\n- heading \"KIKK FESTIVAL\" [level=1, ref=e10]\n- link \"Get tickets\" [ref=e11]\n- heading \"TALKS\" [level=2, ref=e24]\n- tab \"AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN\" [selected, ref=e25]\n- tab \"M\u00d3NICA RIKI\u0106 M\u00d3NICA RIKI\u0106\" [ref=e26]\n- tab \"DANIEL SIMU WITH ACROBOT DANIEL SIMU WITH ACROBOT\" [ref=e27]\n- tab \"IOANA VREME MOSER IOANA VREME MOSER\" [ref=e28]\n- tab \"INES ALPHA INES ALPHA\" [ref=e29]\n- tab \"ROBERT HODGIN ROBERT HODGIN\" [ref=e30]\n- heading \"\u2018How to make the logo bigger when the world is burning\u2019\" [level=3, ref=e31]\n- link \"ABOUT\" [ref=e37]\n- link \"View full schedule\" [ref=e12]\n- heading \"ART EXHIBITION\" [level=2, ref=e13]\n- link \"ersatz\" [ref=e32]\n- link \"Alexis Choplain\" [ref=e33]\n- link \"My Name is Fuzzy\" [ref=e34]\n- link \"View all events\" [ref=e35]\n- heading \"BOOM BOOM TCHAK\" [level=2, ref=e14]\n- heading \"FESTIVAL PASSES\" [level=2, ref=e15]\n- heading \"CONFERENCE PASS\" [level=2, ref=e38]\n- link \"GET TICKETS GET TICKETS\" [ref=e59]\n- heading \"FULL PASS\" [level=2, ref=e39]\n- link \"GET TICKETS GET TICKETS\" [ref=e60]\n- heading \"KIKK IN TOWN\" [level=2, ref=e16]\n- heading \"An art journey throughout Namur\" [level=3, ref=e17]\n- heading \"EXHIBITION PASS\" [level=2, ref=e40]\n- link \"GET TICKETS GET TICKETS\" [ref=e41]\n- link \"View town map\" [ref=e18]\n- textbox \"Email\" [required, ref=e19]\n- button \"SUBSCRIBE\" [ref=e20]\n- link [ref=e61]\n- link [ref=e62]\n- link [ref=e63]\n- link [ref=e64]\n- link \"Threads\" [ref=e65]\n- link [ref=e66]\n- navigation \"footer navigation\" [ref=e21]\n  - menuitem \"TICKETS\" [ref=e42]\n  - menuitem \"SCHEDULE\" [ref=e43]\n  - menuitem \"TALKS\" [ref=e44]\n  - menuitem \"ART TRAIL\" [ref=e45]\n  - menuitem \"MARKET\" [ref=e46]\n  - menuitem \"FOR KIDS\" [ref=e47]\n  - menuitem \"PARTIES\" [ref=e48]\n- navigation \"footer navigation\" [ref=e22]\n  - menuitem \"CONTACT US\" [ref=e49]\n  - menuitem \"PARTNERS\" [ref=e50]\n  - menuitem \"VOLUNTEERS\" [ref=e51]\n  - menuitem \"PRIVACY POLICY\" [ref=e52]\n- link \"UNSEEN STUDIO\" [ref=e36]\n- link [ref=e53]\n- link [ref=e54]\n- link [ref=e55]\n- link [ref=e56]\n- link \"Threads\" [ref=e57]\n- link [ref=e58]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "click",
+      "@e43"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "clicked": "@e43"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "1500"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 1500,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/kikk-schedule.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/kikk-schedule.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://2025.kikk.be/",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "link"
+          },
+          "e10": {
+            "name": "KIKK FESTIVAL",
+            "role": "heading"
+          },
+          "e11": {
+            "name": "Get tickets",
+            "role": "link"
+          },
+          "e12": {
+            "name": "View full schedule",
+            "role": "link"
+          },
+          "e13": {
+            "name": "ART EXHIBITION",
+            "role": "heading"
+          },
+          "e14": {
+            "name": "BOOM BOOM TCHAK",
+            "role": "heading"
+          },
+          "e15": {
+            "name": "FESTIVAL PASSES",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "KIKK IN TOWN",
+            "role": "heading"
+          },
+          "e17": {
+            "name": "An art journey throughout Namur",
+            "role": "heading"
+          },
+          "e18": {
+            "name": "View town map",
+            "role": "link"
+          },
+          "e19": {
+            "name": "Email",
+            "role": "textbox"
+          },
+          "e2": {
+            "name": "ART TRAIL",
+            "role": "menuitem"
+          },
+          "e20": {
+            "name": "SUBSCRIBE",
+            "role": "button"
+          },
+          "e21": {
+            "name": "footer navigation",
+            "role": "navigation"
+          },
+          "e22": {
+            "name": "footer navigation",
+            "role": "navigation"
+          },
+          "e23": {
+            "name": "choose a language (EN)",
+            "role": "button"
+          },
+          "e24": {
+            "name": "TALKS",
+            "role": "heading"
+          },
+          "e25": {
+            "name": "AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN",
+            "role": "tab"
+          },
+          "e26": {
+            "name": "M\u00d3NICA RIKI\u0106 M\u00d3NICA RIKI\u0106",
+            "role": "tab"
+          },
+          "e27": {
+            "name": "DANIEL SIMU WITH ACROBOT DANIEL SIMU WITH ACROBOT",
+            "role": "tab"
+          },
+          "e28": {
+            "name": "IOANA VREME MOSER IOANA VREME MOSER",
+            "role": "tab"
+          },
+          "e29": {
+            "name": "INES ALPHA INES ALPHA",
+            "role": "tab"
+          },
+          "e3": {
+            "name": "TALKS",
+            "role": "menuitem"
+          },
+          "e30": {
+            "name": "ROBERT HODGIN ROBERT HODGIN",
+            "role": "tab"
+          },
+          "e31": {
+            "name": "\u2018How to make the logo bigger when the world is burning\u2019",
+            "role": "heading"
+          },
+          "e32": {
+            "name": "ersatz",
+            "role": "link"
+          },
+          "e33": {
+            "name": "Alexis Choplain",
+            "role": "link"
+          },
+          "e34": {
+            "name": "My Name is Fuzzy",
+            "role": "link"
+          },
+          "e35": {
+            "name": "View all events",
+            "role": "link"
+          },
+          "e36": {
+            "name": "UNSEEN STUDIO",
+            "role": "link"
+          },
+          "e37": {
+            "name": "ABOUT",
+            "role": "link"
+          },
+          "e38": {
+            "name": "CONFERENCE PASS",
+            "role": "heading"
+          },
+          "e39": {
+            "name": "FULL PASS",
+            "role": "heading"
+          },
+          "e4": {
+            "name": "MARKET",
+            "role": "menuitem"
+          },
+          "e40": {
+            "name": "EXHIBITION PASS",
+            "role": "heading"
+          },
+          "e41": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e42": {
+            "name": "TICKETS",
+            "role": "menuitem"
+          },
+          "e43": {
+            "name": "SCHEDULE",
+            "role": "menuitem"
+          },
+          "e44": {
+            "name": "TALKS",
+            "role": "menuitem"
+          },
+          "e45": {
+            "name": "ART TRAIL",
+            "role": "menuitem"
+          },
+          "e46": {
+            "name": "MARKET",
+            "role": "menuitem"
+          },
+          "e47": {
+            "name": "FOR KIDS",
+            "role": "menuitem"
+          },
+          "e48": {
+            "name": "PARTIES",
+            "role": "menuitem"
+          },
+          "e49": {
+            "name": "CONTACT US",
+            "role": "menuitem"
+          },
+          "e5": {
+            "name": "ABOUT KIKK",
+            "role": "menuitem"
+          },
+          "e50": {
+            "name": "PARTNERS",
+            "role": "menuitem"
+          },
+          "e51": {
+            "name": "VOLUNTEERS",
+            "role": "menuitem"
+          },
+          "e52": {
+            "name": "PRIVACY POLICY",
+            "role": "menuitem"
+          },
+          "e53": {
+            "name": "",
+            "role": "link"
+          },
+          "e54": {
+            "name": "",
+            "role": "link"
+          },
+          "e55": {
+            "name": "",
+            "role": "link"
+          },
+          "e56": {
+            "name": "",
+            "role": "link"
+          },
+          "e57": {
+            "name": "Threads",
+            "role": "link"
+          },
+          "e58": {
+            "name": "",
+            "role": "link"
+          },
+          "e59": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e6": {
+            "name": "SCHEDULE",
+            "role": "menuitem"
+          },
+          "e60": {
+            "name": "GET TICKETS GET TICKETS",
+            "role": "link"
+          },
+          "e61": {
+            "name": "",
+            "role": "link"
+          },
+          "e62": {
+            "name": "",
+            "role": "link"
+          },
+          "e63": {
+            "name": "",
+            "role": "link"
+          },
+          "e64": {
+            "name": "",
+            "role": "link"
+          },
+          "e65": {
+            "name": "Threads",
+            "role": "link"
+          },
+          "e66": {
+            "name": "",
+            "role": "link"
+          },
+          "e7": {
+            "name": "TICKETS",
+            "role": "menuitem"
+          },
+          "e8": {
+            "name": "Open search form",
+            "role": "button"
+          },
+          "e9": {
+            "name": "",
+            "role": "button"
+          }
+        },
+        "snapshot": "- link [ref=e1]\n- menuitem \"ART TRAIL\" [ref=e2]\n- menuitem \"TALKS\" [ref=e3]\n- menuitem \"MARKET\" [ref=e4]\n- menuitem \"ABOUT KIKK\" [ref=e5]\n- menuitem \"SCHEDULE\" [ref=e6]\n- menuitem \"TICKETS\" [ref=e7]\n- button \"choose a language (EN)\" [ref=e23]\n- button \"Open search form\" [ref=e8]\n- button [expanded=false, ref=e9]\n- heading \"KIKK FESTIVAL\" [level=1, ref=e10]\n- link \"Get tickets\" [ref=e11]\n- heading \"TALKS\" [level=2, ref=e24]\n- tab \"AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN AUR\u00c9LIA DE AZAMBUJA \u2013 BASE DESIGN\" [selected, ref=e25]\n- tab \"M\u00d3NICA RIKI\u0106 M\u00d3NICA RIKI\u0106\" [ref=e26]\n- tab \"DANIEL SIMU WITH ACROBOT DANIEL SIMU WITH ACROBOT\" [ref=e27]\n- tab \"IOANA VREME MOSER IOANA VREME MOSER\" [ref=e28]\n- tab \"INES ALPHA INES ALPHA\" [ref=e29]\n- tab \"ROBERT HODGIN ROBERT HODGIN\" [ref=e30]\n- heading \"\u2018How to make the logo bigger when the world is burning\u2019\" [level=3, ref=e31]\n- link \"ABOUT\" [ref=e37]\n- link \"View full schedule\" [ref=e12]\n- heading \"ART EXHIBITION\" [level=2, ref=e13]\n- link \"ersatz\" [ref=e32]\n- link \"Alexis Choplain\" [ref=e33]\n- link \"My Name is Fuzzy\" [ref=e34]\n- link \"View all events\" [ref=e35]\n- heading \"BOOM BOOM TCHAK\" [level=2, ref=e14]\n- heading \"FESTIVAL PASSES\" [level=2, ref=e15]\n- heading \"CONFERENCE PASS\" [level=2, ref=e38]\n- link \"GET TICKETS GET TICKETS\" [ref=e59]\n- heading \"FULL PASS\" [level=2, ref=e39]\n- link \"GET TICKETS GET TICKETS\" [ref=e60]\n- heading \"KIKK IN TOWN\" [level=2, ref=e16]\n- heading \"An art journey throughout Namur\" [level=3, ref=e17]\n- heading \"EXHIBITION PASS\" [level=2, ref=e40]\n- link \"GET TICKETS GET TICKETS\" [ref=e41]\n- link \"View town map\" [ref=e18]\n- textbox \"Email\" [required, ref=e19]\n- button \"SUBSCRIBE\" [ref=e20]\n- link [ref=e61]\n- link [ref=e62]\n- link [ref=e63]\n- link [ref=e64]\n- link \"Threads\" [ref=e65]\n- link [ref=e66]\n- navigation \"footer navigation\" [ref=e21]\n  - menuitem \"TICKETS\" [ref=e42]\n  - menuitem \"SCHEDULE\" [ref=e43]\n  - menuitem \"TALKS\" [ref=e44]\n  - menuitem \"ART TRAIL\" [ref=e45]\n  - menuitem \"MARKET\" [ref=e46]\n  - menuitem \"FOR KIDS\" [ref=e47]\n  - menuitem \"PARTIES\" [ref=e48]\n- navigation \"footer navigation\" [ref=e22]\n  - menuitem \"CONTACT US\" [ref=e49]\n  - menuitem \"PARTNERS\" [ref=e50]\n  - menuitem \"VOLUNTEERS\" [ref=e51]\n  - menuitem \"PRIVACY POLICY\" [ref=e52]\n- link \"UNSEEN STUDIO\" [ref=e36]\n- link [ref=e53]\n- link [ref=e54]\n- link [ref=e55]\n- link [ref=e56]\n- link \"Threads\" [ref=e57]\n- link [ref=e58]"
+      },
+      "error": null
+    }
+  }
+]

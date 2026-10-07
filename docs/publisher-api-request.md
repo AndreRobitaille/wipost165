@@ -5,18 +5,23 @@ It describes the public output and behavior needed by `wipost165`. How
 LegionPostTools produces that output, manages content, or presents its own site
 and administration is for that repository to decide.
 
+The publisher is now delivered. This document remains the output compatibility
+reference; the [companion queue](companion-work-queue.md) tracks remaining evidence.
+The owner's authenticated-access change below supersedes the original anonymous
+transport description. No new publisher implementation is requested by this update.
+
 ## Task
 
-Read your repository's guidance and inspect what already exists. Provide a
-read-only publishing API that the separate Post 165 public website can consume.
-Use the existing implementation where it meets the need. Return the interface,
-examples, and verification evidence described below so the public-site work can
-resume against real output.
+Read your repository's guidance and inspect the delivered publishing API and its
+existing verification. Return evidence for the remaining items in the companion
+queue, using the output requirements below as the compatibility reference. Report
+concrete gaps or interface differences before proposing additional implementation.
 
 The public site needs two kinds of content: approved introductions with portraits,
-and approved public events. It has no member login, private credentials, database
-connection, editor, or upload flow. Public contact and general first-visit details
-are already maintained locally; no endpoint for those is requested.
+and approved public events. It has no member login, personal editorial credentials,
+database connection, editor, or upload flow. Its server holds only the read-only
+website token. Public contact and general first-visit details are already maintained
+locally; no endpoint for those is requested.
 
 This request does not choose your data model, permission names, roles, editing
 screens, navigation, publication controls, upload tooling, or internal architecture.
@@ -36,9 +41,15 @@ can be adapted in a subsequent public-repo task; an uncoordinated difference wil
 not work with the current client.
 
 The current transport uses one configurable HTTPS origin, initially
-`https://members.wipost165.org`, without authentication or redirect following.
-The public server requests JSON; visitors' browsers load portrait URLs directly.
-No browser-side JSON requests or CORS setup is needed by this consumer.
+`https://members.wipost165.org`, without redirect following. The server sends
+`Authorization: Bearer <website token>` on JSON, portrait, HEAD, and conditional
+requests. The Post-owned website token grants reads only; no anonymous access is
+available. Personal API tokens with the appropriate role are required for editorial
+API changes and do not belong in this consumer.
+
+Visitors load portraits through the public application's own constrained image
+route. The website token never enters browser HTML, URLs, or JavaScript. No
+browser-side publisher requests or CORS setup is needed.
 
 | GET/HEAD route | Successful result |
 | --- | --- |
@@ -144,8 +155,10 @@ as public calendar events.
 ## Freshness and errors
 
 The current interface uses ETag, Date, and
-`Cache-Control: public, max-age=300, must-revalidate` on successful JSON and
-portraits. Return accurate Age when applicable. Conditional requests use
+`Cache-Control: private, max-age=300, must-revalidate` and `Vary: Authorization`
+on successful JSON and portraits. Consumer caches are separated by credential and
+origin; browser-facing pages and portrait responses use no-store. Return accurate
+Age when applicable. Conditional requests use
 `If-None-Match`; 304 is valid only while the corresponding public representation
 is still allowed and unchanged. A 304 includes current validation metadata.
 Removal, cancellation, ordering, or other public changes invalidate affected
@@ -156,6 +169,8 @@ extension or new five minutes at each hop. Withdrawal must be honored by the
 publisher on subsequent requests; already cached copies may last for their
 remaining allowed lifetime. This does not claim recall from an already open page.
 
+Missing, invalid, or revoked website credentials return 401 before resource/ETag
+lookup; clear cached access for that credential and fail closed.
 Expected errors: 400 for invalid intervals, 404 for unavailable public identities,
 405 for unsupported methods, 429 for throttling, and 503 for temporary failure.
 Error responses use `Cache-Control: no-store`. The existing envelope is
@@ -181,14 +196,16 @@ Provide a concise handoff containing:
    the result is local, reachable in a test environment, or deployed. Identify
    remaining dependencies without including credentials or private records.
 
-Real introductions/photos are still being collected. Synthetic content is enough
-for implementation and verification; this request does not require live grants,
-real content publication, or deployment. Follow the authorization given in your
+Real introductions/photos are the final content step after technical readiness.
+Synthetic content is enough for implementation and verification; this request does
+not require live grants, real content publication, or deployment. Follow the authorization given in your
 own session for those actions.
 
 For comparison, the public consumer lives in
 [`Publishing::Contract`](../app/services/publishing/contract.rb),
 [`Publishing::Client`](../app/services/publishing/client.rb), and
 [`Publishing::Transport`](../app/services/publishing/transport.rb).
-[`bin/publisher-check`](../bin/publisher-check) checks the two collection endpoints;
-passing it alone does not establish detail, image, or withdrawal correctness.
+[`bin/publisher-check`](../bin/publisher-check) checks featured story details, both portrait
+variants, both collections, and up to ten event details. Passing it establishes
+read compatibility for returned records, not editorial lifecycle or permission
+correctness; an empty event interval does not verify populated event delivery.

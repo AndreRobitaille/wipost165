@@ -1,0 +1,77 @@
+[
+  {
+    "success": true,
+    "data": {
+      "deviceScaleFactor": 1.0,
+      "height": 960,
+      "mobile": false,
+      "width": 1440
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "title": "Bruno's",
+      "url": "https://bruno-simon.com/"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://bruno-simon.com/",
+      "refs": {
+        "e1": {
+          "name": "",
+          "role": "button"
+        },
+        "e2": {
+          "name": "",
+          "role": "button"
+        }
+      },
+      "snapshot": "- button [ref=e1]\n- button [ref=e2]"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/bruno-initial.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "scrolled": true
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/bruno-scroll.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://bruno-simon.com/",
+      "refs": {
+        "e1": {
+          "name": "",
+          "role": "button"
+        },
+        "e2": {
+          "name": "",
+          "role": "button"
+        }
+      },
+      "snapshot": "- generic\n  - generic\n  - generic\n    - Canvas\n    - button [ref=e1]\n      - generic\n    - button [ref=e2]\n      - image"
+    },
+    "error": null
+  }
+]

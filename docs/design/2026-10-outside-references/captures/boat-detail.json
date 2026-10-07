@@ -1,0 +1,267 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://www.sbs.com.au/theboat/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "The Boat | SBS",
+        "url": "https://www.sbs.com.au/theboat/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://www.sbs.com.au/theboat/",
+        "refs": {
+          "e1": {
+            "name": "Terms & Conditions",
+            "role": "link"
+          },
+          "e2": {
+            "name": "Privacy",
+            "role": "link"
+          },
+          "e3": {
+            "name": "Complaints",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"Terms & Conditions\" [ref=e1]\n- link \"Privacy\" [ref=e2]\n- link \"Complaints\" [ref=e3]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "mouse",
+      "move",
+      "720",
+      "460"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "moved": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "mouse",
+      "down",
+      "left"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "pressed": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "mouse",
+      "up",
+      "left"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "released": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "10000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 10000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/boat-title.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/boat-title.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "scroll",
+      "down",
+      "1100"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "scrolled": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "2500"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 2500,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/boat-story.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/boat-story.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://www.sbs.com.au/theboat/",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e10": {
+            "name": "1",
+            "role": "link"
+          },
+          "e11": {
+            "name": "2",
+            "role": "link"
+          },
+          "e12": {
+            "name": "3",
+            "role": "link"
+          },
+          "e13": {
+            "name": "4",
+            "role": "link"
+          },
+          "e14": {
+            "name": "5",
+            "role": "link"
+          },
+          "e15": {
+            "name": "6",
+            "role": "link"
+          },
+          "e16": {
+            "name": "Post",
+            "role": "link"
+          },
+          "e2": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e3": {
+            "name": "",
+            "role": "LabelText"
+          },
+          "e4": {
+            "name": "",
+            "role": "link"
+          },
+          "e5": {
+            "name": "X Post Button",
+            "role": "Iframe"
+          },
+          "e6": {
+            "name": "",
+            "role": "Iframe"
+          },
+          "e7": {
+            "name": "Terms & Conditions",
+            "role": "link"
+          },
+          "e8": {
+            "name": "Privacy",
+            "role": "link"
+          },
+          "e9": {
+            "name": "Complaints",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"1\" [ref=e10]\n- link \"2\" [ref=e11]\n- link \"3\" [ref=e12]\n- link \"4\" [ref=e13]\n- link \"5\" [ref=e14]\n- link \"6\" [ref=e15]\n- LabelText \"Sound\" [ref=e1] clickable [cursor:pointer]\n- LabelText \"Auto Scroll\" [ref=e2] clickable [cursor:pointer]\n- LabelText \"Full Screen\" [ref=e3] clickable [cursor:pointer]\n- link [ref=e4]\n- Iframe \"X Post Button\" [ref=e5]\n  - link \"Post\" [ref=e16]\n- Iframe [ref=e6]\n- link \"Terms & Conditions\" [ref=e7]\n- link \"Privacy\" [ref=e8]\n- link \"Complaints\" [ref=e9]"
+      },
+      "error": null
+    }
+  }
+]

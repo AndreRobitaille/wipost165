@@ -1,0 +1,283 @@
+/* National's web palette and Noto Sans; the harbor supplies the local character.
+   The dark surface and rules are shades of Emblem Blue, not new brand colors. */
+@font-face { font-family: "Launch Noto Sans"; src: url(body.woff) format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Launch Noto Sans"; src: url(body-bold.woff) format("woff"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Launch Noto Condensed"; src: url(display-condensed.woff) format("woff"); font-weight: 900; font-display: swap; }
+#launch {
+  --blue: #00467f;
+  --red: #b5121b;
+  --paper: #f5f8fa;
+  --gray: #f5f5f5;
+  --deep: color-mix(in srgb, var(--blue) 65%, black);
+  --ink: #222;
+  --muted: #535353;
+  --line: color-mix(in srgb, var(--blue) 22%, white);
+  --on-blue-muted: color-mix(in srgb, var(--blue) 25%, white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 17px/1.6 "Launch Noto Sans", Arial, sans-serif;
+  color-scheme: light;
+}
+#launch *, #launch *::before, #launch *::after { box-sizing: border-box; }
+#launch [hidden] { display: none !important; }
+#launch :is(h1, h2, h3, p) { margin: 0; overflow-wrap: anywhere; }
+#launch :is(h1, h2, h3) { font-weight: 700; line-height: 1.15; letter-spacing: -.035em; }
+#launch h1 { font-size: clamp(40px, 4.6vw, 64px); color: var(--blue); }
+#launch h2 { font-size: 28px; }
+#launch h3 { font-size: 24px; }
+#launch a { color: inherit; text-decoration: none; }
+#launch button { font: inherit; cursor: pointer; }
+#launch a:focus-visible, #launch button:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+#launch .launch-main:focus { outline: none; }
+#launch address { font-style: normal; }
+#launch .launch-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#launch .skip { position: absolute; top: -100px; left: 20px; z-index: 10; padding: 12px 20px; background: white; color: var(--blue); }
+#launch .skip:focus { top: 16px; }
+#launch .preview-note { padding: 8px 20px; background: var(--gray); color: var(--ink); text-align: center; font-size: 13px; }
+#launch .preview-note span { margin-left: 12px; }
+#launch .launch-header { display: flex; align-items: center; gap: 16px; padding: 16px max(24px, calc((100% - 1280px) / 2)); background: var(--deep); color: white; border-top: 5px solid var(--red); }
+/* The transparent logo includes whitespace; 20px adds at least one L-width. */
+#launch .launch-brand { display: block; flex: 0 0 176px; padding: 20px; }
+#launch .launch-brand img { display: block; width: 100%; height: auto; }
+#launch .launch-post { font-size: 12px; line-height: 1.45; letter-spacing: .04em; }
+#launch .launch-post strong { display: block; font-size: 23px; letter-spacing: .01em; }
+#launch .launch-post span { display: block; font-size: 13px; letter-spacing: 0; }
+#launch .launch-nav { display: flex; align-items: center; gap: 26px; margin-left: auto; font-size: 16px; }
+#launch .launch-nav a { position: relative; display: flex; align-items: center; min-height: 44px; padding: 10px 0; white-space: nowrap; }
+#launch .launch-nav a::after { content: ""; position: absolute; bottom: 3px; left: 0; right: 100%; height: 3px; background: white; transition: right .18s; }
+#launch .launch-nav a:hover::after, #launch .launch-nav a[aria-current="page"]::after { right: 0; }
+#launch .launch-main { flex: 1; width: 100%; max-width: 1440px; margin: auto; }
+#launch .eyebrow { font-size: 12px; font-weight: 700; line-height: 1.5; letter-spacing: .13em; text-transform: uppercase; }
+#launch .main-action { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 49px; padding: 12px 20px; border: 0; background: var(--red); color: white; font-size: 16px; font-weight: 700; transition: background .18s; }
+#launch .main-action:hover { background: color-mix(in srgb, var(--red) 80%, black); }
+#launch .main-action:focus-visible { outline-color: var(--blue); }
+#launch .main-action span, #launch .launch-arrow { font-size: 27px; line-height: 1; font-weight: 400; }
+#launch .text-action { display: inline-flex; align-items: center; min-height: 44px; padding-block: 8px; font-size: 15px; font-weight: 700; }
+#launch .text-action:hover, #launch .quiet-link a:hover, #launch .back-link a:hover { text-decoration: underline; text-underline-offset: 5px; }
+#launch .launch-welcome { display: grid; grid-template-columns: 52% 48%; min-height: 590px; }
+#launch .launch-harbor { position: relative; display: flex; flex-direction: column; align-self: stretch; min-width: 0; margin: 0; background: var(--deep); }
+#launch .launch-harbor img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 49% 48%; }
+#launch .launch-harbor figcaption { position: relative; margin-top: auto; padding: 10px 18px; background: var(--deep); color: white; font-size: 11px; line-height: 1.7; }
+#launch .launch-harbor figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+#launch .launch-introduction { align-self: center; padding: 44px 9%; }
+#launch .launch-introduction > .eyebrow { color: var(--blue); }
+#launch #welcome-title { margin: 22px 0; font-size: clamp(38px, 3.8vw, 55px); line-height: 1.04; color: var(--ink); }
+#launch #welcome-title span { color: var(--blue); }
+#launch .launch-welcome-copy { max-width: 38ch; font-size: 18px; color: var(--muted); }
+#launch .launch-actions { margin-top: 26px; }
+#launch .launch-visit-intro { display: grid; grid-template-columns: 1fr 26px; align-items: center; gap: 16px; margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--blue); }
+#launch .launch-visit-intro h2 { margin-bottom: 8px; font-size: 21px; letter-spacing: -.02em; }
+#launch .launch-visit-intro p { font-size: 15px; color: var(--muted); }
+#launch .launch-arrow { transition: transform .18s; }
+#launch .launch-visit-intro:hover .launch-arrow { transform: translateX(4px); }
+#launch .launch-practical { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 36px; padding: 36px 6%; background: color-mix(in srgb, var(--blue) 7%, white); color: var(--ink); }
+#launch .launch-practical .eyebrow { text-transform: none; letter-spacing: .025em; font-weight: 400; font-size: 13px; color: var(--muted); }
+#launch .launch-invitation { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 26px; align-items: start; padding: 28px; background: white; border: 1px solid var(--line); box-shadow: 0 4px 0 color-mix(in srgb, var(--blue) 12%, white); }
+#launch .launch-invitation-copy .eyebrow { margin-bottom: 8px; }
+#launch .launch-invitation h2 { margin-bottom: 12px; font-size: 26px; color: var(--blue); }
+#launch .launch-invitation :is(.launch-event-time, .launch-event-location) { font-size: 14px; color: var(--muted); }
+#launch .launch-invitation .launch-date { padding: 10px 8px 12px; background: var(--red); color: white; }
+#launch .launch-invitation .launch-date span { padding-bottom: 7px; margin-bottom: 6px; width: 100%; border-bottom: 1px solid #ffffff66; text-align: center; }
+#launch .launch-invitation .launch-date strong { font-size: 58px; }
+#launch .launch-practical .text-action { margin-top: 8px; font-size: 14px; color: var(--blue); }
+#launch .launch-invitation-empty { grid-column: 1 / -1; max-width: 60ch; }
+#launch .launch-invitation-empty .eyebrow { margin-bottom: 14px; }
+#launch .launch-invitation-empty .text-action { margin-right: 22px; }
+#launch .launch-date { display: flex; flex-direction: column; align-items: center; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; line-height: 1.2; }
+#launch .launch-date strong { font: 900 74px/1 "Launch Noto Condensed", sans-serif; letter-spacing: -.04em; }
+#launch .launch-date small { margin-top: 6px; font-size: 11px; font-weight: 400; letter-spacing: .03em; }
+#launch .launch-meeting { align-self: center; padding: 12px 0; }
+#launch .launch-meeting h2 { margin-bottom: 12px; }
+#launch .launch-meeting-time { margin-bottom: 12px; font-size: 15px; line-height: 1.6; color: var(--muted); }
+#launch .launch-meeting-time > strong { display: block; margin-bottom: 3px; color: var(--blue); font-size: 24px; letter-spacing: -.025em; }
+#launch .launch-meeting-location { font-size: 14px; color: var(--muted); }
+#launch .launch-help-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px 32px; padding: 32px 6%; background: var(--gray); }
+#launch .launch-help-bar h2 { margin-bottom: 8px; font-size: 24px; color: var(--blue); }
+#launch .launch-help-bar p { font-size: 16px; color: var(--muted); }
+#launch .launch-help-bar .text-action { color: var(--blue); }
+#launch .launch-page-heading { display: grid; grid-template-columns: 1fr 140px; gap: 32px; padding: 44px 6%; background: var(--blue); color: white; border-left: 8px solid var(--red); }
+#launch .launch-page-heading h1 { margin: 16px 0; color: white; }
+#launch .launch-page-lead { max-width: 52ch; font-size: 19px; }
+#launch .launch-post-number { align-self: center; justify-self: end; text-align: right; text-transform: uppercase; letter-spacing: .16em; font-size: 11px; }
+#launch .launch-post-number strong { display: block; font: 900 90px/1 "Launch Noto Condensed", sans-serif; letter-spacing: -.04em; }
+#launch .launch-calendar { padding: 8px 6% 36px; }
+#launch .launch-month { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 30px; padding-top: 30px; }
+#launch .launch-month > h2 { padding-top: 22px; font-size: 21px; color: var(--blue); }
+#launch .launch-month > h2 span { display: block; margin-top: 7px; font-size: 14px; font-weight: 400; letter-spacing: 0; color: var(--muted); }
+#launch .launch-event-list { border-top: 1px solid var(--line); }
+#launch .launch-event-card { display: grid; grid-template-columns: 66px minmax(0, 1fr) 42px; gap: 26px; align-items: center; padding: 25px 8px; border-bottom: 1px solid var(--line); transition: background .18s; }
+#launch .launch-event-card .launch-date { color: var(--red); }
+#launch .launch-event-card .launch-date strong { font-size: 62px; }
+#launch .launch-event-card h3 { margin-bottom: 10px; color: var(--blue); }
+#launch .launch-event-card p { font-size: 15px; color: var(--muted); }
+#launch .launch-event-open { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; color: var(--blue); font-size: 24px; transition: background .18s, color .18s; }
+#launch .launch-event-card:hover { background: white; }
+#launch .launch-event-card:hover h3 { color: var(--red); }
+#launch .launch-event-card:hover .launch-event-open { background: var(--blue); color: white; }
+#launch .launch-calendar-note { margin: 22px 0 0 160px; font-size: 13px; color: var(--muted); }
+#launch .sample-tag, #launch .cancelled-tag { display: inline-block; margin-bottom: 8px; font-size: 11px; font-weight: 700; letter-spacing: .04em; }
+#launch .cancelled-tag { padding: 3px 7px; background: var(--red); color: white; }
+#launch .launch-empty-card { max-width: 700px; padding: 44px 0; }
+#launch .launch-empty-card h2 { margin: 16px 0; color: var(--blue); }
+#launch .launch-detail-actions { display: flex; align-items: center; gap: 12px 24px; flex-wrap: wrap; }
+#launch .launch-visit-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 6%; padding: 40px 6% 48px; align-items: start; }
+#launch .launch-faq-card { padding: 25px 0; border-bottom: 1px solid var(--line); }
+#launch .launch-faq-card:first-child { padding-top: 0; }
+#launch .launch-faq-card h2 { margin-bottom: 12px; font-size: 24px; color: var(--blue); }
+#launch .launch-faq-card p { max-width: 62ch; color: var(--muted); }
+#launch .launch-visit-meeting-details { min-width: 0; border: 1px solid var(--line); border-top: 4px solid var(--red); background: white; box-shadow: 0 5px 0 color-mix(in srgb, var(--blue) 8%, white); }
+#launch .launch-meeting-schedule { padding: 25px 24px 22px; }
+#launch .launch-meeting-schedule .eyebrow { color: var(--red); letter-spacing: .09em; }
+#launch .launch-meeting-schedule h2 { margin: 16px 0 8px; font-size: 28px; color: var(--blue); }
+#launch .launch-meeting-schedule > p:last-child { font-size: 15px; color: var(--muted); }
+#launch .launch-meeting-schedule strong { color: var(--blue); white-space: nowrap; }
+#launch .launch-meeting-place { margin: 0 24px; padding: 20px 0 14px; border-top: 1px solid var(--line); }
+#launch .launch-meeting-place address { font-size: 15px; color: var(--muted); }
+#launch .launch-meeting-place address strong { display: inline-block; margin-bottom: 6px; color: var(--blue); line-height: 1.5; }
+#launch .launch-meeting-place .text-action { margin-top: 8px; font-size: 14px; color: var(--blue); }
+#launch .small-note { font-size: 13px; color: var(--muted); }
+#launch .launch-visit-meeting-details .small-note { padding: 16px 24px; border-top: 1px solid var(--line); background: var(--paper); }
+#launch .launch-contact-page { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 7%; align-items: start; max-width: 1160px; margin: auto; padding: 64px 6% 72px; }
+#launch .launch-contact-intro { padding-top: 20px; }
+#launch .launch-contact-intro .eyebrow { color: var(--red); }
+#launch .launch-contact-intro h1 { margin: 18px 0 24px; font-size: clamp(44px, 4.6vw, 62px); }
+#launch .launch-contact-intro > p:not(.eyebrow) { max-width: 34ch; color: var(--muted); }
+#launch .launch-contact-intro .small-note { margin-top: 24px; }
+#launch .launch-contact-sheet { min-width: 0; padding: 12px 32px 24px; border: 1px solid var(--line); border-top: 4px solid var(--red); background: white; box-shadow: 0 5px 0 color-mix(in srgb, var(--blue) 8%, white); }
+#launch .launch-contact-methods { margin: 0; }
+#launch .launch-contact-methods > div { padding: 20px 0; border-bottom: 1px solid var(--line); }
+#launch .launch-contact-methods dt { font-size: 13px; color: var(--muted); }
+#launch .launch-contact-methods dd { margin: 3px 0 0; }
+#launch .launch-contact-methods a { display: inline-block; max-width: 100%; min-height: 44px; padding: 5px 0; color: var(--blue); font-size: clamp(20px, 2.1vw, 26px); font-weight: 700; letter-spacing: -.025em; overflow-wrap: anywhere; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+#launch .launch-contact-methods a:hover { color: var(--red); }
+#launch .launch-mail { padding-top: 24px; }
+#launch .launch-mail h2 { margin-bottom: 10px; font-size: 15px; letter-spacing: 0; color: var(--blue); }
+#launch .launch-mail address { font-size: 15px; color: var(--muted); }
+#launch .launch-mail .text-action { margin-top: 10px; font-size: 13px; font-weight: 400; color: var(--blue); }
+#launch .launch-contact-pending { padding-top: 16px; color: var(--muted); }
+#launch .launch-footer { display: flex; align-items: start; justify-content: space-between; gap: 28px; padding: 28px max(24px, calc((100% - 1280px) / 2)); border-top: 3px solid var(--red); background: var(--deep); color: white; }
+#launch .launch-service { display: inline-block; padding-block: 8px; font-size: 18px; font-weight: 700; }
+#launch .launch-footer p { max-width: 50ch; font-size: 12px; color: var(--on-blue-muted); }
+#launch .launch-footer nav { display: flex; justify-content: end; flex-wrap: wrap; gap: 0 24px; font-size: 13px; color: var(--on-blue-muted); }
+#launch .launch-footer nav a { display: inline-block; min-height: 44px; padding-block: 10px; }
+#launch .launch-footer a:hover { text-decoration: underline; text-underline-offset: 5px; }
+#launch .launch-reading { min-height: 460px; max-width: 920px; margin: auto; padding: 56px 6% 64px; }
+#launch .launch-reading h1 { margin: 20px 0 26px; }
+#launch .body-copy { margin-block: 20px; font-size: 20px; }
+#launch .body-copy.compact { font-size: 17px; }
+#launch .quiet-link, #launch .back-link { margin-block: 18px; color: var(--blue); }
+#launch .quiet-link a, #launch .back-link a { display: inline-block; min-height: 44px; padding-block: 8px; }
+#launch .launch-reading .small-note { margin-block: 16px; }
+#launch .event-details { margin: 26px 0; border-top: 1px solid var(--line); }
+#launch .event-details > div { display: grid; grid-template-columns: 135px minmax(0, 1fr); gap: 20px; padding-block: 16px; border-bottom: 1px solid var(--line); }
+#launch .event-details dt { font-size: 13px; font-weight: 700; color: var(--muted); }
+#launch .event-details dd { margin: 0; overflow-wrap: anywhere; }
+#launch .event-details small { display: block; margin-top: 5px; }
+#launch .event-notice { padding: 14px 18px; border-left: 4px solid var(--red); background: white; }
+html.event-dialog-open { overflow: hidden; }
+#launch .launch-event-dialog { width: min(780px, calc(100% - 48px)); max-height: calc(100dvh - 40px); margin: auto; padding: 0; border: 0; border-top: 5px solid var(--red); background: var(--paper); color: var(--ink); box-shadow: 0 24px 80px #0006; overflow: auto; }
+#launch .launch-event-dialog::backdrop { background: #001a30bd; }
+#launch .launch-dialog-toolbar { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 20px; background: var(--paper); border-bottom: 1px solid var(--line); }
+#launch .launch-dialog-toolbar > span { font-weight: 700; color: var(--blue); }
+#launch .launch-dialog-toolbar form { margin: 0; }
+#launch .launch-dialog-close { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 8px 12px; border: 0; background: var(--blue); color: white; }
+#launch .launch-dialog-close:hover { background: var(--deep); }
+#launch .launch-dialog-close span { font-size: 24px; line-height: 1; }
+#launch .launch-dialog-close:focus-visible { outline-color: var(--blue); }
+#launch .launch-event-dialog turbo-frame { display: block; }
+#launch .launch-dialog-loading { padding: 32px; }
+#launch .launch-event-dialog .launch-event-detail { padding: 30px 36px 36px; }
+#launch .launch-event-detail h1, #launch .launch-event-detail h2 { margin: 16px 0 24px; color: var(--blue); font-size: 38px; }
+#launch .launch-event-detail [data-event-dialog-target="heading"]:focus { outline: none; }
+#launch .launch-event-detail .body-copy p + p { margin-top: 16px; }
+@media (max-width: 1000px) {
+  #launch .launch-header { flex-wrap: wrap; gap: 4px 16px; }
+  #launch .launch-nav { gap: 20px; }
+  #launch .launch-introduction { padding: 36px 8%; }
+  #launch .launch-practical { grid-template-columns: minmax(0, 1fr) 220px; gap: 28px; }
+  #launch .launch-visit-body { grid-template-columns: minmax(0, 1fr) 260px; gap: 5%; }
+  #launch .launch-footer { flex-direction: column; gap: 14px; }
+  #launch .launch-footer nav { justify-content: start; }
+}
+@media (max-width: 900px) {
+  #launch .launch-welcome { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  #launch .launch-harbor { min-height: 320px; }
+  #launch .launch-harbor img { object-position: 49% 40%; }
+  #launch .launch-introduction { padding: 34px 6%; }
+  #launch #welcome-title { font-size: 46px; }
+  #launch .launch-welcome-copy { max-width: 60ch; }
+  #launch .launch-visit-intro { margin-top: 25px; }
+  #launch .launch-visit-body { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  #launch .launch-visit-meeting-details { max-width: 500px; }
+  #launch .launch-contact-page { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 5%; padding-block: 44px 54px; }
+  #launch .launch-contact-sheet { padding-inline: 24px; }
+}
+@media (max-width: 700px) {
+  #launch .launch-header { padding: 10px 20px 14px; }
+  #launch .launch-brand { flex-basis: 148px; padding: 18px; }
+  #launch .launch-post { font-size: 11px; }
+  #launch .launch-post strong { font-size: 21px; }
+  #launch .launch-post span { font-size: 12px; }
+  #launch .launch-nav { justify-content: space-between; width: 100%; margin: 0; font-size: 15px; gap: 12px; }
+  #launch .launch-practical { grid-template-columns: minmax(0, 1fr); padding-block: 28px; gap: 24px; }
+  #launch .launch-invitation { padding: 24px; gap: 20px; grid-template-columns: 64px minmax(0, 1fr); }
+  #launch .launch-invitation h2 { font-size: 24px; }
+  #launch .launch-meeting { padding: 4px 0 0; }
+  #launch .launch-contact-page { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 32px 40px; }
+  #launch .launch-contact-intro { padding-top: 0; }
+  #launch .launch-contact-intro h1 { margin-block: 12px 16px; }
+  #launch .launch-contact-intro > p:not(.eyebrow) { max-width: 48ch; }
+  #launch .launch-contact-intro .small-note { margin-top: 16px; }
+  #launch .launch-page-heading { grid-template-columns: minmax(0, 1fr) 55px; padding: 32px 6%; gap: 12px; border-left-width: 5px; }
+  #launch .launch-page-heading h1 { font-size: 42px; }
+  #launch .launch-page-lead { font-size: 17px; }
+  #launch .launch-post-number { align-self: start; margin-top: 4px; }
+  #launch .launch-post-number strong { font-size: 52px; }
+  #launch .launch-month { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  #launch .launch-month > h2 { padding-top: 0; }
+  #launch .launch-month > h2 span { display: inline; margin-left: 10px; }
+  #launch .launch-calendar-note { margin-left: 0; }
+  #launch .launch-event-card { grid-template-columns: 50px minmax(0, 1fr) 30px; gap: 15px; padding: 24px 0; }
+  #launch .launch-event-card h3 { font-size: 21px; }
+  #launch .launch-event-card .launch-date strong { font-size: 52px; }
+  #launch .launch-event-open { width: 30px; height: 30px; font-size: 20px; }
+  #launch .launch-faq-card h2 { font-size: 23px; }
+  #launch .launch-reading { padding: 36px 6% 44px; }
+  #launch .event-details > div { grid-template-columns: minmax(0, 1fr); gap: 5px; }
+  #launch .launch-event-dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); }
+  #launch .launch-event-dialog .launch-event-detail { padding: 24px 20px; }
+  #launch .launch-event-detail h1, #launch .launch-event-detail h2 { font-size: 30px; }
+  #launch .preview-note span { display: block; margin: 2px 0 0; }
+}
+@media (max-width: 620px) {
+  #launch .launch-invitation { gap: 10px 18px; }
+  #launch .launch-invitation .launch-date { grid-row: 1 / span 2; }
+  #launch .launch-invitation-copy { display: contents; }
+  #launch .launch-invitation-copy > :is(.eyebrow, .sample-tag, h2) { grid-column: 2; margin: 0; }
+  #launch .launch-invitation h2 { font-size: 22px; }
+  #launch .launch-invitation-copy > :is(.launch-event-time, .launch-event-location, .text-action) { grid-column: 1 / -1; }
+  #launch .launch-invitation .launch-event-time { margin-top: 8px; }
+  #launch .launch-invitation .text-action { margin-top: 0; }
+  #launch .launch-contact-sheet { padding-inline: 22px; }
+
+  #launch .launch-harbor { min-height: 0; }
+  #launch .launch-harbor img { position: static; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
+  #launch .launch-introduction { padding: 28px 6%; }
+  #launch #welcome-title { font-size: 40px; margin-block: 20px; }
+  #launch .launch-welcome-copy { font-size: 17px; }
+  #launch .launch-help-bar { padding-block: 28px; }
+}
+@media (max-width: 360px) {
+  #launch .launch-header { padding-inline: 14px; column-gap: 10px; }
+  #launch .launch-brand { flex-basis: 125px; padding: 16px; }
+  #launch .launch-post strong { font-size: 19px; }
+  #launch #welcome-title { font-size: 36px; }
+  #launch .launch-event-card { gap: 10px; }
+  #launch .launch-page-heading h1 { font-size: 36px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #launch *, #launch *::before, #launch *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}

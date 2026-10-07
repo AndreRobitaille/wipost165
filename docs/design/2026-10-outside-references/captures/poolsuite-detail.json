@@ -1,0 +1,572 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://poolsuite.net/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Poolsuite \u263c",
+        "url": "https://poolsuite.net/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://poolsuite.net/",
+        "refs": {
+          "e1": {
+            "name": "Poolsuite palm tree",
+            "role": "button"
+          },
+          "e10": {
+            "name": "Guestbook icon Guestbook",
+            "role": "button"
+          },
+          "e11": {
+            "name": "Apps icon Apps",
+            "role": "button"
+          },
+          "e12": {
+            "name": "Close icon",
+            "role": "button"
+          },
+          "e13": {
+            "name": "Toggle TV icon",
+            "role": "button"
+          },
+          "e14": {
+            "name": "Contract icon",
+            "role": "button"
+          },
+          "e15": {
+            "name": "POOLSUITE",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "",
+            "role": "generic"
+          },
+          "e17": {
+            "name": "Poolsuite: ON AIR",
+            "role": "heading"
+          },
+          "e18": {
+            "name": "Plustwo - Stop Fantasy",
+            "role": "heading"
+          },
+          "e19": {
+            "name": "Share icon",
+            "role": "button"
+          },
+          "e2": {
+            "name": "BECOME A MEMBER / LOG IN",
+            "role": "button"
+          },
+          "e20": {
+            "name": "Favourite icon",
+            "role": "button"
+          },
+          "e21": {
+            "name": "Previous video icon",
+            "role": "button"
+          },
+          "e22": {
+            "name": "Next video icon",
+            "role": "button"
+          },
+          "e23": {
+            "name": "Fullscreen icon",
+            "role": "button"
+          },
+          "e24": {
+            "name": "Play icon",
+            "role": "button"
+          },
+          "e25": {
+            "name": "Stop icon",
+            "role": "button"
+          },
+          "e26": {
+            "name": "Previous track icon",
+            "role": "button"
+          },
+          "e27": {
+            "name": "Next track icon",
+            "role": "button"
+          },
+          "e28": {
+            "name": "Submit track icon",
+            "role": "button"
+          },
+          "e3": {
+            "name": "Player icon Player",
+            "role": "button"
+          },
+          "e4": {
+            "name": "Newsroom icon Newsroom",
+            "role": "button"
+          },
+          "e5": {
+            "name": "Mixtapes icon Mixtapes",
+            "role": "button"
+          },
+          "e6": {
+            "name": "Members icon Members",
+            "role": "button"
+          },
+          "e7": {
+            "name": "Events icon Events",
+            "role": "button"
+          },
+          "e8": {
+            "name": "Instagram icon Instagram",
+            "role": "button"
+          },
+          "e9": {
+            "name": "Vacation icon Vacation",
+            "role": "button"
+          }
+        },
+        "snapshot": "- button \"Poolsuite palm tree\" [ref=e1]\n- button \"BECOME A MEMBER / LOG IN\" [ref=e2]\n- button \"Close icon\" [ref=e12]\n- button \"Toggle TV icon\" [ref=e13]\n- button \"Contract icon\" [ref=e14]\n- heading \"POOLSUITE\" [level=2, ref=e15]\n- button \"Previous video icon\" [disabled, ref=e21]\n- button \"Next video icon\" [ref=e22]\n- button \"Fullscreen icon\" [ref=e23]\n- heading \"Poolsuite: ON AIR\" [level=3, ref=e17]\n- heading \"Plustwo - Stop Fantasy\" [level=2, ref=e18]\n- button \"Share icon\" [disabled, ref=e19]\n- button \"Favourite icon\" [disabled, ref=e20]\n- button \"Play icon\" [ref=e24]\n- button \"Stop icon\" [disabled, ref=e25]\n- button \"Previous track icon\" [disabled, ref=e26]\n- button \"Next track icon\" [disabled, ref=e27]\n- button \"Submit track icon\" [ref=e28]\n- generic [ref=e16] focusable [tabindex]\n- button \"Player icon Player\" [ref=e3]\n- button \"Newsroom icon Newsroom\" [ref=e4]\n- button \"Mixtapes icon Mixtapes\" [ref=e5]\n- button \"Members icon Members\" [ref=e6]\n- button \"Events icon Events\" [ref=e7]\n- button \"Instagram icon Instagram\" [ref=e8]\n- button \"Vacation icon Vacation\" [ref=e9]\n- button \"Guestbook icon Guestbook\" [ref=e10]\n- button \"Apps icon Apps\" [ref=e11]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://poolsuite.net/",
+        "refs": {
+          "e1": {
+            "name": "Poolsuite palm tree",
+            "role": "button"
+          },
+          "e10": {
+            "name": "Guestbook icon Guestbook",
+            "role": "button"
+          },
+          "e11": {
+            "name": "Apps icon Apps",
+            "role": "button"
+          },
+          "e12": {
+            "name": "Close icon",
+            "role": "button"
+          },
+          "e13": {
+            "name": "Toggle TV icon",
+            "role": "button"
+          },
+          "e14": {
+            "name": "Contract icon",
+            "role": "button"
+          },
+          "e15": {
+            "name": "POOLSUITE",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "",
+            "role": "generic"
+          },
+          "e17": {
+            "name": "Poolsuite: ON AIR",
+            "role": "heading"
+          },
+          "e18": {
+            "name": "Plustwo - Stop Fantasy",
+            "role": "heading"
+          },
+          "e19": {
+            "name": "Share icon",
+            "role": "button"
+          },
+          "e2": {
+            "name": "BECOME A MEMBER / LOG IN",
+            "role": "button"
+          },
+          "e20": {
+            "name": "Favourite icon",
+            "role": "button"
+          },
+          "e21": {
+            "name": "Previous video icon",
+            "role": "button"
+          },
+          "e22": {
+            "name": "Next video icon",
+            "role": "button"
+          },
+          "e23": {
+            "name": "Fullscreen icon",
+            "role": "button"
+          },
+          "e24": {
+            "name": "Play icon",
+            "role": "button"
+          },
+          "e25": {
+            "name": "Stop icon",
+            "role": "button"
+          },
+          "e26": {
+            "name": "Previous track icon",
+            "role": "button"
+          },
+          "e27": {
+            "name": "Next track icon",
+            "role": "button"
+          },
+          "e28": {
+            "name": "Submit track icon",
+            "role": "button"
+          },
+          "e3": {
+            "name": "Player icon Player",
+            "role": "button"
+          },
+          "e4": {
+            "name": "Newsroom icon Newsroom",
+            "role": "button"
+          },
+          "e5": {
+            "name": "Mixtapes icon Mixtapes",
+            "role": "button"
+          },
+          "e6": {
+            "name": "Members icon Members",
+            "role": "button"
+          },
+          "e7": {
+            "name": "Events icon Events",
+            "role": "button"
+          },
+          "e8": {
+            "name": "Instagram icon Instagram",
+            "role": "button"
+          },
+          "e9": {
+            "name": "Vacation icon Vacation",
+            "role": "button"
+          }
+        },
+        "snapshot": "- button \"Poolsuite palm tree\" [ref=e1]\n- button \"BECOME A MEMBER / LOG IN\" [ref=e2]\n- button \"Close icon\" [ref=e12]\n- button \"Toggle TV icon\" [ref=e13]\n- button \"Contract icon\" [ref=e14]\n- heading \"POOLSUITE\" [level=2, ref=e15]\n- button \"Previous video icon\" [disabled, ref=e21]\n- button \"Next video icon\" [ref=e22]\n- button \"Fullscreen icon\" [ref=e23]\n- heading \"Poolsuite: ON AIR\" [level=3, ref=e17]\n- heading \"Plustwo - Stop Fantasy\" [level=2, ref=e18]\n- button \"Share icon\" [disabled, ref=e19]\n- button \"Favourite icon\" [disabled, ref=e20]\n- button \"Play icon\" [ref=e24]\n- button \"Stop icon\" [disabled, ref=e25]\n- button \"Previous track icon\" [disabled, ref=e26]\n- button \"Next track icon\" [disabled, ref=e27]\n- button \"Submit track icon\" [ref=e28]\n- generic [ref=e16] focusable [tabindex]\n- button \"Player icon Player\" [ref=e3]\n- button \"Newsroom icon Newsroom\" [ref=e4]\n- button \"Mixtapes icon Mixtapes\" [ref=e5]\n- button \"Members icon Members\" [ref=e6]\n- button \"Events icon Events\" [ref=e7]\n- button \"Instagram icon Instagram\" [ref=e8]\n- button \"Vacation icon Vacation\" [ref=e9]\n- button \"Guestbook icon Guestbook\" [ref=e10]\n- button \"Apps icon Apps\" [ref=e11]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "click",
+      "@e7"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "clicked": "@e7"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "1800"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 1800,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/poolsuite-events.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/poolsuite-events.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://poolsuite.net/",
+        "refs": {
+          "e1": {
+            "name": "Poolsuite palm tree",
+            "role": "button"
+          },
+          "e10": {
+            "name": "Guestbook icon Guestbook",
+            "role": "button"
+          },
+          "e11": {
+            "name": "Apps icon Apps",
+            "role": "button"
+          },
+          "e12": {
+            "name": "Close icon",
+            "role": "button"
+          },
+          "e13": {
+            "name": "Toggle TV icon",
+            "role": "button"
+          },
+          "e14": {
+            "name": "Contract icon",
+            "role": "button"
+          },
+          "e15": {
+            "name": "Close icon",
+            "role": "button"
+          },
+          "e16": {
+            "name": "POOLSUITE",
+            "role": "heading"
+          },
+          "e17": {
+            "name": "",
+            "role": "generic"
+          },
+          "e18": {
+            "name": "Subscribe to stay updated",
+            "role": "button"
+          },
+          "e19": {
+            "name": "Past Events",
+            "role": "heading"
+          },
+          "e2": {
+            "name": "BECOME A MEMBER / LOG IN",
+            "role": "button"
+          },
+          "e20": {
+            "name": "Poolsuite: ON AIR",
+            "role": "heading"
+          },
+          "e21": {
+            "name": "Plustwo - Stop Fantasy",
+            "role": "heading"
+          },
+          "e22": {
+            "name": "Share icon",
+            "role": "button"
+          },
+          "e23": {
+            "name": "Favourite icon",
+            "role": "button"
+          },
+          "e24": {
+            "name": "Previous video icon",
+            "role": "button"
+          },
+          "e25": {
+            "name": "Next video icon",
+            "role": "button"
+          },
+          "e26": {
+            "name": "Fullscreen icon",
+            "role": "button"
+          },
+          "e27": {
+            "name": "Play icon",
+            "role": "button"
+          },
+          "e28": {
+            "name": "Stop icon",
+            "role": "button"
+          },
+          "e29": {
+            "name": "Previous track icon",
+            "role": "button"
+          },
+          "e3": {
+            "name": "Player icon Player",
+            "role": "button"
+          },
+          "e30": {
+            "name": "Next track icon",
+            "role": "button"
+          },
+          "e31": {
+            "name": "Submit track icon",
+            "role": "button"
+          },
+          "e32": {
+            "name": "Vacation\u00ae & Poolsuite's Corporate Cookout '25 It is our great pleasure to share that the 2025 Vacation\u00ae Corporate Cookout in Austin, Texas is now officially open for RSVP. May 10'25",
+            "role": "link"
+          },
+          "e33": {
+            "name": "Poolsuite Lisbon \u2013 An Intimate NYC Affair Celebrate the new year with us at Lisbon's hottest new vinyl bar, The Kissaten. Dec 31'24",
+            "role": "link"
+          },
+          "e34": {
+            "name": "Poolsuite & Vacation's Corporate Disco ft. Dabeull, Breakbot, Irfane & Yasmin A night of disco-fueled reverie at Poolsuite & Vacation\u2019s \u201cEnd of Financial Year\u201d Corporate Disco Dec 07'24",
+            "role": "link"
+          },
+          "e35": {
+            "name": "Poolsuite & Yahoo present DISCO(NNECT) ft. The Knocks, Soul Clap & Shubostar Proudly presenting DISCO(NNECT) at SXSW. Sunday March 10 at Hotel Van Zandt. Mar 10'24",
+            "role": "link"
+          },
+          "e36": {
+            "name": "Poolsuite's HOT DISCO AFFAIR ft. Boys Noize, Yung Bae & Raphael Futura Touching down at ZeyZey Miami with a spectacle of disco reverie! Dec 09'23",
+            "role": "link"
+          },
+          "e37": {
+            "name": "Poolsuite Miami '23 Complimentary ticket for Poolsuite's HOT DISCO AFFAIR in Miami Aug 07'23",
+            "role": "link"
+          },
+          "e38": {
+            "name": "Vacation\u00ae Corporate Cookout We're getting together at Art Basel Miami May 15'23",
+            "role": "link"
+          },
+          "e39": {
+            "name": "Poolsuite x Ralph Lauren \u2013 The Miami Soir\u00e9e You're invited to a grand event in Miami Apr 28'23",
+            "role": "link"
+          },
+          "e4": {
+            "name": "Newsroom icon Newsroom",
+            "role": "button"
+          },
+          "e40": {
+            "name": "Poolsuite Barcelona ft. Tensnake & Bonny Soul Join us at Carabret at The Edition Hotel Oct 01'22",
+            "role": "link"
+          },
+          "e41": {
+            "name": "Poolsuite Ibiza ft. Derrick Carter, Theo Kottis, Bonny Soul & Boniso An all-night affair at the legendary Pikes Hotel Jun 30'22",
+            "role": "link"
+          },
+          "e42": {
+            "name": "Poolsuite NYC ft. Artwork, Natasha Diggs & DJ Holographik Join as at Le Bain on 12 May May 12'22",
+            "role": "link"
+          },
+          "e43": {
+            "name": "Poolsuite London ft. Breakbot, Irfane & Theo Kottis Poolsuite's first soir\u00e9e in London! See you at The Standaed Hotel on Thursday 5 May from 10pm May 04'22",
+            "role": "link"
+          },
+          "e5": {
+            "name": "Mixtapes icon Mixtapes",
+            "role": "button"
+          },
+          "e6": {
+            "name": "Members icon Members",
+            "role": "button"
+          },
+          "e7": {
+            "name": "Events icon Events",
+            "role": "button"
+          },
+          "e8": {
+            "name": "Instagram icon Instagram",
+            "role": "button"
+          },
+          "e9": {
+            "name": "Vacation icon Vacation",
+            "role": "button"
+          }
+        },
+        "snapshot": "- button \"Poolsuite palm tree\" [ref=e1]\n- button \"BECOME A MEMBER / LOG IN\" [ref=e2]\n- button \"Close icon\" [ref=e12]\n- button \"Toggle TV icon\" [ref=e13]\n- button \"Contract icon\" [ref=e14]\n- heading \"POOLSUITE\" [level=2, ref=e16]\n- button \"Previous video icon\" [disabled, ref=e24]\n- button \"Next video icon\" [ref=e25]\n- button \"Fullscreen icon\" [ref=e26]\n- heading \"Poolsuite: ON AIR\" [level=3, ref=e20]\n- heading \"Plustwo - Stop Fantasy\" [level=2, ref=e21]\n- button \"Share icon\" [disabled, ref=e22]\n- button \"Favourite icon\" [disabled, ref=e23]\n- button \"Play icon\" [ref=e27]\n- button \"Stop icon\" [disabled, ref=e28]\n- button \"Previous track icon\" [disabled, ref=e29]\n- button \"Next track icon\" [disabled, ref=e30]\n- button \"Submit track icon\" [ref=e31]\n- generic [ref=e17] focusable [tabindex]\n- button \"Close icon\" [ref=e15]\n- button \"Subscribe to stay updated\" [ref=e18]\n- heading \"Past Events\" [level=4, ref=e19]\n- link \"Vacation\u00ae & Poolsuite's Corporate Cookout '25 It is our great pleasure to share that the 2025 Vacation\u00ae Corporate Cookout in Austin, Texas is now officially open for RSVP. May 10'25\" [ref=e32]\n- link \"Poolsuite Lisbon \u2013 An Intimate NYC Affair Celebrate the new year with us at Lisbon's hottest new vinyl bar, The Kissaten. Dec 31'24\" [ref=e33]\n- link \"Poolsuite & Vacation's Corporate Disco ft. Dabeull, Breakbot, Irfane & Yasmin A night of disco-fueled reverie at Poolsuite & Vacation\u2019s \u201cEnd of Financial Year\u201d Corporate Disco Dec 07'24\" [ref=e34]\n- link \"Poolsuite & Yahoo present DISCO(NNECT) ft. The Knocks, Soul Clap & Shubostar Proudly presenting DISCO(NNECT) at SXSW. Sunday March 10 at Hotel Van Zandt. Mar 10'24\" [ref=e35]\n- link \"Poolsuite's HOT DISCO AFFAIR ft. Boys Noize, Yung Bae & Raphael Futura Touching down at ZeyZey Miami with a spectacle of disco reverie! Dec 09'23\" [ref=e36]\n- link \"Poolsuite Miami '23 Complimentary ticket for Poolsuite's HOT DISCO AFFAIR in Miami Aug 07'23\" [ref=e37]\n- link \"Vacation\u00ae Corporate Cookout We're getting together at Art Basel Miami May 15'23\" [ref=e38]\n- link \"Poolsuite x Ralph Lauren \u2013 The Miami Soir\u00e9e You're invited to a grand event in Miami Apr 28'23\" [ref=e39]\n- link \"Poolsuite Barcelona ft. Tensnake & Bonny Soul Join us at Carabret at The Edition Hotel Oct 01'22\" [ref=e40]\n- link \"Poolsuite Ibiza ft. Derrick Carter, Theo Kottis, Bonny Soul & Boniso An all-night affair at the legendary Pikes Hotel Jun 30'22\" [ref=e41]\n- link \"Poolsuite NYC ft. Artwork, Natasha Diggs & DJ Holographik Join as at Le Bain on 12 May May 12'22\" [ref=e42]\n- link \"Poolsuite London ft. Breakbot, Irfane & Theo Kottis Poolsuite's first soir\u00e9e in London! See you at The Standaed Hotel on Thursday 5 May from 10pm May 04'22\" [ref=e43]\n- button \"Player icon Player\" [ref=e3]\n- button \"Newsroom icon Newsroom\" [ref=e4]\n- button \"Mixtapes icon Mixtapes\" [ref=e5]\n- button \"Members icon Members\" [ref=e6]\n- button \"Events icon Events\" [ref=e7]\n- button \"Instagram icon Instagram\" [ref=e8]\n- button \"Vacation icon Vacation\" [ref=e9]\n- button \"Guestbook icon Guestbook\" [ref=e10]\n- button \"Apps icon Apps\" [ref=e11]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "click",
+      "@e5"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "clicked": "@e5"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "1500"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 1500,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/poolsuite-mixtapes.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/poolsuite-mixtapes.png"
+      },
+      "error": null
+    }
+  }
+]

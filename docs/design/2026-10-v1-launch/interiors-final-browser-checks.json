@@ -1,0 +1,16 @@
+[
+  {
+    "liveModalWidth": 1440,
+    "result": "Hover, details, and Escape passed"
+  },
+  {
+    "liveModalWidth": 390,
+    "result": "Hover, details, and Escape passed"
+  },
+  {
+    "v2": "Original homepage and all three labelled sample portraits render"
+  },
+  {
+    "noJavaScript": "Calendar links reach full event details; all five visit answers stay visible"
+  }
+]

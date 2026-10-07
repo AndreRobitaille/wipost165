@@ -1,0 +1,58 @@
+<section class="launch-events-page" aria-labelledby="events-title" data-controller="event-dialog">
+  <header class="launch-page-heading">
+    <div>
+      <p class="eyebrow">THE PUBLIC CALENDAR</p>
+      <h1 id="events-title">Come on by.</h1>
+      <p class="launch-page-lead">Public occasions over the next three months. Find a date and make a plan.</p>
+    </div>
+    <span class="launch-post-number" aria-hidden="true">Post<strong>165</strong></span>
+  </header>
+  <div class="launch-calendar">
+    <% if @events.any? %>
+      <% @events.group_by { |event| event.date&.beginning_of_month }.each_with_index do |(month, events), index| %>
+        <section class="launch-month" aria-labelledby="month-<%= index %>">
+          <h2 id="month-<%= index %>"><%= month ? month.strftime("%B") : "Dates to come" %><% if month %><span><%= month.year %></span><% end %></h2>
+          <div class="launch-event-list">
+            <% events.each do |event| %>
+              <%= link_to event_path(event), class: "launch-event-card", aria: { haspopup: "dialog" }, data: { action: "click->event-dialog#open", turbo_prefetch: false } do %>
+                <span class="launch-date" aria-hidden="true"><strong><%= event.date ? event.date.day : "TBC" %></strong><small><%= event.date&.strftime("%a") %></small></span>
+                <div class="launch-event-card-copy">
+                  <% if preview_mode? %><span class="sample-tag">EXAMPLE OCCASION</span><% end %>
+                  <% if event.cancelled? %><span class="cancelled-tag">CANCELLED</span><% end %>
+                  <h3><%= event.title %></h3>
+                  <p><%= event_time(event) %><br><%= event.location_name.presence || "Location to be confirmed" %></p>
+                </div>
+                <span class="launch-event-open"><span class="launch-sr-only">View details</span><span aria-hidden="true">→</span></span>
+              <% end %>
+            <% end %>
+          </div>
+        </section>
+      <% end %>
+      <p class="launch-calendar-note"><%= preview_mode? ? "These sample invitations are not scheduled events." : "Check each occasion for its location, timing, and attendance details." %></p>
+    <% else %>
+      <div class="launch-empty-card">
+        <% if @content.events_unavailable %>
+          <p class="eyebrow">PLEASE CHECK BACK</p>
+          <h2>The calendar is temporarily unavailable.</h2>
+          <p>Please check back shortly before making plans.</p>
+        <% else %>
+          <p class="eyebrow">MORE DATES TO COME</p>
+          <h2>No upcoming public dates are listed right now.</h2>
+          <p>New dates will appear here when they’re available.</p>
+        <% end %>
+        <%= link_to "Plan your first visit →", visit_path, class: "text-action" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="launch-help-bar">
+    <div><h2>Your first time here?</h2><p>A public event is a good way to get to know us.</p></div>
+    <%= link_to "What to expect →", visit_path, class: "text-action" %>
+  </div>
+  <dialog class="launch-event-dialog" aria-labelledby="event-dialog-title" data-event-dialog-target="dialog" data-action="close->event-dialog#closed click->event-dialog#backdrop keydown->event-dialog#trapFocus">
+    <div class="launch-dialog-toolbar">
+      <span id="event-dialog-title">Event details</span>
+      <form method="dialog"><button class="launch-dialog-close" autofocus>Close <span aria-hidden="true">×</span></button></form>
+    </div>
+    <%= turbo_frame_tag "event-details", data: { event_dialog_target: "frame", action: "turbo:frame-load->event-dialog#loaded turbo:fetch-request-error->event-dialog#failed turbo:frame-missing->event-dialog#failed" } %>
+  </dialog>
+</section>

@@ -1,0 +1,16 @@
+[
+  {
+    "width": 1024,
+    "opens": true,
+    "escape_closes": true,
+    "keyboard_reopens": true,
+    "close_button_closes": true
+  },
+  {
+    "width": 320,
+    "opens": true,
+    "escape_closes": true,
+    "keyboard_reopens": true,
+    "close_button_closes": true
+  }
+]

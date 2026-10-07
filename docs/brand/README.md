@@ -54,3 +54,28 @@ Copyright remains with The American Legion National Headquarters.
 
 - `TAL-brand-primary-RGB.png` — SHA-256 `5949c30a833fff1a5c846a0a9952d2a7f530f2d60e4c2f72ecd11515c85447ff`
 - `TAL-brand-secondary-1C-white.png` — SHA-256 `4b900bb15c46f4ce659bfb3b1c768b5d0814d98837ac25b15e879740bc7b10ee`
+
+## October 7 harbor implementation check
+
+Rechecked National's current branding entry point and inspected guide pages 11,
+24 and 25 visually. Fresh reads of all three official page-image URLs match the
+saved references byte-for-byte. `fc-scan` identifies the bundled web fonts as
+Noto Sans Regular, Noto Sans Bold, and Noto Sans ExtraCondensed Black. V1 uses
+Regular/Bold for the website and the condensed face only for dates and the
+plain Post number; it does not recreate a logo in a typeface.
+
+`launch.css` uses the exact primary colors Emblem Blue `#00467F` and Poppy Red
+`#B5121B`, neutral Light Blue `#F5F8FA` and Light Gray `#F5F5F5`, plus black/white.
+Dark surfaces and separator rules are tonal mixes of Emblem Blue for the web UI,
+not additional official brand colors. The study's gold accent was removed; family
+colors and the vendor-only emblem gold/bronze are not borrowed for the Post UI.
+
+`app/assets/images/legion-white.png` remains byte-identical to National's white
+secondary brandmark above. It is displayed proportionately on a dark ground with
+at least an L-width of clear space. The Post identification is ordinary site text,
+separate from the original image; no custom graphical sub-brand was constructed.
+
+National's [AI guidance](https://www.legion.org/information-center/news/dispatch/2026/july/follow-these-guidelines-on-ai-use-of-legion-emblem-and-brandmark)
+prohibits generation, recreation, upscaling, or styling of the official symbols.
+The harbor illustration contains no official mark. The unchanged official PNG is
+placed separately in HTML and was never supplied to image generation.

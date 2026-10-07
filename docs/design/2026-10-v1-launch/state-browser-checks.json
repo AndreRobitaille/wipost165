@@ -1,0 +1,24 @@
+{
+  "synthetic_states": [
+    {
+      "state": "empty",
+      "width": 390,
+      "overflow": false,
+      "practical_guidance": true
+    },
+    {
+      "state": "outage",
+      "width": 390,
+      "overflow": false,
+      "practical_guidance": true
+    },
+    {
+      "state": "long",
+      "width": 320,
+      "overflow": false,
+      "practical_guidance": true
+    }
+  ],
+  "javascript_disabled_profile": true,
+  "no_javascript_navigation_and_native_details": "passed"
+}

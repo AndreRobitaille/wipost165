@@ -1,0 +1,123 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://bruno-simon.com/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Bruno's",
+        "url": "https://bruno-simon.com/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://bruno-simon.com/",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "button"
+          },
+          "e2": {
+            "name": "",
+            "role": "button"
+          }
+        },
+        "snapshot": "- button [ref=e1]\n- button [ref=e2]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "15000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 15000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/bruno-loaded.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/bruno-loaded.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://bruno-simon.com/",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "button"
+          },
+          "e2": {
+            "name": "",
+            "role": "button"
+          }
+        },
+        "snapshot": "- button [ref=e1]\n- button [ref=e2]"
+      },
+      "error": null
+    }
+  }
+]

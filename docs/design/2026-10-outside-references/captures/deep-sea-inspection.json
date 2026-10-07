@@ -1,0 +1,133 @@
+[
+  {
+    "success": true,
+    "data": {
+      "deviceScaleFactor": 1.0,
+      "height": 960,
+      "mobile": false,
+      "width": 1440
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "title": "Just a moment...",
+      "url": "https://neal.fun/deep-sea/"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://neal.fun/deep-sea/",
+      "refs": {
+        "e1": {
+          "name": "neal.fun",
+          "role": "heading"
+        },
+        "e2": {
+          "name": "Performing security verification",
+          "role": "heading"
+        },
+        "e3": {
+          "name": "Cloudflare, opens in a new tab",
+          "role": "link"
+        },
+        "e4": {
+          "name": "Privacy, opens in a new tab",
+          "role": "link"
+        },
+        "e5": {
+          "name": "Widget containing a Cloudflare security challenge",
+          "role": "Iframe"
+        },
+        "e6": {
+          "name": "Cloudflare, opens in a new tab",
+          "role": "link"
+        },
+        "e7": {
+          "name": "Privacy, opens in a new tab",
+          "role": "link"
+        },
+        "e8": {
+          "name": "Help, opens in a new tab",
+          "role": "link"
+        },
+        "e9": {
+          "name": "Verify you are human",
+          "role": "checkbox"
+        }
+      },
+      "snapshot": "- heading \"neal.fun\" [level=1, ref=e1]\n- heading \"Performing security verification\" [level=2, ref=e2]\n- Iframe \"Widget containing a Cloudflare security challenge\" [ref=e5]\n  - checkbox \"Verify you are human\" [checked=false, ref=e9]\n  - link \"Cloudflare, opens in a new tab\" [ref=e6]\n  - link \"Privacy, opens in a new tab\" [ref=e7]\n  - link \"Help, opens in a new tab\" [ref=e8]\n- link \"Cloudflare, opens in a new tab\" [ref=e3]\n- link \"Privacy, opens in a new tab\" [ref=e4]"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/deep-sea-initial.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "scrolled": true
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/deep-sea-scroll.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://neal.fun/deep-sea/",
+      "refs": {
+        "e1": {
+          "name": "neal.fun",
+          "role": "heading"
+        },
+        "e2": {
+          "name": "Performing security verification",
+          "role": "heading"
+        },
+        "e3": {
+          "name": "Cloudflare, opens in a new tab",
+          "role": "link"
+        },
+        "e4": {
+          "name": "Privacy, opens in a new tab",
+          "role": "link"
+        },
+        "e5": {
+          "name": "Widget containing a Cloudflare security challenge",
+          "role": "Iframe"
+        },
+        "e6": {
+          "name": "Cloudflare, opens in a new tab",
+          "role": "link"
+        },
+        "e7": {
+          "name": "Privacy, opens in a new tab",
+          "role": "link"
+        },
+        "e8": {
+          "name": "Help, opens in a new tab",
+          "role": "link"
+        },
+        "e9": {
+          "name": "Verify you are human",
+          "role": "checkbox"
+        }
+      },
+      "snapshot": "- main\n  - heading \"neal.fun\" [level=1, ref=e1]\n  - heading \"Performing security verification\" [level=2, ref=e2]\n  - paragraph\n    - StaticText \"This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.\"\n  - Iframe \"Widget containing a Cloudflare security challenge\" [ref=e5]\n    - generic\n      - alert\n        - LabelText\n          - checkbox \"Verify you are human\" [checked=false, ref=e9]\n      - link \"Cloudflare, opens in a new tab\" [ref=e6]\n        - image \"Cloudflare\"\n      - link \"Privacy, opens in a new tab\" [ref=e7]\n        - StaticText \"Privacy\"\n      - StaticText \"\u2022\"\n      - link \"Help, opens in a new tab\" [ref=e8]\n        - StaticText \"Help\"\n- contentinfo\n  - generic\n    - StaticText \"Ray ID: \"\n    - code\n      - StaticText \"a46e14232c7739d8\"\n  - StaticText \"Performance and Security by \"\n  - link \"Cloudflare, opens in a new tab\" [ref=e3]\n    - StaticText \"Cloudflare\"\n  - link \"Privacy, opens in a new tab\" [ref=e4]\n    - StaticText \"Privacy\""
+    },
+    "error": null
+  }
+]

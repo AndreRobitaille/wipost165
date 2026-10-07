@@ -1,0 +1,138 @@
+[
+  {
+    "id": "poolsuite",
+    "name": "Poolsuite",
+    "url": "https://poolsuite.net/",
+    "mechanism": "A coherent world: player, events, and library inhabit one desktop.",
+    "views": [
+      [
+        "Desktop with music library",
+        "poolsuite-mixtapes.png"
+      ],
+      [
+        "Event calendar",
+        "poolsuite-events.png"
+      ]
+    ]
+  },
+  {
+    "id": "kikk",
+    "name": "KIKK Festival — 2025 edition",
+    "url": "https://2025.kikk.be/",
+    "mechanism": "Graphic identity in motion: lettering, geometry, and rhythm belong together.",
+    "views": [
+      [
+        "Festival opening",
+        "kikk-hero.png"
+      ]
+    ]
+  },
+  {
+    "id": "oatly",
+    "name": "Oatly",
+    "url": "https://www.oatly.com/",
+    "mechanism": "Personality reaches the practical pages: type, texture, and illustration.",
+    "views": [
+      [
+        "FAQ page",
+        "oatly-faq.png"
+      ],
+      [
+        "Homepage",
+        "oatly-hero.png"
+      ]
+    ]
+  },
+  {
+    "id": "onions",
+    "name": "The Pudding — Dicing an Onion",
+    "url": "https://pudding.cool/2025/08/onions/",
+    "mechanism": "Useful interaction: an exploded diagram makes the explanation visible.",
+    "views": [
+      [
+        "Exploded diagram",
+        "onions-diagram-after.png"
+      ],
+      [
+        "Diagram before interaction",
+        "onions-diagram-before.png"
+      ],
+      [
+        "Opening typography",
+        "onions-initial.png"
+      ]
+    ]
+  },
+  {
+    "id": "boat",
+    "name": "SBS — The Boat",
+    "url": "https://www.sbs.com.au/theboat/",
+    "mechanism": "Atmosphere and pacing: illustrated weather, lettering, and a continuous scene.",
+    "views": [
+      [
+        "Illustrated opening",
+        "boat-story.png"
+      ]
+    ]
+  },
+  {
+    "id": "lusion",
+    "name": "Lusion",
+    "url": "https://lusion.co/",
+    "mechanism": "Material and depth: a distinctive moving composition carries the first impression.",
+    "views": [
+      [
+        "Animated 3D opening",
+        "lusion-contact.png"
+      ]
+    ]
+  },
+  {
+    "id": "moooi",
+    "name": "Moooi — Play With Peaks",
+    "url": "https://www.moooi.com/eu/story/play-with-peaks",
+    "mechanism": "Art direction around an object: material, light, scale, and setting.",
+    "views": [
+      [
+        "Product story opening",
+        "moooi-product-story.png"
+      ]
+    ]
+  },
+  {
+    "id": "window-swap",
+    "name": "WindowSwap",
+    "url": "https://www.window-swap.com/",
+    "mechanism": "One memorable action: open a window into another place.",
+    "views": [
+      [
+        "Opened window",
+        "window-swap-window.png"
+      ]
+    ]
+  },
+  {
+    "id": "lemonade",
+    "name": "Lemonade",
+    "url": "https://www.lemonade.com/",
+    "mechanism": "A recognizable illustration language gives a practical service warmth.",
+    "views": [
+      [
+        "Illustrated opening",
+        "lemonade-hero.png"
+      ]
+    ]
+  },
+  {
+    "id": "cameron",
+    "name": "Cameron’s World",
+    "url": "https://www.cameronsworld.net/",
+    "mechanism": "Deliberate abundance: a composed collage rewards visual exploration.",
+    "views": [
+      [
+        "Collage landscape",
+        "cameron-interior.png"
+      ]
+    ]
+  }
+]

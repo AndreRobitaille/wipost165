@@ -1,0 +1,112 @@
+[
+  {
+    "page_width": 1440,
+    "capture": "home-1440.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 1440,
+    "capture": "events-1440.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 1440,
+    "capture": "visit-1440.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 1440,
+    "capture": "contact-1440.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 1024,
+    "capture": "home-1024.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 1024,
+    "capture": "events-1024.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 1024,
+    "capture": "visit-1024.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 1024,
+    "capture": "contact-1024.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 800,
+    "capture": "home-800.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 800,
+    "capture": "events-800.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 800,
+    "capture": "visit-800.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 800,
+    "capture": "contact-800.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 390,
+    "capture": "home-390.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 390,
+    "capture": "events-390.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 390,
+    "capture": "visit-390.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 390,
+    "capture": "contact-390.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 320,
+    "capture": "home-320.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 320,
+    "capture": "events-320.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 320,
+    "capture": "visit-320.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 320,
+    "capture": "contact-320.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 1024,
+    "capture": "home-dark-1024.png",
+    "nonblank": true
+  },
+  {
+    "page_width": 1024,
+    "capture": "contact-dark-1024.png",
+    "nonblank": true
+  }
+]

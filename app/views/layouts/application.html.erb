@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><%= public_page_title %> · American Legion Post 165 · Two Rivers</title>
+    <%= render "public_site/metadata" %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Get to know Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin. Meet a few people, find an occasion, and plan your first visit.">
-    <% if preview_mode? %><meta name="robots" content="noindex,nofollow"><% end %>
     <meta name="turbo-cache-control" content="no-cache">
     <%= favicon_link_tag "legion-white.png", type: "image/png" %>
     <meta name="theme-color" content="#00467f">

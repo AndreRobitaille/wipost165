@@ -1,0 +1,137 @@
+[
+  {
+    "page": "/",
+    "width": 1440,
+    "pageWidth": 1425,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [],
+    "helpStrips": 0
+  },
+  {
+    "page": "/contact",
+    "width": 1440,
+    "pageWidth": 1440,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [
+      {
+        "text": "wipost165@gmail.com",
+        "href": "mailto:wipost165@gmail.com?subject=First%20visit%20to%20Post%20165"
+      },
+      {
+        "text": "(920) 860-7478",
+        "href": "tel:9208607478"
+      }
+    ],
+    "helpStrips": 0
+  },
+  {
+    "page": "/",
+    "width": 1024,
+    "pageWidth": 1009,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [],
+    "helpStrips": 0
+  },
+  {
+    "page": "/contact",
+    "width": 1024,
+    "pageWidth": 1024,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [
+      {
+        "text": "wipost165@gmail.com",
+        "href": "mailto:wipost165@gmail.com?subject=First%20visit%20to%20Post%20165"
+      },
+      {
+        "text": "(920) 860-7478",
+        "href": "tel:9208607478"
+      }
+    ],
+    "helpStrips": 0
+  },
+  {
+    "page": "/",
+    "width": 814,
+    "pageWidth": 799,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [],
+    "helpStrips": 0
+  },
+  {
+    "page": "/contact",
+    "width": 814,
+    "pageWidth": 814,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [
+      {
+        "text": "wipost165@gmail.com",
+        "href": "mailto:wipost165@gmail.com?subject=First%20visit%20to%20Post%20165"
+      },
+      {
+        "text": "(920) 860-7478",
+        "href": "tel:9208607478"
+      }
+    ],
+    "helpStrips": 0
+  },
+  {
+    "page": "/",
+    "width": 390,
+    "pageWidth": 375,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [],
+    "helpStrips": 0
+  },
+  {
+    "page": "/contact",
+    "width": 390,
+    "pageWidth": 375,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [
+      {
+        "text": "wipost165@gmail.com",
+        "href": "mailto:wipost165@gmail.com?subject=First%20visit%20to%20Post%20165"
+      },
+      {
+        "text": "(920) 860-7478",
+        "href": "tel:9208607478"
+      }
+    ],
+    "helpStrips": 0
+  },
+  {
+    "page": "/",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [],
+    "helpStrips": 0
+  },
+  {
+    "page": "/contact",
+    "width": 320,
+    "pageWidth": 305,
+    "h1": 1,
+    "footer": "color(srgb 0 0.178431 0.323725)",
+    "contactLinks": [
+      {
+        "text": "wipost165@gmail.com",
+        "href": "mailto:wipost165@gmail.com?subject=First%20visit%20to%20Post%20165"
+      },
+      {
+        "text": "(920) 860-7478",
+        "href": "tel:9208607478"
+      }
+    ],
+    "helpStrips": 0
+  }
+]

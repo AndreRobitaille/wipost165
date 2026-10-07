@@ -3,6 +3,11 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Preserve V2 sample artwork locally while leaving it out of V1 public assets.
+  if ENV.fetch("PUBLIC_SITE_EDITION", "v1") == "v1"
+    config.assets.excluded_paths << Rails.root.join("app/assets/preview")
+  end
+
   # Code is not reloaded between requests.
   config.enable_reloading = false
 

@@ -1,6 +1,15 @@
 # Launch content readiness
 
-Owner intake resumed September 27, 2026 for SITE-03. This is the fact/ownership worksheet;
+October 7 scope update: V1 launches without people/photos/stories. The recorded
+static facts and actual published events support V1; real introductions/photos
+and fictional-story withdrawal are V2's final content step. V1 must keep story
+and portrait routes unavailable. See the [staged launch plan](design/2026-10-v1-launch/README.md).
+The earlier intake and fact/provenance record below remain applicable.
+
+SITE-03 static facts and ownership are complete. Per the owner's September 27
+plan correction, real introductions/photos are the final SITE-05 content step,
+after technical readiness. Development continues with labelled fictional content.
+This is the fact/ownership worksheet;
 [ROADMAP](ROADMAP.md) remains the backlog. The owner supplied the
 [existing public contact page](https://wiamericanlegionpost165.org/contact-us)
 as the source for contact and meeting details. Those facts were read live and
@@ -22,8 +31,9 @@ and broader accessibility details remain unknown and are omitted.
 Collect only known details and leave unknowns open. Follow up on gaps in small
 batches rather than asking the owner to complete this entire worksheet at once.
 
-The owner plans to collect introductions/photos at the next PEC meeting and
-possibly the next member meeting; no dates, names, or assets were supplied.
+The owner previously mentioned collecting introductions/photos at a PEC or member
+meeting. That collection timing does not block development; adding real people
+and photos comes last, once the technical work is ready.
 A suggested person is not yet
 an approved public introduction. No account access or publishing grant follows
 from naming a content owner here.
@@ -73,7 +83,7 @@ destinations in the owner's content checks and review them after reported proble
 | --- | --- | --- | --- |
 | As known | Specific entrance/greeter and any further access details | Meeting attendance, gravel parking, and no steps are confirmed; other specifics remain omitted | `/visit` suggests an event first and also permits an unarranged meeting visit; other locations remain event-specific. |
 | Before publishing | Individual publishing grants in the companion | Owner is the current content contact; formal grants remain a separate private action | No permissions assigned here. General enquiries/corrections can use the monitored public channels. |
-| After collection | Willing regulars and their approved introductions/photos | Public display name, introduction, story, optional conversation starter, approved portrait and alt text | Owner will collect at the next PEC and possibly member meeting. Labelled fictional people remain development-only; production needs approved content or an honest empty state. |
+| Final prelaunch content step | Willing regulars and their approved introductions/photos | Public display name, introduction, story, optional conversation starter, approved portrait and alt text | Add real material after technical readiness. Fictional records currently support live-feed development behind coming-soon; full public launch needs approved content or an honest empty state. |
 | Per occasion | Guest/child participation, costs, timing/location changes, and cancellations | Accurate event-specific details in the publisher's supported fields/description | No blanket promise that every event suits every household. |
 | Before local membership copy | Current Post dues and the local joining/contact process | Verified Post-specific instructions | National FAQ link; no invented local dues or eligibility decisions. |
 
@@ -102,7 +112,7 @@ separately authorized workflow; monitoring enquiries does not grant publishing a
 | Public email and phone | `PUBLIC_CONTACT_EMAIL` / `PUBLIC_CONTACT_PHONE`; rendered by `/contact` | Sourced public values are application defaults. Environment overrides can replace them; explicit blanks hide channels. Deployment still needs separate authorization. |
 | Postal address | Static `/contact` copy | Clearly labelled mailing address; links to `/visit` for the meeting location. |
 | General arrival and access facts | Static `/visit` copy in this repository | Update after confirmation, preserving the accepted layout. Scope each fact to its actual venue/occasion; do not turn a usual meeting place into every event's location. |
-| Event location, guests, costs, arrival variations | Publisher event `location` and plain-text `description` | Prepare accurate text; enter and approve it through the companion when available. Do not add undocumented API fields or infer public eligibility. |
+| Event location, guests, costs, arrival variations | Publisher event `location` and plain-text `description` | Prepare accurate text; enter and approve it through an authorized companion editorial session. Do not add undocumented API fields or infer public eligibility. |
 | Introductions and portraits | Publisher story and portrait workflow | Prepare the approved material; consent, image rights, publication, and withdrawal stay in the companion. Do not replace development samples with real people as a substitute for publication. |
 
 After a local content change, verify the affected contact/visit journey and
@@ -131,15 +141,23 @@ Keep the original photo available privately for the authorized publishing workfl
 Aim for three consenting regulars, but do not delay all progress to fill three
 slots. Do not promise their attendance or publish private service history. Keep
 consent, withdrawal, image rights, and publishing grants in LegionPostTools; enter
-and approve the content there once its publisher is available.
+and approve the content there through its authorized editorial workflow at the
+final content step.
 
 ## Next handoff
 
-Public contact and regular meeting facts are now recorded and implemented locally.
-Meeting attendance, basic club parking/access, and content responsibility have
-also been confirmed by the owner. Next input: introductions/photos collected at
-the next PEC and possibly member meeting. Prepare one person's approved material
-at a time using the prompts above; do not repeatedly ask for contact facts already
-resolved. Further arrival details can be added when known. This can progress alongside
-companion work. SITE-04 still requires its separately authorized publisher delivery;
-this worksheet neither authorizes companion changes nor clears SITE-05 for launch.
+Contact, meeting/arrival/access facts, and content responsibility are settled.
+Continue SITE-04 evidence review and SITE-05 technical launch preparation using
+fictional content. Do not repeatedly request settled contact facts or real photos
+to unblock development. Further optional arrival details can be added when known.
+
+After technical readiness, prepare approved real introductions and photos one
+person at a time. The authorized companion publisher handles consent, entry,
+publication, and withdrawal of fictional records; this session has no personal
+editorial token. Taking fictional people off the homepage alone does not remove
+their published details or portraits. Verify final content through the read-only
+website token, including direct URLs, before opening the full site. Fewer than
+three people or an owner-chosen honest empty state remain valid launch options.
+See [SITE-05](ROADMAP.md#site-05--prepare-technically-add-real-content-last-then-release)
+for the final content/release sequence. This worksheet authorizes no companion
+writes, live publication, or deployment.

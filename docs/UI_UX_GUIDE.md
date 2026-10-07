@@ -5,6 +5,63 @@ brief distilled from the owner's feedback, with practical implementation and
 critique guidance. It is not a claim that every existing screen meets the brief.
 Layout and treatments can evolve; preserve the reasons behind the design.
 
+October 7 update: the people-centered shared-table experience below is preserved
+for V2. The first launch is a deliberate photo-free composition around a welcome,
+public occasions, and practical first-visit/contact information. See the
+[V1 direction, previews, and review](design/2026-10-v1-launch/README.md).
+Do not assess V1 as an accidentally empty version of V2 or require portraits for
+its release. Accessibility, truthfulness, sparse calendars, and direct visitor
+paths continue to apply to both editions.
+
+October 7 visual reset: the owner rejected the broad V1 appearance after the
+card-based refinements and clarified that the messaging is good; the visual
+presentation is the issue. Earlier requests for more borders, cards, and color
+were local attempts to solve the problem, not a lasting instruction to enclose
+every content group. That card-based V1 was not visually approved. See the
+[earlier whole-site reassessment](design/2026-10-visual-reset/README.md).
+The owner also rejected that light-ground study as looking the same. The latest
+[ten outside references](design/2026-10-outside-references/README.md) investigate
+coherent environments, expressive identity, illustration, material, and useful
+interaction. Develop a visual idea before rearranging the existing components;
+Legion branding informs identity without making Legion sites the design benchmark.
+
+October 7 reference calibration: the owner found the ten outside examples too far
+out and again named their own [Take the Con](https://takethecon.org/) as a closer
+benchmark. Aim for distinctive material, composition, layering, and thoughtful
+details with familiar website behavior. Its binder and navigation demonstrate a
+coherent setting; they do not mandate a literal binder or space theme for the Post.
+See the [fresh reference inspection](design/2026-10-outside-references/take-the-con/README.md).
+
+The owner then explicitly clarified that the Post does not need a binder. The
+[civic pennant study](design/2026-10-pennant-study/README.md) tries a Post-specific
+graphic identity with familiar navigation, a month-grouped calendar, expanded
+visit answers, and direct contact channels. It is an isolated proposal awaiting
+feedback, not an approved replacement for the running V1.
+
+The owner subsequently disliked the pennant/banner image and requested AI imagery
+grounded in real Two Rivers photographs. The [harbor revision](design/2026-10-harbor-study/README.md)
+uses a credited aerial harbor photograph as its sole generation reference. The owner accepted its painted direction and authorized implementation, with
+colors, fonts and logos following National’s guide. Real local geography guides
+the setting rather than an invented generic waterfront.
+
+Reassess composition, type hierarchy, density, and the role of color across all
+pages. Preserve the useful interaction requirements: Home before Events, calendar
+details in a modal with normal URL/no-JavaScript fallbacks, clean event hovers,
+five fully expanded visit answers, and direct contact actions. Review the narrow
+and intermediate compositions as carefully as desktop. The accepted harbor study
+is now implemented in V1; see [implementation checks](design/2026-10-harbor-study/implementation/README.md).
+V2’s preserved implementation is unchanged.
+
+The owner then questioned whether a harbor alone communicates the Legion’s
+service identity and asked us to study National’s imagery. The
+[national reference review](design/2026-10-harbor-study/national-references/README.md)
+finds recognizable service cues and shared activity are the important lessons.
+Keep local pride as the setting, with Legion identity and service as the subject.
+The running version remains people-free pending the owner’s answer about anonymous
+illustrated veterans. Do not invent local members, programs, or official marks.
+V1 now uses National’s Emblem Blue/Poppy Red and recommended Noto Sans web fonts;
+the earlier study’s gold accent is superseded. See [brand evidence](brand/README.md).
+
 ## The experience we are trying to create
 
 **“I can picture myself here, and I know how to take the next step.”**

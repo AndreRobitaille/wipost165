@@ -1,0 +1,19 @@
+<section class="launch-event-detail" aria-labelledby="event-title">
+  <p class="eyebrow"><%= preview_mode? ? "EXAMPLE INVITATION · NOT SCHEDULED" : "PUBLIC OCCASION" %></p>
+  <%= content_tag (modal ? :h2 : :h1), @event.title, id: "event-title", tabindex: ("-1" if modal), data: (modal ? { event_dialog_target: "heading" } : {}) %>
+  <% if @event.cancelled? %>
+    <p class="event-notice" role="status">This event has been cancelled.</p>
+  <% elsif @event.past? %>
+    <p class="event-notice">This event has already taken place.</p>
+  <% end %>
+  <dl class="event-details">
+    <div><dt>When</dt><dd><% if @event.starts_at %><%= time_tag @event.starts_at, event_time(@event) %><% else %><%= event_time(@event) %><% end %><% if @event.ends_at %><small>Until <%= @event.ends_at.strftime("%b %-d, %-I:%M %p %Z") %></small><% end %></dd></div>
+    <div><dt>Where</dt><dd><%= @event.location_name.presence || "To be confirmed" %></dd></div>
+    <div><dt>Guests &amp; children</dt><dd>Please check with the Post before making plans.</dd></div>
+  </dl>
+  <div class="body-copy compact"><%= simple_format(h(@event.description), {}, sanitize: false) %></div>
+  <div class="launch-detail-actions">
+    <% unless @event.cancelled? || @event.past? %><%= link_to "Plan your first visit →", visit_path, class: "main-action", data: { turbo_frame: "_top" } %><% end %>
+    <% if public_contact_available? %><%= link_to "Ask the Post →", contact_path, class: "text-action", data: { turbo_frame: "_top" } %><% end %>
+  </div>
+</section>

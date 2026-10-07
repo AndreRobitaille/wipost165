@@ -1,0 +1,1094 @@
+{
+  "pages": [
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "In good\ncompany.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-ron-35dfab54.jpg"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-jo-23e89133.jpg"
+        }
+      ],
+      "path": "/",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Meet Frank.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        }
+      ],
+      "path": "/people/frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Come on by.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/events?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "A Post gathering",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        }
+      ],
+      "path": "/events/example-gathering?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Start with hello.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        }
+      ],
+      "path": "/visit?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Say hello.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/contact?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Still serving.\nTogether.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/about",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Let\u2019s talk.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/membership",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "A place to ask.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/veteran-help",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "In good\ncompany.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-ron-35dfab54.jpg"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-jo-23e89133.jpg"
+        }
+      ],
+      "path": "/",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Meet Frank.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        }
+      ],
+      "path": "/people/frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Come on by.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/events?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "A Post gathering",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        }
+      ],
+      "path": "/events/example-gathering?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Start with hello.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        }
+      ],
+      "path": "/visit?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Say hello.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/contact?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Still serving.\nTogether.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/about",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Let\u2019s talk.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/membership",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "A place to ask.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/veteran-help",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "In good\ncompany.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-ron-35dfab54.jpg"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-jo-23e89133.jpg"
+        }
+      ],
+      "path": "/",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Meet Frank.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        }
+      ],
+      "path": "/people/frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Come on by.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/events?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "A Post gathering",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        }
+      ],
+      "path": "/events/example-gathering?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Start with hello.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/people/sample-frank-d47272ee.jpg"
+        }
+      ],
+      "path": "/visit?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Say hello.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/contact?person=frank",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Still serving.\nTogether.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/about",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "Let\u2019s talk.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/membership",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3101",
+      "h1": 1,
+      "heading": "A place to ask.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/veteran-help",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "keyboard": "skip link focuses main; summary toggles via Enter; focus outline visible",
+      "focus": {
+        "outline": "solid",
+        "text": "Skip to main content",
+        "top": 16
+      }
+    },
+    {
+      "reduced_motion": "section animation disabled"
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "In good\ncompany.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/1f980b4ee42df9b1159b783fb1360a90/portrait/ddabbbdacac38d3fa54bf30000ea1d76/large.webp"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/7e08bf3b55aa3257825aaf16ceee9277/portrait/eb12db9c3e137a887fdef7bbbb15e461/large.webp"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/607dd3674ab0ee09bcae6331a3f6f935/portrait/a33085ea0cc4b041265adfa23f911154/large.webp"
+        }
+      ],
+      "path": "/",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "In good\ncompany.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/1f980b4ee42df9b1159b783fb1360a90/portrait/ddabbbdacac38d3fa54bf30000ea1d76/large.webp"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/7e08bf3b55aa3257825aaf16ceee9277/portrait/eb12db9c3e137a887fdef7bbbb15e461/large.webp"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/607dd3674ab0ee09bcae6331a3f6f935/portrait/a33085ea0cc4b041265adfa23f911154/large.webp"
+        }
+      ],
+      "path": "/",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "Meet Avery (fictional preview).",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/1f980b4ee42df9b1159b783fb1360a90/portrait/ddabbbdacac38d3fa54bf30000ea1d76/large.webp"
+        }
+      ],
+      "path": "/people/1f980b4ee42df9b1159b783fb1360a90",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "Meet Morgan (fictional preview).",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/7e08bf3b55aa3257825aaf16ceee9277/portrait/eb12db9c3e137a887fdef7bbbb15e461/large.webp"
+        }
+      ],
+      "path": "/people/7e08bf3b55aa3257825aaf16ceee9277",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "Meet Sam (fictional preview).",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/607dd3674ab0ee09bcae6331a3f6f935/portrait/a33085ea0cc4b041265adfa23f911154/large.webp"
+        }
+      ],
+      "path": "/people/607dd3674ab0ee09bcae6331a3f6f935",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "Come on by.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/events",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "In good\ncompany.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/1f980b4ee42df9b1159b783fb1360a90/portrait/ddabbbdacac38d3fa54bf30000ea1d76/large.webp"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/7e08bf3b55aa3257825aaf16ceee9277/portrait/eb12db9c3e137a887fdef7bbbb15e461/large.webp"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/607dd3674ab0ee09bcae6331a3f6f935/portrait/a33085ea0cc4b041265adfa23f911154/large.webp"
+        }
+      ],
+      "path": "/",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "Meet Avery (fictional preview).",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/1f980b4ee42df9b1159b783fb1360a90/portrait/ddabbbdacac38d3fa54bf30000ea1d76/large.webp"
+        }
+      ],
+      "path": "/people/1f980b4ee42df9b1159b783fb1360a90",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "Meet Morgan (fictional preview).",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/7e08bf3b55aa3257825aaf16ceee9277/portrait/eb12db9c3e137a887fdef7bbbb15e461/large.webp"
+        }
+      ],
+      "path": "/people/7e08bf3b55aa3257825aaf16ceee9277",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "Meet Sam (fictional preview).",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        },
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/people/607dd3674ab0ee09bcae6331a3f6f935/portrait/a33085ea0cc4b041265adfa23f911154/large.webp"
+        }
+      ],
+      "path": "/people/607dd3674ab0ee09bcae6331a3f6f935",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3102",
+      "h1": 1,
+      "heading": "Come on by.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/events",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3103",
+      "h1": 1,
+      "heading": "In good\ncompany.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3103",
+      "h1": 1,
+      "heading": "Come on by.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/events",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3103",
+      "h1": 1,
+      "heading": "Start with hello.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/visit",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    },
+    {
+      "origin": "http://127.0.0.1:3103",
+      "h1": 1,
+      "heading": "Say hello.",
+      "images": [
+        {
+          "hidden": false,
+          "ok": true,
+          "src": "/assets/legion-white-02fd20c9.png"
+        }
+      ],
+      "path": "/contact",
+      "robots": "noindex, nofollow, nosnippet, noimageindex",
+      "scrollWidth": 305,
+      "width": 320
+    }
+  ],
+  "local_links": [
+    {
+      "url": "http://127.0.0.1:3101/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/about",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/about#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/contact",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/contact?person=frank",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/contact?person=frank#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/events",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/events/example-gathering?person=frank",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/events/example-gathering?person=frank#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/events?person=frank",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/events?person=frank#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/membership",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/membership#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/people/frank",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/people/frank#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/people/jo",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/people/ron",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/veteran-help",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/veteran-help#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/visit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/visit?person=frank",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3101/visit?person=frank#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/about",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/contact",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/contact?person=1f980b4ee42df9b1159b783fb1360a90",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/contact?person=607dd3674ab0ee09bcae6331a3f6f935",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/contact?person=7e08bf3b55aa3257825aaf16ceee9277",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/events",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/events#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/events?person=1f980b4ee42df9b1159b783fb1360a90",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/events?person=607dd3674ab0ee09bcae6331a3f6f935",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/events?person=7e08bf3b55aa3257825aaf16ceee9277",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/membership",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/people/1f980b4ee42df9b1159b783fb1360a90",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/people/1f980b4ee42df9b1159b783fb1360a90#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/people/607dd3674ab0ee09bcae6331a3f6f935",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/people/607dd3674ab0ee09bcae6331a3f6f935#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/people/7e08bf3b55aa3257825aaf16ceee9277",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/people/7e08bf3b55aa3257825aaf16ceee9277#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/veteran-help",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/visit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/visit?person=1f980b4ee42df9b1159b783fb1360a90",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/visit?person=607dd3674ab0ee09bcae6331a3f6f935",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3102/visit?person=7e08bf3b55aa3257825aaf16ceee9277",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/about",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/contact",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/contact#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/events",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/events#table-content",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/membership",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/veteran-help",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/visit",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:3103/visit#table-content",
+      "status": 200
+    }
+  ],
+  "external_links": [
+    "https://manitowoccountywi.gov/departments/veteran-s-services/",
+    "https://members.wipost165.org/",
+    "https://www.legion.org/faq",
+    "https://www.pexels.com/photo/a-close-up-shot-of-an-elderly-man-smiling-11346735/",
+    "https://www.pexels.com/photo/elderly-man-in-gray-long-sleeves-smiling-7322315/",
+    "https://www.pexels.com/photo/professional-portrait-of-smiling-middle-aged-woman-29405854/"
+  ]
+}

@@ -1,0 +1,203 @@
+[
+  {
+    "page": "home",
+    "width": 1440,
+    "bodyWidth": 1425,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "page": "events",
+    "width": 1440,
+    "bodyWidth": 1425,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 5
+  },
+  {
+    "page": "visit",
+    "width": 1440,
+    "bodyWidth": 1425,
+    "h1": 1,
+    "images": true,
+    "faq": 5,
+    "events": 0
+  },
+  {
+    "page": "contact",
+    "width": 1440,
+    "bodyWidth": 1425,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "page": "home",
+    "width": 1024,
+    "bodyWidth": 1009,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "page": "events",
+    "width": 1024,
+    "bodyWidth": 1009,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 5
+  },
+  {
+    "page": "visit",
+    "width": 1024,
+    "bodyWidth": 1009,
+    "h1": 1,
+    "images": true,
+    "faq": 5,
+    "events": 0
+  },
+  {
+    "page": "contact",
+    "width": 1024,
+    "bodyWidth": 1009,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "page": "home",
+    "width": 814,
+    "bodyWidth": 799,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "page": "events",
+    "width": 814,
+    "bodyWidth": 799,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 5
+  },
+  {
+    "page": "visit",
+    "width": 814,
+    "bodyWidth": 799,
+    "h1": 1,
+    "images": true,
+    "faq": 5,
+    "events": 0
+  },
+  {
+    "page": "contact",
+    "width": 814,
+    "bodyWidth": 799,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "page": "home",
+    "width": 390,
+    "bodyWidth": 375,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "page": "events",
+    "width": 390,
+    "bodyWidth": 375,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 5
+  },
+  {
+    "page": "visit",
+    "width": 390,
+    "bodyWidth": 375,
+    "h1": 1,
+    "images": true,
+    "faq": 5,
+    "events": 0
+  },
+  {
+    "page": "contact",
+    "width": 390,
+    "bodyWidth": 375,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "page": "home",
+    "width": 320,
+    "bodyWidth": 305,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "page": "events",
+    "width": 320,
+    "bodyWidth": 305,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 5
+  },
+  {
+    "page": "visit",
+    "width": 320,
+    "bodyWidth": 305,
+    "h1": 1,
+    "images": true,
+    "faq": 5,
+    "events": 0
+  },
+  {
+    "page": "contact",
+    "width": 320,
+    "bodyWidth": 305,
+    "h1": 1,
+    "images": true,
+    "faq": 0,
+    "events": 0
+  },
+  {
+    "supportPage": "about",
+    "width": 320,
+    "result": "pass"
+  },
+  {
+    "supportPage": "membership",
+    "width": 320,
+    "result": "pass"
+  },
+  {
+    "supportPage": "veteran-help",
+    "width": 320,
+    "result": "pass"
+  },
+  {
+    "modal": "Fresh details, focus entry and containment, Escape and focus return, clean hover; 1440/390/320px passed"
+  },
+  {
+    "accessibility": "Skip link and reduced motion pass"
+  }
+]

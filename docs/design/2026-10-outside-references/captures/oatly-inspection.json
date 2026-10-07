@@ -1,0 +1,869 @@
+[
+  {
+    "success": true,
+    "data": {
+      "deviceScaleFactor": 1.0,
+      "height": 960,
+      "mobile": false,
+      "width": 1440
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "title": "the Original Oat Drink Company | Oatly",
+      "url": "https://www.oatly.com/"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://www.oatly.com/",
+      "refs": {
+        "e1": {
+          "name": "Skip links",
+          "role": "navigation"
+        },
+        "e10": {
+          "name": "Go to FAQ page",
+          "role": "link"
+        },
+        "e100": {
+          "name": "WE EXIST TO MAKE IT EASIER FOR PEOPLE TO LIVE HEALTHIER LIVES WITHOUT RECKLESSLY TAXING THE PLANET'S RESOURCES IN THE PROCESS.",
+          "role": "heading"
+        },
+        "e101": {
+          "name": "/oatly-who",
+          "role": "link"
+        },
+        "e11": {
+          "name": "Close browser page",
+          "role": "button"
+        },
+        "e12": {
+          "name": "Main navigation",
+          "role": "navigation"
+        },
+        "e13": {
+          "name": "Footer links",
+          "role": "navigation"
+        },
+        "e14": {
+          "name": "Our Cookie Policy",
+          "role": "link"
+        },
+        "e15": {
+          "name": "Tell me more",
+          "role": "button"
+        },
+        "e16": {
+          "name": "Accept all",
+          "role": "button"
+        },
+        "e17": {
+          "name": "Open Business to business panel",
+          "role": "button"
+        },
+        "e18": {
+          "name": "Open Market selector panel",
+          "role": "button"
+        },
+        "e19": {
+          "name": "WELCOME TO OATLY GLOBAL!",
+          "role": "heading"
+        },
+        "e2": {
+          "name": "Skip to main content",
+          "role": "link"
+        },
+        "e20": {
+          "name": "TAKE ME TO UNITED STATES",
+          "role": "link"
+        },
+        "e21": {
+          "name": "NO THANKS, STAY HERE",
+          "role": "button"
+        },
+        "e22": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e23": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e24": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e25": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e26": {
+          "name": "Privacy policy",
+          "role": "link"
+        },
+        "e27": {
+          "name": "Necessary",
+          "role": "checkbox"
+        },
+        "e28": {
+          "name": "Functional",
+          "role": "checkbox"
+        },
+        "e29": {
+          "name": "Statistical",
+          "role": "checkbox"
+        },
+        "e3": {
+          "name": "Skip to footer",
+          "role": "link"
+        },
+        "e30": {
+          "name": "Marketing",
+          "role": "checkbox"
+        },
+        "e31": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e32": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e33": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e34": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e35": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e36": {
+          "name": "/recipes/look-book-vol-3",
+          "role": "heading"
+        },
+        "e37": {
+          "name": "/things-we-do/initiatives/pee-for-the-planet",
+          "role": "heading"
+        },
+        "e38": {
+          "name": "/things-we-do/initiatives/aftertaste",
+          "role": "heading"
+        },
+        "e39": {
+          "name": "/things-we-do/initiatives/oatly-x-avavav",
+          "role": "heading"
+        },
+        "e4": {
+          "name": "Accessibility Statement",
+          "role": "link"
+        },
+        "e40": {
+          "name": "/random-answers",
+          "role": "heading"
+        },
+        "e41": {
+          "name": "/things-we-do/initiatives/future-of-taste",
+          "role": "heading"
+        },
+        "e42": {
+          "name": "/products/oat-drink/oat-drink-matcha-1l",
+          "role": "heading"
+        },
+        "e43": {
+          "name": "/products",
+          "role": "link"
+        },
+        "e44": {
+          "name": "/recipes/look-book-autumn-winter-2025",
+          "role": "heading"
+        },
+        "e45": {
+          "name": "products/oat-drink/oat-drink-chocolate-250ml",
+          "role": "heading"
+        },
+        "e46": {
+          "name": "/products",
+          "role": "link"
+        },
+        "e47": {
+          "name": "products/oat-drink/oat-drink-matcha-1l",
+          "role": "heading"
+        },
+        "e48": {
+          "name": "/products",
+          "role": "link"
+        },
+        "e49": {
+          "name": "/things-we-do/stories/tastes-like-miami",
+          "role": "heading"
+        },
+        "e5": {
+          "name": "the Original Oat Drink Company",
+          "role": "heading"
+        },
+        "e50": {
+          "name": "/oatly-who/sustainability-plan",
+          "role": "heading"
+        },
+        "e51": {
+          "name": "/sustainability",
+          "role": "heading"
+        },
+        "e52": {
+          "name": "/recipes/look-book-autumn-winter-2025/ginger-nut-chai",
+          "role": "heading"
+        },
+        "e53": {
+          "name": "/random-answers/17-facts-about-oatly-and-nutrition",
+          "role": "heading"
+        },
+        "e54": {
+          "name": "/random-answers/17-facts-about-oatly-and-nutrition",
+          "role": "link"
+        },
+        "e55": {
+          "name": "products/oat-drink/oat-drink-barista-popcorn-flavour",
+          "role": "heading"
+        },
+        "e56": {
+          "name": "/products",
+          "role": "link"
+        },
+        "e57": {
+          "name": "/recipes/look-book-autumn-winter-2025",
+          "role": "heading"
+        },
+        "e58": {
+          "name": "/things-we-do/brainwashing/blind-test",
+          "role": "heading"
+        },
+        "e59": {
+          "name": "Oatly's {{ socialMediaPlatform }}",
+          "role": "link"
+        },
+        "e6": {
+          "name": "",
+          "role": "sectionheader"
+        },
+        "e60": {
+          "name": "Oatly's {{ socialMediaPlatform }}",
+          "role": "link"
+        },
+        "e61": {
+          "name": "Oatly's {{ socialMediaPlatform }}",
+          "role": "link"
+        },
+        "e62": {
+          "name": "Oatly's {{ socialMediaPlatform }}",
+          "role": "link"
+        },
+        "e63": {
+          "name": "Go to home page",
+          "role": "link"
+        },
+        "e64": {
+          "name": "Page - Products",
+          "role": "link"
+        },
+        "e65": {
+          "name": "Open Products",
+          "role": "button"
+        },
+        "e66": {
+          "name": "Page - Tastebuds",
+          "role": "link"
+        },
+        "e67": {
+          "name": "Open Tastebuds",
+          "role": "button"
+        },
+        "e68": {
+          "name": "Page - News",
+          "role": "link"
+        },
+        "e69": {
+          "name": "Open News",
+          "role": "button"
+        },
+        "e7": {
+          "name": "SHOW MORE",
+          "role": "button"
+        },
+        "e70": {
+          "name": "Page - Sustainability",
+          "role": "link"
+        },
+        "e71": {
+          "name": "Open Sustainability",
+          "role": "button"
+        },
+        "e72": {
+          "name": "Page - Health",
+          "role": "link"
+        },
+        "e73": {
+          "name": "/recipes/look-book-vol-3",
+          "role": "link"
+        },
+        "e74": {
+          "name": "/things-we-do/initiatives/pee-for-the-planet",
+          "role": "link"
+        },
+        "e75": {
+          "name": "/things-we-do/initiatives/aftertaste",
+          "role": "link"
+        },
+        "e76": {
+          "name": "/things-we-do/initiatives/oatly-x-avavav",
+          "role": "link"
+        },
+        "e77": {
+          "name": "/random-answers",
+          "role": "link"
+        },
+        "e78": {
+          "name": "/things-we-do/initiatives/future-of-taste",
+          "role": "link"
+        },
+        "e79": {
+          "name": "/products/oat-drink/oat-drink-matcha-1l",
+          "role": "link"
+        },
+        "e8": {
+          "name": "We know you didn\u2019t come here for cookies",
+          "role": "heading"
+        },
+        "e80": {
+          "name": "/recipes/look-book-autumn-winter-2025",
+          "role": "link"
+        },
+        "e81": {
+          "name": "products/oat-drink/oat-drink-chocolate-250ml",
+          "role": "link"
+        },
+        "e82": {
+          "name": "products/oat-drink/oat-drink-matcha-1l",
+          "role": "link"
+        },
+        "e83": {
+          "name": "/things-we-do/stories/tastes-like-miami",
+          "role": "link"
+        },
+        "e84": {
+          "name": "/oatly-who/sustainability-plan",
+          "role": "link"
+        },
+        "e85": {
+          "name": "/sustainability",
+          "role": "link"
+        },
+        "e86": {
+          "name": "/recipes/look-book-autumn-winter-2025/ginger-nut-chai",
+          "role": "link"
+        },
+        "e87": {
+          "name": "/random-answers/17-facts-about-oatly-and-nutrition",
+          "role": "link"
+        },
+        "e88": {
+          "name": "products/oat-drink/oat-drink-barista-popcorn-flavour",
+          "role": "link"
+        },
+        "e89": {
+          "name": "/recipes/look-book-autumn-winter-2025",
+          "role": "link"
+        },
+        "e9": {
+          "name": "menu",
+          "role": "navigation"
+        },
+        "e90": {
+          "name": "/things-we-do/brainwashing/blind-test",
+          "role": "link"
+        },
+        "e91": {
+          "name": "Back to top",
+          "role": "button"
+        },
+        "e92": {
+          "name": "Page - FAQ",
+          "role": "link"
+        },
+        "e93": {
+          "name": "Page - Sustainability",
+          "role": "link"
+        },
+        "e94": {
+          "name": "Page - Careers",
+          "role": "link"
+        },
+        "e95": {
+          "name": "Page - For Investors",
+          "role": "link"
+        },
+        "e96": {
+          "name": "Page - Contact",
+          "role": "link"
+        },
+        "e97": {
+          "name": "Page - Legal",
+          "role": "link"
+        },
+        "e98": {
+          "name": "Page - Privacy Policy",
+          "role": "link"
+        },
+        "e99": {
+          "name": "COOKIE CONSENT",
+          "role": "button"
+        }
+      },
+      "snapshot": "- heading \"We know you didn\u2019t come here for cookies\" [level=2, ref=e8]\n- link \"Privacy policy\" [ref=e26]\n- link \"Our Cookie Policy\" [ref=e14]\n- button \"Tell me more\" [expanded=false, ref=e15]\n- navigation \"menu\" [ref=e9]\n  - button \"Accept all\" [ref=e16]\n- checkbox \"Necessary\" [checked=true, disabled, ref=e27]\n- checkbox \"Functional\" [checked=false, ref=e28]\n- checkbox \"Statistical\" [checked=false, ref=e29]\n- checkbox \"Marketing\" [checked=false, ref=e30]\n- navigation \"Skip links\" [ref=e1]\n  - link \"Skip to main content\" [ref=e2]\n  - link \"Skip to footer\" [ref=e3]\n  - link \"Accessibility Statement\" [ref=e4]\n- heading \"the Original Oat Drink Company\" [level=1, ref=e5]\n- sectionheader \"Products>Cold Foam>Soft Serve>Spread>Cooking>Chilled Oat Drinks>Oat Drink>Oatgurt>Ice CreamTastebuds\" [ref=e6] clickable [onclick]\n  - link \"Go to home page\" [ref=e63]\n  - link \"Go to FAQ page\" [ref=e10]\n  - button \"Open Business to business panel\" [expanded=false, ref=e17]\n  - button \"Open Market selector panel\" [expanded=false, ref=e18]\n  - button \"Close browser page\" [ref=e11]\n  - navigation \"Main navigation\" [ref=e12]\n    - listitem \"Products>Cold Foam>Soft Serve>Spread>Cooking>Chilled Oat Drinks>Oat Drink>Oatgurt>Ice Cream\" [level=1, ref=e31] clickable [cursor:pointer]\n      - link \"Page - Products\" [ref=e64]\n      - button \"Open Products\" [expanded=false, ref=e65]\n    - listitem \"Tastebuds>LOOK BOOK VOL. 3>LOOK BOOK A/W 25>LOOK BOOK S/S 25>Future Of Taste\" [level=1, ref=e32] clickable [cursor:pointer]\n      - link \"Page - Tastebuds\" [ref=e66]\n      - button \"Open Tastebuds\" [expanded=false, ref=e67]\n    - listitem \"News>Pee for the Planet>Oatly x AVAVAV>How Do You Say F.A.R.M. in Canadian>Last first dates>EF Pro B\" [level=1, ref=e33] clickable [cursor:pointer]\n      - link \"Page - News\" [ref=e68]\n      - button \"Open News\" [expanded=false, ref=e69]\n    - listitem \"Sustainability>Oatly Who?>Oatly's Sustainability Plan>Product climate footprint>We're a climate solu\" [level=1, ref=e34] clickable [cursor:pointer]\n      - link \"Page - Sustainability\" [ref=e70]\n      - button \"Open Sustainability\" [expanded=false, ref=e71]\n    - listitem \"Health\" [level=1, ref=e35] clickable [cursor:pointer]\n      - link \"Page - Health\" [ref=e72]\n  - heading \"WELCOME TO OATLY GLOBAL!\" [level=2, ref=e19]\n  - link \"TAKE ME TO UNITED STATES\" [ref=e20]\n  - button \"NO THANKS, STAY HERE\" [ref=e21]\n- heading \"WE EXIST TO MAKE IT EASIER FOR PEOPLE TO LIVE HEALTHIER LIVES WITHOUT RECKLESSLY TAXING THE PLANET'S RESOURCES IN THE PROCESS.\" [level=1, ref=e100]\n- link \"/oatly-who\" [ref=e101]\n- heading \"/recipes/look-book-vol-3\" [level=2, ref=e36]\n  - link \"/recipes/look-book-vol-3\" [ref=e73]\n- heading \"/things-we-do/initiatives/pee-for-the-planet\" [level=2, ref=e37]\n  - link \"/things-we-do/initiatives/pee-for-the-planet\" [ref=e74]\n- heading \"/things-we-do/initiatives/aftertaste\" [level=2, ref=e38]\n  - link \"/things-we-do/initiatives/aftertaste\" [ref=e75]\n- heading \"/things-we-do/initiatives/oatly-x-avavav\" [level=2, ref=e39]\n  - link \"/things-we-do/initiatives/oatly-x-avavav\" [ref=e76]\n- heading \"/random-answers\" [level=2, ref=e40]\n  - link \"/random-answers\" [ref=e77]\n- heading \"/things-we-do/initiatives/future-of-taste\" [level=2, ref=e41]\n  - link \"/things-we-do/initiatives/future-of-taste\" [ref=e78]\n- heading \"/products/oat-drink/oat-drink-matcha-1l\" [level=2, ref=e42]\n  - link \"/products/oat-drink/oat-drink-matcha-1l\" [ref=e79]\n- link \"/products\" [ref=e43]\n- heading \"/recipes/look-book-autumn-winter-2025\" [level=2, ref=e44]\n  - link \"/recipes/look-book-autumn-winter-2025\" [ref=e80]\n- heading \"products/oat-drink/oat-drink-chocolate-250ml\" [level=2, ref=e45]\n  - link \"products/oat-drink/oat-drink-chocolate-250ml\" [ref=e81]\n- link \"/products\" [ref=e46]\n- heading \"products/oat-drink/oat-drink-matcha-1l\" [level=2, ref=e47]\n  - link \"products/oat-drink/oat-drink-matcha-1l\" [ref=e82]\n- link \"/products\" [ref=e48]\n- heading \"/things-we-do/stories/tastes-like-miami\" [level=2, ref=e49]\n  - link \"/things-we-do/stories/tastes-like-miami\" [ref=e83]\n- heading \"/oatly-who/sustainability-plan\" [level=2, ref=e50]\n  - link \"/oatly-who/sustainability-plan\" [ref=e84]\n- heading \"/sustainability\" [level=2, ref=e51]\n  - link \"/sustainability\" [ref=e85]\n- heading \"/recipes/look-book-autumn-winter-2025/ginger-nut-chai\" [level=2, ref=e52]\n  - link \"/recipes/look-book-autumn-winter-2025/ginger-nut-chai\" [ref=e86]\n- heading \"/random-answers/17-facts-about-oatly-and-nutrition\" [level=2, ref=e53]\n  - link \"/random-answers/17-facts-about-oatly-and-nutrition\" [ref=e87]\n- link \"/random-answers/17-facts-about-oatly-and-nutrition\" [ref=e54]\n- heading \"products/oat-drink/oat-drink-barista-popcorn-flavour\" [level=2, ref=e55]\n  - link \"products/oat-drink/oat-drink-barista-popcorn-flavour\" [ref=e88]\n- link \"/products\" [ref=e56]\n- heading \"/recipes/look-book-autumn-winter-2025\" [level=2, ref=e57]\n  - link \"/recipes/look-book-autumn-winter-2025\" [ref=e89]\n- heading \"/things-we-do/brainwashing/blind-test\" [level=2, ref=e58]\n  - link \"/things-we-do/brainwashing/blind-test\" [ref=e90]\n- button \"SHOW MORE\" [ref=e7]\n- navigation \"Footer links\" [ref=e13]\n  - button \"Back to top\" [ref=e91]\n  - link \"Page - FAQ\" [ref=e92]\n  - link \"Page - Sustainability\" [ref=e93]\n  - link \"Page - Careers\" [ref=e94]\n  - link \"Page - For Investors\" [ref=e95]\n  - link \"Page - Contact\" [ref=e96]\n  - link \"Page - Legal\" [ref=e97]\n  - link \"Page - Privacy Policy\" [ref=e98]\n  - button \"COOKIE CONSENT\" [ref=e99]\n- listitem [level=1, ref=e22] clickable [cursor:pointer]\n  - link \"Oatly's {{ socialMediaPlatform }}\" [ref=e59]\n- listitem [level=1, ref=e23] clickable [cursor:pointer]\n  - link \"Oatly's {{ socialMediaPlatform }}\" [ref=e60]\n- listitem [level=1, ref=e24] clickable [cursor:pointer]\n  - link \"Oatly's {{ socialMediaPlatform }}\" [ref=e61]\n- listitem [level=1, ref=e25] clickable [cursor:pointer]\n  - link \"Oatly's {{ socialMediaPlatform }}\" [ref=e62]"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/oatly-initial.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "scrolled": true
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/oatly-scroll.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://www.oatly.com/",
+      "refs": {
+        "e1": {
+          "name": "Skip links",
+          "role": "navigation"
+        },
+        "e10": {
+          "name": "Go to FAQ page",
+          "role": "link"
+        },
+        "e100": {
+          "name": "WE EXIST TO MAKE IT EASIER FOR PEOPLE TO LIVE HEALTHIER LIVES WITHOUT RECKLESSLY TAXING THE PLANET'S RESOURCES IN THE PROCESS.",
+          "role": "heading"
+        },
+        "e101": {
+          "name": "/oatly-who",
+          "role": "link"
+        },
+        "e11": {
+          "name": "Close browser page",
+          "role": "button"
+        },
+        "e12": {
+          "name": "Main navigation",
+          "role": "navigation"
+        },
+        "e13": {
+          "name": "Footer links",
+          "role": "navigation"
+        },
+        "e14": {
+          "name": "Our Cookie Policy",
+          "role": "link"
+        },
+        "e15": {
+          "name": "Tell me more",
+          "role": "button"
+        },
+        "e16": {
+          "name": "Accept all",
+          "role": "button"
+        },
+        "e17": {
+          "name": "Open Business to business panel",
+          "role": "button"
+        },
+        "e18": {
+          "name": "Open Market selector panel",
+          "role": "button"
+        },
+        "e19": {
+          "name": "WELCOME TO OATLY GLOBAL!",
+          "role": "heading"
+        },
+        "e2": {
+          "name": "Skip to main content",
+          "role": "link"
+        },
+        "e20": {
+          "name": "TAKE ME TO UNITED STATES",
+          "role": "link"
+        },
+        "e21": {
+          "name": "NO THANKS, STAY HERE",
+          "role": "button"
+        },
+        "e22": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e23": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e24": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e25": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e26": {
+          "name": "Privacy policy",
+          "role": "link"
+        },
+        "e27": {
+          "name": "Necessary",
+          "role": "checkbox"
+        },
+        "e28": {
+          "name": "Functional",
+          "role": "checkbox"
+        },
+        "e29": {
+          "name": "Statistical",
+          "role": "checkbox"
+        },
+        "e3": {
+          "name": "Skip to footer",
+          "role": "link"
+        },
+        "e30": {
+          "name": "Marketing",
+          "role": "checkbox"
+        },
+        "e31": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e32": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e33": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e34": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e35": {
+          "name": "",
+          "role": "listitem"
+        },
+        "e36": {
+          "name": "/recipes/look-book-vol-3",
+          "role": "heading"
+        },
+        "e37": {
+          "name": "/things-we-do/initiatives/pee-for-the-planet",
+          "role": "heading"
+        },
+        "e38": {
+          "name": "/things-we-do/initiatives/aftertaste",
+          "role": "heading"
+        },
+        "e39": {
+          "name": "/things-we-do/initiatives/oatly-x-avavav",
+          "role": "heading"
+        },
+        "e4": {
+          "name": "Accessibility Statement",
+          "role": "link"
+        },
+        "e40": {
+          "name": "/random-answers",
+          "role": "heading"
+        },
+        "e41": {
+          "name": "/things-we-do/initiatives/future-of-taste",
+          "role": "heading"
+        },
+        "e42": {
+          "name": "/products/oat-drink/oat-drink-matcha-1l",
+          "role": "heading"
+        },
+        "e43": {
+          "name": "/products",
+          "role": "link"
+        },
+        "e44": {
+          "name": "/recipes/look-book-autumn-winter-2025",
+          "role": "heading"
+        },
+        "e45": {
+          "name": "products/oat-drink/oat-drink-chocolate-250ml",
+          "role": "heading"
+        },
+        "e46": {
+          "name": "/products",
+          "role": "link"
+        },
+        "e47": {
+          "name": "products/oat-drink/oat-drink-matcha-1l",
+          "role": "heading"
+        },
+        "e48": {
+          "name": "/products",
+          "role": "link"
+        },
+        "e49": {
+          "name": "/things-we-do/stories/tastes-like-miami",
+          "role": "heading"
+        },
+        "e5": {
+          "name": "the Original Oat Drink Company",
+          "role": "heading"
+        },
+        "e50": {
+          "name": "/oatly-who/sustainability-plan",
+          "role": "heading"
+        },
+        "e51": {
+          "name": "/sustainability",
+          "role": "heading"
+        },
+        "e52": {
+          "name": "/recipes/look-book-autumn-winter-2025/ginger-nut-chai",
+          "role": "heading"
+        },
+        "e53": {
+          "name": "/random-answers/17-facts-about-oatly-and-nutrition",
+          "role": "heading"
+        },
+        "e54": {
+          "name": "/random-answers/17-facts-about-oatly-and-nutrition",
+          "role": "link"
+        },
+        "e55": {
+          "name": "products/oat-drink/oat-drink-barista-popcorn-flavour",
+          "role": "heading"
+        },
+        "e56": {
+          "name": "/products",
+          "role": "link"
+        },
+        "e57": {
+          "name": "/recipes/look-book-autumn-winter-2025",
+          "role": "heading"
+        },
+        "e58": {
+          "name": "/things-we-do/brainwashing/blind-test",
+          "role": "heading"
+        },
+        "e59": {
+          "name": "Oatly's {{ socialMediaPlatform }}",
+          "role": "link"
+        },
+        "e6": {
+          "name": "",
+          "role": "sectionheader"
+        },
+        "e60": {
+          "name": "Oatly's {{ socialMediaPlatform }}",
+          "role": "link"
+        },
+        "e61": {
+          "name": "Oatly's {{ socialMediaPlatform }}",
+          "role": "link"
+        },
+        "e62": {
+          "name": "Oatly's {{ socialMediaPlatform }}",
+          "role": "link"
+        },
+        "e63": {
+          "name": "Go to home page",
+          "role": "link"
+        },
+        "e64": {
+          "name": "Page - Products",
+          "role": "link"
+        },
+        "e65": {
+          "name": "Open Products",
+          "role": "button"
+        },
+        "e66": {
+          "name": "Page - Tastebuds",
+          "role": "link"
+        },
+        "e67": {
+          "name": "Open Tastebuds",
+          "role": "button"
+        },
+        "e68": {
+          "name": "Page - News",
+          "role": "link"
+        },
+        "e69": {
+          "name": "Open News",
+          "role": "button"
+        },
+        "e7": {
+          "name": "SHOW MORE",
+          "role": "button"
+        },
+        "e70": {
+          "name": "Page - Sustainability",
+          "role": "link"
+        },
+        "e71": {
+          "name": "Open Sustainability",
+          "role": "button"
+        },
+        "e72": {
+          "name": "Page - Health",
+          "role": "link"
+        },
+        "e73": {
+          "name": "/recipes/look-book-vol-3",
+          "role": "link"
+        },
+        "e74": {
+          "name": "/things-we-do/initiatives/pee-for-the-planet",
+          "role": "link"
+        },
+        "e75": {
+          "name": "/things-we-do/initiatives/aftertaste",
+          "role": "link"
+        },
+        "e76": {
+          "name": "/things-we-do/initiatives/oatly-x-avavav",
+          "role": "link"
+        },
+        "e77": {
+          "name": "/random-answers",
+          "role": "link"
+        },
+        "e78": {
+          "name": "/things-we-do/initiatives/future-of-taste",
+          "role": "link"
+        },
+        "e79": {
+          "name": "/products/oat-drink/oat-drink-matcha-1l",
+          "role": "link"
+        },
+        "e8": {
+          "name": "We know you didn\u2019t come here for cookies",
+          "role": "heading"
+        },
+        "e80": {
+          "name": "/recipes/look-book-autumn-winter-2025",
+          "role": "link"
+        },
+        "e81": {
+          "name": "products/oat-drink/oat-drink-chocolate-250ml",
+          "role": "link"
+        },
+        "e82": {
+          "name": "products/oat-drink/oat-drink-matcha-1l",
+          "role": "link"
+        },
+        "e83": {
+          "name": "/things-we-do/stories/tastes-like-miami",
+          "role": "link"
+        },
+        "e84": {
+          "name": "/oatly-who/sustainability-plan",
+          "role": "link"
+        },
+        "e85": {
+          "name": "/sustainability",
+          "role": "link"
+        },
+        "e86": {
+          "name": "/recipes/look-book-autumn-winter-2025/ginger-nut-chai",
+          "role": "link"
+        },
+        "e87": {
+          "name": "/random-answers/17-facts-about-oatly-and-nutrition",
+          "role": "link"
+        },
+        "e88": {
+          "name": "products/oat-drink/oat-drink-barista-popcorn-flavour",
+          "role": "link"
+        },
+        "e89": {
+          "name": "/recipes/look-book-autumn-winter-2025",
+          "role": "link"
+        },
+        "e9": {
+          "name": "menu",
+          "role": "navigation"
+        },
+        "e90": {
+          "name": "/things-we-do/brainwashing/blind-test",
+          "role": "link"
+        },
+        "e91": {
+          "name": "Back to top",
+          "role": "button"
+        },
+        "e92": {
+          "name": "Page - FAQ",
+          "role": "link"
+        },
+        "e93": {
+          "name": "Page - Sustainability",
+          "role": "link"
+        },
+        "e94": {
+          "name": "Page - Careers",
+          "role": "link"
+        },
+        "e95": {
+          "name": "Page - For Investors",
+          "role": "link"
+        },
+        "e96": {
+          "name": "Page - Contact",
+          "role": "link"
+        },
+        "e97": {
+          "name": "Page - Legal",
+          "role": "link"
+        },
+        "e98": {
+          "name": "Page - Privacy Policy",
+          "role": "link"
+        },
+        "e99": {
+          "name": "COOKIE CONSENT",
+          "role": "button"
+        }
+      },
+      "snapshot": "- generic\n  - banner\n    - dialog \"But they\u2019re good if you want our site to work correctly. If you want it to work perfectly, choose \u201cAccept all.\u201d If you don\u2019t like being an anonymous statistic or having ads tailored for you, you might want to make some choices. Without the necessary cookies, the website won\u2019t work at all; functional cookies are good for security, accessibility, and network management. Statistical cookies help us improve the site based on how you use it, and marketing cookies will allow you to see more relevant promotions when visiting other sites and make it possible to play YouTube-based videos on this site. By clicking Decline all, you would still consent to our Privacy policy and the strictly necessary cookies. Privacy policy Our Cookie Policy\"\n      - generic\n        - heading \"We know you didn\u2019t come here for cookies\" [level=2, ref=e8]\n        - generic\n          - StaticText \"But they\u2019re good if you want our site to work correctly. If you want it to work perfectly, choose \u201cAccept all.\u201d If you don\u2019t like being an anonymous statistic or having ads tailored for you, you might want to make some choices.\"\n          - LineBreak \"\\n\"\n          - StaticText \"\\nWithout the necessary cookies, the website won\u2019t work at all; functional cookies are good for security, accessibility, and network management. Statistical cookies help us improve the site based on how you use it, and marketing cookies will allow you to see more relevant promotions when visiting other sites and make it possible to play YouTube-based videos on this site.\"\n          - LineBreak \"\\n\"\n          - StaticText \"\\nBy clicking Decline all, you would still consent to our Privacy policy and the strictly necessary cookies.\\n\"\n          - paragraph\n            - link \"Privacy policy\" [ref=e26]\n              - StaticText \"Privacy policy\"\n              - image\n          - link \"Our Cookie Policy\" [ref=e14]\n        - button \"Tell me more\" [expanded=false, ref=e15]\n        - navigation \"menu\" [ref=e9]\n          - alert \"Decline all\"\n            - StaticText \"DECLINE ALL\"\n          - button \"Accept all\" [ref=e16]\n            - StaticText \"ACCEPT ALL\"\n        - LabelText\n          - checkbox \"Necessary\" [checked=true, disabled, ref=e27]\n          - StaticText \"Necessary\"\n        - LabelText\n          - checkbox \"Functional\" [checked=false, ref=e28]\n          - StaticText \"Functional\"\n        - LabelText\n          - checkbox \"Statistical\" [checked=false, ref=e29]\n          - StaticText \"Statistical\"\n        - LabelText\n          - checkbox \"Marketing\" [checked=false, ref=e30]\n          - StaticText \"Marketing\"\n  - generic\n    - navigation \"Skip links\" [ref=e1]\n      - link \"Skip to main content\" [ref=e2]\n      - link \"Skip to footer\" [ref=e3]\n      - link \"Accessibility Statement\" [ref=e4]\n    - main\n      - heading \"the Original Oat Drink Company\" [level=1, ref=e5]\n      - generic\n        - sectionheader [ref=e6] clickable [onclick]\n          - navigation\n            - list\n              - listitem [level=1]\n                - link \"Go to home page\" [ref=e63]\n          - link \"Go to FAQ page\" [ref=e10]\n          - button \"Open Business to business panel\" [expanded=false, ref=e17]\n          - button \"Open Market selector panel\" [expanded=false, ref=e18]\n          - button \"Close browser page\" [ref=e11]\n          - navigation \"Main navigation\" [ref=e12]\n            - list\n              - listitem [level=1, ref=e31] clickable [cursor:pointer]\n                - link \"Page - Products\" [ref=e64]\n                  - StaticText \"PRODUCTS\"\n                - button \"Open Products\" [expanded=false, ref=e65]\n              - listitem [level=1, ref=e32] clickable [cursor:pointer]\n                - link \"Page - Tastebuds\" [ref=e66]\n                  - StaticText \"TASTEBUDS\"\n                - button \"Open Tastebuds\" [expanded=false, ref=e67]\n              - listitem [level=1, ref=e33] clickable [cursor:pointer]\n                - link \"Page - News\" [ref=e68]\n                  - StaticText \"NEWS\"\n                - button \"Open News\" [expanded=false, ref=e69]\n              - listitem [level=1, ref=e34] clickable [cursor:pointer]\n                - link \"Page - Sustainability\" [ref=e70]\n                  - StaticText \"SUSTAINABILITY\"\n                - button \"Open Sustainability\" [expanded=false, ref=e71]\n              - listitem [level=1, ref=e35] clickable [cursor:pointer]\n                - link \"Page - Health\" [ref=e72]\n                  - StaticText \"HEALTH\"\n          - dialog \"Market selector information\"\n            - heading \"WELCOME TO OATLY GLOBAL!\" [level=2, ref=e19]\n            - paragraph\n              - StaticText \"It looks like you are in United States, would you like to visit that one instead?\"\n            - link \"TAKE ME TO UNITED STATES\" [ref=e20]\n              - StaticText \"TAKE ME TO UNITED STATES\"\n            - button \"NO THANKS, STAY HERE\" [ref=e21]\n              - StaticText \"NO THANKS, STAY HERE\"\n        - StaticText \"20 items loaded\"\n        - list\n          - listitem [level=1]\n            - article\n              - generic\n                - generic\n                  - heading \"WE EXIST TO MAKE IT EASIER FOR PEOPLE TO LIVE HEALTHIER LIVES WITHOUT RECKLESSLY TAXING THE PLANET'S RESOURCES IN THE PROCESS.\" [level=1, ref=e100]\n                  - link \"/oatly-who\" [ref=e101]\n                    - StaticText \"READ MORE \u2192\"\n          - listitem [level=1]\n            - article\n              - heading \"/recipes/look-book-vol-3\" [level=2, ref=e36]\n                - link \"/recipes/look-book-vol-3\" [ref=e73]\n                  - StaticText \"LOOK BOOK VOL. 3\"\n              - StaticText \"NEWS\"\n          - listitem [level=1]\n            - article\n              - image \"Blue restroom with urinals and a wall sign reading \\\"Pee for the Planet\\\" by Oatly, promoting an environmental message.\"\n              - heading \"/things-we-do/initiatives/pee-for-the-planet\" [level=2, ref=e37]\n                - link \"/things-we-do/initiatives/pee-for-the-planet\" [ref=e74]\n                  - StaticText \"PEE FOR THE PLANET\"\n              - StaticText \"NEWS\"\n          - listitem [level=1]\n            - article\n              - heading \"/things-we-do/initiatives/aftertaste\" [level=2, ref=e38]\n                - link \"/things-we-do/initiatives/aftertaste\" [ref=e75]\n                  - StaticText \"AFTERTASTE\"\n              - StaticText \"NEWS\"\n          - listitem [level=1]\n            - article\n              - heading \"/things-we-do/initiatives/oatly-x-avavav\" [level=2, ref=e39]\n                - link \"/things-we-do/initiatives/oatly-x-avavav\" [ref=e76]\n                  - StaticText \"OATLY & AVAVAV GOES TO MILAN FASHION WEEK\"\n              - StaticText \"NEWS\"\n          - listitem [level=1]\n            - article\n              - image \"F.A.Q.-ing Amazing\"\n              - heading \"/random-answers\" [level=2, ref=e40]\n                - link \"/random-answers\" [ref=e77]\n                  - StaticText \"FREQUENTLY ASKED QUESTIONS\"\n              - StaticText \"OTHER\"\n          - listitem [level=1]\n            - article\n              - image \"A brown folder with \\\"The Future of Taste Report\\\" text and a red \\\"Taste Approved AW '25\\\" stamp. Logo at the bottom reads \\\"Daily Intelligence World Wide.\\\"\"\n              - heading \"/things-we-do/initiatives/future-of-taste\" [level=2, ref=e41]\n                - link \"/things-we-do/initiatives/future-of-taste\" [ref=e78]\n                  - StaticText \"THE FUTURE OF TASTE\"\n              - StaticText \"NEWS\"\n          - listitem [level=1]\n            - article\n              - generic\n          - listitem [level=1]\n            - article\n              - heading \"/products/oat-drink/oat-drink-matcha-1l\" [level=2, ref=e42]\n                - link \"/products/oat-drink/oat-drink-matcha-1l\" [ref=e79]\n                  - StaticText \"MUCHO MATCHA\"\n              - link \"/products\" [ref=e43]\n                - StaticText \"PRODUCTS\"\n          - listitem [level=1]\n            - article\n              - heading \"/recipes/look-book-autumn-winter-2025\" [level=2, ref=e44]\n                - link \"/recipes/look-book-autumn-winter-2025\" [ref=e80]\n                  - StaticText \"THE OATLY LOOK BOOK REFILL\"\n              - StaticText \"TASTEBUDS\"\n          - listitem [level=1]\n            - article\n              - image \"Carton of Oatly chocolate oat drink with a straw on a red table, surrounded by snacks and condiments.\"\n              - heading \"products/oat-drink/oat-drink-chocolate-250ml\" [level=2, ref=e45]\n                - link \"products/oat-drink/oat-drink-chocolate-250ml\" [ref=e81]\n                  - StaticText \"OAT DRINK CHOCOLATE\"\n              - link \"/products\" [ref=e46]\n                - StaticText \"PRODUCTS\"\n          - listitem [level=1]\n            - article\n              - image \"Carton of Oatly Matcha Latte Oat Drink with \\\"How to Make Matcha\\\" crossed out to read \\\"How to Matcha.\\\"\"\n              - heading \"products/oat-drink/oat-drink-matcha-1l\" [level=2, ref=e47]\n                - link \"products/oat-drink/oat-drink-matcha-1l\" [ref=e82]\n                  - StaticText \"OAT DRINK MATCHA\"\n              - link \"/products\" [ref=e48]\n                - StaticText \"PRODUCTS\"\n          - listitem [level=1]\n            - article\n              - heading \"/things-we-do/stories/tastes-like-miami\" [level=2, ref=e49]\n                - link \"/things-we-do/stories/tastes-like-miami\" [ref=e83]\n                  - StaticText \"TASTES LIKE MIAMI\"\n              - StaticText \"NEWS\"\n          - listitem [level=1]\n            - article\n              - image \"Pink sticky note with handwritten text: \\\"THE PERFECT PLAN FOR THE NOT PERFECT COMPANY!\\\" on a white background.\"\n              - heading \"/oatly-who/sustainability-plan\" [level=2, ref=e50]\n                - link \"/oatly-who/sustainability-plan\" [ref=e84]\n                  - StaticText \"THE OATLY 17 STEP SUSTAINABILITY PLAN\"\n              - StaticText \"SUSTAINABILITY\"\n          - listitem [level=1]\n            - article\n              - generic\n                - image \"Oatly Sustainability Update 2024\"\n              - heading \"/sustainability\" [level=2, ref=e51]\n                - link \"/sustainability\" [ref=e85]\n                  - StaticText \"SUSTAINABILITY REPORT 2025\"\n              - StaticText \"SUSTAINABILITY\"\n          - listitem [level=1]\n            - article\n              - image \"Glass of an iced drink with oat milk, featuring a large, clear ice cube embossed with the word \\\"OATLY\\\", against a plain background.\"\n              - heading \"/recipes/look-book-autumn-winter-2025/ginger-nut-chai\" [level=2, ref=e52]\n                - link \"/recipes/look-book-autumn-winter-2025/ginger-nut-chai\" [ref=e86]\n                  - StaticText \"GINGER NUT CHAI\"\n              - StaticText \"TASTEBUDS\"\n          - listitem [level=1]\n            - article\n              - image \"Illustration of a smiling pink figure holding a milk carton, with text \\\"Get your fats straight!\\\" and a stomach graphic.\"\n              - heading \"/random-answers/17-facts-about-oatly-and-nutrition\" [level=2, ref=e53]\n                - link \"/random-answers/17-facts-about-oatly-and-nutrition\" [ref=e87]\n                  - StaticText \"SMALL HEALTHY BOOK\"\n              - link \"/random-answers/17-facts-about-oatly-and-nutrition\" [ref=e54]\n                - StaticText \"HEALTH\"\n          - listitem [level=1]\n            - article\n              - image \"Carton of Oatly Barista Edition Popcorn Flavour, featuring bold text and a mug illustration, with colorful red and yellow stripes.\"\n              - heading \"products/oat-drink/oat-drink-barista-popcorn-flavour\" [level=2, ref=e55]\n                - link \"products/oat-drink/oat-drink-barista-popcorn-flavour\" [ref=e88]\n                  - StaticText \"OAT DRINK BARISTA POPCORN FLAVOUR\"\n              - link \"/products\" [ref=e56]\n                - StaticText \"PRODUCTS\"\n          - listitem [level=1]\n            - article\n              - heading \"/recipes/look-book-autumn-winter-2025\" [level=2, ref=e57]\n                - link \"/recipes/look-book-autumn-winter-2025\" [ref=e89]\n                  - StaticText \"THE OATLY LOOK BOOK AUTUMN/WINTER 2025\"\n              - StaticText \"TASTEBUDS\"\n          - listitem [level=1]\n            - article\n              - image \"Person with a box on their head gives a thumbs up, holding oat milk. Text reads \\\"LOVE IS BLIND.\\\" Grapefruit and tea on the table.\"\n              - heading \"/things-we-do/brainwashing/blind-test\" [level=2, ref=e58]\n                - link \"/things-we-do/brainwashing/blind-test\" [ref=e90]\n                  - StaticText \"OATLY BLIND TASTE TEST\"\n              - StaticText \"NEWS\"\n        - button \"SHOW MORE\" [ref=e7]\n          - StaticText \"SHOW MORE\"\n        - sectionfooter\n          - navigation \"Footer links\" [ref=e13]\n            - list\n              - listitem [level=1]\n                - button \"Back to top\" [ref=e91]\n              - listitem [level=1]\n                - link \"Page - FAQ\" [ref=e92]\n                  - StaticText \"FAQ\"\n              - listitem [level=1]\n                - link \"Page - Sustainability\" [ref=e93]\n                  - StaticText \"SUSTAINABILITY\"\n              - listitem [level=1]\n                - link \"Page - Careers\" [ref=e94]\n                  - StaticText \"CAREERS\"\n              - listitem [level=1]\n                - link \"Page - For Investors\" [ref=e95]\n                  - StaticText \"FOR INVESTORS\"\n              - listitem [level=1]\n                - link \"Page - Contact\" [ref=e96]\n                  - StaticText \"CONTACT\"\n              - listitem [level=1]\n                - link \"Page - Legal\" [ref=e97]\n                  - StaticText \"LEGAL\"\n              - listitem [level=1]\n                - link \"Page - Privacy Policy\" [ref=e98]\n                  - StaticText \"PRIVACY POLICY\"\n              - listitem [level=1]\n                - button \"COOKIE CONSENT\" [ref=e99]\n          - list \"Oatly's social media\"\n            - listitem [level=1, ref=e22] clickable [cursor:pointer]\n              - link \"Oatly's {{ socialMediaPlatform }}\" [ref=e59]\n            - listitem [level=1, ref=e23] clickable [cursor:pointer]\n              - link \"Oatly's {{ socialMediaPlatform }}\" [ref=e60]\n            - listitem [level=1, ref=e24] clickable [cursor:pointer]\n              - link \"Oatly's {{ socialMediaPlatform }}\" [ref=e61]\n            - listitem [level=1, ref=e25] clickable [cursor:pointer]\n              - link \"Oatly's {{ socialMediaPlatform }}\" [ref=e62]\n  - alert"
+    },
+    "error": null
+  }
+]

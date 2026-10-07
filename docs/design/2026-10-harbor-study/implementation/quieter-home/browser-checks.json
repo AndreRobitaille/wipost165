@@ -1,0 +1,57 @@
+[
+  {
+    "width": 1440,
+    "pageWidth": 1425,
+    "removed": true,
+    "title": "Old Glory Honor Flight fundraiser",
+    "footer": "rgb(245, 248, 250)",
+    "strip": "rgb(0, 70, 127)",
+    "meeting": "rgba(0, 0, 0, 0)",
+    "secondary": "color(srgb 0.75 0.818627 0.87451)",
+    "navContact": true
+  },
+  {
+    "width": 1024,
+    "pageWidth": 1009,
+    "removed": true,
+    "title": "Old Glory Honor Flight fundraiser",
+    "footer": "rgb(245, 248, 250)",
+    "strip": "rgb(0, 70, 127)",
+    "meeting": "rgba(0, 0, 0, 0)",
+    "secondary": "color(srgb 0.75 0.818627 0.87451)",
+    "navContact": true
+  },
+  {
+    "width": 814,
+    "pageWidth": 799,
+    "removed": true,
+    "title": "Old Glory Honor Flight fundraiser",
+    "footer": "rgb(245, 248, 250)",
+    "strip": "rgb(0, 70, 127)",
+    "meeting": "rgba(0, 0, 0, 0)",
+    "secondary": "color(srgb 0.75 0.818627 0.87451)",
+    "navContact": true
+  },
+  {
+    "width": 390,
+    "pageWidth": 375,
+    "removed": true,
+    "title": "Old Glory Honor Flight fundraiser",
+    "footer": "rgb(245, 248, 250)",
+    "strip": "rgb(0, 70, 127)",
+    "meeting": "rgba(0, 0, 0, 0)",
+    "secondary": "color(srgb 0.75 0.818627 0.87451)",
+    "navContact": true
+  },
+  {
+    "width": 320,
+    "pageWidth": 305,
+    "removed": true,
+    "title": "Old Glory Honor Flight fundraiser",
+    "footer": "rgb(245, 248, 250)",
+    "strip": "rgb(0, 70, 127)",
+    "meeting": "rgba(0, 0, 0, 0)",
+    "secondary": "color(srgb 0.75 0.818627 0.87451)",
+    "navContact": true
+  }
+]

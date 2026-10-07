@@ -1,11 +1,56 @@
 # Public website development roadmap
 
-Updated September 27, 2026. This is the working backlog for future sessions.
+Updated October 7, 2026. This is the working backlog for future sessions.
 It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
 
+## Current priority — staged launch
+
+The current design is now shareable at the owner's authorized public
+[V1 Sites preview](https://post165-v1-launch-preview.andretr.chatgpt.site), generated
+from Rails with labelled sample events. The people-based Site remains available
+for V2. [Refresh instructions and evidence](design/2026-10-harbor-study/sites-preview/README.md).
+This is independent of the actual Rails production service and its launch gates.
+
+The owner's October 7 direction supersedes the former single full-site launch:
+launch V1 with public events, visit/meeting guidance, contact, membership/help,
+and Post identity; introduce people/photos/stories with V2 roughly a month or two
+later. A local [V1 first pass and launch sequence](design/2026-10-v1-launch/README.md)
+is active for review. The original full experience is preserved in the app as V2.
+
+SITE-04/05 now gate **V1** on its consumer/event-publisher evidence, scoped real
+content, browser/metadata review, container/release verification, and an authorized
+release. Story/portrait/consent evidence and real introductions become **V2** work.
+Do not demand V2 content to launch V1 while those public routes are disabled.
+No publisher contract change is needed. The detailed September sections below
+retain prior evidence and procedures; their people-before-first-launch sequencing
+applies to V2. The owner subsequently rejected the broad V1 appearance while confirming the
+messaging. The subsequent light-ground study was also rejected as looking the
+same. [Ten outside design references](design/2026-10-outside-references/README.md)
+now inform the reassessment. The owner subsequently found them too far out;
+[Take the Con is the closer calibration](design/2026-10-outside-references/take-the-con/README.md)
+for distinctive art direction with familiar behavior. The owner clarified that a
+binder is not required. A [civic pennant study](design/2026-10-pennant-study/README.md)
+now makes one direction concrete across four pages and phone layouts. The owner
+disliked the banner image; the [harbor illustration revision](design/2026-10-harbor-study/README.md)
+uses AI artwork based on an inspected local photograph. The owner accepted this
+direction and authorized implementation with National’s branding. The
+[implemented V1](design/2026-10-harbor-study/implementation/README.md) now uses it
+across the live public pages. The owner subsequently requested
+[national imagery research](design/2026-10-harbor-study/national-references/README.md)
+to strengthen the veteran-service subject. The people-free harbor remains in use
+while the distinction between anonymous illustrated people and V2 member profiles
+is under discussion. Next: settle that image treatment and remaining V1 gates.
+
 ## Start here each session
+
+Current content follow-up: owner-requested briefs for Grok to enrich from meeting
+records are [About #7](https://github.com/AndreRobitaille/wipost165/issues/7),
+[Membership #8](https://github.com/AndreRobitaille/wipost165/issues/8), and
+[Veteran help #9](https://github.com/AndreRobitaille/wipost165/issues/9).
+Local content, dues/joining details, and service-officer scope should be verified
+through those tasks; the existing pages have not yet been rewritten.
 
 1. Read `AGENTS.md`, the current section of [HANDOFF](HANDOFF.md), and this roadmap.
    Inspect the checkout and preserve existing work before editing.
@@ -31,31 +76,47 @@ not authorize commits, pushes, companion edits, publishing grants, or deployment
 
 ## Current baseline
 
+These are recorded results, not a new production inspection.
+
 | Area | Evidence and state |
 | --- | --- |
-| Hosting | Coming-soon page deployed with apex/www HTTPS; see [release evidence](deployment/2026-09-27-coming-soon-status.md). Do not redo DNS or provisioning as website development. |
-| Public experience | SITE-02 local refinement is complete, with owner approval of the desktop direction. [Current verification and screenshots](design/2026-09-visitor-paths/README.md) cover visitor paths and sparse content; full-site launch remains separate. |
-| Public consumer | Database-free v1 client, validation, bounded caching, and failure states exist. See [development](development.md). Cross-application verification remains open. |
-| Publisher | Contract revision 3 reviewed. Local companion checkout at `9d278b7` was clean on September 27; no v1 publisher implementation was found. Recheck before assigning work. This is not a new live-server check. |
-| Content | Public contact, mailing/meeting details, first-visit practice, basic club access, and content responsibility are recorded and implemented locally. Introductions/photos await owner collection; publishing grants remain separate. [Facts and remaining work](launch-content-readiness.md). Preview people are fictional. |
-| Source continuity | Full-site work and coming-soon release history through `0ea76e1` are consolidated on local `main` in `/home/andre/Development/wipost165`. Subsequent SITE-02/03 changes remain uncommitted. Live revision `2828f88` was checked during consolidation, not this refinement. See [next-session handoff](HANDOFF.md#resume-next-session). |
+| Hosting | Revision `5d15332` deployed with apex/www HTTPS and coming-soon enabled; see [release evidence](deployment/2026-09-27-authenticated-publisher-release.md). |
+| Public experience | September V2 baseline was [owner approved](design/2026-09-visitor-paths/README.md#owner-review). The later harbor direction was accepted and [implemented locally](design/2026-10-harbor-study/implementation/README.md); service imagery is under discussion. |
+| Public consumer | Database-free authenticated client, private credential-scoped caches, server-served portraits, and failure states exist. Latest local CI: 63 tests / 567 assertions; [consumer coverage](verification/2026-09-27-consumer-coverage.md) and [metadata verification](verification/2026-09-27-launch-metadata.md). |
+| Publisher | Available. JSON, portraits, and conditional requests require the Post-owned read-only website token; no anonymous API access. A personal API token with the appropriate role is required for editorial API changes. This session has no such token. |
+| Integration | Three fictional production stories and six portraits passed live reads and local desktop/phone rendering. The checked 90-day interval contained zero events. [Evidence and limits](deployment/2026-09-27-authenticated-publisher-release.md#populated-feed-follow-up). |
+| Content | Contact, meeting/arrival facts, resource links, and content ownership are recorded in the [worksheet](launch-content-readiness.md). Real introductions/photos belong in the final prelaunch content step. |
+| Source continuity | Accepted design/content and authenticated integration were committed and deployed. The subsequent development-startup correction has local changes; inspect Git before work and preserve them. |
 
 ## Work order
 
 Status vocabulary: **ready**, **active**, **blocked** (name the dependency),
 **done** (link evidence), **later** (not a launch requirement).
+IDs remain stable for historical links; the scopes below supersede earlier entries.
 
 | ID | Outcome | Status | Depends on |
 | --- | --- | --- | --- |
-| SITE-01 | One understood development/release baseline | done — consolidated on local `main`; see handoff | Local source inspection |
-| SITE-02 | Distinctive, intuitive public experience refined | done — local QA complete; [owner approved desktop direction](design/2026-09-visitor-paths/README.md#owner-review) | Real-content integration and launch checks remain SITE-04/05 |
-| SITE-03 | Truthful, maintainable launch content | active — September 27 [contact/visit content verified locally; ownership recorded; introductions/photos await collection](launch-content-readiness.md) | Owner's PEC/member meeting collection; publisher needed for entry/publication |
-| SITE-04 | Public site and real publisher verified together | active — authenticated empty feeds verified locally and in deployed container; real stories/portraits await publishing | Editorial content creation; populated-feed verification |
-| SITE-05 | Full website launched and verified | blocked | SITE-02/03/04; explicit release authorization |
+| SITE-01 | One understood development/release baseline | done — consolidated on `main`; see handoff | Local source inspection |
+| SITE-02 | Distinctive, intuitive public experience refined | active — accepted harbor direction implemented and brand-checked; [service imagery](design/2026-10-harbor-study/national-references/README.md) under review | Keep the current copy and practical interaction requirements |
+| SITE-03 | Verified static facts and content ownership | done — [contact/visit facts, links, and ownership recorded](launch-content-readiness.md) | Unknown optional facts remain omitted; real people/photos moved to SITE-05 |
+| SITE-04 | Consumer verified within available access; publisher evidence accounted for | active — [consumer review/fix complete](verification/2026-09-27-consumer-coverage.md); companion evidence pending | Editorial cases require evidence from an authorized companion session, not a personal token in this app |
+| SITE-05 | Technical launch preparation, final real content, then release | active — metadata and [browser/link review](verification/2026-09-27-final-paths/README.md) complete; local container check blocked by Docker access | SITE-04 evidence review and resolved material launch risks |
 | SITE-06 | Improvements based on use | later | Evidence of an actual visitor or editor need |
 
-The companion can build its publisher while SITE-03 progresses here.
-That work belongs in its own authorized session, following the companion queue.
+**Next work:** resolve local Docker access and run the pending container smoke
+check in the [prepared release/rollback procedure](verification/2026-09-27-release-preparation.md).
+The [final browser/link review](verification/2026-09-27-final-paths/README.md) passed;
+metadata/indexing is prepared. Publisher-owned evidence still needs the companion
+handback. These are the remaining technical gates; real people/photos stay last,
+followed by focused content verification and an authorized release.
+
+September 27 development follow-up: live publishing is now the default for a
+normal dev-server start; static samples require `PUBLIC_SITE_PREVIEW=1`.
+The read-only website token is configured in encrypted development credentials.
+The running local server on port 3000 returned all three production profiles and
+their portraits after restart. Focused page/portrait/coming-soon tests passed:
+21 tests, 195 assertions; initializer lint and `git diff --check` passed.
+Production configuration and deployment are unchanged.
 
 ### SITE-01 — Establish the next development baseline
 
@@ -92,68 +153,80 @@ no upcoming events, cancellations, and feed outages. Record rendered screenshots
 and findings for owner review without requiring localhost access. No new hosting
 or mockup publication is implied. Keep fictional content clearly labelled.
 
-### SITE-03 — Prepare launch content and its ownership
+### SITE-03 — Verified static facts and content ownership (complete)
 
-Use [content notes](content-notes.md) as leads, not verified facts. Record which
-facts were confirmed, by whom/what source, and when; keep private contacts and
-consent evidence out of this public repository.
+The [content worksheet](launch-content-readiness.md) records confirmed contact,
+mailing/meeting details, arrival/access facts, resource links, and responsibility
+for corrections. Unknown optional details remain omitted. Preserve this evidence
+and recheck facts when they change. Initial real introductions/photos are now
+SITE-05's final content step; they do not block technical development.
 
-- Obtain approved public names, short introductions, stories, and usable portraits
-  for willing regulars. Aim for three; the implementation must support fewer.
-- Confirm public contact, venue/address, arrival instructions, accessibility and
-  family participation details where known. Do not make promises from assumptions.
-- Review membership/help links and any eligibility or benefits claims against
-  current authoritative sources before publishing them.
-- Identify who keeps static public facts current and who will manage published
-  stories/events. Record the owner's choice of initial publishing authority in
-  the companion's appropriate private workflow, not as a grant made by this roadmap.
+### SITE-04 — Verify within the actual access boundary
 
-Done when launch copy is verified, a usable public contact path exists, missing
-facts are omitted honestly, and real content has an owner. Enter/approve content
-through the companion once available. Zero public events can be legitimate; do
-not fabricate listings or require three people to exist before the UI can work.
+Follow [contract revision 3 with the authenticated-access amendment](public-publishing-api-v1.md)
+and the [companion queue](companion-work-queue.md). The website token reads only;
+it cannot edit, publish, withdraw, replace portraits, change consent, or manage
+credentials. This session has no role-authorized personal editorial API token.
+Keep editorial credentials out of the public application and its configuration.
 
-### SITE-04 — Verify the publishing connection
+| Evidence layer | Work and available method | What it establishes / limits |
+| --- | --- | --- |
+| Consumer tests here | Use synthetic fixtures, injected HTTP responses, and a controlled clock for changes, 404/401, 304/ETag, cache expiry/outages, portrait revision changes, complete event interval replacement, and calendar boundaries. Review existing coverage before adding tests. | Proves how this app responds to publisher output; does not prove the publisher performs editorial transitions correctly. |
+| Live read-only checks here | Use the website token for collections, details, portrait bytes, response headers, and rendered desktop/phone paths with preview off. Missing/invalid-token rejection can be checked without revoking a real token. | Proves observable deployed read behavior. Empty events are valid but do not verify populated event delivery. Passing `bin/publisher-check` does not prove permission or withdrawal behavior. |
+| Publisher-owned evidence | Request companion tests/results for role enforcement, draft/publish behavior, rotation, consent/withdrawal, portrait replacement, event edits/cancellation/restriction/deletion, private-field exclusion, and concurrent restrictions. Use synthetic records in its authorized local/test environment. | Requires the companion's access and implementation knowledge; record its revision, environment, results, and unverified cases. Consumer simulations cannot substitute for this evidence. |
+| Optional coordinated exercise | If a material gap remains, an authorized owner/companion operator changes a specifically approved synthetic record; this app observes with the website token. Prefer an isolated test environment. | Not a mandatory production checklist. A live mutation or real-token revocation needs separate authorization in the session performing it. |
 
-Publisher delivery belongs to the separately run companion session. The public
-repository supplies [the required API output and handback](publisher-api-request.md)
-and can address consumer compatibility after that result returns. Per the owner's
-September 27 clarification, do not prescribe the companion's implementation or
-site/admin operation from this roadmap.
+Start with existing [consumer tests](../test/services/publishing_client_test.rb)
+and [release/follow-up evidence](deployment/2026-09-27-authenticated-publisher-release.md).
+Tests already cover several cache, authentication, withdrawal-response, and date
+boundary cases; do not describe them as absent or rerun everything merely to plan.
+For each remaining requirement record: evidence link, tested revision/environment,
+owner, and whether it is satisfied, needs a local fix, or awaits companion evidence.
+Use a focused test for a new fix, then required checks for the resulting change.
 
-Follow [contract revision 3](public-publishing-api-v1.md) and the
-[companion queue](companion-work-queue.md). Use synthetic test content for lifecycle
-exercises; do not cancel real events or withdraw real stories just to test behavior.
+Done when consumer coverage and authenticated read/render evidence are sufficient,
+and publisher-owned requirements have supporting companion evidence or an explicit
+unresolved-risk decision before launch. Identify any material unverified behavior
+as a launch dependency; do not silently mark it passed or demand production
+mutation to prove it. Local/test publisher evidence is acceptable when its scope
+and deployment applicability are recorded. Real people/photos are not required.
 
-Verify story publication/edit/rotation/withdrawal, consent and portrait replacement,
-event rescheduling/cancellation/restriction/deletion, and calendar boundary cases
-across both applications. Check 304/ETag handling, complete interval replacement,
-the five-minute total freshness budget, and failure after cache expiry. Confirm
-private fields and internal activities cannot reach anonymous responses.
+### SITE-05 — Prepare technically, add real content last, then release
 
-Done when publisher tests, consumer tests, and cross-application evidence agree;
-the target deployment's `bin/publisher-check` passes; and rendered pages/portraits
-work against that publisher with preview off. The script checks collections only:
-it does not prove detail, portrait, permission, or revocation behavior by itself.
-Record revisions/environment and any remaining limitations. Do not silently alter
-the contract to accommodate an implementation mismatch.
+Complete in this order:
 
-### SITE-05 — Release the full site
+1. **Technical readiness with fictional content.** Resolve consumer gaps; review
+   phone/desktop and keyboard visitor paths, empty/unavailable states, page titles,
+   search/share metadata, canonical hostname behavior, indexing, and broken links.
+   Prepare the coming-soon configuration change, rollback target, and release
+   notes. Verify the intended revision with `bin/ci` and appropriate production
+   asset/container checks. Keep public coming-soon enabled during development.
+   Existing evidence can be reused where the implementation has not changed.
+2. **Final content step after technical readiness.** Obtain approved real public
+   names, introductions, stories, portraits, and alt text. An authorized publisher
+   enters/approves them through LegionPostTools using its editorial workflow;
+   consent, image rights, and personal credentials stay there. Remove/withdraw
+   fictional records that would be reachable through the public site, including
+   direct detail/portrait URLs; merely taking them off the homepage is insufficient.
+   Verify the resulting website-token output and affected pages/crops read-only.
+   Aim for three willing regulars, but fewer or an owner-chosen honest empty state
+   can launch. Zero events is valid. Confirm an operator can maintain the content.
+3. **Authorized launch and verification.** After content readback and outstanding
+   evidence/risk review, deploy the prepared change turning off
+   `PUBLIC_SITE_COMING_SOON` and enabling `PUBLIC_SITE_LAUNCH_READY` using [DEPLOYMENT](DEPLOYMENT.md) and one persistent
+   release session. Check both HTTPS domains and protected services, confirm only
+   approved content or honest empty states are exposed, and record rollback and
+   verification evidence. Do not expose synthetic profiles in search/shared previews.
 
-Before release, verify the intended full-site revision with `bin/ci`, production
-asset/container checks, and final phone/desktop visitor paths. Review page titles,
-search/share metadata, canonical hostname handling, indexing behavior, and broken
-links; do not expose synthetic profiles in search or shared previews. Confirm an
-operator can update content and understand pending schedule/location changes.
+Real introductions/photos are the last development input, followed only by their
+focused verification and the release operation. Reopen technical work only if that
+verification reveals a defect. Collection timing does not block preceding work.
+Deploy only within explicit authorization; this plan authorizes no companion writes,
+live content changes, commit, push, or deployment.
 
-Prepare the concrete change turning off `PUBLIC_SITE_COMING_SOON`, the rollback
-target, and release notes. Deploy only with authorization using [DEPLOYMENT](DEPLOYMENT.md)
-and its one persistent release session. Preserve members, Two Rivers, and mail.
-
-Done when the intended revision serves the full experience on both HTTPS domains,
-real approved content or honest empty states appear, failure handling is verified,
-protected services remain unchanged, and deployment/rollback evidence is recorded.
-DNS/TLS success alone does not close this milestone.
+Done when the full experience serves both domains with approved content or honest
+empty states, material launch dependencies are resolved, and operational evidence
+is recorded. DNS/TLS success alone does not close this milestone.
 
 ### SITE-06 — Discover the next useful features
 
@@ -165,9 +238,115 @@ ownership, publication consent, withdrawal, and maintenance before implementatio
 
 ## Session record
 
+- **2026-10-07 — Contact and invitation refinement:** owner found the quieted
+  layout flat and Contact busy. Restored a dark footer, gave the next occasion a
+  red calendar date and one distinct invitation surface, and simplified Contact
+  into one grouped set of details without its banner or repeated instructions.
+  Preserved menu Contact, first-visit link, missing-channel behavior and all event
+  data. CI: 76 tests / 738 assertions; Home/Contact at five widths, keyboard and
+  empty/unavailable states checked. [Evidence](design/2026-10-harbor-study/implementation/contact-and-invitation/).
+  No commit or release.
+
+- **2026-10-07 — Quieter home:** removed the redundant “Have a question?” strip,
+  changed the V1 footer to a light neutral, and simplified the event/meeting band
+  using one blue surface, shorter labels, and a clearer text hierarchy.
+  CI passed 76 tests / 738 assertions; five home viewport checks and mobile
+  Contact passed. [Evidence](design/2026-10-harbor-study/implementation/quieter-home/).
+  Local only; no release.
+
+- **2026-10-07 — Harbor implementation and national identity:** implemented the
+  accepted harbor direction across V1 with National’s primary colors, recommended
+  Noto Sans fonts and unchanged official white brandmark. Added credited artwork,
+  month-grouped calendar rows, expanded visit answers, and direct contact rows;
+  preserved live publisher behavior and V2. Inspected Legion.org and MyLegion
+  imagery after the owner raised a service-identity concern. The harbor stays
+  people-free pending an answer about anonymous illustrations.
+  [Implementation evidence](design/2026-10-harbor-study/implementation/README.md).
+  No commit, push, publisher mutation, or deployment.
+
 Keep entries short: date; task ID; changed/evidence; remaining blocker; next action.
 Move lengthy histories to dated notes and link them instead of growing this file
 into another transcript.
+
+- **2026-10-07 — V1 interior pages and event modal:** added Home before Events;
+  rebuilt Events as date cards, opened fresh details in a keyboard-accessible
+  modal, replaced the card's blanket hover underlines, displayed all five visit
+  answers, and grouped contact methods into separate surfaces. CI: 76 tests /
+  735 assertions and all checks. Desktop/phone, modal/error/retry, keyboard,
+  and JavaScript-disabled navigation were reviewed locally.
+  [Review and captures](design/2026-10-v1-launch/README.md#interior-pages-and-event-modal).
+  V2 and production release settings remain preserved.
+
+- **2026-10-07 — V1 responsive composition:** owner screenshots exposed an
+  awkward early stack and sparse laptop spacing. Kept the welcome/visit pair
+  together above 740px, made the headline reflow below that, simplified the stacked
+  visit card, and tightened type/gaps/padding. CI: 70 tests / 661 assertions and
+  all checks; fourteen viewport/state combinations plus keyboard navigation passed.
+  [Current review](design/2026-10-v1-launch/README.md#responsive-composition-follow-up).
+  Content, V2, and release settings are preserved.
+
+- **2026-10-07 — V1 first-visit placement:** moved first-visit guidance into the
+  white card beside “Still serving,” and placed the next occasion in a dark card
+  beside meeting/contact details below. Phone reading order follows the same
+  sequence. CI: 70 tests / 661 assertions and all checks; ten responsive/state
+  combinations, keyboard navigation, placement, and contrast passed.
+  [Current review](design/2026-10-v1-launch/README.md#first-visit-card-moved-into-the-welcome).
+  Public facts and V2 are preserved; no release action.
+
+- **2026-10-07 — V1 cards and color:** owner clarified that the white surfaces
+  needed borders/cards/color rather than more typographic emphasis. Split the
+  practical section into three framed cards, boxed event/contact details, and
+  added a red calendar date. CI: 70 tests / 661 assertions; final responsive CSS
+  compiled afterward. Ten viewport/state captures, keyboard navigation, and new
+  contrast pairs passed. [Review and captures](design/2026-10-v1-launch/README.md#cards-and-color-follow-up).
+  V1 remains local for review; V2 and public facts are preserved.
+
+- **2026-10-07 — V1 typography refinement:** owner liked the first pass and asked
+  for more character in the white surfaces. Strengthened date/schedule typography,
+  practical headings, and labeled event/contact details. CI: 70 tests / 661
+  assertions; desktop/phone/sparse/long-title captures and keyboard focus passed.
+  [Updated review](design/2026-10-v1-launch/README.md#owner-review-and-white-surface-typography-refinement).
+  No public facts, V2 behavior, commit, or deployment changed.
+
+- **2026-10-07 — staged V1/V2 first pass:** implemented a photo-free launch layout
+  and welcome using recorded Post facts and the live event consumer. V1 disables
+  people reads/context, stories, and portraits; V2 source is preserved. Review and
+  verification: [design note](design/2026-10-v1-launch/README.md). Existing local
+  changes are preserved; no commit, push, publisher mutation, or deployment.
+
+- **2026-09-27 — SITE-05 final paths and release preparation:** Chromium passed 42
+  page/width combinations, keyboard/reduced-motion, live fictional portraits,
+  click-through/context, fallback, and empty/outage checks. All 58 local link
+  targets and three launch external destinations passed; preview-only photo credits
+  returned inconclusive 403s. [Evidence](verification/2026-09-27-final-paths/README.md).
+  Local release/shell checks passed. [Container and rollback procedure](verification/2026-09-27-release-preparation.md)
+  prepared, but Docker socket access is denied and noninteractive sudo requires a
+  password. No container build or remote fallback. Next: local Docker access and
+  companion evidence, then real content last. No application edits or deployment.
+
+- **2026-09-27 — SITE-05 metadata/indexing:** added production-only launch readiness,
+  neutral preparation metadata/noindex, page-specific release metadata, and apex
+  canonical URLs without query context. Ten integration cases cover launch/preview,
+  errors, expiry, escaping, cancellation, and portrait headers. CI passed: 63 tests /
+  567 assertions. [Evidence and limitations](verification/2026-09-27-launch-metadata.md).
+  No production requests or deployment; next: final visitor-path/link review and
+  container/release preparation. Real people/photos remain last.
+
+- **2026-09-27 — SITE-04 consumer evidence review:** mapped existing tests and
+  recorded live reads; added seven validator/lifecycle tests and fixed acceptance
+  of mismatched/missing 304 ETags. CI passed: 53 tests / 333 assertions; single-worker
+  test rerun passed without parallel Bundler cleanup errors. [Evidence and limits](verification/2026-09-27-consumer-coverage.md).
+  Companion permission/editorial/event evidence remains pending; no production
+  reads or mutations performed. Next: SITE-05 metadata/indexing and technical launch
+  preparation. Real content stays last; no commit, push, or deployment.
+
+- **2026-09-27 — Owner-directed plan correction:** split verification into local
+  consumer tests, live website-token reads, and companion-owned editorial evidence.
+  No personal editorial token is available here. SITE-03 static content is complete;
+  real people/photos move to the final SITE-05 content step after technical readiness.
+  Updated current handoff/queue and stale API handoff transport facts. Documentation
+  checks only; no runtime checks, production reads, or editorial mutations performed.
+  Next: focused SITE-04 coverage/evidence review, then technical launch preparation.
 
 - **2026-09-27 — Authenticated website connection:** implemented the owner's
   Post-owned read-only bearer contract for JSON, conditional requests, and portraits.
@@ -208,3 +387,39 @@ into another transcript.
 - **2026-09-27 — SITE-02/03 local preparation:** refined phone navigation, table/detail layouts, portrait and sparse-content states, event timing/cancellations, and first-visit/contact paths. [Review captures and verification](design/2026-09-visitor-paths/README.md): CI passed (36 tests, 234 assertions), browser checks at 320/390/1440px, keyboard, reduced motion, and no-JavaScript navigation. [Content readiness](launch-content-readiness.md) records verified National/county links and outstanding local facts. Next: owner visual review and public contact/arrival confirmation; companion integration remains blocked separately. No commit, push, or deployment.
 - **2026-09-27 — SITE-02 accepted:** owner reviewed the desktop capture and liked the current design without requesting changes. Recorded approval of the visual direction; the agent's optional spacing critique is not requested work. SITE-02 is complete for this local refinement. Next: SITE-03 public contact/arrival facts and content ownership; SITE-04/05 dependencies remain. Documentation-only update; no release authorization implied.
 - **2026-09-27 — Session handoff requested:** added an explicit [resume checklist](HANDOFF.md#resume-next-session), preserving the accepted design, uncommitted work, verification evidence, stopped preview processes, and next content questions. Updated baseline links to the current screenshots. Documentation checks only; no runtime or release action.
+
+- **2026-10-07 — V1 visual reassessment:** owner rejected the blue field and
+  repeated white panels, while confirming the messaging. Prepared an isolated
+  interactive direction across Home, Events, First visit, Contact, and supporting
+  pages; [design rationale and captures](design/2026-10-visual-reset/README.md).
+  Reopened SITE-02 and corrected current guidance so prior card refinements are
+  not treated as approved design. Application/V2 files and production are unchanged.
+
+### October 7 — outside design research after the second rejection
+
+Researched ten non-Legion/veterans websites and captured representative views,
+including practical interiors and selected interactions. Recorded concrete lessons,
+limits, unavailable candidates, and the need for original art direction in the
+[reference review](design/2026-10-outside-references/README.md). Both earlier V1
+studies remain rejected. SITE-02 stays active; no application code, release state,
+or preserved V2 implementation changed.
+
+### October 7 — footer content briefs and First visit meeting panel
+
+Created the three owner-requested content issues above for Grok enrichment. The
+owner approved the previous Home/Contact refinement and asked to improve the
+solid red meeting panel. Replaced it with a light schedule/location note and a
+directions link, keeping the expanded answers and verified meeting details.
+[Review evidence](design/2026-10-harbor-study/implementation/visit-meetings/README.md):
+five widths through 320px, keyboard focus, contrast, and CI (76 tests / 738 assertions).
+Local implementation only; no content rewrite, commit, push, or deployment.
+
+### October 7 — source commit/push and separate public Sites preview
+
+Owner authorized the current source handoff and a public, no-sign-in V1 preview.
+Rendered eight current Rails pages into a separate Sites project with sample-only
+calendar content and working event modal. Preserved the existing people-based Site
+for V2. [Published URL, identities, refresh procedure, and checks](design/2026-10-harbor-study/sites-preview/README.md).
+All 24 page/width combinations and modal keyboard checks pass; CI passes 76 tests /
+738 assertions and local release checks pass. Added `main` to GitHub push checks
+alongside `master`; retained local-only development credentials. Production unchanged.

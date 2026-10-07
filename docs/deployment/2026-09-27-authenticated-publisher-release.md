@@ -70,3 +70,27 @@ to create/publish them in the real workspace. A website read token cannot do tha
 Opening the full public website requires changing `PUBLIC_SITE_COMING_SOON` and
 releasing that configuration. Until then, publishing content in LegionPostTools
 will not change the coming-soon page.
+
+## Populated-feed follow-up
+
+Later on September 27, the owner reported that Grok used the editorial API to
+publish fictional Avery, Morgan, and Sam in production and feature them in that
+order. Read-only verification from public-site checkout `c7b716e` then confirmed:
+
+- `bin/publisher-check` passed against the production publisher: three featured
+  introductions, their three details and six portrait renditions; zero events in
+  the next 90 days.
+- Featured order and fictional names match. Introductions, stories, and alt text
+  differ from the original local `content.json`; the published versions retain
+  explicit fictional/AI-generated labels. No editorial changes were made here.
+- With local preview and coming-soon both off, desktop 1440px and phone 390px
+  pages rendered the live portraits. All three story pages returned 200 with
+  no-store and the fictional disclaimer. The phone story had no horizontal
+  overflow. Browser image URLs stayed on the public application's own origin.
+- A fresh HTTPS read of `https://wipost165.org/` still showed coming-soon.
+
+Consent and private audit checks are the other agent's reported results, not
+independently verified with this read-only website token. No release, server
+inspection, publishing mutation, or lifecycle mutation was performed during this
+follow-up. Full-site launch and remaining cross-application lifecycle evidence
+remain open. Temporary browser/server sessions were stopped after these checks.

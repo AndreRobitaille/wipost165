@@ -20,6 +20,30 @@ required. The publisher check is skipped only when that committed deployment
 configuration enables coming-soon mode. Turning it off requires a working
 publishing feed, approved content, full-page QA, and a separate authorized release.
 
+The prepared metadata controls add `PUBLIC_SITE_LAUNCH_READY: "0"` to the local
+deployment configuration. It keeps indexing disabled and sharing text neutral
+even if the full-site view is used before content approval. This has not been
+deployed. It is a production-only setting; development stays noindex regardless.
+
+For the final authorized launch, after fictional records are withdrawn and the
+approved content or chosen empty state is verified, set both:
+
+```yaml
+PUBLIC_SITE_COMING_SOON: "0"
+PUBLIC_SITE_LAUNCH_READY: "1"
+```
+
+Verify page titles/descriptions, apex canonical URLs on both hosts, query-free
+sharing URLs, and noindex on 404/503 responses. The existing setting remains
+coming-soon `1` / launch-ready `0` until that release. Rollback to holding mode
+uses coming-soon `1` / launch-ready `0`; noindex alone does not hide content.
+See [local metadata evidence](verification/2026-09-27-launch-metadata.md). No host
+redirect or proxy change is required by this metadata work.
+
+See the [prepared local container check and full-site release/rollback procedure](verification/2026-09-27-release-preparation.md)
+for remaining gates and exact scope. The local container test is currently blocked
+by Docker socket permissions; browser checks do not substitute for that test.
+
 ## Shared host and authorization
 
 Read the current `~/Development/LegionPostTools/docs/DEPLOYMENT.md` before changing

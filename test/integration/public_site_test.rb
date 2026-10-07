@@ -8,10 +8,15 @@ class PublicSiteTest < ActionDispatch::IntegrationTest
   setup do
     build_client
     @preview = Rails.configuration.x.public_site_preview
+    @edition = Rails.configuration.x.public_site_edition
     Rails.configuration.x.public_site_preview = false
+    Rails.configuration.x.public_site_edition = "v2"
   end
 
-  teardown { Rails.configuration.x.public_site_preview = @preview }
+  teardown do
+    Rails.configuration.x.public_site_preview = @preview
+    Rails.configuration.x.public_site_edition = @edition
+  end
 
   def using_feed(&block)
     constructor = Publishing::Client.method(:new)
@@ -115,7 +120,7 @@ class PublicSiteTest < ActionDispatch::IntegrationTest
     using_feed { get root_path }
     assert_response :success
     assert_select ".person", count: 3
-    assert_equal "noindex, nofollow", response.headers["X-Robots-Tag"]
+    assert_equal "noindex, nofollow, nosnippet, noimageindex", response.headers["X-Robots-Tag"]
     assert_empty @requests
   end
 

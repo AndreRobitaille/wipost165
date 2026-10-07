@@ -1,0 +1,77 @@
+[
+  {
+    "success": true,
+    "data": {
+      "deviceScaleFactor": 1.0,
+      "height": 960,
+      "mobile": false,
+      "width": 1440
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "title": "Radio Garden \u2013 Explore live radio by rotating the globe",
+      "url": "https://radio.garden/"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://radio.garden/",
+      "refs": {
+        "e1": {
+          "name": "Radio Garden",
+          "role": "dialog"
+        },
+        "e2": {
+          "name": "Start Radio Garden",
+          "role": "button"
+        }
+      },
+      "snapshot": "- dialog \"Radio Garden\" [ref=e1] clickable [onclick]\n  - button \"Start Radio Garden\" [ref=e2]"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/radio-garden-initial.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "scrolled": true
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/radio-garden-scroll.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://radio.garden/",
+      "refs": {
+        "e1": {
+          "name": "Radio Garden",
+          "role": "dialog"
+        },
+        "e2": {
+          "name": "Start Radio Garden",
+          "role": "button"
+        }
+      },
+      "snapshot": "- generic\n  - generic\n    - dialog \"Radio Garden\" [ref=e1] clickable [onclick]\n      - generic\n        - button \"Start Radio Garden\" [ref=e2]\n          - generic\n            - StaticText \"Press play to start\\nRadio Garden\"\n  - StaticText \"Loading stream\""
+    },
+    "error": null
+  }
+]

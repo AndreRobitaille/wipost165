@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <%= render "public_site/metadata" %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-cache-control" content="no-cache">
+    <%= favicon_link_tag "legion-white.png", type: "image/png" %>
+    <meta name="theme-color" content="#00467f">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <div id="launch">
+      <a class="skip" href="#main-content" data-turbo="false">Skip to main content</a>
+      <% if preview_mode? %>
+        <div class="preview-note">DESIGN PREVIEW <span>Sample occasions are not the live Post calendar.</span></div>
+      <% end %>
+      <header class="launch-header">
+        <%= link_to root_path, class: "launch-brand", aria: { label: "Post 165 home" } do %>
+          <%= image_tag "legion-white.png", alt: "The American Legion", width: 172, height: 83 %>
+        <% end %>
+        <div class="launch-post">ROBERT E. BURNS <strong>POST 165</strong><span>Two Rivers, Wisconsin</span></div>
+        <nav class="launch-nav" aria-label="Main navigation">
+          <%= link_to "Home", root_path, aria: { current: action_name == "home" ? "page" : nil } %>
+          <%= link_to "Events", events_path, aria: { current: %w[events event].include?(action_name) ? "page" : nil } %>
+          <%= link_to "First visit", visit_path, aria: { current: action_name == "visit" ? "page" : nil } %>
+          <%= link_to "Contact", contact_path, aria: { current: action_name == "contact" ? "page" : nil } %>
+        </nav>
+      </header>
+      <main id="main-content" class="launch-main <%= "launch-interior" unless action_name == "home" %>" tabindex="-1">
+        <% if %w[home events visit contact].include?(action_name) && @page_error.nil? %>
+          <%= yield %>
+        <% else %>
+          <div class="launch-reading"><%= yield %></div>
+        <% end %>
+      </main>
+      <footer class="launch-footer">
+        <div><%= link_to "Service doesn’t end with a uniform.", about_path, class: "launch-service" %><p>Robert E. Burns American Legion Post 165 · Two Rivers, Wisconsin</p></div>
+        <nav aria-label="More about the Post">
+          <%= link_to "About the Post", about_path %>
+          <%= link_to "Membership", membership_path %>
+          <%= link_to "Veteran help", veteran_help_path %>
+          <%= link_to "Members site ↗", "https://members.wipost165.org/" %>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

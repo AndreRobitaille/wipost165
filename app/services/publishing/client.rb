@@ -95,6 +95,10 @@ module Publishing
       end
       if response.status == 304
         raise Unavailable, "Unmatched conditional response" unless cached && headers["If-None-Match"]
+        # If-None-Match uses weak comparison, but must still identify this body.
+        unless response.headers["etag"].to_s.delete_prefix("W/") == headers["If-None-Match"].delete_prefix("W/")
+          raise Unavailable, "Mismatched validation ETag"
+        end
         raise Unavailable, "Missing validation date" unless response.headers["date"]
         metadata = cached[:headers].except("age").merge(response.headers)
         data = cached[:data]

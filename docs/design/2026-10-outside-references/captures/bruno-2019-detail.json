@@ -1,0 +1,132 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://2019.bruno-simon.com/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "_______________\ud83d\ude97_____",
+        "url": "https://2019.bruno-simon.com/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://2019.bruno-simon.com/",
+        "refs": {},
+        "snapshot": "(no interactive elements)"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/bruno-2019-hero.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/bruno-2019-hero.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "scroll",
+      "down",
+      "1200"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "scrolled": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "2000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 2000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/bruno-2019-interior.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/bruno-2019-interior.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://2019.bruno-simon.com/",
+        "refs": {},
+        "snapshot": "(no interactive elements)"
+      },
+      "error": null
+    }
+  }
+]

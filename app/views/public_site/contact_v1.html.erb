@@ -1,0 +1,27 @@
+<section class="launch-contact-page" aria-labelledby="contact-title">
+  <header class="launch-contact-intro">
+    <p class="eyebrow">CONTACT THE POST</p>
+    <h1 id="contact-title">Say hello.</h1>
+    <p>Questions about a first visit, membership, or getting involved? We’re happy to hear from you.</p>
+    <% if public_contact_available? %><p class="small-note">The Post is run by volunteers. Please allow time for a reply.</p><% end %>
+  </header>
+  <div class="launch-contact-sheet">
+    <% if public_contact_available? %>
+      <dl class="launch-contact-methods">
+        <% if public_contact_email %>
+          <div><dt>Email</dt><dd><%= mail_to public_contact_email, subject: first_visit_subject %></dd></div>
+        <% end %>
+        <% if public_contact_phone %>
+          <div><dt>Phone</dt><dd><%= link_to public_contact_phone, public_phone_href %></dd></div>
+        <% end %>
+      </dl>
+    <% else %>
+      <p class="launch-contact-pending">Email and phone contact details aren’t available here. You can write to the Post at the mailing address below.</p>
+    <% end %>
+    <section class="launch-mail" aria-labelledby="mail-title">
+      <h2 id="mail-title">Mailing address</h2>
+      <address>American Legion Post 165<br>PO Box 11<br>Two Rivers, WI 54241</address>
+      <%= link_to "Looking for the meeting location? →", visit_path, class: "text-action" %>
+    </section>
+  </div>
+</section>

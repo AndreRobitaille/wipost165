@@ -1,0 +1,26 @@
+{
+  "click_journey": [
+    {
+      "heading": "Meet Frank.",
+      "path": "/people/frank"
+    },
+    {
+      "heading": "Come on by.",
+      "path": "/events?person=frank"
+    },
+    {
+      "heading": "A Post gathering",
+      "path": "/events/example-gathering?person=frank"
+    },
+    {
+      "heading": "Start with hello.",
+      "path": "/visit?person=frank"
+    },
+    {
+      "heading": "Say hello.",
+      "path": "/contact?person=frank"
+    }
+  ],
+  "context": "preserved through contact mailto, Back, and reload",
+  "image_failure": "neutral fallback shown"
+}

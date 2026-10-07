@@ -1,0 +1,22 @@
+[
+  {
+    "name": "two-rivers-harbor",
+    "page": "https://commons.wikimedia.org/wiki/File:Two_Rivers_Harbor.jpg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Two_Rivers_Harbor.jpg",
+    "author": "Chris Rand",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "date": "2015-01-31",
+    "path": "/home/andre/Development/wipost165/docs/design/2026-10-harbor-study/references/two-rivers-harbor.jpg"
+  },
+  {
+    "name": "rogers-street-fishing-village",
+    "page": "https://commons.wikimedia.org/wiki/File:Rogers_Street_Historic_Fishing_Village_and_Great_Lakes_Coast_Guard_Museum;_Two_Rivers,_WI;_June_3,_2012.JPG",
+    "author": "Stephen Matthew Milligan",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "date": "2012-06-03",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Rogers_Street_Historic_Fishing_Village_and_Great_Lakes_Coast_Guard_Museum%3B_Two_Rivers%2C_WI%3B_June_3%2C_2012.JPG?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+    "path": "/home/andre/Development/wipost165/docs/design/2026-10-harbor-study/references/rogers-street-fishing-village.jpg"
+  }
+]

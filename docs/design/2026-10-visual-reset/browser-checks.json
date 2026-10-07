@@ -1,0 +1,150 @@
+[
+  {
+    "page": "home",
+    "frame_width": 1440,
+    "heading_visible": "Still serving. In good company.",
+    "capture": "previews/home-1440.png"
+  },
+  {
+    "page": "events",
+    "frame_width": 1440,
+    "heading_visible": "Come on by.",
+    "capture": "previews/events-1440.png"
+  },
+  {
+    "page": "visit",
+    "frame_width": 1440,
+    "heading_visible": "Start with hello.",
+    "capture": "previews/visit-1440.png"
+  },
+  {
+    "page": "contact",
+    "frame_width": 1440,
+    "heading_visible": "Say hello.",
+    "capture": "previews/contact-1440.png"
+  },
+  {
+    "page": "home",
+    "frame_width": 1024,
+    "heading_visible": "Still serving. In good company.",
+    "capture": "previews/home-1024.png"
+  },
+  {
+    "page": "events",
+    "frame_width": 1024,
+    "heading_visible": "Come on by.",
+    "capture": "previews/events-1024.png"
+  },
+  {
+    "page": "visit",
+    "frame_width": 1024,
+    "heading_visible": "Start with hello.",
+    "capture": "previews/visit-1024.png"
+  },
+  {
+    "page": "contact",
+    "frame_width": 1024,
+    "heading_visible": "Say hello.",
+    "capture": "previews/contact-1024.png"
+  },
+  {
+    "page": "home",
+    "frame_width": 800,
+    "heading_visible": "Still serving. In good company.",
+    "capture": "previews/home-800.png"
+  },
+  {
+    "page": "events",
+    "frame_width": 800,
+    "heading_visible": "Come on by.",
+    "capture": "previews/events-800.png"
+  },
+  {
+    "page": "visit",
+    "frame_width": 800,
+    "heading_visible": "Start with hello.",
+    "capture": "previews/visit-800.png"
+  },
+  {
+    "page": "contact",
+    "frame_width": 800,
+    "heading_visible": "Say hello.",
+    "capture": "previews/contact-800.png"
+  },
+  {
+    "page": "home",
+    "frame_width": 390,
+    "heading_visible": "Still serving. In good company.",
+    "capture": "previews/home-390.png"
+  },
+  {
+    "page": "events",
+    "frame_width": 390,
+    "heading_visible": "Come on by.",
+    "capture": "previews/events-390.png"
+  },
+  {
+    "page": "visit",
+    "frame_width": 390,
+    "heading_visible": "Start with hello.",
+    "capture": "previews/visit-390.png"
+  },
+  {
+    "page": "contact",
+    "frame_width": 390,
+    "heading_visible": "Say hello.",
+    "capture": "previews/contact-390.png"
+  },
+  {
+    "page": "home",
+    "frame_width": 320,
+    "heading_visible": "Still serving. In good company.",
+    "capture": "previews/home-320.png"
+  },
+  {
+    "page": "events",
+    "frame_width": 320,
+    "heading_visible": "Come on by.",
+    "capture": "previews/events-320.png"
+  },
+  {
+    "page": "visit",
+    "frame_width": 320,
+    "heading_visible": "Start with hello.",
+    "capture": "previews/visit-320.png"
+  },
+  {
+    "page": "contact",
+    "frame_width": 320,
+    "heading_visible": "Say hello.",
+    "capture": "previews/contact-320.png"
+  },
+  {
+    "modal": "opens from events, Escape closes, focus returns to event link, Enter reopens, Close works",
+    "widths": [
+      1024,
+      320
+    ]
+  },
+  {
+    "secondary_page": "About the Post",
+    "heading": "Still serving. Together."
+  },
+  {
+    "secondary_page": "Membership",
+    "heading": "Let\u2019s talk."
+  },
+  {
+    "secondary_page": "Veteran help",
+    "heading": "A place to ask."
+  },
+  {
+    "browser_errors": {
+      "errors": []
+    },
+    "dark_captures": [
+      "home-dark-1024.png",
+      "contact-dark-1024.png"
+    ]
+  }
+]

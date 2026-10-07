@@ -1,0 +1,444 @@
+{
+  "page_width_combinations": 27,
+  "checks": [
+    {
+      "badLinks": [],
+      "h1": [
+        "Still serving.\nIn good\ncompany."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 1425,
+      "url": "http://127.0.0.1:3001/",
+      "width": 1440
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Come on by."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 1425,
+      "url": "http://127.0.0.1:3001/events",
+      "width": 1440
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Old Glory Honor Flight fundraiser"
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 1425,
+      "url": "http://127.0.0.1:3001/events/23b9b0650ff6469f9fe5365d74b6145c",
+      "width": 1440
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Start with hello."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 1425,
+      "url": "http://127.0.0.1:3001/visit",
+      "width": 1440
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Say hello."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 1425,
+      "url": "http://127.0.0.1:3001/contact",
+      "width": 1440
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Still serving.\nTogether."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 1440,
+      "url": "http://127.0.0.1:3001/about",
+      "width": 1440
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Let\u2019s talk."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 1440,
+      "url": "http://127.0.0.1:3001/membership",
+      "width": 1440
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "A place to ask."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 1440,
+      "url": "http://127.0.0.1:3001/veteran-help",
+      "width": 1440
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "That page isn\u2019t here."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 1440,
+      "url": "http://127.0.0.1:3001/people/story_example_avery",
+      "width": 1440
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Still serving.\nIn good\ncompany."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 375,
+      "url": "http://127.0.0.1:3001/",
+      "width": 390
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Come on by."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 375,
+      "url": "http://127.0.0.1:3001/events",
+      "width": 390
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Old Glory Honor Flight fundraiser"
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 375,
+      "url": "http://127.0.0.1:3001/events/23b9b0650ff6469f9fe5365d74b6145c",
+      "width": 390
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Start with hello."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 375,
+      "url": "http://127.0.0.1:3001/visit",
+      "width": 390
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Say hello."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 375,
+      "url": "http://127.0.0.1:3001/contact",
+      "width": 390
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Still serving.\nTogether."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 375,
+      "url": "http://127.0.0.1:3001/about",
+      "width": 390
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Let\u2019s talk."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 375,
+      "url": "http://127.0.0.1:3001/membership",
+      "width": 390
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "A place to ask."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 375,
+      "url": "http://127.0.0.1:3001/veteran-help",
+      "width": 390
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "That page isn\u2019t here."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 375,
+      "url": "http://127.0.0.1:3001/people/story_example_avery",
+      "width": 390
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Still serving.\nIn good\ncompany."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 305,
+      "url": "http://127.0.0.1:3001/",
+      "width": 320
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Come on by."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 305,
+      "url": "http://127.0.0.1:3001/events",
+      "width": 320
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Old Glory Honor Flight fundraiser"
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 305,
+      "url": "http://127.0.0.1:3001/events/23b9b0650ff6469f9fe5365d74b6145c",
+      "width": 320
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Start with hello."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 305,
+      "url": "http://127.0.0.1:3001/visit",
+      "width": 320
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Say hello."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 305,
+      "url": "http://127.0.0.1:3001/contact",
+      "width": 320
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Still serving.\nTogether."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 305,
+      "url": "http://127.0.0.1:3001/about",
+      "width": 320
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "Let\u2019s talk."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 305,
+      "url": "http://127.0.0.1:3001/membership",
+      "width": 320
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "A place to ask."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 305,
+      "url": "http://127.0.0.1:3001/veteran-help",
+      "width": 320
+    },
+    {
+      "badLinks": [],
+      "h1": [
+        "That page isn\u2019t here."
+      ],
+      "images": [
+        {
+          "alt": "The American Legion",
+          "loaded": true
+        }
+      ],
+      "main": true,
+      "pageWidth": 305,
+      "url": "http://127.0.0.1:3001/people/story_example_avery",
+      "width": 320
+    }
+  ],
+  "keyboard_skip": "passed",
+  "visit_details_and_contact_clicks": "passed",
+  "browser_back": "passed",
+  "reduced_motion": "passed",
+  "console_errors": {
+    "errors": []
+  }
+}

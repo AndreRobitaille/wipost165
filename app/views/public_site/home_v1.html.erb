@@ -1,0 +1,54 @@
+<section class="launch-welcome" aria-labelledby="welcome-title">
+  <figure class="launch-harbor">
+    <%= image_tag "two-rivers-harbor-illustration.webp", width: 1536, height: 1024, fetchpriority: "high", alt: "Illustration of Two Rivers harbor, its piers and Lake Michigan shoreline, based on a 2015 photograph." %>
+    <figcaption>Two Rivers, illustrated · Photo reference: <%= link_to "Chris Rand", "https://commons.wikimedia.org/wiki/File:Two_Rivers_Harbor.jpg" %> · <%= link_to "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/" %></figcaption>
+  </figure>
+  <div class="launch-introduction">
+    <p class="eyebrow">VETERANS SERVING TWO RIVERS</p>
+    <h1 id="welcome-title">Still serving.<br><span>In good company.</span></h1>
+    <p class="launch-welcome-copy">Military service is our common bond. Fellowship, mutual helpfulness, and service to our community keep that bond alive.</p>
+    <div class="launch-actions">
+      <%= link_to events_path, class: "main-action" do %>See upcoming events <span aria-hidden="true">↗</span><% end %>
+    </div>
+    <%= link_to visit_path, class: "launch-visit-intro" do %>
+      <div><h2>Your first visit? Start with hello.</h2><p>A public event is a good way to get to know us. Here’s what to expect.</p></div>
+      <span class="launch-arrow" aria-hidden="true">→</span>
+    <% end %>
+  </div>
+</section>
+<section class="launch-practical" aria-label="Events and practical information">
+  <section class="launch-invitation" aria-labelledby="invitation-title">
+    <% if @next_event %>
+      <div class="launch-date" aria-hidden="true"><span><%= @next_event.date.strftime("%b") %></span><strong><%= @next_event.date.day %></strong></div>
+      <div class="launch-invitation-copy">
+        <p class="eyebrow">Next public occasion</p>
+        <% if preview_mode? %><p class="sample-tag">EXAMPLE OCCASION · NOT SCHEDULED</p><% end %>
+        <h2 id="invitation-title"><%= @next_event.title %></h2>
+        <p class="launch-event-time"><%= event_time(@next_event) %></p>
+        <p class="launch-event-location"><%= @next_event.location_name.presence || "Location to be confirmed" %></p>
+        <%= link_to "Event details ↗", event_path(@next_event), class: "text-action" %>
+      </div>
+    <% else %>
+      <div class="launch-invitation-empty">
+        <p class="eyebrow">Come on by</p>
+        <h2 id="invitation-title">A first hello.</h2>
+        <% if @content.events_unavailable %>
+          <p>The public calendar is temporarily unavailable. Please check back before making plans.</p>
+        <% else %>
+          <p>No upcoming public occasions are listed right now. You can also come to a regular Post meeting.</p>
+        <% end %>
+        <%= link_to "Meeting & visit details →", visit_path, class: "text-action" %>
+        <%= link_to "View the public calendar ↗", events_path, class: "text-action" %>
+      </div>
+    <% end %>
+  </section>
+  <div class="launch-meeting">
+    <h2 class="eyebrow">Regular Post meetings</h2>
+    <p class="launch-meeting-time">
+      <strong>First Tuesday</strong>
+      <span>Each month · 6:30 p.m.</span>
+    </p>
+    <p class="launch-meeting-location">Manitowoc Rifle &amp; Pistol Club</p>
+    <%= link_to "Meeting details →", visit_path, class: "text-action" %>
+  </div>
+</section>

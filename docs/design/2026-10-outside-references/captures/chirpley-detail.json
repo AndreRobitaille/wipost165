@@ -1,0 +1,163 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://chirpley.ai/"
+    ],
+    "result": {
+      "success": false,
+      "data": null,
+      "error": "Navigation failed: net::ERR_NAME_NOT_RESOLVED"
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "chrome-error://chromewebdata/",
+        "refs": {
+          "e1": {
+            "name": "Details",
+            "role": "button"
+          },
+          "e2": {
+            "name": "This site can\u2019t be reached",
+            "role": "heading"
+          },
+          "e3": {
+            "name": "Reload",
+            "role": "button"
+          },
+          "e4": {
+            "name": "Checking the proxy, firewall, and DNS configuration",
+            "role": "link"
+          }
+        },
+        "snapshot": "- heading \"This site can\u2019t be reached\" [level=1, ref=e2]\n- link \"Checking the proxy, firewall, and DNS configuration\" [ref=e4]\n- button \"Reload\" [ref=e3]\n- button \"Details\" [ref=e1]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/chirpley-hero.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/chirpley-hero.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "scroll",
+      "down",
+      "1200"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "scrolled": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "2000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 2000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/chirpley-interior.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/chirpley-interior.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "chrome-error://chromewebdata/",
+        "refs": {
+          "e1": {
+            "name": "Details",
+            "role": "button"
+          },
+          "e2": {
+            "name": "This site can\u2019t be reached",
+            "role": "heading"
+          },
+          "e3": {
+            "name": "Reload",
+            "role": "button"
+          },
+          "e4": {
+            "name": "Checking the proxy, firewall, and DNS configuration",
+            "role": "link"
+          }
+        },
+        "snapshot": "- heading \"This site can\u2019t be reached\" [level=1, ref=e2]\n- link \"Checking the proxy, firewall, and DNS configuration\" [ref=e4]\n- button \"Reload\" [ref=e3]\n- button \"Details\" [ref=e1]"
+      },
+      "error": null
+    }
+  }
+]

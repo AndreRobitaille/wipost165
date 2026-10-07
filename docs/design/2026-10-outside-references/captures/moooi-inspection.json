@@ -1,0 +1,637 @@
+[
+  {
+    "success": true,
+    "data": {
+      "deviceScaleFactor": 1.0,
+      "height": 960,
+      "mobile": false,
+      "width": 1440
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "title": "Together, we create A Life Extraordinary - Moooi",
+      "url": "https://www.moooi.com/eu"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://www.moooi.com/eu",
+      "refs": {
+        "e1": {
+          "name": "",
+          "role": "generic"
+        },
+        "e10": {
+          "name": "Spotify",
+          "role": "link"
+        },
+        "e11": {
+          "name": "Disclaimer",
+          "role": "link"
+        },
+        "e12": {
+          "name": "Cookie Policy",
+          "role": "link"
+        },
+        "e13": {
+          "name": "General Conditions",
+          "role": "link"
+        },
+        "e14": {
+          "name": "Privacy Statement",
+          "role": "link"
+        },
+        "e15": {
+          "name": "Overview",
+          "role": "button"
+        },
+        "e16": {
+          "name": "Reject all",
+          "role": "button"
+        },
+        "e17": {
+          "name": "Accept Selection",
+          "role": "button"
+        },
+        "e18": {
+          "name": "Accept all",
+          "role": "button"
+        },
+        "e19": {
+          "name": "SHOP OUR COLLECTION",
+          "role": "heading"
+        },
+        "e2": {
+          "name": "LAST CHANCE SALE!",
+          "role": "link"
+        },
+        "e20": {
+          "name": "Europe",
+          "role": "button"
+        },
+        "e21": {
+          "name": "Scroll to top of page",
+          "role": "button"
+        },
+        "e22": {
+          "name": "Moooi B.V. Minervum 7003 4817 ZL Breda The Netherlands",
+          "role": "link"
+        },
+        "e23": {
+          "name": "+31762060700",
+          "role": "link"
+        },
+        "e24": {
+          "name": "info@moooi.com",
+          "role": "link"
+        },
+        "e25": {
+          "name": "Close",
+          "role": "button"
+        },
+        "e26": {
+          "name": "Skip to main content",
+          "role": "button"
+        },
+        "e27": {
+          "name": "Skip to footer",
+          "role": "button"
+        },
+        "e28": {
+          "name": "Logo Moooi",
+          "role": "link"
+        },
+        "e29": {
+          "name": "Bedding & Bath Bedding & Bath",
+          "role": "link"
+        },
+        "e3": {
+          "name": "DISCOVER OUR LIGHTING AND FURNITURE COLLECTION TODAY!",
+          "role": "link"
+        },
+        "e30": {
+          "name": "Furniture Furniture",
+          "role": "link"
+        },
+        "e31": {
+          "name": "Lighting Lighting",
+          "role": "link"
+        },
+        "e32": {
+          "name": "Accessories Accessories",
+          "role": "link"
+        },
+        "e33": {
+          "name": "Wall & Floor Wall & Floor",
+          "role": "link"
+        },
+        "e34": {
+          "name": "Moooi Editions Moooi Editions",
+          "role": "link"
+        },
+        "e35": {
+          "name": "Choose a country or region to see the content for your location",
+          "role": "heading"
+        },
+        "e36": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e37": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e38": {
+          "name": "Continue",
+          "role": "link"
+        },
+        "e39": {
+          "name": "Functional",
+          "role": "checkbox"
+        },
+        "e4": {
+          "name": "Close",
+          "role": "button"
+        },
+        "e40": {
+          "name": "Analytics",
+          "role": "checkbox"
+        },
+        "e41": {
+          "name": "Marketing & Social Media",
+          "role": "checkbox"
+        },
+        "e42": {
+          "name": "Menu",
+          "role": "button"
+        },
+        "e43": {
+          "name": "Search",
+          "role": "button"
+        },
+        "e44": {
+          "name": "Logo Moooi",
+          "role": "heading"
+        },
+        "e45": {
+          "name": "EN",
+          "role": "button"
+        },
+        "e46": {
+          "name": "Account",
+          "role": "button"
+        },
+        "e47": {
+          "name": "Mood boards",
+          "role": "button"
+        },
+        "e48": {
+          "name": "Empty shopping bag",
+          "role": "link"
+        },
+        "e49": {
+          "name": "Peaks Sofa by Yves B\u00e9har PRODUCT STORY Shaped by You Available Now",
+          "role": "link"
+        },
+        "e5": {
+          "name": "Pinterest",
+          "role": "link"
+        },
+        "e50": {
+          "name": "Light Up Your Space A LIFE EXTRAORDINARY Discover our Lighting Collection Shop now",
+          "role": "link"
+        },
+        "e51": {
+          "name": "Last chance to own an Icon ARCHIVE OUTLET Discover our Archive Sale today",
+          "role": "link"
+        },
+        "e52": {
+          "name": "25 Years of Making the Ordinary Extraordinary A LIFE EXTRAORDINARY Watch our Brand Video",
+          "role": "link"
+        },
+        "e53": {
+          "name": "Future Fossils by Killian Vos MOOOI PRESENTS Discover the Carpet Collection",
+          "role": "link"
+        },
+        "e54": {
+          "name": "Marcel Wanders: Belief, Uncertainty & What Comes Next A LIFE EXTRAORDINARY Read Exclusive Interview Now",
+          "role": "link"
+        },
+        "e55": {
+          "name": "Store locator",
+          "role": "link"
+        },
+        "e56": {
+          "name": "Material Library",
+          "role": "link"
+        },
+        "e57": {
+          "name": "Shipping & Returns",
+          "role": "link"
+        },
+        "e58": {
+          "name": "FAQ",
+          "role": "link"
+        },
+        "e59": {
+          "name": "Newsletter",
+          "role": "link"
+        },
+        "e6": {
+          "name": "Instagram",
+          "role": "link"
+        },
+        "e60": {
+          "name": "Press Area",
+          "role": "link"
+        },
+        "e61": {
+          "name": "Jobs",
+          "role": "link"
+        },
+        "e62": {
+          "name": "Trade Program",
+          "role": "link"
+        },
+        "e63": {
+          "name": "United States English",
+          "role": "radio"
+        },
+        "e64": {
+          "name": "Europe English",
+          "role": "radio"
+        },
+        "e65": {
+          "name": "Pause video",
+          "role": "button"
+        },
+        "e66": {
+          "name": "Pause video",
+          "role": "button"
+        },
+        "e67": {
+          "name": "Peaks Sofa by Yves B\u00e9har",
+          "role": "heading"
+        },
+        "e68": {
+          "name": "Light Up Your Space",
+          "role": "heading"
+        },
+        "e69": {
+          "name": "Last chance to own an Icon",
+          "role": "heading"
+        },
+        "e7": {
+          "name": "Vimeo",
+          "role": "link"
+        },
+        "e70": {
+          "name": "25 Years of Making the Ordinary Extraordinary",
+          "role": "heading"
+        },
+        "e71": {
+          "name": "Future Fossils by Killian Vos",
+          "role": "heading"
+        },
+        "e72": {
+          "name": "Marcel Wanders: Belief, Uncertainty & What Comes Next",
+          "role": "heading"
+        },
+        "e8": {
+          "name": "LinkedIn",
+          "role": "link"
+        },
+        "e9": {
+          "name": "Facebook",
+          "role": "link"
+        }
+      },
+      "snapshot": "- link \"LAST CHANCE SALE!\" [ref=e2]\n- link \"DISCOVER OUR LIGHTING AND FURNITURE COLLECTION TODAY!\" [ref=e3]\n- button \"Close\" [ref=e4]\n- button \"Skip to main content\" [ref=e26]\n- button \"Skip to footer\" [ref=e27]\n- button \"Menu\" [ref=e42]\n- button \"Search\" [ref=e43]\n- link \"Logo Moooi\" [ref=e28]\n  - heading \"Logo Moooi\" [level=1, ref=e44]\n- button \"EN\" [ref=e45]\n- button \"Account\" [ref=e46]\n- button \"Mood boards\" [ref=e47]\n- link \"Empty shopping bag\" [ref=e48]\n- button \"Pause video\" [ref=e65]\n- link \"Peaks Sofa by Yves B\u00e9har PRODUCT STORY Shaped by You Available Now\" [ref=e49]\n  - heading \"Peaks Sofa by Yves B\u00e9har\" [level=2, ref=e67]\n- heading \"SHOP OUR COLLECTION\" [level=3, ref=e19]\n- link \"Bedding & Bath Bedding & Bath\" [ref=e29]\n- link \"Furniture Furniture\" [ref=e30]\n- link \"Lighting Lighting\" [ref=e31]\n- link \"Accessories Accessories\" [ref=e32]\n- link \"Wall & Floor Wall & Floor\" [ref=e33]\n- link \"Moooi Editions Moooi Editions\" [ref=e34]\n- link \"Light Up Your Space A LIFE EXTRAORDINARY Discover our Lighting Collection Shop now\" [ref=e50]\n  - heading \"Light Up Your Space\" [level=2, ref=e68]\n- link \"Last chance to own an Icon ARCHIVE OUTLET Discover our Archive Sale today\" [ref=e51]\n  - heading \"Last chance to own an Icon\" [level=2, ref=e69]\n- button \"Pause video\" [ref=e66]\n- link \"25 Years of Making the Ordinary Extraordinary A LIFE EXTRAORDINARY Watch our Brand Video\" [ref=e52]\n  - heading \"25 Years of Making the Ordinary Extraordinary\" [level=2, ref=e70]\n- link \"Future Fossils by Killian Vos MOOOI PRESENTS Discover the Carpet Collection\" [ref=e53]\n  - heading \"Future Fossils by Killian Vos\" [level=2, ref=e71]\n- link \"Marcel Wanders: Belief, Uncertainty & What Comes Next A LIFE EXTRAORDINARY Read Exclusive Interview Now\" [ref=e54]\n  - heading \"Marcel Wanders: Belief, Uncertainty & What Comes Next\" [level=2, ref=e72]\n- button \"Europe\" [ref=e20]\n- button \"Scroll to top of page\" [ref=e21]\n- link \"Store locator\" [ref=e55]\n- link \"Material Library\" [ref=e56]\n- link \"Shipping & Returns\" [ref=e57]\n- link \"FAQ\" [ref=e58]\n- link \"Newsletter\" [ref=e59]\n- link \"Press Area\" [ref=e60]\n- link \"Jobs\" [ref=e61]\n- link \"Trade Program\" [ref=e62]\n- link \"Moooi B.V. Minervum 7003 4817 ZL Breda The Netherlands\" [ref=e22]\n- link \"+31762060700\" [ref=e23]\n- link \"info@moooi.com\" [ref=e24]\n- link \"Pinterest\" [ref=e5]\n- link \"Instagram\" [ref=e6]\n- link \"Vimeo\" [ref=e7]\n- link \"LinkedIn\" [ref=e8]\n- link \"Facebook\" [ref=e9]\n- link \"Spotify\" [ref=e10]\n- link \"Disclaimer\" [ref=e11]\n- link \"Cookie Policy\" [ref=e12]\n- link \"General Conditions\" [ref=e13]\n- link \"Privacy Statement\" [ref=e14]\n- generic [ref=e1] clickable [onclick]\n- button \"Close\" [ref=e25]\n- heading \"Choose a country or region to see the content for your location\" [level=2, ref=e35]\n- LabelText \"United StatesEnglish\" [ref=e36] clickable [cursor:pointer]\n  - radio \"United States English\" [checked=true, ref=e63]\n- LabelText \"EuropeEnglish\" [ref=e37] clickable [cursor:pointer]\n  - radio \"Europe English\" [checked=false, ref=e64]\n- link \"Continue\" [ref=e38]\n- button \"Overview\" [ref=e15]\n- checkbox \"Functional\" [checked=true, disabled, ref=e39]\n- checkbox \"Analytics\" [checked=false, ref=e40]\n- checkbox \"Marketing & Social Media\" [checked=false, ref=e41]\n- button \"Reject all\" [ref=e16]\n- button \"Accept Selection\" [ref=e17]\n- button \"Accept all\" [ref=e18]"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/moooi-initial.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "scrolled": true
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/moooi-scroll.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://www.moooi.com/eu",
+      "refs": {
+        "e1": {
+          "name": "",
+          "role": "generic"
+        },
+        "e10": {
+          "name": "Spotify",
+          "role": "link"
+        },
+        "e11": {
+          "name": "Disclaimer",
+          "role": "link"
+        },
+        "e12": {
+          "name": "Cookie Policy",
+          "role": "link"
+        },
+        "e13": {
+          "name": "General Conditions",
+          "role": "link"
+        },
+        "e14": {
+          "name": "Privacy Statement",
+          "role": "link"
+        },
+        "e15": {
+          "name": "Overview",
+          "role": "button"
+        },
+        "e16": {
+          "name": "Reject all",
+          "role": "button"
+        },
+        "e17": {
+          "name": "Accept Selection",
+          "role": "button"
+        },
+        "e18": {
+          "name": "Accept all",
+          "role": "button"
+        },
+        "e19": {
+          "name": "SHOP OUR COLLECTION",
+          "role": "heading"
+        },
+        "e2": {
+          "name": "LAST CHANCE SALE!",
+          "role": "link"
+        },
+        "e20": {
+          "name": "Europe",
+          "role": "button"
+        },
+        "e21": {
+          "name": "Scroll to top of page",
+          "role": "button"
+        },
+        "e22": {
+          "name": "Moooi B.V. Minervum 7003 4817 ZL Breda The Netherlands",
+          "role": "link"
+        },
+        "e23": {
+          "name": "+31762060700",
+          "role": "link"
+        },
+        "e24": {
+          "name": "info@moooi.com",
+          "role": "link"
+        },
+        "e25": {
+          "name": "Close",
+          "role": "button"
+        },
+        "e26": {
+          "name": "Skip to main content",
+          "role": "button"
+        },
+        "e27": {
+          "name": "Skip to footer",
+          "role": "button"
+        },
+        "e28": {
+          "name": "Logo Moooi",
+          "role": "link"
+        },
+        "e29": {
+          "name": "Bedding & Bath Bedding & Bath",
+          "role": "link"
+        },
+        "e3": {
+          "name": "DISCOVER OUR LIGHTING AND FURNITURE COLLECTION TODAY!",
+          "role": "link"
+        },
+        "e30": {
+          "name": "Furniture Furniture",
+          "role": "link"
+        },
+        "e31": {
+          "name": "Lighting Lighting",
+          "role": "link"
+        },
+        "e32": {
+          "name": "Accessories Accessories",
+          "role": "link"
+        },
+        "e33": {
+          "name": "Wall & Floor Wall & Floor",
+          "role": "link"
+        },
+        "e34": {
+          "name": "Moooi Editions Moooi Editions",
+          "role": "link"
+        },
+        "e35": {
+          "name": "Choose a country or region to see the content for your location",
+          "role": "heading"
+        },
+        "e36": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e37": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e38": {
+          "name": "Continue",
+          "role": "link"
+        },
+        "e39": {
+          "name": "Functional",
+          "role": "checkbox"
+        },
+        "e4": {
+          "name": "Close",
+          "role": "button"
+        },
+        "e40": {
+          "name": "Analytics",
+          "role": "checkbox"
+        },
+        "e41": {
+          "name": "Marketing & Social Media",
+          "role": "checkbox"
+        },
+        "e42": {
+          "name": "Menu",
+          "role": "button"
+        },
+        "e43": {
+          "name": "Search",
+          "role": "button"
+        },
+        "e44": {
+          "name": "Logo Moooi",
+          "role": "heading"
+        },
+        "e45": {
+          "name": "EN",
+          "role": "button"
+        },
+        "e46": {
+          "name": "Account",
+          "role": "button"
+        },
+        "e47": {
+          "name": "Mood boards",
+          "role": "button"
+        },
+        "e48": {
+          "name": "Empty shopping bag",
+          "role": "link"
+        },
+        "e49": {
+          "name": "Peaks Sofa by Yves B\u00e9har PRODUCT STORY Shaped by You Available Now",
+          "role": "link"
+        },
+        "e5": {
+          "name": "Pinterest",
+          "role": "link"
+        },
+        "e50": {
+          "name": "Light Up Your Space A LIFE EXTRAORDINARY Discover our Lighting Collection Shop now",
+          "role": "link"
+        },
+        "e51": {
+          "name": "Last chance to own an Icon ARCHIVE OUTLET Discover our Archive Sale today",
+          "role": "link"
+        },
+        "e52": {
+          "name": "25 Years of Making the Ordinary Extraordinary A LIFE EXTRAORDINARY Watch our Brand Video",
+          "role": "link"
+        },
+        "e53": {
+          "name": "Future Fossils by Killian Vos MOOOI PRESENTS Discover the Carpet Collection",
+          "role": "link"
+        },
+        "e54": {
+          "name": "Marcel Wanders: Belief, Uncertainty & What Comes Next A LIFE EXTRAORDINARY Read Exclusive Interview Now",
+          "role": "link"
+        },
+        "e55": {
+          "name": "Store locator",
+          "role": "link"
+        },
+        "e56": {
+          "name": "Material Library",
+          "role": "link"
+        },
+        "e57": {
+          "name": "Shipping & Returns",
+          "role": "link"
+        },
+        "e58": {
+          "name": "FAQ",
+          "role": "link"
+        },
+        "e59": {
+          "name": "Newsletter",
+          "role": "link"
+        },
+        "e6": {
+          "name": "Instagram",
+          "role": "link"
+        },
+        "e60": {
+          "name": "Press Area",
+          "role": "link"
+        },
+        "e61": {
+          "name": "Jobs",
+          "role": "link"
+        },
+        "e62": {
+          "name": "Trade Program",
+          "role": "link"
+        },
+        "e63": {
+          "name": "United States English",
+          "role": "radio"
+        },
+        "e64": {
+          "name": "Europe English",
+          "role": "radio"
+        },
+        "e65": {
+          "name": "Pause video",
+          "role": "button"
+        },
+        "e66": {
+          "name": "Pause video",
+          "role": "button"
+        },
+        "e67": {
+          "name": "Peaks Sofa by Yves B\u00e9har",
+          "role": "heading"
+        },
+        "e68": {
+          "name": "Light Up Your Space",
+          "role": "heading"
+        },
+        "e69": {
+          "name": "Last chance to own an Icon",
+          "role": "heading"
+        },
+        "e7": {
+          "name": "Vimeo",
+          "role": "link"
+        },
+        "e70": {
+          "name": "25 Years of Making the Ordinary Extraordinary",
+          "role": "heading"
+        },
+        "e71": {
+          "name": "Future Fossils by Killian Vos",
+          "role": "heading"
+        },
+        "e72": {
+          "name": "Marcel Wanders: Belief, Uncertainty & What Comes Next",
+          "role": "heading"
+        },
+        "e8": {
+          "name": "LinkedIn",
+          "role": "link"
+        },
+        "e9": {
+          "name": "Facebook",
+          "role": "link"
+        }
+      },
+      "snapshot": "- generic\n  - generic\n    - link \"LAST CHANCE SALE!\" [ref=e2]\n      - StaticText \"LAST CHANCE SALE!\"\n    - link \"DISCOVER OUR LIGHTING AND FURNITURE COLLECTION TODAY!\" [ref=e3]\n      - StaticText \"DISCOVER OUR LIGHTING AND FURNITURE COLLECTION TODAY!\"\n    - button \"Close\" [ref=e4]\n      - image\n  - banner\n    - generic\n      - generic\n        - button \"Skip to main content\" [ref=e26]\n          - image\n          - StaticText \"Skip to main content\"\n        - button \"Skip to footer\" [ref=e27]\n          - image\n          - StaticText \"Skip to footer\"\n      - generic\n        - generic\n          - button \"Menu\" [ref=e42]\n            - image\n            - StaticText \"Menu\"\n          - button \"Search\" [ref=e43]\n            - image\n            - StaticText \"Search\"\n        - link \"Logo Moooi\" [ref=e28]\n          - heading \"Logo Moooi\" [level=1, ref=e44]\n            - image \"Logo Moooi\"\n        - generic\n          - button \"EN\" [ref=e45]\n            - image\n            - StaticText \"EN\"\n          - button \"Account\" [ref=e46]\n            - image\n          - button \"Mood boards\" [ref=e47]\n            - image\n          - link \"Empty shopping bag\" [ref=e48]\n            - image\n  - main\n    - generic\n      - generic\n        - generic\n          - Video\n          - button \"Pause video\" [ref=e65]\n            - image\n      - link \"Peaks Sofa by Yves B\u00e9har PRODUCT STORY Shaped by You Available Now\" [ref=e49]\n        - heading \"Peaks Sofa by Yves B\u00e9har\" [level=2, ref=e67]\n          - StaticText \"Peaks Sofa by Yves B\u00e9har\"\n        - StaticText \"PRODUCT STORY\"\n        - StaticText \"Shaped by You\"\n        - StaticText \"Available Now\"\n    - generic\n      - heading \"SHOP OUR COLLECTION\" [level=3, ref=e19]\n      - link \"Bedding & Bath Bedding & Bath\" [ref=e29]\n        - image \"Bedding & Bath\"\n        - StaticText \"Bedding & Bath\"\n      - link \"Furniture Furniture\" [ref=e30]\n        - image \"Furniture\"\n        - StaticText \"Furniture\"\n      - link \"Lighting Lighting\" [ref=e31]\n        - image \"Lighting\"\n        - StaticText \"Lighting\"\n      - link \"Accessories Accessories\" [ref=e32]\n        - image \"Accessories\"\n        - StaticText \"Accessories\"\n      - link \"Wall & Floor Wall & Floor\" [ref=e33]\n        - image \"Wall & Floor\"\n        - StaticText \"Wall & Floor\"\n      - link \"Moooi Editions Moooi Editions\" [ref=e34]\n        - image \"Moooi Editions\"\n        - StaticText \"Moooi Editions\"\n    - generic\n      - image \"Light Up Your Space\"\n      - link \"Light Up Your Space A LIFE EXTRAORDINARY Discover our Lighting Collection Shop now\" [ref=e50]\n        - heading \"Light Up Your Space\" [level=2, ref=e68]\n          - StaticText \"Light Up Your Space\"\n        - StaticText \"A LIFE EXTRAORDINARY\"\n        - StaticText \"Discover our Lighting Collection\"\n        - StaticText \"Shop now\"\n    - generic\n      - image \"Last chance to own an Icon\"\n      - link \"Last chance to own an Icon ARCHIVE OUTLET Discover our Archive Sale today\" [ref=e51]\n        - heading \"Last chance to own an Icon\" [level=2, ref=e69]\n          - StaticText \"Last chance to own an Icon\"\n        - StaticText \"ARCHIVE OUTLET\"\n        - StaticText \"Discover our Archive Sale today\"\n    - generic\n      - generic\n        - generic\n          - Video\n          - button \"Pause video\" [ref=e66]\n            - image\n      - link \"25 Years of Making the Ordinary Extraordinary A LIFE EXTRAORDINARY Watch our Brand Video\" [ref=e52]\n        - heading \"25 Years of Making the Ordinary Extraordinary\" [level=2, ref=e70]\n          - StaticText \"25 Years of Making the Ordinary Extraordinary\"\n        - StaticText \"A LIFE EXTRAORDINARY\"\n        - StaticText \"Watch our Brand Video\"\n    - generic\n      - image \"Future Fossils by Killian Vos\"\n      - link \"Future Fossils by Killian Vos MOOOI PRESENTS Discover the Carpet Collection\" [ref=e53]\n        - heading \"Future Fossils by Killian Vos\" [level=2, ref=e71]\n          - StaticText \"Future Fossils by Killian Vos\"\n        - StaticText \"MOOOI PRESENTS\"\n        - StaticText \"Discover the Carpet Collection\"\n    - generic\n      - image \"Marcel Wanders: Belief, Uncertainty & What Comes Next\"\n      - link \"Marcel Wanders: Belief, Uncertainty & What Comes Next A LIFE EXTRAORDINARY Read Exclusive Interview Now\" [ref=e54]\n        - heading \"Marcel Wanders: Belief, Uncertainty & What Comes Next\" [level=2, ref=e72]\n          - StaticText \"Marcel Wanders: Belief, Uncertainty & What Comes Next\"\n        - StaticText \"A LIFE EXTRAORDINARY\"\n        - StaticText \"Read Exclusive Interview Now\"\n  - contentinfo\n    - generic\n      - button \"Europe\" [ref=e20]\n        - image\n        - StaticText \"Europe\"\n        - image\n      - button \"Scroll to top of page\" [ref=e21]\n        - image\n      - list\n        - listitem [level=1]\n          - link \"Store locator\" [ref=e55]\n        - listitem [level=1]\n          - link \"Material Library\" [ref=e56]\n        - listitem [level=1]\n          - link \"Shipping & Returns\" [ref=e57]\n        - listitem [level=1]\n          - link \"FAQ\" [ref=e58]\n        - listitem [level=1]\n          - link \"Newsletter\" [ref=e59]\n        - listitem [level=1]\n          - link \"Press Area\" [ref=e60]\n        - listitem [level=1]\n          - link \"Jobs\" [ref=e61]\n        - listitem [level=1]\n          - link \"Trade Program\" [ref=e62]\n      - link \"Moooi B.V. Minervum 7003 4817 ZL Breda The Netherlands\" [ref=e22]\n        - StaticText \"Moooi B.V.\"\n        - StaticText \"Minervum 7003\"\n        - StaticText \"4817 ZL Breda\"\n        - StaticText \"The Netherlands\"\n      - link \"+31762060700\" [ref=e23]\n      - link \"info@moooi.com\" [ref=e24]\n    - link \"Pinterest\" [ref=e5]\n      - image\n    - link \"Instagram\" [ref=e6]\n      - image\n    - link \"Vimeo\" [ref=e7]\n      - image\n    - link \"LinkedIn\" [ref=e8]\n      - image\n    - link \"Facebook\" [ref=e9]\n      - image\n    - link \"Spotify\" [ref=e10]\n      - image\n    - link \"Disclaimer\" [ref=e11]\n    - link \"Cookie Policy\" [ref=e12]\n    - link \"General Conditions\" [ref=e13]\n    - link \"Privacy Statement\" [ref=e14]\n    - StaticText \"\u00a92026 Moooi\"\n- generic\n  - generic [ref=e1] clickable [onclick]\n  - generic\n    - button \"Close\" [ref=e25]\n      - image\n    - heading \"Choose a country or region to see the content for your location\" [level=2, ref=e35]\n    - group\n      - LabelText [ref=e36] clickable [cursor:pointer]\n        - radio \"United States English\" [checked=true, ref=e63]\n        - StaticText \"United States\"\n        - StaticText \"English\"\n        - image\n      - LabelText [ref=e37] clickable [cursor:pointer]\n        - radio \"Europe English\" [checked=false, ref=e64]\n        - StaticText \"Europe\"\n        - StaticText \"English\"\n        - image\n    - link \"Continue\" [ref=e38]\n      - StaticText \"Continue\"\n- generic\n  - dialog \"Our website uses cookies\"\n    - strong\n      - StaticText \"Our website uses cookies\"\n    - button \"Overview\" [ref=e15]\n    - paragraph\n      - StaticText \"In order to remember your preferences (\u201cFunctional\u201d), to measure traffic to our site (\u201cAnalytics\u201d), and to personalise content and ads and enable social media features (\u201cMarketing & Social Media\u201d), we use cookies and similar technologies. We also share information about your use of our website with our social media, analytics, and advertising partners, who may combine it with other information they have collected from your use of their services. You can change or withdraw your consent at any time.\"\n    - list\n      - listitem [level=1]\n        - checkbox \"Functional\" [checked=true, disabled, ref=e39]\n          - StaticText \"Functional\"\n      - listitem [level=1]\n        - checkbox \"Analytics\" [checked=false, ref=e40]\n          - StaticText \"Analytics\"\n      - listitem [level=1]\n        - checkbox \"Marketing & Social Media\" [checked=false, ref=e41]\n          - StaticText \"Marketing & Social Media\"\n    - button \"Reject all\" [ref=e16]\n    - button \"Accept Selection\" [ref=e17]\n    - button \"Accept all\" [ref=e18]\n- StaticText \"Consent dialog opened\"\n- alert"
+    },
+    "error": null
+  }
+]

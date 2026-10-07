@@ -1,0 +1,58 @@
+[
+  {
+    "state": "empty",
+    "page": "home",
+    "width": 1024,
+    "message_visible": "No upcoming public",
+    "capture": "home-empty-1024.png"
+  },
+  {
+    "state": "empty",
+    "page": "events",
+    "width": 1024,
+    "message_visible": "No upcoming public",
+    "capture": "events-empty-1024.png"
+  },
+  {
+    "state": "empty",
+    "page": "home",
+    "width": 320,
+    "message_visible": "No upcoming public",
+    "capture": "home-empty-320.png"
+  },
+  {
+    "state": "empty",
+    "page": "events",
+    "width": 320,
+    "message_visible": "No upcoming public",
+    "capture": "events-empty-320.png"
+  },
+  {
+    "state": "outage",
+    "page": "home",
+    "width": 1024,
+    "message_visible": "calendar is temporarily unavailable",
+    "capture": "home-outage-1024.png"
+  },
+  {
+    "state": "outage",
+    "page": "events",
+    "width": 1024,
+    "message_visible": "calendar is temporarily unavailable",
+    "capture": "events-outage-1024.png"
+  },
+  {
+    "state": "outage",
+    "page": "home",
+    "width": 320,
+    "message_visible": "calendar is temporarily unavailable",
+    "capture": "home-outage-320.png"
+  },
+  {
+    "state": "outage",
+    "page": "events",
+    "width": 320,
+    "message_visible": "calendar is temporarily unavailable",
+    "capture": "events-outage-320.png"
+  }
+]

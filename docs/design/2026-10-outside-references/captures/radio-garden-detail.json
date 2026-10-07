@@ -1,0 +1,240 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://radio.garden/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Radio Garden \u2013 Explore live radio by rotating the globe",
+        "url": "https://radio.garden/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://radio.garden/",
+        "refs": {
+          "e1": {
+            "name": "Radio Garden",
+            "role": "dialog"
+          },
+          "e2": {
+            "name": "Start Radio Garden",
+            "role": "button"
+          }
+        },
+        "snapshot": "- dialog \"Radio Garden\" [ref=e1] clickable [onclick]\n  - button \"Start Radio Garden\" [ref=e2]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://radio.garden/",
+        "refs": {
+          "e1": {
+            "name": "Radio Garden",
+            "role": "dialog"
+          },
+          "e2": {
+            "name": "Start Radio Garden",
+            "role": "button"
+          }
+        },
+        "snapshot": "- dialog \"Radio Garden\" [ref=e1] clickable [onclick]\n  - button \"Start Radio Garden\" [ref=e2]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "click",
+      "@e2"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "clicked": "@e2"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "3500"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 3500,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/radio-garden-globe.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/radio-garden-globe.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://radio.garden/",
+        "refs": {
+          "e1": {
+            "name": "interactive globe",
+            "role": "Canvas"
+          },
+          "e10": {
+            "name": "show more channel options",
+            "role": "button"
+          },
+          "e11": {
+            "name": "Balloon Ride Radio",
+            "role": "button"
+          },
+          "e12": {
+            "name": "Go to your location",
+            "role": "button"
+          },
+          "e13": {
+            "name": "Lock station",
+            "role": "button"
+          },
+          "e14": {
+            "name": "Zoom in",
+            "role": "button"
+          },
+          "e15": {
+            "name": "Zoom out",
+            "role": "button"
+          },
+          "e16": {
+            "name": "previous",
+            "role": "button"
+          },
+          "e17": {
+            "name": "next",
+            "role": "button"
+          },
+          "e18": {
+            "name": "",
+            "role": "generic"
+          },
+          "e19": {
+            "name": "stop",
+            "role": "button"
+          },
+          "e2": {
+            "name": "Main navigation",
+            "role": "navigation"
+          },
+          "e20": {
+            "name": "Open Manitowoc WI United States drawer",
+            "role": "button"
+          },
+          "e21": {
+            "name": "Manitowoc WI",
+            "role": "heading"
+          },
+          "e22": {
+            "name": "United States",
+            "role": "heading"
+          },
+          "e3": {
+            "name": "Globe Controls",
+            "role": "navigation"
+          },
+          "e4": {
+            "name": "Explore",
+            "role": "button"
+          },
+          "e5": {
+            "name": "Favorites",
+            "role": "button"
+          },
+          "e6": {
+            "name": "Browse",
+            "role": "button"
+          },
+          "e7": {
+            "name": "Search",
+            "role": "button"
+          },
+          "e8": {
+            "name": "Settings",
+            "role": "button"
+          },
+          "e9": {
+            "name": "add WOMT 1240 AM to favorites",
+            "role": "button"
+          }
+        },
+        "snapshot": "- Canvas \"interactive globe\" [ref=e1] focusable [tabindex]\n- button \"Open Manitowoc WI United States drawer\" [expanded=false, ref=e20]\n- generic [ref=e18] clickable [cursor:pointer]\n- heading \"Manitowoc WI\" [level=1, ref=e21]\n- heading \"United States\" [level=2, ref=e22]\n- navigation \"Main navigation\" [ref=e2]\n  - button \"Explore\" [ref=e4]\n  - button \"Favorites\" [ref=e5]\n  - button \"Browse\" [ref=e6]\n  - button \"Search\" [ref=e7]\n  - button \"Settings\" [ref=e8]\n- button \"add WOMT 1240 AM to favorites\" [ref=e9]\n- button \"previous\" [ref=e16]\n- button \"stop\" [ref=e19]\n- button \"next\" [ref=e17]\n- button \"show more channel options\" [expanded=false, ref=e10]\n- navigation \"Globe Controls\" [ref=e3]\n  - button \"Balloon Ride Radio\" [ref=e11]\n  - button \"Go to your location\" [ref=e12]\n  - button \"Lock station\" [ref=e13]\n  - button \"Zoom in\" [ref=e14]\n  - button \"Zoom out\" [ref=e15]"
+      },
+      "error": null
+    }
+  }
+]

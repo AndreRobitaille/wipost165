@@ -1,0 +1,20 @@
+[
+  {
+    "homeState": "empty",
+    "width": 320,
+    "overflow": false
+  },
+  {
+    "homeState": "outage",
+    "width": 320,
+    "overflow": false
+  },
+  {
+    "branding": {
+      "blue": "#00467f",
+      "red": "#b5121b",
+      "font": "\"Launch Noto Sans\", Arial, sans-serif",
+      "logo": "http://127.0.0.1:3001/assets/legion-white-02fd20c9.png"
+    }
+  }
+]

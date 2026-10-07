@@ -1,0 +1,135 @@
+[
+  {
+    "kind": "long",
+    "path": "/events",
+    "heading": "Example long public occasion for browser review",
+    "focused": "H2",
+    "open": true,
+    "width": 280,
+    "clientWidth": 265,
+    "scrollWidth": 265,
+    "scrollHeight": 2277,
+    "height": 815,
+    "cancelled": false,
+    "visit": true,
+    "scripts": 0
+  },
+  {
+    "kind": "cancelled",
+    "path": "/events",
+    "heading": "Example cancelled public occasion for browser review",
+    "focused": "H2",
+    "open": true,
+    "width": 280,
+    "clientWidth": 265,
+    "scrollWidth": 265,
+    "scrollHeight": 962,
+    "height": 815,
+    "cancelled": true,
+    "visit": false,
+    "scripts": 0
+  },
+  {
+    "kind": "withdrawn",
+    "path": "/events",
+    "heading": "This event is no longer available.",
+    "focused": "H2",
+    "open": true,
+    "width": 280,
+    "clientWidth": 280,
+    "scrollWidth": 280,
+    "scrollHeight": 298,
+    "height": 298,
+    "cancelled": false,
+    "visit": false,
+    "scripts": 0
+  },
+  {
+    "kind": "unavailable",
+    "path": "/events",
+    "heading": "Event details are temporarily unavailable.",
+    "focused": "H2",
+    "open": true,
+    "width": 280,
+    "clientWidth": 280,
+    "scrollWidth": 280,
+    "scrollHeight": 382,
+    "height": 382,
+    "cancelled": false,
+    "visit": false,
+    "scripts": 0
+  },
+  {
+    "kind": "malformed",
+    "path": "/events",
+    "heading": "Event details are temporarily unavailable.",
+    "focused": "H2",
+    "open": true,
+    "width": 280,
+    "clientWidth": 280,
+    "scrollWidth": 280,
+    "scrollHeight": 364,
+    "height": 364,
+    "cancelled": false,
+    "visit": false,
+    "scripts": 0
+  },
+  {
+    "kind": "long",
+    "path": "/events",
+    "heading": "Event details are temporarily unavailable.",
+    "focused": "H2",
+    "open": true,
+    "width": 280,
+    "clientWidth": 280,
+    "scrollWidth": 280,
+    "scrollHeight": 364,
+    "height": 364,
+    "cancelled": false,
+    "visit": false,
+    "scripts": 0
+  },
+  {
+    "retry": "Network failure replaced by freshly loaded event details"
+  },
+  {
+    "calendar": "empty",
+    "message": "MORE DATES TO COME\n          No upcoming public dates are listed right now.\n          New dates will appear here when they\u2019re available.\n        Plan your first visit \u2192"
+  },
+  {
+    "calendar": "outage",
+    "message": "PLEASE CHECK BACK\n          The calendar is temporarily unavailable.\n          Please check back shortly before making plans.\n        Plan your first visit \u2192"
+  },
+  {
+    "contact": "Mailing address retained when both electronic channels are unavailable"
+  },
+  {
+    "kind": "long",
+    "path": "/events",
+    "heading": "Example long public occasion for browser review",
+    "focused": "H2",
+    "open": true,
+    "width": 350,
+    "clientWidth": 335,
+    "scrollWidth": 335,
+    "scrollHeight": 2225,
+    "height": 815,
+    "cancelled": false,
+    "visit": true,
+    "scripts": 0
+  },
+  {
+    "modalNavigation": "First visit opens the full page and releases scroll lock"
+  },
+  {
+    "inducedNetworkErrors": [
+      {
+        "column": 7237,
+        "line": 4,
+        "text": "TypeError: Failed to fetch\n    at W (http://127.0.0.1:3003/assets/turbo.min-9fd88cd5.js:5:7238)\n    at z.perform (http://127.0.0.1:3003/assets/turbo.min-9fd88cd5.js:5:9017)",
+        "url": null
+      }
+    ],
+    "result": "Installed Turbo reports the aborted fetch; the visible fallback and successful retry were verified"
+  }
+]

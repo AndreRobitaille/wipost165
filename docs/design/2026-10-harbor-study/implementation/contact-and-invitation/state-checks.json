@@ -1,0 +1,29 @@
+[
+  {
+    "page": "contact",
+    "width": 1440,
+    "state": "missing email and phone",
+    "result": "mail and meeting link retained; no overflow"
+  },
+  {
+    "page": "contact",
+    "width": 320,
+    "state": "missing email and phone",
+    "result": "mail and meeting link retained; no overflow"
+  },
+  {
+    "page": "home",
+    "width": 320,
+    "state": "empty",
+    "result": "correct message; meeting details retained; no overflow"
+  },
+  {
+    "page": "home",
+    "width": 320,
+    "state": "outage",
+    "result": "correct message; meeting details retained; no overflow"
+  },
+  {
+    "keyboard": "Skip main, email, phone, meeting location in logical order, visible focus"
+  }
+]

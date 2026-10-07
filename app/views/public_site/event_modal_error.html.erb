@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "event-details" do %>
+  <section class="launch-event-detail" aria-labelledby="event-title">
+    <p class="eyebrow">PUBLIC CALENDAR</p>
+    <h2 id="event-title" tabindex="-1" data-event-dialog-target="heading"><%= @page_error == :not_found ? "This event is no longer available." : "Event details are temporarily unavailable." %></h2>
+    <p><%= @page_error == :not_found ? "Please choose another occasion from the calendar." : "Please try again shortly before making plans." %></p>
+    <% if @page_error == :unavailable %><button class="main-action" data-action="event-dialog#retry">Try again</button><% end %>
+    <% if public_contact_available? %><%= link_to "Contact the Post →", contact_path, class: "text-action", data: { turbo_frame: "_top" } %><% end %>
+  </section>
+<% end %>

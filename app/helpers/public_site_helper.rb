@@ -1,12 +1,58 @@
 module PublicSiteHelper
+  PUBLIC_ORIGIN = "https://wipost165.org".freeze
+  SITE_NAME = "American Legion Post 165 · Two Rivers".freeze
+  SITE_DESCRIPTION = "Get to know Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin. Find an occasion, plan a first visit, or contact the Post.".freeze
   PAGE_TITLES = {
     "home" => "In good company", "events" => "Events", "visit" => "Your first visit",
     "about" => "Still serving, together", "contact" => "Say hello",
     "membership" => "Membership", "help" => "Veteran help"
   }.freeze
 
+  PAGE_DESCRIPTIONS = {
+    "events" => "Find upcoming public events at American Legion Post 165 in Two Rivers, with dates, locations, and cancellation updates.",
+    "visit" => "Plan your first visit to Post 165 in Two Rivers. Find meeting and arrival information, parking details, and ways to get in touch.",
+    "about" => "Learn about Robert E. Burns American Legion Post 165 in Two Rivers: fellowship, mutual helpfulness, and service to the community.",
+    "contact" => "Contact American Legion Post 165 in Two Rivers by email or phone, or find the Post's mailing address.",
+    "membership" => "Interested in joining Post 165? Find American Legion membership information and contact the Post with local questions.",
+    "help" => "Find the Manitowoc County Veteran Services Office for benefits questions and ways to contact Post 165."
+  }.freeze
+
   def public_page_title
+    return "Page not found" if @page_error == :not_found
+    return "Temporarily unavailable" if @page_error == :unavailable || public_content_unavailable?
+    return "Website coming soon" if Rails.configuration.x.public_site_coming_soon
+    return "Website in preparation" unless public_page_indexable?
+    return "Cancelled: #{@event.title}" if @event&.cancelled?
+    return "Still serving, in good company" if public_site_v1? && action_name == "home"
+
     @profile&.name || @event&.title || PAGE_TITLES.fetch(action_name, "Post 165")
+  end
+
+  def public_page_description
+    return "This page is no longer available. Visit Post 165's website for current information." if @page_error == :not_found
+    return "This page is temporarily unavailable. Please try again shortly." if @page_error == :unavailable || public_content_unavailable?
+    return SITE_DESCRIPTION unless public_page_indexable?
+    return @profile.introduction.squish.truncate(200) if @profile
+    if @event
+      details = [ ("Cancelled." if @event.cancelled?), event_time(@event), @event.location_name, @event.description ]
+      return details.compact.join(" · ").squish.truncate(200)
+    end
+    if action_name == "contact" && !public_contact_available?
+      return "Find the mailing address and first-visit information for American Legion Post 165 in Two Rivers."
+    end
+
+    PAGE_DESCRIPTIONS.fetch(action_name, SITE_DESCRIPTION)
+  end
+
+  def public_canonical_url
+    return unless public_page_indexable?
+
+    path = case action_name
+    when "person" then person_path(@profile)
+    when "event" then event_path(@event)
+    else request.path
+    end
+    PUBLIC_ORIGIN + path
   end
 
   def person_context

@@ -1,0 +1,231 @@
+[
+  {
+    "page": "events",
+    "width": 1440,
+    "pageWidth": 1425,
+    "title": "Come on by.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "Events",
+    "faq": 0,
+    "summaries": 0,
+    "cards": 4,
+    "overflow": []
+  },
+  {
+    "page": "visit",
+    "width": 1440,
+    "pageWidth": 1425,
+    "title": "Start with hello.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "First visit",
+    "faq": 5,
+    "summaries": 0,
+    "cards": 0,
+    "overflow": []
+  },
+  {
+    "page": "contact",
+    "width": 1440,
+    "pageWidth": 1425,
+    "title": "Say hello.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "Contact",
+    "faq": 0,
+    "summaries": 0,
+    "cards": 0,
+    "overflow": []
+  },
+  {
+    "page": "events",
+    "width": 814,
+    "pageWidth": 799,
+    "title": "Come on by.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "Events",
+    "faq": 0,
+    "summaries": 0,
+    "cards": 4,
+    "overflow": []
+  },
+  {
+    "page": "visit",
+    "width": 814,
+    "pageWidth": 799,
+    "title": "Start with hello.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "First visit",
+    "faq": 5,
+    "summaries": 0,
+    "cards": 0,
+    "overflow": []
+  },
+  {
+    "page": "contact",
+    "width": 814,
+    "pageWidth": 799,
+    "title": "Say hello.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "Contact",
+    "faq": 0,
+    "summaries": 0,
+    "cards": 0,
+    "overflow": []
+  },
+  {
+    "page": "events",
+    "width": 390,
+    "pageWidth": 375,
+    "title": "Come on by.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "Events",
+    "faq": 0,
+    "summaries": 0,
+    "cards": 4,
+    "overflow": []
+  },
+  {
+    "page": "visit",
+    "width": 390,
+    "pageWidth": 375,
+    "title": "Start with hello.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "First visit",
+    "faq": 5,
+    "summaries": 0,
+    "cards": 0,
+    "overflow": []
+  },
+  {
+    "page": "contact",
+    "width": 390,
+    "pageWidth": 375,
+    "title": "Say hello.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "Contact",
+    "faq": 0,
+    "summaries": 0,
+    "cards": 0,
+    "overflow": []
+  },
+  {
+    "page": "events",
+    "width": 320,
+    "pageWidth": 305,
+    "title": "Come on by.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "Events",
+    "faq": 0,
+    "summaries": 0,
+    "cards": 4,
+    "overflow": []
+  },
+  {
+    "page": "visit",
+    "width": 320,
+    "pageWidth": 305,
+    "title": "Start with hello.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "First visit",
+    "faq": 5,
+    "summaries": 0,
+    "cards": 0,
+    "overflow": []
+  },
+  {
+    "page": "contact",
+    "width": 320,
+    "pageWidth": 305,
+    "title": "Say hello.",
+    "menu": [
+      "Home",
+      "Events",
+      "First visit",
+      "Contact"
+    ],
+    "active": "Contact",
+    "faq": 0,
+    "summaries": 0,
+    "cards": 0,
+    "overflow": []
+  },
+  {
+    "modal": {
+      "open": true,
+      "path": "/events",
+      "heading": "Old Glory Honor Flight fundraiser",
+      "focused": "event-title",
+      "locked": true,
+      "frames": 1
+    },
+    "hover": {
+      "decoration": "none",
+      "background": "rgb(231, 240, 246)"
+    }
+  },
+  {
+    "escape": {
+      "open": false,
+      "cardFocused": true,
+      "locked": false
+    },
+    "keyboard": {
+      "text": "Plan your first visit \u2192",
+      "inDialog": true
+    }
+  }
+]

@@ -1,0 +1,861 @@
+[
+  {
+    "success": true,
+    "data": {
+      "deviceScaleFactor": 1.0,
+      "height": 960,
+      "mobile": false,
+      "width": 1440
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "title": "Dicing an Onion, the Mathematically Optimal Way",
+      "url": "https://pudding.cool/2025/08/onions/"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://pudding.cool/2025/08/onions/",
+      "refs": {
+        "e1": {
+          "name": "Skip to main content",
+          "role": "link"
+        },
+        "e10": {
+          "name": "EXPLODE",
+          "role": "switch"
+        },
+        "e100": {
+          "name": "STANDARD DEVIATION \u2191",
+          "role": "button"
+        },
+        "e11": {
+          "name": "EXPLODE",
+          "role": "switch"
+        },
+        "e12": {
+          "name": "source",
+          "role": "link"
+        },
+        "e13": {
+          "name": "another source",
+          "role": "link"
+        },
+        "e14": {
+          "name": "this more recent New York Times article",
+          "role": "link"
+        },
+        "e15": {
+          "name": "EXPLODE",
+          "role": "switch"
+        },
+        "e16": {
+          "name": "which Kenji recommended in 2016",
+          "role": "link"
+        },
+        "e17": {
+          "name": "EXPLODE",
+          "role": "switch"
+        },
+        "e18": {
+          "name": "NUMBER OF LAYERS",
+          "role": "combobox"
+        },
+        "e19": {
+          "name": "The importance of optimal",
+          "role": "heading"
+        },
+        "e2": {
+          "name": "The Pudding",
+          "role": "link"
+        },
+        "e20": {
+          "name": "mowing experiment",
+          "role": "link"
+        },
+        "e21": {
+          "name": "english vocab lists",
+          "role": "link"
+        },
+        "e22": {
+          "name": "ethical nba champions",
+          "role": "link"
+        },
+        "e23": {
+          "name": "donate sticker",
+          "role": "link"
+        },
+        "e24": {
+          "name": "donate sticker",
+          "role": "link"
+        },
+        "e25": {
+          "name": "",
+          "role": "link"
+        },
+        "e26": {
+          "name": "according to YouTube",
+          "role": "link"
+        },
+        "e27": {
+          "name": "broke out some math",
+          "role": "link"
+        },
+        "e28": {
+          "name": "number of cuts",
+          "role": "slider"
+        },
+        "e29": {
+          "name": "number of cuts",
+          "role": "slider"
+        },
+        "e3": {
+          "name": "Dicing an ONION the Mathematically Optimal Way",
+          "role": "heading"
+        },
+        "e30": {
+          "name": "number of cuts",
+          "role": "slider"
+        },
+        "e31": {
+          "name": "cut target depth percentage",
+          "role": "slider"
+        },
+        "e32": {
+          "name": "number of layers",
+          "role": "slider"
+        },
+        "e33": {
+          "name": "number of cuts",
+          "role": "slider"
+        },
+        "e34": {
+          "name": "horizontal cuts",
+          "role": "slider"
+        },
+        "e35": {
+          "name": "10",
+          "role": "cell"
+        },
+        "e36": {
+          "name": "radial, 96%\u00a0depth radial, 96%\u00a0depth",
+          "role": "cell"
+        },
+        "e37": {
+          "name": "29.5%",
+          "role": "cell"
+        },
+        "e38": {
+          "name": "9",
+          "role": "cell"
+        },
+        "e39": {
+          "name": "radial, 76%\u00a0depth radial, 76%\u00a0depth",
+          "role": "cell"
+        },
+        "e4": {
+          "name": "Optimal techniques",
+          "role": "heading"
+        },
+        "e40": {
+          "name": "32.5%",
+          "role": "cell"
+        },
+        "e41": {
+          "name": "6",
+          "role": "cell"
+        },
+        "e42": {
+          "name": "radial, 69%\u00a0depth radial, 69%\u00a0depth",
+          "role": "cell"
+        },
+        "e43": {
+          "name": "33.2%",
+          "role": "cell"
+        },
+        "e44": {
+          "name": "7",
+          "role": "cell"
+        },
+        "e45": {
+          "name": "radial, 87%\u00a0depth radial, 87%\u00a0depth",
+          "role": "cell"
+        },
+        "e46": {
+          "name": "33.2%",
+          "role": "cell"
+        },
+        "e47": {
+          "name": "8",
+          "role": "cell"
+        },
+        "e48": {
+          "name": "radial, 53%\u00a0depth radial, 53%\u00a0depth",
+          "role": "cell"
+        },
+        "e49": {
+          "name": "34.2%",
+          "role": "cell"
+        },
+        "e5": {
+          "name": "Insights",
+          "role": "heading"
+        },
+        "e50": {
+          "name": "5",
+          "role": "cell"
+        },
+        "e51": {
+          "name": "radial, 96%\u00a0depth radial, 96%\u00a0depth",
+          "role": "cell"
+        },
+        "e52": {
+          "name": "35.4%",
+          "role": "cell"
+        },
+        "e53": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e54": {
+          "name": "radial, 53%\u00a0depth radial, 53%\u00a0depth",
+          "role": "cell"
+        },
+        "e55": {
+          "name": "41.0%",
+          "role": "cell"
+        },
+        "e56": {
+          "name": "3",
+          "role": "cell"
+        },
+        "e57": {
+          "name": "radial, 69%\u00a0depth radial, 69%\u00a0depth",
+          "role": "cell"
+        },
+        "e58": {
+          "name": "41.6%",
+          "role": "cell"
+        },
+        "e59": {
+          "name": "1",
+          "role": "cell"
+        },
+        "e6": {
+          "name": "Andrew Aquino",
+          "role": "link"
+        },
+        "e60": {
+          "name": "vertical, 1 horizontal\u00a0cut vertical, 1 horizontal\u00a0cut",
+          "role": "cell"
+        },
+        "e61": {
+          "name": "43.5%",
+          "role": "cell"
+        },
+        "e62": {
+          "name": "2",
+          "role": "cell"
+        },
+        "e63": {
+          "name": "vertical vertical",
+          "role": "cell"
+        },
+        "e64": {
+          "name": "43.5%",
+          "role": "cell"
+        },
+        "e65": {
+          "name": "Support us on Patreon",
+          "role": "link"
+        },
+        "e66": {
+          "name": "Subscribe to our newsletter",
+          "role": "link"
+        },
+        "e67": {
+          "name": "VERTICAL",
+          "role": "radio"
+        },
+        "e68": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e69": {
+          "name": "RADIAL",
+          "role": "radio"
+        },
+        "e7": {
+          "name": "Russell Samora",
+          "role": "link"
+        },
+        "e70": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e71": {
+          "name": "VERTICAL",
+          "role": "radio"
+        },
+        "e72": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e73": {
+          "name": "RADIAL",
+          "role": "radio"
+        },
+        "e74": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e75": {
+          "name": "VERTICAL",
+          "role": "radio"
+        },
+        "e76": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e77": {
+          "name": "RADIAL",
+          "role": "radio"
+        },
+        "e78": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e79": {
+          "name": "7",
+          "role": "option"
+        },
+        "e8": {
+          "name": "Jan Diehm",
+          "role": "link"
+        },
+        "e80": {
+          "name": "8",
+          "role": "option"
+        },
+        "e81": {
+          "name": "9",
+          "role": "option"
+        },
+        "e82": {
+          "name": "10",
+          "role": "option"
+        },
+        "e83": {
+          "name": "11",
+          "role": "option"
+        },
+        "e84": {
+          "name": "12",
+          "role": "option"
+        },
+        "e85": {
+          "name": "13",
+          "role": "option"
+        },
+        "e86": {
+          "name": "CUTS \u21c5",
+          "role": "columnheader"
+        },
+        "e87": {
+          "name": "METHOD",
+          "role": "columnheader"
+        },
+        "e88": {
+          "name": "STANDARD DEVIATION \u2191",
+          "role": "columnheader"
+        },
+        "e89": {
+          "name": "Our Team",
+          "role": "link"
+        },
+        "e9": {
+          "name": "standard deviation",
+          "role": "link"
+        },
+        "e90": {
+          "name": "Our Resources",
+          "role": "link"
+        },
+        "e91": {
+          "name": "Pitch a Story",
+          "role": "link"
+        },
+        "e92": {
+          "name": "Brand Partnerships",
+          "role": "link"
+        },
+        "e93": {
+          "name": "Privacy Policy",
+          "role": "link"
+        },
+        "e94": {
+          "name": "Instagram",
+          "role": "link"
+        },
+        "e95": {
+          "name": "Twitter/X",
+          "role": "link"
+        },
+        "e96": {
+          "name": "TikTok",
+          "role": "link"
+        },
+        "e97": {
+          "name": "YouTube",
+          "role": "link"
+        },
+        "e98": {
+          "name": "RSS",
+          "role": "link"
+        },
+        "e99": {
+          "name": "CUTS \u21c5",
+          "role": "button"
+        }
+      },
+      "snapshot": "- link \"Skip to main content\" [ref=e1]\n- link \"The Pudding\" [ref=e2]\n- link \"according to YouTube\" [ref=e26]\n- link \"broke out some math\" [ref=e27]\n- heading \"Dicing an ONION the Mathematically Optimal Way\" [level=1, ref=e3]\n- link \"Andrew Aquino\" [ref=e6]\n- link \"Russell Samora\" [ref=e7]\n- link \"Jan Diehm\" [ref=e8]\n- link \"standard deviation\" [ref=e9]\n- switch \"EXPLODE\" [checked=false, ref=e10]\n- slider \"number of cuts\" [ref=e28]: 10\n- switch \"EXPLODE\" [checked=false, ref=e11]\n- slider \"number of cuts\" [ref=e29]: 10\n- radio \"VERTICAL\" [checked=false, ref=e67]\n- LabelText \"vertical\" [ref=e68] clickable [cursor:pointer]\n- radio \"RADIAL\" [checked=true, ref=e69]\n- LabelText \"radial\" [ref=e70] clickable [cursor:pointer]\n- link \"source\" [ref=e12]\n- link \"another source\" [ref=e13]\n- link \"this more recent New York Times article\" [ref=e14]\n- switch \"EXPLODE\" [checked=false, ref=e15]\n- slider \"number of cuts\" [ref=e30]: 10\n- radio \"VERTICAL\" [checked=false, ref=e71]\n- LabelText \"vertical\" [ref=e72] clickable [cursor:pointer]\n- radio \"RADIAL\" [checked=true, ref=e73]\n- LabelText \"radial\" [ref=e74] clickable [cursor:pointer]\n- slider \"cut target depth percentage\" [ref=e31]: 0.959999978542328\n- link \"which Kenji recommended in 2016\" [ref=e16]\n- switch \"EXPLODE\" [checked=false, ref=e17]\n- slider \"number of layers\" [ref=e32]: 10\n- slider \"number of cuts\" [ref=e33]: 10\n- slider \"horizontal cuts\" [ref=e34]: 0\n- radio \"VERTICAL\" [checked=true, ref=e75]\n- LabelText \"vertical\" [ref=e76] clickable [cursor:pointer]\n- radio \"RADIAL\" [checked=false, ref=e77]\n- LabelText \"radial\" [ref=e78] clickable [cursor:pointer]\n- heading \"Optimal techniques\" [level=3, ref=e4]\n- combobox \"NUMBER OF LAYERS\" [expanded=false, ref=e18]: 10\n  - option \"7\" [ref=e79]\n  - option \"8\" [ref=e80]\n  - option \"9\" [ref=e81]\n  - option \"10\" [selected, ref=e82]\n  - option \"11\" [ref=e83]\n  - option \"12\" [ref=e84]\n  - option \"13\" [ref=e85]\n- columnheader \"CUTS \u21c5\" [ref=e86]\n  - button \"CUTS \u21c5\" [ref=e99]\n- columnheader \"METHOD\" [ref=e87]\n- columnheader \"STANDARD DEVIATION \u2191\" [ref=e88]\n  - button \"STANDARD DEVIATION \u2191\" [ref=e100]\n- cell \"10\" [ref=e35]\n- cell \"radial, 96%depth radial, 96%depth\" [ref=e36]\n- cell \"29.5%\" [ref=e37]\n- cell \"9\" [ref=e38]\n- cell \"radial, 76%depth radial, 76%depth\" [ref=e39]\n- cell \"32.5%\" [ref=e40]\n- cell \"6\" [ref=e41]\n- cell \"radial, 69%depth radial, 69%depth\" [ref=e42]\n- cell \"33.2%\" [ref=e43]\n- cell \"7\" [ref=e44]\n- cell \"radial, 87%depth radial, 87%depth\" [ref=e45]\n- cell \"33.2%\" [ref=e46]\n- cell \"8\" [ref=e47]\n- cell \"radial, 53%depth radial, 53%depth\" [ref=e48]\n- cell \"34.2%\" [ref=e49]\n- cell \"5\" [ref=e50]\n- cell \"radial, 96%depth radial, 96%depth\" [ref=e51]\n- cell \"35.4%\" [ref=e52]\n- cell \"4\" [ref=e53]\n- cell \"radial, 53%depth radial, 53%depth\" [ref=e54]\n- cell \"41.0%\" [ref=e55]\n- cell \"3\" [ref=e56]\n- cell \"radial, 69%depth radial, 69%depth\" [ref=e57]\n- cell \"41.6%\" [ref=e58]\n- cell \"1\" [ref=e59]\n- cell \"vertical, 1 horizontalcut vertical, 1 horizontalcut\" [ref=e60]\n- cell \"43.5%\" [ref=e61]\n- cell \"2\" [ref=e62]\n- cell \"vertical vertical\" [ref=e63]\n- cell \"43.5%\" [ref=e64]\n- heading \"Insights\" [level=3, ref=e5]\n- heading \"The importance of optimal\" [level=2, ref=e19]\n- link \"mowing experiment\" [ref=e20]\n- link \"english vocab lists\" [ref=e21]\n- link \"ethical nba champions\" [ref=e22]\n- link \"donate sticker\" [ref=e23]\n- link \"Support us on Patreon\" [ref=e65]\n- link \"donate sticker\" [ref=e24]\n- link \"Subscribe to our newsletter\" [ref=e66]\n- link [ref=e25]\n- link \"Our Team\" [ref=e89]\n- link \"Our Resources\" [ref=e90]\n- link \"Pitch a Story\" [ref=e91]\n- link \"Brand Partnerships\" [ref=e92]\n- link \"Privacy Policy\" [ref=e93]\n- link \"Instagram\" [ref=e94]\n- link \"Twitter/X\" [ref=e95]\n- link \"TikTok\" [ref=e96]\n- link \"YouTube\" [ref=e97]\n- link \"RSS\" [ref=e98]"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/onions-initial.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "scrolled": true
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/onions-scroll.png"
+    },
+    "error": null
+  },
+  {
+    "success": true,
+    "data": {
+      "origin": "https://pudding.cool/2025/08/onions/",
+      "refs": {
+        "e1": {
+          "name": "Skip to main content",
+          "role": "link"
+        },
+        "e10": {
+          "name": "EXPLODE",
+          "role": "switch"
+        },
+        "e100": {
+          "name": "STANDARD DEVIATION \u2191",
+          "role": "button"
+        },
+        "e11": {
+          "name": "EXPLODE",
+          "role": "switch"
+        },
+        "e12": {
+          "name": "source",
+          "role": "link"
+        },
+        "e13": {
+          "name": "another source",
+          "role": "link"
+        },
+        "e14": {
+          "name": "this more recent New York Times article",
+          "role": "link"
+        },
+        "e15": {
+          "name": "EXPLODE",
+          "role": "switch"
+        },
+        "e16": {
+          "name": "which Kenji recommended in 2016",
+          "role": "link"
+        },
+        "e17": {
+          "name": "EXPLODE",
+          "role": "switch"
+        },
+        "e18": {
+          "name": "NUMBER OF LAYERS",
+          "role": "combobox"
+        },
+        "e19": {
+          "name": "The importance of optimal",
+          "role": "heading"
+        },
+        "e2": {
+          "name": "The Pudding",
+          "role": "link"
+        },
+        "e20": {
+          "name": "mowing experiment",
+          "role": "link"
+        },
+        "e21": {
+          "name": "english vocab lists",
+          "role": "link"
+        },
+        "e22": {
+          "name": "ethical nba champions",
+          "role": "link"
+        },
+        "e23": {
+          "name": "donate sticker",
+          "role": "link"
+        },
+        "e24": {
+          "name": "donate sticker",
+          "role": "link"
+        },
+        "e25": {
+          "name": "",
+          "role": "link"
+        },
+        "e26": {
+          "name": "according to YouTube",
+          "role": "link"
+        },
+        "e27": {
+          "name": "broke out some math",
+          "role": "link"
+        },
+        "e28": {
+          "name": "number of cuts",
+          "role": "slider"
+        },
+        "e29": {
+          "name": "number of cuts",
+          "role": "slider"
+        },
+        "e3": {
+          "name": "Dicing an ONION the Mathematically Optimal Way",
+          "role": "heading"
+        },
+        "e30": {
+          "name": "number of cuts",
+          "role": "slider"
+        },
+        "e31": {
+          "name": "cut target depth percentage",
+          "role": "slider"
+        },
+        "e32": {
+          "name": "number of layers",
+          "role": "slider"
+        },
+        "e33": {
+          "name": "number of cuts",
+          "role": "slider"
+        },
+        "e34": {
+          "name": "horizontal cuts",
+          "role": "slider"
+        },
+        "e35": {
+          "name": "10",
+          "role": "cell"
+        },
+        "e36": {
+          "name": "radial, 96%\u00a0depth radial, 96%\u00a0depth",
+          "role": "cell"
+        },
+        "e37": {
+          "name": "29.5%",
+          "role": "cell"
+        },
+        "e38": {
+          "name": "9",
+          "role": "cell"
+        },
+        "e39": {
+          "name": "radial, 76%\u00a0depth radial, 76%\u00a0depth",
+          "role": "cell"
+        },
+        "e4": {
+          "name": "Optimal techniques",
+          "role": "heading"
+        },
+        "e40": {
+          "name": "32.5%",
+          "role": "cell"
+        },
+        "e41": {
+          "name": "6",
+          "role": "cell"
+        },
+        "e42": {
+          "name": "radial, 69%\u00a0depth radial, 69%\u00a0depth",
+          "role": "cell"
+        },
+        "e43": {
+          "name": "33.2%",
+          "role": "cell"
+        },
+        "e44": {
+          "name": "7",
+          "role": "cell"
+        },
+        "e45": {
+          "name": "radial, 87%\u00a0depth radial, 87%\u00a0depth",
+          "role": "cell"
+        },
+        "e46": {
+          "name": "33.2%",
+          "role": "cell"
+        },
+        "e47": {
+          "name": "8",
+          "role": "cell"
+        },
+        "e48": {
+          "name": "radial, 53%\u00a0depth radial, 53%\u00a0depth",
+          "role": "cell"
+        },
+        "e49": {
+          "name": "34.2%",
+          "role": "cell"
+        },
+        "e5": {
+          "name": "Insights",
+          "role": "heading"
+        },
+        "e50": {
+          "name": "5",
+          "role": "cell"
+        },
+        "e51": {
+          "name": "radial, 96%\u00a0depth radial, 96%\u00a0depth",
+          "role": "cell"
+        },
+        "e52": {
+          "name": "35.4%",
+          "role": "cell"
+        },
+        "e53": {
+          "name": "4",
+          "role": "cell"
+        },
+        "e54": {
+          "name": "radial, 53%\u00a0depth radial, 53%\u00a0depth",
+          "role": "cell"
+        },
+        "e55": {
+          "name": "41.0%",
+          "role": "cell"
+        },
+        "e56": {
+          "name": "3",
+          "role": "cell"
+        },
+        "e57": {
+          "name": "radial, 69%\u00a0depth radial, 69%\u00a0depth",
+          "role": "cell"
+        },
+        "e58": {
+          "name": "41.6%",
+          "role": "cell"
+        },
+        "e59": {
+          "name": "1",
+          "role": "cell"
+        },
+        "e6": {
+          "name": "Andrew Aquino",
+          "role": "link"
+        },
+        "e60": {
+          "name": "vertical, 1 horizontal\u00a0cut vertical, 1 horizontal\u00a0cut",
+          "role": "cell"
+        },
+        "e61": {
+          "name": "43.5%",
+          "role": "cell"
+        },
+        "e62": {
+          "name": "2",
+          "role": "cell"
+        },
+        "e63": {
+          "name": "vertical vertical",
+          "role": "cell"
+        },
+        "e64": {
+          "name": "43.5%",
+          "role": "cell"
+        },
+        "e65": {
+          "name": "Support us on Patreon",
+          "role": "link"
+        },
+        "e66": {
+          "name": "Subscribe to our newsletter",
+          "role": "link"
+        },
+        "e67": {
+          "name": "VERTICAL",
+          "role": "radio"
+        },
+        "e68": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e69": {
+          "name": "RADIAL",
+          "role": "radio"
+        },
+        "e7": {
+          "name": "Russell Samora",
+          "role": "link"
+        },
+        "e70": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e71": {
+          "name": "VERTICAL",
+          "role": "radio"
+        },
+        "e72": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e73": {
+          "name": "RADIAL",
+          "role": "radio"
+        },
+        "e74": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e75": {
+          "name": "VERTICAL",
+          "role": "radio"
+        },
+        "e76": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e77": {
+          "name": "RADIAL",
+          "role": "radio"
+        },
+        "e78": {
+          "name": "",
+          "role": "LabelText"
+        },
+        "e79": {
+          "name": "7",
+          "role": "option"
+        },
+        "e8": {
+          "name": "Jan Diehm",
+          "role": "link"
+        },
+        "e80": {
+          "name": "8",
+          "role": "option"
+        },
+        "e81": {
+          "name": "9",
+          "role": "option"
+        },
+        "e82": {
+          "name": "10",
+          "role": "option"
+        },
+        "e83": {
+          "name": "11",
+          "role": "option"
+        },
+        "e84": {
+          "name": "12",
+          "role": "option"
+        },
+        "e85": {
+          "name": "13",
+          "role": "option"
+        },
+        "e86": {
+          "name": "CUTS \u21c5",
+          "role": "columnheader"
+        },
+        "e87": {
+          "name": "METHOD",
+          "role": "columnheader"
+        },
+        "e88": {
+          "name": "STANDARD DEVIATION \u2191",
+          "role": "columnheader"
+        },
+        "e89": {
+          "name": "Our Team",
+          "role": "link"
+        },
+        "e9": {
+          "name": "standard deviation",
+          "role": "link"
+        },
+        "e90": {
+          "name": "Our Resources",
+          "role": "link"
+        },
+        "e91": {
+          "name": "Pitch a Story",
+          "role": "link"
+        },
+        "e92": {
+          "name": "Brand Partnerships",
+          "role": "link"
+        },
+        "e93": {
+          "name": "Privacy Policy",
+          "role": "link"
+        },
+        "e94": {
+          "name": "Instagram",
+          "role": "link"
+        },
+        "e95": {
+          "name": "Twitter/X",
+          "role": "link"
+        },
+        "e96": {
+          "name": "TikTok",
+          "role": "link"
+        },
+        "e97": {
+          "name": "YouTube",
+          "role": "link"
+        },
+        "e98": {
+          "name": "RSS",
+          "role": "link"
+        },
+        "e99": {
+          "name": "CUTS \u21c5",
+          "role": "button"
+        }
+      },
+      "snapshot": "- link \"Skip to main content\" [ref=e1]\n- banner\n  - link \"The Pudding\" [ref=e2]\n    - image\n- main\n  - article\n    - generic\n      - paragraph\n        - strong\n          - StaticText \"This is a project about onions and math.\"\n      - paragraph\n        - StaticText \"Why? Because tens of millions of people are curious about how to properly dice an onion, \"\n        - link \"according to YouTube\" [ref=e26]\n        - StaticText \".\"\n      - paragraph\n        - StaticText \"In 2021, chef and food writer J. Kenji L\u00f3pez-Alt \"\n        - link \"broke out some math\" [ref=e27]\n        - StaticText \" to get \"\n        - emphasis\n          - StaticText \"optimal\"\n        - StaticText \" uniform piece sizes. But there is more than one way to dice an onion\u2026\"\n    - heading \"Dicing an ONION the Mathematically Optimal Way\" [level=1, ref=e3]\n      - StaticText \"Dicing an\"\n      - image \"O styled as an Onion\"\n      - image \"N styled as an Onion\"\n      - image \"I styled as an Onion\"\n      - image \"O styled as an Onion\"\n      - image \"N styled as an Onion\"\n      - StaticText \"the Mathematically Optimal Way\"\n    - paragraph\n      - StaticText \"By \"\n      - link \"Andrew Aquino\" [ref=e6]\n      - LineBreak \"\\n\"\n      - StaticText \"with \"\n      - link \"Russell Samora\" [ref=e7]\n      - StaticText \" and \"\n      - link \"Jan Diehm\" [ref=e8]\n    - paragraph\n      - strong\n        - StaticText \"This is an onion.\"\n      - StaticText \" (Well, a simplified cross-section of one.) We\u2019ve cut it in half lengthwise, using a sharp knife to reduce the chance of injury and onion-induced crying.\"\n    - figure\n      - image\n    - paragraph\n      - StaticText \"From here, what\u2019s the best way to dice it? That is, how do we get the most uniform piece size?\"\n    - paragraph\n      - StaticText \"For the sake of example, let\u2019s assume our onion has 10 layers. We can represent the layers as concentric circles.\"\n    - paragraph\n      - StaticText \"Let\u2019s start with a common approach\u2014\"\n      - strong\n        - StaticText \"vertical cuts\"\n      - StaticText \".\"\n    - image \"V styled as an Onion\"\n    - image \"E styled as an Onion\"\n    - image \"R styled as an Onion\"\n    - image \"T styled as an Onion\"\n    - image \"I styled as an Onion\"\n    - image \"C styled as an Onion\"\n    - image \"A styled as an Onion\"\n    - image \"L styled as an Onion\"\n    - figure\n      - image\n    - paragraph\n      - StaticText \"The pieces \"\n      - strong\n        - StaticText \"near the center line\"\n      - StaticText \" are fairly consistent in shape and size.\"\n    - paragraph\n      - StaticText \"But \"\n      - strong\n        - StaticText \"along the bottom\"\n      - StaticText \" there are some noticeably larger pieces. When you dice an onion, you\u2019re probably not imagining pieces like these.\"\n    - paragraph\n      - StaticText \"This inconsistency can be measured by calculating the \"\n      - link \"standard deviation\" [ref=e9]\n      - StaticText \" of our pieces\u2019 areas.\"\n    - group\n      - DisclosureTriangle \"A note on the standard deviation\" [expanded=false]\n        - StaticText \"A note on the standard deviation\"\n    - paragraph\n      - StaticText \"Without getting too deep in the weeds, just know that \"\n      - strong\n        - StaticText \"a higher standard deviation means more piece size variation.\"\n      - StaticText \" So to obtain the most consistently sized pieces, we want to make the standard deviation as \"\n      - emphasis\n        - StaticText \"small as possible.\"\n    - paragraph\n      - StaticText \"Adjust the slider below to see how the number of cuts affects the standard deviation. Oh, and don\u2019t forget to \"\n      - strong\n        - StaticText \"check out the exploded view toggle\"\n      - StaticText \" to see the variation.\"\n    - figure\n      - StaticText \"EXPLODE\"\n      - switch \"EXPLODE\" [checked=false, ref=e10]\n      - StaticText \"EXCELLENT UNIFORMITY\"\n      - LabelText\n        - StaticText \"STD DEV:\"\n      - status \"STD DEV:\"\n        - StaticText \"37.3%\"\n      - StaticText \"CUTS (VERTICAL)\"\n      - generic\n        - slider \"number of cuts\" [ref=e28]: 10\n      - StaticText \"10\"\n      - image\n    - paragraph\n      - StaticText \"Okay, let\u2019s try a different technique\u2014\"\n      - strong\n        - StaticText \"radial cuts.\"\n    - image \"R styled as an Onion\"\n    - image \"A styled as an Onion\"\n    - image \"D styled as an Onion\"\n    - image \"I styled as an Onion\"\n    - image \"A styled as an Onion\"\n    - image \"L styled as an Onion\"\n    - figure\n      - image\n    - paragraph\n      - StaticText \"The piece size still isn\u2019t very consistent\u2014those \"\n      - strong\n        - StaticText \"near the outside\"\n      - StaticText \" are much larger than those \"\n      - strong\n        - StaticText \"near the center\"\n      - StaticText \".\"\n    - paragraph\n      - StaticText \"How does the standard deviation of pieces cut radially compare to those cut vertically?\"\n    - figure\n      - StaticText \"EXPLODE\"\n      - switch \"EXPLODE\" [checked=false, ref=e11]\n      - StaticText \"FAIR UNIFORMITY\"\n      - LabelText\n        - StaticText \"STD DEV:\"\n      - status \"STD DEV:\"\n        - StaticText \"57.7%\"\n      - StaticText \"CUTS (RADIAL)\"\n      - generic\n        - slider \"number of cuts\" [ref=e29]: 10\n      - StaticText \"10\"\n      - radiogroup\n        - StaticText \"CUT TYPE\"\n        - generic\n          - radio \"VERTICAL\" [checked=false, ref=e67]\n          - LabelText [ref=e68] clickable [cursor:pointer]\n            - StaticText \"VERTICAL\"\n        - generic\n          - radio \"RADIAL\" [checked=true, ref=e69]\n          - LabelText [ref=e70] clickable [cursor:pointer]\n            - StaticText \"RADIAL\"\n      - image\n    - paragraph\n      - StaticText \"When making 10 cuts into a 10-layer onion radially, the standard deviation (57.7%) is \"\n      - emphasis\n        - StaticText \"greater\"\n      - StaticText \" than when cutting vertically (37.3%), which means that our piece size is now \"\n      - emphasis\n        - StaticText \"less\"\n      - StaticText \" consistent.\"\n    - paragraph\n      - StaticText \"But we can improve the radial cut strategy.\"\n    - paragraph\n      - StaticText \"Kenji claims that the most uniform pieces can be produced by \"\n      - strong\n        - StaticText \"aiming at a point ~60% of the onion\u2019s radius below the cutting surface.\"\n    - generic \"POINT BELOW\"\n      - image \"P styled as an Onion\"\n      - image \"O styled as an Onion\"\n      - image \"I styled as an Onion\"\n      - image \"N styled as an Onion\"\n      - image \"T styled as an Onion\"\n      - image \"B styled as an Onion\"\n      - image \"E styled as an Onion\"\n      - image \"L styled as an Onion\"\n      - image \"O styled as an Onion\"\n      - image \"W styled as an Onion\"\n    - figure\n      - StaticText \"EXCELLENT UNIFORMITY\"\n      - LabelText\n        - StaticText \"STD DEV:\"\n      - status \"STD DEV:\"\n        - StaticText \"34.5%\"\n      - image\n    - paragraph\n      - StaticText \"The pieces now look more consistent, except for a few smaller ones \"\n      - strong\n        - StaticText \"along the bottom\"\n      - StaticText \".\"\n    - paragraph\n      - StaticText \"Does the math confirm ~60% depth as the superior technique?\"\n    - paragraph\n      - StaticText \"Indeed, 34.5% is the smallest standard deviation we\u2019ve seen so far. This finding is further supported by Dr. Dylan Poulsen, an associate professor of mathematics at Washington College, who calculated that the ideal \u201conion constant\u201d is ~55.731% depth (\"\n      - link \"source\" [ref=e12]\n      - StaticText \", \"\n      - link \"another source\" [ref=e13]\n      - StaticText \"). Kenji backs Dr. Poulsen\u2019s method in \"\n      - link \"this more recent New York Times article\" [ref=e14]\n      - StaticText \".\"\n    - paragraph\n      - StaticText \"But we can improve the radial cut strategy even more!\"\n    - paragraph\n      - StaticText \"Dr. Poulsen\u2019s analysis is based on making \"\n      - emphasis\n        - StaticText \"infinitely many cuts\"\n      - StaticText \" into an onion with \"\n      - emphasis\n        - StaticText \"infinitely many layers\"\n      - StaticText \":\"\n    - figure\n      - image \"Screenshot from Dr. Poulsen\u2019s slides. A diagram shows an onion cross-section with an unrealistically large number of layers. A caption reads: \u2018So, we might as well consider the limiting case as the number of layers approaches infinity.\u2019\"\n      - Figcaption\n        - StaticText \"A slide from Dr. Poulsen\u2019s breakdown on the math behind onion cutting.\"\n    - paragraph\n      - StaticText \"However, in the physical world we\u2019re only capable of making a finite number of cuts, and real onions have a finite number of layers. The diagrams from Kenji\u2019s original claim show 10 cuts being made into an onion with 10 layers. How can we optimize that?\"\n    - paragraph\n      - strong\n        - StaticText \"When making 10 cuts into a 10-layer onion, the smallest standard deviation (29.5%) occurs when making radial cuts aimed 96% of the onion\u2019s radius below the cutting surface! \ud83d\ude2e\"\n    - figure\n      - StaticText \"EXPLODE\"\n      - switch \"EXPLODE\" [checked=false, ref=e15]\n      - StaticText \"EXCELLENT UNIFORMITY\"\n      - LabelText\n        - StaticText \"STD DEV:\"\n      - status \"STD DEV:\"\n        - StaticText \"29.5%\"\n      - StaticText \"CUTS (RADIAL)\"\n      - generic\n        - slider \"number of cuts\" [ref=e30]: 10\n      - StaticText \"10\"\n      - radiogroup\n        - StaticText \"CUT TYPE\"\n        - generic\n          - radio \"VERTICAL\" [checked=false, ref=e71]\n          - LabelText [ref=e72] clickable [cursor:pointer]\n            - StaticText \"VERTICAL\"\n        - generic\n          - radio \"RADIAL\" [checked=true, ref=e73]\n          - LabelText [ref=e74] clickable [cursor:pointer]\n            - StaticText \"RADIAL\"\n      - StaticText \"TARGET HEIGHT\"\n      - generic\n        - slider \"cut target depth percentage\" [ref=e31]: 0.959999978542328\n      - StaticText \"\u221296%\"\n      - image\n    - paragraph\n      - StaticText \"Before we explain how we got that result, let\u2019s briefly consider another popular technique: making 1-2 horizontal cuts before vertical, \"\n      - link \"which Kenji recommended in 2016\" [ref=e16]\n      - StaticText \". What does the math say about this strategy? How does combining it with vertical/radial cuts affect our piece size?\"\n    - image \"E styled as an Onion\"\n    - image \"X styled as an Onion\"\n    - image \"P styled as an Onion\"\n    - image \"L styled as an Onion\"\n    - image \"O styled as an Onion\"\n    - image \"R styled as an Onion\"\n    - image \"E styled as an Onion\"\n    - figure\n      - StaticText \"EXPLODE\"\n      - switch \"EXPLODE\" [checked=false, ref=e17]\n      - StaticText \"EXCELLENT UNIFORMITY\"\n      - LabelText\n        - StaticText \"STD DEV:\"\n      - status \"STD DEV:\"\n        - StaticText \"37.3%\"\n      - StaticText \"LAYERS\"\n      - generic\n        - slider \"number of layers\" [ref=e32]: 10\n      - StaticText \"10\"\n      - StaticText \"CUTS (VERTICAL)\"\n      - generic\n        - slider \"number of cuts\" [ref=e33]: 10\n      - StaticText \"10\"\n      - StaticText \"CUTS (HORIZ.)\"\n      - generic\n        - slider \"horizontal cuts\" [ref=e34]: 0\n      - StaticText \"0\"\n      - radiogroup\n        - StaticText \"CUT TYPE\"\n        - generic\n          - radio \"VERTICAL\" [checked=true, ref=e75]\n          - LabelText [ref=e76] clickable [cursor:pointer]\n            - StaticText \"VERTICAL\"\n        - generic\n          - radio \"RADIAL\" [checked=false, ref=e77]\n          - LabelText [ref=e78] clickable [cursor:pointer]\n            - StaticText \"RADIAL\"\n      - image\n    - group\n      - DisclosureTriangle \"How do you find the size of an onion piece?\" [expanded=false]\n        - StaticText \"How do you find the size of an onion piece?\"\n    - heading \"Optimal techniques\" [level=3, ref=e4]\n    - paragraph\n      - StaticText \"We looked at all 19,320 combinations of onion layer numbers, vertical/radial cut numbers, radial cut depth (as whole number percentages), and horizontal cut numbers that are possible with this model. We then found which technique results in the minimum standard deviation when making 1-10 vertical/radial cuts into an onion with 7-13 layers:\"\n    - generic\n      - LabelText\n        - StaticText \"NUMBER OF LAYERS\"\n      - combobox \"NUMBER OF LAYERS\" [expanded=false, ref=e18]: 10\n        - MenuListPopup\n          - option \"7\" [ref=e79]\n          - option \"8\" [ref=e80]\n          - option \"9\" [ref=e81]\n          - option \"10\" [selected, ref=e82]\n          - option \"11\" [ref=e83]\n          - option \"12\" [ref=e84]\n          - option \"13\" [ref=e85]\n    - table\n      - rowgroup\n        - row\n          - columnheader \"CUTS \u21c5\" [ref=e86]\n            - button \"CUTS \u21c5\" [ref=e99]\n              - StaticText \"CUTS\"\n              - StaticText \"\u21c5\"\n          - columnheader \"METHOD\" [ref=e87]\n          - columnheader \"STANDARD DEVIATION \u2191\" [ref=e88]\n            - button \"STANDARD DEVIATION \u2191\" [ref=e100]\n              - StaticText \"STANDARD DEVIATION\"\n              - StaticText \"\u2191\"\n      - row\n        - cell \"10\" [ref=e35]\n        - cell \"radial, 96%depth radial, 96%depth\" [ref=e36]\n          - SvgRoot \"radial, 96%depth\"\n            - StaticText \"96%\"\n          - StaticText \"radial, 96%depth\"\n        - cell \"29.5%\" [ref=e37]\n      - row\n        - cell \"9\" [ref=e38]\n        - cell \"radial, 76%depth radial, 76%depth\" [ref=e39]\n          - SvgRoot \"radial, 76%depth\"\n            - StaticText \"76%\"\n          - StaticText \"radial, 76%depth\"\n        - cell \"32.5%\" [ref=e40]\n      - row\n        - cell \"6\" [ref=e41]\n        - cell \"radial, 69%depth radial, 69%depth\" [ref=e42]\n          - SvgRoot \"radial, 69%depth\"\n            - StaticText \"69%\"\n          - StaticText \"radial, 69%depth\"\n        - cell \"33.2%\" [ref=e43]\n      - row\n        - cell \"7\" [ref=e44]\n        - cell \"radial, 87%depth radial, 87%depth\" [ref=e45]\n          - SvgRoot \"radial, 87%depth\"\n            - StaticText \"87%\"\n          - StaticText \"radial, 87%depth\"\n        - cell \"33.2%\" [ref=e46]\n      - row\n        - cell \"8\" [ref=e47]\n        - cell \"radial, 53%depth radial, 53%depth\" [ref=e48]\n          - SvgRoot \"radial, 53%depth\"\n            - StaticText \"53%\"\n          - StaticText \"radial, 53%depth\"\n        - cell \"34.2%\" [ref=e49]\n      - row\n        - cell \"5\" [ref=e50]\n        - cell \"radial, 96%depth radial, 96%depth\" [ref=e51]\n          - SvgRoot \"radial, 96%depth\"\n            - StaticText \"96%\"\n          - StaticText \"radial, 96%depth\"\n        - cell \"35.4%\" [ref=e52]\n      - row\n        - cell \"4\" [ref=e53]\n        - cell \"radial, 53%depth radial, 53%depth\" [ref=e54]\n          - SvgRoot \"radial, 53%depth\"\n            - StaticText \"53%\"\n          - StaticText \"radial, 53%depth\"\n        - cell \"41.0%\" [ref=e55]\n      - row\n        - cell \"3\" [ref=e56]\n        - cell \"radial, 69%depth radial, 69%depth\" [ref=e57]\n          - SvgRoot \"radial, 69%depth\"\n            - StaticText \"69%\"\n          - StaticText \"radial, 69%depth\"\n        - cell \"41.6%\" [ref=e58]\n      - row\n        - cell \"1\" [ref=e59]\n        - cell \"vertical, 1 horizontalcut vertical, 1 horizontalcut\" [ref=e60]\n          - image \"vertical, 1 horizontalcut\"\n          - StaticText \"vertical, 1 horizontalcut\"\n        - cell \"43.5%\" [ref=e61]\n      - row\n        - cell \"2\" [ref=e62]\n        - cell \"vertical vertical\" [ref=e63]\n          - image \"vertical\"\n          - StaticText \"vertical\"\n        - cell \"43.5%\" [ref=e64]\n    - heading \"Insights\" [level=3, ref=e5]\n    - list\n      - listitem [level=1]\n        - ListMarker \"\u2022 \"\n        - StaticText \"It turns out that making horizontal cuts almost never helps with consistency.\"\n      - listitem [level=1]\n        - ListMarker \"\u2022 \"\n        - StaticText \"Radial cuts are usually more consistent than vertical cuts, but you have to aim below the center of the onion.\"\n      - listitem [level=1]\n        - ListMarker \"\u2022 \"\n        - StaticText \"The ideal radial depth varies depending on the number of layers and cuts\u2014but it\u2019s always \u226548%. As the layer and cut numbers increase and approach infinity, this ideal radial depth converges to the onion constant of ~55.731%, mentioned above.\"\n    - generic\n      - heading \"The importance of optimal\" [level=2, ref=e19]\n      - image \"T styled as an Onion\"\n      - image \"E styled as an Onion\"\n      - image \"C styled as an Onion\"\n      - image \"H styled as an Onion\"\n      - image \"N styled as an Onion\"\n      - image \"I styled as an Onion\"\n      - image \"Q styled as an Onion\"\n      - image \"U styled as an Onion\"\n      - image \"E styled as an Onion\"\n      - paragraph\n        - StaticText \"Armed with this knowledge, we can apply the optimal dicing strategy to any onion. But how big a difference does being mathematically optimal make when it comes to cooking? We got in touch with Kenji via email to find out.\"\n      - paragraph\n        - strong\n          - StaticText \"Us\u2014\"\n        - StaticText \" How much does uniformity matter?\"\n      - paragraph\n        - strong\n          - StaticText \"Kenji\u2014\"\n        - StaticText \" \u201cIt matters far more for winning internet debates and solving interesting math problems than it does for cooking. For home cooks, having onion dice that are a little off from perfect is not really an issue anyone should seriously worry about.\u201d\"\n      - paragraph\n        - StaticText \"Oh\u2026\"\n      - paragraph\n        - StaticText \"Well anyways, we hoped you enjoyed reading this deep-dive about onions and math. And even if your food still tastes the same, you can show off your optimally uniform onion pieces in your next meal. Good luck finding an infinitely thin knife and an onion made of perfect circles.\"\n  - sectionfooter\n    - generic\n      - StaticText \"We've published \"\n      - strong\n        - StaticText \"213\"\n      - StaticText \" awesome stories such as \"\n      - link \"mowing experiment\" [ref=e20]\n      - StaticText \",\"\n      - link \"english vocab lists\" [ref=e21]\n      - StaticText \",\"\n      - link \"ethical nba champions\" [ref=e22]\n      - StaticText \",and more.\"\n    - generic\n      - link \"donate sticker\" [ref=e23]\n        - image \"donate sticker\"\n      - paragraph\n        - link \"Support us on Patreon\" [ref=e65]\n        - image\n      - paragraph\n        - StaticText \"We pour our heart into these stories, but they take time and money. For just $2/month, you can help support us. Join our growing community of data-driven enthusiasts.\"\n    - generic\n      - link \"donate sticker\" [ref=e24]\n        - image \"donate sticker\"\n      - paragraph\n        - link \"Subscribe to our newsletter\" [ref=e66]\n        - image\n      - paragraph\n        - StaticText \"Get all our latest stories in your inbox. Plus get links to some of our favorite projects from around the web.\"\n    - generic\n      - link [ref=e25]\n        - image\n      - paragraph\n        - StaticText \"ABOUT US\"\n      - list\n        - listitem [level=1]\n          - link \"Our Team\" [ref=e89]\n        - listitem [level=1]\n          - link \"Our Resources\" [ref=e90]\n        - listitem [level=1]\n          - link \"Pitch a Story\" [ref=e91]\n        - listitem [level=1]\n          - link \"Brand Partnerships\" [ref=e92]\n        - listitem [level=1]\n          - link \"Privacy Policy\" [ref=e93]\n      - paragraph\n        - StaticText \"FOLLOW US\"\n      - list\n        - listitem [level=1]\n          - link \"Instagram\" [ref=e94]\n        - listitem [level=1]\n          - link \"Twitter/X\" [ref=e95]\n        - listitem [level=1]\n          - link \"TikTok\" [ref=e96]\n        - listitem [level=1]\n          - link \"YouTube\" [ref=e97]\n        - listitem [level=1]\n          - link \"RSS\" [ref=e98]\n- StaticText \"\u21c5\"\n- StaticText \"\u2191\""
+    },
+    "error": null
+  }
+]

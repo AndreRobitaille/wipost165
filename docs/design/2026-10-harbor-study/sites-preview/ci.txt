@@ -1,0 +1,126 @@
+Continuous Integration
+Running tests, style checks, and security audits
+
+
+Style: Ruby
+bin/rubocop
+
+Inspecting 45 files
+.............................................
+
+45 files inspected, no offenses detected
+
+✅ Style: Ruby passed in 1.48s
+
+
+Security: Gems
+bin/bundler-audit
+
+No vulnerabilities found
+
+✅ Security: Gems passed in 0.53s
+
+
+Security: JavaScript
+bin/importmap audit
+
+`/home/andre` is not writable.
+Bundler will use `/tmp/bundler20261007-59-xqp4fb59' as your home directory temporarily.
+No vulnerable packages found
+
+✅ Security: JavaScript passed in 0.55s
+
+
+Security: Rails
+bin/brakeman --quiet --no-pager --exit-on-warn --exit-on-error
+
+
+== Brakeman Report ==
+
+Application Path: /home/andre/Development/wipost165
+Rails Version: 8.1.3.1
+Brakeman Version: 8.0.6
+Scan Date: 2026-10-07 12:26:56 -0500
+Duration: 1.392856843 seconds
+Checks Run: BasicAuth, BasicAuthTimingAttack, CSRFTokenForgeryCVE, ContentTag, CookieSerialization, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, DynamicFinders, EOLRails, EOLRuby, EscapeFunction, Evaluation, Execute, FileAccess, FileDisclosure, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONEncoding, JSONEntityEscape, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, MimeTypeDoS, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NestedAttributesBypass, NumberToCurrency, PageCachingCVE, Pathname, PermitAttributes, QuoteTableName, Ransack, Redirect, RegexDoS, Render, RenderDoS, RenderInline, RenderRCE, ResponseSplitting, RouteDoS, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeConfigCve, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionManipulation, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, SprocketsPathTraversal, StripTags, SymbolDoSCVE, TemplateInjection, TranslateBug, UnsafeReflection, UnsafeReflectionMethods, ValidationRegex, VerbConfusion, WeakRSAKey, WithoutProtection, XMLDoS, YAMLParsing
+
+== Overview ==
+
+Controllers: 3
+Models: 3
+Templates: 26
+Errors: 0
+Security Warnings: 0
+
+== Warning Types ==
+
+
+No warnings found
+
+
+✅ Security: Rails passed in 2.25s
+
+
+Tests
+bin/rails test
+
+`/home/andre` is not writable.
+Bundler will use `/tmp/bundler20261007-190-p6e44q190' as your home directory temporarily.
+Running 76 tests in parallel using 12 processes
+Run options: --seed 21581
+
+# Running:
+
+............................................................................
+
+Finished in 0.503267s, 151.0133 runs/s, 1466.4188 assertions/s.
+76 runs, 738 assertions, 0 failures, 0 errors, 0 skips
+
+✅ Tests passed in 1.72s
+
+
+Autoloading
+env RAILS_ENV=test bin/rails zeitwerk:check
+
+`/home/andre` is not writable.
+Bundler will use `/tmp/bundler20261007-355-380005355' as your home directory temporarily.
+Hold on, I am eager loading the application.
+All is good!
+
+✅ Autoloading passed in 0.72s
+
+
+Production assets
+env RAILS_ENV=production SECRET_KEY_BASE_DUMMY=1 bin/rails assets:precompile
+
+`/home/andre` is not writable.
+Bundler will use `/tmp/bundler20261007-357-i0018c357' as your home directory temporarily.
+Writing body-984af6e8.woff
+Writing body-bold-97afdfeb.woff
+Writing display-condensed-5f49d6e2.woff
+Writing FONT-LICENSE-5b05b53d.txt
+Writing legion-white-02fd20c9.png
+Writing two-rivers-harbor-illustration-a23abf2b.webp
+Writing application-cb0ba42d.css
+Writing company-a62dec01.css
+Writing launch-533eb744.css
+Writing stimulus-autoloader-9d447422.js
+Writing stimulus-importmap-autoloader-64cc03e1.js
+Writing stimulus-loading-1fc53fe7.js
+Writing stimulus-d59b3b7f.js
+Writing stimulus.min-4b1e420e.js
+Writing stimulus.min-2395e199.js.map
+Writing turbo-736fb387.js
+Writing turbo.min-9fd88cd5.js
+Writing turbo.min-5eb167c2.js.map
+Writing rails-ujs.esm-e925103b.js
+Writing rails-ujs-20eaf715.js
+Writing application-bfcdf840.js
+Writing controllers/index-ee64e1f1.js
+Writing controllers/application-3affb389.js
+Writing controllers/portrait_controller-0b74b674.js
+Writing controllers/event_dialog_controller-81637d10.js
+
+✅ Production assets passed in 0.73s
+
+✅ Continuous Integration passed in 7.98s

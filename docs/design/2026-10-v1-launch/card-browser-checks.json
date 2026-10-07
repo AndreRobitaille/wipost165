@@ -1,0 +1,430 @@
+{
+  "cases": [
+    {
+      "width": 1440,
+      "clientWidth": 1425,
+      "pageWidth": 1425,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "Old Glory Honor Flight fundraiser",
+      "invitation": "NEXT PUBLIC OCCASION\n      \n      \n        October24\n        Old Glory Honor Flight fundraiser\n      \n      \n        WhenSaturday, October 24, 2026 \u00b7 8:30 AM CDT\n        WhereWest Shore Sportsman\u2019s Club, Two Rivers\n      \n      Event details \u2192\n    View the public calendar \u2197",
+      "sample": false,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 374.1875,
+          "x": 112.5,
+          "y": 811.25
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 411.609375,
+          "x": 506.6875,
+          "y": 811.25
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 374.203125,
+          "x": 938.296875,
+          "y": 811.25
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "desktop"
+    },
+    {
+      "width": 1024,
+      "clientWidth": 1009,
+      "pageWidth": 1009,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "Old Glory Honor Flight fundraiser",
+      "invitation": "NEXT PUBLIC OCCASION\n      \n      \n        October24\n        Old Glory Honor Flight fundraiser\n      \n      \n        WhenSaturday, October 24, 2026 \u00b7 8:30 AM CDT\n        WhereWest Shore Sportsman\u2019s Club, Two Rivers\n      \n      Event details \u2192\n    View the public calendar \u2197",
+      "sample": false,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 286.765625,
+          "x": 40,
+          "y": 900.4375
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 315.453125,
+          "x": 346.765625,
+          "y": 900.4375
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 286.78125,
+          "x": 682.21875,
+          "y": 900.4375
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "small-desktop"
+    },
+    {
+      "width": 900,
+      "clientWidth": 885,
+      "pageWidth": 885,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "Old Glory Honor Flight fundraiser",
+      "invitation": "NEXT PUBLIC OCCASION\n      \n      \n        October24\n        Old Glory Honor Flight fundraiser\n      \n      \n        WhenSaturday, October 24, 2026 \u00b7 8:30 AM CDT\n        WhereWest Shore Sportsman\u2019s Club, Two Rivers\n      \n      Event details \u2192\n    View the public calendar \u2197",
+      "sample": false,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 805,
+          "x": 40,
+          "y": 1254.75
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 392.5,
+          "x": 40,
+          "y": 1572.4375
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 392.5,
+          "x": 452.5,
+          "y": 1572.4375
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "tablet-breakpoint"
+    },
+    {
+      "width": 768,
+      "clientWidth": 753,
+      "pageWidth": 753,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "Old Glory Honor Flight fundraiser",
+      "invitation": "NEXT PUBLIC OCCASION\n      \n      \n        October24\n        Old Glory Honor Flight fundraiser\n      \n      \n        WhenSaturday, October 24, 2026 \u00b7 8:30 AM CDT\n        WhereWest Shore Sportsman\u2019s Club, Two Rivers\n      \n      Event details \u2192\n    View the public calendar \u2197",
+      "sample": false,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 673,
+          "x": 40,
+          "y": 1254.75
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 326.5,
+          "x": 40,
+          "y": 1572.4375
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 326.5,
+          "x": 386.5,
+          "y": 1572.4375
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "tablet"
+    },
+    {
+      "width": 701,
+      "clientWidth": 686,
+      "pageWidth": 686,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "Old Glory Honor Flight fundraiser",
+      "invitation": "NEXT PUBLIC OCCASION\n      \n      \n        October24\n        Old Glory Honor Flight fundraiser\n      \n      \n        WhenSaturday, October 24, 2026 \u00b7 8:30 AM CDT\n        WhereWest Shore Sportsman\u2019s Club, Two Rivers\n      \n      Event details \u2192\n    View the public calendar \u2197",
+      "sample": false,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 606,
+          "x": 40,
+          "y": 1254.75
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 293,
+          "x": 40,
+          "y": 1572.4375
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 293,
+          "x": 353,
+          "y": 1572.4375
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "above-phone-breakpoint"
+    },
+    {
+      "width": 390,
+      "clientWidth": 375,
+      "pageWidth": 375,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "Old Glory Honor Flight fundraiser",
+      "invitation": "NEXT PUBLIC OCCASION\n      \n      \n        October24\n        Old Glory Honor Flight fundraiser\n      \n      \n        WhenSaturday, October 24, 2026 \u00b7 8:30 AM CDT\n        WhereWest Shore Sportsman\u2019s Club, Two Rivers\n      \n      Event details \u2192\n    View the public calendar \u2197",
+      "sample": false,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 327,
+          "x": 24,
+          "y": 1388.984375
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 327,
+          "x": 24,
+          "y": 1742.859375
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 327,
+          "x": 24,
+          "y": 2223.796875
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "phone"
+    },
+    {
+      "width": 320,
+      "clientWidth": 305,
+      "pageWidth": 305,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "Old Glory Honor Flight fundraiser",
+      "invitation": "NEXT PUBLIC OCCASION\n      \n      \n        October24\n        Old Glory Honor Flight fundraiser\n      \n      \n        WhenSaturday, October 24, 2026 \u00b7 8:30 AM CDT\n        WhereWest Shore Sportsman\u2019s Club, Two Rivers\n      \n      Event details \u2192\n    View the public calendar \u2197",
+      "sample": false,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 273,
+          "x": 16,
+          "y": 1438.21875
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 273,
+          "x": 16,
+          "y": 1817.6875
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 273,
+          "x": 16,
+          "y": 2346.609375
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "narrow-phone"
+    },
+    {
+      "width": 390,
+      "clientWidth": 375,
+      "pageWidth": 375,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "A first hello.",
+      "invitation": "COME ON BY\n      A first hello.\n      No upcoming public occasions are listed right now. You can also come to a regular Post meeting.\n      Meeting & visit details \u2192\n    View the public calendar \u2197",
+      "sample": true,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 327,
+          "x": 24,
+          "y": 1229.578125
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 327,
+          "x": 24,
+          "y": 1583.453125
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 327,
+          "x": 24,
+          "y": 2064.390625
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "empty"
+    },
+    {
+      "width": 390,
+      "clientWidth": 375,
+      "pageWidth": 375,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "A first hello.",
+      "invitation": "COME ON BY\n      A first hello.\n      The public calendar is temporarily unavailable. Please check back before making plans.\n      First-visit information \u2192\n    View the public calendar \u2197",
+      "sample": true,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 327,
+          "x": 24,
+          "y": 1229.578125
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 327,
+          "x": 24,
+          "y": 1583.453125
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 327,
+          "x": 24,
+          "y": 2064.390625
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "outage"
+    },
+    {
+      "width": 320,
+      "clientWidth": 305,
+      "pageWidth": 305,
+      "mainCount": 1,
+      "h1Count": 1,
+      "title": "An example public occasion with a deliberately long title for phone review",
+      "invitation": "NEXT PUBLIC OCCASION\n      EXAMPLE OCCASION \u00b7 NOT SCHEDULED\n      \n        October9\n        An example public occasion with a deliberately long title for phone review\n      \n      \n        WhenFriday, October 9, 2026 \u00b7 9:16 AM CDT\n        WhereAn example venue with a long name \u2014 not a real event location\n      \n      Event details \u2192\n    View the public calendar \u2197",
+      "sample": true,
+      "cards": [
+        {
+          "title": "Start with hello.",
+          "background": "rgb(0, 46, 85)",
+          "border": "4px",
+          "width": 273,
+          "x": 16,
+          "y": 1830.890625
+        },
+        {
+          "title": "Regular Post meetings",
+          "background": "rgb(245, 248, 250)",
+          "border": "4px",
+          "width": 273,
+          "x": 16,
+          "y": 2210.359375
+        },
+        {
+          "title": "Have a question?",
+          "background": "rgb(231, 240, 246)",
+          "border": "4px",
+          "width": 273,
+          "x": 16,
+          "y": 2739.28125
+        }
+      ],
+      "imagesLoaded": true,
+      "peopleLinks": 0,
+      "overflow": [],
+      "case": "long-title"
+    }
+  ],
+  "keyboard": [
+    {
+      "href": "/visit",
+      "text": "What to expect \u2192",
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "minHeight": "44px",
+      "inVisitCard": true
+    },
+    {
+      "href": "mailto:wipost165@gmail.com",
+      "text": "wipost165@gmail.com",
+      "outline": "solid",
+      "outlineWidth": "3px",
+      "minHeight": "44px",
+      "inVisitCard": false
+    }
+  ],
+  "navigation": {
+    "visit": {
+      "url": "http://127.0.0.1:3001/visit"
+    },
+    "event": {
+      "url": "http://127.0.0.1:3001/events/23b9b0650ff6469f9fe5365d74b6145c"
+    }
+  }
+}

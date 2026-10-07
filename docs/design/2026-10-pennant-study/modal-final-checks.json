@@ -1,0 +1,52 @@
+[
+  {
+    "open": {
+      "open": true,
+      "focusTag": "BUTTON",
+      "focusLabel": "BUTTON",
+      "containsFocus": true,
+      "overflow": false
+    }
+  },
+  {
+    "shiftTab": {
+      "open": true,
+      "focusTag": "A",
+      "focusLabel": "visit",
+      "containsFocus": true,
+      "overflow": false
+    }
+  },
+  {
+    "tabWrap": {
+      "open": true,
+      "focusTag": "BUTTON",
+      "focusLabel": "BUTTON",
+      "containsFocus": true,
+      "overflow": false
+    }
+  },
+  {
+    "escape": {
+      "open": false,
+      "focusTag": "A",
+      "focusLabel": "banquet",
+      "containsFocus": false,
+      "overflow": false
+    }
+  },
+  {
+    "enter": {
+      "open": true,
+      "focusTag": "BUTTON",
+      "focusLabel": "BUTTON",
+      "containsFocus": true,
+      "overflow": false
+    }
+  },
+  {
+    "hostErrors": {
+      "errors": []
+    }
+  }
+]

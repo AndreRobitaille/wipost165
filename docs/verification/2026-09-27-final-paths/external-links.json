@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://manitowoccountywi.gov/departments/veteran-s-services/",
+    "result": "200 https://manitowoccountywi.gov/departments/veteran-s-services/",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "url": "https://members.wipost165.org/",
+    "result": "200 https://members.wipost165.org/session/new",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "url": "https://www.legion.org/faq",
+    "result": "200 https://www.legion.org/faq",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "url": "https://www.pexels.com/photo/a-close-up-shot-of-an-elderly-man-smiling-11346735/",
+    "result": "403 https://www.pexels.com/photo/a-close-up-shot-of-an-elderly-man-smiling-11346735/",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "url": "https://www.pexels.com/photo/elderly-man-in-gray-long-sleeves-smiling-7322315/",
+    "result": "403 https://www.pexels.com/photo/elderly-man-in-gray-long-sleeves-smiling-7322315/",
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "url": "https://www.pexels.com/photo/professional-portrait-of-smiling-middle-aged-woman-29405854/",
+    "result": "403 https://www.pexels.com/photo/professional-portrait-of-smiling-middle-aged-woman-29405854/",
+    "exit_code": 0,
+    "error": ""
+  }
+]

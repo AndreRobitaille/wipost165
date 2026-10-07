@@ -129,6 +129,32 @@ class PublishingClientTest < ActiveSupport::TestCase
     assert_raises(Publishing::Unavailable) { @client.featured }
   end
 
+  test "304 with a different or missing validator cannot renew cached content" do
+    @replies << publisher_response(fixture("featured"))
+    @client.featured
+    @now += 301
+
+    [ '"different-revision"', nil ].each do |etag|
+      @replies << publisher_response(nil, status: 304, headers: { "etag" => etag })
+      assert_raises(Publishing::Unavailable) { @client.featured }
+      assert @client.expired?
+      assert_equal '"revision-1"', @requests.last.last["If-None-Match"]
+      @now += 11
+    end
+
+    @replies << publisher_response(fixture("featured").merge("members" => []), headers: { "etag" => '"revision-2"' })
+    assert_empty @client.featured
+  end
+
+  test "304 can weakly match the validator sent for the cached representation" do
+    @replies << publisher_response(fixture("featured"), headers: { "etag" => 'W/"revision-1"' })
+    @client.featured
+    @now += 301
+    @replies << publisher_response(nil, status: 304)
+    assert_equal "Avery", @client.featured.first["display_name"]
+    assert_equal 'W/"revision-1"', @requests.last.last["If-None-Match"]
+  end
+
   test "known withdrawal evicts featured collections as well as detail" do
     @replies << publisher_response(fixture("featured"))
     @client.featured

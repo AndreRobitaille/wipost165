@@ -1,0 +1,3502 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://www.cameronsworld.net/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Cameron's World",
+        "url": "https://www.cameronsworld.net/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://www.cameronsworld.net/",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "link"
+          },
+          "e10": {
+            "name": "",
+            "role": "link"
+          },
+          "e100": {
+            "name": "",
+            "role": "link"
+          },
+          "e101": {
+            "name": "",
+            "role": "link"
+          },
+          "e102": {
+            "name": "",
+            "role": "link"
+          },
+          "e103": {
+            "name": "",
+            "role": "link"
+          },
+          "e104": {
+            "name": "FREE searches powered by Google",
+            "role": "heading"
+          },
+          "e105": {
+            "name": "",
+            "role": "link"
+          },
+          "e106": {
+            "name": "",
+            "role": "link"
+          },
+          "e107": {
+            "name": "",
+            "role": "link"
+          },
+          "e108": {
+            "name": "",
+            "role": "link"
+          },
+          "e109": {
+            "name": "",
+            "role": "link"
+          },
+          "e11": {
+            "name": "",
+            "role": "link"
+          },
+          "e110": {
+            "name": "",
+            "role": "link"
+          },
+          "e111": {
+            "name": "",
+            "role": "link"
+          },
+          "e112": {
+            "name": "",
+            "role": "link"
+          },
+          "e113": {
+            "name": "",
+            "role": "link"
+          },
+          "e114": {
+            "name": "",
+            "role": "link"
+          },
+          "e115": {
+            "name": "",
+            "role": "link"
+          },
+          "e116": {
+            "name": "",
+            "role": "link"
+          },
+          "e117": {
+            "name": "",
+            "role": "link"
+          },
+          "e118": {
+            "name": "",
+            "role": "link"
+          },
+          "e119": {
+            "name": "",
+            "role": "link"
+          },
+          "e12": {
+            "name": "",
+            "role": "link"
+          },
+          "e120": {
+            "name": "",
+            "role": "link"
+          },
+          "e121": {
+            "name": "www.hell.com",
+            "role": "link"
+          },
+          "e122": {
+            "name": "Press",
+            "role": "link"
+          },
+          "e123": {
+            "name": "Disclaimer",
+            "role": "link"
+          },
+          "e124": {
+            "name": "Download soundtrack",
+            "role": "link"
+          },
+          "e125": {
+            "name": "Patreon",
+            "role": "link"
+          },
+          "e126": {
+            "name": "hotmale@hotmail.com",
+            "role": "link"
+          },
+          "e127": {
+            "name": "More about me",
+            "role": "link"
+          },
+          "e128": {
+            "name": "",
+            "role": "link"
+          },
+          "e129": {
+            "name": "",
+            "role": "link"
+          },
+          "e13": {
+            "name": "",
+            "role": "link"
+          },
+          "e130": {
+            "name": "",
+            "role": "link"
+          },
+          "e131": {
+            "name": "",
+            "role": "link"
+          },
+          "e132": {
+            "name": "",
+            "role": "link"
+          },
+          "e133": {
+            "name": "",
+            "role": "link"
+          },
+          "e134": {
+            "name": "",
+            "role": "link"
+          },
+          "e135": {
+            "name": "_.-Visit Flame\u2019s Bedroom-._",
+            "role": "link"
+          },
+          "e136": {
+            "name": "",
+            "role": "link"
+          },
+          "e137": {
+            "name": "",
+            "role": "link"
+          },
+          "e138": {
+            "name": "",
+            "role": "link"
+          },
+          "e139": {
+            "name": "",
+            "role": "link"
+          },
+          "e14": {
+            "name": "",
+            "role": "link"
+          },
+          "e140": {
+            "name": "Email Me",
+            "role": "link"
+          },
+          "e141": {
+            "name": "Dolphin",
+            "role": "link"
+          },
+          "e142": {
+            "name": "",
+            "role": "link"
+          },
+          "e143": {
+            "name": "",
+            "role": "link"
+          },
+          "e144": {
+            "name": "",
+            "role": "link"
+          },
+          "e145": {
+            "name": "",
+            "role": "link"
+          },
+          "e146": {
+            "name": "",
+            "role": "link"
+          },
+          "e147": {
+            "name": "",
+            "role": "link"
+          },
+          "e148": {
+            "name": "",
+            "role": "link"
+          },
+          "e149": {
+            "name": "",
+            "role": "link"
+          },
+          "e15": {
+            "name": "",
+            "role": "link"
+          },
+          "e150": {
+            "name": "",
+            "role": "link"
+          },
+          "e151": {
+            "name": "",
+            "role": "link"
+          },
+          "e152": {
+            "name": "",
+            "role": "link"
+          },
+          "e153": {
+            "name": "",
+            "role": "link"
+          },
+          "e154": {
+            "name": "",
+            "role": "link"
+          },
+          "e155": {
+            "name": "",
+            "role": "link"
+          },
+          "e156": {
+            "name": "",
+            "role": "link"
+          },
+          "e157": {
+            "name": "The Place Where In My Soul Lingers...",
+            "role": "link"
+          },
+          "e158": {
+            "name": "1. Anarchy",
+            "role": "link"
+          },
+          "e159": {
+            "name": "2. Destruction",
+            "role": "link"
+          },
+          "e16": {
+            "name": "",
+            "role": "link"
+          },
+          "e160": {
+            "name": "3. Misery/suffering",
+            "role": "link"
+          },
+          "e161": {
+            "name": "DOWNLOAD My private files",
+            "role": "link"
+          },
+          "e162": {
+            "name": "",
+            "role": "link"
+          },
+          "e163": {
+            "name": "",
+            "role": "link"
+          },
+          "e164": {
+            "name": "",
+            "role": "link"
+          },
+          "e165": {
+            "name": "Google",
+            "role": "link"
+          },
+          "e166": {
+            "name": "Enter search phrase here......",
+            "role": "textbox"
+          },
+          "e167": {
+            "name": "",
+            "role": "link"
+          },
+          "e168": {
+            "name": "HOW THE INTERNET WORKS",
+            "role": "link"
+          },
+          "e169": {
+            "name": "",
+            "role": "link"
+          },
+          "e17": {
+            "name": "",
+            "role": "link"
+          },
+          "e170": {
+            "name": "",
+            "role": "link"
+          },
+          "e171": {
+            "name": "",
+            "role": "link"
+          },
+          "e172": {
+            "name": "",
+            "role": "link"
+          },
+          "e173": {
+            "name": "",
+            "role": "link"
+          },
+          "e174": {
+            "name": "",
+            "role": "link"
+          },
+          "e175": {
+            "name": "",
+            "role": "link"
+          },
+          "e176": {
+            "name": "",
+            "role": "link"
+          },
+          "e177": {
+            "name": "",
+            "role": "link"
+          },
+          "e178": {
+            "name": "",
+            "role": "link"
+          },
+          "e179": {
+            "name": "",
+            "role": "link"
+          },
+          "e18": {
+            "name": "",
+            "role": "link"
+          },
+          "e180": {
+            "name": "",
+            "role": "link"
+          },
+          "e181": {
+            "name": "Where two hearts became one.",
+            "role": "link"
+          },
+          "e182": {
+            "name": "",
+            "role": "link"
+          },
+          "e183": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e184": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e185": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e186": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e187": {
+            "name": "",
+            "role": "link"
+          },
+          "e188": {
+            "name": "",
+            "role": "link"
+          },
+          "e189": {
+            "name": "",
+            "role": "link"
+          },
+          "e19": {
+            "name": "",
+            "role": "link"
+          },
+          "e190": {
+            "name": "",
+            "role": "link"
+          },
+          "e191": {
+            "name": "",
+            "role": "link"
+          },
+          "e192": {
+            "name": "",
+            "role": "link"
+          },
+          "e193": {
+            "name": "",
+            "role": "link"
+          },
+          "e194": {
+            "name": "",
+            "role": "link"
+          },
+          "e195": {
+            "name": "",
+            "role": "link"
+          },
+          "e196": {
+            "name": "",
+            "role": "link"
+          },
+          "e197": {
+            "name": "",
+            "role": "link"
+          },
+          "e198": {
+            "name": "",
+            "role": "link"
+          },
+          "e199": {
+            "name": "",
+            "role": "link"
+          },
+          "e2": {
+            "name": "A love letter to the Internet of old",
+            "role": "heading"
+          },
+          "e20": {
+            "name": "",
+            "role": "link"
+          },
+          "e200": {
+            "name": "",
+            "role": "link"
+          },
+          "e201": {
+            "name": "",
+            "role": "link"
+          },
+          "e202": {
+            "name": "\u53f0\u4e2d\u4e16\u5b89\u85e5\u5e2b\u85e5\u5c40",
+            "role": "link"
+          },
+          "e203": {
+            "name": "\u65b0\u9801\u9762 39",
+            "role": "link"
+          },
+          "e204": {
+            "name": "",
+            "role": "link"
+          },
+          "e205": {
+            "name": "",
+            "role": "link"
+          },
+          "e206": {
+            "name": "",
+            "role": "link"
+          },
+          "e207": {
+            "name": "",
+            "role": "link"
+          },
+          "e208": {
+            "name": "CLASSICS",
+            "role": "link"
+          },
+          "e209": {
+            "name": "TRANCE",
+            "role": "link"
+          },
+          "e21": {
+            "name": "",
+            "role": "link"
+          },
+          "e210": {
+            "name": "JUNGLE",
+            "role": "link"
+          },
+          "e211": {
+            "name": "MP3",
+            "role": "link"
+          },
+          "e212": {
+            "name": "HOUSE",
+            "role": "link"
+          },
+          "e213": {
+            "name": "",
+            "role": "link"
+          },
+          "e214": {
+            "name": "Hello! Welcome to my net home.",
+            "role": "heading"
+          },
+          "e215": {
+            "name": "I don't know if you have a website or not BUT LET ME TELL YOU SOMETHING... writing an intro is hard.",
+            "role": "heading"
+          },
+          "e216": {
+            "name": "",
+            "role": "link"
+          },
+          "e217": {
+            "name": "",
+            "role": "link"
+          },
+          "e218": {
+            "name": "",
+            "role": "link"
+          },
+          "e219": {
+            "name": "",
+            "role": "link"
+          },
+          "e22": {
+            "name": "",
+            "role": "link"
+          },
+          "e220": {
+            "name": "",
+            "role": "link"
+          },
+          "e221": {
+            "name": "",
+            "role": "link"
+          },
+          "e222": {
+            "name": "",
+            "role": "link"
+          },
+          "e223": {
+            "name": "ENTRANCE for MS IE4",
+            "role": "link"
+          },
+          "e224": {
+            "name": "ENTRANCE for NETSCAPE 4",
+            "role": "link"
+          },
+          "e225": {
+            "name": "",
+            "role": "link"
+          },
+          "e226": {
+            "name": "[System Default]",
+            "role": "link"
+          },
+          "e227": {
+            "name": "[Dub version]",
+            "role": "link"
+          },
+          "e228": {
+            "name": "[Acapella cover]",
+            "role": "link"
+          },
+          "e229": {
+            "name": "[Carpentry Mix]",
+            "role": "link"
+          },
+          "e23": {
+            "name": "",
+            "role": "link"
+          },
+          "e230": {
+            "name": "",
+            "role": "link"
+          },
+          "e231": {
+            "name": "",
+            "role": "link"
+          },
+          "e232": {
+            "name": "Marie\u00b4s Webdesign!",
+            "role": "link"
+          },
+          "e233": {
+            "name": "Daisy's Page - Where Jesus is Lord",
+            "role": "link"
+          },
+          "e234": {
+            "name": "",
+            "role": "link"
+          },
+          "e235": {
+            "name": "",
+            "role": "link"
+          },
+          "e236": {
+            "name": "",
+            "role": "link"
+          },
+          "e237": {
+            "name": "Check out this cats link",
+            "role": "link"
+          },
+          "e238": {
+            "name": "Days of Our Lives: Maison Blanche Revisited. A John and Marlena Alternate Reality",
+            "role": "cell"
+          },
+          "e239": {
+            "name": "Love Letter Cat Poetry",
+            "role": "cell"
+          },
+          "e24": {
+            "name": "",
+            "role": "link"
+          },
+          "e240": {
+            "name": "Fave Gallery 01 (12) Fave Gallery 02 (7) Fave Gallery 03 (17) Fave Gallery 04 (4) Fave Gallery 05 (12) Fave Gallery 06 (8) CPU Pic Gallery (13) Fave Gallery 08 (44) Fave Gallery 09 (18)",
+            "role": "cell"
+          },
+          "e241": {
+            "name": "The Zit",
+            "role": "cell"
+          },
+          "e242": {
+            "name": "Prohibition Times",
+            "role": "cell"
+          },
+          "e243": {
+            "name": "1984 SoHo Street Erotic Fiction \u0417\u0430\u043c\u0435\u0442\u043a\u0438 \u043e \u043f\u043e\u044d\u0442\u0430\u0445 \u0438 \u043f\u043e\u044d\u0442\u0438\u043a\u0435 The Cat Poem",
+            "role": "cell"
+          },
+          "e244": {
+            "name": "You Have Mail",
+            "role": "cell"
+          },
+          "e245": {
+            "name": "Entrance To The Immortal Sanctuary",
+            "role": "cell"
+          },
+          "e246": {
+            "name": "Creative Writing Poems of Love",
+            "role": "cell"
+          },
+          "e247": {
+            "name": "The Plains of Turia",
+            "role": "cell"
+          },
+          "e248": {
+            "name": "~~I Don't Have To Die To Go To Heaven~~",
+            "role": "cell"
+          },
+          "e249": {
+            "name": "The Friend Inside by The: Kingofjins",
+            "role": "cell"
+          },
+          "e25": {
+            "name": "",
+            "role": "link"
+          },
+          "e250": {
+            "name": "The Kill Wesley Club, Part I The Kill Wesley Club, Part II",
+            "role": "cell"
+          },
+          "e251": {
+            "name": "Broken Friendship Poems The Handwriting on the Wall Quilt Poems",
+            "role": "cell"
+          },
+          "e252": {
+            "name": "Amy's Cool Spot",
+            "role": "link"
+          },
+          "e253": {
+            "name": "Titanic SUCKS!",
+            "role": "link"
+          },
+          "e254": {
+            "name": "\u05dc\u05d9\u05d0 \u05dc\u05e9 \u05dd\u05d9\u05e8\u05e6\u05e7\u05d4 \u05dd\u05d9\u05e8\u05d5\u05e4\u05d9\u05e1\u05d4",
+            "role": "link"
+          },
+          "e255": {
+            "name": "Warren's World",
+            "role": "link"
+          },
+          "e256": {
+            "name": "Kimberly's Dragons",
+            "role": "link"
+          },
+          "e257": {
+            "name": "Purity Test",
+            "role": "link"
+          },
+          "e258": {
+            "name": "B E E ' H O M E P A G E",
+            "role": "link"
+          },
+          "e259": {
+            "name": "[e.\u00b5sik]",
+            "role": "link"
+          },
+          "e26": {
+            "name": "",
+            "role": "link"
+          },
+          "e260": {
+            "name": "Sheik Freaks Anonymous",
+            "role": "link"
+          },
+          "e261": {
+            "name": "Tony's Yoga Site",
+            "role": "link"
+          },
+          "e262": {
+            "name": "The Story of Me",
+            "role": "link"
+          },
+          "e263": {
+            "name": "A Letter From The Chief",
+            "role": "link"
+          },
+          "e264": {
+            "name": "Spicy Pork Cutlets",
+            "role": "link"
+          },
+          "e265": {
+            "name": "Wolf Page",
+            "role": "link"
+          },
+          "e266": {
+            "name": "Various Topics on Electronic Media in Religion",
+            "role": "link"
+          },
+          "e267": {
+            "name": "The Jade Hut",
+            "role": "link"
+          },
+          "e268": {
+            "name": "Berry Creek Guns",
+            "role": "link"
+          },
+          "e269": {
+            "name": "The Future",
+            "role": "link"
+          },
+          "e27": {
+            "name": "",
+            "role": "link"
+          },
+          "e270": {
+            "name": "THE SHIRE",
+            "role": "link"
+          },
+          "e271": {
+            "name": "Sanitorium",
+            "role": "link"
+          },
+          "e272": {
+            "name": "Bikini World",
+            "role": "link"
+          },
+          "e273": {
+            "name": "Foal Page",
+            "role": "link"
+          },
+          "e274": {
+            "name": "Cool Website",
+            "role": "link"
+          },
+          "e275": {
+            "name": "Snow storm",
+            "role": "link"
+          },
+          "e276": {
+            "name": "Klasyczne Okinawskie Karate",
+            "role": "link"
+          },
+          "e277": {
+            "name": "The Brian Littrell Obsseson Page!",
+            "role": "link"
+          },
+          "e278": {
+            "name": "Virtual Jesus",
+            "role": "link"
+          },
+          "e279": {
+            "name": "Dr. Dale's Cyber Therapy Clinic",
+            "role": "link"
+          },
+          "e28": {
+            "name": "",
+            "role": "link"
+          },
+          "e280": {
+            "name": "LUAI AL - SARRAJ!",
+            "role": "link"
+          },
+          "e281": {
+            "name": "Red Wolf's Den",
+            "role": "link"
+          },
+          "e282": {
+            "name": "Kayli's Art Gallery",
+            "role": "link"
+          },
+          "e283": {
+            "name": "Why? World",
+            "role": "link"
+          },
+          "e284": {
+            "name": "E-Wall",
+            "role": "link"
+          },
+          "e285": {
+            "name": "Specially For Fann Wong",
+            "role": "link"
+          },
+          "e286": {
+            "name": "The Realm of Stunt Gods and Godesses",
+            "role": "link"
+          },
+          "e287": {
+            "name": "Dantosofts Web Design",
+            "role": "link"
+          },
+          "e288": {
+            "name": "Oops",
+            "role": "link"
+          },
+          "e289": {
+            "name": "Closet Vampire Central",
+            "role": "link"
+          },
+          "e29": {
+            "name": "",
+            "role": "link"
+          },
+          "e290": {
+            "name": "*NSync Are My Angels",
+            "role": "link"
+          },
+          "e291": {
+            "name": "Carol\u2019s Native American page",
+            "role": "link"
+          },
+          "e292": {
+            "name": "aldruH\u2019s Domain",
+            "role": "link"
+          },
+          "e293": {
+            "name": "Romantic Bottom's Gay World",
+            "role": "link"
+          },
+          "e294": {
+            "name": "Movie Dogs",
+            "role": "link"
+          },
+          "e295": {
+            "name": "5ive in Israel",
+            "role": "link"
+          },
+          "e296": {
+            "name": "Parrot Finches",
+            "role": "link"
+          },
+          "e297": {
+            "name": "Awareness",
+            "role": "link"
+          },
+          "e298": {
+            "name": "Indadane Kennel",
+            "role": "link"
+          },
+          "e299": {
+            "name": "Agreeable Stamp Store",
+            "role": "link"
+          },
+          "e3": {
+            "name": "Cameron Askin",
+            "role": "link"
+          },
+          "e30": {
+            "name": "Click here",
+            "role": "link"
+          },
+          "e300": {
+            "name": "Textos & Con-textos",
+            "role": "link"
+          },
+          "e301": {
+            "name": "Saddlebred Kids",
+            "role": "link"
+          },
+          "e302": {
+            "name": "The Fold",
+            "role": "link"
+          },
+          "e303": {
+            "name": "Captain SWEDE's Web World",
+            "role": "link"
+          },
+          "e304": {
+            "name": "Website Lama",
+            "role": "link"
+          },
+          "e305": {
+            "name": "Douglas Johnson's Website",
+            "role": "link"
+          },
+          "e306": {
+            "name": "The Hat Society",
+            "role": "link"
+          },
+          "e307": {
+            "name": "Dinosaur Icons",
+            "role": "link"
+          },
+          "e308": {
+            "name": "\u672c\u7ad9 \u5efa\u8b70\u4f7f\u7528800*600 \u89e3\u6790\u5ea6\u700f\u89bd!",
+            "role": "link"
+          },
+          "e309": {
+            "name": "",
+            "role": "link"
+          },
+          "e31": {
+            "name": "",
+            "role": "link"
+          },
+          "e310": {
+            "name": "PERFECT FERRET GATE. YOU TRIED BABY GATES; NOW WE OFFER SOMETHING THAT REALLY WORKS!!!",
+            "role": "link"
+          },
+          "e311": {
+            "name": "*DATE* *RELATE* *FIND A MATE* MAKE E-PALS ON THIS SITE",
+            "role": "link"
+          },
+          "e312": {
+            "name": "SURF THE WEB AND THEY PAY \u2022 NAVEGA EN LA RED Y ELLOS PAGAN",
+            "role": "link"
+          },
+          "e313": {
+            "name": "R U LONELY? R U ALONE? R U LOOKING FOR FRIENDS? YOPALS!",
+            "role": "link"
+          },
+          "e314": {
+            "name": "AMATEUR SWINGERS-HOT WIVE-SEXDATING-SWINGER WIVES-DATING ADVICE",
+            "role": "link"
+          },
+          "e315": {
+            "name": "REWARDS FOR EVOLUTION EVIDENCE: $1,000,000",
+            "role": "link"
+          },
+          "e316": {
+            "name": "HAVE YOU BEEN BUYING 4D NUMBERS AND NEVER WINNING?",
+            "role": "link"
+          },
+          "e317": {
+            "name": "HOW TO MAKE MONEY ON THE INTERNET READING EMAILS, SURFING WEB SITES AND MORE!",
+            "role": "link"
+          },
+          "e318": {
+            "name": "",
+            "role": "link"
+          },
+          "e319": {
+            "name": "",
+            "role": "link"
+          },
+          "e32": {
+            "name": "",
+            "role": "link"
+          },
+          "e320": {
+            "name": "",
+            "role": "link"
+          },
+          "e321": {
+            "name": "",
+            "role": "link"
+          },
+          "e322": {
+            "name": "",
+            "role": "link"
+          },
+          "e323": {
+            "name": "",
+            "role": "link"
+          },
+          "e324": {
+            "name": "",
+            "role": "link"
+          },
+          "e325": {
+            "name": "",
+            "role": "link"
+          },
+          "e326": {
+            "name": "",
+            "role": "link"
+          },
+          "e327": {
+            "name": "Jar Jar's Cottage",
+            "role": "link"
+          },
+          "e328": {
+            "name": "",
+            "role": "link"
+          },
+          "e329": {
+            "name": "",
+            "role": "link"
+          },
+          "e33": {
+            "name": "",
+            "role": "link"
+          },
+          "e330": {
+            "name": "",
+            "role": "link"
+          },
+          "e331": {
+            "name": "",
+            "role": "link"
+          },
+          "e332": {
+            "name": "",
+            "role": "link"
+          },
+          "e333": {
+            "name": "",
+            "role": "link"
+          },
+          "e334": {
+            "name": "",
+            "role": "link"
+          },
+          "e335": {
+            "name": "",
+            "role": "link"
+          },
+          "e336": {
+            "name": "",
+            "role": "link"
+          },
+          "e337": {
+            "name": "",
+            "role": "link"
+          },
+          "e338": {
+            "name": "",
+            "role": "link"
+          },
+          "e339": {
+            "name": "",
+            "role": "link"
+          },
+          "e34": {
+            "name": "",
+            "role": "link"
+          },
+          "e340": {
+            "name": "VERY USEFUL LINKS AND CAMARO OWNER'S PHOTOS",
+            "role": "link"
+          },
+          "e341": {
+            "name": "5318008",
+            "role": "cell"
+          },
+          "e342": {
+            "name": "sin",
+            "role": "cell"
+          },
+          "e343": {
+            "name": "cos",
+            "role": "cell"
+          },
+          "e344": {
+            "name": "tan",
+            "role": "cell"
+          },
+          "e345": {
+            "name": "\u03c0",
+            "role": "cell"
+          },
+          "e346": {
+            "name": "7",
+            "role": "cell"
+          },
+          "e347": {
+            "name": "8",
+            "role": "cell"
+          },
+          "e348": {
+            "name": "9",
+            "role": "cell"
+          },
+          "e349": {
+            "name": "+",
+            "role": "cell"
+          },
+          "e35": {
+            "name": "",
+            "role": "link"
+          },
+          "e350": {
+            "name": "4",
+            "role": "cell"
+          },
+          "e351": {
+            "name": "5",
+            "role": "cell"
+          },
+          "e352": {
+            "name": "6",
+            "role": "cell"
+          },
+          "e353": {
+            "name": "-",
+            "role": "cell"
+          },
+          "e354": {
+            "name": "1",
+            "role": "cell"
+          },
+          "e355": {
+            "name": "2",
+            "role": "cell"
+          },
+          "e356": {
+            "name": "3",
+            "role": "cell"
+          },
+          "e357": {
+            "name": "/",
+            "role": "cell"
+          },
+          "e358": {
+            "name": "C",
+            "role": "cell"
+          },
+          "e359": {
+            "name": "0",
+            "role": "cell"
+          },
+          "e36": {
+            "name": "",
+            "role": "link"
+          },
+          "e360": {
+            "name": "=",
+            "role": "cell"
+          },
+          "e361": {
+            "name": "*",
+            "role": "cell"
+          },
+          "e362": {
+            "name": "",
+            "role": "link"
+          },
+          "e363": {
+            "name": "",
+            "role": "link"
+          },
+          "e364": {
+            "name": "",
+            "role": "link"
+          },
+          "e365": {
+            "name": "",
+            "role": "link"
+          },
+          "e366": {
+            "name": "",
+            "role": "link"
+          },
+          "e367": {
+            "name": "IN SYNC WITH *N SYNC",
+            "role": "link"
+          },
+          "e368": {
+            "name": "\"IN SYNC WITH *N SYNC\" the webring?",
+            "role": "link"
+          },
+          "e369": {
+            "name": "Prev",
+            "role": "link"
+          },
+          "e37": {
+            "name": "",
+            "role": "link"
+          },
+          "e370": {
+            "name": "Next",
+            "role": "link"
+          },
+          "e371": {
+            "name": "Random site",
+            "role": "link"
+          },
+          "e372": {
+            "name": "List Sites",
+            "role": "link"
+          },
+          "e373": {
+            "name": "",
+            "role": "link"
+          },
+          "e374": {
+            "name": "",
+            "role": "link"
+          },
+          "e375": {
+            "name": "",
+            "role": "link"
+          },
+          "e376": {
+            "name": "",
+            "role": "link"
+          },
+          "e377": {
+            "name": "97'",
+            "role": "link"
+          },
+          "e378": {
+            "name": "98'",
+            "role": "link"
+          },
+          "e379": {
+            "name": "",
+            "role": "textbox"
+          },
+          "e38": {
+            "name": "",
+            "role": "link"
+          },
+          "e380": {
+            "name": "\u641c\u5c0b\u5f15\u64ce\u7db2\u7ad9!",
+            "role": "cell"
+          },
+          "e381": {
+            "name": "Yahoo!",
+            "role": "cell"
+          },
+          "e382": {
+            "name": "Hobbies:",
+            "role": "cell"
+          },
+          "e383": {
+            "name": "everything including daydreaming.",
+            "role": "cell"
+          },
+          "e384": {
+            "name": "Friends:",
+            "role": "cell"
+          },
+          "e385": {
+            "name": "I\u2019ve swapped friends about a hundred times since the last major update",
+            "role": "cell"
+          },
+          "e386": {
+            "name": "What I\u2019m doing at the moment (Not Literally!):",
+            "role": "cell"
+          },
+          "e387": {
+            "name": "I\u2019m collecting rainbows and I play the fool! Are you smiling yet?? --- I hope so!",
+            "role": "cell"
+          },
+          "e388": {
+            "name": "Quotes:",
+            "role": "cell"
+          },
+          "e389": {
+            "name": "\u201cIs a Sunset . . . The End or a Begining?\u201d. \"You can\u2019t love anybody until you love yourself\u201d. \u201cHow to be an artist: Stay loose and learn to watch snails.\u201d",
+            "role": "cell"
+          },
+          "e39": {
+            "name": "",
+            "role": "link"
+          },
+          "e390": {
+            "name": "Days of Our Lives: Maison Blanche Revisited. A John and Marlena Alternate Reality",
+            "role": "link"
+          },
+          "e391": {
+            "name": "Love Letter",
+            "role": "link"
+          },
+          "e392": {
+            "name": "Cat Poetry",
+            "role": "link"
+          },
+          "e393": {
+            "name": "The Zit",
+            "role": "link"
+          },
+          "e394": {
+            "name": "Prohibition Times",
+            "role": "link"
+          },
+          "e395": {
+            "name": "1984 SoHo Street Erotic Fiction",
+            "role": "link"
+          },
+          "e396": {
+            "name": "\u0417\u0430\u043c\u0435\u0442\u043a\u0438 \u043e \u043f\u043e\u044d\u0442\u0430\u0445 \u0438 \u043f\u043e\u044d\u0442\u0438\u043a\u0435",
+            "role": "link"
+          },
+          "e397": {
+            "name": "The Cat Poem",
+            "role": "link"
+          },
+          "e398": {
+            "name": "You Have Mail",
+            "role": "link"
+          },
+          "e399": {
+            "name": "Entrance To The Immortal Sanctuary",
+            "role": "link"
+          },
+          "e4": {
+            "name": "Anthony Hughes",
+            "role": "link"
+          },
+          "e40": {
+            "name": "",
+            "role": "link"
+          },
+          "e400": {
+            "name": "Creative Writing",
+            "role": "link"
+          },
+          "e401": {
+            "name": "Poems of Love",
+            "role": "link"
+          },
+          "e402": {
+            "name": "The Plains of Turia",
+            "role": "link"
+          },
+          "e403": {
+            "name": "~~I Don't Have To Die To Go To Heaven~~",
+            "role": "link"
+          },
+          "e404": {
+            "name": "The Friend Inside by The: Kingofjins",
+            "role": "link"
+          },
+          "e405": {
+            "name": "The Kill Wesley Club, Part I",
+            "role": "link"
+          },
+          "e406": {
+            "name": "The Kill Wesley Club, Part II",
+            "role": "link"
+          },
+          "e407": {
+            "name": "Broken Friendship Poems",
+            "role": "link"
+          },
+          "e408": {
+            "name": "The Handwriting on the Wall",
+            "role": "link"
+          },
+          "e409": {
+            "name": "Quilt Poems",
+            "role": "link"
+          },
+          "e41": {
+            "name": "",
+            "role": "link"
+          },
+          "e410": {
+            "name": "\u5348\u5f8c\u4e09\u6642",
+            "role": "link"
+          },
+          "e411": {
+            "name": "Captain Log's Stardate: 51589.7",
+            "role": "link"
+          },
+          "e412": {
+            "name": "Tuesday 26th October, 1999",
+            "role": "link"
+          },
+          "e413": {
+            "name": "Fave Gallery 01 (12)",
+            "role": "link"
+          },
+          "e414": {
+            "name": "Fave Gallery 02 (7)",
+            "role": "link"
+          },
+          "e415": {
+            "name": "Fave Gallery 03 (17)",
+            "role": "link"
+          },
+          "e416": {
+            "name": "Fave Gallery 04 (4)",
+            "role": "link"
+          },
+          "e417": {
+            "name": "Fave Gallery 05 (12)",
+            "role": "link"
+          },
+          "e418": {
+            "name": "Fave Gallery 06 (8)",
+            "role": "link"
+          },
+          "e419": {
+            "name": "CPU Pic Gallery (13)",
+            "role": "link"
+          },
+          "e42": {
+            "name": "",
+            "role": "link"
+          },
+          "e420": {
+            "name": "Fave Gallery 08 (44)",
+            "role": "link"
+          },
+          "e421": {
+            "name": "Fave Gallery 09 (18)",
+            "role": "link"
+          },
+          "e43": {
+            "name": "",
+            "role": "link"
+          },
+          "e44": {
+            "name": "",
+            "role": "link"
+          },
+          "e45": {
+            "name": "",
+            "role": "link"
+          },
+          "e46": {
+            "name": "",
+            "role": "link"
+          },
+          "e47": {
+            "name": "",
+            "role": "link"
+          },
+          "e48": {
+            "name": "click here",
+            "role": "link"
+          },
+          "e49": {
+            "name": "",
+            "role": "link"
+          },
+          "e5": {
+            "name": "Robin Hughes",
+            "role": "link"
+          },
+          "e50": {
+            "name": "",
+            "role": "link"
+          },
+          "e51": {
+            "name": "",
+            "role": "link"
+          },
+          "e52": {
+            "name": "",
+            "role": "link"
+          },
+          "e53": {
+            "name": "",
+            "role": "link"
+          },
+          "e54": {
+            "name": "",
+            "role": "link"
+          },
+          "e55": {
+            "name": "",
+            "role": "link"
+          },
+          "e56": {
+            "name": "",
+            "role": "link"
+          },
+          "e57": {
+            "name": "",
+            "role": "link"
+          },
+          "e58": {
+            "name": "",
+            "role": "link"
+          },
+          "e59": {
+            "name": "",
+            "role": "link"
+          },
+          "e6": {
+            "name": "WayBack Machine",
+            "role": "link"
+          },
+          "e60": {
+            "name": "",
+            "role": "link"
+          },
+          "e61": {
+            "name": "",
+            "role": "link"
+          },
+          "e62": {
+            "name": "",
+            "role": "link"
+          },
+          "e63": {
+            "name": "",
+            "role": "link"
+          },
+          "e64": {
+            "name": "",
+            "role": "link"
+          },
+          "e65": {
+            "name": "",
+            "role": "link"
+          },
+          "e66": {
+            "name": "",
+            "role": "link"
+          },
+          "e67": {
+            "name": "",
+            "role": "link"
+          },
+          "e68": {
+            "name": "Download Holy Quran Screen Saver",
+            "role": "link"
+          },
+          "e69": {
+            "name": "(B) asic (I) nstructions (B) efore (L) eaving (E) arth",
+            "role": "link"
+          },
+          "e7": {
+            "name": "",
+            "role": "link"
+          },
+          "e70": {
+            "name": "",
+            "role": "link"
+          },
+          "e71": {
+            "name": "",
+            "role": "link"
+          },
+          "e72": {
+            "name": "",
+            "role": "link"
+          },
+          "e73": {
+            "name": "",
+            "role": "link"
+          },
+          "e74": {
+            "name": "",
+            "role": "link"
+          },
+          "e75": {
+            "name": "",
+            "role": "link"
+          },
+          "e76": {
+            "name": "",
+            "role": "link"
+          },
+          "e77": {
+            "name": "",
+            "role": "link"
+          },
+          "e78": {
+            "name": "",
+            "role": "link"
+          },
+          "e79": {
+            "name": "",
+            "role": "link"
+          },
+          "e8": {
+            "name": "",
+            "role": "link"
+          },
+          "e80": {
+            "name": "",
+            "role": "link"
+          },
+          "e81": {
+            "name": "",
+            "role": "link"
+          },
+          "e82": {
+            "name": "",
+            "role": "link"
+          },
+          "e83": {
+            "name": "",
+            "role": "link"
+          },
+          "e84": {
+            "name": "",
+            "role": "link"
+          },
+          "e85": {
+            "name": "",
+            "role": "link"
+          },
+          "e86": {
+            "name": "",
+            "role": "link"
+          },
+          "e87": {
+            "name": "",
+            "role": "link"
+          },
+          "e88": {
+            "name": "Harleys 2002\u20132005",
+            "role": "link"
+          },
+          "e89": {
+            "name": "How dare you come to my web page!!!",
+            "role": "link"
+          },
+          "e9": {
+            "name": "",
+            "role": "link"
+          },
+          "e90": {
+            "name": "",
+            "role": "link"
+          },
+          "e91": {
+            "name": "",
+            "role": "link"
+          },
+          "e92": {
+            "name": "",
+            "role": "link"
+          },
+          "e93": {
+            "name": "",
+            "role": "link"
+          },
+          "e94": {
+            "name": "",
+            "role": "link"
+          },
+          "e95": {
+            "name": "",
+            "role": "link"
+          },
+          "e96": {
+            "name": "",
+            "role": "link"
+          },
+          "e97": {
+            "name": "",
+            "role": "link"
+          },
+          "e98": {
+            "name": "",
+            "role": "link"
+          },
+          "e99": {
+            "name": "",
+            "role": "link"
+          }
+        },
+        "snapshot": "- heading \"A love letter to the Internet of old\" [level=1, ref=e2]\n- link \"Cameron Askin\" [ref=e3]\n- link \"Anthony Hughes\" [ref=e4]\n- link \"Robin Hughes\" [ref=e5]\n- link \"WayBack Machine\" [ref=e6]\n- link \"Press\" [ref=e122]\n- link \"Disclaimer\" [ref=e123]\n- link \"Download soundtrack\" [ref=e124]\n- link \"Patreon\" [ref=e125]\n- link [ref=e1]\n- link [ref=e7]\n- link [ref=e8]\n- link [ref=e9]\n- link [ref=e10]\n- link [ref=e11]\n- link [ref=e12]\n- link [ref=e13]\n- link [ref=e14]\n- link [ref=e15]\n- link [ref=e16]\n- link [ref=e17]\n- link [ref=e18]\n- link [ref=e19]\n- link [ref=e20]\n- link [ref=e21]\n- link [ref=e22]\n- link [ref=e23]\n- link [ref=e24]\n- link [ref=e25]\n- link [ref=e26]\n- link [ref=e27]\n- link [ref=e28]\n- link [ref=e29]\n- link \"Click here\" [ref=e30]\n- link [ref=e31]\n- link [ref=e32]\n- link [ref=e33]\n- link [ref=e34]\n- link [ref=e35]\n- link [ref=e36]\n- link [ref=e37]\n- link [ref=e38]\n- link [ref=e39]\n- link [ref=e40]\n- link [ref=e41]\n- link [ref=e42]\n- link [ref=e43]\n- link [ref=e44]\n- link [ref=e45]\n- link [ref=e46]\n- link [ref=e47]\n- link \"click here\" [ref=e48]\n- link \"hotmale@hotmail.com\" [ref=e126]\n- link [ref=e49]\n- link [ref=e50]\n- link [ref=e51]\n- link [ref=e52]\n- link [ref=e53]\n- link [ref=e54]\n- link [ref=e55]\n- link \"More about me\" [ref=e127]\n- link [ref=e128]\n- link [ref=e129]\n- link [ref=e130]\n- link [ref=e131]\n- link [ref=e132]\n- link [ref=e133]\n- link [ref=e134]\n- link \"_.-Visit Flame\u2019s Bedroom-._\" [ref=e135]\n- link [ref=e56]\n- link [ref=e57]\n- link [ref=e58]\n- link [ref=e59]\n- link [ref=e136]\n- link [ref=e137]\n- link [ref=e138]\n- link [ref=e139]\n- link \"Email Me\" [ref=e140]\n- link \"Dolphin\" [ref=e141]\n- link [ref=e60]\n- link [ref=e61]\n- link [ref=e62]\n- link [ref=e63]\n- link [ref=e64]\n- link [ref=e65]\n- link [ref=e66]\n- link [ref=e67]\n- link \"Download Holy Quran Screen Saver\" [ref=e68]\n- link \"(B) asic (I) nstructions (B) efore (L) eaving (E) arth\" [ref=e69]\n- link [ref=e70]\n- link [ref=e71]\n- link [ref=e72]\n- link [ref=e73]\n- link [ref=e74]\n- link [ref=e318]\n- link [ref=e319]\n- link [ref=e320]\n- link [ref=e321]\n- link [ref=e322]\n- link [ref=e323]\n- link [ref=e324]\n- link [ref=e325]\n- link [ref=e326]\n- link \"Jar Jar's Cottage\" [ref=e327]\n- link [ref=e328]\n- link [ref=e142]\n- link [ref=e143]\n- link [ref=e144]\n- link [ref=e329]\n- link [ref=e330]\n- link [ref=e331]\n- link [ref=e332]\n- link [ref=e333]\n- link [ref=e334]\n- link [ref=e75]\n- link [ref=e76]\n- link [ref=e77]\n- link [ref=e78]\n- link [ref=e79]\n- link [ref=e80]\n- link [ref=e81]\n- link [ref=e82]\n- link [ref=e335]\n- link [ref=e336]\n- link \"97'\" [ref=e377]\n- link \"98'\" [ref=e378]\n- link [ref=e337]\n- link [ref=e338]\n- link [ref=e339]\n- link \"VERY USEFUL LINKS AND CAMARO OWNER'S PHOTOS\" [ref=e340]\n- link [ref=e83]\n- link [ref=e84]\n- link [ref=e85]\n- link [ref=e86]\n- link [ref=e87]\n- link \"Harleys 2002\u20132005\" [ref=e88]\n- link [ref=e145]\n- link [ref=e146]\n- link [ref=e147]\n- link [ref=e148]\n- link [ref=e149]\n- link [ref=e150]\n- link [ref=e151]\n- link [ref=e152]\n- link [ref=e153]\n- link [ref=e154]\n- link [ref=e155]\n- link [ref=e156]\n- link \"The Place Where In My Soul Lingers...\" [ref=e157]\n- link \"1. Anarchy\" [ref=e158]\n- link \"2. Destruction\" [ref=e159]\n- link \"3. Misery/suffering\" [ref=e160]\n- link \"How dare you come to my web page!!!\" [ref=e89]\n- link [ref=e90]\n- link [ref=e91]\n- link [ref=e92]\n- link [ref=e93]\n- link [ref=e94]\n- link [ref=e95]\n- link [ref=e96]\n- link [ref=e97]\n- link [ref=e98]\n- link [ref=e99]\n- link \"DOWNLOAD My private files\" [ref=e161]\n- link \"CLASSICS\" [ref=e208]\n- link \"TRANCE\" [ref=e209]\n- link \"JUNGLE\" [ref=e210]\n- link \"MP3\" [ref=e211]\n- link \"HOUSE\" [ref=e212]\n- link [ref=e100]\n- link [ref=e101]\n- link [ref=e102]\n- link [ref=e162]\n- link [ref=e213]\n- cell \"5318008\" [ref=e341]\n  - textbox [disabled, ref=e379]: 5318008\n- cell \"sin\" [ref=e342] clickable [cursor:pointer]\n- cell \"cos\" [ref=e343] clickable [cursor:pointer]\n- cell \"tan\" [ref=e344] clickable [cursor:pointer]\n- cell \"\u03c0\" [ref=e345] clickable [cursor:pointer]\n- cell \"7\" [ref=e346] clickable [cursor:pointer]\n- cell \"8\" [ref=e347] clickable [cursor:pointer]\n- cell \"9\" [ref=e348] clickable [cursor:pointer]\n- cell \"+\" [ref=e349] clickable [cursor:pointer]\n- cell \"4\" [ref=e350] clickable [cursor:pointer]\n- cell \"5\" [ref=e351] clickable [cursor:pointer]\n- cell \"6\" [ref=e352] clickable [cursor:pointer]\n- cell \"-\" [ref=e353] clickable [cursor:pointer]\n- cell \"1\" [ref=e354] clickable [cursor:pointer]\n- cell \"2\" [ref=e355] clickable [cursor:pointer]\n- cell \"3\" [ref=e356] clickable [cursor:pointer]\n- cell \"/\" [ref=e357] clickable [cursor:pointer]\n- cell \"C\" [ref=e358] clickable [cursor:pointer]\n- cell \"0\" [ref=e359] clickable [cursor:pointer]\n- cell \"=\" [ref=e360] clickable [cursor:pointer]\n- cell \"*\" [ref=e361] clickable [cursor:pointer]\n- link [ref=e362]\n- link [ref=e363]\n- heading \"Hello! Welcome to my net home.\" [level=3, ref=e214]\n- heading \"I don't know if you have a website or not BUT LET ME TELL YOU SOMETHING... writing an intro is hard.\" [level=4, ref=e215]\n- cell \"\u641c\u5c0b\u5f15\u64ce\u7db2\u7ad9!\" [ref=e380]\n- cell \"Yahoo!\" [ref=e381]\n- cell \"Hobbies:\" [ref=e382]\n- cell \"everything including daydreaming.\" [ref=e383]\n- cell \"Friends:\" [ref=e384]\n- cell \"I\u2019ve swapped friends about a hundred times since the last major update\" [ref=e385]\n- cell \"What I\u2019m doing at the moment (Not Literally!):\" [ref=e386]\n- cell \"I\u2019m collecting rainbows and I play the fool! Are you smiling yet?? --- I hope so!\" [ref=e387]\n- cell \"Quotes:\" [ref=e388]\n- cell \"\u201cIs a Sunset . . . The End or a Begining?\u201d. \\\"You can\u2019t love anybody until you love yourself\u201d. \u201cHow to be an artist: Stay loose and learn to watch snails.\u201d\" [ref=e389]\n- link \"Captain Log's Stardate: 51589.7\" [ref=e411]\n- link \"Tuesday 26th October, 1999\" [ref=e412]\n- link [ref=e163]\n- link [ref=e164]\n- link [ref=e103]\n- heading \"FREE searches powered by Google\" [level=5, ref=e104]\n  - link \"Google\" [ref=e165]\n- textbox \"Enter search phrase here......\" [ref=e166]\n- link [ref=e105]\n- link [ref=e106]\n- link [ref=e216]\n- link [ref=e107]\n- link [ref=e217]\n- link [ref=e218]\n- link [ref=e219]\n- link [ref=e108]\n- link [ref=e220]\n- link [ref=e109]\n- link [ref=e221]\n- link [ref=e222]\n- link [ref=e167]\n- link \"HOW THE INTERNET WORKS\" [ref=e168]\n- link [ref=e364]\n- link [ref=e110]\n- link \"ENTRANCE for MS IE4\" [ref=e223]\n- link \"ENTRANCE for NETSCAPE 4\" [ref=e224]\n- link [ref=e169]\n- link [ref=e170]\n- link [ref=e225]\n- link [ref=e171]\n- link [ref=e365]\n- link [ref=e172]\n- link [ref=e173]\n- link [ref=e174]\n- link [ref=e175]\n- link [ref=e176]\n- link [ref=e366]\n- link \"IN SYNC WITH *N SYNC\" [ref=e367]\n- link \"\\\"IN SYNC WITH *N SYNC\\\" the webring?\" [ref=e368]\n- link \"Prev\" [ref=e369]\n- link \"Next\" [ref=e370]\n- link \"Random site\" [ref=e371]\n- link \"List Sites\" [ref=e372]\n- link [ref=e373]\n- link [ref=e177]\n- link [ref=e178]\n- link [ref=e179]\n- link [ref=e180]\n- link \"Where two hearts became one.\" [ref=e181]\n- link [ref=e182]\n- listitem \"[System Default]\" [level=1, ref=e183] clickable [cursor:pointer]\n  - link \"[System Default]\" [ref=e226]\n- listitem \"[Dub version]\" [level=1, ref=e184] clickable [cursor:pointer]\n  - link \"[Dub version]\" [ref=e227]\n- listitem \"[Acapella cover]\" [level=1, ref=e185] clickable [cursor:pointer]\n  - link \"[Acapella cover]\" [ref=e228]\n- listitem \"[Carpentry Mix]\" [level=1, ref=e186] clickable [cursor:pointer]\n  - link \"[Carpentry Mix]\" [ref=e229]\n- link [ref=e187]\n- link [ref=e230]\n- link [ref=e231]\n- link \"Marie\u00b4s Webdesign!\" [ref=e232]\n- link \"Daisy's Page - Where Jesus is Lord\" [ref=e233]\n- link [ref=e234]\n- link [ref=e235]\n- link [ref=e236]\n- link \"Check out this cats link\" [ref=e237]\n- cell \"Days of Our Lives: Maison Blanche Revisited. A John and Marlena Alternate Reality\" [ref=e238]\n  - link \"Days of Our Lives: Maison Blanche Revisited. A John and Marlena Alternate Reality\" [ref=e390]\n- cell \"Love Letter Cat Poetry\" [ref=e239]\n  - link \"Love Letter\" [ref=e391]\n  - link \"Cat Poetry\" [ref=e392]\n- cell \"Fave Gallery 01 (12) Fave Gallery 02 (7) Fave Gallery 03 (17) Fave Gallery 04 (4) Fave Gallery 05 (12) Fave Gallery 06 (8) CPU Pic Gallery (13) Fave Gallery 08 (44) Fave Gallery 09 (18)\" [ref=e240]\n  - link \"Fave Gallery 01 (12)\" [ref=e413]\n  - link \"Fave Gallery 02 (7)\" [ref=e414]\n  - link \"Fave Gallery 03 (17)\" [ref=e415]\n  - link \"Fave Gallery 04 (4)\" [ref=e416]\n  - link \"Fave Gallery 05 (12)\" [ref=e417]\n  - link \"Fave Gallery 06 (8)\" [ref=e418]\n  - link \"CPU Pic Gallery (13)\" [ref=e419]\n  - link \"Fave Gallery 08 (44)\" [ref=e420]\n  - link \"Fave Gallery 09 (18)\" [ref=e421]\n- cell \"The Zit\" [ref=e241]\n  - link \"The Zit\" [ref=e393]\n- cell \"Prohibition Times\" [ref=e242]\n  - link \"Prohibition Times\" [ref=e394]\n- cell \"1984 SoHo Street Erotic Fiction \u0417\u0430\u043c\u0435\u0442\u043a\u0438 \u043e \u043f\u043e\u044d\u0442\u0430\u0445 \u0438 \u043f\u043e\u044d\u0442\u0438\u043a\u0435 The Cat Poem\" [ref=e243]\n  - link \"1984 SoHo Street Erotic Fiction\" [ref=e395]\n  - link \"\u0417\u0430\u043c\u0435\u0442\u043a\u0438 \u043e \u043f\u043e\u044d\u0442\u0430\u0445 \u0438 \u043f\u043e\u044d\u0442\u0438\u043a\u0435\" [ref=e396]\n  - link \"The Cat Poem\" [ref=e397]\n- cell \"You Have Mail\" [ref=e244]\n  - link \"You Have Mail\" [ref=e398]\n- cell \"Entrance To The Immortal Sanctuary\" [ref=e245]\n  - link \"Entrance To The Immortal Sanctuary\" [ref=e399]\n- cell \"Creative Writing Poems of Love\" [ref=e246]\n  - link \"Creative Writing\" [ref=e400]\n  - link \"Poems of Love\" [ref=e401]\n- cell \"The Plains of Turia\" [ref=e247]\n  - link \"The Plains of Turia\" [ref=e402]\n- cell \"~~I Don't Have To Die To Go To Heaven~~\" [ref=e248]\n  - link \"~~I Don't Have To Die To Go To Heaven~~\" [ref=e403]\n- cell \"The Friend Inside by The: Kingofjins\" [ref=e249]\n  - link \"The Friend Inside by The: Kingofjins\" [ref=e404]\n- cell \"The Kill Wesley Club, Part I The Kill Wesley Club, Part II\" [ref=e250]\n  - link \"The Kill Wesley Club, Part I\" [ref=e405]\n  - link \"The Kill Wesley Club, Part II\" [ref=e406]\n- cell \"Broken Friendship Poems The Handwriting on the Wall Quilt Poems\" [ref=e251]\n  - link \"Broken Friendship Poems\" [ref=e407]\n  - link \"The Handwriting on the Wall\" [ref=e408]\n  - link \"Quilt Poems\" [ref=e409]\n- link [ref=e188]\n- link [ref=e189]\n- link [ref=e190]\n- link [ref=e191]\n- link [ref=e192]\n- link [ref=e193]\n- link [ref=e194]\n- link [ref=e195]\n- link \"Amy's Cool Spot\" [ref=e252]\n- link \"Titanic SUCKS!\" [ref=e253]\n- link \"\u05dc\u05d9\u05d0 \u05dc\u05e9 \u05dd\u05d9\u05e8\u05e6\u05e7\u05d4 \u05dd\u05d9\u05e8\u05d5\u05e4\u05d9\u05e1\u05d4\" [ref=e254]\n- link \"Warren's World\" [ref=e255]\n- link \"Kimberly's Dragons\" [ref=e256]\n- link \"Purity Test\" [ref=e257]\n- link \"B E E ' H O M E P A G E\" [ref=e258]\n- link \"[e.\u00b5sik]\" [ref=e259]\n- link \"Sheik Freaks Anonymous\" [ref=e260]\n- link \"Tony's Yoga Site\" [ref=e261]\n- link \"The Story of Me\" [ref=e262]\n- link \"A Letter From The Chief\" [ref=e263]\n- link \"Spicy Pork Cutlets\" [ref=e264]\n- link \"Wolf Page\" [ref=e265]\n- link \"Various Topics on Electronic Media in Religion\" [ref=e266]\n- link \"The Jade Hut\" [ref=e267]\n- link \"Berry Creek Guns\" [ref=e268]\n- link \"The Future\" [ref=e269]\n- link \"THE SHIRE\" [ref=e270]\n- link \"Sanitorium\" [ref=e271]\n- link \"Bikini World\" [ref=e272]\n- link \"Foal Page\" [ref=e273]\n- link \"Cool Website\" [ref=e274]\n- link \"Snow storm\" [ref=e275]\n- link \"Klasyczne Okinawskie Karate\" [ref=e276]\n- link \"The Brian Littrell Obsseson Page!\" [ref=e277]\n- link \"Virtual Jesus\" [ref=e278]\n- link \"Dr. Dale's Cyber Therapy Clinic\" [ref=e279]\n- link \"LUAI AL - SARRAJ!\" [ref=e280]\n- link \"Red Wolf's Den\" [ref=e281]\n- link \"Kayli's Art Gallery\" [ref=e282]\n- link \"Why? World\" [ref=e283]\n- link \"E-Wall\" [ref=e284]\n- link \"Specially For Fann Wong\" [ref=e285]\n- link \"The Realm of Stunt Gods and Godesses\" [ref=e286]\n- link \"Dantosofts Web Design\" [ref=e287]\n- link \"Oops\" [ref=e288]\n- link \"Closet Vampire Central\" [ref=e289]\n- link \"*NSync Are My Angels\" [ref=e290]\n- link \"Carol\u2019s Native American page\" [ref=e291]\n- link \"aldruH\u2019s Domain\" [ref=e292]\n- link \"Romantic Bottom's Gay World\" [ref=e293]\n- link \"Movie Dogs\" [ref=e294]\n- link \"5ive in Israel\" [ref=e295]\n- link \"Parrot Finches\" [ref=e296]\n- link \"Awareness\" [ref=e297]\n- link \"Indadane Kennel\" [ref=e298]\n- link \"Agreeable Stamp Store\" [ref=e299]\n- link \"Textos & Con-textos\" [ref=e300]\n- link \"Saddlebred Kids\" [ref=e301]\n- link \"The Fold\" [ref=e302]\n- link \"Captain SWEDE's Web World\" [ref=e303]\n- link \"Website Lama\" [ref=e304]\n- link \"Douglas Johnson's Website\" [ref=e305]\n- link \"The Hat Society\" [ref=e306]\n- link \"Dinosaur Icons\" [ref=e307]\n- link [ref=e111]\n- link [ref=e196]\n- link [ref=e197]\n- link [ref=e198]\n- link [ref=e199]\n- link [ref=e112]\n- link [ref=e113]\n- link [ref=e114]\n- link [ref=e115]\n- link \"\u672c\u7ad9 \u5efa\u8b70\u4f7f\u7528800*600 \u89e3\u6790\u5ea6\u700f\u89bd!\" [ref=e308]\n- link \"\u5348\u5f8c\u4e09\u6642\" [ref=e410]\n- link [ref=e374]\n- link [ref=e200]\n- link [ref=e375]\n- link [ref=e376]\n- link [ref=e201]\n- link \"\u53f0\u4e2d\u4e16\u5b89\u85e5\u5e2b\u85e5\u5c40\" [ref=e202]\n- link \"\u65b0\u9801\u9762 39\" [ref=e203]\n- link [ref=e309]\n- link [ref=e204]\n- link [ref=e205]\n- link [ref=e206]\n- link [ref=e207]\n- link \"PERFECT FERRET GATE. YOU TRIED BABY GATES; NOW WE OFFER SOMETHING THAT REALLY WORKS!!!\" [ref=e310]\n- link \"*DATE* *RELATE* *FIND A MATE* MAKE E-PALS ON THIS SITE\" [ref=e311]\n- link \"SURF THE WEB AND THEY PAY \u2022 NAVEGA EN LA RED Y ELLOS PAGAN\" [ref=e312]\n- link \"R U LONELY? R U ALONE? R U LOOKING FOR FRIENDS? YOPALS!\" [ref=e313]\n- link \"AMATEUR SWINGERS-HOT WIVE-SEXDATING-SWINGER WIVES-DATING ADVICE\" [ref=e314]\n- link \"REWARDS FOR EVOLUTION EVIDENCE: $1,000,000\" [ref=e315]\n- link \"HAVE YOU BEEN BUYING 4D NUMBERS AND NEVER WINNING?\" [ref=e316]\n- link \"HOW TO MAKE MONEY ON THE INTERNET READING EMAILS, SURFING WEB SITES AND MORE!\" [ref=e317]\n- link [ref=e116]\n- link [ref=e117]\n- link [ref=e118]\n- link [ref=e119]\n- link [ref=e120]\n- link \"www.hell.com\" [ref=e121]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/cameron-hero.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/cameron-hero.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "scroll",
+      "down",
+      "1200"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "scrolled": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "2000"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 2000,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/cameron-interior.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/cameron-interior.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://www.cameronsworld.net/",
+        "refs": {
+          "e1": {
+            "name": "",
+            "role": "link"
+          },
+          "e10": {
+            "name": "",
+            "role": "link"
+          },
+          "e100": {
+            "name": "",
+            "role": "link"
+          },
+          "e101": {
+            "name": "",
+            "role": "link"
+          },
+          "e102": {
+            "name": "",
+            "role": "link"
+          },
+          "e103": {
+            "name": "",
+            "role": "link"
+          },
+          "e104": {
+            "name": "FREE searches powered by Google",
+            "role": "heading"
+          },
+          "e105": {
+            "name": "",
+            "role": "link"
+          },
+          "e106": {
+            "name": "",
+            "role": "link"
+          },
+          "e107": {
+            "name": "",
+            "role": "link"
+          },
+          "e108": {
+            "name": "",
+            "role": "link"
+          },
+          "e109": {
+            "name": "",
+            "role": "link"
+          },
+          "e11": {
+            "name": "",
+            "role": "link"
+          },
+          "e110": {
+            "name": "",
+            "role": "link"
+          },
+          "e111": {
+            "name": "",
+            "role": "link"
+          },
+          "e112": {
+            "name": "",
+            "role": "link"
+          },
+          "e113": {
+            "name": "",
+            "role": "link"
+          },
+          "e114": {
+            "name": "",
+            "role": "link"
+          },
+          "e115": {
+            "name": "",
+            "role": "link"
+          },
+          "e116": {
+            "name": "",
+            "role": "link"
+          },
+          "e117": {
+            "name": "",
+            "role": "link"
+          },
+          "e118": {
+            "name": "",
+            "role": "link"
+          },
+          "e119": {
+            "name": "",
+            "role": "link"
+          },
+          "e12": {
+            "name": "",
+            "role": "link"
+          },
+          "e120": {
+            "name": "",
+            "role": "link"
+          },
+          "e121": {
+            "name": "www.hell.com",
+            "role": "link"
+          },
+          "e122": {
+            "name": "Press",
+            "role": "link"
+          },
+          "e123": {
+            "name": "Disclaimer",
+            "role": "link"
+          },
+          "e124": {
+            "name": "Download soundtrack",
+            "role": "link"
+          },
+          "e125": {
+            "name": "Patreon",
+            "role": "link"
+          },
+          "e126": {
+            "name": "hotmale@hotmail.com",
+            "role": "link"
+          },
+          "e127": {
+            "name": "More about me",
+            "role": "link"
+          },
+          "e128": {
+            "name": "",
+            "role": "link"
+          },
+          "e129": {
+            "name": "",
+            "role": "link"
+          },
+          "e13": {
+            "name": "",
+            "role": "link"
+          },
+          "e130": {
+            "name": "",
+            "role": "link"
+          },
+          "e131": {
+            "name": "",
+            "role": "link"
+          },
+          "e132": {
+            "name": "",
+            "role": "link"
+          },
+          "e133": {
+            "name": "",
+            "role": "link"
+          },
+          "e134": {
+            "name": "",
+            "role": "link"
+          },
+          "e135": {
+            "name": "_.-Visit Flame\u2019s Bedroom-._",
+            "role": "link"
+          },
+          "e136": {
+            "name": "",
+            "role": "link"
+          },
+          "e137": {
+            "name": "",
+            "role": "link"
+          },
+          "e138": {
+            "name": "",
+            "role": "link"
+          },
+          "e139": {
+            "name": "",
+            "role": "link"
+          },
+          "e14": {
+            "name": "",
+            "role": "link"
+          },
+          "e140": {
+            "name": "Email Me",
+            "role": "link"
+          },
+          "e141": {
+            "name": "Dolphin",
+            "role": "link"
+          },
+          "e142": {
+            "name": "",
+            "role": "link"
+          },
+          "e143": {
+            "name": "",
+            "role": "link"
+          },
+          "e144": {
+            "name": "",
+            "role": "link"
+          },
+          "e145": {
+            "name": "",
+            "role": "link"
+          },
+          "e146": {
+            "name": "",
+            "role": "link"
+          },
+          "e147": {
+            "name": "",
+            "role": "link"
+          },
+          "e148": {
+            "name": "",
+            "role": "link"
+          },
+          "e149": {
+            "name": "",
+            "role": "link"
+          },
+          "e15": {
+            "name": "",
+            "role": "link"
+          },
+          "e150": {
+            "name": "",
+            "role": "link"
+          },
+          "e151": {
+            "name": "",
+            "role": "link"
+          },
+          "e152": {
+            "name": "",
+            "role": "link"
+          },
+          "e153": {
+            "name": "",
+            "role": "link"
+          },
+          "e154": {
+            "name": "",
+            "role": "link"
+          },
+          "e155": {
+            "name": "",
+            "role": "link"
+          },
+          "e156": {
+            "name": "",
+            "role": "link"
+          },
+          "e157": {
+            "name": "The Place Where In My Soul Lingers...",
+            "role": "link"
+          },
+          "e158": {
+            "name": "1. Anarchy",
+            "role": "link"
+          },
+          "e159": {
+            "name": "2. Destruction",
+            "role": "link"
+          },
+          "e16": {
+            "name": "",
+            "role": "link"
+          },
+          "e160": {
+            "name": "3. Misery/suffering",
+            "role": "link"
+          },
+          "e161": {
+            "name": "DOWNLOAD My private files",
+            "role": "link"
+          },
+          "e162": {
+            "name": "",
+            "role": "link"
+          },
+          "e163": {
+            "name": "",
+            "role": "link"
+          },
+          "e164": {
+            "name": "",
+            "role": "link"
+          },
+          "e165": {
+            "name": "Google",
+            "role": "link"
+          },
+          "e166": {
+            "name": "Enter search phrase here......",
+            "role": "textbox"
+          },
+          "e167": {
+            "name": "",
+            "role": "link"
+          },
+          "e168": {
+            "name": "HOW THE INTERNET WORKS",
+            "role": "link"
+          },
+          "e169": {
+            "name": "",
+            "role": "link"
+          },
+          "e17": {
+            "name": "",
+            "role": "link"
+          },
+          "e170": {
+            "name": "",
+            "role": "link"
+          },
+          "e171": {
+            "name": "",
+            "role": "link"
+          },
+          "e172": {
+            "name": "",
+            "role": "link"
+          },
+          "e173": {
+            "name": "",
+            "role": "link"
+          },
+          "e174": {
+            "name": "",
+            "role": "link"
+          },
+          "e175": {
+            "name": "",
+            "role": "link"
+          },
+          "e176": {
+            "name": "",
+            "role": "link"
+          },
+          "e177": {
+            "name": "",
+            "role": "link"
+          },
+          "e178": {
+            "name": "",
+            "role": "link"
+          },
+          "e179": {
+            "name": "",
+            "role": "link"
+          },
+          "e18": {
+            "name": "",
+            "role": "link"
+          },
+          "e180": {
+            "name": "",
+            "role": "link"
+          },
+          "e181": {
+            "name": "Where two hearts became one.",
+            "role": "link"
+          },
+          "e182": {
+            "name": "",
+            "role": "link"
+          },
+          "e183": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e184": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e185": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e186": {
+            "name": "",
+            "role": "listitem"
+          },
+          "e187": {
+            "name": "",
+            "role": "link"
+          },
+          "e188": {
+            "name": "",
+            "role": "link"
+          },
+          "e189": {
+            "name": "",
+            "role": "link"
+          },
+          "e19": {
+            "name": "",
+            "role": "link"
+          },
+          "e190": {
+            "name": "",
+            "role": "link"
+          },
+          "e191": {
+            "name": "",
+            "role": "link"
+          },
+          "e192": {
+            "name": "",
+            "role": "link"
+          },
+          "e193": {
+            "name": "",
+            "role": "link"
+          },
+          "e194": {
+            "name": "",
+            "role": "link"
+          },
+          "e195": {
+            "name": "",
+            "role": "link"
+          },
+          "e196": {
+            "name": "",
+            "role": "link"
+          },
+          "e197": {
+            "name": "",
+            "role": "link"
+          },
+          "e198": {
+            "name": "",
+            "role": "link"
+          },
+          "e199": {
+            "name": "",
+            "role": "link"
+          },
+          "e2": {
+            "name": "A love letter to the Internet of old",
+            "role": "heading"
+          },
+          "e20": {
+            "name": "",
+            "role": "link"
+          },
+          "e200": {
+            "name": "",
+            "role": "link"
+          },
+          "e201": {
+            "name": "",
+            "role": "link"
+          },
+          "e202": {
+            "name": "\u53f0\u4e2d\u4e16\u5b89\u85e5\u5e2b\u85e5\u5c40",
+            "role": "link"
+          },
+          "e203": {
+            "name": "\u65b0\u9801\u9762 39",
+            "role": "link"
+          },
+          "e204": {
+            "name": "",
+            "role": "link"
+          },
+          "e205": {
+            "name": "",
+            "role": "link"
+          },
+          "e206": {
+            "name": "",
+            "role": "link"
+          },
+          "e207": {
+            "name": "",
+            "role": "link"
+          },
+          "e208": {
+            "name": "CLASSICS",
+            "role": "link"
+          },
+          "e209": {
+            "name": "TRANCE",
+            "role": "link"
+          },
+          "e21": {
+            "name": "",
+            "role": "link"
+          },
+          "e210": {
+            "name": "JUNGLE",
+            "role": "link"
+          },
+          "e211": {
+            "name": "MP3",
+            "role": "link"
+          },
+          "e212": {
+            "name": "HOUSE",
+            "role": "link"
+          },
+          "e213": {
+            "name": "",
+            "role": "link"
+          },
+          "e214": {
+            "name": "Hello! Welcome to my net home.",
+            "role": "heading"
+          },
+          "e215": {
+            "name": "I don't know if you have a website or not BUT LET ME TELL YOU SOMETHING... writing an intro is hard.",
+            "role": "heading"
+          },
+          "e216": {
+            "name": "",
+            "role": "link"
+          },
+          "e217": {
+            "name": "",
+            "role": "link"
+          },
+          "e218": {
+            "name": "",
+            "role": "link"
+          },
+          "e219": {
+            "name": "",
+            "role": "link"
+          },
+          "e22": {
+            "name": "",
+            "role": "link"
+          },
+          "e220": {
+            "name": "",
+            "role": "link"
+          },
+          "e221": {
+            "name": "",
+            "role": "link"
+          },
+          "e222": {
+            "name": "",
+            "role": "link"
+          },
+          "e223": {
+            "name": "ENTRANCE for MS IE4",
+            "role": "link"
+          },
+          "e224": {
+            "name": "ENTRANCE for NETSCAPE 4",
+            "role": "link"
+          },
+          "e225": {
+            "name": "",
+            "role": "link"
+          },
+          "e226": {
+            "name": "[System Default]",
+            "role": "link"
+          },
+          "e227": {
+            "name": "[Dub version]",
+            "role": "link"
+          },
+          "e228": {
+            "name": "[Acapella cover]",
+            "role": "link"
+          },
+          "e229": {
+            "name": "[Carpentry Mix]",
+            "role": "link"
+          },
+          "e23": {
+            "name": "",
+            "role": "link"
+          },
+          "e230": {
+            "name": "",
+            "role": "link"
+          },
+          "e231": {
+            "name": "",
+            "role": "link"
+          },
+          "e232": {
+            "name": "Marie\u00b4s Webdesign!",
+            "role": "link"
+          },
+          "e233": {
+            "name": "Daisy's Page - Where Jesus is Lord",
+            "role": "link"
+          },
+          "e234": {
+            "name": "",
+            "role": "link"
+          },
+          "e235": {
+            "name": "",
+            "role": "link"
+          },
+          "e236": {
+            "name": "",
+            "role": "link"
+          },
+          "e237": {
+            "name": "Check out this cats link",
+            "role": "link"
+          },
+          "e238": {
+            "name": "Days of Our Lives: Maison Blanche Revisited. A John and Marlena Alternate Reality",
+            "role": "cell"
+          },
+          "e239": {
+            "name": "Love Letter Cat Poetry",
+            "role": "cell"
+          },
+          "e24": {
+            "name": "",
+            "role": "link"
+          },
+          "e240": {
+            "name": "Fave Gallery 01 (12) Fave Gallery 02 (7) Fave Gallery 03 (17) Fave Gallery 04 (4) Fave Gallery 05 (12) Fave Gallery 06 (8) CPU Pic Gallery (13) Fave Gallery 08 (44) Fave Gallery 09 (18)",
+            "role": "cell"
+          },
+          "e241": {
+            "name": "The Zit",
+            "role": "cell"
+          },
+          "e242": {
+            "name": "Prohibition Times",
+            "role": "cell"
+          },
+          "e243": {
+            "name": "1984 SoHo Street Erotic Fiction \u0417\u0430\u043c\u0435\u0442\u043a\u0438 \u043e \u043f\u043e\u044d\u0442\u0430\u0445 \u0438 \u043f\u043e\u044d\u0442\u0438\u043a\u0435 The Cat Poem",
+            "role": "cell"
+          },
+          "e244": {
+            "name": "You Have Mail",
+            "role": "cell"
+          },
+          "e245": {
+            "name": "Entrance To The Immortal Sanctuary",
+            "role": "cell"
+          },
+          "e246": {
+            "name": "Creative Writing Poems of Love",
+            "role": "cell"
+          },
+          "e247": {
+            "name": "The Plains of Turia",
+            "role": "cell"
+          },
+          "e248": {
+            "name": "~~I Don't Have To Die To Go To Heaven~~",
+            "role": "cell"
+          },
+          "e249": {
+            "name": "The Friend Inside by The: Kingofjins",
+            "role": "cell"
+          },
+          "e25": {
+            "name": "",
+            "role": "link"
+          },
+          "e250": {
+            "name": "The Kill Wesley Club, Part I The Kill Wesley Club, Part II",
+            "role": "cell"
+          },
+          "e251": {
+            "name": "Broken Friendship Poems The Handwriting on the Wall Quilt Poems",
+            "role": "cell"
+          },
+          "e252": {
+            "name": "Amy's Cool Spot",
+            "role": "link"
+          },
+          "e253": {
+            "name": "Titanic SUCKS!",
+            "role": "link"
+          },
+          "e254": {
+            "name": "\u05dc\u05d9\u05d0 \u05dc\u05e9 \u05dd\u05d9\u05e8\u05e6\u05e7\u05d4 \u05dd\u05d9\u05e8\u05d5\u05e4\u05d9\u05e1\u05d4",
+            "role": "link"
+          },
+          "e255": {
+            "name": "Warren's World",
+            "role": "link"
+          },
+          "e256": {
+            "name": "Kimberly's Dragons",
+            "role": "link"
+          },
+          "e257": {
+            "name": "Purity Test",
+            "role": "link"
+          },
+          "e258": {
+            "name": "B E E ' H O M E P A G E",
+            "role": "link"
+          },
+          "e259": {
+            "name": "[e.\u00b5sik]",
+            "role": "link"
+          },
+          "e26": {
+            "name": "",
+            "role": "link"
+          },
+          "e260": {
+            "name": "Sheik Freaks Anonymous",
+            "role": "link"
+          },
+          "e261": {
+            "name": "Tony's Yoga Site",
+            "role": "link"
+          },
+          "e262": {
+            "name": "The Story of Me",
+            "role": "link"
+          },
+          "e263": {
+            "name": "A Letter From The Chief",
+            "role": "link"
+          },
+          "e264": {
+            "name": "Spicy Pork Cutlets",
+            "role": "link"
+          },
+          "e265": {
+            "name": "Wolf Page",
+            "role": "link"
+          },
+          "e266": {
+            "name": "Various Topics on Electronic Media in Religion",
+            "role": "link"
+          },
+          "e267": {
+            "name": "The Jade Hut",
+            "role": "link"
+          },
+          "e268": {
+            "name": "Berry Creek Guns",
+            "role": "link"
+          },
+          "e269": {
+            "name": "The Future",
+            "role": "link"
+          },
+          "e27": {
+            "name": "",
+            "role": "link"
+          },
+          "e270": {
+            "name": "THE SHIRE",
+            "role": "link"
+          },
+          "e271": {
+            "name": "Sanitorium",
+            "role": "link"
+          },
+          "e272": {
+            "name": "Bikini World",
+            "role": "link"
+          },
+          "e273": {
+            "name": "Foal Page",
+            "role": "link"
+          },
+          "e274": {
+            "name": "Cool Website",
+            "role": "link"
+          },
+          "e275": {
+            "name": "Snow storm",
+            "role": "link"
+          },
+          "e276": {
+            "name": "Klasyczne Okinawskie Karate",
+            "role": "link"
+          },
+          "e277": {
+            "name": "The Brian Littrell Obsseson Page!",
+            "role": "link"
+          },
+          "e278": {
+            "name": "Virtual Jesus",
+            "role": "link"
+          },
+          "e279": {
+            "name": "Dr. Dale's Cyber Therapy Clinic",
+            "role": "link"
+          },
+          "e28": {
+            "name": "",
+            "role": "link"
+          },
+          "e280": {
+            "name": "LUAI AL - SARRAJ!",
+            "role": "link"
+          },
+          "e281": {
+            "name": "Red Wolf's Den",
+            "role": "link"
+          },
+          "e282": {
+            "name": "Kayli's Art Gallery",
+            "role": "link"
+          },
+          "e283": {
+            "name": "Why? World",
+            "role": "link"
+          },
+          "e284": {
+            "name": "E-Wall",
+            "role": "link"
+          },
+          "e285": {
+            "name": "Specially For Fann Wong",
+            "role": "link"
+          },
+          "e286": {
+            "name": "The Realm of Stunt Gods and Godesses",
+            "role": "link"
+          },
+          "e287": {
+            "name": "Dantosofts Web Design",
+            "role": "link"
+          },
+          "e288": {
+            "name": "Oops",
+            "role": "link"
+          },
+          "e289": {
+            "name": "Closet Vampire Central",
+            "role": "link"
+          },
+          "e29": {
+            "name": "",
+            "role": "link"
+          },
+          "e290": {
+            "name": "*NSync Are My Angels",
+            "role": "link"
+          },
+          "e291": {
+            "name": "Carol\u2019s Native American page",
+            "role": "link"
+          },
+          "e292": {
+            "name": "aldruH\u2019s Domain",
+            "role": "link"
+          },
+          "e293": {
+            "name": "Romantic Bottom's Gay World",
+            "role": "link"
+          },
+          "e294": {
+            "name": "Movie Dogs",
+            "role": "link"
+          },
+          "e295": {
+            "name": "5ive in Israel",
+            "role": "link"
+          },
+          "e296": {
+            "name": "Parrot Finches",
+            "role": "link"
+          },
+          "e297": {
+            "name": "Awareness",
+            "role": "link"
+          },
+          "e298": {
+            "name": "Indadane Kennel",
+            "role": "link"
+          },
+          "e299": {
+            "name": "Agreeable Stamp Store",
+            "role": "link"
+          },
+          "e3": {
+            "name": "Cameron Askin",
+            "role": "link"
+          },
+          "e30": {
+            "name": "Click here",
+            "role": "link"
+          },
+          "e300": {
+            "name": "Textos & Con-textos",
+            "role": "link"
+          },
+          "e301": {
+            "name": "Saddlebred Kids",
+            "role": "link"
+          },
+          "e302": {
+            "name": "The Fold",
+            "role": "link"
+          },
+          "e303": {
+            "name": "Captain SWEDE's Web World",
+            "role": "link"
+          },
+          "e304": {
+            "name": "Website Lama",
+            "role": "link"
+          },
+          "e305": {
+            "name": "Douglas Johnson's Website",
+            "role": "link"
+          },
+          "e306": {
+            "name": "The Hat Society",
+            "role": "link"
+          },
+          "e307": {
+            "name": "Dinosaur Icons",
+            "role": "link"
+          },
+          "e308": {
+            "name": "\u672c\u7ad9 \u5efa\u8b70\u4f7f\u7528800*600 \u89e3\u6790\u5ea6\u700f\u89bd!",
+            "role": "link"
+          },
+          "e309": {
+            "name": "",
+            "role": "link"
+          },
+          "e31": {
+            "name": "",
+            "role": "link"
+          },
+          "e310": {
+            "name": "PERFECT FERRET GATE. YOU TRIED BABY GATES; NOW WE OFFER SOMETHING THAT REALLY WORKS!!!",
+            "role": "link"
+          },
+          "e311": {
+            "name": "*DATE* *RELATE* *FIND A MATE* MAKE E-PALS ON THIS SITE",
+            "role": "link"
+          },
+          "e312": {
+            "name": "SURF THE WEB AND THEY PAY \u2022 NAVEGA EN LA RED Y ELLOS PAGAN",
+            "role": "link"
+          },
+          "e313": {
+            "name": "R U LONELY? R U ALONE? R U LOOKING FOR FRIENDS? YOPALS!",
+            "role": "link"
+          },
+          "e314": {
+            "name": "AMATEUR SWINGERS-HOT WIVE-SEXDATING-SWINGER WIVES-DATING ADVICE",
+            "role": "link"
+          },
+          "e315": {
+            "name": "REWARDS FOR EVOLUTION EVIDENCE: $1,000,000",
+            "role": "link"
+          },
+          "e316": {
+            "name": "HAVE YOU BEEN BUYING 4D NUMBERS AND NEVER WINNING?",
+            "role": "link"
+          },
+          "e317": {
+            "name": "HOW TO MAKE MONEY ON THE INTERNET READING EMAILS, SURFING WEB SITES AND MORE!",
+            "role": "link"
+          },
+          "e318": {
+            "name": "",
+            "role": "link"
+          },
+          "e319": {
+            "name": "",
+            "role": "link"
+          },
+          "e32": {
+            "name": "",
+            "role": "link"
+          },
+          "e320": {
+            "name": "",
+            "role": "link"
+          },
+          "e321": {
+            "name": "",
+            "role": "link"
+          },
+          "e322": {
+            "name": "",
+            "role": "link"
+          },
+          "e323": {
+            "name": "",
+            "role": "link"
+          },
+          "e324": {
+            "name": "",
+            "role": "link"
+          },
+          "e325": {
+            "name": "",
+            "role": "link"
+          },
+          "e326": {
+            "name": "",
+            "role": "link"
+          },
+          "e327": {
+            "name": "Jar Jar's Cottage",
+            "role": "link"
+          },
+          "e328": {
+            "name": "",
+            "role": "link"
+          },
+          "e329": {
+            "name": "",
+            "role": "link"
+          },
+          "e33": {
+            "name": "",
+            "role": "link"
+          },
+          "e330": {
+            "name": "",
+            "role": "link"
+          },
+          "e331": {
+            "name": "",
+            "role": "link"
+          },
+          "e332": {
+            "name": "",
+            "role": "link"
+          },
+          "e333": {
+            "name": "",
+            "role": "link"
+          },
+          "e334": {
+            "name": "",
+            "role": "link"
+          },
+          "e335": {
+            "name": "",
+            "role": "link"
+          },
+          "e336": {
+            "name": "",
+            "role": "link"
+          },
+          "e337": {
+            "name": "",
+            "role": "link"
+          },
+          "e338": {
+            "name": "",
+            "role": "link"
+          },
+          "e339": {
+            "name": "",
+            "role": "link"
+          },
+          "e34": {
+            "name": "",
+            "role": "link"
+          },
+          "e340": {
+            "name": "VERY USEFUL LINKS AND CAMARO OWNER'S PHOTOS",
+            "role": "link"
+          },
+          "e341": {
+            "name": "5318008",
+            "role": "cell"
+          },
+          "e342": {
+            "name": "sin",
+            "role": "cell"
+          },
+          "e343": {
+            "name": "cos",
+            "role": "cell"
+          },
+          "e344": {
+            "name": "tan",
+            "role": "cell"
+          },
+          "e345": {
+            "name": "\u03c0",
+            "role": "cell"
+          },
+          "e346": {
+            "name": "7",
+            "role": "cell"
+          },
+          "e347": {
+            "name": "8",
+            "role": "cell"
+          },
+          "e348": {
+            "name": "9",
+            "role": "cell"
+          },
+          "e349": {
+            "name": "+",
+            "role": "cell"
+          },
+          "e35": {
+            "name": "",
+            "role": "link"
+          },
+          "e350": {
+            "name": "4",
+            "role": "cell"
+          },
+          "e351": {
+            "name": "5",
+            "role": "cell"
+          },
+          "e352": {
+            "name": "6",
+            "role": "cell"
+          },
+          "e353": {
+            "name": "-",
+            "role": "cell"
+          },
+          "e354": {
+            "name": "1",
+            "role": "cell"
+          },
+          "e355": {
+            "name": "2",
+            "role": "cell"
+          },
+          "e356": {
+            "name": "3",
+            "role": "cell"
+          },
+          "e357": {
+            "name": "/",
+            "role": "cell"
+          },
+          "e358": {
+            "name": "C",
+            "role": "cell"
+          },
+          "e359": {
+            "name": "0",
+            "role": "cell"
+          },
+          "e36": {
+            "name": "",
+            "role": "link"
+          },
+          "e360": {
+            "name": "=",
+            "role": "cell"
+          },
+          "e361": {
+            "name": "*",
+            "role": "cell"
+          },
+          "e362": {
+            "name": "",
+            "role": "link"
+          },
+          "e363": {
+            "name": "",
+            "role": "link"
+          },
+          "e364": {
+            "name": "",
+            "role": "link"
+          },
+          "e365": {
+            "name": "",
+            "role": "link"
+          },
+          "e366": {
+            "name": "",
+            "role": "link"
+          },
+          "e367": {
+            "name": "IN SYNC WITH *N SYNC",
+            "role": "link"
+          },
+          "e368": {
+            "name": "\"IN SYNC WITH *N SYNC\" the webring?",
+            "role": "link"
+          },
+          "e369": {
+            "name": "Prev",
+            "role": "link"
+          },
+          "e37": {
+            "name": "",
+            "role": "link"
+          },
+          "e370": {
+            "name": "Next",
+            "role": "link"
+          },
+          "e371": {
+            "name": "Random site",
+            "role": "link"
+          },
+          "e372": {
+            "name": "List Sites",
+            "role": "link"
+          },
+          "e373": {
+            "name": "",
+            "role": "link"
+          },
+          "e374": {
+            "name": "",
+            "role": "link"
+          },
+          "e375": {
+            "name": "",
+            "role": "link"
+          },
+          "e376": {
+            "name": "",
+            "role": "link"
+          },
+          "e377": {
+            "name": "97'",
+            "role": "link"
+          },
+          "e378": {
+            "name": "98'",
+            "role": "link"
+          },
+          "e379": {
+            "name": "",
+            "role": "textbox"
+          },
+          "e38": {
+            "name": "",
+            "role": "link"
+          },
+          "e380": {
+            "name": "\u641c\u5c0b\u5f15\u64ce\u7db2\u7ad9!",
+            "role": "cell"
+          },
+          "e381": {
+            "name": "Yahoo!",
+            "role": "cell"
+          },
+          "e382": {
+            "name": "Hobbies:",
+            "role": "cell"
+          },
+          "e383": {
+            "name": "everything including daydreaming.",
+            "role": "cell"
+          },
+          "e384": {
+            "name": "Friends:",
+            "role": "cell"
+          },
+          "e385": {
+            "name": "I\u2019ve swapped friends about a hundred times since the last major update",
+            "role": "cell"
+          },
+          "e386": {
+            "name": "What I\u2019m doing at the moment (Not Literally!):",
+            "role": "cell"
+          },
+          "e387": {
+            "name": "I\u2019m collecting rainbows and I play the fool! Are you smiling yet?? --- I hope so!",
+            "role": "cell"
+          },
+          "e388": {
+            "name": "Quotes:",
+            "role": "cell"
+          },
+          "e389": {
+            "name": "\u201cIs a Sunset . . . The End or a Begining?\u201d. \"You can\u2019t love anybody until you love yourself\u201d. \u201cHow to be an artist: Stay loose and learn to watch snails.\u201d",
+            "role": "cell"
+          },
+          "e39": {
+            "name": "",
+            "role": "link"
+          },
+          "e390": {
+            "name": "Days of Our Lives: Maison Blanche Revisited. A John and Marlena Alternate Reality",
+            "role": "link"
+          },
+          "e391": {
+            "name": "Love Letter",
+            "role": "link"
+          },
+          "e392": {
+            "name": "Cat Poetry",
+            "role": "link"
+          },
+          "e393": {
+            "name": "The Zit",
+            "role": "link"
+          },
+          "e394": {
+            "name": "Prohibition Times",
+            "role": "link"
+          },
+          "e395": {
+            "name": "1984 SoHo Street Erotic Fiction",
+            "role": "link"
+          },
+          "e396": {
+            "name": "\u0417\u0430\u043c\u0435\u0442\u043a\u0438 \u043e \u043f\u043e\u044d\u0442\u0430\u0445 \u0438 \u043f\u043e\u044d\u0442\u0438\u043a\u0435",
+            "role": "link"
+          },
+          "e397": {
+            "name": "The Cat Poem",
+            "role": "link"
+          },
+          "e398": {
+            "name": "You Have Mail",
+            "role": "link"
+          },
+          "e399": {
+            "name": "Entrance To The Immortal Sanctuary",
+            "role": "link"
+          },
+          "e4": {
+            "name": "Anthony Hughes",
+            "role": "link"
+          },
+          "e40": {
+            "name": "",
+            "role": "link"
+          },
+          "e400": {
+            "name": "Creative Writing",
+            "role": "link"
+          },
+          "e401": {
+            "name": "Poems of Love",
+            "role": "link"
+          },
+          "e402": {
+            "name": "The Plains of Turia",
+            "role": "link"
+          },
+          "e403": {
+            "name": "~~I Don't Have To Die To Go To Heaven~~",
+            "role": "link"
+          },
+          "e404": {
+            "name": "The Friend Inside by The: Kingofjins",
+            "role": "link"
+          },
+          "e405": {
+            "name": "The Kill Wesley Club, Part I",
+            "role": "link"
+          },
+          "e406": {
+            "name": "The Kill Wesley Club, Part II",
+            "role": "link"
+          },
+          "e407": {
+            "name": "Broken Friendship Poems",
+            "role": "link"
+          },
+          "e408": {
+            "name": "The Handwriting on the Wall",
+            "role": "link"
+          },
+          "e409": {
+            "name": "Quilt Poems",
+            "role": "link"
+          },
+          "e41": {
+            "name": "",
+            "role": "link"
+          },
+          "e410": {
+            "name": "\u5348\u5f8c\u4e09\u6642",
+            "role": "link"
+          },
+          "e411": {
+            "name": "Captain Log's Stardate: 51589.7",
+            "role": "link"
+          },
+          "e412": {
+            "name": "Tuesday 26th October, 1999",
+            "role": "link"
+          },
+          "e413": {
+            "name": "Fave Gallery 01 (12)",
+            "role": "link"
+          },
+          "e414": {
+            "name": "Fave Gallery 02 (7)",
+            "role": "link"
+          },
+          "e415": {
+            "name": "Fave Gallery 03 (17)",
+            "role": "link"
+          },
+          "e416": {
+            "name": "Fave Gallery 04 (4)",
+            "role": "link"
+          },
+          "e417": {
+            "name": "Fave Gallery 05 (12)",
+            "role": "link"
+          },
+          "e418": {
+            "name": "Fave Gallery 06 (8)",
+            "role": "link"
+          },
+          "e419": {
+            "name": "CPU Pic Gallery (13)",
+            "role": "link"
+          },
+          "e42": {
+            "name": "",
+            "role": "link"
+          },
+          "e420": {
+            "name": "Fave Gallery 08 (44)",
+            "role": "link"
+          },
+          "e421": {
+            "name": "Fave Gallery 09 (18)",
+            "role": "link"
+          },
+          "e43": {
+            "name": "",
+            "role": "link"
+          },
+          "e44": {
+            "name": "",
+            "role": "link"
+          },
+          "e45": {
+            "name": "",
+            "role": "link"
+          },
+          "e46": {
+            "name": "",
+            "role": "link"
+          },
+          "e47": {
+            "name": "",
+            "role": "link"
+          },
+          "e48": {
+            "name": "click here",
+            "role": "link"
+          },
+          "e49": {
+            "name": "",
+            "role": "link"
+          },
+          "e5": {
+            "name": "Robin Hughes",
+            "role": "link"
+          },
+          "e50": {
+            "name": "",
+            "role": "link"
+          },
+          "e51": {
+            "name": "",
+            "role": "link"
+          },
+          "e52": {
+            "name": "",
+            "role": "link"
+          },
+          "e53": {
+            "name": "",
+            "role": "link"
+          },
+          "e54": {
+            "name": "",
+            "role": "link"
+          },
+          "e55": {
+            "name": "",
+            "role": "link"
+          },
+          "e56": {
+            "name": "",
+            "role": "link"
+          },
+          "e57": {
+            "name": "",
+            "role": "link"
+          },
+          "e58": {
+            "name": "",
+            "role": "link"
+          },
+          "e59": {
+            "name": "",
+            "role": "link"
+          },
+          "e6": {
+            "name": "WayBack Machine",
+            "role": "link"
+          },
+          "e60": {
+            "name": "",
+            "role": "link"
+          },
+          "e61": {
+            "name": "",
+            "role": "link"
+          },
+          "e62": {
+            "name": "",
+            "role": "link"
+          },
+          "e63": {
+            "name": "",
+            "role": "link"
+          },
+          "e64": {
+            "name": "",
+            "role": "link"
+          },
+          "e65": {
+            "name": "",
+            "role": "link"
+          },
+          "e66": {
+            "name": "",
+            "role": "link"
+          },
+          "e67": {
+            "name": "",
+            "role": "link"
+          },
+          "e68": {
+            "name": "Download Holy Quran Screen Saver",
+            "role": "link"
+          },
+          "e69": {
+            "name": "(B) asic (I) nstructions (B) efore (L) eaving (E) arth",
+            "role": "link"
+          },
+          "e7": {
+            "name": "",
+            "role": "link"
+          },
+          "e70": {
+            "name": "",
+            "role": "link"
+          },
+          "e71": {
+            "name": "",
+            "role": "link"
+          },
+          "e72": {
+            "name": "",
+            "role": "link"
+          },
+          "e73": {
+            "name": "",
+            "role": "link"
+          },
+          "e74": {
+            "name": "",
+            "role": "link"
+          },
+          "e75": {
+            "name": "",
+            "role": "link"
+          },
+          "e76": {
+            "name": "",
+            "role": "link"
+          },
+          "e77": {
+            "name": "",
+            "role": "link"
+          },
+          "e78": {
+            "name": "",
+            "role": "link"
+          },
+          "e79": {
+            "name": "",
+            "role": "link"
+          },
+          "e8": {
+            "name": "",
+            "role": "link"
+          },
+          "e80": {
+            "name": "",
+            "role": "link"
+          },
+          "e81": {
+            "name": "",
+            "role": "link"
+          },
+          "e82": {
+            "name": "",
+            "role": "link"
+          },
+          "e83": {
+            "name": "",
+            "role": "link"
+          },
+          "e84": {
+            "name": "",
+            "role": "link"
+          },
+          "e85": {
+            "name": "",
+            "role": "link"
+          },
+          "e86": {
+            "name": "",
+            "role": "link"
+          },
+          "e87": {
+            "name": "",
+            "role": "link"
+          },
+          "e88": {
+            "name": "Harleys 2002\u20132005",
+            "role": "link"
+          },
+          "e89": {
+            "name": "How dare you come to my web page!!!",
+            "role": "link"
+          },
+          "e9": {
+            "name": "",
+            "role": "link"
+          },
+          "e90": {
+            "name": "",
+            "role": "link"
+          },
+          "e91": {
+            "name": "",
+            "role": "link"
+          },
+          "e92": {
+            "name": "",
+            "role": "link"
+          },
+          "e93": {
+            "name": "",
+            "role": "link"
+          },
+          "e94": {
+            "name": "",
+            "role": "link"
+          },
+          "e95": {
+            "name": "",
+            "role": "link"
+          },
+          "e96": {
+            "name": "",
+            "role": "link"
+          },
+          "e97": {
+            "name": "",
+            "role": "link"
+          },
+          "e98": {
+            "name": "",
+            "role": "link"
+          },
+          "e99": {
+            "name": "",
+            "role": "link"
+          }
+        },
+        "snapshot": "- heading \"A love letter to the Internet of old\" [level=1, ref=e2]\n- link \"Cameron Askin\" [ref=e3]\n- link \"Anthony Hughes\" [ref=e4]\n- link \"Robin Hughes\" [ref=e5]\n- link \"WayBack Machine\" [ref=e6]\n- link \"Press\" [ref=e122]\n- link \"Disclaimer\" [ref=e123]\n- link \"Download soundtrack\" [ref=e124]\n- link \"Patreon\" [ref=e125]\n- link [ref=e1]\n- link [ref=e7]\n- link [ref=e8]\n- link [ref=e9]\n- link [ref=e10]\n- link [ref=e11]\n- link [ref=e12]\n- link [ref=e13]\n- link [ref=e14]\n- link [ref=e15]\n- link [ref=e16]\n- link [ref=e17]\n- link [ref=e18]\n- link [ref=e19]\n- link [ref=e20]\n- link [ref=e21]\n- link [ref=e22]\n- link [ref=e23]\n- link [ref=e24]\n- link [ref=e25]\n- link [ref=e26]\n- link [ref=e27]\n- link [ref=e28]\n- link [ref=e29]\n- link \"Click here\" [ref=e30]\n- link [ref=e31]\n- link [ref=e32]\n- link [ref=e33]\n- link [ref=e34]\n- link [ref=e35]\n- link [ref=e36]\n- link [ref=e37]\n- link [ref=e38]\n- link [ref=e39]\n- link [ref=e40]\n- link [ref=e41]\n- link [ref=e42]\n- link [ref=e43]\n- link [ref=e44]\n- link [ref=e45]\n- link [ref=e46]\n- link [ref=e47]\n- link \"click here\" [ref=e48]\n- link \"hotmale@hotmail.com\" [ref=e126]\n- link [ref=e49]\n- link [ref=e50]\n- link [ref=e51]\n- link [ref=e52]\n- link [ref=e53]\n- link [ref=e54]\n- link [ref=e55]\n- link \"More about me\" [ref=e127]\n- link [ref=e128]\n- link [ref=e129]\n- link [ref=e130]\n- link [ref=e131]\n- link [ref=e132]\n- link [ref=e133]\n- link [ref=e134]\n- link \"_.-Visit Flame\u2019s Bedroom-._\" [ref=e135]\n- link [ref=e56]\n- link [ref=e57]\n- link [ref=e58]\n- link [ref=e59]\n- link [ref=e136]\n- link [ref=e137]\n- link [ref=e138]\n- link [ref=e139]\n- link \"Email Me\" [ref=e140]\n- link \"Dolphin\" [ref=e141]\n- link [ref=e60]\n- link [ref=e61]\n- link [ref=e62]\n- link [ref=e63]\n- link [ref=e64]\n- link [ref=e65]\n- link [ref=e66]\n- link [ref=e67]\n- link \"Download Holy Quran Screen Saver\" [ref=e68]\n- link \"(B) asic (I) nstructions (B) efore (L) eaving (E) arth\" [ref=e69]\n- link [ref=e70]\n- link [ref=e71]\n- link [ref=e72]\n- link [ref=e73]\n- link [ref=e74]\n- link [ref=e318]\n- link [ref=e319]\n- link [ref=e320]\n- link [ref=e321]\n- link [ref=e322]\n- link [ref=e323]\n- link [ref=e324]\n- link [ref=e325]\n- link [ref=e326]\n- link \"Jar Jar's Cottage\" [ref=e327]\n- link [ref=e328]\n- link [ref=e142]\n- link [ref=e143]\n- link [ref=e144]\n- link [ref=e329]\n- link [ref=e330]\n- link [ref=e331]\n- link [ref=e332]\n- link [ref=e333]\n- link [ref=e334]\n- link [ref=e75]\n- link [ref=e76]\n- link [ref=e77]\n- link [ref=e78]\n- link [ref=e79]\n- link [ref=e80]\n- link [ref=e81]\n- link [ref=e82]\n- link [ref=e335]\n- link [ref=e336]\n- link \"97'\" [ref=e377]\n- link \"98'\" [ref=e378]\n- link [ref=e337]\n- link [ref=e338]\n- link [ref=e339]\n- link \"VERY USEFUL LINKS AND CAMARO OWNER'S PHOTOS\" [ref=e340]\n- link [ref=e83]\n- link [ref=e84]\n- link [ref=e85]\n- link [ref=e86]\n- link [ref=e87]\n- link \"Harleys 2002\u20132005\" [ref=e88]\n- link [ref=e145]\n- link [ref=e146]\n- link [ref=e147]\n- link [ref=e148]\n- link [ref=e149]\n- link [ref=e150]\n- link [ref=e151]\n- link [ref=e152]\n- link [ref=e153]\n- link [ref=e154]\n- link [ref=e155]\n- link [ref=e156]\n- link \"The Place Where In My Soul Lingers...\" [ref=e157]\n- link \"1. Anarchy\" [ref=e158]\n- link \"2. Destruction\" [ref=e159]\n- link \"3. Misery/suffering\" [ref=e160]\n- link \"How dare you come to my web page!!!\" [ref=e89]\n- link [ref=e90]\n- link [ref=e91]\n- link [ref=e92]\n- link [ref=e93]\n- link [ref=e94]\n- link [ref=e95]\n- link [ref=e96]\n- link [ref=e97]\n- link [ref=e98]\n- link [ref=e99]\n- link \"DOWNLOAD My private files\" [ref=e161]\n- link \"CLASSICS\" [ref=e208]\n- link \"TRANCE\" [ref=e209]\n- link \"JUNGLE\" [ref=e210]\n- link \"MP3\" [ref=e211]\n- link \"HOUSE\" [ref=e212]\n- link [ref=e100]\n- link [ref=e101]\n- link [ref=e102]\n- link [ref=e162]\n- link [ref=e213]\n- cell \"5318008\" [ref=e341]\n  - textbox [disabled, ref=e379]: 5318008\n- cell \"sin\" [ref=e342] clickable [cursor:pointer]\n- cell \"cos\" [ref=e343] clickable [cursor:pointer]\n- cell \"tan\" [ref=e344] clickable [cursor:pointer]\n- cell \"\u03c0\" [ref=e345] clickable [cursor:pointer]\n- cell \"7\" [ref=e346] clickable [cursor:pointer]\n- cell \"8\" [ref=e347] clickable [cursor:pointer]\n- cell \"9\" [ref=e348] clickable [cursor:pointer]\n- cell \"+\" [ref=e349] clickable [cursor:pointer]\n- cell \"4\" [ref=e350] clickable [cursor:pointer]\n- cell \"5\" [ref=e351] clickable [cursor:pointer]\n- cell \"6\" [ref=e352] clickable [cursor:pointer]\n- cell \"-\" [ref=e353] clickable [cursor:pointer]\n- cell \"1\" [ref=e354] clickable [cursor:pointer]\n- cell \"2\" [ref=e355] clickable [cursor:pointer]\n- cell \"3\" [ref=e356] clickable [cursor:pointer]\n- cell \"/\" [ref=e357] clickable [cursor:pointer]\n- cell \"C\" [ref=e358] clickable [cursor:pointer]\n- cell \"0\" [ref=e359] clickable [cursor:pointer]\n- cell \"=\" [ref=e360] clickable [cursor:pointer]\n- cell \"*\" [ref=e361] clickable [cursor:pointer]\n- link [ref=e362]\n- link [ref=e363]\n- heading \"Hello! Welcome to my net home.\" [level=3, ref=e214]\n- heading \"I don't know if you have a website or not BUT LET ME TELL YOU SOMETHING... writing an intro is hard.\" [level=4, ref=e215]\n- cell \"\u641c\u5c0b\u5f15\u64ce\u7db2\u7ad9!\" [ref=e380]\n- cell \"Yahoo!\" [ref=e381]\n- cell \"Hobbies:\" [ref=e382]\n- cell \"everything including daydreaming.\" [ref=e383]\n- cell \"Friends:\" [ref=e384]\n- cell \"I\u2019ve swapped friends about a hundred times since the last major update\" [ref=e385]\n- cell \"What I\u2019m doing at the moment (Not Literally!):\" [ref=e386]\n- cell \"I\u2019m collecting rainbows and I play the fool! Are you smiling yet?? --- I hope so!\" [ref=e387]\n- cell \"Quotes:\" [ref=e388]\n- cell \"\u201cIs a Sunset . . . The End or a Begining?\u201d. \\\"You can\u2019t love anybody until you love yourself\u201d. \u201cHow to be an artist: Stay loose and learn to watch snails.\u201d\" [ref=e389]\n- link \"Captain Log's Stardate: 51589.7\" [ref=e411]\n- link \"Tuesday 26th October, 1999\" [ref=e412]\n- link [ref=e163]\n- link [ref=e164]\n- link [ref=e103]\n- heading \"FREE searches powered by Google\" [level=5, ref=e104]\n  - link \"Google\" [ref=e165]\n- textbox \"Enter search phrase here......\" [ref=e166]\n- link [ref=e105]\n- link [ref=e106]\n- link [ref=e216]\n- link [ref=e107]\n- link [ref=e217]\n- link [ref=e218]\n- link [ref=e219]\n- link [ref=e108]\n- link [ref=e220]\n- link [ref=e109]\n- link [ref=e221]\n- link [ref=e222]\n- link [ref=e167]\n- link \"HOW THE INTERNET WORKS\" [ref=e168]\n- link [ref=e364]\n- link [ref=e110]\n- link \"ENTRANCE for MS IE4\" [ref=e223]\n- link \"ENTRANCE for NETSCAPE 4\" [ref=e224]\n- link [ref=e169]\n- link [ref=e170]\n- link [ref=e225]\n- link [ref=e171]\n- link [ref=e365]\n- link [ref=e172]\n- link [ref=e173]\n- link [ref=e174]\n- link [ref=e175]\n- link [ref=e176]\n- link [ref=e366]\n- link \"IN SYNC WITH *N SYNC\" [ref=e367]\n- link \"\\\"IN SYNC WITH *N SYNC\\\" the webring?\" [ref=e368]\n- link \"Prev\" [ref=e369]\n- link \"Next\" [ref=e370]\n- link \"Random site\" [ref=e371]\n- link \"List Sites\" [ref=e372]\n- link [ref=e373]\n- link [ref=e177]\n- link [ref=e178]\n- link [ref=e179]\n- link [ref=e180]\n- link \"Where two hearts became one.\" [ref=e181]\n- link [ref=e182]\n- listitem \"[System Default]\" [level=1, ref=e183] clickable [cursor:pointer]\n  - link \"[System Default]\" [ref=e226]\n- listitem \"[Dub version]\" [level=1, ref=e184] clickable [cursor:pointer]\n  - link \"[Dub version]\" [ref=e227]\n- listitem \"[Acapella cover]\" [level=1, ref=e185] clickable [cursor:pointer]\n  - link \"[Acapella cover]\" [ref=e228]\n- listitem \"[Carpentry Mix]\" [level=1, ref=e186] clickable [cursor:pointer]\n  - link \"[Carpentry Mix]\" [ref=e229]\n- link [ref=e187]\n- link [ref=e230]\n- link [ref=e231]\n- link \"Marie\u00b4s Webdesign!\" [ref=e232]\n- link \"Daisy's Page - Where Jesus is Lord\" [ref=e233]\n- link [ref=e234]\n- link [ref=e235]\n- link [ref=e236]\n- link \"Check out this cats link\" [ref=e237]\n- cell \"Days of Our Lives: Maison Blanche Revisited. A John and Marlena Alternate Reality\" [ref=e238]\n  - link \"Days of Our Lives: Maison Blanche Revisited. A John and Marlena Alternate Reality\" [ref=e390]\n- cell \"Love Letter Cat Poetry\" [ref=e239]\n  - link \"Love Letter\" [ref=e391]\n  - link \"Cat Poetry\" [ref=e392]\n- cell \"Fave Gallery 01 (12) Fave Gallery 02 (7) Fave Gallery 03 (17) Fave Gallery 04 (4) Fave Gallery 05 (12) Fave Gallery 06 (8) CPU Pic Gallery (13) Fave Gallery 08 (44) Fave Gallery 09 (18)\" [ref=e240]\n  - link \"Fave Gallery 01 (12)\" [ref=e413]\n  - link \"Fave Gallery 02 (7)\" [ref=e414]\n  - link \"Fave Gallery 03 (17)\" [ref=e415]\n  - link \"Fave Gallery 04 (4)\" [ref=e416]\n  - link \"Fave Gallery 05 (12)\" [ref=e417]\n  - link \"Fave Gallery 06 (8)\" [ref=e418]\n  - link \"CPU Pic Gallery (13)\" [ref=e419]\n  - link \"Fave Gallery 08 (44)\" [ref=e420]\n  - link \"Fave Gallery 09 (18)\" [ref=e421]\n- cell \"The Zit\" [ref=e241]\n  - link \"The Zit\" [ref=e393]\n- cell \"Prohibition Times\" [ref=e242]\n  - link \"Prohibition Times\" [ref=e394]\n- cell \"1984 SoHo Street Erotic Fiction \u0417\u0430\u043c\u0435\u0442\u043a\u0438 \u043e \u043f\u043e\u044d\u0442\u0430\u0445 \u0438 \u043f\u043e\u044d\u0442\u0438\u043a\u0435 The Cat Poem\" [ref=e243]\n  - link \"1984 SoHo Street Erotic Fiction\" [ref=e395]\n  - link \"\u0417\u0430\u043c\u0435\u0442\u043a\u0438 \u043e \u043f\u043e\u044d\u0442\u0430\u0445 \u0438 \u043f\u043e\u044d\u0442\u0438\u043a\u0435\" [ref=e396]\n  - link \"The Cat Poem\" [ref=e397]\n- cell \"You Have Mail\" [ref=e244]\n  - link \"You Have Mail\" [ref=e398]\n- cell \"Entrance To The Immortal Sanctuary\" [ref=e245]\n  - link \"Entrance To The Immortal Sanctuary\" [ref=e399]\n- cell \"Creative Writing Poems of Love\" [ref=e246]\n  - link \"Creative Writing\" [ref=e400]\n  - link \"Poems of Love\" [ref=e401]\n- cell \"The Plains of Turia\" [ref=e247]\n  - link \"The Plains of Turia\" [ref=e402]\n- cell \"~~I Don't Have To Die To Go To Heaven~~\" [ref=e248]\n  - link \"~~I Don't Have To Die To Go To Heaven~~\" [ref=e403]\n- cell \"The Friend Inside by The: Kingofjins\" [ref=e249]\n  - link \"The Friend Inside by The: Kingofjins\" [ref=e404]\n- cell \"The Kill Wesley Club, Part I The Kill Wesley Club, Part II\" [ref=e250]\n  - link \"The Kill Wesley Club, Part I\" [ref=e405]\n  - link \"The Kill Wesley Club, Part II\" [ref=e406]\n- cell \"Broken Friendship Poems The Handwriting on the Wall Quilt Poems\" [ref=e251]\n  - link \"Broken Friendship Poems\" [ref=e407]\n  - link \"The Handwriting on the Wall\" [ref=e408]\n  - link \"Quilt Poems\" [ref=e409]\n- link [ref=e188]\n- link [ref=e189]\n- link [ref=e190]\n- link [ref=e191]\n- link [ref=e192]\n- link [ref=e193]\n- link [ref=e194]\n- link [ref=e195]\n- link \"Amy's Cool Spot\" [ref=e252]\n- link \"Titanic SUCKS!\" [ref=e253]\n- link \"\u05dc\u05d9\u05d0 \u05dc\u05e9 \u05dd\u05d9\u05e8\u05e6\u05e7\u05d4 \u05dd\u05d9\u05e8\u05d5\u05e4\u05d9\u05e1\u05d4\" [ref=e254]\n- link \"Warren's World\" [ref=e255]\n- link \"Kimberly's Dragons\" [ref=e256]\n- link \"Purity Test\" [ref=e257]\n- link \"B E E ' H O M E P A G E\" [ref=e258]\n- link \"[e.\u00b5sik]\" [ref=e259]\n- link \"Sheik Freaks Anonymous\" [ref=e260]\n- link \"Tony's Yoga Site\" [ref=e261]\n- link \"The Story of Me\" [ref=e262]\n- link \"A Letter From The Chief\" [ref=e263]\n- link \"Spicy Pork Cutlets\" [ref=e264]\n- link \"Wolf Page\" [ref=e265]\n- link \"Various Topics on Electronic Media in Religion\" [ref=e266]\n- link \"The Jade Hut\" [ref=e267]\n- link \"Berry Creek Guns\" [ref=e268]\n- link \"The Future\" [ref=e269]\n- link \"THE SHIRE\" [ref=e270]\n- link \"Sanitorium\" [ref=e271]\n- link \"Bikini World\" [ref=e272]\n- link \"Foal Page\" [ref=e273]\n- link \"Cool Website\" [ref=e274]\n- link \"Snow storm\" [ref=e275]\n- link \"Klasyczne Okinawskie Karate\" [ref=e276]\n- link \"The Brian Littrell Obsseson Page!\" [ref=e277]\n- link \"Virtual Jesus\" [ref=e278]\n- link \"Dr. Dale's Cyber Therapy Clinic\" [ref=e279]\n- link \"LUAI AL - SARRAJ!\" [ref=e280]\n- link \"Red Wolf's Den\" [ref=e281]\n- link \"Kayli's Art Gallery\" [ref=e282]\n- link \"Why? World\" [ref=e283]\n- link \"E-Wall\" [ref=e284]\n- link \"Specially For Fann Wong\" [ref=e285]\n- link \"The Realm of Stunt Gods and Godesses\" [ref=e286]\n- link \"Dantosofts Web Design\" [ref=e287]\n- link \"Oops\" [ref=e288]\n- link \"Closet Vampire Central\" [ref=e289]\n- link \"*NSync Are My Angels\" [ref=e290]\n- link \"Carol\u2019s Native American page\" [ref=e291]\n- link \"aldruH\u2019s Domain\" [ref=e292]\n- link \"Romantic Bottom's Gay World\" [ref=e293]\n- link \"Movie Dogs\" [ref=e294]\n- link \"5ive in Israel\" [ref=e295]\n- link \"Parrot Finches\" [ref=e296]\n- link \"Awareness\" [ref=e297]\n- link \"Indadane Kennel\" [ref=e298]\n- link \"Agreeable Stamp Store\" [ref=e299]\n- link \"Textos & Con-textos\" [ref=e300]\n- link \"Saddlebred Kids\" [ref=e301]\n- link \"The Fold\" [ref=e302]\n- link \"Captain SWEDE's Web World\" [ref=e303]\n- link \"Website Lama\" [ref=e304]\n- link \"Douglas Johnson's Website\" [ref=e305]\n- link \"The Hat Society\" [ref=e306]\n- link \"Dinosaur Icons\" [ref=e307]\n- link [ref=e111]\n- link [ref=e196]\n- link [ref=e197]\n- link [ref=e198]\n- link [ref=e199]\n- link [ref=e112]\n- link [ref=e113]\n- link [ref=e114]\n- link [ref=e115]\n- link \"\u672c\u7ad9 \u5efa\u8b70\u4f7f\u7528800*600 \u89e3\u6790\u5ea6\u700f\u89bd!\" [ref=e308]\n- link \"\u5348\u5f8c\u4e09\u6642\" [ref=e410]\n- link [ref=e374]\n- link [ref=e200]\n- link [ref=e375]\n- link [ref=e376]\n- link [ref=e201]\n- link \"\u53f0\u4e2d\u4e16\u5b89\u85e5\u5e2b\u85e5\u5c40\" [ref=e202]\n- link \"\u65b0\u9801\u9762 39\" [ref=e203]\n- link [ref=e309]\n- link [ref=e204]\n- link [ref=e205]\n- link [ref=e206]\n- link [ref=e207]\n- link \"PERFECT FERRET GATE. YOU TRIED BABY GATES; NOW WE OFFER SOMETHING THAT REALLY WORKS!!!\" [ref=e310]\n- link \"*DATE* *RELATE* *FIND A MATE* MAKE E-PALS ON THIS SITE\" [ref=e311]\n- link \"SURF THE WEB AND THEY PAY \u2022 NAVEGA EN LA RED Y ELLOS PAGAN\" [ref=e312]\n- link \"R U LONELY? R U ALONE? R U LOOKING FOR FRIENDS? YOPALS!\" [ref=e313]\n- link \"AMATEUR SWINGERS-HOT WIVE-SEXDATING-SWINGER WIVES-DATING ADVICE\" [ref=e314]\n- link \"REWARDS FOR EVOLUTION EVIDENCE: $1,000,000\" [ref=e315]\n- link \"HAVE YOU BEEN BUYING 4D NUMBERS AND NEVER WINNING?\" [ref=e316]\n- link \"HOW TO MAKE MONEY ON THE INTERNET READING EMAILS, SURFING WEB SITES AND MORE!\" [ref=e317]\n- link [ref=e116]\n- link [ref=e117]\n- link [ref=e118]\n- link [ref=e119]\n- link [ref=e120]\n- link \"www.hell.com\" [ref=e121]"
+      },
+      "error": null
+    }
+  }
+]

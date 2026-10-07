@@ -1,0 +1,914 @@
+[
+  {
+    "command": [
+      "set",
+      "viewport",
+      "1440",
+      "960"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deviceScaleFactor": 1.0,
+        "height": 960,
+        "mobile": false,
+        "width": 1440
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "open",
+      "https://lusion.co/"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "title": "Lusion - Award Winning 3D and Interactive Web Studio",
+        "url": "https://lusion.co/"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "5500"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 5500,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://lusion.co/",
+        "refs": {
+          "e1": {
+            "name": "Go to home page",
+            "role": "link"
+          },
+          "e10": {
+            "name": "PROJECTS PROJECTS",
+            "role": "link"
+          },
+          "e11": {
+            "name": "CONTACT CONTACT",
+            "role": "button"
+          },
+          "e12": {
+            "name": "Subscribe to our newsletter",
+            "role": "heading"
+          },
+          "e13": {
+            "name": "We create 3D visual storytelling and interactive web experiences that help brands stand out",
+            "role": "heading"
+          },
+          "e14": {
+            "name": "",
+            "role": "generic"
+          },
+          "e15": {
+            "name": "Bold Ideas, Brought to Life",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "SEE ALL PROJECTS",
+            "role": "link"
+          },
+          "e17": {
+            "name": "R&D: labs.lusion.co",
+            "role": "link"
+          },
+          "e18": {
+            "name": "",
+            "role": "generic"
+          },
+          "e19": {
+            "name": "We combine design, motion, 3D, and development to create digital experiences that feel visually striking and technically seamless. From campaign launches to immersive brand worlds, we build work that captures attention and invites interaction.",
+            "role": "heading"
+          },
+          "e2": {
+            "name": "Back",
+            "role": "button"
+          },
+          "e20": {
+            "name": "OUR APPROACH",
+            "role": "link"
+          },
+          "e21": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O r r r r y y y y z z z z o o o o A A A A I I I I",
+            "role": "link"
+          },
+          "e22": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION A A A A t t t t l l l l a a a a s s s s M M M M o o o o t t t t i i i i o o o o",
+            "role": "link"
+          },
+          "e23": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D e e e e v v v v i i i i n n n n A A A A I I I I",
+            "role": "link"
+          },
+          "e24": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O f f f f T T T T h h h h e e e e O O O O a a a a k k k k",
+            "role": "link"
+          },
+          "e25": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION E E E E v v v v e e e e r r r r s s s s w w w w a a a a p p p p",
+            "role": "link"
+          },
+          "e26": {
+            "name": "CONCEPT \u2022 3D ILLUSTRATION \u2022 MOGRAPH \u2022 VIDEO P P P P o o o o r r r r s s s s c c c c h h h h e e e e : : : : D D D D r r r r",
+            "role": "link"
+          },
+          "e27": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D S S S S y y y y n n n n t t t t h h h h e e e e t t t t i i i i c c c c H H H H",
+            "role": "link"
+          },
+          "e28": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D M M M M e e e e t t t t a a a a : : : : S S S S p p p p a a a a t t t t i i i i",
+            "role": "link"
+          },
+          "e29": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 WEB3 S S S S p p p p a a a a a a a a c c c c e e e e - - - - N N N N F F F F T T T T",
+            "role": "link"
+          },
+          "e3": {
+            "name": "",
+            "role": "button"
+          },
+          "e30": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D D D D D D D D D 2 2 2 2 0 0 0 0 2 2 2 2 4 4 4 4",
+            "role": "link"
+          },
+          "e31": {
+            "name": "CONCEPT \u2022 WEB \u2022 GAME DESIGN \u2022 3D C C C C h h h h o o o o o o o o C C C C h h h h o o o o o o o o W W W W o o o o",
+            "role": "link"
+          },
+          "e32": {
+            "name": "AR \u2022 DEVELOPMENT \u2022 3D S S S S o o o o d d d d a a a a E E E E x x x x p p p p e e e e r r r r i i i i",
+            "role": "link"
+          },
+          "e33": {
+            "name": "Suite 2 9 Marsh Street Bristol, BS1 4AA United Kingdom",
+            "role": "link"
+          },
+          "e34": {
+            "name": "Your email",
+            "role": "textbox"
+          },
+          "e35": {
+            "name": "",
+            "role": "button"
+          },
+          "e36": {
+            "name": "F e a t u r e d W o r k",
+            "role": "heading"
+          },
+          "e37": {
+            "name": "",
+            "role": "generic"
+          },
+          "e38": {
+            "name": "Twitter / X",
+            "role": "link"
+          },
+          "e39": {
+            "name": "Instagram",
+            "role": "link"
+          },
+          "e4": {
+            "name": "LET'S TALK",
+            "role": "button"
+          },
+          "e40": {
+            "name": "Linkedin",
+            "role": "link"
+          },
+          "e41": {
+            "name": "hello@lusion.co",
+            "role": "link"
+          },
+          "e42": {
+            "name": "business@lusion.co",
+            "role": "link"
+          },
+          "e43": {
+            "name": "Your email",
+            "role": "textbox"
+          },
+          "e44": {
+            "name": "Send newsletter form button",
+            "role": "button"
+          },
+          "e5": {
+            "name": "Menu button",
+            "role": "button"
+          },
+          "e6": {
+            "name": "LABS LABS",
+            "role": "link"
+          },
+          "e7": {
+            "name": "",
+            "role": "link"
+          },
+          "e8": {
+            "name": "HOME HOME",
+            "role": "link"
+          },
+          "e9": {
+            "name": "ABOUT US ABOUT US",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"Go to home page\" [ref=e1]\n- button \"Back\" [ref=e2]\n- button [ref=e3]\n- button \"LET'S TALK\" [ref=e4]\n  - link [ref=e7]\n- button \"Menu button\" [ref=e5]\n- link \"HOME HOME\" [ref=e8]\n- link \"ABOUT US ABOUT US\" [ref=e9]\n- link \"PROJECTS PROJECTS\" [ref=e10]\n- button \"CONTACT CONTACT\" [ref=e11]\n- heading \"Subscribe to our newsletter\" [level=3, ref=e12]\n- textbox \"Your email\" [ref=e34]\n- button [ref=e35]\n- link \"LABS LABS\" [ref=e6]\n- heading \"We create 3D visual storytelling and interactive web experiences that help brands stand out\" [level=1, ref=e13]\n- generic [ref=e14] clickable [cursor:pointer]\n- heading \"Bold Ideas, Brought to Life\" [level=4, ref=e15]\n- heading \"We combine design, motion, 3D, and development to create digital experiences that feel visually striking and technically seamless. From campaign launches to immersive brand worlds, we build work that captures attention and invites interaction.\" [level=2, ref=e19]\n- link \"OUR APPROACH\" [ref=e20]\n- heading \"F e a t u r e d W o r k\" [level=4, ref=e36]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O r r r r y y y y z z z z o o o o A A A A I I I I\" [ref=e21]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION A A A A t t t t l l l l a a a a s s s s M M M M o o o o t t t t i i i i o o o o\" [ref=e22]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D e e e e v v v v i i i i n n n n A A A A I I I I\" [ref=e23]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O f f f f T T T T h h h h e e e e O O O O a a a a k k k k\" [ref=e24]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION E E E E v v v v e e e e r r r r s s s s w w w w a a a a p p p p\" [ref=e25]\n- link \"CONCEPT \u2022 3D ILLUSTRATION \u2022 MOGRAPH \u2022 VIDEO P P P P o o o o r r r r s s s s c c c c h h h h e e e e : : : : D D D D r r r r\" [ref=e26]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D S S S S y y y y n n n n t t t t h h h h e e e e t t t t i i i i c c c c H H H H\" [ref=e27]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D M M M M e e e e t t t t a a a a : : : : S S S S p p p p a a a a t t t t i i i i\" [ref=e28]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 WEB3 S S S S p p p p a a a a a a a a c c c c e e e e - - - - N N N N F F F F T T T T\" [ref=e29]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D D D D D D D D D 2 2 2 2 0 0 0 0 2 2 2 2 4 4 4 4\" [ref=e30]\n- link \"CONCEPT \u2022 WEB \u2022 GAME DESIGN \u2022 3D C C C C h h h h o o o o o o o o C C C C h h h h o o o o o o o o W W W W o o o o\" [ref=e31]\n- link \"AR \u2022 DEVELOPMENT \u2022 3D S S S S o o o o d d d d a a a a E E E E x x x x p p p p e e e e r r r r i i i i\" [ref=e32]\n- link \"SEE ALL PROJECTS\" [ref=e16]\n- generic \"LLeett''ss wwoorrkkttooggeetthheerr!!\" [ref=e37] clickable [cursor:pointer]\n- link \"Suite 2 9 Marsh Street Bristol, BS1 4AA United Kingdom\" [ref=e33]\n- link \"Twitter / X\" [ref=e38]\n- link \"Instagram\" [ref=e39]\n- link \"Linkedin\" [ref=e40]\n- link \"hello@lusion.co\" [ref=e41]\n- link \"business@lusion.co\" [ref=e42]\n- textbox \"Your email\" [ref=e43]\n- button \"Send newsletter form button\" [ref=e44]\n- link \"R&D: labs.lusion.co\" [ref=e17]\n- generic [ref=e18] clickable [cursor:pointer]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "mouse",
+      "move",
+      "800",
+      "650"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "moved": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "mouse",
+      "wheel",
+      "1800"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "deltaX": 0.0,
+        "deltaY": 1800.0,
+        "scrolled": true
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "2500"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 2500,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/lusion-content.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/lusion-content.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://lusion.co/",
+        "refs": {
+          "e1": {
+            "name": "Go to home page",
+            "role": "link"
+          },
+          "e10": {
+            "name": "PROJECTS PROJECTS",
+            "role": "link"
+          },
+          "e11": {
+            "name": "CONTACT CONTACT",
+            "role": "button"
+          },
+          "e12": {
+            "name": "Subscribe to our newsletter",
+            "role": "heading"
+          },
+          "e13": {
+            "name": "We create 3D visual storytelling and interactive web experiences that help brands stand out",
+            "role": "heading"
+          },
+          "e14": {
+            "name": "",
+            "role": "generic"
+          },
+          "e15": {
+            "name": "Bold Ideas, Brought to Life",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "SEE ALL PROJECTS",
+            "role": "link"
+          },
+          "e17": {
+            "name": "R&D: labs.lusion.co",
+            "role": "link"
+          },
+          "e18": {
+            "name": "",
+            "role": "generic"
+          },
+          "e19": {
+            "name": "We combine design, motion, 3D, and development to create digital experiences that feel visually striking and technically seamless. From campaign launches to immersive brand worlds, we build work that captures attention and invites interaction.",
+            "role": "heading"
+          },
+          "e2": {
+            "name": "Back",
+            "role": "button"
+          },
+          "e20": {
+            "name": "OUR APPROACH",
+            "role": "link"
+          },
+          "e21": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O r r r r y y y y z z z z o o o o A A A A I I I I",
+            "role": "link"
+          },
+          "e22": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION A A A A t t t t l l l l a a a a s s s s M M M M o o o o t t t t i i i i o o o o",
+            "role": "link"
+          },
+          "e23": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D e e e e v v v v i i i i n n n n A A A A I I I I",
+            "role": "link"
+          },
+          "e24": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O f f f f T T T T h h h h e e e e O O O O a a a a k k k k",
+            "role": "link"
+          },
+          "e25": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION E E E E v v v v e e e e r r r r s s s s w w w w a a a a p p p p",
+            "role": "link"
+          },
+          "e26": {
+            "name": "CONCEPT \u2022 3D ILLUSTRATION \u2022 MOGRAPH \u2022 VIDEO P P P P o o o o r r r r s s s s c c c c h h h h e e e e : : : : D D D D r r r r",
+            "role": "link"
+          },
+          "e27": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D S S S S y y y y n n n n t t t t h h h h e e e e t t t t i i i i c c c c H H H H",
+            "role": "link"
+          },
+          "e28": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D M M M M e e e e t t t t a a a a : : : : S S S S p p p p a a a a t t t t i i i i",
+            "role": "link"
+          },
+          "e29": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 WEB3 S S S S p p p p a a a a a a a a c c c c e e e e - - - - N N N N F F F F T T T T",
+            "role": "link"
+          },
+          "e3": {
+            "name": "",
+            "role": "button"
+          },
+          "e30": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D D D D D D D D D 2 2 2 2 0 0 0 0 2 2 2 2 4 4 4 4",
+            "role": "link"
+          },
+          "e31": {
+            "name": "CONCEPT \u2022 WEB \u2022 GAME DESIGN \u2022 3D C C C C h h h h o o o o o o o o C C C C h h h h o o o o o o o o W W W W o o o o",
+            "role": "link"
+          },
+          "e32": {
+            "name": "AR \u2022 DEVELOPMENT \u2022 3D S S S S o o o o d d d d a a a a E E E E x x x x p p p p e e e e r r r r i i i i",
+            "role": "link"
+          },
+          "e33": {
+            "name": "Suite 2 9 Marsh Street Bristol, BS1 4AA United Kingdom",
+            "role": "link"
+          },
+          "e34": {
+            "name": "Your email",
+            "role": "textbox"
+          },
+          "e35": {
+            "name": "",
+            "role": "button"
+          },
+          "e36": {
+            "name": "F e a t u r e d W o r k",
+            "role": "heading"
+          },
+          "e37": {
+            "name": "",
+            "role": "generic"
+          },
+          "e38": {
+            "name": "Twitter / X",
+            "role": "link"
+          },
+          "e39": {
+            "name": "Instagram",
+            "role": "link"
+          },
+          "e4": {
+            "name": "LET'S TALK",
+            "role": "button"
+          },
+          "e40": {
+            "name": "Linkedin",
+            "role": "link"
+          },
+          "e41": {
+            "name": "hello@lusion.co",
+            "role": "link"
+          },
+          "e42": {
+            "name": "business@lusion.co",
+            "role": "link"
+          },
+          "e43": {
+            "name": "Your email",
+            "role": "textbox"
+          },
+          "e44": {
+            "name": "Send newsletter form button",
+            "role": "button"
+          },
+          "e5": {
+            "name": "Menu button",
+            "role": "button"
+          },
+          "e6": {
+            "name": "LABS LABS",
+            "role": "link"
+          },
+          "e7": {
+            "name": "",
+            "role": "link"
+          },
+          "e8": {
+            "name": "HOME HOME",
+            "role": "link"
+          },
+          "e9": {
+            "name": "ABOUT US ABOUT US",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"Go to home page\" [ref=e1]\n- button \"Back\" [ref=e2]\n- button [ref=e3]\n- button \"LET'S TALK\" [ref=e4]\n  - link [ref=e7]\n- button \"Menu button\" [ref=e5]\n- link \"HOME HOME\" [ref=e8]\n- link \"ABOUT US ABOUT US\" [ref=e9]\n- link \"PROJECTS PROJECTS\" [ref=e10]\n- button \"CONTACT CONTACT\" [ref=e11]\n- heading \"Subscribe to our newsletter\" [level=3, ref=e12]\n- textbox \"Your email\" [ref=e34]\n- button [ref=e35]\n- link \"LABS LABS\" [ref=e6]\n- heading \"We create 3D visual storytelling and interactive web experiences that help brands stand out\" [level=1, ref=e13]\n- generic [ref=e14] clickable [cursor:pointer]\n- heading \"Bold Ideas, Brought to Life\" [level=4, ref=e15]\n- heading \"We combine design, motion, 3D, and development to create digital experiences that feel visually striking and technically seamless. From campaign launches to immersive brand worlds, we build work that captures attention and invites interaction.\" [level=2, ref=e19]\n- link \"OUR APPROACH\" [ref=e20]\n- heading \"F e a t u r e d W o r k\" [level=4, ref=e36]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O r r r r y y y y z z z z o o o o A A A A I I I I\" [ref=e21]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION A A A A t t t t l l l l a a a a s s s s M M M M o o o o t t t t i i i i o o o o\" [ref=e22]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D e e e e v v v v i i i i n n n n A A A A I I I I\" [ref=e23]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O f f f f T T T T h h h h e e e e O O O O a a a a k k k k\" [ref=e24]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION E E E E v v v v e e e e r r r r s s s s w w w w a a a a p p p p\" [ref=e25]\n- link \"CONCEPT \u2022 3D ILLUSTRATION \u2022 MOGRAPH \u2022 VIDEO P P P P o o o o r r r r s s s s c c c c h h h h e e e e : : : : D D D D r r r r\" [ref=e26]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D S S S S y y y y n n n n t t t t h h h h e e e e t t t t i i i i c c c c H H H H\" [ref=e27]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D M M M M e e e e t t t t a a a a : : : : S S S S p p p p a a a a t t t t i i i i\" [ref=e28]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 WEB3 S S S S p p p p a a a a a a a a c c c c e e e e - - - - N N N N F F F F T T T T\" [ref=e29]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D D D D D D D D D 2 2 2 2 0 0 0 0 2 2 2 2 4 4 4 4\" [ref=e30]\n- link \"CONCEPT \u2022 WEB \u2022 GAME DESIGN \u2022 3D C C C C h h h h o o o o o o o o C C C C h h h h o o o o o o o o W W W W o o o o\" [ref=e31]\n- link \"AR \u2022 DEVELOPMENT \u2022 3D S S S S o o o o d d d d a a a a E E E E x x x x p p p p e e e e r r r r i i i i\" [ref=e32]\n- link \"SEE ALL PROJECTS\" [ref=e16]\n- generic \"LLeett''ss wwoorrkkttooggeetthheerr!!\" [ref=e37] clickable [cursor:pointer]\n- link \"Suite 2 9 Marsh Street Bristol, BS1 4AA United Kingdom\" [ref=e33]\n- link \"Twitter / X\" [ref=e38]\n- link \"Instagram\" [ref=e39]\n- link \"Linkedin\" [ref=e40]\n- link \"hello@lusion.co\" [ref=e41]\n- link \"business@lusion.co\" [ref=e42]\n- textbox \"Your email\" [ref=e43]\n- button \"Send newsletter form button\" [ref=e44]\n- link \"R&D: labs.lusion.co\" [ref=e17]\n- generic [ref=e18] clickable [cursor:pointer]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://lusion.co/",
+        "refs": {
+          "e1": {
+            "name": "Go to home page",
+            "role": "link"
+          },
+          "e10": {
+            "name": "PROJECTS PROJECTS",
+            "role": "link"
+          },
+          "e11": {
+            "name": "CONTACT CONTACT",
+            "role": "button"
+          },
+          "e12": {
+            "name": "Subscribe to our newsletter",
+            "role": "heading"
+          },
+          "e13": {
+            "name": "We create 3D visual storytelling and interactive web experiences that help brands stand out",
+            "role": "heading"
+          },
+          "e14": {
+            "name": "",
+            "role": "generic"
+          },
+          "e15": {
+            "name": "Bold Ideas, Brought to Life",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "SEE ALL PROJECTS",
+            "role": "link"
+          },
+          "e17": {
+            "name": "R&D: labs.lusion.co",
+            "role": "link"
+          },
+          "e18": {
+            "name": "",
+            "role": "generic"
+          },
+          "e19": {
+            "name": "We combine design, motion, 3D, and development to create digital experiences that feel visually striking and technically seamless. From campaign launches to immersive brand worlds, we build work that captures attention and invites interaction.",
+            "role": "heading"
+          },
+          "e2": {
+            "name": "Back",
+            "role": "button"
+          },
+          "e20": {
+            "name": "OUR APPROACH",
+            "role": "link"
+          },
+          "e21": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O r r r r y y y y z z z z o o o o A A A A I I I I",
+            "role": "link"
+          },
+          "e22": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION A A A A t t t t l l l l a a a a s s s s M M M M o o o o t t t t i i i i o o o o",
+            "role": "link"
+          },
+          "e23": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D e e e e v v v v i i i i n n n n A A A A I I I I",
+            "role": "link"
+          },
+          "e24": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O f f f f T T T T h h h h e e e e O O O O a a a a k k k k",
+            "role": "link"
+          },
+          "e25": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION E E E E v v v v e e e e r r r r s s s s w w w w a a a a p p p p",
+            "role": "link"
+          },
+          "e26": {
+            "name": "CONCEPT \u2022 3D ILLUSTRATION \u2022 MOGRAPH \u2022 VIDEO P P P P o o o o r r r r s s s s c c c c h h h h e e e e : : : : D D D D r r r r",
+            "role": "link"
+          },
+          "e27": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D S S S S y y y y n n n n t t t t h h h h e e e e t t t t i i i i c c c c H H H H",
+            "role": "link"
+          },
+          "e28": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D M M M M e e e e t t t t a a a a : : : : S S S S p p p p a a a a t t t t i i i i",
+            "role": "link"
+          },
+          "e29": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 WEB3 S S S S p p p p a a a a a a a a c c c c e e e e - - - - N N N N F F F F T T T T",
+            "role": "link"
+          },
+          "e3": {
+            "name": "",
+            "role": "button"
+          },
+          "e30": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D D D D D D D D D 2 2 2 2 0 0 0 0 2 2 2 2 4 4 4 4",
+            "role": "link"
+          },
+          "e31": {
+            "name": "CONCEPT \u2022 WEB \u2022 GAME DESIGN \u2022 3D C C C C h h h h o o o o o o o o C C C C h h h h o o o o o o o o W W W W o o o o",
+            "role": "link"
+          },
+          "e32": {
+            "name": "AR \u2022 DEVELOPMENT \u2022 3D S S S S o o o o d d d d a a a a E E E E x x x x p p p p e e e e r r r r i i i i",
+            "role": "link"
+          },
+          "e33": {
+            "name": "Suite 2 9 Marsh Street Bristol, BS1 4AA United Kingdom",
+            "role": "link"
+          },
+          "e34": {
+            "name": "Your email",
+            "role": "textbox"
+          },
+          "e35": {
+            "name": "",
+            "role": "button"
+          },
+          "e36": {
+            "name": "F e a t u r e d W o r k",
+            "role": "heading"
+          },
+          "e37": {
+            "name": "",
+            "role": "generic"
+          },
+          "e38": {
+            "name": "Twitter / X",
+            "role": "link"
+          },
+          "e39": {
+            "name": "Instagram",
+            "role": "link"
+          },
+          "e4": {
+            "name": "LET'S TALK",
+            "role": "button"
+          },
+          "e40": {
+            "name": "Linkedin",
+            "role": "link"
+          },
+          "e41": {
+            "name": "hello@lusion.co",
+            "role": "link"
+          },
+          "e42": {
+            "name": "business@lusion.co",
+            "role": "link"
+          },
+          "e43": {
+            "name": "Your email",
+            "role": "textbox"
+          },
+          "e44": {
+            "name": "Send newsletter form button",
+            "role": "button"
+          },
+          "e5": {
+            "name": "Menu button",
+            "role": "button"
+          },
+          "e6": {
+            "name": "LABS LABS",
+            "role": "link"
+          },
+          "e7": {
+            "name": "",
+            "role": "link"
+          },
+          "e8": {
+            "name": "HOME HOME",
+            "role": "link"
+          },
+          "e9": {
+            "name": "ABOUT US ABOUT US",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"Go to home page\" [ref=e1]\n- button \"Back\" [ref=e2]\n- button [ref=e3]\n- button \"LET'S TALK\" [ref=e4]\n  - link [ref=e7]\n- button \"Menu button\" [ref=e5]\n- link \"HOME HOME\" [ref=e8]\n- link \"ABOUT US ABOUT US\" [ref=e9]\n- link \"PROJECTS PROJECTS\" [ref=e10]\n- button \"CONTACT CONTACT\" [ref=e11]\n- heading \"Subscribe to our newsletter\" [level=3, ref=e12]\n- textbox \"Your email\" [ref=e34]\n- button [ref=e35]\n- link \"LABS LABS\" [ref=e6]\n- heading \"We create 3D visual storytelling and interactive web experiences that help brands stand out\" [level=1, ref=e13]\n- generic [ref=e14] clickable [cursor:pointer]\n- heading \"Bold Ideas, Brought to Life\" [level=4, ref=e15]\n- heading \"We combine design, motion, 3D, and development to create digital experiences that feel visually striking and technically seamless. From campaign launches to immersive brand worlds, we build work that captures attention and invites interaction.\" [level=2, ref=e19]\n- link \"OUR APPROACH\" [ref=e20]\n- heading \"F e a t u r e d W o r k\" [level=4, ref=e36]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O r r r r y y y y z z z z o o o o A A A A I I I I\" [ref=e21]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION A A A A t t t t l l l l a a a a s s s s M M M M o o o o t t t t i i i i o o o o\" [ref=e22]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D e e e e v v v v i i i i n n n n A A A A I I I I\" [ref=e23]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O f f f f T T T T h h h h e e e e O O O O a a a a k k k k\" [ref=e24]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION E E E E v v v v e e e e r r r r s s s s w w w w a a a a p p p p\" [ref=e25]\n- link \"CONCEPT \u2022 3D ILLUSTRATION \u2022 MOGRAPH \u2022 VIDEO P P P P o o o o r r r r s s s s c c c c h h h h e e e e : : : : D D D D r r r r\" [ref=e26]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D S S S S y y y y n n n n t t t t h h h h e e e e t t t t i i i i c c c c H H H H\" [ref=e27]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D M M M M e e e e t t t t a a a a : : : : S S S S p p p p a a a a t t t t i i i i\" [ref=e28]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 WEB3 S S S S p p p p a a a a a a a a c c c c e e e e - - - - N N N N F F F F T T T T\" [ref=e29]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D D D D D D D D D 2 2 2 2 0 0 0 0 2 2 2 2 4 4 4 4\" [ref=e30]\n- link \"CONCEPT \u2022 WEB \u2022 GAME DESIGN \u2022 3D C C C C h h h h o o o o o o o o C C C C h h h h o o o o o o o o W W W W o o o o\" [ref=e31]\n- link \"AR \u2022 DEVELOPMENT \u2022 3D S S S S o o o o d d d d a a a a E E E E x x x x p p p p e e e e r r r r i i i i\" [ref=e32]\n- link \"SEE ALL PROJECTS\" [ref=e16]\n- generic \"LLeett''ss wwoorrkkttooggeetthheerr!!\" [ref=e37] clickable [cursor:pointer]\n- link \"Suite 2 9 Marsh Street Bristol, BS1 4AA United Kingdom\" [ref=e33]\n- link \"Twitter / X\" [ref=e38]\n- link \"Instagram\" [ref=e39]\n- link \"Linkedin\" [ref=e40]\n- link \"hello@lusion.co\" [ref=e41]\n- link \"business@lusion.co\" [ref=e42]\n- textbox \"Your email\" [ref=e43]\n- button \"Send newsletter form button\" [ref=e44]\n- link \"R&D: labs.lusion.co\" [ref=e17]\n- generic [ref=e18] clickable [cursor:pointer]"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "click",
+      "@e4"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "clicked": "@e4"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "wait",
+      "1800"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "ms": 1800,
+        "waited": "timeout"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "screenshot",
+      "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/lusion-contact.png"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "path": "/home/andre/Development/wipost165/docs/design/2026-10-outside-references/captures/lusion-contact.png"
+      },
+      "error": null
+    }
+  },
+  {
+    "command": [
+      "snapshot",
+      "-i"
+    ],
+    "result": {
+      "success": true,
+      "data": {
+        "origin": "https://lusion.co/",
+        "refs": {
+          "e1": {
+            "name": "Go to home page",
+            "role": "link"
+          },
+          "e10": {
+            "name": "PROJECTS PROJECTS",
+            "role": "link"
+          },
+          "e11": {
+            "name": "CONTACT CONTACT",
+            "role": "button"
+          },
+          "e12": {
+            "name": "Subscribe to our newsletter",
+            "role": "heading"
+          },
+          "e13": {
+            "name": "We create 3D visual storytelling and interactive web experiences that help brands stand out",
+            "role": "heading"
+          },
+          "e14": {
+            "name": "",
+            "role": "generic"
+          },
+          "e15": {
+            "name": "Bold Ideas, Brought to Life",
+            "role": "heading"
+          },
+          "e16": {
+            "name": "SEE ALL PROJECTS",
+            "role": "link"
+          },
+          "e17": {
+            "name": "R&D: labs.lusion.co",
+            "role": "link"
+          },
+          "e18": {
+            "name": "",
+            "role": "generic"
+          },
+          "e19": {
+            "name": "We combine design, motion, 3D, and development to create digital experiences that feel visually striking and technically seamless. From campaign launches to immersive brand worlds, we build work that captures attention and invites interaction.",
+            "role": "heading"
+          },
+          "e2": {
+            "name": "Back",
+            "role": "button"
+          },
+          "e20": {
+            "name": "OUR APPROACH",
+            "role": "link"
+          },
+          "e21": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O r r r r y y y y z z z z o o o o A A A A I I I I",
+            "role": "link"
+          },
+          "e22": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION A A A A t t t t l l l l a a a a s s s s M M M M o o o o t t t t i i i i o o o o",
+            "role": "link"
+          },
+          "e23": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D e e e e v v v v i i i i n n n n A A A A I I I I",
+            "role": "link"
+          },
+          "e24": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O f f f f T T T T h h h h e e e e O O O O a a a a k k k k",
+            "role": "link"
+          },
+          "e25": {
+            "name": "CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION E E E E v v v v e e e e r r r r s s s s w w w w a a a a p p p p",
+            "role": "link"
+          },
+          "e26": {
+            "name": "CONCEPT \u2022 3D ILLUSTRATION \u2022 MOGRAPH \u2022 VIDEO P P P P o o o o r r r r s s s s c c c c h h h h e e e e : : : : D D D D r r r r",
+            "role": "link"
+          },
+          "e27": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D S S S S y y y y n n n n t t t t h h h h e e e e t t t t i i i i c c c c H H H H",
+            "role": "link"
+          },
+          "e28": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D M M M M e e e e t t t t a a a a : : : : S S S S p p p p a a a a t t t t i i i i",
+            "role": "link"
+          },
+          "e29": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 WEB3 S S S S p p p p a a a a a a a a c c c c e e e e - - - - N N N N F F F F T T T T",
+            "role": "link"
+          },
+          "e3": {
+            "name": "",
+            "role": "button"
+          },
+          "e30": {
+            "name": "WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D D D D D D D D D 2 2 2 2 0 0 0 0 2 2 2 2 4 4 4 4",
+            "role": "link"
+          },
+          "e31": {
+            "name": "CONCEPT \u2022 WEB \u2022 GAME DESIGN \u2022 3D C C C C h h h h o o o o o o o o C C C C h h h h o o o o o o o o W W W W o o o o",
+            "role": "link"
+          },
+          "e32": {
+            "name": "AR \u2022 DEVELOPMENT \u2022 3D S S S S o o o o d d d d a a a a E E E E x x x x p p p p e e e e r r r r i i i i",
+            "role": "link"
+          },
+          "e33": {
+            "name": "Suite 2 9 Marsh Street Bristol, BS1 4AA United Kingdom",
+            "role": "link"
+          },
+          "e34": {
+            "name": "Your email",
+            "role": "textbox"
+          },
+          "e35": {
+            "name": "",
+            "role": "button"
+          },
+          "e36": {
+            "name": "F e a t u r e d W o r k",
+            "role": "heading"
+          },
+          "e37": {
+            "name": "",
+            "role": "generic"
+          },
+          "e38": {
+            "name": "Twitter / X",
+            "role": "link"
+          },
+          "e39": {
+            "name": "Instagram",
+            "role": "link"
+          },
+          "e4": {
+            "name": "LET'S TALK",
+            "role": "button"
+          },
+          "e40": {
+            "name": "Linkedin",
+            "role": "link"
+          },
+          "e41": {
+            "name": "hello@lusion.co",
+            "role": "link"
+          },
+          "e42": {
+            "name": "business@lusion.co",
+            "role": "link"
+          },
+          "e43": {
+            "name": "Your email",
+            "role": "textbox"
+          },
+          "e44": {
+            "name": "Send newsletter form button",
+            "role": "button"
+          },
+          "e5": {
+            "name": "Menu button",
+            "role": "button"
+          },
+          "e6": {
+            "name": "LABS LABS",
+            "role": "link"
+          },
+          "e7": {
+            "name": "",
+            "role": "link"
+          },
+          "e8": {
+            "name": "HOME HOME",
+            "role": "link"
+          },
+          "e9": {
+            "name": "ABOUT US ABOUT US",
+            "role": "link"
+          }
+        },
+        "snapshot": "- link \"Go to home page\" [ref=e1]\n- button \"Back\" [ref=e2]\n- button [ref=e3]\n- button \"LET'S TALK\" [ref=e4]\n  - link [ref=e7]\n- button \"Menu button\" [ref=e5]\n- link \"HOME HOME\" [ref=e8]\n- link \"ABOUT US ABOUT US\" [ref=e9]\n- link \"PROJECTS PROJECTS\" [ref=e10]\n- button \"CONTACT CONTACT\" [ref=e11]\n- heading \"Subscribe to our newsletter\" [level=3, ref=e12]\n- textbox \"Your email\" [ref=e34]\n- button [ref=e35]\n- link \"LABS LABS\" [ref=e6]\n- heading \"We create 3D visual storytelling and interactive web experiences that help brands stand out\" [level=1, ref=e13]\n- generic [ref=e14] clickable [cursor:pointer]\n- heading \"Bold Ideas, Brought to Life\" [level=4, ref=e15]\n- heading \"We combine design, motion, 3D, and development to create digital experiences that feel visually striking and technically seamless. From campaign launches to immersive brand worlds, we build work that captures attention and invites interaction.\" [level=2, ref=e19]\n- link \"OUR APPROACH\" [ref=e20]\n- heading \"F e a t u r e d W o r k\" [level=4, ref=e36]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O r r r r y y y y z z z z o o o o A A A A I I I I\" [ref=e21]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION A A A A t t t t l l l l a a a a s s s s M M M M o o o o t t t t i i i i o o o o\" [ref=e22]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D e e e e v v v v i i i i n n n n A A A A I I I I\" [ref=e23]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION O O O O f f f f T T T T h h h h e e e e O O O O a a a a k k k k\" [ref=e24]\n- link \"CONCEPT \u2022 WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 ANIMATION E E E E v v v v e e e e r r r r s s s s w w w w a a a a p p p p\" [ref=e25]\n- link \"CONCEPT \u2022 3D ILLUSTRATION \u2022 MOGRAPH \u2022 VIDEO P P P P o o o o r r r r s s s s c c c c h h h h e e e e : : : : D D D D r r r r\" [ref=e26]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D S S S S y y y y n n n n t t t t h h h h e e e e t t t t i i i i c c c c H H H H\" [ref=e27]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D M M M M e e e e t t t t a a a a : : : : S S S S p p p p a a a a t t t t i i i i\" [ref=e28]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D \u2022 WEB3 S S S S p p p p a a a a a a a a c c c c e e e e - - - - N N N N F F F F T T T T\" [ref=e29]\n- link \"WEB \u2022 DESIGN \u2022 DEVELOPMENT \u2022 3D D D D D D D D D D D D D 2 2 2 2 0 0 0 0 2 2 2 2 4 4 4 4\" [ref=e30]\n- link \"CONCEPT \u2022 WEB \u2022 GAME DESIGN \u2022 3D C C C C h h h h o o o o o o o o C C C C h h h h o o o o o o o o W W W W o o o o\" [ref=e31]\n- link \"AR \u2022 DEVELOPMENT \u2022 3D S S S S o o o o d d d d a a a a E E E E x x x x p p p p e e e e r r r r i i i i\" [ref=e32]\n- link \"SEE ALL PROJECTS\" [ref=e16]\n- generic \"LLeett''ss wwoorrkkttooggeetthheerr!!\" [ref=e37] clickable [cursor:pointer]\n- link \"Suite 2 9 Marsh Street Bristol, BS1 4AA United Kingdom\" [ref=e33]\n- link \"Twitter / X\" [ref=e38]\n- link \"Instagram\" [ref=e39]\n- link \"Linkedin\" [ref=e40]\n- link \"hello@lusion.co\" [ref=e41]\n- link \"business@lusion.co\" [ref=e42]\n- textbox \"Your email\" [ref=e43]\n- button \"Send newsletter form button\" [ref=e44]\n- link \"R&D: labs.lusion.co\" [ref=e17]\n- generic [ref=e18] clickable [cursor:pointer]"
+      },
+      "error": null
+    }
+  }
+]
