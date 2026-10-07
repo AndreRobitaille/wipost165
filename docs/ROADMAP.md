@@ -46,12 +46,15 @@ is under discussion. Next: settle that image treatment and remaining V1 gates.
 
 ## Start here each session
 
-Current content follow-up: owner-requested briefs for Grok to enrich from meeting
-records are [About #7](https://github.com/AndreRobitaille/wipost165/issues/7),
+Current content follow-up: the owner supplied local facts for
+[About #7](https://github.com/AndreRobitaille/wipost165/issues/7),
 [Membership #8](https://github.com/AndreRobitaille/wipost165/issues/8), and
 [Veteran help #9](https://github.com/AndreRobitaille/wipost165/issues/9).
-Local content, dues/joining details, and service-officer scope should be verified
-through those tasks; the existing pages have not yet been rewritten.
+The shared pages are rewritten on `codex/public-page-content`, with the
+[source record](public-page-facts.md) and [local verification](design/2026-10-footer-content/README.md).
+Next: owner reviews and merges the one PR into `main`; no deployment in this pass.
+Home and First visit retain their existing meeting schedule and need a separate
+follow-up for the confirmed possibility of skipped summer months.
 
 1. Read `AGENTS.md`, the current section of [HANDOFF](HANDOFF.md), and this roadmap.
    Inspect the checkout and preserve existing work before editing.
@@ -434,3 +437,16 @@ public V1 URL now serves real dates and event dialogs; the V2 concept and Hetzne
 production are unchanged. CI passes Rails 76/738 plus nine adapter tests. Eight
 routes match Rails at 1440/390/320px; hosted calendar and asset checks pass.
 [Deployment identity and refresh instructions](design/2026-10-harbor-study/sites-preview/README.md).
+
+### October 7 — About, Membership and Veteran help content pass
+
+Added the owner's complete fact sheets verbatim and updated the readiness
+worksheet's stale dues/joining rows. Reworked the three shared pages into an
+editorial local-service narrative, visible membership questions, and a crisis-first
+help guide. Retained role-based contacts and graceful hidden-contact states.
+[Review notes](design/2026-10-footer-content/README.md) record source differences,
+omissions and desktop/phone screenshots for both editions. CI passes 78 Rails
+tests / 902 assertions plus nine Sites adapter tests; browser checks cover all
+three pages at 1440/390/320px, keyboard focus, enlarged text and hidden channels.
+Prepared on a new branch from `main` for one owner-reviewed PR targeting `main`.
+No merge, Sites refresh, production deployment or companion change.

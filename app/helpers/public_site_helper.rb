@@ -13,8 +13,8 @@ module PublicSiteHelper
     "visit" => "Plan your first visit to Post 165 in Two Rivers. Find meeting and arrival information, parking details, and ways to get in touch.",
     "about" => "Learn about Robert E. Burns American Legion Post 165 in Two Rivers: fellowship, mutual helpfulness, and service to the community.",
     "contact" => "Contact American Legion Post 165 in Two Rivers by email or phone, or find the Post's mailing address.",
-    "membership" => "Interested in joining Post 165? Find American Legion membership information and contact the Post with local questions.",
-    "help" => "Find the Manitowoc County Veteran Services Office for benefits questions and ways to contact Post 165."
+    "membership" => "Join Post 165 at a meeting. Find eligibility, $45 annual dues, visiting, transfers, and renewal information.",
+    "help" => "Find Veterans Crisis Line support, ask Post 165’s Service Officer where to start, or contact Manitowoc County for veterans benefits help."
   }.freeze
 
   def public_page_title

@@ -1,0 +1,49 @@
+/* Shared editorial pages; each edition retains its own fonts and surrounding layout. */
+:is(#launch, #company) .post-page {
+  --post-rule: #b9cbd7;
+  text-align: left;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+:is(#launch, #company) .post-page :is(p, h1, h2, address) { margin: 0; }
+:is(#launch, #company) .post-page h1 { margin: 16px 0 24px; font-size: clamp(2.4rem, 4.4vw, 3.5rem); line-height: 1.1; }
+:is(#launch, #company) .post-page h2 { color: var(--blue); font-size: 1.5rem; line-height: 1.25; letter-spacing: -.025em; }
+:is(#launch, #company) .post-page p + p { margin-top: 14px; }
+:is(#launch, #company) .post-page h2 + p { margin-top: 12px; }
+:is(#launch, #company) .post-page-heading { margin-bottom: 32px; }
+:is(#launch, #company) .post-page .post-lead { font-size: 1.25rem; line-height: 1.55; margin-bottom: 18px; }
+:is(#launch, #company) .post-page .eyebrow { font-size: .8125rem; }
+:is(#launch, #company) .post-label { margin-bottom: 10px; color: var(--muted); font-size: .875rem; font-weight: 700; line-height: 1.5; }
+:is(#launch, #company) .post-inline-link { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+:is(#launch, #company) .post-link { display: inline-flex; align-items: center; min-height: 44px; padding-block: 9px; color: var(--blue); font-size: 1rem; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--post-rule); }
+:is(#launch, #company) .post-page a:hover { text-decoration-color: currentColor; }
+:is(#launch, #company) .post-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; margin-top: 20px; }
+:is(#launch, #company) .post-service { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 28px; padding: 28px 0; border-top: 1px solid var(--post-rule); }
+:is(#launch, #company) .post-service .post-link { margin-top: 8px; }
+:is(#launch, #company) .post-history { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 26px; padding: 28px; margin-top: 16px; background: #e7eff5; border-left: 4px solid var(--blue); }
+:is(#launch, #company) .post-history .post-year { color: var(--blue); font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -.04em; }
+:is(#launch, #company) .post-history .post-link { margin-top: 10px; }
+:is(#launch, #company) .post-next { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--post-rule); }
+:is(#launch, #company) .post-join { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding: 22px 0; border-block: 1px solid var(--post-rule); }
+:is(#launch, #company) .post-dues { display: flex; gap: 16px; align-items: center; color: var(--blue); }
+:is(#launch, #company) .post-dues strong { font-size: 2.75rem; line-height: 1; letter-spacing: -.04em; }
+:is(#launch, #company) .post-dues span { max-width: 8ch; font-size: .9375rem; line-height: 1.4; }
+:is(#launch, #company) .post-questions > section { padding: 28px 0; border-bottom: 1px solid var(--post-rule); }
+:is(#launch, #company) .post-questions > section:last-child { border-bottom: 0; padding-bottom: 0; }
+:is(#launch, #company) .post-contact-links { display: flex; flex-wrap: wrap; gap: 12px 32px; margin-top: 16px; }
+:is(#launch, #company) .post-contact-link { display: flex; flex-direction: column; justify-content: center; min-height: 64px; padding-block: 8px; color: var(--blue); overflow-wrap: anywhere; max-width: 100%; }
+:is(#launch, #company) .post-contact-link span { color: var(--muted); font-size: .875rem; }
+:is(#launch, #company) .post-contact-link strong { font-size: 1rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--post-rule); }
+:is(#launch, #company) .post-crisis { padding: 26px; border-top: 4px solid var(--red); background: white; box-shadow: 0 2px 0 #b9cbd7; }
+:is(#launch, #company) .post-crisis .post-label { color: var(--red); }
+:is(#launch, #company) .post-crisis .post-actions { gap: 8px 22px; }
+:is(#launch, #company) .post-crisis .post-emergency-note { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--post-rule); font-size: .9375rem; }
+:is(#launch, #company) .post-help-section { padding-top: 32px; margin-top: 32px; border-top: 1px solid var(--post-rule); }
+:is(#launch, #company) .post-help-section address { margin-top: 20px; font-size: 1rem; font-style: normal; }
+:is(#launch, #company) .post-contact-unavailable { padding-left: 16px; border-left: 3px solid var(--post-rule); }
+@media (max-width: 600px) {
+  :is(#launch, #company) .post-service { grid-template-columns: 1fr; gap: 14px; }
+  :is(#launch, #company) .post-history { grid-template-columns: 1fr; gap: 14px; padding: 22px; }
+  :is(#launch, #company) .post-crisis { padding: 22px; }
+  :is(#launch, #company) .post-page .post-lead { font-size: 1.125rem; }
+}

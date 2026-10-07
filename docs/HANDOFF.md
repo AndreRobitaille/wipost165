@@ -1,5 +1,25 @@
 # Project handoff
 
+## October 7 — footer content ready for owner review
+
+The owner supplied the complete [public page fact sheets](public-page-facts.md)
+for issues #7, #8 and #9. Branch `codex/public-page-content`, created from `main`,
+implements About's local service/history narrative, Membership's $45 dues and
+meeting-based joining guide, and Veteran help's crisis-first Service Officer and
+county routes. The shared templates preserve both editions and independently
+configured contact channels. The [readiness worksheet](launch-content-readiness.md)
+now records the confirmed local answers.
+
+[Review notes and screenshots](design/2026-10-footer-content/README.md) include
+two source conflicts: regular meetings are excluded from the public calendar,
+and National's renewal opening date differs from the supplied fall wording.
+The pages avoid those misleading claims. Home/First visit still need a separate
+follow-up for skipped summer meetings. Local CI passes 78 tests / 902 assertions
+plus nine Sites adapter tests; both editions pass desktop/phone and hidden-contact
+checks. Next: owner reviews and merges the single PR into `main`. No deployment
+was requested or performed; Sites and the coming-soon production service retain
+their existing content.
+
 ## October 7 — shareable V1 preview and source handoff
 
 The owner authorized committing/pushing the current work and publishing a separate
@@ -11,11 +31,11 @@ a Sites Worker that reads the same live public events feed; the read-only websit
 token is a server-side Sites secret. No AI API key is needed. The [older people-based Site](https://post165-in-good-company.andretr.chatgpt.site)
 remains unchanged for V2. [Identity, refresh procedure, and verification](design/2026-10-harbor-study/sites-preview/README.md)
 record the successful Sites deployment. This does not deploy the Rails production
-service. The three footer content issues remain for Grok enrichment and can be
-reflected in a later refresh of this same V1 Site.
+service. The footer content pass above can be reflected in a later authorized
+refresh of this same V1 Site after review and merge.
 
 The incoming `main` deploy-hold guidance was fast-forwarded from GitHub. The current
-work remains on `main`; GitHub's default branch remains `master`. CI now covers pushes
+work was on `main`; GitHub's default branch remains `master`. CI now covers pushes
 to both. Local development credentials and keys stay ignored. Local CI passes
 76 tests / 738 assertions, and `bin/release check` passes without server access.
 
@@ -91,7 +111,8 @@ The requested footer content briefs are now GitHub issues for owner-directed Gro
 work: [About #7](https://github.com/AndreRobitaille/wipost165/issues/7),
 [Membership #8](https://github.com/AndreRobitaille/wipost165/issues/8), and
 [Veteran help #9](https://github.com/AndreRobitaille/wipost165/issues/9).
-Their content pages are unchanged; enrichment from verified meeting records is pending.
+Their supplied local facts have now been incorporated in the review branch
+described at the top of this handoff.
 
 Earlier V1 verification: CI passed 76 tests / 735 assertions plus style/security,
 autoloading, and production assets. Browser checks passed 27 page/width combinations
