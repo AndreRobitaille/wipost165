@@ -7,10 +7,10 @@ incorrect interpretation; the current build replaces it with live calendar reads
 - V1: https://post165-v1-launch-preview.andretr.chatgpt.site
 - Preserved V2 concept: https://post165-in-good-company.andretr.chatgpt.site
 - V1 project: `appgprj_6ac6808b104481919e5be6d86d23188e`
-- Current saved version (8): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_5416a948ec008191b88fc9d5ea21748b`
-- Sites source commit: `bf26a5b8087791c9317ad90d0007905206488aa0`
-- Successful card-border refinement deployment: `appgdep_6ac793ba9f6c819190e25953e86cf3ff`, October 8, 2026; runtime secret revision 1 (unchanged).
-- Rails source: card-border refinement on `codex/public-page-content` / PR #10.
+- Current saved version (9): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_45b2273789c8819186eb5b291a48fc77`
+- Sites source commit: `a0f274ac241f6208fdc21193189d1f3ce07c2a2c`
+- Successful four-pillar strip deployment: `appgdep_6ac7994076248191be08f6fb00400f5e`, October 8, 2026; runtime secret revision 1 (unchanged).
+- Rails source: four-pillar detail strip on `codex/public-page-content` / PR #10.
 - Earlier live-calendar correction: version 2, `appgdep_6ac68430e21c819193c5d8558e2d133b` (superseded by the content refresh).
 - Local Site checkout: `tmp/sites-v1-preview` (ignored by the Rails repository).
 - Original sample-only deployment: version 1, `appgdep_6ac6813c3d4881918d15652c6d8b5176` (superseded).
@@ -167,3 +167,12 @@ uses #d6e4ef, distinct from the #e7eff5 invitation below. Content is unchanged.
 CI passed 78/934 and nine adapter tests. Browser checks in both editions at five
 widths confirmed borders, gaps, distinct backgrounds, reflow and keyboard access.
 Sites reported success at 12:59 UTC; runtime secret revision 1 remains unchanged.
+
+## October 8 — national-purpose strip, version 9
+
+Added “Part of something bigger” below the three cards: all four national
+pillars, a local About link, and a National mission link. CI passed 78/934 and
+nine adapter tests; both-edition responsive, keyboard, link and reading-order
+checks passed without screenshots. Source details are in the public facts and
+the invitation design record. Sites reported success at 13:23 UTC; runtime
+secret revision 1 is unchanged. No V2 Site or Hetzner deployment.

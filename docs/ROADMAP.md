@@ -57,7 +57,10 @@ painted invitation and much less copy; the fifth V1 main-menu link remains.
 The owner called the illustrated opening a good start and requested three
 reasons beneath it. Camaraderie, community and veteran-support panels now replace
 the second emotional passage; the premature hero jump link is removed.
-Next: owner reviews this balance of invitation and substance.
+The owner liked the bordered cards and requested a deeper strip below them.
+“Part of something bigger” now connects all four national pillars to a link
+for Post 165’s local work, before the final visit actions.
+Next: owner reviews the added national-purpose detail.
 Membership retains practical joining information; national advocacy and local
 Post services stay distinct. See the latest [handoff](HANDOFF.md) for checks and
 publishing status.
@@ -548,3 +551,11 @@ keyboard and enlarged text. Pushed `98d0063` to PR #10 and published Sites versi
 October 8 card refinement: owner requested clearer separation. Added blue borders,
 16px gaps and a stronger blue tint to the left Why card. CI and responsive checks
 passed; published Sites version 8 with runtime secrets unchanged.
+
+### October 8 — national-purpose detail strip
+
+Added all four official pillars after the reason cards, with links to local
+About and National's mission. Checked current National sources and preserved
+local-service boundaries. CI passed 78/934 plus nine adapter tests; responsive,
+keyboard and link checks passed in both editions. Published Sites version 9,
+with runtime secret revision 1 unchanged; changes remain in PR #10.

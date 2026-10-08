@@ -80,6 +80,10 @@ and open chair, brief conversational copy, and one clear path to meeting us.
 The latest owner refinement retains that opening, removes its premature jump
 link, and follows it with three connected panels for camaraderie, community and
 veteran support, drawing on the pillars without reciting the organization chart.
+After approving those cards, the owner requested a deeper strip below them.
+“Part of something bigger” now gives the four actual pillars in plain language,
+with separate links to verified Post work and National’s mission. Keep that
+detail after the emotional invitation and before the final first-visit actions.
 Audience distinctions belong in the brief, not in the visitor-facing pitch. V1 navigation is Home, Why the
 Legion?, Events, First visit, Contact. About, Membership and Veteran help remain
 secondary resources. The homepage gives the reason-to-belong link priority while

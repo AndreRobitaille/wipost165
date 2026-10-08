@@ -68,3 +68,24 @@ page in both editions at 1440, 900, 700, 390 and 320px. Three panels render side
 by side on wide V1 and stack on narrow V1/V2; the opening contains no links.
 No overflow or missing images; keyboard navigation and 200% root-text reflow
 passed. No screenshots were taken.
+
+## National-purpose detail strip
+
+The owner liked the three-card refinement and requested a further strip with
+more detail, including local work and the four pillars. Added “Part of something
+bigger” between the three reasons and the final visit invitation. A blue
+introduction links to Post 165's About page; the adjoining white reading area
+presents all four official pillars in a two-column list and links to National's
+mission. Each summary is short. National program descriptions remain distinct
+from the local activities on About. Sources are recorded in the public facts.
+
+The strip uses the existing National palette and fonts. It becomes a single
+column at intermediate widths and within V2's table; the pillar list becomes
+one column on phones. All copy is visible with normal reading/keyboard order.
+No new image, dependency or JavaScript is added; the liked cards and hero stay.
+
+Verification: `bin/ci` passed 78 Rails tests / 934 assertions and nine adapter
+tests, plus style/security, autoload and production assets. Both editions passed
+browser checks at five widths: all four headings and the section order, local
+About navigation, National-link keyboard focus, responsive columns, no overflow,
+image loading and 200% root-text reflow. No screenshots.

@@ -109,3 +109,14 @@ Settled earlier from official sources: join and DD214 basics, who processes memb
   or guaranteed friendship. Buddy Checks and optional participation retain the
   supplied factual basis. The National advocacy source above remains a record
   of the earlier page, although its separate paragraph is no longer displayed.
+
+- Four-pillar detail strip, Oct 8 2026: checked National's current
+  [About](https://www.legion.org/about),
+  [Headquarters divisions](https://www.legion.org/about/organization/headquarters-divisions),
+  [Youth support](https://www.legion.org/advocacy/youth-support/about-youth-support),
+  and [2026 legislative priorities](https://www.legion.org/advocacy/legislative/legislative-priorities).
+  The four summaries describe the wider organization's work: earned benefits
+  and health-care access; defense/readiness and military-family well-being;
+  citizenship, youth leadership and remembrance; child welfare and family support.
+  They do not advertise these as services delivered by Post 165 or imply benefits
+  require membership. A separate About link leads to verified local activities.

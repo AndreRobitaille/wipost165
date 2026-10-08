@@ -1,5 +1,17 @@
 # Project handoff
 
+## October 8 — national purpose beneath the local invitation
+
+Added “Part of something bigger” after the liked three cards and before the
+final first-visit actions. The blue introduction links to Post 165's About page;
+the adjoining area explains all four official pillars and links to National.
+National wording was checked against its current primary sources and recorded
+in the public facts. No new local services or program promises are introduced.
+CI passed 78/934 plus nine adapter tests; both editions passed five-width,
+keyboard, link, reading-order and enlarged-text checks. No screenshots.
+Published as Sites version 9 with runtime secret revision 1 unchanged; PR #10
+contains the change for owner review. The V2 Site and Hetzner remain unchanged.
+
 October 8 card refinement: added fine blue borders and 16px gaps to the three
 Why cards, and strengthened the left card's blue tint so it differs from the
 section below. CI passed 78/934 plus nine adapter tests; both-edition responsive
