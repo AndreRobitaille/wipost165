@@ -69,6 +69,16 @@ Keep About substantive with local service and supported history. Membership shou
 lead with visiting and participation; the owner requested that the dues amount
 stay off the public site. See the [current review](design/2026-10-footer-content/design-revision/README.md).
 
+October 8 audience refinement: Why the Legion? explains what belonging might
+add to a veteran’s life before the site asks them to attend. Use the
+[audience brief](AUDIENCE.md) to consider established locals, residents who chose
+Two Rivers, and recent movers within one invitation. Keep fellowship central and
+service optional. The new page uses open reading columns and one dark statement
+band within the existing palette and typography. V1 navigation is Home, Why the
+Legion?, Events, First visit, Contact. About, Membership and Veteran help remain
+secondary resources. The homepage gives the reason-to-belong link priority while
+keeping events directly accessible. Phone navigation wraps into readable rows.
+
 ## The experience we are trying to create
 
 **“I can picture myself here, and I know how to take the next step.”**

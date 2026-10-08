@@ -5,10 +5,11 @@ module PublicSiteHelper
   PAGE_TITLES = {
     "home" => "In good company", "events" => "Events", "visit" => "Your first visit",
     "about" => "Service, close to home", "contact" => "Say hello",
-    "membership" => "Membership", "help" => "Veteran help"
+    "membership" => "Membership", "help" => "Veteran help", "why_legion" => "Why the Legion?"
   }.freeze
 
   PAGE_DESCRIPTIONS = {
+    "why_legion" => "Discover what belonging to Post 165 in Two Rivers could mean for you: company with fellow veterans, mutual support, and ways to take part when you want to.",
     "events" => "Find upcoming public events at American Legion Post 165 in Two Rivers, with dates, locations, and cancellation updates.",
     "visit" => "Plan your first visit to Post 165 in Two Rivers. Find meeting and arrival information, parking details, and ways to get in touch.",
     "about" => "Learn about Robert E. Burns American Legion Post 165 in Two Rivers: fellowship, mutual helpfulness, and service to the community.",

@@ -95,3 +95,9 @@ Not sourced, so kept out: whether the current Manitowoc County CVSO is personall
 
 Answered by the Commander, Oct 7 2026, and removed: what our Service Officer does; how to reach him (Post phone and email, ask for the Service Officer); how to join (paper application and dues at a meeting); renewals (in person at a meeting or national website); transfers (no prorated difference, prorating left off the page); awards stay off the Membership page for now.
 Settled earlier from official sources: join and DD214 basics, who processes membership, the transfer procedure, officer roles (OG26 pp. 26, 40, 47–48; FAQ).
+
+## Why the Legion page source notes
+
+- Audience framing: Commander, Oct 8 2026; see [AUDIENCE.md](AUDIENCE.md). The three relationships to Two Rivers guide one shared invitation; possible motivations are not published as demographic findings or testimonials.
+- Local examples and optional involvement: the Buddy Checks, Service Officer, Car & Bike Show and brat-fry facts above. Service Officer help remains available to nonmembers. Existing participation guidance states no attendance or volunteer requirement.
+- National advocacy: [The American Legion advocacy](https://www.legion.org/advocacy) and [membership explanation](https://www.legion.org/join), checked Oct 8 2026, support the broad claim that National advocates for veterans, servicemembers and families, including health care and benefits. No specific legislative outcome, local accredited representation, or benefit conditional on membership is promised.

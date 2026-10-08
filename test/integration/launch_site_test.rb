@@ -83,7 +83,7 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
 
   test "practical pages ignore person context and make no publisher requests" do
     using_feed do
-      %w[/visit /about /contact /membership /veteran-help].each do |path|
+      %w[/why-the-legion /visit /about /contact /membership /veteran-help].each do |path|
         get path, params: { person: "story_example_avery" }
         assert_response :success
         assert_select "h1", count: 1
@@ -91,6 +91,12 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
         assert_select ".recognition", count: 0
         assert_not_includes response.body, "?person="
         assert_equal "no-store", response.headers["Cache-Control"]
+        if path == why_legion_path
+          assert_select ".launch-nav a[aria-current=page][href=?]", why_legion_path, count: 1
+          assert_select ".why-next a[href=?]", events_path
+          assert_select ".why-next a[href=?]", visit_path
+          assert_select ".why-next a[href=?]", membership_path
+        end
       end
     end
     assert_empty @requests

@@ -1,0 +1,58 @@
+<section class="post-page post-why-page" aria-labelledby="why-title">
+  <header class="post-page-heading launch-page-heading">
+    <div>
+      <p class="eyebrow">WHY THE LEGION?</p>
+      <h1 id="why-title">Different paths.<br>A common bond.</h1>
+      <p class="post-lead">You may have grown up in Two Rivers, chosen it years ago, or just moved here. Military service gives us something in common before we’ve even met.</p>
+    </div>
+    <% if public_site_v1? %><span class="launch-post-number" aria-hidden="true">Post<strong>165</strong></span><% end %>
+  </header>
+
+  <div class="why-connections">
+    <section aria-labelledby="why-company">
+      <h2 id="why-company">A familiar starting point.</h2>
+      <p>You might have friends here going back to school, or a whole life you’ve built since moving here. Fellow veterans can add another kind of connection: people who know something of the routines, changes, and experiences that come with serving.</p>
+      <p>If Two Rivers is new to you, that shared experience is a place to begin. You don’t need a familiar last name or a story about growing up here to have something in common.</p>
+      <p>Service is one part of who we are. There’s plenty of life to talk about since.</p>
+    </section>
+    <section class="why-care" aria-labelledby="why-care-title">
+      <p class="post-label">MUTUAL HELPFULNESS</p>
+      <h2 id="why-care-title">Looking out for one another.</h2>
+      <p>Getting to know people can make it easier to reach out. Through Buddy Checks, our members check in with fellow veterans and keep in touch.</p>
+      <p>Our Service Officer can also help you find a starting point with veterans benefits. That help is available to any veteran, whether or not you join.</p>
+      <%= link_to "Find veteran help →", veteran_help_path, class: "post-link" %>
+    </section>
+  </div>
+
+  <section class="why-company-note" aria-labelledby="why-enough">
+    <h2 id="why-enough">Good company<br>is reason enough.</h2>
+    <p>There’s no attendance or volunteer requirement. You can take part when it fits your life, help with something that interests you, or simply enjoy being with other veterans.</p>
+  </section>
+
+  <div class="why-purpose">
+    <section aria-labelledby="why-local">
+      <p class="post-label">HERE IN TWO RIVERS</p>
+      <h2 id="why-local">A way to give something back.</h2>
+      <p>If you enjoy lending a hand, there are ways to do that together. Help at a Car &amp; Bike Show or brat fry, make Buddy Check calls, or help plan an occasion. Choose what interests you and the time you want to give.</p>
+      <%= link_to "See what our Post does →", about_path, class: "post-link" %>
+    </section>
+    <section aria-labelledby="why-national">
+      <p class="post-label">PART OF THE AMERICAN LEGION</p>
+      <h2 id="why-national">A voice beyond Two Rivers.</h2>
+      <p>Membership also connects you to a national organization that advocates for veterans, servicemembers, and their families. Its work includes veterans’ health care and benefits—causes you can support even when you can’t be at a local gathering.</p>
+      <%= link_to "Explore the Legion’s advocacy ↗", "https://www.legion.org/advocacy", class: "post-link" %>
+    </section>
+  </div>
+
+  <section class="why-next" aria-labelledby="why-next-title">
+    <div>
+      <h2 id="why-next-title">Start by getting to know us.</h2>
+      <p>You can come to a public event or visit a meeting before deciding whether to join.</p>
+    </div>
+    <div class="post-actions">
+      <%= link_to "See upcoming events", events_path, class: "main-action" %>
+      <%= link_to "What to expect on a first visit →", visit_path, class: "post-link" %>
+    </div>
+    <p class="why-membership">Wondering about eligibility or how to join? <%= link_to "Read our membership answers", membership_path, class: "post-inline-link" %>.</p>
+  </section>
+</section>

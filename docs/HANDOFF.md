@@ -1,5 +1,36 @@
 # Project handoff
 
+## October 8 — Why the Legion first pass
+
+The owner identified a gap before the first-visit path: the site needs to explain
+why someone might want the Legion in their life at all. They described three
+veteran audiences: people born here who returned after service, residents who
+chose Two Rivers years ago, and recent movers. [The audience brief](AUDIENCE.md)
+records that framing and possible motivations, hesitations and content needs.
+Purpose and Community now foreground fellowship and optional service rather than
+assuming visitors already want to attend or volunteer.
+
+Implemented `/why-the-legion` as a shared page, with a V1 main-menu link and a
+homepage introduction that leads with the reason to belong. The page moves from
+shared experience and local connection to mutual helpfulness, a clear statement
+that company is enough, and optional local involvement and national advocacy.
+It offers events and First visit before practical membership answers. The five
+V1 navigation links wrap at phone widths, without a new menu interaction.
+V2 can render the page and links it in the footer; its people-based homepage and
+separate published concept are preserved.
+
+The new page uses the existing Noto faces and Legion palette, open columns,
+and one dark statement band. No new pictures, cards, testimonials, recurring
+activities or member-only assistance benefits are invented. Local claims come
+from the existing fact record; National advocacy was checked against its public
+site on October 8. CI passes 78 tests / 934 assertions and nine Sites adapter
+tests, plus style/security, autoload and production assets. Browser checks passed
+15 page/width combinations: Why the Legion? in both editions and V1 Home at
+1440/900/700/390/320px, with no horizontal overflow or missing images. Keyboard
+navigation and 200% root-text reflow passed. No screenshots were taken. Sites
+publishing results are recorded in the preview handoff. Next: owner reviews the
+wording and balance of the invitation against the audience brief.
+
 ## October 7 — footer content ready for owner review
 
 The owner supplied the complete [public page fact sheets](public-page-facts.md)

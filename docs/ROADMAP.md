@@ -1,6 +1,6 @@
 # Public website development roadmap
 
-Updated October 7, 2026. This is the working backlog for future sessions.
+Updated October 8, 2026. This is the working backlog for future sessions.
 It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
@@ -45,6 +45,18 @@ while the distinction between anonymous illustrated people and V2 member profile
 is under discussion. Next: settle that image treatment and remaining V1 gates.
 
 ## Start here each session
+
+Current audience work: the owner agreed that the site should answer why the
+Legion might matter before assuming interest in a meeting, then supplied three
+veteran perspectives based on their relationship to Two Rivers. The
+[audience brief](AUDIENCE.md) now records their likely interests and barriers as
+working hypotheses. Purpose and Community reflect fellowship as a sufficient
+reason to belong. A first pass at `/why-the-legion` and its homepage introduction
+is now implemented, using the current design and a fifth V1 main-menu link.
+Next: owner reviews the invitation against the three audience perspectives.
+Membership retains practical joining information; national advocacy and local
+Post services stay distinct. See the latest [handoff](HANDOFF.md) for checks and
+publishing status.
 
 Current content follow-up: the owner supplied local facts for
 [About #7](https://github.com/AndreRobitaille/wipost165/issues/7),
@@ -490,3 +502,13 @@ clarified this was a recent activity. Recorded the distinction in the source and
 review notes, retaining draft-minutes provenance. CI passed 78/902 plus nine
 adapter tests. Pushed to PR #10 and published Sites version 4 successfully with
 the existing secret unchanged.
+
+### October 8 — explain why to belong before asking for a visit
+
+Added the owner’s veteran audience brief and aligned Purpose/Community guidance.
+Built Why the Legion? around fellowship, shared service, chosen or lifelong roots
+in Two Rivers, mutual helpfulness, and optional participation. Added its V1 menu
+link and homepage introduction; retained events and visit paths and existing
+Membership answers. Export includes the new static page; Rails metadata and
+no-publisher-read coverage and Sites route coverage include it. CI passes 78/934
+plus nine Sites adapter tests and the remaining checks. No new screenshots.

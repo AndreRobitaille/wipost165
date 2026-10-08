@@ -1,0 +1,30 @@
+/* A shared invitation: open reading space, one statement of welcome, then options. */
+:is(#launch, #company) .post-why-page { --why-deep: #002e55; }
+:is(#launch, #company) .why-connections { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 8%; padding-block: 40px; }
+:is(#launch, #company) .why-connections p { max-width: 64ch; }
+:is(#launch, #company) .why-care { align-self: start; padding-top: 18px; border-top: 3px solid var(--red); }
+:is(#launch, #company) .why-care .post-label { color: var(--muted); }
+:is(#launch, #company) .why-care h2 { font-size: 1.375rem; }
+:is(#launch, #company) .why-care .post-link { margin-top: 12px; }
+:is(#launch, #company) .why-company-note { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 7%; padding: 36px; color: white; background: var(--why-deep); }
+:is(#launch, #company) .why-company-note h2 { color: white; font-size: clamp(1.875rem, 3.5vw, 2.75rem); line-height: 1.15; }
+:is(#launch, #company) .why-company-note h2 + p { margin: 0; color: #d6e4ef; max-width: 47ch; }
+:is(#launch, #company) .why-purpose { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 7%; padding-block: 40px; }
+:is(#launch, #company) .why-purpose .post-label { color: var(--red); font-size: .75rem; letter-spacing: .08em; }
+:is(#launch, #company) .why-purpose .post-link { margin-top: 12px; }
+:is(#launch, #company) .why-next { padding-block: 32px 40px; border-top: 1px solid var(--post-rule); }
+:is(#launch, #company) .why-next > div > p { max-width: 60ch; }
+:is(#launch, #company) .why-next .why-membership { margin-top: 24px; font-size: .9375rem; color: var(--muted); }
+#launch .post-why-page .post-page-heading h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+#launch :is(.why-connections, .why-purpose, .why-next) { margin-inline: 6%; }
+#launch .why-company-note { padding: 36px 6%; }
+#company .why-connections { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-top: 0; }
+#company .why-care { max-width: 60ch; }
+#company .why-company-note { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+@media (max-width: 760px) {
+  #launch .why-connections { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 28px; }
+  :is(#launch, #company) .why-company-note { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  :is(#launch, #company) .why-purpose { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-block: 30px; }
+  :is(#launch, #company) .why-purpose > section + section { padding-top: 30px; border-top: 1px solid var(--post-rule); }
+  #company .why-company-note { padding: 26px; }
+}

@@ -25,13 +25,14 @@
         <div class="launch-post">ROBERT E. BURNS <strong>POST 165</strong><span>Two Rivers, Wisconsin</span></div>
         <nav class="launch-nav" aria-label="Main navigation">
           <%= link_to "Home", root_path, aria: { current: action_name == "home" ? "page" : nil } %>
+          <%= link_to "Why the Legion?", why_legion_path, aria: { current: action_name == "why_legion" ? "page" : nil } %>
           <%= link_to "Events", events_path, aria: { current: %w[events event].include?(action_name) ? "page" : nil } %>
           <%= link_to "First visit", visit_path, aria: { current: action_name == "visit" ? "page" : nil } %>
           <%= link_to "Contact", contact_path, aria: { current: action_name == "contact" ? "page" : nil } %>
         </nav>
       </header>
       <main id="main-content" class="launch-main <%= "launch-interior" unless action_name == "home" %>" tabindex="-1">
-        <% if %w[home events visit contact about membership help].include?(action_name) && @page_error.nil? %>
+        <% if %w[home events visit contact about membership help why_legion].include?(action_name) && @page_error.nil? %>
           <%= yield %>
         <% else %>
           <div class="launch-reading"><%= yield %></div>
