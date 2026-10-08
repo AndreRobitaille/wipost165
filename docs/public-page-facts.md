@@ -101,3 +101,11 @@ Settled earlier from official sources: join and DD214 basics, who processes memb
 - Audience framing: Commander, Oct 8 2026; see [AUDIENCE.md](AUDIENCE.md). The three relationships to Two Rivers guide one shared invitation; possible motivations are not published as demographic findings or testimonials.
 - Local examples and optional involvement: the Buddy Checks, Service Officer, Car & Bike Show and brat-fry facts above. Service Officer help remains available to nonmembers. Existing participation guidance states no attendance or volunteer requirement.
 - National advocacy: [The American Legion advocacy](https://www.legion.org/advocacy) and [membership explanation](https://www.legion.org/join), checked Oct 8 2026, support the broad claim that National advocates for veterans, servicemembers and families, including health care and benefits. No specific legislative outcome, local accredited representation, or benefit conditional on membership is promised.
+
+- Invitation revision, Oct 8 2026: the owner rejected the first page's literal
+  audience pitch. “Pull up a chair” is an invitation; the painted table is symbolic,
+  not a depiction of the venue or a promise of recurring coffee gatherings.
+  “That’s the kind of Post we want to be” states an aspiration, not a testimonial
+  or guaranteed friendship. Buddy Checks and optional participation retain the
+  supplied factual basis. The National advocacy source above remains a record
+  of the earlier page, although its separate paragraph is no longer displayed.

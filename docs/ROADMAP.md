@@ -51,9 +51,10 @@ Legion might matter before assuming interest in a meeting, then supplied three
 veteran perspectives based on their relationship to Two Rivers. The
 [audience brief](AUDIENCE.md) now records their likely interests and barriers as
 working hypotheses. Purpose and Community reflect fellowship as a sufficient
-reason to belong. A first pass at `/why-the-legion` and its homepage introduction
-is now implemented, using the current design and a fifth V1 main-menu link.
-Next: owner reviews the invitation against the three audience perspectives.
+reason to belong. The owner rejected the first `/why-the-legion` page as a
+newspaper-like, overly rational pitch. The revision uses “Pull up a chair,” a
+painted invitation and much less copy; the fifth V1 main-menu link remains.
+Next: owner reviews the new emotional and visual direction.
 Membership retains practical joining information; national advocacy and local
 Post services stay distinct. See the latest [handoff](HANDOFF.md) for checks and
 publishing status.
@@ -517,3 +518,13 @@ The first pass is published to the existing V1 Sites preview as version 5. Brows
 checks passed 15 page/width combinations, keyboard navigation and enlarged text.
 The API secret revision, preserved V2 Site and Hetzner service are unchanged.
 [Publication record](design/2026-10-harbor-study/sites-preview/README.md).
+
+### October 8 — make the reason to belong an invitation
+
+Owner feedback rejected the first Why page's newspaper composition and literal
+audience pitch. Replaced the articles with a shared-table illustration, “Pull up
+a chair,” brief emotional copy, and events/First visit actions. Removed the
+resident-category explanation from Home. Audience and UI guidance now explicitly
+keep audience research behind the scenes. National advocacy and detailed help
+remain in their source record and the secondary pages, not as more sales sections.
+[Design/asset record](design/2026-10-why-invitation/README.md).

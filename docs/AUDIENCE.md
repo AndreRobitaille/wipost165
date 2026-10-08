@@ -101,9 +101,12 @@ to contribute when someone wants to, and the wider Legion mission. Keep national
 advocacy distinct from services actually provided by this Post; assistance that
 is available to nonmembers must not become an implied membership benefit.
 
-The three audiences should recognize themselves through the writing, without
-three labelled audience panels or a separate page for each. Established residents
-need reasons to deepen existing connections; newcomers need reasons to believe
+Use this knowledge to shape tone, imagery and the welcome. Do not recite the
+three life histories or explain the reader’s likely motives back to them. The
+owner rejected that literal approach on October 8: it felt like audience research
+published as marketing. Recognition should come through a felt invitation, not
+an explanation of why someone in their category might value the Post.
+Established residents need reasons to deepen existing connections; newcomers need reasons to believe
 new connections are possible. Neither needs to be portrayed as deficient.
 
 Home should briefly establish why this could be worth someone's time and link

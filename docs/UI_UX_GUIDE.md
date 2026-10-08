@@ -73,8 +73,11 @@ October 8 audience refinement: Why the Legion? explains what belonging might
 add to a veteran’s life before the site asks them to attend. Use the
 [audience brief](AUDIENCE.md) to consider established locals, residents who chose
 Two Rivers, and recent movers within one invitation. Keep fellowship central and
-service optional. The new page uses open reading columns and one dark statement
-band within the existing palette and typography. V1 navigation is Home, Why the
+service optional. The owner rejected the first open-column page as a newspaper
+of short articles: it exposed audience strategy and argued for belonging without
+creating an emotional invitation. The revised page uses a painted shared table
+and open chair, brief conversational copy, and one clear path to meeting us.
+Audience distinctions belong in the brief, not in the visitor-facing pitch. V1 navigation is Home, Why the
 Legion?, Events, First visit, Contact. About, Membership and Veteran help remain
 secondary resources. The homepage gives the reason-to-belong link priority while
 keeping events directly accessible. Phone navigation wraps into readable rows.

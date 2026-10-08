@@ -1,30 +1,66 @@
-/* A shared invitation: open reading space, one statement of welcome, then options. */
-:is(#launch, #company) .post-why-page { --why-deep: #002e55; }
-:is(#launch, #company) .why-connections { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 8%; padding-block: 40px; }
-:is(#launch, #company) .why-connections p { max-width: 64ch; }
-:is(#launch, #company) .why-care { align-self: start; padding-top: 18px; border-top: 3px solid var(--red); }
-:is(#launch, #company) .why-care .post-label { color: var(--muted); }
-:is(#launch, #company) .why-care h2 { font-size: 1.375rem; }
-:is(#launch, #company) .why-care .post-link { margin-top: 12px; }
-:is(#launch, #company) .why-company-note { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 7%; padding: 36px; color: white; background: var(--why-deep); }
-:is(#launch, #company) .why-company-note h2 { color: white; font-size: clamp(1.875rem, 3.5vw, 2.75rem); line-height: 1.15; }
-:is(#launch, #company) .why-company-note h2 + p { margin: 0; color: #d6e4ef; max-width: 47ch; }
-:is(#launch, #company) .why-purpose { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 7%; padding-block: 40px; }
-:is(#launch, #company) .why-purpose .post-label { color: var(--red); font-size: .75rem; letter-spacing: .08em; }
-:is(#launch, #company) .why-purpose .post-link { margin-top: 12px; }
-:is(#launch, #company) .why-next { padding-block: 32px 40px; border-top: 1px solid var(--post-rule); }
-:is(#launch, #company) .why-next > div > p { max-width: 60ch; }
-:is(#launch, #company) .why-next .why-membership { margin-top: 24px; font-size: .9375rem; color: var(--muted); }
-#launch .post-why-page .post-page-heading h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
-#launch :is(.why-connections, .why-purpose, .why-next) { margin-inline: 6%; }
-#launch .why-company-note { padding: 36px 6%; }
-#company .why-connections { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-top: 0; }
-#company .why-care { max-width: 60ch; }
-#company .why-company-note { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-@media (max-width: 760px) {
-  #launch .why-connections { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 28px; }
-  :is(#launch, #company) .why-company-note { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  :is(#launch, #company) .why-purpose { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-block: 30px; }
-  :is(#launch, #company) .why-purpose > section + section { padding-top: 30px; border-top: 1px solid var(--post-rule); }
-  #company .why-company-note { padding: 26px; }
+/* One illustrated invitation, then room for the visitor to imagine belonging. */
+:is(#launch, #company) .why-invitation {
+  --why-blue: #00467f;
+  --why-deep: #002e55;
+  --why-light: #e7eff5;
+  --why-display: "Launch Noto Condensed", "Company Display", sans-serif;
+  color: var(--why-deep);
+  text-align: left;
+}
+:is(#launch, #company) .why-invitation :is(h1, h2, p) { margin: 0; }
+:is(#launch, #company) .why-welcome { position: relative; isolation: isolate; background: var(--why-blue); color: white; }
+:is(#launch, #company) .why-art { position: absolute; z-index: -2; right: 0; width: 82%; height: 100%; object-fit: cover; object-position: 70% center; }
+:is(#launch, #company) .why-welcome::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, var(--why-blue) 15%, #00467ff2 31%, #00467f00 65%); }
+:is(#launch, #company) .why-welcome-copy { position: relative; width: 48%; padding: 64px 0 62px 8%; }
+:is(#launch, #company) .why-welcome .eyebrow { margin-bottom: 26px; color: white; font-size: .75rem; letter-spacing: .15em; }
+:is(#launch, #company) .why-invitation h1 { margin-bottom: 26px; color: white; font: 900 clamp(4rem, 7.6vw, 7rem)/.97 var(--why-display); letter-spacing: -.035em; }
+:is(#launch, #company) .why-opening { max-width: 29ch; font-size: 1.125rem; line-height: 1.7; }
+:is(#launch, #company) .why-welcome-link { display: inline-flex; align-items: center; min-height: 48px; margin-top: 24px; color: white; font-size: 1rem; font-weight: 700; text-decoration: underline; text-underline-offset: 7px; text-decoration-color: #ffffff80; }
+:is(#launch, #company) .why-welcome-link:hover { text-decoration-color: white; }
+:is(#launch, #company) .why-welcome a:focus-visible { outline: 3px solid white; outline-offset: 5px; }
+:is(#launch, #company) .why-company { max-width: 760px; margin: auto; padding: 72px 36px 64px; text-align: center; }
+:is(#launch, #company) .why-company .eyebrow { margin-bottom: 20px; color: var(--red); font-size: .75rem; letter-spacing: .1em; }
+:is(#launch, #company) .why-invitation h2 { color: var(--why-blue); font: 900 clamp(2.25rem, 4.3vw, 3.5rem)/1.12 var(--why-display); letter-spacing: -.025em; }
+:is(#launch, #company) .why-company .why-feeling { margin: 24px auto 18px; max-width: 42ch; color: var(--why-deep); font-size: 1.3125rem; line-height: 1.6; }
+:is(#launch, #company) .why-company > p:not(.eyebrow, .why-feeling) { max-width: 54ch; margin-inline: auto; font-size: 1rem; line-height: 1.75; color: var(--muted); }
+:is(#launch, #company) .why-story-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--why-blue); font-size: .9375rem; font-weight: 700; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: #00467f55; }
+:is(#launch, #company) .why-story-link:hover { text-decoration-color: var(--why-blue); }
+:is(#launch, #company) .why-company .why-story-link { margin-top: 18px; }
+:is(#launch, #company) .why-next { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 20px 10%; padding: 42px 8% 34px; background: var(--why-light); scroll-margin-top: 24px; }
+:is(#launch, #company) .why-next:focus { outline: none; }
+:is(#launch, #company) .why-next:focus-visible { outline: 3px solid var(--why-blue); outline-offset: -5px; }
+:is(#launch, #company) .why-next h2 { margin-bottom: 12px; font-size: 2.5rem; }
+:is(#launch, #company) .why-hello-copy > p { max-width: 46ch; font-size: 1rem; line-height: 1.7; }
+:is(#launch, #company) .why-hello-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+:is(#launch, #company) .why-next .main-action { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 52px; padding: 14px 22px; background: var(--red); color: white; font-size: 1rem; font-weight: 700; }
+:is(#launch, #company) .why-next .main-action:hover { background: #901017; }
+:is(#launch, #company) .why-next .main-action:focus-visible { outline: 3px solid var(--why-blue); outline-offset: 5px; }
+:is(#launch, #company) .why-next .why-membership { grid-column: 1 / -1; margin-top: 8px; max-width: 75ch; font-size: .8125rem; line-height: 1.8; color: var(--muted); }
+:is(#launch, #company) .why-membership a { display: inline-block; padding-block: 8px; color: var(--why-blue); text-decoration: underline; text-underline-offset: 3px; }
+/* V2's surrounding table is narrower than the full-width V1 canvas. */
+#company .why-invitation { --why-display: "Company Display", sans-serif; }
+#company .why-welcome-copy { width: 62%; padding: 36px 0 38px 7%; }
+#company .why-invitation .why-welcome::before { background: linear-gradient(90deg, var(--why-blue) 15%, #00467ff2 62%, #00467f00 95%); }
+#company .why-invitation h1 { font-size: clamp(3.5rem, 6vw, 5rem); }
+#company .why-next { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 820px) {
+  :is(#launch, #company) .why-welcome-copy { width: 61%; padding: 40px 0 38px 7%; }
+  :is(#launch, #company) .why-welcome::before { background: linear-gradient(90deg, var(--why-blue) 15%, #00467ff2 61%, #00467f00 95%); }
+  :is(#launch, #company) .why-invitation h1 { font-size: 4.5rem; }
+  :is(#launch, #company) .why-next { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  :is(#launch, #company) .why-company { padding-block: 54px 46px; }
+}
+@media (max-width: 540px) {
+  :is(#launch, #company) .why-welcome { display: flex; flex-direction: column; }
+  :is(#launch, #company) .why-welcome-copy { order: -1; width: 100%; padding: 32px 8% 12px; }
+  :is(#launch, #company) .why-welcome::before { display: none; }
+  :is(#launch, #company) .why-welcome .eyebrow { margin-bottom: 20px; }
+  :is(#launch, #company) .why-invitation h1 { margin-bottom: 20px; font-size: 4.25rem; }
+  :is(#launch, #company) .why-opening { max-width: 32ch; font-size: 1rem; }
+  :is(#launch, #company) .why-welcome-link { margin-top: 14px; }
+  :is(#launch, #company) .why-art { position: relative; z-index: auto; width: 100%; height: auto; aspect-ratio: 1.7; object-fit: cover; object-position: right 52%; mask-image: linear-gradient(transparent, black 22%); }
+  :is(#launch, #company) .why-company { padding: 44px 8% 40px; }
+  :is(#launch, #company) .why-company .why-feeling { font-size: 1.125rem; }
+  :is(#launch, #company) .why-next { padding: 32px 8% 28px; }
+  :is(#launch, #company) .why-next h2 { font-size: 2.25rem; }
 }

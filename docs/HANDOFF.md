@@ -1,5 +1,22 @@
 # Project handoff
 
+## October 8 — invitation revision
+
+The owner rejected the first Why the Legion page as a newspaper-like collection
+of rational arguments that exposed internal audience knowledge. Replaced it with
+“Pull up a chair”: one people-free painted invitation, a short passage about good
+company and actual Buddy Checks, and a direct path to events/First visit. Membership
+stays secondary. Home no longer recites the resident categories either.
+
+The new illustration is a symbolic shared table, not the meeting venue or evidence
+of a regular coffee gathering. No members, testimonials or attendance promises
+are invented. National colors, Noto typography and the existing logo remain.
+See the [design and asset record](design/2026-10-why-invitation/README.md).
+CI passes 78 tests / 934 assertions and nine Sites adapter tests, with all style,
+security, autoload and asset checks. Local browser checks passed 15 page/width
+combinations, keyboard navigation and enlarged text; no screenshots. The prior
+first pass below records history, not an approved design.
+
 ## October 8 — Why the Legion first pass
 
 The owner identified a gap before the first-visit path: the site needs to explain
