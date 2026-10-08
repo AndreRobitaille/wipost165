@@ -7,10 +7,10 @@ incorrect interpretation; the current build replaces it with live calendar reads
 - V1: https://post165-v1-launch-preview.andretr.chatgpt.site
 - Preserved V2 concept: https://post165-in-good-company.andretr.chatgpt.site
 - V1 project: `appgprj_6ac6808b104481919e5be6d86d23188e`
-- Current saved version (6): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_f1900cfb618481918b3055641362191f`
-- Sites source commit: `c7eba3199a886cb9b2f62151c5004c48d6c9be39`
-- Successful illustrated-invitation deployment: `appgdep_6ac78b9a9c448191a9548345d01e0270`, October 8, 2026; runtime secret revision 1 (unchanged).
-- Rails content commit: `ca2cb2a` on `codex/public-page-content` / PR #10.
+- Current saved version (7): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_434ae79bfe2881919c1a24fa5a86363f`
+- Sites source commit: `6575c83c5cbd911cae94c91957eb07c12370ec71`
+- Successful three-panel refinement deployment: `appgdep_6ac7913c86f0819186da767eea6bb507`, October 8, 2026; runtime secret revision 1 (unchanged).
+- Rails content commit: `98d0063` on `codex/public-page-content` / PR #10.
 - Earlier live-calendar correction: version 2, `appgdep_6ac68430e21c819193c5d8558e2d133b` (superseded by the content refresh).
 - Local Site checkout: `tmp/sites-v1-preview` (ignored by the Rails repository).
 - Original sample-only deployment: version 1, `appgdep_6ac6813c3d4881918d15652c6d8b5176` (superseded).
@@ -150,3 +150,12 @@ CI passed 78/934 plus nine adapter tests and all remaining checks. Browser check
 covered both editions and V1 Home at five widths, keyboard/anchor navigation and
 200% root-text reflow, without screenshots. Sites reported version 6 succeeded at
 12:25 UTC on October 8. The V2 Site and Hetzner production service were not deployed.
+
+## October 8 — three reasons to connect, version 7
+
+Kept the illustrated opening; removed its jump link. The next strip now has
+three connected panels for camaraderie, community service and veteran support,
+with local examples inspired by the pillars. The bottom visit/event actions
+remain. CI passed 78/934 and nine adapter tests; browser checks passed in both
+editions at five widths, including keyboard navigation and enlarged text.
+Sites reported success at 12:49 UTC, with runtime secret revision 1 unchanged.

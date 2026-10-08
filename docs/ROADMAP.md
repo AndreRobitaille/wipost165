@@ -535,3 +535,12 @@ remain in their source record and the secondary pages, not as more sales section
 CI passed 78/934 plus nine adapter tests; local responsive/keyboard checks passed.
 Committed as `ca2cb2a`, pushed to PR #10 and successfully published as Sites
 version 6 with the existing server-side secret revision unchanged.
+
+### October 8 — three reasons beneath the invitation
+
+Owner-requested refinement replaces the “A few more people” passage with three
+connected panels for camaraderie, community and fellow veterans, inspired by
+the pillars. Removed the premature opening jump link. CI passed 78/934 and nine
+adapter tests; local browser checks covered both editions at five widths, plus
+keyboard and enlarged text. Pushed `98d0063` to PR #10 and published Sites version
+7 successfully, with the existing runtime secret unchanged.

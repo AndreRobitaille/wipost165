@@ -12,6 +12,8 @@ The [design record](design/2026-10-why-invitation/README.md) explains the pillar
 inspiration and preserves the illustration's prompt. No new assets or scripts.
 CI passed 78/934 and nine adapter tests; ten browser page/width checks plus
 keyboard navigation and enlarged text passed, with no screenshots.
+Committed as `98d0063` on PR #10 and published as Sites version 7 at the existing
+public V1 URL. Runtime secret revision 1 remains unchanged.
 
 ## October 8 — invitation revision
 
