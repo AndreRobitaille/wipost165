@@ -54,7 +54,10 @@ working hypotheses. Purpose and Community reflect fellowship as a sufficient
 reason to belong. The owner rejected the first `/why-the-legion` page as a
 newspaper-like, overly rational pitch. The revision uses “Pull up a chair,” a
 painted invitation and much less copy; the fifth V1 main-menu link remains.
-Next: owner reviews the new emotional and visual direction.
+The owner called the illustrated opening a good start and requested three
+reasons beneath it. Camaraderie, community and veteran-support panels now replace
+the second emotional passage; the premature hero jump link is removed.
+Next: owner reviews this balance of invitation and substance.
 Membership retains practical joining information; national advocacy and local
 Post services stay distinct. See the latest [handoff](HANDOFF.md) for checks and
 publishing status.

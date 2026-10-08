@@ -1,5 +1,18 @@
 # Project handoff
 
+## October 8 — three reasons beneath the invitation
+
+Kept “Pull up a chair” and its illustration. At the owner's request, replaced
+“A few more people” with a connected three-panel strip: Share a laugh
+(camaraderie), Lend a hand (community/youth/remembrance), and Have each other's
+backs (Buddy Checks and Service Officer referrals). The opening jump link and
+its unused anchor/focus styling are removed; the invitation to visit remains at
+the bottom. Panels stack at narrow widths and within V2's narrower table.
+The [design record](design/2026-10-why-invitation/README.md) explains the pillar
+inspiration and preserves the illustration's prompt. No new assets or scripts.
+CI passed 78/934 and nine adapter tests; ten browser page/width checks plus
+keyboard navigation and enlarged text passed, with no screenshots.
+
 ## October 8 — invitation revision
 
 The owner rejected the first Why the Legion page as a newspaper-like collection

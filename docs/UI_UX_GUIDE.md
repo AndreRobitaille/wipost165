@@ -77,6 +77,9 @@ service optional. The owner rejected the first open-column page as a newspaper
 of short articles: it exposed audience strategy and argued for belonging without
 creating an emotional invitation. The revised page uses a painted shared table
 and open chair, brief conversational copy, and one clear path to meeting us.
+The latest owner refinement retains that opening, removes its premature jump
+link, and follows it with three connected panels for camaraderie, community and
+veteran support, drawing on the pillars without reciting the organization chart.
 Audience distinctions belong in the brief, not in the visitor-facing pitch. V1 navigation is Home, Why the
 Legion?, Events, First visit, Contact. About, Membership and Veteran help remain
 secondary resources. The homepage gives the reason-to-belong link priority while
