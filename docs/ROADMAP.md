@@ -528,3 +528,7 @@ resident-category explanation from Home. Audience and UI guidance now explicitly
 keep audience research behind the scenes. National advocacy and detailed help
 remain in their source record and the secondary pages, not as more sales sections.
 [Design/asset record](design/2026-10-why-invitation/README.md).
+
+CI passed 78/934 plus nine adapter tests; local responsive/keyboard checks passed.
+Committed as `ca2cb2a`, pushed to PR #10 and successfully published as Sites
+version 6 with the existing server-side secret revision unchanged.

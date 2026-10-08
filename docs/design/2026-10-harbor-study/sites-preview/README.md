@@ -7,10 +7,10 @@ incorrect interpretation; the current build replaces it with live calendar reads
 - V1: https://post165-v1-launch-preview.andretr.chatgpt.site
 - Preserved V2 concept: https://post165-in-good-company.andretr.chatgpt.site
 - V1 project: `appgprj_6ac6808b104481919e5be6d86d23188e`
-- Current saved version (5): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_e3379b54dc7c81919dc7e00688cc830d`
-- Sites source commit: `bfee8debef737f29d24ac45c1118c108591db535`
-- Successful Why the Legion deployment: `appgdep_6ac7870dee9881919ee817b588398edb`, October 8, 2026; runtime secret revision 1 (unchanged).
-- Rails content commit: `99f2aa8` on `codex/public-page-content` / PR #10.
+- Current saved version (6): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_f1900cfb618481918b3055641362191f`
+- Sites source commit: `c7eba3199a886cb9b2f62151c5004c48d6c9be39`
+- Successful illustrated-invitation deployment: `appgdep_6ac78b9a9c448191a9548345d01e0270`, October 8, 2026; runtime secret revision 1 (unchanged).
+- Rails content commit: `ca2cb2a` on `codex/public-page-content` / PR #10.
 - Earlier live-calendar correction: version 2, `appgdep_6ac68430e21c819193c5d8558e2d133b` (superseded by the content refresh).
 - Local Site checkout: `tmp/sites-v1-preview` (ignored by the Rails repository).
 - Original sample-only deployment: version 1, `appgdep_6ac6813c3d4881918d15652c6d8b5176` (superseded).
@@ -137,3 +137,16 @@ for the page changes and editorial provenance.
 
 The V2 Site and actual Hetzner production service are unchanged. No SSH, Kamal,
 private-data copy, publisher writes or companion-app changes are part of this work.
+
+## October 8 — illustrated invitation, version 6
+
+Replaced the rejected newspaper-like Why page with the “Pull up a chair”
+illustration and a short emotional invitation. Removed the audience categories
+from Home's introduction. National branding, route/navigation, practical footer
+pages, live calendar behavior and server-side credential settings remain intact.
+[Design, exact image prompt and verification](../../2026-10-why-invitation/README.md).
+
+CI passed 78/934 plus nine adapter tests and all remaining checks. Browser checks
+covered both editions and V1 Home at five widths, keyboard/anchor navigation and
+200% root-text reflow, without screenshots. Sites reported version 6 succeeded at
+12:25 UTC on October 8. The V2 Site and Hetzner production service were not deployed.

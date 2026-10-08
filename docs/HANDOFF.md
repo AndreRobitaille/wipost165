@@ -17,6 +17,10 @@ security, autoload and asset checks. Local browser checks passed 15 page/width
 combinations, keyboard navigation and enlarged text; no screenshots. The prior
 first pass below records history, not an approved design.
 
+Published the revision as Sites version 6 at the existing public V1 URL, with
+runtime secret revision 1 unchanged. Source commit `ca2cb2a` is pushed to PR #10.
+The V2 Site and Hetzner production service are unchanged. Owner review is next.
+
 ## October 8 — Why the Legion first pass
 
 The owner identified a gap before the first-visit path: the site needs to explain
