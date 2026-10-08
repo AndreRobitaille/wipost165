@@ -28,7 +28,8 @@ tests, plus style/security, autoload and production assets. Browser checks passe
 15 page/width combinations: Why the Legion? in both editions and V1 Home at
 1440/900/700/390/320px, with no horizontal overflow or missing images. Keyboard
 navigation and 200% root-text reflow passed. No screenshots were taken. Sites
-publishing results are recorded in the preview handoff. Next: owner reviews the
+version 5 successfully published the page and updated homepage at the existing
+public V1 URL; see the [deployment record](design/2026-10-harbor-study/sites-preview/README.md). Next: owner reviews the
 wording and balance of the invitation against the audience brief.
 
 ## October 7 — footer content ready for owner review

@@ -512,3 +512,8 @@ link and homepage introduction; retained events and visit paths and existing
 Membership answers. Export includes the new static page; Rails metadata and
 no-publisher-read coverage and Sites route coverage include it. CI passes 78/934
 plus nine Sites adapter tests and the remaining checks. No new screenshots.
+
+The first pass is published to the existing V1 Sites preview as version 5. Browser
+checks passed 15 page/width combinations, keyboard navigation and enlarged text.
+The API secret revision, preserved V2 Site and Hetzner service are unchanged.
+[Publication record](design/2026-10-harbor-study/sites-preview/README.md).

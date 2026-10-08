@@ -7,10 +7,10 @@ incorrect interpretation; the current build replaces it with live calendar reads
 - V1: https://post165-v1-launch-preview.andretr.chatgpt.site
 - Preserved V2 concept: https://post165-in-good-company.andretr.chatgpt.site
 - V1 project: `appgprj_6ac6808b104481919e5be6d86d23188e`
-- Current saved version (4): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_41af522b87fc8191957d0f0b6cea2e7f`
-- Sites source commit: `df12fe85c4d94bb46020363759872216c6a23fce`
-- Successful homecoming-copy deployment: `appgdep_6ac6991058048191b7c31020bab92dc5`, October 7, 2026; runtime secret revision 1 (unchanged).
-- Rails content commit: `72732ca` on `codex/public-page-content` / PR #10.
+- Current saved version (5): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_e3379b54dc7c81919dc7e00688cc830d`
+- Sites source commit: `bfee8debef737f29d24ac45c1118c108591db535`
+- Successful Why the Legion deployment: `appgdep_6ac7870dee9881919ee817b588398edb`, October 8, 2026; runtime secret revision 1 (unchanged).
+- Rails content commit: `99f2aa8` on `codex/public-page-content` / PR #10.
 - Earlier live-calendar correction: version 2, `appgdep_6ac68430e21c819193c5d8558e2d133b` (superseded by the content refresh).
 - Local Site checkout: `tmp/sites-v1-preview` (ignored by the Rails repository).
 - Original sample-only deployment: version 1, `appgdep_6ac6813c3d4881918d15652c6d8b5176` (superseded).
@@ -67,7 +67,24 @@ copy/design changes need a new export and deployment. No automation is necessary
 Run `bin/rails assets:clobber` afterward if compiled assets mask development/V2
 assets, as described in development guidance.
 
-## October 7 — clarify the homecoming example
+## October 8 — Why the Legion first pass
+
+The new [Why the Legion? page](https://post165-v1-launch-preview.andretr.chatgpt.site/why-the-legion)
+explains the value of belonging before asking for a meeting visit. V1 navigation
+and the homepage now link to it. The shared page also renders in V2, whose
+separate published concept remains unchanged. Rails route/metadata and Sites
+export/adapter tests cover the new route. The live calendar adapter and existing
+server-side secret settings are unchanged.
+
+CI passed 78 Rails tests / 934 assertions and nine adapter tests, plus style,
+security, autoloading and production assets. Local browser checks passed 15
+page/width combinations: the new page in both editions and V1 Home at
+1440/900/700/390/320px. No overflow or missing images; keyboard focus and activation
+and 200% root-text reflow passed. No new screenshots. The generated page and
+homepage links were checked before packaging. Sites version 5 reported successful
+publication at 12:05 UTC on October 8, with runtime secret revision 1 unchanged.
+
+## October 7 — clarify the homecoming example (version 4)
 
 The Commander clarified that the Guard welcome-home activity happened recently
 and is not routine. About now says “Members have also turned out with flags to
