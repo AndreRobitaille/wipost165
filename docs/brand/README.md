@@ -79,3 +79,25 @@ National's [AI guidance](https://www.legion.org/information-center/news/dispatch
 prohibits generation, recreation, upscaling, or styling of the official symbols.
 The harbor illustration contains no official mark. The unchanged official PNG is
 placed separately in HTML and was never supplied to image generation.
+
+## October 8 — emblem in the national-purpose panel
+
+At the owner's specific request, the Why page places the emblem to the right of
+its heading inside the blue “Part of something bigger” introduction. The
+masthead's existing brandmark is unchanged. This is a departure from National's
+instruction to choose one mark per layout, recorded here and in PR #10 for review;
+it is not a claim that National approved this combination.
+
+Rechecked the [current guide](https://issuu.com/theath1296/docs/american_legion_emblem_branding_guidelines),
+now dated September 14, 2026. Pages 7–8 favor the brandmark for public websites;
+page 18 discourages combining the two marks. The earlier August record above is
+historical. Neither mark has been generated, redrawn, recolored, or cropped.
+
+Downloaded the current emblem package through National's
+[artwork downloads page](https://www.legion.org/about/organization/the-emblem/emblem-and-brand-mark-download/emblem-and-brand-mark-download),
+which links to its [public asset library](https://legion-dam.eos.woodwing.cloud/?w=p4uGIiZwUz).
+`app/assets/images/legion-emblem.png` is the unchanged `TAL-emblem-full-detail-RGB.png`
+from that package: 911 × 948 RGBA, SHA-256
+`4d8dbb5e2b10fa3d4568d78eca85da3226f4991e7715cf1d3e274d87ca0faa60`.
+It includes the supplied white perimeter and is displayed proportionately with
+clear space. The older companion copy at `docs/brand/al-emblem.png` is not used.

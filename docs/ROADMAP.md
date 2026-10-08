@@ -60,7 +60,9 @@ the second emotional passage; the premature hero jump link is removed.
 The owner liked the bordered cards and requested a deeper strip below them.
 “Part of something bigger” now connects all four national pillars to a link
 for Post 165’s local work, before the final visit actions.
-Next: owner reviews the added national-purpose detail.
+The owner approved that detail and requested the official emblem inside the blue
+introduction, beside the heading. It scales down and stacks at the narrowest
+container widths. The brand-use conflict is documented for PR #10 review.
 Membership retains practical joining information; national advocacy and local
 Post services stay distinct. See the latest [handoff](HANDOFF.md) for checks and
 publishing status.

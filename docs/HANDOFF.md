@@ -1,5 +1,14 @@
 # Project handoff
 
+October 8 emblem refinement: the official RGB emblem now sits beside the heading
+inside the blue “Part of something bigger” panel. The paragraph stays full width
+below, with the emblem stacking in very narrow containers. Current artwork
+provenance and the conflict with National’s one-mark-per-layout guidance are
+recorded in [brand sources](brand/README.md) and PR #10. CI passed 78/934 plus nine
+adapter tests; both editions passed 14 responsive checks, keyboard navigation
+and enlarged text. No screenshots. Published as Sites version 10 with secret
+revision 1 unchanged. The V2 Site and Hetzner remain unchanged.
+
 ## October 8 — national purpose beneath the local invitation
 
 Added “Part of something bigger” after the liked three cards and before the

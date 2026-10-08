@@ -7,10 +7,10 @@ incorrect interpretation; the current build replaces it with live calendar reads
 - V1: https://post165-v1-launch-preview.andretr.chatgpt.site
 - Preserved V2 concept: https://post165-in-good-company.andretr.chatgpt.site
 - V1 project: `appgprj_6ac6808b104481919e5be6d86d23188e`
-- Current saved version (9): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_45b2273789c8819186eb5b291a48fc77`
-- Sites source commit: `a0f274ac241f6208fdc21193189d1f3ce07c2a2c`
-- Successful four-pillar strip deployment: `appgdep_6ac7994076248191be08f6fb00400f5e`, October 8, 2026; runtime secret revision 1 (unchanged).
-- Rails source: four-pillar detail strip on `codex/public-page-content` / PR #10.
+- Current saved version (10): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_550111229af08191ab8660819b7bb672`
+- Sites source commit: `f588fad5011fa77bc27a7e6e31125b04fe73cd89`
+- Successful emblem refinement deployment: `appgdep_6ac79ceb573081919bcf82a30aacda71`, October 8, 2026; runtime secret revision 1 (unchanged).
+- Rails source: emblem inside the national-purpose introduction on `codex/public-page-content` / PR #10.
 - Earlier live-calendar correction: version 2, `appgdep_6ac68430e21c819193c5d8558e2d133b` (superseded by the content refresh).
 - Local Site checkout: `tmp/sites-v1-preview` (ignored by the Rails repository).
 - Original sample-only deployment: version 1, `appgdep_6ac6813c3d4881918d15652c6d8b5176` (superseded).
@@ -176,3 +176,12 @@ nine adapter tests; both-edition responsive, keyboard, link and reading-order
 checks passed without screenshots. Source details are in the public facts and
 the invitation design record. Sites reported success at 13:23 UTC; runtime
 secret revision 1 is unchanged. No V2 Site or Hetzner deployment.
+
+## October 8 — emblem inside the blue introduction
+
+Published the unchanged official RGB emblem beside “Part of something bigger”
+inside its blue panel, with responsive stacking in the narrowest containers.
+The existing pillars, calendar adapter and runtime settings are unchanged.
+Version 10 reported `succeeded` at 13:39 UTC, with secret revision 1 unchanged.
+CI and both-edition responsive/keyboard/enlarged-text checks passed; no screenshots.
+The artwork source and mark-use caveat are recorded in the brand documentation.

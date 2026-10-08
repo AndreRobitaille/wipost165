@@ -89,3 +89,18 @@ tests, plus style/security, autoload and production assets. Both editions passed
 browser checks at five widths: all four headings and the section order, local
 About navigation, National-link keyboard focus, responsive columns, no overflow,
 image loading and 200% root-text reflow. No screenshots.
+
+## Emblem refinement
+
+The owner approved the strip and requested the Legion emblem inside the blue
+introduction, to the right of “Part of something bigger.” An unchanged official
+RGB PNG now sits beside that heading; the paragraph and local link retain the
+full width beneath. The emblem stacks under the heading only when the container
+is too narrow for both, including enlarged text. The adjoining pillars stay put.
+See [artwork provenance and brand-use caveat](../../brand/README.md#october-8--emblem-in-the-national-purpose-panel).
+
+Verification: `bin/ci` passed 78 Rails tests / 934 assertions and nine adapter
+tests. Both editions passed 14 total page/width checks (1440, 1100, 1001, 900,
+700, 390 and 320px), with the emblem contained in the blue panel, intact aspect
+ratio, no clipped heading or missing images, and correct narrow stacking.
+Keyboard navigation and 200% root-text reflow passed. No screenshots.

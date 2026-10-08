@@ -210,6 +210,9 @@ outreach and the emblem for internal/ceremonial contexts, without combining both
 in one layout. Do not synthesize or redraw official marks with AI, construct an
 unreviewed Post lockup, or stretch/crop artwork. Recheck official guidance when
 changing brand use; the private app's visual system is not national brand policy.
+October 8: the owner specifically requested an emblem inside the Why page's blue
+national-purpose block. This departure from the one-mark-per-layout guidance and
+the current official artwork provenance are recorded in the brand sources and PR #10.
 
 ### Type and composition
 

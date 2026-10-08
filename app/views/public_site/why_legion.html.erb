@@ -29,7 +29,10 @@
   <section class="why-purpose" aria-labelledby="why-purpose-title">
     <div class="why-purpose-intro">
       <p class="eyebrow">THE AMERICAN LEGION</p>
-      <h2 id="why-purpose-title">Part of something bigger.</h2>
+      <div class="why-purpose-heading">
+        <h2 id="why-purpose-title">Part of something bigger.</h2>
+        <%= image_tag "legion-emblem.png", class: "why-purpose-emblem", width: 911, height: 948, alt: "The American Legion emblem", loading: "lazy", decoding: "async" %>
+      </div>
       <p>Here in Two Rivers, it starts with people. Across the country, the Legion brings veterans together to stand up for one another, strengthen their communities, and look after the next generation.</p>
       <%= link_to "What we do in Two Rivers →", about_path, class: "why-story-link" %>
     </div>
