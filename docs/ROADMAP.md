@@ -544,3 +544,7 @@ the pillars. Removed the premature opening jump link. CI passed 78/934 and nine
 adapter tests; local browser checks covered both editions at five widths, plus
 keyboard and enlarged text. Pushed `98d0063` to PR #10 and published Sites version
 7 successfully, with the existing runtime secret unchanged.
+
+October 8 card refinement: owner requested clearer separation. Added blue borders,
+16px gaps and a stronger blue tint to the left Why card. CI and responsive checks
+passed; published Sites version 8 with runtime secrets unchanged.

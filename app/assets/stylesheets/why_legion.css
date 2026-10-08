@@ -16,12 +16,12 @@
 :is(#launch, #company) .why-invitation h1 { margin-bottom: 26px; color: white; font: 900 clamp(4rem, 7.6vw, 7rem)/.97 var(--why-display); letter-spacing: -.035em; }
 :is(#launch, #company) .why-opening { max-width: 29ch; font-size: 1.125rem; line-height: 1.7; }
 :is(#launch, #company) .why-invitation h2 { color: var(--why-blue); font: 900 clamp(2.25rem, 4.3vw, 3.5rem)/1.12 var(--why-display); letter-spacing: -.025em; }
-:is(#launch, #company) .why-reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 40px 6%; }
-:is(#launch, #company) .why-reason { padding: 32px 28px 36px; }
+:is(#launch, #company) .why-reasons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 40px 6%; }
+:is(#launch, #company) .why-reason { padding: 32px 28px 36px; border: 1px solid #8aa9bf; }
 :is(#launch, #company) .why-reason .eyebrow { margin-bottom: 18px; color: var(--red); font-size: .75rem; letter-spacing: .1em; }
 :is(#launch, #company) .why-reason h2 { margin-bottom: 18px; font-size: 2rem; line-height: 1.15; }
 :is(#launch, #company) .why-reason > p:not(.eyebrow) { max-width: 36ch; font-size: 1rem; line-height: 1.75; }
-:is(#launch, #company) .why-camaraderie { background: var(--why-light); }
+:is(#launch, #company) .why-camaraderie { background: #d6e4ef; }
 :is(#launch, #company) .why-community { background: white; }
 :is(#launch, #company) .why-veterans { background: var(--why-deep); color: white; }
 :is(#launch, #company) .why-veterans .eyebrow { color: #c0d5e6; }

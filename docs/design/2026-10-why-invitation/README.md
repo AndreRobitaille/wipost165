@@ -19,8 +19,9 @@ to reason. This revision treats the page as one invitation, not a case for joini
 Palette: National Emblem Blue #00467f, Emblem Red #b5121b, deep blue #002e55,
 light blue #e7eff5, white #ffffff. Existing National Noto condensed display and
 Noto Sans body faces; the existing Legion mark is unchanged. The illustration's
-wood and daylight supply warmth. The three-panel strip uses light blue, white and deep blue, without separate
-floating cards or new JavaScript.
+wood and daylight supply warmth. The three-panel strip uses light blue, white and deep blue. At the owner’s
+request, fine blue borders and 16px gaps now distinguish the cards; the left
+card uses a stronger blue tint than the invitation below. No new JavaScript.
 
 Desktop composes large live type against the scene; phones place the invitation
 above a cropped painting. The image is a symbolic invitation, not the actual

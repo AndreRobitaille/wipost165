@@ -7,10 +7,10 @@ incorrect interpretation; the current build replaces it with live calendar reads
 - V1: https://post165-v1-launch-preview.andretr.chatgpt.site
 - Preserved V2 concept: https://post165-in-good-company.andretr.chatgpt.site
 - V1 project: `appgprj_6ac6808b104481919e5be6d86d23188e`
-- Current saved version (7): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_434ae79bfe2881919c1a24fa5a86363f`
-- Sites source commit: `6575c83c5cbd911cae94c91957eb07c12370ec71`
-- Successful three-panel refinement deployment: `appgdep_6ac7913c86f0819186da767eea6bb507`, October 8, 2026; runtime secret revision 1 (unchanged).
-- Rails content commit: `98d0063` on `codex/public-page-content` / PR #10.
+- Current saved version (8): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_5416a948ec008191b88fc9d5ea21748b`
+- Sites source commit: `bf26a5b8087791c9317ad90d0007905206488aa0`
+- Successful card-border refinement deployment: `appgdep_6ac793ba9f6c819190e25953e86cf3ff`, October 8, 2026; runtime secret revision 1 (unchanged).
+- Rails source: card-border refinement on `codex/public-page-content` / PR #10.
 - Earlier live-calendar correction: version 2, `appgdep_6ac68430e21c819193c5d8558e2d133b` (superseded by the content refresh).
 - Local Site checkout: `tmp/sites-v1-preview` (ignored by the Rails repository).
 - Original sample-only deployment: version 1, `appgdep_6ac6813c3d4881918d15652c6d8b5176` (superseded).
@@ -159,3 +159,11 @@ with local examples inspired by the pillars. The bottom visit/event actions
 remain. CI passed 78/934 and nine adapter tests; browser checks passed in both
 editions at five widths, including keyboard navigation and enlarged text.
 Sites reported success at 12:49 UTC, with runtime secret revision 1 unchanged.
+
+## October 8 — clearer card edges, version 8
+
+Added 1px blue borders and 16px gaps to the three reason cards. The left card
+uses #d6e4ef, distinct from the #e7eff5 invitation below. Content is unchanged.
+CI passed 78/934 and nine adapter tests. Browser checks in both editions at five
+widths confirmed borders, gaps, distinct backgrounds, reflow and keyboard access.
+Sites reported success at 12:59 UTC; runtime secret revision 1 remains unchanged.

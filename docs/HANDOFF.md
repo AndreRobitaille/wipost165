@@ -1,5 +1,11 @@
 # Project handoff
 
+October 8 card refinement: added fine blue borders and 16px gaps to the three
+Why cards, and strengthened the left card's blue tint so it differs from the
+section below. CI passed 78/934 plus nine adapter tests; both-edition responsive
+and keyboard checks passed. Published as Sites version 8; secret revision 1
+unchanged. The three-panel content and hero remain as reviewed below.
+
 ## October 8 — three reasons beneath the invitation
 
 Kept “Pull up a chair” and its illustration. At the owner's request, replaced
