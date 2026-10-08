@@ -1,6 +1,6 @@
 # Public website development roadmap
 
-Updated October 7, 2026. This is the working backlog for future sessions.
+Updated October 8, 2026. This is the working backlog for future sessions.
 It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
@@ -46,12 +46,41 @@ is under discussion. Next: settle that image treatment and remaining V1 gates.
 
 ## Start here each session
 
-Current content follow-up: owner-requested briefs for Grok to enrich from meeting
-records are [About #7](https://github.com/AndreRobitaille/wipost165/issues/7),
+Current audience work: the owner agreed that the site should answer why the
+Legion might matter before assuming interest in a meeting, then supplied three
+veteran perspectives based on their relationship to Two Rivers. The
+[audience brief](AUDIENCE.md) now records their likely interests and barriers as
+working hypotheses. Purpose and Community reflect fellowship as a sufficient
+reason to belong. The owner rejected the first `/why-the-legion` page as a
+newspaper-like, overly rational pitch. The revision uses “Pull up a chair,” a
+painted invitation and much less copy; the fifth V1 main-menu link remains.
+The owner called the illustrated opening a good start and requested three
+reasons beneath it. Camaraderie, community and veteran-support panels now replace
+the second emotional passage; the premature hero jump link is removed.
+The owner liked the bordered cards and requested a deeper strip below them.
+“Part of something bigger” now connects all four national pillars to a link
+for Post 165’s local work, before the final visit actions.
+The owner approved that detail and requested the official emblem inside the blue
+introduction, beside the heading. It scales down and stacks at the narrowest
+container widths. The brand-use conflict is documented for PR #10 review.
+Membership retains practical joining information; national advocacy and local
+Post services stay distinct. See the latest [handoff](HANDOFF.md) for checks and
+publishing status.
+
+Current content follow-up: the owner supplied local facts for
+[About #7](https://github.com/AndreRobitaille/wipost165/issues/7),
 [Membership #8](https://github.com/AndreRobitaille/wipost165/issues/8), and
 [Veteran help #9](https://github.com/AndreRobitaille/wipost165/issues/9).
-Local content, dues/joining details, and service-officer scope should be verified
-through those tasks; the existing pages have not yet been rewritten.
+The shared pages are rewritten on `codex/public-page-content`, with the
+[source record](public-page-facts.md) and [current layout verification](design/2026-10-footer-content/design-revision/README.md).
+The owner requested that these pages match the current V1 design and omit the
+dues amount. The revision retains a substantive About page and leads Membership
+with visiting and participation.
+Next: owner reviews and merges PR #10 into `main`. The latest instruction
+also authorizes pushing and refreshing the existing public V1 Sites preview.
+The Commander confirmed the first Tuesday of every month at 6:30 p.m. at the
+Manitowoc Rifle & Pistol Club. Membership now matches Home and First visit;
+the skipped-summer follow-up is superseded. Calendar integration is outside this PR.
 
 1. Read `AGENTS.md`, the current section of [HANDOFF](HANDOFF.md), and this roadmap.
    Inspect the checkout and preserve existing work before editing.
@@ -434,3 +463,101 @@ public V1 URL now serves real dates and event dialogs; the V2 concept and Hetzne
 production are unchanged. CI passes Rails 76/738 plus nine adapter tests. Eight
 routes match Rails at 1440/390/320px; hosted calendar and asset checks pass.
 [Deployment identity and refresh instructions](design/2026-10-harbor-study/sites-preview/README.md).
+
+### October 7 — About, Membership and Veteran help content pass
+
+Added the owner's complete fact sheets verbatim and updated the readiness
+worksheet's stale dues/joining rows. Reworked the three shared pages into an
+editorial local-service narrative, visible membership questions, and a crisis-first
+help guide. Retained role-based contacts and graceful hidden-contact states.
+[Review notes](design/2026-10-footer-content/design-revision/README.md) record source differences,
+omissions and desktop/phone screenshots for both editions. CI passes 78 Rails
+tests / 902 assertions plus nine Sites adapter tests; browser checks cover all
+three pages at 1440/390/320px, keyboard focus, enlarged text and hidden channels.
+Prepared on a new branch from `main` for one owner-reviewed PR targeting `main`.
+No merge, Sites refresh, production deployment or companion change.
+
+### October 7 — align the footer pages with the current V1 design
+
+Owner feedback identified that the three pages still used the narrow article
+wrapper. Removed that wrapper for these routes and reused the current V1 heading,
+type, colors and open layouts. About keeps the sourced service examples and 1928
+memorial history; Membership replaces the price callout with a visit invitation
+and moves optional participation first; Veteran help has a wide crisis panel and
+two clear local routes. The dues amount is removed from public copy and metadata,
+while the supplied fact sheet is unchanged. Both editions and hidden contact
+states are verified; CI passes 78/902 plus nine adapter tests.
+[Current screenshots and decisions](design/2026-10-footer-content/design-revision/README.md).
+This updates PR #10 for owner review, with no merge or deployment.
+
+### October 7 — final PR #10 review corrections
+
+Applied the Commander’s monthly meeting and dues-publication decisions, corrected
+About’s pillar/grouping and title, and refined transfer and unavailable-contact
+copy. Consolidated still-valid source notes, including the renewal-date conflict,
+into the design revision and removed the superseded first-pass evidence set.
+The owner requested code/PR updates, push and a V1 Sites refresh without new
+screenshots. No merge, preserved V2 Site update or Hetzner deployment.
+
+CI passed 78 Rails tests / 902 assertions and nine adapter tests plus all other
+checks. Pushed the fixes to PR #10 and published Sites version 3 successfully at
+the existing public V1 URL, preserving the runtime secret.
+[Deployment record](design/2026-10-harbor-study/sites-preview/README.md).
+
+### October 7 — qualify the Guard homecoming example
+
+Changed About’s habitual wording to completed participation after the Commander
+clarified this was a recent activity. Recorded the distinction in the source and
+review notes, retaining draft-minutes provenance. CI passed 78/902 plus nine
+adapter tests. Pushed to PR #10 and published Sites version 4 successfully with
+the existing secret unchanged.
+
+### October 8 — explain why to belong before asking for a visit
+
+Added the owner’s veteran audience brief and aligned Purpose/Community guidance.
+Built Why the Legion? around fellowship, shared service, chosen or lifelong roots
+in Two Rivers, mutual helpfulness, and optional participation. Added its V1 menu
+link and homepage introduction; retained events and visit paths and existing
+Membership answers. Export includes the new static page; Rails metadata and
+no-publisher-read coverage and Sites route coverage include it. CI passes 78/934
+plus nine Sites adapter tests and the remaining checks. No new screenshots.
+
+The first pass is published to the existing V1 Sites preview as version 5. Browser
+checks passed 15 page/width combinations, keyboard navigation and enlarged text.
+The API secret revision, preserved V2 Site and Hetzner service are unchanged.
+[Publication record](design/2026-10-harbor-study/sites-preview/README.md).
+
+### October 8 — make the reason to belong an invitation
+
+Owner feedback rejected the first Why page's newspaper composition and literal
+audience pitch. Replaced the articles with a shared-table illustration, “Pull up
+a chair,” brief emotional copy, and events/First visit actions. Removed the
+resident-category explanation from Home. Audience and UI guidance now explicitly
+keep audience research behind the scenes. National advocacy and detailed help
+remain in their source record and the secondary pages, not as more sales sections.
+[Design/asset record](design/2026-10-why-invitation/README.md).
+
+CI passed 78/934 plus nine adapter tests; local responsive/keyboard checks passed.
+Committed as `ca2cb2a`, pushed to PR #10 and successfully published as Sites
+version 6 with the existing server-side secret revision unchanged.
+
+### October 8 — three reasons beneath the invitation
+
+Owner-requested refinement replaces the “A few more people” passage with three
+connected panels for camaraderie, community and fellow veterans, inspired by
+the pillars. Removed the premature opening jump link. CI passed 78/934 and nine
+adapter tests; local browser checks covered both editions at five widths, plus
+keyboard and enlarged text. Pushed `98d0063` to PR #10 and published Sites version
+7 successfully, with the existing runtime secret unchanged.
+
+October 8 card refinement: owner requested clearer separation. Added blue borders,
+16px gaps and a stronger blue tint to the left Why card. CI and responsive checks
+passed; published Sites version 8 with runtime secrets unchanged.
+
+### October 8 — national-purpose detail strip
+
+Added all four official pillars after the reason cards, with links to local
+About and National's mission. Checked current National sources and preserved
+local-service boundaries. CI passed 78/934 plus nine adapter tests; responsive,
+keyboard and link checks passed in both editions. Published Sites version 9,
+with runtime secret revision 1 unchanged; changes remain in PR #10.

@@ -62,6 +62,33 @@ illustrated veterans. Do not invent local members, programs, or official marks.
 V1 now uses National’s Emblem Blue/Poppy Red and recommended Noto Sans web fonts;
 the earlier study’s gold accent is superseded. See [brand evidence](brand/README.md).
 
+October 7 footer-page revision: About, Membership and Veteran help must carry the
+same current V1 design as Events and First visit, including the heading treatment
+and page composition. The narrow fallback article wrapper was insufficient.
+Keep About substantive with local service and supported history. Membership should
+lead with visiting and participation; the owner requested that the dues amount
+stay off the public site. See the [current review](design/2026-10-footer-content/design-revision/README.md).
+
+October 8 audience refinement: Why the Legion? explains what belonging might
+add to a veteran’s life before the site asks them to attend. Use the
+[audience brief](AUDIENCE.md) to consider established locals, residents who chose
+Two Rivers, and recent movers within one invitation. Keep fellowship central and
+service optional. The owner rejected the first open-column page as a newspaper
+of short articles: it exposed audience strategy and argued for belonging without
+creating an emotional invitation. The revised page uses a painted shared table
+and open chair, brief conversational copy, and one clear path to meeting us.
+The latest owner refinement retains that opening, removes its premature jump
+link, and follows it with three connected panels for camaraderie, community and
+veteran support, drawing on the pillars without reciting the organization chart.
+After approving those cards, the owner requested a deeper strip below them.
+“Part of something bigger” now gives the four actual pillars in plain language,
+with separate links to verified Post work and National’s mission. Keep that
+detail after the emotional invitation and before the final first-visit actions.
+Audience distinctions belong in the brief, not in the visitor-facing pitch. V1 navigation is Home, Why the
+Legion?, Events, First visit, Contact. About, Membership and Veteran help remain
+secondary resources. The homepage gives the reason-to-belong link priority while
+keeping events directly accessible. Phone navigation wraps into readable rows.
+
 ## The experience we are trying to create
 
 **“I can picture myself here, and I know how to take the next step.”**
@@ -183,6 +210,9 @@ outreach and the emblem for internal/ceremonial contexts, without combining both
 in one layout. Do not synthesize or redraw official marks with AI, construct an
 unreviewed Post lockup, or stretch/crop artwork. Recheck official guidance when
 changing brand use; the private app's visual system is not national brand policy.
+October 8: the owner specifically requested an emblem inside the Why page's blue
+national-purpose block. This departure from the one-mark-per-layout guidance and
+the current official artwork provenance are recorded in the brand sources and PR #10.
 
 ### Type and composition
 

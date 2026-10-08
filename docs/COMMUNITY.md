@@ -4,6 +4,12 @@ This document describes the community American Legion Post 165 serves.
 Read this before making decisions about website content, navigation,
 communications, or public-facing features.
 
+For the primary veteran audience, use the owner's October 8 distinctions in
+[Veteran audiences in Two Rivers](AUDIENCE.md). Established local relationships,
+chosen roots and recent arrival can lead to different reasons for seeking a
+group. The broader observations below are context, not findings about every
+veteran or a requirement to lead with community service.
+
 ------------------------------------------------------------------------
 
 ## Community Identity
@@ -113,8 +119,11 @@ The website should reflect the character of the community.
 - Confident without boasting.
 - Practical and action-oriented.
 
-The emphasis should always be on service, participation, and community
-impact rather than promoting the organization itself.
+Lead with what fellowship could add to a veteran's life: company, shared
+experience, being known and mutual helpfulness. Community service is a meaningful
+opportunity for those who want it. Enjoying the company of other veterans is
+also a sufficient reason to belong; avoid implying that a person must volunteer
+or take responsibility for the organization to be welcome.
 
 ### Local Communication Style
 

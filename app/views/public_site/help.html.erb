@@ -1,8 +1,49 @@
-<section aria-labelledby="help-title">
-  <p class="eyebrow">VETERANS HELPING VETERANS</p><h1 id="help-title">A place to ask.</h1>
-  <p class="body-copy">For questions about veterans benefits, start with the Manitowoc County Veteran Services Office.</p>
-  <%= link_to "County veterans services ↗", "https://manitowoccountywi.gov/departments/veteran-s-services/", class: "main-action" %>
-  <p class="small-note">The county’s website has current contact information and office hours.</p>
-  <% if public_contact_available? %><p class="quiet-link"><%= link_to "Contact the Post →", contact_path %></p><% end %>
-  <p class="small-note">The Post’s contact channels are not emergency services.</p>
+<section class="post-page post-help-page" aria-labelledby="help-title">
+  <header class="post-page-heading launch-page-heading">
+    <div>
+      <p class="eyebrow">VETERANS HELPING VETERANS</p>
+      <h1 id="help-title">Help with the next step.</h1>
+    </div>
+    <% if public_site_v1? %><span class="launch-post-number" aria-hidden="true">Post<strong>165</strong></span><% end %>
+  </header>
+
+  <section class="post-crisis" aria-labelledby="crisis-title">
+    <div class="post-crisis-intro">
+      <p class="post-label">Support right now · 24/7</p>
+      <h2 id="crisis-title">Veterans Crisis Line</h2>
+      <p>For a veteran in crisis or someone concerned about one. Free, confidential support; no VA enrollment needed.</p>
+    </div>
+    <div class="post-actions">
+      <%= link_to "Call 988, then press 1", "tel:988", class: "main-action" %>
+      <%= link_to "Text 838255", "sms:838255", class: "post-link" %>
+      <%= link_to "Chat online", "https://www.veteranscrisisline.net/get-help-now/chat/", class: "post-link" %>
+    </div>
+    <p class="post-emergency-note">The Post’s phone and email are not emergency lines.</p>
+  </section>
+
+  <div class="post-help-body">
+    <section class="post-help-section" aria-labelledby="service-officer-title">
+      <p class="post-label">A local person to ask</p>
+      <h2 id="service-officer-title">Not sure where to start?</h2>
+      <p>Our Service Officer helps veterans who are unsure where to begin with the VA or other benefits, or who are stuck partway through. You don’t have to be a Post member to ask.</p>
+      <p>We’ll help you sort out the next step. For a claim, appeal, or formal benefits application, we’ll connect you with the Manitowoc County Veterans Service Office.</p>
+      <% if public_contact_available? %>
+        <p><strong>Contact the Post and ask for our Service Officer.</strong></p>
+        <%= render "public_contact_links" %>
+      <% else %>
+        <p class="post-contact-unavailable">The Post’s contact details are unavailable. For benefits help, you can contact the county office listed here.</p>
+      <% end %>
+    </section>
+
+    <section class="post-help-section" aria-labelledby="county-help-title">
+      <p class="post-label">Benefits, claims &amp; applications</p>
+      <h2 id="county-help-title">Manitowoc County Veterans Service Office</h2>
+      <p>The county office helps veterans and their families understand and apply for state and federal benefits, and resolve problems along the way.</p>
+      <address>Michigan Avenue Campus<br>1701 Michigan Avenue, Manitowoc, WI 54220</address>
+      <div class="post-actions">
+        <%= link_to "Call 920-683-4055", "tel:9206834055", class: "post-link" %>
+        <%= link_to "County office details & hours", "https://manitowoccountywi.gov/departments/veteran-s-services/", class: "post-link" %>
+      </div>
+    </section>
+  </div>
 </section>

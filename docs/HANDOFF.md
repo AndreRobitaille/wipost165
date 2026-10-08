@@ -1,5 +1,139 @@
 # Project handoff
 
+October 8 emblem refinement: the official RGB emblem now sits beside the heading
+inside the blue “Part of something bigger” panel. The paragraph stays full width
+below, with the emblem stacking in very narrow containers. Current artwork
+provenance and the conflict with National’s one-mark-per-layout guidance are
+recorded in [brand sources](brand/README.md) and PR #10. CI passed 78/934 plus nine
+adapter tests; both editions passed 14 responsive checks, keyboard navigation
+and enlarged text. No screenshots. Published as Sites version 10 with secret
+revision 1 unchanged. The V2 Site and Hetzner remain unchanged.
+
+## October 8 — national purpose beneath the local invitation
+
+Added “Part of something bigger” after the liked three cards and before the
+final first-visit actions. The blue introduction links to Post 165's About page;
+the adjoining area explains all four official pillars and links to National.
+National wording was checked against its current primary sources and recorded
+in the public facts. No new local services or program promises are introduced.
+CI passed 78/934 plus nine adapter tests; both editions passed five-width,
+keyboard, link, reading-order and enlarged-text checks. No screenshots.
+Published as Sites version 9 with runtime secret revision 1 unchanged; PR #10
+contains the change for owner review. The V2 Site and Hetzner remain unchanged.
+
+October 8 card refinement: added fine blue borders and 16px gaps to the three
+Why cards, and strengthened the left card's blue tint so it differs from the
+section below. CI passed 78/934 plus nine adapter tests; both-edition responsive
+and keyboard checks passed. Published as Sites version 8; secret revision 1
+unchanged. The three-panel content and hero remain as reviewed below.
+
+## October 8 — three reasons beneath the invitation
+
+Kept “Pull up a chair” and its illustration. At the owner's request, replaced
+“A few more people” with a connected three-panel strip: Share a laugh
+(camaraderie), Lend a hand (community/youth/remembrance), and Have each other's
+backs (Buddy Checks and Service Officer referrals). The opening jump link and
+its unused anchor/focus styling are removed; the invitation to visit remains at
+the bottom. Panels stack at narrow widths and within V2's narrower table.
+The [design record](design/2026-10-why-invitation/README.md) explains the pillar
+inspiration and preserves the illustration's prompt. No new assets or scripts.
+CI passed 78/934 and nine adapter tests; ten browser page/width checks plus
+keyboard navigation and enlarged text passed, with no screenshots.
+Committed as `98d0063` on PR #10 and published as Sites version 7 at the existing
+public V1 URL. Runtime secret revision 1 remains unchanged.
+
+## October 8 — invitation revision
+
+The owner rejected the first Why the Legion page as a newspaper-like collection
+of rational arguments that exposed internal audience knowledge. Replaced it with
+“Pull up a chair”: one people-free painted invitation, a short passage about good
+company and actual Buddy Checks, and a direct path to events/First visit. Membership
+stays secondary. Home no longer recites the resident categories either.
+
+The new illustration is a symbolic shared table, not the meeting venue or evidence
+of a regular coffee gathering. No members, testimonials or attendance promises
+are invented. National colors, Noto typography and the existing logo remain.
+See the [design and asset record](design/2026-10-why-invitation/README.md).
+CI passes 78 tests / 934 assertions and nine Sites adapter tests, with all style,
+security, autoload and asset checks. Local browser checks passed 15 page/width
+combinations, keyboard navigation and enlarged text; no screenshots. The prior
+first pass below records history, not an approved design.
+
+Published the revision as Sites version 6 at the existing public V1 URL, with
+runtime secret revision 1 unchanged. Source commit `ca2cb2a` is pushed to PR #10.
+The V2 Site and Hetzner production service are unchanged. Owner review is next.
+
+## October 8 — Why the Legion first pass
+
+The owner identified a gap before the first-visit path: the site needs to explain
+why someone might want the Legion in their life at all. They described three
+veteran audiences: people born here who returned after service, residents who
+chose Two Rivers years ago, and recent movers. [The audience brief](AUDIENCE.md)
+records that framing and possible motivations, hesitations and content needs.
+Purpose and Community now foreground fellowship and optional service rather than
+assuming visitors already want to attend or volunteer.
+
+Implemented `/why-the-legion` as a shared page, with a V1 main-menu link and a
+homepage introduction that leads with the reason to belong. The page moves from
+shared experience and local connection to mutual helpfulness, a clear statement
+that company is enough, and optional local involvement and national advocacy.
+It offers events and First visit before practical membership answers. The five
+V1 navigation links wrap at phone widths, without a new menu interaction.
+V2 can render the page and links it in the footer; its people-based homepage and
+separate published concept are preserved.
+
+The new page uses the existing Noto faces and Legion palette, open columns,
+and one dark statement band. No new pictures, cards, testimonials, recurring
+activities or member-only assistance benefits are invented. Local claims come
+from the existing fact record; National advocacy was checked against its public
+site on October 8. CI passes 78 tests / 934 assertions and nine Sites adapter
+tests, plus style/security, autoload and production assets. Browser checks passed
+15 page/width combinations: Why the Legion? in both editions and V1 Home at
+1440/900/700/390/320px, with no horizontal overflow or missing images. Keyboard
+navigation and 200% root-text reflow passed. No screenshots were taken. Sites
+version 5 successfully published the page and updated homepage at the existing
+public V1 URL; see the [deployment record](design/2026-10-harbor-study/sites-preview/README.md). Next: owner reviews the
+wording and balance of the invitation against the audience brief.
+
+## October 7 — footer content ready for owner review
+
+The owner supplied the complete [public page fact sheets](public-page-facts.md)
+for issues #7, #8 and #9. Branch `codex/public-page-content`, created from `main`,
+implements About's local service/history narrative, Membership's meeting-based
+joining guide, and Veteran help's crisis-first Service Officer and county routes.
+The owner then requested the current V1 design for these pages and removal of the
+dues amount. The [revised layouts](design/2026-10-footer-content/design-revision/README.md)
+now use V1's full-width headings and page compositions, preserving V2's table and
+independently configured contact channels. Membership leads with visiting and
+optional participation; the dues amount remains only in the supplied source record.
+The [readiness worksheet](launch-content-readiness.md) records these decisions.
+
+[Consolidated source and review notes](design/2026-10-footer-content/design-revision/README.md)
+retain the National renewal-date discrepancy and the public calendar boundary:
+regular member meetings are excluded from that feed. The Commander confirmed
+that pages should state the first Tuesday of every month at 6:30 p.m. at the
+Manitowoc Rifle & Pistol Club. Membership now matches Home and First visit;
+there is no remaining skipped-summer follow-up or calendar integration in this PR.
+The source record retains $45 with an explicit instruction not to print the amount.
+Final review also separates About’s Community and youth work, corrects the
+Americanism label and About title, and refines hidden-contact and transfer copy.
+
+The owner authorized pushing the updates to
+[PR #10](https://github.com/AndreRobitaille/wipost165/pull/10) and refreshing the
+existing public V1 Sites preview, without new screenshots. Owner review and merge
+remain next. CI passed 78 Rails tests / 902 assertions and nine Sites adapter
+tests plus style/security, autoload and production assets. The existing
+[V1 preview](https://post165-v1-launch-preview.andretr.chatgpt.site) now serves the
+reviewed pages: Sites version 4 reported a successful deployment with the existing
+server-side secret revision unchanged. [Deployment record](design/2026-10-harbor-study/sites-preview/README.md).
+The preserved V2 Site and Hetzner production service are unchanged.
+
+Latest copy clarification: the Guard homecoming line describes completed
+participation (“Members have also turned out…”), not a recurring commitment.
+The source record retains the October 6 draft-minutes status and the Commander’s
+October 7 confirmation that this was a recent activity. CI passed again, and the
+correction is included in PR #10 and the V1 Sites preview.
+
 ## October 7 — shareable V1 preview and source handoff
 
 The owner authorized committing/pushing the current work and publishing a separate
@@ -11,11 +145,11 @@ a Sites Worker that reads the same live public events feed; the read-only websit
 token is a server-side Sites secret. No AI API key is needed. The [older people-based Site](https://post165-in-good-company.andretr.chatgpt.site)
 remains unchanged for V2. [Identity, refresh procedure, and verification](design/2026-10-harbor-study/sites-preview/README.md)
 record the successful Sites deployment. This does not deploy the Rails production
-service. The three footer content issues remain for Grok enrichment and can be
-reflected in a later refresh of this same V1 Site.
+service. The owner subsequently authorized refreshing this same V1 Site with the footer
+content pass above before merge.
 
 The incoming `main` deploy-hold guidance was fast-forwarded from GitHub. The current
-work remains on `main`; GitHub's default branch remains `master`. CI now covers pushes
+work was on `main`; GitHub's default branch remains `master`. CI now covers pushes
 to both. Local development credentials and keys stay ignored. Local CI passes
 76 tests / 738 assertions, and `bin/release check` passes without server access.
 
@@ -91,7 +225,8 @@ The requested footer content briefs are now GitHub issues for owner-directed Gro
 work: [About #7](https://github.com/AndreRobitaille/wipost165/issues/7),
 [Membership #8](https://github.com/AndreRobitaille/wipost165/issues/8), and
 [Veteran help #9](https://github.com/AndreRobitaille/wipost165/issues/9).
-Their content pages are unchanged; enrichment from verified meeting records is pending.
+Their supplied local facts have now been incorporated in the review branch
+described at the top of this handoff.
 
 Earlier V1 verification: CI passed 76 tests / 735 assertions plus style/security,
 autoloading, and production assets. Browser checks passed 27 page/width combinations

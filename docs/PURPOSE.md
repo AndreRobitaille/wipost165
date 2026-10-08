@@ -32,6 +32,14 @@ social hurdle between looking at a website and walking into a gathering.
 
 ## Who we are designing for
 
+The primary audience is veterans in Two Rivers, including people who have not
+yet decided the Legion would add something to their lives. The owner's October 8
+[audience framing](AUDIENCE.md) considers veterans who grew up here and returned,
+those who chose the city years ago, and recent arrivals. Their existing local
+connections differ. Explain why belonging could matter before asking them to
+come to a meeting; fellowship is a sufficient reason, with community service
+available to those who want it.
+
 These are scenarios from the discussion, not demographic research or categories
 visitors must select. One person may fit several, or none.
 
@@ -144,7 +152,7 @@ fonts, navigation, animation, and feature scope can improve without approval mer
 because an older document chose something else. Explain the improvement in terms
 of the visitor's experience; do not silently discard the problem the concept solves.
 
-For deeper grounding, read [Legion mission](LEGION.md), [member context](POST_MEMBERS.md),
+For deeper grounding, read [veteran audiences](AUDIENCE.md), [Legion mission](LEGION.md), [member context](POST_MEMBERS.md),
 and [community context](COMMUNITY.md). Verify specific factual claims before
 publication. [Content notes](content-notes.md) contain leads awaiting confirmation.
 Old specs and [design observations](DESIGN_NOTES.md) preserve evidence, not a

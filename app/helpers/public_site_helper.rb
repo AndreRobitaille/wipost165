@@ -4,17 +4,18 @@ module PublicSiteHelper
   SITE_DESCRIPTION = "Get to know Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin. Find an occasion, plan a first visit, or contact the Post.".freeze
   PAGE_TITLES = {
     "home" => "In good company", "events" => "Events", "visit" => "Your first visit",
-    "about" => "Still serving, together", "contact" => "Say hello",
-    "membership" => "Membership", "help" => "Veteran help"
+    "about" => "Service, close to home", "contact" => "Say hello",
+    "membership" => "Membership", "help" => "Veteran help", "why_legion" => "Why the Legion?"
   }.freeze
 
   PAGE_DESCRIPTIONS = {
+    "why_legion" => "Pull up a chair at American Legion Post 165 in Two Rivers. Meet fellow veterans, enjoy the company, and get to know us before deciding to join.",
     "events" => "Find upcoming public events at American Legion Post 165 in Two Rivers, with dates, locations, and cancellation updates.",
     "visit" => "Plan your first visit to Post 165 in Two Rivers. Find meeting and arrival information, parking details, and ways to get in touch.",
     "about" => "Learn about Robert E. Burns American Legion Post 165 in Two Rivers: fellowship, mutual helpfulness, and service to the community.",
     "contact" => "Contact American Legion Post 165 in Two Rivers by email or phone, or find the Post's mailing address.",
-    "membership" => "Interested in joining Post 165? Find American Legion membership information and contact the Post with local questions.",
-    "help" => "Find the Manitowoc County Veteran Services Office for benefits questions and ways to contact Post 165."
+    "membership" => "Get to know Post 165 before joining. Learn about participating, eligibility, meeting visits, transfers, and renewals.",
+    "help" => "Find Veterans Crisis Line support, ask Post 165’s Service Officer where to start, or contact Manitowoc County for veterans benefits help."
   }.freeze
 
   def public_page_title

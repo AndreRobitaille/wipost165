@@ -75,7 +75,7 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
     using_feed do
       [ "wipost165.org", "www.wipost165.org" ].each do |host|
         host! host
-        %w[/ /visit /about /contact /membership /veteran-help].each do |path|
+        %w[/ /why-the-legion /visit /about /contact /membership /veteran-help].each do |path|
           get path, params: { utm_source: "test", preview: "1" }
           assert_response :success
           assert_nil response.headers["X-Robots-Tag"]
@@ -88,7 +88,7 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
         end
       end
     end
-    assert_equal 6, descriptions.uniq.size
+    assert_equal 7, descriptions.uniq.size
     assert_equal 1, @requests.size
   end
 
