@@ -1,14 +1,22 @@
 # Project handoff
 
-## October 12 — authorized production launch in progress
+## October 12 — V1 production launch verified
 
-The owner approved launching the current V1 design at the existing public Kamal
-service on the shared Hetzner host, requiring one persistent SSH tunnel through
-final verification. Coming-soon is disabled, launch metadata/indexing enabled,
-and V1/sample boundaries retained. The publisher preflight now checks only the
-events endpoints used by V1, with regression coverage for both editions.
-The owner also approved the separated emblem/brandmark placement; retain it.
-Production results will be recorded after live verification.
+The approved V1 site is live at https://wipost165.org and https://www.wipost165.org,
+revision `e2a88f2` from `codex/public-page-content` / PR #10. Coming-soon is disabled,
+indexing enabled, and V1 keeps people/stories/portraits unavailable. Six real events
+and their details passed readback. CI passed 80 tests / 934 assertions plus nine
+adapter tests; isolated container, live desktop/phone, event-dialog, metadata,
+TLS and protected-service checks passed. No screenshots.
+
+One persistent SSH master stayed open from first inspection through final checks,
+then was closed and its port/process cleanup verified. Members, Two Rivers,
+shared proxy, DNS/mail, and both Sites previews were unchanged. The owner also
+approved retaining the separated emblem/brandmark placement. See the
+[release evidence and rollback identity](deployment/2026-10-12-v1-launch.md).
+PR #10 remains open for owner merge; subsequent documentation commits are not a
+new runtime release. V2 consented people/content and companion editorial-lifecycle
+evidence remain separate work.
 
 October 8 emblem refinement: the official RGB emblem now sits beside the heading
 inside the blue “Part of something bigger” panel. The paragraph stays full width

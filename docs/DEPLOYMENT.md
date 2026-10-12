@@ -7,7 +7,8 @@ the members application's service name or reuse its Rails key or database secret
 
 ## Current launch scope
 
-The owner authorized the approved V1 design for production on October 12, 2026.
+The approved V1 design launched on October 12, 2026 at revision `e2a88f2`.
+See [production evidence and rollback identity](deployment/2026-10-12-v1-launch.md).
 `config/deploy.yml` now selects V1, disables coming-soon/sample mode, and enables
 indexing after content approval:
 

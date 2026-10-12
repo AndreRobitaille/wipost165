@@ -1,18 +1,21 @@
 # Public website development roadmap
 
-Updated October 8, 2026. This is the working backlog for future sessions.
+Updated October 12, 2026. This is the working backlog for future sessions.
 It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
 
-## Current priority — staged launch
+## Current priority — V1 live; prepare V2 when ready
 
-The current design is now shareable at the owner's authorized public
-[V1 Sites preview](https://post165-v1-launch-preview.andretr.chatgpt.site), generated
-from Rails with the live public events feed and server-only website credentials.
-The initial sample-only export was rejected and replaced. The people-based Site remains available
-for V2. [Refresh instructions and evidence](design/2026-10-harbor-study/sites-preview/README.md).
-This is independent of the actual Rails production service and its launch gates.
+V1 is live at https://wipost165.org and https://www.wipost165.org, revision
+`e2a88f2`, after the owner's October 12 authorization. The
+[production release record](deployment/2026-10-12-v1-launch.md) covers CI, remote
+container checks, six live events, browser/metadata/TLS checks, protected services,
+and the single persistent tunnel retained through verification and then closed.
+PR #10 remains open for owner merge. The
+[V1 Sites preview](https://post165-v1-launch-preview.andretr.chatgpt.site) and
+people-based V2 concept remain available and were not changed by this deployment.
+[Preview refresh instructions](design/2026-10-harbor-study/sites-preview/README.md).
 
 The owner's October 7 direction supersedes the former single full-site launch:
 launch V1 with public events, visit/meeting guidance, contact, membership/help,
@@ -62,7 +65,8 @@ The owner liked the bordered cards and requested a deeper strip below them.
 for Post 165’s local work, before the final visit actions.
 The owner approved that detail and requested the official emblem inside the blue
 introduction, beside the heading. It scales down and stacks at the narrowest
-container widths. The brand-use conflict is documented for PR #10 review.
+container widths. The owner approved keeping the separated emblem and header brandmark; its
+source and National guidance are documented.
 Membership retains practical joining information; national advocacy and local
 Post services stay distinct. See the latest [handoff](HANDOFF.md) for checks and
 publishing status.
@@ -76,8 +80,8 @@ The shared pages are rewritten on `codex/public-page-content`, with the
 The owner requested that these pages match the current V1 design and omit the
 dues amount. The revision retains a substantive About page and leads Membership
 with visiting and participation.
-Next: owner reviews and merges PR #10 into `main`. The latest instruction
-also authorizes pushing and refreshing the existing public V1 Sites preview.
+Next: owner merges PR #10 into `main` when ready. The approved V1 is already
+deployed; that merge alone does not run Kamal.
 The Commander confirmed the first Tuesday of every month at 6:30 p.m. at the
 Manitowoc Rifle & Pistol Club. Membership now matches Home and First visit;
 the skipped-summer follow-up is superseded. Calendar integration is outside this PR.
@@ -110,13 +114,13 @@ These are recorded results, not a new production inspection.
 
 | Area | Evidence and state |
 | --- | --- |
-| Hosting | Revision `5d15332` deployed with apex/www HTTPS and coming-soon enabled; see [release evidence](deployment/2026-09-27-authenticated-publisher-release.md). |
-| Public experience | September V2 baseline was [owner approved](design/2026-09-visitor-paths/README.md#owner-review). The later harbor direction was accepted and [implemented locally](design/2026-10-harbor-study/implementation/README.md); service imagery is under discussion. |
-| Public consumer | Database-free authenticated client, private credential-scoped caches, server-served portraits, and failure states exist. Latest local CI: 63 tests / 567 assertions; [consumer coverage](verification/2026-09-27-consumer-coverage.md) and [metadata verification](verification/2026-09-27-launch-metadata.md). |
-| Publisher | Available. JSON, portraits, and conditional requests require the Post-owned read-only website token; no anonymous API access. A personal API token with the appropriate role is required for editorial API changes. This session has no such token. |
-| Integration | Three fictional production stories and six portraits passed live reads and local desktop/phone rendering. The checked 90-day interval contained zero events. [Evidence and limits](deployment/2026-09-27-authenticated-publisher-release.md#populated-feed-follow-up). |
-| Content | Contact, meeting/arrival facts, resource links, and content ownership are recorded in the [worksheet](launch-content-readiness.md). Real introductions/photos belong in the final prelaunch content step. |
-| Source continuity | Accepted design/content and authenticated integration were committed and deployed. The subsequent development-startup correction has local changes; inspect Git before work and preserve them. |
+| Hosting | V1 revision `e2a88f2` is live on apex/www with HTTPS and indexing; [release evidence](deployment/2026-10-12-v1-launch.md). |
+| Public experience | Owner-approved V1 with the harbor and invitation imagery, current information pages, event dialog, and separated official marks. V2 remains available separately. |
+| Public consumer | Database-free authenticated consumer; CI passed 80 tests / 934 assertions plus nine adapter tests. V1 requests events only and blocks people/portrait routes. |
+| Publisher | Post-owned read-only website token retained. Companion editorial writes and permissions were not exercised in this release. |
+| Integration | Six real upcoming events and all six details passed live readback. V1 event dialogs, unavailable/404 behavior, and assets passed container and browser checks. |
+| Content | Approved local facts, public channels, arrival guidance and joining/help content are live. Consented real people/photos remain V2 work. |
+| Source continuity | Release is on `codex/public-page-content` / PR #10. PR remains open for owner merge; inspect Git before subsequent work. |
 
 ## Work order
 
@@ -127,26 +131,15 @@ IDs remain stable for historical links; the scopes below supersede earlier entri
 | ID | Outcome | Status | Depends on |
 | --- | --- | --- | --- |
 | SITE-01 | One understood development/release baseline | done — consolidated on `main`; see handoff | Local source inspection |
-| SITE-02 | Distinctive, intuitive public experience refined | active — accepted harbor direction implemented and brand-checked; [service imagery](design/2026-10-harbor-study/national-references/README.md) under review | Keep the current copy and practical interaction requirements |
+| SITE-02 | Distinctive, intuitive public experience refined | done for V1 — owner approved and launched; V2 retained separately | Respond to actual visitor feedback |
 | SITE-03 | Verified static facts and content ownership | done — [contact/visit facts, links, and ownership recorded](launch-content-readiness.md) | Unknown optional facts remain omitted; real people/photos moved to SITE-05 |
 | SITE-04 | Consumer verified within available access; publisher evidence accounted for | active — [consumer review/fix complete](verification/2026-09-27-consumer-coverage.md); companion evidence pending | Editorial cases require evidence from an authorized companion session, not a personal token in this app |
-| SITE-05 | Technical launch preparation, final real content, then release | active — metadata and [browser/link review](verification/2026-09-27-final-paths/README.md) complete; local container check blocked by Docker access | SITE-04 evidence review and resolved material launch risks |
+| SITE-05 | Technical launch preparation, final real content, then release | V1 done — [production and container evidence](deployment/2026-10-12-v1-launch.md); V2 later | Consented real people/content and separate V2 authorization |
 | SITE-06 | Improvements based on use | later | Evidence of an actual visitor or editor need |
 
-**Next work:** resolve local Docker access and run the pending container smoke
-check in the [prepared release/rollback procedure](verification/2026-09-27-release-preparation.md).
-The [final browser/link review](verification/2026-09-27-final-paths/README.md) passed;
-metadata/indexing is prepared. Publisher-owned evidence still needs the companion
-handback. These are the remaining technical gates; real people/photos stay last,
-followed by focused content verification and an authorized release.
-
-September 27 development follow-up: live publishing is now the default for a
-normal dev-server start; static samples require `PUBLIC_SITE_PREVIEW=1`.
-The read-only website token is configured in encrypted development credentials.
-The running local server on port 3000 returned all three production profiles and
-their portraits after restart. Focused page/portrait/coming-soon tests passed:
-21 tests, 195 assertions; initializer lint and `git diff --check` passed.
-Production configuration and deployment are unchanged.
+**Next work:** respond to V1 feedback and prepare consented V2 content when the
+owner is ready. Retain SITE-04's unverified companion editorial-lifecycle cases;
+this release verified public reads, not private publishing permissions.
 
 ### SITE-01 — Establish the next development baseline
 
@@ -267,6 +260,13 @@ API request only when the data actually belongs in the companion; establish fiel
 ownership, publication consent, withdrawal, and maintenance before implementation.
 
 ## Session record
+
+- **2026-10-12 — V1 launched:** owner-authorized Kamal release `e2a88f2` now
+  serves the approved site on both public domains. CI, isolated remote container,
+  six live events/details, desktop/phone, keyboard dialog, metadata and TLS checks
+  passed. One SSH master persisted throughout and was closed after verification.
+  Protected services and both Sites previews were unchanged.
+  [Release evidence](deployment/2026-10-12-v1-launch.md). V2 remains separate.
 
 - **2026-10-07 — Contact and invitation refinement:** owner found the quieted
   layout flat and Contact busy. Restored a dark footer, gave the next occasion a
