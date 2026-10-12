@@ -115,6 +115,11 @@ SitesTemplateContent.state = :event
   templates["details"][[ state, timing, modal ? "modal" : "page" ].join("_")] = details.to_html
   if state == "active" && timing == "timed"
     details.replace("__SITES_details__")
+    # The page shell is filled with the details fragment only. Event sentinels in
+    # the head would be treated as missing template values.
+    page.css("title").each { |node| node.content = "Event – #{PublicSiteHelper::DOCUMENT_TITLE}" }
+    page.css('meta[name="description"]').each { |node| node["content"] = PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "events") }
+    page.css('link[rel="canonical"]').each { |node| node["href"] = node["href"].to_s.gsub(/__SITES_\w+__/, "example") }
     templates["details"][modal ? "modal_shell" : "page_shell"] = page.to_html
   end
 end

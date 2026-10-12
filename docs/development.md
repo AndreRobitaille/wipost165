@@ -101,19 +101,22 @@ an unavailable state rather than returning expired dynamic content.
 
 ### Indexing and sharing during development
 
-Development always uses neutral Post metadata and `noindex, nofollow, nosnippet,
-noimageindex`, including when consuming the live publisher with preview off.
+Each public page, including the coming-soon page, has its own title and a
+description taken from that page’s copy. The document title is
+`Page – American Legion Post 165, Two Rivers`; the home page uses only
+`American Legion Post 165, Two Rivers`. A self-referencing canonical URL uses
+`https://wipost165.org` and omits query strings, including V2 recognition context.
+There are no Open Graph or Twitter tags. Development, preview, coming soon,
+missing pages, and feed outages stay `noindex, nofollow, nosnippet, noimageindex`.
 `PUBLIC_SITE_LAUNCH_READY=1` takes effect only in production. The deployment
 configuration keeps it at `0`; coming-soon and static preview also override it.
 This setting does not change which feed is read or hide the local page body.
 
 After the selected edition's final content review, the authorized release sets
 `PUBLIC_SITE_COMING_SOON=0` and `PUBLIC_SITE_LAUNCH_READY=1`. Successful pages then
-emit page-specific titles/descriptions and text sharing metadata. Canonical and
-Open Graph URLs use `https://wipost165.org` on both public hostnames and omit query
-parameters, including optional V2 recognition context. Missing/unavailable pages and
-portrait errors remain noindex. Valid empty collections can be indexed at launch.
-No member portrait is placed in social-image metadata.
+drop the noindex rule. Canonical URLs stay on `https://wipost165.org` for both
+public hostnames. Missing and unavailable pages and portrait errors remain noindex.
+Valid empty collections can be indexed at launch.
 
 Robots directives are crawler instructions, not access controls or guarantees
 about third-party previews. Keep coming-soon enabled publicly until the selected
