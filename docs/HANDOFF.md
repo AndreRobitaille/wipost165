@@ -1,5 +1,15 @@
 # Project handoff
 
+## October 12 — authorized production launch in progress
+
+The owner approved launching the current V1 design at the existing public Kamal
+service on the shared Hetzner host, requiring one persistent SSH tunnel through
+final verification. Coming-soon is disabled, launch metadata/indexing enabled,
+and V1/sample boundaries retained. The publisher preflight now checks only the
+events endpoints used by V1, with regression coverage for both editions.
+The owner also approved the separated emblem/brandmark placement; retain it.
+Production results will be recorded after live verification.
+
 October 8 emblem refinement: the official RGB emblem now sits beside the heading
 inside the blue “Part of something bigger” panel. The paragraph stays full width
 below, with the emblem stacking in very narrow containers. Current artwork

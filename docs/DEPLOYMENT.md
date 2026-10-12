@@ -7,42 +7,39 @@ the members application's service name or reuse its Rails key or database secret
 
 ## Current launch scope
 
-Latest release: [`5d15332`, authenticated publisher integration](deployment/2026-09-27-authenticated-publisher-release.md).
-The authenticated client is deployed and verified against the empty live feed;
-the coming-soon setting remains enabled.
-
-The first release is a simple coming-soon page with the Post name, Two Rivers
-location, and a members-site link. White background, Legion blue, large readable
-type, no animation or sample content. `PUBLIC_SITE_COMING_SOON: "1"` in
-`config/deploy.yml` makes every existing public page bypass the publishing client.
-`/up` remains a separate health endpoint. Desktop and narrow-width checks are
-required. The publisher check is skipped only when that committed deployment
-configuration enables coming-soon mode. Turning it off requires a working
-publishing feed, approved content, full-page QA, and a separate authorized release.
-
-The prepared metadata controls add `PUBLIC_SITE_LAUNCH_READY: "0"` to the local
-deployment configuration. It keeps indexing disabled and sharing text neutral
-even if the full-site view is used before content approval. This has not been
-deployed. It is a production-only setting; development stays noindex regardless.
-
-For the final authorized launch, after fictional records are withdrawn and the
-approved content or chosen empty state is verified, set both:
+The owner authorized the approved V1 design for production on October 12, 2026.
+`config/deploy.yml` now selects V1, disables coming-soon/sample mode, and enables
+indexing after content approval:
 
 ```yaml
+PUBLIC_SITE_EDITION: "v1"
 PUBLIC_SITE_COMING_SOON: "0"
 PUBLIC_SITE_LAUNCH_READY: "1"
+PUBLIC_SITE_PREVIEW: "0"
 ```
 
-Verify page titles/descriptions, apex canonical URLs on both hosts, query-free
-sharing URLs, and noindex on 404/503 responses. The existing setting remains
-coming-soon `1` / launch-ready `0` until that release. Rollback to holding mode
-uses coming-soon `1` / launch-ready `0`; noindex alone does not hide content.
-See [local metadata evidence](verification/2026-09-27-launch-metadata.md). No host
-redirect or proxy change is required by this metadata work.
+This launch contains public events, first-visit guidance, contact, About,
+Membership, Veteran help, and Why the Legion. People, stories, and portraits
+remain unavailable in V1. The V2 source and separately published Sites concept
+are retained. `bin/publisher-check` verifies events and up to ten details for V1;
+it requests people and portraits only for V2. Production uses the existing
+read-only website credential, never an editorial or AI API key.
 
-See the [prepared local container check and full-site release/rollback procedure](verification/2026-09-27-release-preparation.md)
-for remaining gates and exact scope. The local container test is currently blocked
-by Docker socket permissions; browser checks do not substitute for that test.
+The prior recorded release was [`5d15332`, authenticated publisher integration](deployment/2026-09-27-authenticated-publisher-release.md),
+in coming-soon mode. Inspect the actual running revision at the start of the
+single release session and retain it as the rollback target. Deployment evidence
+belongs in `docs/deployment/`; configuration alone does not prove launch success.
+
+Verify the V1 content, live event dates, page titles/descriptions, apex canonical
+URLs on both hosts, query-free sharing URLs, and noindex on 404/503 responses.
+Rollback to holding mode uses coming-soon `1` / launch-ready `0`; noindex alone
+does not hide content. No DNS or global proxy change is needed for this launch.
+
+The [earlier release preparation](verification/2026-09-27-release-preparation.md)
+records the local Docker permission limit and rollback commands. A candidate
+container can be checked through the same release tunnel before app replacement;
+never open another outer connection for that check. Use only a task-owned smoke
+container with no network and dummy credentials; preserve shared services.
 
 ## Shared host and authorization
 
@@ -142,7 +139,7 @@ part of deploying the coming-soon page.
 Verify the exact running public container revision, both proxy hostname routes,
 and TLS for both names. Use `curl --resolve NAME:443:178.156.250.235 https://NAME/`
 without disabling certificate validation so cached old-host answers cannot
-produce false success. Confirm the coming-soon heading and members link, both
+produce false success. Confirm the approved V1 homepage, navigation, live events, and static pages, both
 `/up` responses, HTTP-to-HTTPS redirects, certificate names/expiry, and ordinary
 public DNS results. Recheck members `/up` and `/session/new`, and the Two Rivers
 homepage. Record that protected container IDs/revisions remain unchanged.

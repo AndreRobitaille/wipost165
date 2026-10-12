@@ -6,7 +6,7 @@ require_relative "../config/environment"
 
 client = Publishing::Client.new
 begin
-  people = client.featured
+  people = Rails.configuration.x.public_site_edition == "v2" ? client.featured : []
   events = client.events(from: Date.current, to: Date.current + 90)
   people.each do |person|
     client.story(person.fetch("id"))
@@ -15,7 +15,8 @@ begin
     end
   end
   events.fetch("events").first(10).each { |event| client.event(event.fetch("id")) }
-  puts "Authenticated publishing v1 verified: #{people.size} featured introductions and their portraits; #{events.fetch('events').size} events in the next 90 days (up to 10 event details checked)."
+  puts "Authenticated publishing API verified for site #{Rails.configuration.x.public_site_edition}: #{events.fetch('events').size} events in the next 90 days (up to 10 event details checked)."
+  puts "#{people.size} featured introductions and their portraits checked." if Rails.configuration.x.public_site_edition == "v2"
 rescue Publishing::Unavailable, Publishing::NotFound => error
   warn "Publishing v1 is not ready: #{error.message}"
   exit 1

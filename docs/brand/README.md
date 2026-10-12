@@ -86,7 +86,9 @@ At the owner's specific request, the Why page places the emblem to the right of
 its heading inside the blue “Part of something bigger” introduction. The
 masthead's existing brandmark is unchanged. This is a departure from National's
 instruction to choose one mark per layout, recorded here and in PR #10 for review;
-it is not a claim that National approved this combination.
+it is not a claim that National approved this combination. The owner subsequently
+approved keeping the composition because the header brandmark and emblem are
+visually separated; do not reopen that settled design during deployment.
 
 Rechecked the [current guide](https://issuu.com/theath1296/docs/american_legion_emblem_branding_guidelines),
 now dated September 14, 2026. Pages 7–8 favor the brandmark for public websites;
