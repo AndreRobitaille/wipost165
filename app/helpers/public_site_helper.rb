@@ -86,13 +86,6 @@ module PublicSiteHelper
     "tel:#{public_contact_phone.to_s.gsub(/[^+0-9]/, '')}"
   end
 
-  def public_verification_meta_tags
-    safe_join([
-      verification_meta("google-site-verification", Rails.configuration.x.google_site_verification),
-      verification_meta("msvalidate.01", Rails.configuration.x.bing_site_verification)
-    ].compact)
-  end
-
   # gtag config records the first full load. Later Turbo visits send their own page_view.
   def public_google_tag
     id = Rails.configuration.x.ga4_measurement_id.to_s.strip
@@ -152,13 +145,6 @@ module PublicSiteHelper
   end
 
   private
-
-  def verification_meta(name, value)
-    token = value.to_s.strip
-    return unless token.match?(PublicSiteEnv::VERIFICATION_TOKEN)
-
-    tag.meta(name: name, content: token)
-  end
 
   def google_tag_script(id)
     <<~JS

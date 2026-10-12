@@ -13,30 +13,17 @@ Rails.application.config.x.publisher_origin = ENV.fetch("PUBLISHER_ORIGIN", "htt
 Rails.application.config.x.public_site_coming_soon = ENV["PUBLIC_SITE_COMING_SOON"] == "1"
 # Enable only after content and accessible routes for the selected edition are reviewed.
 Rails.application.config.x.public_site_launch_ready = Rails.env.production? && ENV["PUBLIC_SITE_LAUNCH_READY"] == "1"
-# Optional public tags. Blank omits them. These values appear in HTML; they are not secrets.
-# Token checks live here so the view helper can reload in development.
+# Optional public tag. Blank omits it. The measurement ID appears in HTML; it is not a secret.
+# The check lives here so the view helper can reload in development.
 module PublicSiteEnv
   GA4_MEASUREMENT_ID = /\AG-[A-Z0-9]{4,32}\z/
-  VERIFICATION_TOKEN = %r{\A[A-Za-z0-9_~.+=/-]{8,200}\z}
 
   def self.measurement_id(value)
-    token(value, "GA4_MEASUREMENT_ID", GA4_MEASUREMENT_ID, "a GA4 measurement ID such as G-XXXXXXXX")
-  end
-
-  def self.verification_token(name, value)
-    token(value, name, VERIFICATION_TOKEN, "a single-line verification token")
-  end
-
-  def self.token(value, name, pattern, description)
     text = value.to_s.strip
     return if text.empty?
-    raise ArgumentError, "#{name} must be #{description}" unless text.match?(pattern)
+    raise ArgumentError, "GA4_MEASUREMENT_ID must be a GA4 measurement ID such as G-XXXXXXXX" unless text.match?(GA4_MEASUREMENT_ID)
 
     text
   end
 end
 Rails.application.config.x.ga4_measurement_id = PublicSiteEnv.measurement_id(ENV["GA4_MEASUREMENT_ID"])
-Rails.application.config.x.google_site_verification =
-  PublicSiteEnv.verification_token("GOOGLE_SITE_VERIFICATION", ENV["GOOGLE_SITE_VERIFICATION"])
-Rails.application.config.x.bing_site_verification =
-  PublicSiteEnv.verification_token("BING_SITE_VERIFICATION", ENV["BING_SITE_VERIFICATION"])

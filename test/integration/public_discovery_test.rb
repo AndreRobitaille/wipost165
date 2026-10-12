@@ -6,21 +6,17 @@ class PublicDiscoveryTest < ActionDispatch::IntegrationTest
   include PublishingHelpers
 
   MEASUREMENT_ID = "G-TESTMEASURE1"
-  GOOGLE_TOKEN = "google-verify-token"
-  BING_TOKEN = "BING0123456789ABCDEF"
 
   setup do
     build_client
     @settings = %i[
-      ga4_measurement_id google_site_verification bing_site_verification
+      ga4_measurement_id
       public_site_edition public_site_coming_soon public_site_preview public_site_launch_ready
     ].to_h { |key| [ key, Rails.configuration.x.public_send(key) ] }
     Rails.configuration.x.public_site_preview = false
     Rails.configuration.x.public_site_launch_ready = true
     Rails.configuration.x.public_site_coming_soon = false
     Rails.configuration.x.ga4_measurement_id = nil
-    Rails.configuration.x.google_site_verification = nil
-    Rails.configuration.x.bing_site_verification = nil
   end
 
   teardown do
@@ -33,10 +29,8 @@ class PublicDiscoveryTest < ActionDispatch::IntegrationTest
     Publishing::Client.stub(:new, factory, &block)
   end
 
-  def configure_tags
+  def configure_tag
     Rails.configuration.x.ga4_measurement_id = MEASUREMENT_ID
-    Rails.configuration.x.google_site_verification = GOOGLE_TOKEN
-    Rails.configuration.x.bing_site_verification = BING_TOKEN
   end
 
   def assert_tags_present
@@ -44,8 +38,7 @@ class PublicDiscoveryTest < ActionDispatch::IntegrationTest
     assert_select "script[src=?][async][fetchpriority=low]", src
     assert_match(/gtag\('config', #{Regexp.escape(MEASUREMENT_ID.to_json)}\)/, response.body)
     assert_match(/turbo:load/, response.body)
-    assert_select 'meta[name="google-site-verification"][content=?]', GOOGLE_TOKEN
-    assert_select 'meta[name="msvalidate.01"][content=?]', BING_TOKEN
+    assert_select 'meta[name="google-site-verification"], meta[name="msvalidate.01"]', count: 0
     assert_select "script[nonce]", count: 0
   end
 
@@ -59,12 +52,10 @@ class PublicDiscoveryTest < ActionDispatch::IntegrationTest
     assert_nil PublicSiteEnv.measurement_id("  ")
     assert_equal MEASUREMENT_ID, PublicSiteEnv.measurement_id(" #{MEASUREMENT_ID} ")
     assert_raises(ArgumentError) { PublicSiteEnv.measurement_id("UA-1234-1") }
-    assert_nil PublicSiteEnv.verification_token("GOOGLE_SITE_VERIFICATION", "")
-    assert_equal GOOGLE_TOKEN, PublicSiteEnv.verification_token("GOOGLE_SITE_VERIFICATION", " #{GOOGLE_TOKEN} ")
-    assert_raises(ArgumentError) { PublicSiteEnv.verification_token("BING_SITE_VERIFICATION", "bad token") }
+    assert_equal "G-KVBQMTBJYB", PublicSiteEnv.measurement_id("G-KVBQMTBJYB")
   end
 
-  test "analytics and verification tags are omitted when unset for both editions and coming soon" do
+  test "the google tag is omitted when unset for both editions and coming soon" do
     %w[v1 v2].each do |edition|
       Rails.configuration.x.public_site_edition = edition
       @replies << Publishing::Unavailable.new("offline")
@@ -81,8 +72,8 @@ class PublicDiscoveryTest < ActionDispatch::IntegrationTest
     assert_tags_absent
   end
 
-  test "google tag and verification metas render for both editions and coming soon" do
-    configure_tags
+  test "the google tag renders for both editions and coming soon" do
+    configure_tag
     %w[v1 v2].each do |edition|
       Rails.configuration.x.public_site_edition = edition
       @replies << Publishing::Unavailable.new("offline")
@@ -103,21 +94,17 @@ class PublicDiscoveryTest < ActionDispatch::IntegrationTest
   test "blank or malformed analytics values render nothing" do
     Rails.configuration.x.public_site_coming_soon = true
     Rails.configuration.x.ga4_measurement_id = "  "
-    Rails.configuration.x.google_site_verification = ""
-    Rails.configuration.x.bing_site_verification = "short"
     get root_path
     assert_tags_absent
 
     Rails.configuration.x.ga4_measurement_id = "G-TEST');alert(1);//"
-    Rails.configuration.x.google_site_verification = '"><script>alert(1)</script>'
-    Rails.configuration.x.bing_site_verification = "ok\ninjected"
     get root_path
     assert_tags_absent
     assert_no_match(/alert\(1\)/, response.body)
   end
 
   test "health check and event dialog do not load the google tag" do
-    configure_tags
+    configure_tag
     get "/up"
     assert_response :success
     assert_not_includes response.body, "googletagmanager"
