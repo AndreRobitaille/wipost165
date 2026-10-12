@@ -4,29 +4,29 @@ module PublicSiteHelper
   # Static public pages. Event and person URLs follow the publisher feed.
   SITEMAP_PATHS = %w[/ /events /visit /about /contact /membership /veteran-help].freeze
   PAGE_HEADINGS = {
-    "events" => "Come on by", "visit" => "Start with hello", "about" => "Still serving together",
-    "contact" => "Say hello", "membership" => "Let’s talk", "help" => "A place to ask"
+    "events" => "Events", "visit" => "Visit Us", "about" => "About the Post",
+    "contact" => "Contact", "membership" => "Membership", "help" => "Veteran Help"
   }.freeze
-  # Sentences already printed on each page. Shared templates use the V1 wording.
+  # Page copy with the on-page headline removed. Shared templates use the V1 wording.
   PAGE_DESCRIPTIONS = {
     "v1" => {
-      "home" => "Still serving. In good company. Military service is our common bond. Fellowship, mutual helpfulness, and service to our community keep that bond alive.",
-      "events" => "Come on by. Public occasions over the next three months. Find a date and make a plan. Your first time here? A public event is a good way to get to know us.",
+      "home" => "Military service is our common bond. Fellowship, mutual helpfulness, and service to our community keep that bond alive.",
+      "events" => "Public occasions over the next three months. Find a date and make a plan. Your first time here? A public event is a good way to get to know us.",
       "visit" => "Start with a public event—it’s a good way to get to know us. We meet the first Tuesday of each month at 6:30 p.m. at the Manitowoc Rifle & Pistol Club.",
-      "about" => "Still serving. Together. Military service is our common bond. Fellowship, mutual helpfulness, and service to our community keep that bond alive.",
-      "contact" => "Say hello. Questions about a first visit, membership, or getting involved? Mailing address: American Legion Post 165, PO Box 11, Two Rivers, WI 54241.",
-      "membership" => "Let’s talk. Interested in the Legion? National’s membership questions explain eligibility and how membership works. On The American Legion’s national website.",
+      "about" => "Military service is our common bond. Fellowship, mutual helpfulness, and service to our community keep that bond alive.",
+      "contact" => "Questions about a first visit, membership, or getting involved? Mailing address: American Legion Post 165, PO Box 11, Two Rivers, WI 54241.",
+      "membership" => "Interested in joining? Learn who’s eligible for the American Legion and how membership works at Post 165 in Two Rivers.",
       "help" => "For questions about veterans benefits, start with the Manitowoc County Veteran Services Office. The Post’s contact channels are not emergency services."
     },
     "v2" => {
-      "events" => "Come on by. Public occasions over the next three months. Plan your first visit.",
-      "visit" => "Start with hello. Start with a public event—it’s a good way to get to know us. Regular Post meetings are on the first Tuesday of each month at 6:30 p.m.",
-      "contact" => "Say hello. Questions about coming along, membership, or the Post? Start here. Mailing address: American Legion Post 165, PO Box 11, Two Rivers, WI 54241."
+      "events" => "Public occasions over the next three months. Plan your first visit.",
+      "visit" => "Start with a public event—it’s a good way to get to know us. Regular Post meetings are on the first Tuesday of each month at 6:30 p.m.",
+      "contact" => "Questions about coming along, membership, or the Post? Start here. Mailing address: American Legion Post 165, PO Box 11, Two Rivers, WI 54241."
     }
   }.freeze
   COMING_SOON_DESCRIPTION = "Website coming soon. Robert E. Burns American Legion Post 165, Two Rivers, Wisconsin. We’re preparing our new website. Please check back soon.".freeze
-  V2_HOME_WITH_PEOPLE = "In good company. Veterans. Neighbors. Good company. A few faces to know before you walk in. Meet someone, or see what’s coming up.".freeze
-  V2_HOME_WITHOUT_PEOPLE = "In good company. Get to know your local American Legion Post. Plan a first visit, or see what’s coming up.".freeze
+  V2_HOME_WITH_PEOPLE = "Veterans. Neighbors. Good company. A few faces to know before you walk in. Meet someone, or see what’s coming up.".freeze
+  V2_HOME_WITHOUT_PEOPLE = "Get to know your local American Legion Post. Plan a first visit, or see what’s coming up.".freeze
 
   def public_document_title
     heading = public_page_heading

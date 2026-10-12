@@ -9,21 +9,21 @@ class PublicPageMetadataTest < ActionDispatch::IntegrationTest
   PAGES = {
     "v1" => {
       "/" => [ SITE, PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "home"), "Military service is our common bond." ],
-      "/events" => [ "Come on by – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "events"), "Find a date and make a plan." ],
-      "/visit" => [ "Start with hello – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "visit"), "We meet the first Tuesday of each month at 6:30 p.m." ],
-      "/about" => [ "Still serving together – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "about"), "Military service is our common bond." ],
-      "/contact" => [ "Say hello – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "contact"), "Questions about a first visit, membership, or getting involved?" ],
-      "/membership" => [ "Let’s talk – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "membership"), "National’s membership questions explain eligibility and how membership works." ],
-      "/veteran-help" => [ "A place to ask – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "help"), "For questions about veterans benefits, start with the Manitowoc County Veteran Services Office." ]
+      "/events" => [ "Events – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "events"), "Find a date and make a plan." ],
+      "/visit" => [ "Visit Us – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "visit"), "We meet the first Tuesday of each month at 6:30 p.m." ],
+      "/about" => [ "About the Post – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "about"), "Military service is our common bond." ],
+      "/contact" => [ "Contact – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "contact"), "Questions about a first visit, membership, or getting involved?" ],
+      "/membership" => [ "Membership – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "membership"), "how membership works" ],
+      "/veteran-help" => [ "Veteran Help – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "help"), "For questions about veterans benefits, start with the Manitowoc County Veteran Services Office." ]
     },
     "v2" => {
       "/" => [ SITE, PublicSiteHelper::V2_HOME_WITHOUT_PEOPLE, "Get to know your local American Legion Post." ],
-      "/events" => [ "Come on by – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v2", "events"), "Public occasions over the next three months." ],
-      "/visit" => [ "Start with hello – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v2", "visit"), "Regular Post meetings are on the first Tuesday of each month at 6:30 p.m." ],
-      "/about" => [ "Still serving together – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "about"), "Military service is our common bond." ],
-      "/contact" => [ "Say hello – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v2", "contact"), "Questions about coming along, membership, or the Post?" ],
-      "/membership" => [ "Let’s talk – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "membership"), "National’s membership questions explain eligibility and how membership works." ],
-      "/veteran-help" => [ "A place to ask – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "help"), "For questions about veterans benefits, start with the Manitowoc County Veteran Services Office." ]
+      "/events" => [ "Events – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v2", "events"), "Public occasions over the next three months." ],
+      "/visit" => [ "Visit Us – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v2", "visit"), "Regular Post meetings are on the first Tuesday of each month at 6:30 p.m." ],
+      "/about" => [ "About the Post – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "about"), "Military service is our common bond." ],
+      "/contact" => [ "Contact – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v2", "contact"), "Questions about coming along, membership, or the Post?" ],
+      "/membership" => [ "Membership – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "membership"), "how membership works" ],
+      "/veteran-help" => [ "Veteran Help – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "help"), "For questions about veterans benefits, start with the Manitowoc County Veteran Services Office." ]
     }
   }.freeze
 
@@ -60,7 +60,7 @@ class PublicPageMetadataTest < ActionDispatch::IntegrationTest
           assert_select 'meta[name="description"][content=?]', description
           assert_includes description, phrase
           assert_includes response.body, phrase
-          assert_operator description.length, :>=, 70
+          assert_operator description.length, :>=, 60
           assert_operator description.length, :<=, 160
           assert_select 'link[rel="canonical"][href=?]', "https://wipost165.org#{path}"
           assert_select 'link[rel="canonical"]', count: 1

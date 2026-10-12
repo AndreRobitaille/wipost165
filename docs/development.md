@@ -102,7 +102,9 @@ an unavailable state rather than returning expired dynamic content.
 ### Indexing and sharing during development
 
 Each public page, including the coming-soon page, has its own title and a
-description taken from that page’s copy. The document title is
+description taken from that page’s copy, without repeating the on-page headline.
+Static titles use the plain page name: Events, Visit Us, About the Post,
+Contact, Membership, and Veteran Help. The document title is
 `Page – American Legion Post 165, Two Rivers`; the home page uses only
 `American Legion Post 165, Two Rivers`. A self-referencing canonical URL uses
 `https://wipost165.org` and omits query strings, including V2 recognition context.

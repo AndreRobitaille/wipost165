@@ -171,7 +171,7 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
       assert_response :success
       assert_nil response.headers["X-Robots-Tag"]
       assert_apex_canonical("/events")
-      assert_select "title", text: "Come on by – #{PublicSiteHelper::DOCUMENT_TITLE}"
+      assert_select "title", text: "Events – #{PublicSiteHelper::DOCUMENT_TITLE}"
 
       @now += 301
       @replies << Publishing::Unavailable.new("offline")
@@ -179,7 +179,7 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
       using_feed { get events_path }
       assert_response :success
       assert_not_indexable
-      assert_select "title", text: "Come on by – #{PublicSiteHelper::DOCUMENT_TITLE}"
+      assert_select "title", text: "Events – #{PublicSiteHelper::DOCUMENT_TITLE}"
     end
   end
 
