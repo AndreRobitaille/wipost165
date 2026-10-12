@@ -8,10 +8,11 @@ change to the reviewed API contract.
 ## Current priority — V1 live; prepare V2 when ready
 
 V1 is live at https://wipost165.org and https://www.wipost165.org, revision
-`e2a88f2`, after the owner's October 12 authorization. The
+`77f5102` after PR #11 integration, following the owner's October 12 authorization. The
 [production release record](deployment/2026-10-12-v1-launch.md) covers CI, remote
 container checks, six live events, browser/metadata/TLS checks, protected services,
 and the single persistent tunnel retained through verification and then closed.
+PR #11 is merged; its analytics and search changes are [deployed and verified](deployment/2026-10-12-pr11-analytics.md).
 PR #10 remains open for owner merge. The
 [V1 Sites preview](https://post165-v1-launch-preview.andretr.chatgpt.site) and
 people-based V2 concept remain available and were not changed by this deployment.
@@ -114,9 +115,9 @@ These are recorded results, not a new production inspection.
 
 | Area | Evidence and state |
 | --- | --- |
-| Hosting | V1 revision `e2a88f2` is live on apex/www with HTTPS and indexing; [release evidence](deployment/2026-10-12-v1-launch.md). |
+| Hosting | V1 revision `77f5102` is live on apex/www with HTTPS and indexing; [release evidence](deployment/2026-10-12-v1-launch.md). |
 | Public experience | Owner-approved V1 with the harbor and invitation imagery, current information pages, event dialog, and separated official marks. V2 remains available separately. |
-| Public consumer | Database-free authenticated consumer; CI passed 80 tests / 934 assertions plus nine adapter tests. V1 requests events only and blocks people/portrait routes. |
+| Public consumer | Database-free authenticated consumer; CI passed 91 tests / 1,443 assertions plus nine adapter tests. V1 requests events only and blocks people/portrait routes. |
 | Publisher | Post-owned read-only website token retained. Companion editorial writes and permissions were not exercised in this release. |
 | Integration | Six real upcoming events and all six details passed live readback. V1 event dialogs, unavailable/404 behavior, and assets passed container and browser checks. |
 | Content | Approved local facts, public channels, arrival guidance and joining/help content are live. Consented real people/photos remain V2 work. |

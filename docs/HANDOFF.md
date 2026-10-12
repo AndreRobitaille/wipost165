@@ -1,5 +1,17 @@
 # Project handoff
 
+## October 12 — PR #11 merged and deployed
+
+PR #11 is merged into `main`; its analytics, sitemap, robots and metadata changes
+were integrated into the current release branch to preserve the launched site.
+Production runs `77f5102`, with GA4 `G-KVBQMTBJYB`. Why the Legion retains metadata
+and joins the eight-page sitemap. CI passed 91/1,443 plus nine adapter tests; live
+metadata/tag/crawl and browser Turbo/dialog checks passed. Members, Two Rivers,
+proxy and Sites previews were unchanged. One tunnel persisted through verification
+and was closed with cleanup checked. [Release record](deployment/2026-10-12-pr11-analytics.md).
+GA4 dashboard ingestion remains unverified; client tag/queue behavior was checked.
+PR #10 remains open for owner merge.
+
 ## October 12 — V1 production launch verified
 
 The approved V1 site is live at https://wipost165.org and https://www.wipost165.org,
