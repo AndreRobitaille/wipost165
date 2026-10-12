@@ -131,7 +131,7 @@ dist = destination.join("dist")
 FileUtils.rm_rf(dist)
 FileUtils.mkdir_p(dist.join("client/assets"))
 assets.children.reject { |path| path.basename.to_s.start_with?(".") }.each { |path| FileUtils.cp_r(path, dist.join("client/assets")) }
-dist.join("client/robots.txt").write("User-agent: *\nDisallow:\n")
+dist.join("client/robots.txt").write(PublicSiteHelper.robots_txt)
 FileUtils.mkdir_p(destination.join("worker"))
 destination.join("worker/templates.json").write(JSON.pretty_generate(templates) + "\n")
 FileUtils.cp(Rails.root.join("sites/worker.mjs"), destination.join("worker/worker.mjs"))

@@ -119,8 +119,17 @@ Robots directives are crawler instructions, not access controls or guarantees
 about third-party previews. Keep coming-soon enabled publicly until the selected
 edition's content and exposed routes are reviewed. V1 keeps people routes
 unavailable regardless of what story records the publisher holds; V2 requires
-fictional story/portrait withdrawal before public exposure. `robots.txt` allows
-crawling so crawlers can read per-response noindex rules. See the
+fictional story/portrait withdrawal before public exposure. `/robots.txt` allows
+crawling so crawlers can read per-response noindex rules, including while the
+coming-soon page is public, and references `https://wipost165.org/sitemap.xml`.
+While coming soon is on, that sitemap lists only the homepage: every public route
+serves the same holding page. Otherwise it lists the static public pages and leaves
+publisher-driven event and person URLs to their own canonical tags. Optional
+`GA4_MEASUREMENT_ID`, `GOOGLE_SITE_VERIFICATION`, and `BING_SITE_VERIFICATION`
+add the Google tag and verification meta tags on public pages, including coming
+soon, when set. Blank values omit them. `/up` and event-dialog fragments do not
+load the tag. This app has no members or admin area, and no active
+Content-Security-Policy. See the
 [metadata verification note](verification/2026-09-27-launch-metadata.md) for checks
 and platform limitations. Tests simulate launch readiness locally without a
 production feed or personal API token.

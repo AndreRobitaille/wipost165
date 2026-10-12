@@ -1,5 +1,7 @@
 module PublicSiteHelper
   PUBLIC_ORIGIN = "https://wipost165.org".freeze
+  # Static public pages. Event and person URLs follow the publisher feed.
+  SITEMAP_PATHS = %w[/ /events /visit /about /contact /membership /veteran-help].freeze
   SITE_NAME = "American Legion Post 165 · Two Rivers".freeze
   SITE_DESCRIPTION = "Get to know Robert E. Burns American Legion Post 165 in Two Rivers, Wisconsin. Find an occasion, plan a first visit, or contact the Post.".freeze
   PAGE_TITLES = {
@@ -84,6 +86,54 @@ module PublicSiteHelper
     "tel:#{public_contact_phone.to_s.gsub(/[^+0-9]/, '')}"
   end
 
+  def public_verification_meta_tags
+    safe_join([
+      verification_meta("google-site-verification", Rails.configuration.x.google_site_verification),
+      verification_meta("msvalidate.01", Rails.configuration.x.bing_site_verification)
+    ].compact)
+  end
+
+  # gtag config records the first full load. Later Turbo visits send their own page_view.
+  def public_google_tag
+    id = Rails.configuration.x.ga4_measurement_id.to_s.strip
+    return unless id.match?(PublicSiteEnv::GA4_MEASUREMENT_ID)
+
+    nonce = content_security_policy_nonce.presence
+    loader = { src: "https://www.googletagmanager.com/gtag/js?id=#{id}", async: true, fetchpriority: "low" }
+    loader[:nonce] = nonce if nonce
+    script_options = {}
+    script_options[:nonce] = true if nonce
+    safe_join([ tag.script(**loader), javascript_tag(google_tag_script(id), script_options) ])
+  end
+
+  def self.sitemap_paths
+    # Coming soon serves one holding page at every public route.
+    return %w[/] if Rails.configuration.x.public_site_coming_soon
+
+    SITEMAP_PATHS
+  end
+
+  def self.robots_txt
+    <<~TEXT
+      # Allow crawlers to read each page's noindex directive during preparation.
+      # This file is not access control; the coming-soon setting controls public exposure.
+      User-agent: *
+      Disallow:
+
+      Sitemap: #{PUBLIC_ORIGIN}/sitemap.xml
+    TEXT
+  end
+
+  def self.sitemap_xml
+    entries = sitemap_paths.map { |path| "  <url><loc>#{ERB::Util.html_escape("#{PUBLIC_ORIGIN}#{path}")}</loc></url>" }
+    <<~XML
+      <?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      #{entries.join("\n")}
+      </urlset>
+    XML
+  end
+
   def first_visit_subject
     @remembered_person ? "First visit to Post 165 — meeting #{@remembered_person.name}" : "First visit to Post 165"
   end
@@ -99,5 +149,31 @@ module PublicSiteHelper
     return "Date and time to be confirmed" unless event.starts_at
 
     event.starts_at.strftime("%A, %B %-d, %Y · %-I:%M %p %Z")
+  end
+
+  private
+
+  def verification_meta(name, value)
+    token = value.to_s.strip
+    return unless token.match?(PublicSiteEnv::VERIFICATION_TOKEN)
+
+    tag.meta(name: name, content: token)
+  end
+
+  def google_tag_script(id)
+    <<~JS
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', #{id.to_json});
+      document.addEventListener("turbo:load", function() {
+        if (!window.gtag) return;
+        if (!window.__ga4SawInitialLoad) {
+          window.__ga4SawInitialLoad = true;
+          return;
+        }
+        gtag("event", "page_view", { page_location: window.location.href, page_title: document.title });
+      });
+    JS
   end
 end
