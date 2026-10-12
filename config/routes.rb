@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
+  scope format: false do
+    get "robots.txt", to: "public_crawl#robots", as: :robots
+    get "sitemap.xml", to: "public_crawl#sitemap", as: :sitemap
+  end
 
   root "public_site#home"
   get "people/:id/portrait/:revision/:size.webp", to: "portraits#show", as: :published_portrait,

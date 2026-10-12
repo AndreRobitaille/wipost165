@@ -68,7 +68,8 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
       get person_path("story_example_avery"), params: { edition: "v2" }
       assert_response :not_found
       assert_select 'meta[name="robots"][content*="noindex"]'
-      assert_select 'link[rel="canonical"]', count: 0
+      assert_select 'link[rel="canonical"][href="https://wipost165.org/people/story_example_avery"]'
+      assert_select 'meta[property^="og:"], meta[name^="twitter:"]', count: 0
       %w[small large].each do |size|
         path = published_portrait_path(id: "story_example_avery", revision: "portrait_example_2", size: size)
         get path
