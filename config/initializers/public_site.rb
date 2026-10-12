@@ -13,3 +13,17 @@ Rails.application.config.x.publisher_origin = ENV.fetch("PUBLISHER_ORIGIN", "htt
 Rails.application.config.x.public_site_coming_soon = ENV["PUBLIC_SITE_COMING_SOON"] == "1"
 # Enable only after content and accessible routes for the selected edition are reviewed.
 Rails.application.config.x.public_site_launch_ready = Rails.env.production? && ENV["PUBLIC_SITE_LAUNCH_READY"] == "1"
+# Optional public tag. Blank omits it. The measurement ID appears in HTML; it is not a secret.
+# The check lives here so the view helper can reload in development.
+module PublicSiteEnv
+  GA4_MEASUREMENT_ID = /\AG-[A-Z0-9]{4,32}\z/
+
+  def self.measurement_id(value)
+    text = value.to_s.strip
+    return if text.empty?
+    raise ArgumentError, "GA4_MEASUREMENT_ID must be a GA4 measurement ID such as G-XXXXXXXX" unless text.match?(GA4_MEASUREMENT_ID)
+
+    text
+  end
+end
+Rails.application.config.x.ga4_measurement_id = PublicSiteEnv.measurement_id(ENV["GA4_MEASUREMENT_ID"])
