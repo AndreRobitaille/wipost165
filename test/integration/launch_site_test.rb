@@ -40,7 +40,15 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
       assert_select "#launch", count: 1
       assert_select "#invitation-title", text: events.first.fetch("title")
       assert_select 'a[href^="/people"]', count: 0
-      assert_select ".launch-harbor img[alt*='Illustration of Two Rivers']", count: 1
+      assert_select ".launch-harbor img[alt*='Illustration of Two Rivers'][width='1536'][height='1024'][loading='eager'][fetchpriority='high']", count: 1
+      assert_select ".launch-harbor img[src*='two-rivers-harbor-illustration'][srcset*='480w'][srcset*='768w'][srcset*='1024w'][srcset*='1536w']"
+      assert_select "link[rel='preload'][as='image'][type='image/webp'][imagesrcset][imagesizes][fetchpriority='high']", count: 1
+      assert_select "link[rel='stylesheet']", count: 1
+      assert_select "link[rel='stylesheet'][href*='launch']", count: 1
+      assert_select "link[rel='stylesheet'][href*='company'], link[rel='stylesheet'][href*='post_pages'], link[rel='stylesheet'][href*='why_legion'], link[rel='stylesheet'][href*='application']", count: 0
+      assert_select ".launch-brand source[type='image/webp'][srcset*='1x'][srcset*='2x']", count: 1
+      assert_select ".launch-brand img[src*='legion-white'][width='1500'][height='413']", count: 1
+      assert_select "link[rel='icon'][href*='legion-white-favicon']", count: 1
       assert_select 'img[src*="portrait"], img[src*="people"]', count: 0
       assert_select '.launch-harbor a[href="https://creativecommons.org/licenses/by-sa/4.0/"]'
       assert_not_includes response.body, "?person="
@@ -48,6 +56,9 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
       assert_equal "/public/v1/events", @requests.first.first.path
       assert_nil response.headers["X-Robots-Tag"]
       assert_select 'link[rel="canonical"][href="https://wipost165.org/"]'
+      get css_select("link[rel='stylesheet']").first["href"]
+      assert_includes response.body, "woff2"
+      assert_includes response.body, "font-display: swap"
     end
   end
 
@@ -231,6 +242,25 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
     assert_not_includes response.body, event.fetch("title")
     assert_equal "10", response.headers["Retry-After"]
     assert_includes response.headers["X-Robots-Tag"], "noindex"
+  end
+
+  test "interior launch pages keep their own stylesheets and skip the harbor preload" do
+    using_feed do
+      get why_legion_path
+      assert_response :success
+      assert_select "link[rel=stylesheet][href*=launch]", count: 1
+      assert_select "link[rel=stylesheet][href*=why_legion]", count: 1
+      assert_select "link[rel=stylesheet][href*=post_pages], link[rel=stylesheet][href*=company]", count: 0
+      assert_select "link[rel=preload][as=image]", count: 0
+
+      get about_path
+      assert_response :success
+      assert_select "link[rel=stylesheet][href*=launch]", count: 1
+      assert_select "link[rel=stylesheet][href*=post_pages]", count: 1
+      assert_select "link[rel=stylesheet][href*=why_legion], link[rel=stylesheet][href*=company]", count: 0
+      assert_select "link[rel=preload][as=image]", count: 0
+    end
+    assert_empty @requests
   end
 
   test "first visit shows every answer and contact omits unavailable channels without publisher reads" do

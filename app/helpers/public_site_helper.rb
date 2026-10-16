@@ -1,5 +1,13 @@
 module PublicSiteHelper
   PUBLIC_ORIGIN = "https://wipost165.org".freeze
+  # Harbor column is full width until the two-column welcome, then 52% of the 1440px page.
+  HARBOR_SIZES = "(max-width: 900px) 100vw, (max-width: 1440px) 52vw, 749px".freeze
+  HARBOR_SOURCES = [
+    [ "two-rivers-harbor-illustration-480.webp", "480w" ],
+    [ "two-rivers-harbor-illustration-768.webp", "768w" ],
+    [ "two-rivers-harbor-illustration-1024.webp", "1024w" ],
+    [ "two-rivers-harbor-illustration.webp", "1536w" ]
+  ].freeze
   DOCUMENT_TITLE = "American Legion Post 165, Two Rivers".freeze
   # Static public pages. Event and person URLs follow the publisher feed.
   SITEMAP_PATHS = %w[/ /why-the-legion /events /visit /about /contact /membership /veteran-help].freeze
@@ -125,6 +133,22 @@ module PublicSiteHelper
       #{entries.join("\n")}
       </urlset>
     XML
+  end
+
+  def harbor_illustration_srcset
+    HARBOR_SOURCES.map { |name, width| "#{asset_path(name)} #{width}" }.join(", ")
+  end
+
+  def launch_harbor_page?
+    public_site_v1? && action_name == "home" && @page_error.nil?
+  end
+
+  # Home and the practical pages only need the launch sheet. Interior pages add their own.
+  def launch_stylesheets
+    sheets = %w[launch]
+    sheets << "post_pages" if %w[about membership help].include?(action_name)
+    sheets << "why_legion" if action_name == "why_legion"
+    sheets
   end
 
   def first_visit_subject

@@ -1,6 +1,6 @@
 <section class="launch-welcome" aria-labelledby="welcome-title">
   <figure class="launch-harbor">
-    <%= image_tag "two-rivers-harbor-illustration.webp", width: 1536, height: 1024, fetchpriority: "high", alt: "Illustration of Two Rivers harbor, its piers and Lake Michigan shoreline, based on a 2015 photograph." %>
+    <%= image_tag "two-rivers-harbor-illustration.webp", srcset: harbor_illustration_srcset, sizes: PublicSiteHelper::HARBOR_SIZES, width: 1536, height: 1024, loading: "eager", fetchpriority: "high", alt: "Illustration of Two Rivers harbor, its piers and Lake Michigan shoreline, based on a 2015 photograph." %>
     <figcaption>Two Rivers, illustrated · Photo reference: <%= link_to "Chris Rand", "https://commons.wikimedia.org/wiki/File:Two_Rivers_Harbor.jpg" %> · <%= link_to "CC BY-SA 4.0", "https://creativecommons.org/licenses/by-sa/4.0/" %></figcaption>
   </figure>
   <div class="launch-introduction">
