@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.1.3", ">= 8.1.3.1"
+gem "rails", "~> 8.1.4"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use the Puma web server [https://github.com/puma/puma]
@@ -54,5 +54,5 @@ gem "kamal", "~> 2.12", require: false
 
 gem "minitest-mock", "~> 5.27", group: :test
 
-# Rails 8.1 JSON decoding still passes positional options; JSON 3 requires keywords.
+# JSON 3 takes parser options as keywords. Rails 8.1.4+ ActiveSupport::JSON.decode matches that.
 gem "json", "~> 3.1"
