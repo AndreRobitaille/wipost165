@@ -55,4 +55,4 @@ gem "kamal", "~> 2.12", require: false
 gem "minitest-mock", "~> 5.27", group: :test
 
 # Rails 8.1 JSON decoding still passes positional options; JSON 3 requires keywords.
-gem "json", "~> 2.21", ">= 2.21.2"
+gem "json", "~> 3.1"
