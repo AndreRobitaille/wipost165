@@ -1,8 +1,9 @@
 /* National's web palette and Noto Sans; the harbor supplies the local character.
    The dark surface and rules are shades of Emblem Blue, not new brand colors. */
-@font-face { font-family: "Launch Noto Sans"; src: url(body.woff) format("woff"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Launch Noto Sans"; src: url(body-bold.woff) format("woff"); font-weight: 700; font-display: swap; }
-@font-face { font-family: "Launch Noto Condensed"; src: url(display-condensed.woff) format("woff"); font-weight: 900; font-display: swap; }
+body { margin: 0; }
+@font-face { font-family: "Launch Noto Sans"; src: url(body.woff2) format("woff2"), url(body.woff) format("woff"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Launch Noto Sans"; src: url(body-bold.woff2) format("woff2"), url(body-bold.woff) format("woff"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Launch Noto Condensed"; src: url(display-condensed.woff2) format("woff2"), url(display-condensed.woff) format("woff"); font-weight: 900; font-display: swap; }
 #launch {
   --blue: #00467f;
   --red: #b5121b;
@@ -41,7 +42,8 @@
 #launch .launch-header { display: flex; align-items: center; gap: 16px; padding: 16px max(24px, calc((100% - 1280px) / 2)); background: var(--deep); color: white; border-top: 5px solid var(--red); }
 /* The transparent logo includes whitespace; 20px adds at least one L-width. */
 #launch .launch-brand { display: block; flex: 0 0 176px; padding: 20px; }
-#launch .launch-brand img { display: block; width: 100%; height: auto; }
+#launch .launch-brand picture { display: block; width: 100%; }
+#launch .launch-brand img { display: block; width: 100%; height: auto; aspect-ratio: 1500 / 413; }
 #launch .launch-post { font-size: 12px; line-height: 1.45; letter-spacing: .04em; }
 #launch .launch-post strong { display: block; font-size: 23px; letter-spacing: .01em; }
 #launch .launch-post span { display: block; font-size: 13px; letter-spacing: 0; }

@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Company Sans";
-  src: url(body.woff) format("woff");
+  src: url(body.woff2) format("woff2"), url(body.woff) format("woff");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Company Sans";
-  src: url(body-bold.woff) format("woff");
+  src: url(body-bold.woff2) format("woff2"), url(body-bold.woff) format("woff");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Company Display";
-  src: url(display-condensed.woff) format("woff");
+  src: url(display-condensed.woff2) format("woff2"), url(display-condensed.woff) format("woff");
   font-weight: 700;
   font-display: swap;
 }
@@ -46,6 +46,7 @@
 #company .preview-note span { margin-left: 16px; letter-spacing: 0; color: #d1e3ee; }
 #company .masthead { max-width: 1400px; margin: auto; padding: 24px 5%; display: flex; align-items: center; gap: 28px; }
 #company .brand { display: block; width: 145px; flex-shrink: 0; padding: 8px; }
+#company .brand picture { display: block; width: 100%; }
 #company .brand img { display: block; width: 100%; height: auto; }
 #company .post-name { font-size: 12px; letter-spacing: .09em; line-height: 1.45; }
 #company .post-name strong { display: block; font-size: 22px; }

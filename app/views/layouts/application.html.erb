@@ -5,7 +5,7 @@
     <%= render "public_site/metadata" %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-cache-control" content="no-cache">
-    <%= favicon_link_tag "legion-white.png", type: "image/png" %>
+    <%= favicon_link_tag "legion-white-favicon.png", type: "image/png" %>
     <meta name="theme-color" content="#00467f">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -17,7 +17,7 @@
       <a class="skip" href="#table-content" data-turbo="false">Skip to main content</a>
       <% if preview_mode? %><div class="preview-note">DESIGN PREVIEW <span>Placeholder people and sample events · not the live Post calendar</span></div><% end %>
       <header class="masthead">
-        <%= link_to root_path, class: "brand", aria: { label: "Post 165 welcome" } do %><%= image_tag "legion-white.png", alt: "The American Legion", width: 172, height: 83 %><% end %>
+        <%= link_to root_path, class: "brand", aria: { label: "Post 165 welcome" } do %><%= render "public_site/legion_logo" %><% end %>
         <div class="post-name">ROBERT E. BURNS <strong>POST 165</strong><span>Two Rivers, Wisconsin</span></div>
         <nav class="quick-nav" aria-label="Quick links"><%= link_to "Find an event ↗", events_path(person_context) %><%= link_to "Get in touch ↗", contact_path(person_context) %></nav>
       </header>

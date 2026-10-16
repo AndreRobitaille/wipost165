@@ -2,14 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <%= render "public_site/metadata" %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <% if launch_harbor_page? %>
+      <%= tag.link rel: "preload", as: "image", type: "image/webp", href: asset_path("two-rivers-harbor-illustration-768.webp"), imagesrcset: harbor_illustration_srcset, imagesizes: PublicSiteHelper::HARBOR_SIZES, fetchpriority: "high" %>
+    <% end %>
+    <%= render "public_site/metadata" %>
     <meta name="turbo-cache-control" content="no-cache">
-    <%= favicon_link_tag "legion-white.png", type: "image/png" %>
+    <%= favicon_link_tag "legion-white-favicon.png", type: "image/png" %>
     <meta name="theme-color" content="#00467f">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag *launch_stylesheets, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
   <body>
@@ -20,7 +23,7 @@
       <% end %>
       <header class="launch-header">
         <%= link_to root_path, class: "launch-brand", aria: { label: "Post 165 home" } do %>
-          <%= image_tag "legion-white.png", alt: "The American Legion", width: 172, height: 83 %>
+          <%= render "public_site/legion_logo" %>
         <% end %>
         <div class="launch-post">ROBERT E. BURNS <strong>POST 165</strong><span>Two Rivers, Wisconsin</span></div>
         <nav class="launch-nav" aria-label="Main navigation">
