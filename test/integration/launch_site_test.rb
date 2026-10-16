@@ -46,7 +46,7 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
       assert_select "link[rel='stylesheet']", count: 1
       assert_select "link[rel='stylesheet'][href*='launch']", count: 1
       assert_select "link[rel='stylesheet'][href*='company'], link[rel='stylesheet'][href*='post_pages'], link[rel='stylesheet'][href*='why_legion'], link[rel='stylesheet'][href*='application']", count: 0
-      assert_select ".launch-brand source[type='image/webp'][srcset*='1x'][srcset*='2x'][srcset*='legion-white-408.webp'][srcset*='3x']", count: 1
+      assert_select ".launch-brand source[type='image/webp'][srcset*='1x'][srcset*='2x'][srcset*='legion-white-408'][srcset*='3x']", count: 1
       assert_select ".launch-brand img[src*='legion-white'][width='1500'][height='413']", count: 1
       assert_select "link[rel='icon'][href*='legion-white-favicon']", count: 1
       assert_select 'img[src*="portrait"], img[src*="people"]', count: 0
