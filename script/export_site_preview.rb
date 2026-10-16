@@ -67,7 +67,7 @@ render_page = lambda do |route, modal: false, status: 200|
 end
 
 SitesTemplateContent.event = template_event
-pages = %w[/visit /contact /about /membership /veteran-help].to_h { |route| [ route, render_page.call(route).to_html ] }
+pages = %w[/why-the-legion /visit /contact /about /membership /veteran-help].to_h { |route| [ route, render_page.call(route).to_html ] }
 templates = { "pages" => pages, "home" => {}, "calendar" => {}, "details" => {}, "errors" => {} }
 
 home = render_page.call("/")

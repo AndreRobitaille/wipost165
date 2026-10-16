@@ -1,0 +1,74 @@
+<article class="why-invitation" aria-labelledby="why-title">
+  <header class="why-welcome">
+    <%= image_tag "pull-up-a-chair.webp", class: "why-art", width: 1536, height: 1024, fetchpriority: "high", alt: "Painted illustration of coffee mugs around a shared table, with a chair pulled out toward you." %>
+    <div class="why-welcome-copy">
+      <p class="eyebrow">WHY THE LEGION?</p>
+      <h1 id="why-title">Pull up<br>a chair.</h1>
+      <p class="why-opening">Some conversations start a little easier when you’ve both served. Where they go from there is the good part.</p>
+    </div>
+  </header>
+
+  <section class="why-reasons" aria-label="What brings us together">
+    <section class="why-reason why-camaraderie" aria-labelledby="why-camaraderie-title">
+      <p class="eyebrow">CAMARADERIE</p>
+      <h2 id="why-camaraderie-title">Share a<br>laugh.</h2>
+      <p>A shared laugh. A familiar face. Military service gives us a place to start; the interests and stories we bring today keep the conversation going.</p>
+    </section>
+    <section class="why-reason why-community" aria-labelledby="why-community-title">
+      <p class="eyebrow">OUR COMMUNITY</p>
+      <h2 id="why-community-title">Lend a<br>hand.</h2>
+      <p>Help a local student take their next step. Honor those who served. From Badger Boys State and our scholarship to community traditions, there’s good we can do together.</p>
+    </section>
+    <section class="why-reason why-veterans" aria-labelledby="why-veterans-title">
+      <p class="eyebrow">FELLOW VETERANS</p>
+      <h2 id="why-veterans-title">Have each<br>other’s backs.</h2>
+      <p>A Buddy Check call to see how someone’s doing. A hand finding the next step with veterans benefits. Our Service Officer helps veterans find support, whether or not they’re members.</p>
+    </section>
+  </section>
+
+  <section class="why-purpose" aria-labelledby="why-purpose-title">
+    <div class="why-purpose-intro">
+      <p class="eyebrow">THE AMERICAN LEGION</p>
+      <div class="why-purpose-heading">
+        <h2 id="why-purpose-title">Part of something bigger.</h2>
+        <%= image_tag "legion-emblem.png", class: "why-purpose-emblem", width: 911, height: 948, alt: "The American Legion emblem", loading: "lazy", decoding: "async" %>
+      </div>
+      <p>Here in Two Rivers, it starts with people. Across the country, the Legion brings veterans together to stand up for one another, strengthen their communities, and look after the next generation.</p>
+      <%= link_to "What we do in Two Rivers →", about_path, class: "why-story-link" %>
+    </div>
+    <div class="why-purpose-detail">
+      <p class="eyebrow">FOUR PILLARS. ONE PURPOSE.</p>
+      <ul class="why-pillars" role="list">
+        <li>
+          <h3>Veterans Affairs &amp; Rehabilitation</h3>
+          <p>Standing up for veterans’ earned benefits and access to health care, with help navigating claims and the challenges of life after service.</p>
+        </li>
+        <li>
+          <h3>National Security</h3>
+          <p>Supporting a strong national defense means looking after the people who serve: military readiness, quality of life, and the needs of military families.</p>
+        </li>
+        <li>
+          <h3>Americanism</h3>
+          <p>Putting love of country into practice through responsible citizenship, youth leadership, respect for the flag, and remembrance of those who served.</p>
+        </li>
+        <li>
+          <h3>Children &amp; Youth</h3>
+          <p>Helping children grow up safe, healthy and supported, through family assistance and work that protects their well-being and gives them room to thrive.</p>
+        </li>
+      </ul>
+      <%= link_to "Explore the Legion’s national mission ↗", "https://www.legion.org/about", class: "why-story-link" %>
+    </div>
+  </section>
+
+  <section class="why-next" aria-labelledby="why-hello-title">
+    <div class="why-hello-copy">
+      <h2 id="why-hello-title">Start with hello.</h2>
+      <p>You don’t have to decide about joining before you meet us. Come to a public event or visit a meeting and see how it feels.</p>
+    </div>
+    <div class="why-hello-actions">
+      <%= link_to events_path, class: "main-action" do %>Find an upcoming event <span aria-hidden="true">↗</span><% end %>
+      <%= link_to "What’s a first visit like? →", visit_path, class: "why-story-link" %>
+    </div>
+    <p class="why-membership">Take part when it fits your life. There’s no attendance or volunteer requirement. <%= link_to "Membership questions?", membership_path %></p>
+  </section>
+</article>

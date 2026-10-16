@@ -43,6 +43,7 @@ class PublicSiteController < ApplicationController
   end
 
   def about; end
+  def why_legion; end
 
   def contact
     render :contact_v1 if public_site_v1?

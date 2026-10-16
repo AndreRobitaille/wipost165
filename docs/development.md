@@ -111,7 +111,8 @@ Contact, Membership, and Veteran Help. The document title is
 There are no Open Graph or Twitter tags. Development, preview, coming soon,
 missing pages, and feed outages stay `noindex, nofollow, nosnippet, noimageindex`.
 `PUBLIC_SITE_LAUNCH_READY=1` takes effect only in production. The deployment
-configuration keeps it at `0`; coming-soon and static preview also override it.
+configuration enables it for the approved V1 launch; coming-soon and static preview
+override it.
 This setting does not change which feed is read or hide the local page body.
 
 After the selected edition's final content review, the authorized release sets
@@ -150,8 +151,8 @@ bin/publisher-check
 autoload checks, and production assets. Tests use synthetic contract fixtures and
 injected HTTP responses, not the private app or its data. `bin/publisher-check` is
 a separate read-only check of the configured live feed using production credentials
-by default. It checks featured stories and both portraits, the upcoming collection,
-and up to ten event details. It fails on missing/revoked authentication and does
+by default. For V1 it checks the upcoming collection and up to ten event details. V2 also
+checks featured stories and their portrait variants. It fails on missing/revoked authentication and does
 not publish content. A successful empty feed verifies connectivity, not real content
 readiness or portrait delivery.
 

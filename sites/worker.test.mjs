@@ -54,7 +54,7 @@ test('live collection uses the fixed public API and keeps its credential out of 
 
 test('static pages and blocked routes never fetch publisher content', async () => {
   const never = () => { throw new Error('Unexpected publisher request'); };
-  for (const path of ['/visit', '/contact', '/about', '/membership', '/veteran-help']) {
+  for (const path of ['/why-the-legion', '/visit', '/contact', '/about', '/membership', '/veteran-help']) {
     const { response, html } = await request(path, never, { token: '' });
     assert.equal(response.status, 200);
     assert.match(html, /<h1/);

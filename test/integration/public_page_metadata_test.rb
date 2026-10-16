@@ -9,6 +9,7 @@ class PublicPageMetadataTest < ActionDispatch::IntegrationTest
   PAGES = {
     "v1" => {
       "/" => [ SITE, PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "home"), "Military service is our common bond." ],
+      "/why-the-legion" => [ "Why the Legion? – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "why_legion"), "Some conversations start a little easier" ],
       "/events" => [ "Events – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "events"), "Find a date and make a plan." ],
       "/visit" => [ "Visit Us – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "visit"), "We meet the first Tuesday of each month at 6:30 p.m." ],
       "/about" => [ "About the Post – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "about"), "Military service is our common bond." ],
@@ -18,6 +19,7 @@ class PublicPageMetadataTest < ActionDispatch::IntegrationTest
     },
     "v2" => {
       "/" => [ SITE, PublicSiteHelper::V2_HOME_WITHOUT_PEOPLE, "Get to know your local American Legion Post." ],
+      "/why-the-legion" => [ "Why the Legion? – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "why_legion"), "Some conversations start a little easier" ],
       "/events" => [ "Events – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v2", "events"), "Public occasions over the next three months." ],
       "/visit" => [ "Visit Us – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v2", "visit"), "Regular Post meetings are on the first Tuesday of each month at 6:30 p.m." ],
       "/about" => [ "About the Post – #{SITE}", PublicSiteHelper::PAGE_DESCRIPTIONS.dig("v1", "about"), "Military service is our common bond." ],

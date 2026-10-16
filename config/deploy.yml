@@ -21,8 +21,8 @@ env:
     - SECRET_KEY_BASE
     - RAILS_MASTER_KEY
   clear:
-    PUBLIC_SITE_COMING_SOON: "1"
-    PUBLIC_SITE_LAUNCH_READY: "0"
+    PUBLIC_SITE_COMING_SOON: "0"
+    PUBLIC_SITE_LAUNCH_READY: "1"
     PUBLIC_SITE_PREVIEW: "0"
     PUBLIC_SITE_EDITION: "v1"
     # Public measurement ID. Blank omits the Google tag.

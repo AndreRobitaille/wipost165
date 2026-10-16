@@ -1,0 +1,112 @@
+/* Shared editorial pages; each edition retains its own fonts and surrounding layout. */
+:is(#launch, #company) .post-page {
+  --post-rule: #b9cbd7;
+  text-align: left;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+:is(#launch, #company) :where(.post-page) :is(p, h2, h3, address) { margin: 0; }
+#company .post-page h1 { margin: 16px 0 24px; font-size: clamp(2.4rem, 4.4vw, 3.5rem); line-height: 1.1; }
+:is(#launch, #company) .post-page h2 { color: var(--blue); font-size: 1.5rem; line-height: 1.25; letter-spacing: -.025em; }
+:is(#launch, #company) .post-page p + p { margin-top: 14px; }
+:is(#launch, #company) .post-page h2 + p { margin-top: 12px; }
+#company .post-page-heading { margin-bottom: 32px; }
+#company .post-about-intro { margin-bottom: 28px; }
+:is(#launch, #company) .post-page .post-lead { font-size: 1.25rem; line-height: 1.55; margin-bottom: 18px; }
+:is(#launch, #company) .post-page .eyebrow { font-size: .8125rem; }
+:is(#launch, #company) .post-label { margin-bottom: 10px; color: var(--muted); font-size: .875rem; font-weight: 700; line-height: 1.5; }
+:is(#launch, #company) .post-inline-link { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+:is(#launch, #company) .post-link { display: inline-flex; align-items: center; min-height: 44px; padding-block: 9px; color: var(--blue); font-size: 1rem; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--post-rule); }
+:is(#launch, #company) .post-page a:hover { text-decoration-color: currentColor; }
+:is(#launch, #company) .post-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; margin-top: 20px; }
+:is(#launch, #company) .post-service { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 28px; padding: 28px 0; border-top: 1px solid var(--post-rule); }
+:is(#launch, #company) .post-service .post-link { margin-top: 8px; }
+:is(#launch, #company) .post-history { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 26px; padding: 28px; margin-top: 16px; background: #e7eff5; border-left: 4px solid var(--blue); }
+:is(#launch, #company) .post-history .post-year { color: var(--blue); font-size: 2.5rem; font-weight: 700; line-height: 1.2; letter-spacing: -.04em; }
+:is(#launch, #company) .post-history .post-link { margin-top: 10px; }
+:is(#launch, #company) .post-next { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--post-rule); }
+/* One invitation note; questions remain open on the page. */
+:is(#launch, #company) .post-join { padding: 26px; border: 1px solid var(--post-rule); border-top: 4px solid var(--red); background: white; box-shadow: 0 5px 0 #e2eaf0; }
+:is(#launch, #company) .post-join .post-label { color: var(--red); font-size: .75rem; letter-spacing: .09em; }
+:is(#launch, #company) .post-join .main-action { margin-top: 22px; }
+:is(#launch, #company) .post-join-contact { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--post-rule); }
+:is(#launch, #company) .post-join-contact h3 { color: var(--blue); font-family: inherit; font-size: 1rem; font-weight: 700; line-height: 1.4; letter-spacing: -.02em; }
+:is(#launch, #company) .post-join-contact > p { margin-top: 8px; font-size: .9375rem; }
+:is(#launch, #company) .post-join .post-contact-links { gap: 4px 24px; margin-top: 10px; }
+:is(#launch, #company) .post-questions > section { padding: 28px 0; border-bottom: 1px solid var(--post-rule); }
+:is(#launch, #company) .post-questions > section:last-child { border-bottom: 0; padding-bottom: 0; }
+:is(#launch, #company) .post-contact-links { display: flex; flex-wrap: wrap; gap: 12px 32px; margin-top: 16px; }
+:is(#launch, #company) .post-contact-link { display: flex; flex-direction: column; justify-content: center; min-height: 64px; padding-block: 8px; color: var(--blue); overflow-wrap: anywhere; max-width: 100%; }
+:is(#launch, #company) .post-contact-link span { color: var(--muted); font-size: .875rem; }
+:is(#launch, #company) .post-contact-link strong { font-size: 1rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--post-rule); }
+:is(#launch, #company) .post-crisis { padding: 26px; border-top: 4px solid var(--red); background: white; box-shadow: 0 2px 0 #b9cbd7; }
+:is(#launch, #company) .post-crisis .post-label { color: var(--red); }
+:is(#launch, #company) .post-crisis .post-actions { gap: 8px 22px; }
+:is(#launch, #company) .post-crisis .post-emergency-note { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--post-rule); font-size: .9375rem; }
+:is(#launch, #company) .post-help-section { padding-top: 32px; margin-top: 32px; border-top: 1px solid var(--post-rule); }
+:is(#launch, #company) .post-help-section address { margin-top: 20px; font-size: 1rem; font-style: normal; }
+:is(#launch, #company) .post-contact-unavailable { padding-left: 16px; border-left: 3px solid var(--post-rule); }
+@media (max-width: 600px) {
+  :is(#launch, #company) .post-service { grid-template-columns: 1fr; gap: 14px; }
+  :is(#launch, #company) .post-history { grid-template-columns: 1fr; gap: 14px; padding: 22px; }
+  :is(#launch, #company) .post-crisis { padding: 22px; }
+  :is(#launch, #company) .post-page .post-lead { font-size: 1.125rem; }
+}
+
+/* V1 uses the same full-width heading and open page composition as Events/Visit.
+   The shared content continues to fit the preserved V2 table. */
+#launch .post-page-heading { margin: 0; }
+#launch .post-page-heading h1 { font-size: clamp(2.5rem, 4.6vw, 4rem); }
+#launch .post-page-heading .post-lead { max-width: 54ch; margin: 0; font-size: 1.1875rem; }
+#launch .post-page-heading .eyebrow { font-size: .75rem; }
+#launch .post-about-body { padding: 38px 6% 48px; }
+#launch .post-about-intro { max-width: 74ch; margin-bottom: 34px; }
+#launch .post-service { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 6%; padding: 32px 0; }
+#launch .post-service p { max-width: 66ch; }
+#launch .post-service .post-label { max-width: 26ch; color: var(--muted); }
+#launch .post-history { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 6%; margin-top: 24px; padding: 32px; border-left-color: var(--red); }
+#launch .post-history .post-year { font: 900 clamp(4rem, 7vw, 6rem)/1 "Launch Noto Condensed", sans-serif; color: var(--blue); }
+#launch .post-history p:not(.post-year) { max-width: 65ch; }
+#launch .post-next { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 28px; }
+#launch .post-next .post-actions { margin: 0; }
+#launch .post-membership-body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: start; gap: 6%; padding: 40px 6% 48px; }
+#launch .post-membership-body .post-join { grid-column: 2; grid-row: 1; }
+#launch .post-membership-body .post-questions { grid-column: 1; grid-row: 1; }
+#launch .post-questions > section:first-child { padding-top: 0; }
+#launch .post-questions p { max-width: 65ch; }
+#launch .post-join > p:not(.post-label) { color: var(--muted); font-size: 1rem; }
+#launch .post-help-page .post-page-heading { padding-block: 32px; }
+#launch .post-help-page .post-page-heading h1 { margin-bottom: 0; }
+#launch .post-crisis { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px 36px; margin: 36px 6% 0; padding: 28px 32px 22px; border: 1px solid var(--post-rule); border-top: 4px solid var(--red); }
+#launch .post-crisis-intro p:not(.post-label) { max-width: 54ch; }
+#launch .post-crisis .post-actions { display: grid; grid-template-columns: 1fr 1fr; margin: 0; justify-items: start; }
+#launch .post-crisis .main-action { grid-column: 1 / -1; }
+#launch .post-crisis .post-emergency-note { grid-column: 1 / -1; margin-top: 4px; }
+#launch .post-help-body { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 6%; padding: 40px 6% 48px; }
+#launch .post-help-section { border: 0; padding: 0; margin: 0; }
+#launch .post-help-section + .post-help-section { padding-left: 12%; border-left: 1px solid var(--post-rule); }
+#launch .post-help-section .post-label { color: var(--red); }
+#launch .post-help-section address { padding-top: 20px; border-top: 1px solid var(--post-rule); }
+@media (max-width: 950px) {
+  #launch .post-membership-body { grid-template-columns: minmax(0, 1fr) 280px; gap: 4%; }
+  #launch .post-join { padding: 22px; }
+  #launch .post-crisis { grid-template-columns: minmax(0, 1fr); }
+  #launch .post-crisis .post-actions { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+}
+@media (max-width: 760px) {
+  #launch .post-membership-body { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-block: 28px 36px; }
+  #launch .post-membership-body :is(.post-join, .post-questions) { grid-column: auto; grid-row: auto; }
+  #launch .post-help-body { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 28px 36px; }
+  #launch .post-help-section + .post-help-section { padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--post-rule); }
+}
+@media (max-width: 600px) {
+  #launch .post-page-heading { grid-template-columns: minmax(0, 1fr); }
+  #launch .post-page-heading .launch-post-number { display: none; }
+  #launch .post-page-heading h1 { font-size: 2.5rem; }
+  #launch .post-page-heading .post-lead { font-size: 1.0625rem; }
+  #launch .post-about-body { padding-block: 28px 36px; }
+  #launch .post-service, #launch .post-history { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  #launch .post-history { padding: 24px; }
+  #launch .post-crisis { margin-top: 28px; padding: 22px; }
+  #launch .post-crisis .post-actions { gap: 10px 22px; }
+}

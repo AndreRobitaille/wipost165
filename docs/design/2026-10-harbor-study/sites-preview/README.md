@@ -7,9 +7,11 @@ incorrect interpretation; the current build replaces it with live calendar reads
 - V1: https://post165-v1-launch-preview.andretr.chatgpt.site
 - Preserved V2 concept: https://post165-in-good-company.andretr.chatgpt.site
 - V1 project: `appgprj_6ac6808b104481919e5be6d86d23188e`
-- Corrected saved version: `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_aa1b84f34a1481919c6da4a178b98949`
-- Sites source commit: `cb581dd3a7e00a00d11d7d308521815d61435568`
-- Successful corrected deployment: `appgdep_6ac68430e21c819193c5d8558e2d133b`, runtime secret revision 1.
+- Current saved version (10): `appgprj_6ac6808b104481919e5be6d86d23188e~appgver_550111229af08191ab8660819b7bb672`
+- Sites source commit: `f588fad5011fa77bc27a7e6e31125b04fe73cd89`
+- Successful emblem refinement deployment: `appgdep_6ac79ceb573081919bcf82a30aacda71`, October 8, 2026; runtime secret revision 1 (unchanged).
+- Rails source: emblem inside the national-purpose introduction on `codex/public-page-content` / PR #10.
+- Earlier live-calendar correction: version 2, `appgdep_6ac68430e21c819193c5d8558e2d133b` (superseded by the content refresh).
 - Local Site checkout: `tmp/sites-v1-preview` (ignored by the Rails repository).
 - Original sample-only deployment: version 1, `appgdep_6ac6813c3d4881918d15652c6d8b5176` (superseded).
 
@@ -65,7 +67,54 @@ copy/design changes need a new export and deployment. No automation is necessary
 Run `bin/rails assets:clobber` afterward if compiled assets mask development/V2
 assets, as described in development guidance.
 
-## Verification
+## October 8 — Why the Legion first pass
+
+The new [Why the Legion? page](https://post165-v1-launch-preview.andretr.chatgpt.site/why-the-legion)
+explains the value of belonging before asking for a meeting visit. V1 navigation
+and the homepage now link to it. The shared page also renders in V2, whose
+separate published concept remains unchanged. Rails route/metadata and Sites
+export/adapter tests cover the new route. The live calendar adapter and existing
+server-side secret settings are unchanged.
+
+CI passed 78 Rails tests / 934 assertions and nine adapter tests, plus style,
+security, autoloading and production assets. Local browser checks passed 15
+page/width combinations: the new page in both editions and V1 Home at
+1440/900/700/390/320px. No overflow or missing images; keyboard focus and activation
+and 200% root-text reflow passed. No new screenshots. The generated page and
+homepage links were checked before packaging. Sites version 5 reported successful
+publication at 12:05 UTC on October 8, with runtime secret revision 1 unchanged.
+
+## October 7 — clarify the homecoming example (version 4)
+
+The Commander clarified that the Guard welcome-home activity happened recently
+and is not routine. About now says “Members have also turned out with flags to
+welcome National Guard troops home.” The source notes preserve the original
+October 6 draft-minutes provenance and the Commander’s October 7 clarification.
+CI passed 78 Rails tests / 902 assertions and nine adapter tests, plus all other
+checks. The exported About template contains the correction. Sites version 4
+reported success at 19:10 UTC with runtime secret revision 1 unchanged. No new
+screenshots or hosted browser checks were needed for this one-line correction.
+
+## October 7 — footer content refresh (version 3)
+
+The owner authorized pushing the final PR #10 corrections and publishing them to
+this existing public V1 Site before merge, without new screenshots. Rails views
+were re-exported with live-calendar mode and the previously compiled V1 assets;
+the Worker source and runtime settings did not change. Sites reported the version
+3 deployment succeeded at 18:45 UTC, with the same public URL and secret revision.
+
+`bin/ci` passed 78 Rails tests / 902 assertions, nine Sites adapter tests, style,
+security, autoloading and production asset compilation. The first local run hit
+the documented compiled-asset masking of V2 sample assets; clearing generated
+assets and rerunning CI passed. Export checks confirmed the monthly meeting copy,
+conditional transfer contact in the configured-contact build, distinct Community
+group, visible visit link/answers, and no dues amount in Membership.
+No new screenshots or hosted browser checks were taken for this copy refresh.
+The prior browser evidence below describes version 2; see the
+[consolidated content review](../../2026-10-footer-content/design-revision/README.md)
+for the page changes and editorial provenance.
+
+## Earlier live-calendar verification (version 2)
 
 - Full `bin/ci` passed: Rails 76 tests / 738 assertions, nine Sites adapter tests,
   Ruby style, security checks, autoloading and production assets.
@@ -88,3 +137,51 @@ assets, as described in development guidance.
 
 The V2 Site and actual Hetzner production service are unchanged. No SSH, Kamal,
 private-data copy, publisher writes or companion-app changes are part of this work.
+
+## October 8 — illustrated invitation, version 6
+
+Replaced the rejected newspaper-like Why page with the “Pull up a chair”
+illustration and a short emotional invitation. Removed the audience categories
+from Home's introduction. National branding, route/navigation, practical footer
+pages, live calendar behavior and server-side credential settings remain intact.
+[Design, exact image prompt and verification](../../2026-10-why-invitation/README.md).
+
+CI passed 78/934 plus nine adapter tests and all remaining checks. Browser checks
+covered both editions and V1 Home at five widths, keyboard/anchor navigation and
+200% root-text reflow, without screenshots. Sites reported version 6 succeeded at
+12:25 UTC on October 8. The V2 Site and Hetzner production service were not deployed.
+
+## October 8 — three reasons to connect, version 7
+
+Kept the illustrated opening; removed its jump link. The next strip now has
+three connected panels for camaraderie, community service and veteran support,
+with local examples inspired by the pillars. The bottom visit/event actions
+remain. CI passed 78/934 and nine adapter tests; browser checks passed in both
+editions at five widths, including keyboard navigation and enlarged text.
+Sites reported success at 12:49 UTC, with runtime secret revision 1 unchanged.
+
+## October 8 — clearer card edges, version 8
+
+Added 1px blue borders and 16px gaps to the three reason cards. The left card
+uses #d6e4ef, distinct from the #e7eff5 invitation below. Content is unchanged.
+CI passed 78/934 and nine adapter tests. Browser checks in both editions at five
+widths confirmed borders, gaps, distinct backgrounds, reflow and keyboard access.
+Sites reported success at 12:59 UTC; runtime secret revision 1 remains unchanged.
+
+## October 8 — national-purpose strip, version 9
+
+Added “Part of something bigger” below the three cards: all four national
+pillars, a local About link, and a National mission link. CI passed 78/934 and
+nine adapter tests; both-edition responsive, keyboard, link and reading-order
+checks passed without screenshots. Source details are in the public facts and
+the invitation design record. Sites reported success at 13:23 UTC; runtime
+secret revision 1 is unchanged. No V2 Site or Hetzner deployment.
+
+## October 8 — emblem inside the blue introduction
+
+Published the unchanged official RGB emblem beside “Part of something bigger”
+inside its blue panel, with responsive stacking in the narrowest containers.
+The existing pillars, calendar adapter and runtime settings are unchanged.
+Version 10 reported `succeeded` at 13:39 UTC, with secret revision 1 unchanged.
+CI and both-edition responsive/keyboard/enlarged-text checks passed; no screenshots.
+The artwork source and mark-use caveat are recorded in the brand documentation.

@@ -1,1 +1,75 @@
-<section aria-labelledby="about-title"><p class="eyebrow">ROBERT E. BURNS POST 165</p><h1 id="about-title">Still serving.<br>Together.</h1><p class="body-copy">Military service is our common bond. Fellowship, mutual helpfulness, and service to our community keep that bond alive.</p><p class="body-copy compact">Robert E. Burns American Legion Post 165 is our local Post in Two Rivers, Wisconsin.</p><%= link_to "Get to know us →", visit_path, class: "main-action" %></section>
+<section class="post-page post-about-page" aria-labelledby="about-title">
+  <header class="post-page-heading launch-page-heading">
+    <div>
+      <p class="eyebrow">ROBERT E. BURNS POST 165 · TWO RIVERS</p>
+      <h1 id="about-title">Service, close to home.</h1>
+      <p class="post-lead">A fellow veteran to check in on. A young person to encourage. A community that remembers. This is where our work begins.</p>
+    </div>
+    <% if public_site_v1? %><span class="launch-post-number" aria-hidden="true">Post<strong>165</strong></span><% end %>
+  </header>
+
+  <div class="post-about-body">
+    <p class="post-about-intro">We’re Robert E. Burns American Legion Post 165 in Two Rivers. Our local work gives shape to <%= link_to "The American Legion’s four pillars", "https://www.legion.org/about", class: "post-inline-link" %> and its commitment to mutual helpfulness.</p>
+
+    <div class="post-service-stories">
+      <section class="post-service" aria-labelledby="about-veterans">
+        <div>
+          <p class="post-label">Veterans Affairs &amp; Rehabilitation</p>
+          <h2 id="about-veterans">Looking out for each other.</h2>
+        </div>
+        <div>
+          <p>Through Buddy Checks, members reach out to fellow veterans. Our Service Officer helps veterans who are unsure where to begin with benefits or who need help finding the next step.</p>
+          <%= link_to "Find veteran help", veteran_help_path, class: "post-link" %>
+        </div>
+      </section>
+      <section class="post-service" aria-labelledby="about-service">
+        <div>
+          <p class="post-label">Americanism</p>
+          <h2 id="about-service">Honoring those who serve.</h2>
+        </div>
+        <div>
+          <p>Our Honor Guard shares military funeral honors with the local VFW and presents the colors at community and sporting events. We hold a public flag retirement ceremony at Paddler’s Park, host the Veterans Day Salute, and take part in Memorial Day observances.</p>
+          <p>Members have also turned out with flags to welcome National Guard troops home.</p>
+        </div>
+      </section>
+      <section class="post-service" aria-labelledby="about-youth">
+        <div>
+          <p class="post-label">Children &amp; Youth</p>
+          <h2 id="about-youth">Encouraging what comes next.</h2>
+        </div>
+        <div>
+          <p>We sponsor young people to attend Badger Boys State and support a local scholarship.</p>
+        </div>
+      </section>
+      <section class="post-service" aria-labelledby="about-community">
+        <div>
+          <p class="post-label">Community</p>
+          <h2 id="about-community">Out in the community.</h2>
+        </div>
+        <div>
+          <p>Community gatherings, including our Car &amp; Bike Show at Walsh Field and brat fries, are other ways to meet the people behind the Post.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="post-history" aria-labelledby="about-history">
+      <p class="post-year">1928</p>
+      <div>
+        <h2 id="about-history">A memorial along the lake.</h2>
+        <p>With donations from the community, the Burns Post planted hundreds of elms along the lakeshore highway to remember those who died in World War I. That year, the County Board named the road American Legion Memorial Drive.</p>
+        <%= link_to "Read the memorial trees’ story", "https://www.manitowoccountyhistory.org/stories/american-legion-memorial-trees", class: "post-link" %>
+      </div>
+    </section>
+
+    <div class="post-next">
+      <div>
+        <h2>Come meet a few of us.</h2>
+        <p>A public occasion is a good place to start.</p>
+      </div>
+      <div class="post-actions">
+        <%= link_to "See upcoming events", events_path, class: "main-action" %>
+        <%= link_to "Plan a first visit", visit_path, class: "post-link" %>
+      </div>
+    </div>
+  </div>
+</section>

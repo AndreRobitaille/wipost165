@@ -1,0 +1,12 @@
+<div class="post-contact-links">
+  <% if public_contact_phone %>
+    <%= link_to public_phone_href, class: "post-contact-link" do %>
+      <span>Call the Post</span><strong><%= public_contact_phone %></strong>
+    <% end %>
+  <% end %>
+  <% if public_contact_email %>
+    <%= mail_to public_contact_email, class: "post-contact-link" do %>
+      <span>Email the Post</span><strong><%= public_contact_email %></strong>
+    <% end %>
+  <% end %>
+</div>

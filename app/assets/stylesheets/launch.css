@@ -67,7 +67,8 @@
 #launch #welcome-title { margin: 22px 0; font-size: clamp(38px, 3.8vw, 55px); line-height: 1.04; color: var(--ink); }
 #launch #welcome-title span { color: var(--blue); }
 #launch .launch-welcome-copy { max-width: 38ch; font-size: 18px; color: var(--muted); }
-#launch .launch-actions { margin-top: 26px; }
+#launch .launch-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 26px; }
+#launch .launch-actions .text-action { color: var(--blue); }
 #launch .launch-visit-intro { display: grid; grid-template-columns: 1fr 26px; align-items: center; gap: 16px; margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--blue); }
 #launch .launch-visit-intro h2 { margin-bottom: 8px; font-size: 21px; letter-spacing: -.02em; }
 #launch .launch-visit-intro p { font-size: 15px; color: var(--muted); }
@@ -221,7 +222,7 @@ html.event-dialog-open { overflow: hidden; }
   #launch .launch-post { font-size: 11px; }
   #launch .launch-post strong { font-size: 21px; }
   #launch .launch-post span { font-size: 12px; }
-  #launch .launch-nav { justify-content: space-between; width: 100%; margin: 0; font-size: 15px; gap: 12px; }
+  #launch .launch-nav { flex-wrap: wrap; justify-content: flex-start; width: 100%; margin: 0; font-size: 15px; gap: 0 22px; }
   #launch .launch-practical { grid-template-columns: minmax(0, 1fr); padding-block: 28px; gap: 24px; }
   #launch .launch-invitation { padding: 24px; gap: 20px; grid-template-columns: 64px minmax(0, 1fr); }
   #launch .launch-invitation h2 { font-size: 24px; }

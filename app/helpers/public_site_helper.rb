@@ -2,14 +2,15 @@ module PublicSiteHelper
   PUBLIC_ORIGIN = "https://wipost165.org".freeze
   DOCUMENT_TITLE = "American Legion Post 165, Two Rivers".freeze
   # Static public pages. Event and person URLs follow the publisher feed.
-  SITEMAP_PATHS = %w[/ /events /visit /about /contact /membership /veteran-help].freeze
+  SITEMAP_PATHS = %w[/ /why-the-legion /events /visit /about /contact /membership /veteran-help].freeze
   PAGE_HEADINGS = {
     "events" => "Events", "visit" => "Visit Us", "about" => "About the Post",
-    "contact" => "Contact", "membership" => "Membership", "help" => "Veteran Help"
+    "contact" => "Contact", "membership" => "Membership", "help" => "Veteran Help", "why_legion" => "Why the Legion?"
   }.freeze
   # Page copy with the on-page headline removed. Shared templates use the V1 wording.
   PAGE_DESCRIPTIONS = {
     "v1" => {
+      "why_legion" => "Some conversations start a little easier when you’ve both served. Where they go from there is the good part.",
       "home" => "Military service is our common bond. Fellowship, mutual helpfulness, and service to our community keep that bond alive.",
       "events" => "Public occasions over the next three months. Find a date and make a plan. Your first time here? A public event is a good way to get to know us.",
       "visit" => "Start with a public event—it’s a good way to get to know us. We meet the first Tuesday of each month at 6:30 p.m. at the Manitowoc Rifle & Pistol Club.",

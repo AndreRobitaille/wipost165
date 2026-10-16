@@ -6,9 +6,10 @@
   <div class="launch-introduction">
     <p class="eyebrow">VETERANS SERVING TWO RIVERS</p>
     <h1 id="welcome-title">Still serving.<br><span>In good company.</span></h1>
-    <p class="launch-welcome-copy">Military service is our common bond. Fellowship, mutual helpfulness, and service to our community keep that bond alive.</p>
+    <p class="launch-welcome-copy">Military service gives us something in common. A familiar face, a shared laugh, a chance to lend a hand. There’s good company to be found here.</p>
     <div class="launch-actions">
-      <%= link_to events_path, class: "main-action" do %>See upcoming events <span aria-hidden="true">↗</span><% end %>
+      <%= link_to why_legion_path, class: "main-action" do %>Why the Legion? <span aria-hidden="true">→</span><% end %>
+      <%= link_to "See upcoming events ↗", events_path, class: "text-action" %>
     </div>
     <%= link_to visit_path, class: "launch-visit-intro" do %>
       <div><h2>Your first visit? Start with hello.</h2><p>A public event is a good way to get to know us. Here’s what to expect.</p></div>
