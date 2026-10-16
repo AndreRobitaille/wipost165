@@ -100,16 +100,15 @@ module PublicSiteHelper
   end
 
   # gtag config records the first full load. Later Turbo visits send their own page_view.
+  # The external library stays out of the initial HTML so its parse does not delay LCP.
   def public_google_tag
     id = Rails.configuration.x.ga4_measurement_id.to_s.strip
     return unless id.match?(PublicSiteEnv::GA4_MEASUREMENT_ID)
 
     nonce = content_security_policy_nonce.presence
-    loader = { src: "https://www.googletagmanager.com/gtag/js?id=#{id}", async: true, fetchpriority: "low" }
-    loader[:nonce] = nonce if nonce
     script_options = {}
     script_options[:nonce] = true if nonce
-    safe_join([ tag.script(**loader), javascript_tag(google_tag_script(id), script_options) ])
+    javascript_tag(google_tag_script(id), script_options)
   end
 
   def self.sitemap_paths
@@ -218,11 +217,37 @@ module PublicSiteHelper
   end
 
   def google_tag_script(id)
+    src = "https://www.googletagmanager.com/gtag/js?id=#{id}"
     <<~JS
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', #{id.to_json});
+      (function() {
+        var nonce = document.currentScript && document.currentScript.nonce;
+        var interactions = ["pointerdown", "keydown", "touchstart"];
+        function inject() {
+          interactions.forEach(function(type) { window.removeEventListener(type, inject, true); });
+          if (window.__ga4ScriptInjected) return;
+          window.__ga4ScriptInjected = true;
+          var script = document.createElement("script");
+          script.async = true;
+          script.fetchPriority = "low";
+          if (nonce) script.nonce = nonce;
+          script.src = #{src.to_json};
+          document.head.appendChild(script);
+        }
+        interactions.forEach(function(type) {
+          window.addEventListener(type, inject, { capture: true, passive: true });
+        });
+        window.addEventListener("load", function() {
+          if (window.requestIdleCallback) {
+            window.requestIdleCallback(inject, { timeout: 1500 });
+          } else {
+            window.setTimeout(inject, 1500);
+          }
+        });
+      })();
       document.addEventListener("turbo:load", function() {
         if (!window.gtag) return;
         if (!window.__ga4SawInitialLoad) {
