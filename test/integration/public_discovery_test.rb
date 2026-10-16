@@ -35,8 +35,16 @@ class PublicDiscoveryTest < ActionDispatch::IntegrationTest
 
   def assert_tags_present
     src = "https://www.googletagmanager.com/gtag/js?id=#{MEASUREMENT_ID}"
-    assert_select "script[src=?][async][fetchpriority=low]", src
+    assert_select "script[src*='googletagmanager'], script[src*='google-analytics']", count: 0
+    assert_includes response.body, src
     assert_match(/gtag\('config', #{Regexp.escape(MEASUREMENT_ID.to_json)}\)/, response.body)
+    assert_match(/window\.dataLayer = window\.dataLayer \|\| \[\]/, response.body)
+    assert_match(/requestIdleCallback\(inject, \{ timeout: 1500 \}\)/, response.body)
+    assert_match(/setTimeout\(inject, 1500\)/, response.body)
+    assert_match(/addEventListener\("load"/, response.body)
+    assert_match(/pointerdown/, response.body)
+    assert_match(/script\.async = true/, response.body)
+    assert_match(/script\.fetchPriority = "low"/, response.body)
     assert_match(/turbo:load/, response.body)
     assert_select 'meta[name="google-site-verification"], meta[name="msvalidate.01"]', count: 0
     assert_select "script[nonce]", count: 0
