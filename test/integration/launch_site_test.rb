@@ -41,12 +41,12 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
       assert_select "#invitation-title", text: events.first.fetch("title")
       assert_select 'a[href^="/people"]', count: 0
       assert_select ".launch-harbor img[alt*='Illustration of Two Rivers'][width='1536'][height='1024'][loading='eager'][fetchpriority='high']", count: 1
-      assert_select ".launch-harbor img[src*='two-rivers-harbor-illustration'][srcset*='480w'][srcset*='768w'][srcset*='1024w'][srcset*='1536w']"
-      assert_select "link[rel='preload'][as='image'][type='image/webp'][imagesrcset][imagesizes][fetchpriority='high']", count: 1
+      assert_select ".launch-harbor img[src*='two-rivers-harbor-illustration'][srcset*='480w'][srcset*='768w'][srcset*='1024w'][srcset*='1200w'][srcset*='1536w'][sizes='(max-width: 900px) 100vw, 900px']"
+      assert_select "link[rel='preload'][as='image'][type='image/webp'][imagesrcset][imagesizes='(max-width: 900px) 100vw, 900px'][fetchpriority='high']", count: 1
       assert_select "link[rel='stylesheet']", count: 1
       assert_select "link[rel='stylesheet'][href*='launch']", count: 1
       assert_select "link[rel='stylesheet'][href*='company'], link[rel='stylesheet'][href*='post_pages'], link[rel='stylesheet'][href*='why_legion'], link[rel='stylesheet'][href*='application']", count: 0
-      assert_select ".launch-brand source[type='image/webp'][srcset*='1x'][srcset*='2x']", count: 1
+      assert_select ".launch-brand source[type='image/webp'][srcset*='1x'][srcset*='2x'][srcset*='legion-white-408.webp'][srcset*='3x']", count: 1
       assert_select ".launch-brand img[src*='legion-white'][width='1500'][height='413']", count: 1
       assert_select "link[rel='icon'][href*='legion-white-favicon']", count: 1
       assert_select 'img[src*="portrait"], img[src*="people"]', count: 0

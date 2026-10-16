@@ -1,11 +1,16 @@
 module PublicSiteHelper
   PUBLIC_ORIGIN = "https://wipost165.org".freeze
-  # Harbor column is full width until the two-column welcome, then 52% of the 1440px page.
-  HARBOR_SIZES = "(max-width: 900px) 100vw, (max-width: 1440px) 52vw, 749px".freeze
+  # Below 900px the harbor is the full page width. Above that, object-fit: cover in a
+  # row at least 590px tall paints about 885–893px of the 3:2 artwork (measured), so a
+  # flat 900px slot is the drawn width. 52vw described the column and selected 480/768.
+  # No 1800w file: the master is 1536px, and an upscale is neither sharper nor cheaper
+  # than the 1536 candidate browsers already pick when the slot is ~1800 (desktop 2x).
+  HARBOR_SIZES = "(max-width: 900px) 100vw, 900px".freeze
   HARBOR_SOURCES = [
     [ "two-rivers-harbor-illustration-480.webp", "480w" ],
     [ "two-rivers-harbor-illustration-768.webp", "768w" ],
     [ "two-rivers-harbor-illustration-1024.webp", "1024w" ],
+    [ "two-rivers-harbor-illustration-1200.webp", "1200w" ],
     [ "two-rivers-harbor-illustration.webp", "1536w" ]
   ].freeze
   DOCUMENT_TITLE = "American Legion Post 165, Two Rivers".freeze

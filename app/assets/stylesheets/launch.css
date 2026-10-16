@@ -43,7 +43,7 @@ body { margin: 0; }
 /* The transparent logo includes whitespace; 20px adds at least one L-width. */
 #launch .launch-brand { display: block; flex: 0 0 176px; padding: 20px; }
 #launch .launch-brand picture { display: block; width: 100%; }
-#launch .launch-brand img { display: block; width: 100%; height: auto; }
+#launch .launch-brand img { display: block; width: 100%; height: auto; aspect-ratio: 1500 / 413; }
 #launch .launch-post { font-size: 12px; line-height: 1.45; letter-spacing: .04em; }
 #launch .launch-post strong { display: block; font-size: 23px; letter-spacing: .01em; }
 #launch .launch-post span { display: block; font-size: 13px; letter-spacing: 0; }
