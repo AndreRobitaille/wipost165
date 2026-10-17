@@ -7,7 +7,9 @@ Both https://wipost165.org and https://www.wipost165.org serve the new revision.
 ## Release identity
 
 - Source: `76f4f5cba5c7785a192ad7d3e22bf6ac448af7d9`, pushed on
-  `codex/sharing-icons`. The release branch is not merged into `master`.
+  `codex/sharing-icons`. Subsequent owner-authorized Git cleanup integrates the
+  release and its records into `master` through PR #21 and retires that branch;
+  it does not redeploy production.
 - Actual previous live source: `16f143c9f315880f4af2cbcbaa7f65b82bcfb72a`, matching
   the new commit's base. The older October 12 handoff revision was superseded by
   other releases; it was not used as the production baseline.

@@ -1,5 +1,12 @@
 # Project handoff
 
+## October 17 — sharing release integrated into master
+
+The sharing/icon release and its records are integrated into `master` through
+[PR #21](https://github.com/AndreRobitaille/wipost165/pull/21). The session's
+`codex/sharing-icons` branch is retired after integration. This is Git cleanup;
+production remains at the verified runtime revision `76f4f5c`, with no redeploy.
+
 ## October 17 — approved sharing and icons deployed
 
 Production on both public hostnames runs `76f4f5c` from `codex/sharing-icons`.
@@ -12,8 +19,8 @@ Members, Two Rivers, and shared proxy IDs/revisions remained unchanged. One oute
 SSH session persisted through final checks and was closed with cleanup verified.
 No Sites publication or DNS/mail change. [Release evidence and rollback identity](deployment/2026-10-17-sharing-icons.md).
 External social caches, Google icon selection, and GA4 dashboard ingestion were
-not checked. The release branch remains unmerged; later documentation commits
-do not change the running source revision.
+not checked. Later integration and documentation commits do not change the running
+source revision.
 
 ## October 17 — sharing metadata and icons design/preparation history
 
