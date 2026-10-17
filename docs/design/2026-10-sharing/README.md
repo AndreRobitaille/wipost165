@@ -1,7 +1,9 @@
 # Sharing and site icons — October 17, 2026
 
-Local implementation; no commit, push, publication, deployment, or production
-inspection. The live revision in HANDOFF is unchanged.
+Deployed October 17 after owner approval at `76f4f5c` on both public hostnames.
+The [release record](../../deployment/2026-10-17-sharing-icons.md) documents live
+metadata, exact asset-byte/type checks, unchanged protected services, and the
+single SSH session. The design-stage history below predates that release.
 
 ## Coverage
 
@@ -66,7 +68,8 @@ not preserve the complete identity in a centered square crop; the old square
 review artifact was removed. The 1200×630 file remains the metadata target, and
 its alt text describes the side-by-side arrangement. Focused metadata checks
 passed 28 tests / 1,339 assertions. SHA-256 checks confirm all five icon files
-are unchanged. No publication or deployment was performed.
+are unchanged. No publication or deployment occurred during that design stage;
+the later authorized production release is recorded above.
 
 ### Prior brand review and correction rationale
 

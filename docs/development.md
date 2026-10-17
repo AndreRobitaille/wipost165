@@ -191,6 +191,6 @@ freshness limit. Browser HTML is no-store; there is no stale/sample fallback.
 See [identity and refresh procedure](design/2026-10-harbor-study/sites-preview/README.md).
 `sites/worker.mjs` contains only the Sites transport/rendering adapter. Change
 visual design and copy in Rails, then regenerate; do not maintain a second design
-in the Sites checkout. `bin/ci` includes nine focused adapter tests after compiling
+in the Sites checkout. `bin/ci` includes ten focused adapter tests after compiling
 assets. Node 22 or newer is required for these tests; no npm dependencies are
 needed for the published Worker.

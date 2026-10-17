@@ -1,6 +1,21 @@
 # Project handoff
 
-## October 17 — sharing metadata and icons prepared locally
+## October 17 — approved sharing and icons deployed
+
+Production on both public hostnames runs `76f4f5c` from `codex/sharing-icons`.
+The live baseline was `16f143c9`, matching the release commit's base. The approved
+horizontal card, square favicon, Apple/bookmark icons, manifest, page-specific
+OG/X tags, and homepage site-name markup passed live readback. All seven asset
+URLs match the approved repository bytes on both hosts. Local CI passed
+93/2,068 plus 10 adapter tests; the V1 publisher preflight verified six events.
+Members, Two Rivers, and shared proxy IDs/revisions remained unchanged. One outer
+SSH session persisted through final checks and was closed with cleanup verified.
+No Sites publication or DNS/mail change. [Release evidence and rollback identity](deployment/2026-10-17-sharing-icons.md).
+External social caches, Google icon selection, and GA4 dashboard ingestion were
+not checked. The release branch remains unmerged; later documentation commits
+do not change the running source revision.
+
+## October 17 — sharing metadata and icons design/preparation history
 
 Added Open Graph/X large-image cards, a centered 1200×630 Post identity image,
 Google site-name JSON-LD, and square favicons/Apple/bookmark icons. The old linked
