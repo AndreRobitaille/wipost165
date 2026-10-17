@@ -1,0 +1,15 @@
+{
+  "id": "/",
+  "name": "American Legion Post 165, Two Rivers",
+  "short_name": "Post 165",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "lang": "en-US",
+  "background_color": "#ffffff",
+  "theme_color": "#00467f",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

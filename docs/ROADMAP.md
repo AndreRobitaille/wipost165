@@ -1,14 +1,24 @@
 # Public website development roadmap
 
-Updated October 12, 2026. This is the working backlog for future sessions.
+Updated October 17, 2026. This is the working backlog for future sessions.
 It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
 
+October 17: [sharing metadata and icon package](design/2026-10-sharing/README.md)
+prepared locally: Open Graph/X image cards, square Google/browser favicon, Apple
+touch and bookmark icons, manifest MIME type, and homepage site-name JSON-LD.
+The current owner-directed card places the Legion logo left and Post 165 / Two
+Rivers right with tight spacing; the separate-footer treatment was rejected.
+The owner retained the emblem favicon.
+Deployed as `76f4f5c` after owner authorization; live metadata and asset byte/type
+checks passed on both hostnames. [Release evidence](deployment/2026-10-17-sharing-icons.md).
+External platform cache/preview refresh and Google's icon selection remain unverified.
+
 ## Current priority — V1 live; prepare V2 when ready
 
 V1 is live at https://wipost165.org and https://www.wipost165.org, revision
-`77f5102` after PR #11 integration, following the owner's October 12 authorization. The
+`76f4f5c` after the owner's October 17 sharing/icon deployment authorization. The
 [production release record](deployment/2026-10-12-v1-launch.md) covers CI, remote
 container checks, six live events, browser/metadata/TLS checks, protected services,
 and the single persistent tunnel retained through verification and then closed.

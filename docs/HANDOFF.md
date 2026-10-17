@@ -1,5 +1,49 @@
 # Project handoff
 
+## October 17 — sharing release integrated into master
+
+The sharing/icon release and its records are integrated into `master` through
+[PR #21](https://github.com/AndreRobitaille/wipost165/pull/21). The session's
+`codex/sharing-icons` branch is retired after integration. This is Git cleanup;
+production remains at the verified runtime revision `76f4f5c`, with no redeploy.
+
+## October 17 — approved sharing and icons deployed
+
+Production on both public hostnames runs `76f4f5c` from `codex/sharing-icons`.
+The live baseline was `16f143c9`, matching the release commit's base. The approved
+horizontal card, square favicon, Apple/bookmark icons, manifest, page-specific
+OG/X tags, and homepage site-name markup passed live readback. All seven asset
+URLs match the approved repository bytes on both hosts. Local CI passed
+93/2,068 plus 10 adapter tests; the V1 publisher preflight verified six events.
+Members, Two Rivers, and shared proxy IDs/revisions remained unchanged. One outer
+SSH session persisted through final checks and was closed with cleanup verified.
+No Sites publication or DNS/mail change. [Release evidence and rollback identity](deployment/2026-10-17-sharing-icons.md).
+External social caches, Google icon selection, and GA4 dashboard ingestion were
+not checked. Later integration and documentation commits do not change the running
+source revision.
+
+## October 17 — sharing metadata and icons design/preparation history
+
+Added Open Graph/X large-image cards, a centered 1200×630 Post identity image,
+Google site-name JSON-LD, and square favicons/Apple/bookmark icons. The old linked
+128×35 favicon and Rails placeholder icons are replaced. The manifest has an
+explicit JSON MIME type. Metadata follows existing readiness/error guards; Sites
+exports include the new public assets. [Sources, regeneration and verification](design/2026-10-sharing/README.md).
+No commit, push, publishing, or deployment; production remains as recorded below.
+Owner review rejected the card's small supporting text. The local revision now
+uses only a larger Legion mark, Post 165, and Two Rivers, WI, reviewed at 320/240px
+and as a square crop after inspecting real online OG examples. Focused metadata
+checks passed 28/1,339. The linked design note includes the unchanged favicon at
+actual 16/32/48/96px sizes; its fine lettering is not legible at tab size.
+The owner retained the favicon and rejected the later separate-headline/footer
+card. The current direction is a tight horizontal treatment: complete Legion
+logo left, Post 165 / Two Rivers right, with a thin vertical divider, 32px outer
+padding, and 40px gaps. A follow-up reduces the right-side text to 132/94px and
+widens the center spacing, reviewed at 320/240px. The owner chose this spacing over the guide's
+prescribed measurements. Current 320/240px thumbnails are in the linked note;
+the earlier square-crop preview was removed. Focused checks passed 28/1,339 and
+all icon hashes are unchanged. This remains a local implementation.
+
 ## October 12 — PR #11 merged and deployed
 
 PR #11 is merged into `main`; its analytics, sitemap, robots and metadata changes
