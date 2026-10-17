@@ -237,6 +237,17 @@ weight for every section, oversized decorative gaps, and heavy repeated dividers
 
 ### Photography and artwork
 
+For sharing images, judge the thumbnail rather than only the full-resolution
+export. The owner rejected the first OG card's small name/domain/location text.
+Use a clear focal point and little copy, and review at 320px and 240px wide before
+showing a full-size export. The [sharing design note](design/2026-10-sharing/README.md)
+records live examples, the revised card, and actual-size favicon previews.
+The owner subsequently rejected the separate-headline/footer treatment and chose
+a tight horizontal logo-left / Post 165-and-Two Rivers-right composition, using
+National's horizontal examples as inspiration while explicitly favoring small
+margins and tight gaps over its prescribed measurements. Keep the official logo
+artwork intact and retain the emblem favicon.
+
 Three good, modest portraits can carry the idea. Consistent daylight, camera
 height, framing, and crop matter more than professional equipment. A simple
 iPhone portrait or a candid from a real activity can be enough with consent and

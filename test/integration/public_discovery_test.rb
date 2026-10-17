@@ -143,6 +143,28 @@ class PublicDiscoveryTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "bookmark manifest is public JSON with correctly sized local icons" do
+    Publishing::Client.stub(:new, -> { raise "Publisher must not be contacted" }) do
+      get "/site.webmanifest"
+      assert_response :success
+      assert_equal "application/manifest+json", response.media_type
+      manifest = JSON.parse(response.body)
+      assert_equal "browser", manifest.fetch("display")
+      assert_equal PublicSiteHelper::DOCUMENT_TITLE, manifest.fetch("name")
+      manifest.fetch("icons").each do |icon|
+        get icon.fetch("src")
+        assert_response :success
+        assert_equal "image/png", response.media_type
+        dimensions = response.body.byteslice(16, 8).unpack("NN").join("x")
+        assert_equal icon.fetch("sizes"), dimensions
+      end
+      head "/site.webmanifest"
+      assert_response :success
+      assert_equal "application/manifest+json", response.media_type
+      assert_empty response.body
+    end
+  end
+
   test "sitemap lists static public pages and only the homepage while coming soon" do
     %w[v1 v2].each do |edition|
       Rails.configuration.x.public_site_edition = edition

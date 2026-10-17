@@ -108,7 +108,10 @@ Contact, Membership, and Veteran Help. The document title is
 `Page – American Legion Post 165, Two Rivers`; the home page uses only
 `American Legion Post 165, Two Rivers`. A self-referencing canonical URL uses
 `https://wipost165.org` and omits query strings, including V2 recognition context.
-There are no Open Graph or Twitter tags. Development, preview, coming soon,
+Indexable pages include matching Open Graph and X/Twitter large-image card tags,
+with a shared public 1200×630 JPEG, dimensions, MIME type, and image description.
+The homepage also provides `WebSite` JSON-LD for Google's site name. All image and
+sharing URLs use the fixed public origin. Development, preview, coming soon,
 missing pages, and feed outages stay `noindex, nofollow, nosnippet, noimageindex`.
 `PUBLIC_SITE_LAUNCH_READY=1` takes effect only in production. The deployment
 configuration enables it for the approved V1 launch; coming-soon and static preview
@@ -119,7 +122,17 @@ After the selected edition's final content review, the authorized release sets
 `PUBLIC_SITE_COMING_SOON=0` and `PUBLIC_SITE_LAUNCH_READY=1`. Successful pages then
 drop the noindex rule. Canonical URLs stay on `https://wipost165.org` for both
 public hostnames. Missing and unavailable pages and portrait errors remain noindex.
-Valid empty collections can be indexed at launch.
+Valid empty collections can be indexed at launch. Sharing tags and site-name
+JSON-LD follow the same readiness/error checks and are omitted from noindex pages
+and event-dialog fragments. Social services may retain previews independently;
+withdrawing a page cannot erase copies already cached by another service.
+
+All public page heads also link stable root URLs for a square 96×96 PNG favicon,
+a 16/32/48 ICO, a 180×180 Apple touch icon, and a browser-mode web manifest with
+192/512 PNGs. These files need no publisher access. The official emblem is fitted
+proportionately on an opaque white square; Rails' placeholder icons are replaced.
+See [sharing assets and verification](design/2026-10-sharing/README.md) for sources,
+regeneration, and platform checks after an authorized release.
 
 Robots directives are crawler instructions, not access controls or guarantees
 about third-party previews. Keep coming-soon enabled publicly until the selected
