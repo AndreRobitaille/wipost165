@@ -11,9 +11,6 @@
         <% if public_contact_email %>
           <div><dt>Email</dt><dd><%= mail_to public_contact_email, subject: first_visit_subject %></dd></div>
         <% end %>
-        <% if public_contact_phone %>
-          <div><dt>Phone</dt><dd><%= link_to public_contact_phone, public_phone_href %></dd></div>
-        <% end %>
       </dl>
     <% else %>
       <p class="launch-contact-pending">Email and phone contact details aren’t available here. You can write to the Post at the mailing address below.</p>

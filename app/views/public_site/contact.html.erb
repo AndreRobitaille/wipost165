@@ -3,7 +3,6 @@
   <p class="body-copy">Questions about coming along, membership, or the Post? Start here.</p>
   <% if public_contact_available? %>
     <% if public_contact_email %><p><%= mail_to public_contact_email, "Email the Post →", subject: first_visit_subject, class: "main-action" %></p><p class="contact-detail"><%= public_contact_email %></p><% end %>
-    <% if public_contact_phone %><p><%= link_to "Call #{public_contact_phone}", public_phone_href, class: "text-action" %></p><% end %>
     <p class="small-note">The Post is run by volunteers. Please allow time for a reply.</p>
   <% else %>
     <p class="contact-pending">Email and phone contact details aren’t available here. You can write to the Post at the mailing address below.</p>

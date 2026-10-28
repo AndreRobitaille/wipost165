@@ -33,6 +33,25 @@ class PublicInformationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "contact page omits the Post phone number in both editions" do
+    %w[v1 v2].each do |edition|
+      with_information_settings(edition) do
+        Rails.configuration.x.stub(:public_contact_email, "wipost165@gmail.com") do
+          Rails.configuration.x.stub(:public_contact_phone, "(920) 860-7478") do
+            get contact_path
+            assert_response :success
+            assert_select "a[href^='tel:']", count: 0
+            assert_not_includes response.body, "860-7478"
+            assert_select "a[href^='mailto:']", minimum: 1
+            assert_select "a[href^='mailto:wipost165@gmail.com']", count: 1
+            assert_includes response.body, "The Post is run by volunteers. Please allow time for a reply."
+            assert_includes response.body, "PO Box 11"
+          end
+        end
+      end
+    end
+  end
+
   test "crisis contact is the first service route and membership stays a separate page" do
     %w[v1 v2].each do |edition|
       with_information_settings(edition) do
