@@ -46,7 +46,9 @@ class PublicInformationTest < ActionDispatch::IntegrationTest
 
         get veteran_help_path
         assert_response :success
+        assert_select "a[href='tel:9208607478']", text: /Call our Service Officer/
         assert_select "a[href='tel:9208607478']", text: /860-7478/
+        assert_not_includes response.body, "Call the Post"
         assert_select "a[href='tel:9206834055']", text: "Call 920-683-4055"
         assert_select "a[href='tel:988']", text: "Call 988, then press 1"
         assert_select "a[href='mailto:wipost165@gmail.com']", count: 1
