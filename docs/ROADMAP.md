@@ -1,6 +1,6 @@
 # Public website development roadmap
 
-Updated October 17, 2026. This is the working backlog for future sessions.
+Updated October 28, 2026. This is the working backlog for future sessions.
 It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
@@ -18,7 +18,10 @@ External platform cache/preview refresh and Google's icon selection remain unver
 ## Current priority — V1 live; prepare V2 when ready
 
 V1 is live at https://wipost165.org and https://www.wipost165.org, revision
-`76f4f5c` after the owner's October 17 sharing/icon deployment authorization. The
+`c257c1a1d3ba641792c7e0c2234e85a53ef4a998` after the owner's October 28 approval
+of the Service Officer phone label.
+[Release evidence](deployment/2026-10-28-service-officer-label.md).
+The October 17 sharing/icon release remains `76f4f5c`. The
 [production release record](deployment/2026-10-12-v1-launch.md) covers CI, remote
 container checks, six live events, browser/metadata/TLS checks, protected services,
 and the single persistent tunnel retained through verification and then closed.
