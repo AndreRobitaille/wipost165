@@ -7,8 +7,8 @@ the members application's service name or reuse its Rails key or database secret
 
 ## Current launch scope
 
-Latest release: [`76f4f5c`, approved sharing cards and icons](deployment/2026-10-17-sharing-icons.md).
-Its actual previous live revision was `16f143c9`; inspect live state again before
+Latest release: [`c257c1a`, Service Officer phone label](deployment/2026-10-28-service-officer-label.md).
+Its actual previous live revision was `ba801ff6`; inspect live state again before
 the next operation rather than treating older handoff entries as current.
 The approved V1 design first launched on October 12, 2026 at revision `e2a88f2`.
 See [production evidence and rollback identity](deployment/2026-10-12-v1-launch.md).

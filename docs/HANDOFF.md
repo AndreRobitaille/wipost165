@@ -1,5 +1,17 @@
 # Project handoff
 
+## October 28 — Service Officer phone label deployed
+
+Andre approved [PR #24](https://github.com/AndreRobitaille/wipost165/pull/24) for
+production. Both public hostnames run
+`c257c1a1d3ba641792c7e0c2234e85a53ef4a998`. The previous live revision was
+`ba801ff6f54512a8546cbf4f5f391f0ab544e4e4`. Veteran help labels
+`tel:9208607478` as "Call our Service Officer" with `(920) 860-7478`.
+[Release evidence](deployment/2026-10-28-service-officer-label.md).
+The merged branch `cursor/veteran-help-service-officer-label-dad0` is deleted.
+Members, Two Rivers, and their proxy targets were unchanged. One outer SSH
+session persisted through verification and was closed.
+
 ## October 17 — sharing release integrated into master
 
 The sharing/icon release and its records are integrated into `master` through
