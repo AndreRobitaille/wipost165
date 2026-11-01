@@ -29,7 +29,7 @@
       <p>We’ll help you sort out the next step. For a claim, appeal, or formal benefits application, we’ll connect you with the Manitowoc County Veterans Service Office.</p>
       <% if public_contact_available? %>
         <p><strong>Contact the Post and ask for our Service Officer.</strong></p>
-        <%= render "public_contact_links" %>
+        <%= render "public_contact_links", phone_label: "Call our Service Officer" %>
       <% else %>
         <p class="post-contact-unavailable">The Post’s contact details are unavailable. For benefits help, you can contact the county office listed here.</p>
       <% end %>
