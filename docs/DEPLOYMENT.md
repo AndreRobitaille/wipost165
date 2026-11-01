@@ -7,8 +7,8 @@ the members application's service name or reuse its Rails key or database secret
 
 ## Current launch scope
 
-Latest release: [`c257c1a`, Service Officer phone label](deployment/2026-10-28-service-officer-label.md).
-Its actual previous live revision was `ba801ff6`; inspect live state again before
+Latest release: [`9d4095c`, off-server builds and contact fallback](deployment/2026-11-01-off-server-contact-release.md).
+Its actual previous live revision was `c257c1a`; inspect live state again before
 the next operation rather than treating older handoff entries as current.
 The approved V1 design first launched on October 12, 2026 at revision `e2a88f2`.
 See [production evidence and rollback identity](deployment/2026-10-12-v1-launch.md).
@@ -198,6 +198,8 @@ Keep DNS success, HTTPS success, application health, and full-site readiness
 separate. The coming-soon release does not finish the publishing integration.
 Keep NixiHost hosting available until the migration is accepted. Roll back only
 the public service to its recorded previous image using the same guarded release
-workflow. Before this first install there is no public Hetzner image to restore;
-restoring the old apex is a separate explicitly authorized DNS recovery action,
-with cache delay. Never remove the shared proxy as a rollback.
+workflow. Earlier images may predate the required revision metadata; do not assume
+they satisfy the new image guard. Prepare reviewed rollback source through the
+current build/check/publish procedure when necessary. Restoring an old apex is a
+separate explicitly authorized DNS action with cache delay. Never remove the shared
+proxy as a rollback.

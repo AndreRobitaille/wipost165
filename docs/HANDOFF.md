@@ -2,11 +2,12 @@
 
 ## November 1 — off-server production builds
 
-PRs #26, #27 and #28 are merged into `master` through `15f1a0b`. The owner
-authorized off-server builds followed by commit, push, merge, deployment, live
-verification and closure of #8 if successful. Production remains at the October
-28 revision until that release is verified; the sections below retain earlier
-observations.
+PRs #26–#30 are merged. Both public hostnames now run
+`9d4095c0ecfbee76773097600750738e0a238540`, replacing October 28's `c257c1a`.
+The owner authorized off-server builds, integration, deployment, live checks and
+conditional #8 closure. All checks passed and #8 is closed as completed.
+[Release identity, CI, live checks and connection cleanup](deployment/2026-11-01-off-server-contact-release.md).
+Only #5 (improvements based on evidence) and #6 (remaining V2 preparation) stay open.
 
 The new GitHub Actions workflow builds and tests a production image without
 production credentials, including both contact editions and the real startup
@@ -15,9 +16,15 @@ revision without a local Docker daemon. Releases require its registry digest,
 verify image identity twice and use `--skip-push`, preventing a fallback to a
 build on the shared VPS. The existing builder cap and `bundle install --jobs 1`
 remain unchanged. See [the release procedure](DEPLOYMENT.md#secrets-and-release).
-One release shell remains open through this operation; no replacement tunnel is
-needed to load the new image functions. GitHub and the eventual release record
-provide final CI, integration and production evidence.
+The final Actions build peaked at about 623 MiB with no OOM events. Full local CI
+passed 106 Rails tests / 2,263 assertions and 10 adapter tests; exact master CI and
+image checks passed. Live desktop/mobile, keyboard, contact, metadata and event
+dialog checks passed. The deployed image separately passed 12 synthetic V1/V2
+contact cases without network or production credentials. Members and Two Rivers
+were unchanged across the public deployment and stayed healthy. One outer SSH
+connection persisted through final verification, then closed with cleanup checked.
+The sections below preserve earlier observations, including states before merge
+or deployment; they are not pending work.
 
 ## November 1 — PR #26 repair and open-issue reconciliation
 
