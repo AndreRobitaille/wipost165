@@ -7,8 +7,8 @@ the members application's service name or reuse its Rails key or database secret
 
 ## Current launch scope
 
-Latest release: [`9d4095c`, off-server builds and contact fallback](deployment/2026-11-01-off-server-contact-release.md).
-Its actual previous live revision was `c257c1a`; inspect live state again before
+Latest release: [`71010d9`, dependency updates and HTTP compatibility repair](deployment/2026-11-01-dependency-updates.md).
+Its actual previous live revision was `9d4095c`; inspect live state again before
 the next operation rather than treating older handoff entries as current.
 The approved V1 design first launched on October 12, 2026 at revision `e2a88f2`.
 See [production evidence and rollback identity](deployment/2026-10-12-v1-launch.md).
