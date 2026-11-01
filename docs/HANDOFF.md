@@ -1,5 +1,88 @@
 # Project handoff
 
+## November 1 — off-server production builds
+
+PRs #26–#30 are merged. Both public hostnames now run
+`9d4095c0ecfbee76773097600750738e0a238540`, replacing October 28's `c257c1a`.
+The owner authorized off-server builds, integration, deployment, live checks and
+conditional #8 closure. All checks passed and #8 is closed as completed.
+[Release identity, CI, live checks and connection cleanup](deployment/2026-11-01-off-server-contact-release.md).
+Only #5 (improvements based on evidence) and #6 (remaining V2 preparation) stay open.
+
+The new GitHub Actions workflow builds and tests a production image without
+production credentials, including both contact editions and the real startup
+command. `bin/publish-image` verifies and publishes the exact successful source
+revision without a local Docker daemon. Releases require its registry digest,
+verify image identity twice and use `--skip-push`, preventing a fallback to a
+build on the shared VPS. The existing builder cap and `bundle install --jobs 1`
+remain unchanged. See [the release procedure](DEPLOYMENT.md#secrets-and-release).
+The final Actions build peaked at about 623 MiB with no OOM events. Full local CI
+passed 106 Rails tests / 2,263 assertions and 10 adapter tests; exact master CI and
+image checks passed. Live desktop/mobile, keyboard, contact, metadata and event
+dialog checks passed. The deployed image separately passed 12 synthetic V1/V2
+contact cases without network or production credentials. Members and Two Rivers
+were unchanged across the public deployment and stayed healthy. One outer SSH
+connection persisted through final verification, then closed with cleanup checked.
+The sections below preserve earlier observations, including states before merge
+or deployment; they are not pending work.
+
+## November 1 — PR #26 repair and open-issue reconciliation
+
+[PR #26](https://github.com/AndreRobitaille/wipost165/pull/26) now includes
+`09fb1a0`, upgrading Rack 3.2.7 to 3.2.8 alongside its Bootsnap/msgpack update.
+The owner authorized that narrow commit and push. Local CI passed 95 tests /
+2,132 assertions plus 10 adapter tests for the dependency repair; an updated
+advisory database reported no vulnerabilities. The four upstream defect classes
+were reproduced on 3.2.7 and passed on 3.2.8.
+[GitHub CI passed at the pushed revision](https://github.com/AndreRobitaille/wipost165/actions/runs/41319120653).
+The owner subsequently approved integration, and PR #26 merged into `master` as
+`03643746c06a750b644a2cc63bfd2af87d9bc95b`. No deployment was performed.
+
+Issues #3, #7 and #9 are implemented; PR #10 merged October 16. #8's Membership
+guide is implemented with the owner's dues omission, but an email-disabled
+fallback defect was found during review: a configured phone could display an
+empty email section on Membership/Contact. The local repair uses email availability
+for those sections and keeps the Service Officer phone on Veteran help. The
+existing contact matrix plus new postal-fallback checks detected both failures
+before repair. Final local CI passed 96 tests / 2,176 assertions and 10 adapter
+tests. Headless Chromium checks on the execution host (`andreG7linux`) passed
+Membership/Contact in both editions at 320px and 1440px with email disabled and a
+synthetic phone configured: postal fallback, no empty contact section, no phone
+leak, no horizontal overflow, and visible 3px keyboard focus. The owner approved
+the follow-up commit and push on `codex/contact-fallback-and-issue-evidence`.
+[PR #27](https://github.com/AndreRobitaille/wipost165/pull/27) now targets `master`
+after PR #26's merge and retains the October 28 release records carried by PR #25.
+The owner approved PR #27's integration once CI passes against that base.
+Deployment remains a separate action. GitHub records the current PR/CI state.
+
+Issue #4 has a [publisher evidence handback](companion-work-queue.md#november-1-2026--publisher-evidence-handback):
+59 tests / 1,212 assertions passed in an isolated synthetic companion test database
+at `879e2e8`. Reviewed publisher paths match the members revision recorded October
+28, but no new live revision or production editorial behavior was checked. Companion
+source and production data were untouched. #5 remains later without a selected
+visitor need; #6 retains V2 content/consent, fictional-content withdrawal, readback
+and separately authorized release. See [current issue dispositions](ROADMAP.md#november-1-issue-reconciliation).
+
+After reviewing the completed work, the owner authorized closure of issues #3,
+#4, #7 and #9. They are closed as completed. #5, #6 and #8 remain open; #8 tracks
+the contact fallback follow-up in PR #27; its closure remains separate.
+
+Start future sessions with this section and the current roadmap. The older
+September resume checklist and October design/merge requests below preserve
+history; they are not unfinished V1 work.
+
+## October 28 — Service Officer phone label deployed
+
+Andre approved [PR #24](https://github.com/AndreRobitaille/wipost165/pull/24) for
+production. Both public hostnames run
+`c257c1a1d3ba641792c7e0c2234e85a53ef4a998`. The previous live revision was
+`ba801ff6f54512a8546cbf4f5f391f0ab544e4e4`. Veteran help labels
+`tel:9208607478` as "Call our Service Officer" with `(920) 860-7478`.
+[Release evidence](deployment/2026-10-28-service-officer-label.md).
+The merged branch `cursor/veteran-help-service-officer-label-dad0` is deleted.
+Members, Two Rivers, and their proxy targets were unchanged. One outer SSH
+session persisted through verification and was closed.
+
 ## October 17 — sharing release integrated into master
 
 The sharing/icon release and its records are integrated into `master` through
