@@ -33,6 +33,21 @@ async function request(path, fetcher, options = {}) {
   return { response, html: await response.text() };
 }
 
+test('bookmark and sharing assets are exported and served without publisher access', async () => {
+  const worker = createWorker(templates, { fetcher: () => { throw new Error('Unexpected publisher request'); } });
+  const paths = ['/favicon.ico', '/favicon-96x96.png', '/apple-touch-icon.png', '/icon-192.png', '/icon.png', '/site.webmanifest', '/sharing/post-165-v1.jpg'];
+  for (const path of paths) {
+    const bytes = readFileSync(join(root, 'dist/client', path));
+    assert.deepEqual(bytes, readFileSync(new URL(`../public${path}`, import.meta.url)));
+    let assetRequest;
+    const response = await worker.fetch(new Request(`https://preview.example${path}`), {
+      ASSETS: { fetch: request => { assetRequest = request; return new Response(bytes); } }
+    });
+    assert.equal(assetRequest.url, `https://preview.example${path}`);
+    assert.deepEqual(Buffer.from(await response.arrayBuffer()), bytes);
+  }
+});
+
 test('live collection uses the fixed public API and keeps its credential out of HTML', async () => {
   let calls = 0;
   const { response, html } = await request('/events?from=private&origin=https://evil.example', async (url, init) => {

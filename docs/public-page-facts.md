@@ -7,6 +7,23 @@ Writing rules for the pages (agreed 7 Oct 2026):
 - Name roles, not people: "our Commander", "our Adjutant", "our membership chair (1st Vice Commander)", "our Service Officer", "our Chaplain", "our Historian".
 - Use ongoing tense for confirmed recurring work ("the Honor Guard provides funeral honors"). Describe specific past activities as completed examples, without implying a regular program or future commitment. Dated facts below are kept as the source line behind each example.
 
+November 1 maintenance review: #7, #8 and #9 were implemented in merged
+[PR #10](https://github.com/AndreRobitaille/wipost165/pull/10). The official
+[membership FAQ](https://www.legion.org/faq),
+[county office](https://manitowoccountywi.gov/departments/veteran-s-services/),
+[crisis support site](https://www.veteranscrisisline.net/), and
+[memorial-tree history](https://www.manitowoccountyhistory.org/stories/american-legion-memorial-trees)
+were rechecked against the displayed claims. Local practice retains its recorded
+owner confirmation; no private meeting/member records were accessed for this review.
+The charter date and namesake remain unconfirmed and omitted. Dues remain omitted
+from public pages and metadata at the owner's request.
+
+October 28 superseding contact decision: the owner confirmed that the configured
+phone belongs to the Service Officer. [PR #24](https://github.com/AndreRobitaille/wipost165/pull/24)
+labels it "Call our Service Officer" on Veteran help. Membership and Contact
+offer email and keep this phone off those pages. The older October 7 contact
+wording below records the evidence available then, not the current labeling rule.
+
 Source shorthand:
 - OG26 = The American Legion, 2026 Officer's Guide and Manual of Ceremonies, 63rd ed., rev. Feb 2026. https://www.legion.org/getmedia/9886852f-7570-4d04-85e8-2832116fdb63/27ia0226-post-officers-guide.pdf (page numbers are the printed page numbers).
 - FAQ = https://www.legion.org/faq
@@ -68,7 +85,7 @@ Wording rule for this page: name the role ("our Service Officer"), never the per
 - Background, what a Post Service Officer does per the Legion (consistent with the above, do not expand the page beyond it): helps veterans and their dependents learn what rights and benefits they have, knows how to reach expert help through the Legion and through state, federal and local agencies, and gets information to full-time professionals in good time so veterans are properly represented. CONFIRMED: OG26 pp. 27–28.
 - What not to promise: do not say the Post files claims, represents veterans before the VA, gives money directly, or keeps office hours. See the boundary note below.
 - Suggested page copy: "Not sure where to start with the VA or veterans benefits, or stuck partway through? Our Service Officer can be your first call. We'll help you sort out the next step, and when a claim, appeal or benefits application is involved we'll connect you with the Manitowoc County Veterans Service Office, which handles those. Any veteran is welcome to ask, not only Post members." Built from the Commander's answers and the boundary note.
-- How to reach our Service Officer: the page gives the Post's phone (920) 860-7478 and email wipost165@gmail.com and says to ask for the Service Officer. Do not say the phone reaches the Service Officer directly; that was not confirmed. CONFIRMED: Commander, Oct 7 2026.
+- How to reach our Service Officer: the configured phone is labeled "Call our Service Officer"; the general Post email remains available. CONFIRMED: Commander, Oct 28 2026, PR #24. This supersedes the Oct 7 instruction to avoid a direct Service Officer phone label.
 - Manitowoc County Veterans Service Office: helps veterans, military retirees, active-duty members on terminal leave, Guard/Reserve members and families understand, apply for, and resolve problems with state and federal benefits. 920-683-4055, Michigan Avenue Campus, 1701 Michigan Ave, Manitowoc, WI 54220. Mon 8:30–5:00, Tue–Fri 8:30–4:30 (checked 7 Oct 2026; link to the page for current hours). CONFIRMED: https://manitowoccountywi.gov/departments/veteran-s-services/ . The county page says nothing about working with post service officers.
 - Veterans Crisis Line: dial 988 then press 1, text 838255, or chat at https://www.veteranscrisisline.net/get-help-now/chat/ ; free, confidential, 24/7, no VA enrollment needed. CONFIRMED: https://www.veteranscrisisline.net/ (checked 7 Oct 2026).
 - The Post's email and phone are not emergency lines. This is the issue's requirement; put the crisis line above the Post contact.
