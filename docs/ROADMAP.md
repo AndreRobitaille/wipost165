@@ -5,12 +5,11 @@ It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
 
-November 1 release work: PRs #26, #27 and #28 are merged through `15f1a0b`.
-Off-server production-image builds and digest-verified pull-only deployment are
-prepared; the owner authorized their integration and deployment, live checks,
-and #8 closure if those pass. Follow [the current handoff](HANDOFF.md) and
-[release procedure](DEPLOYMENT.md#secrets-and-release). The runtime observations
-below predate that pending release; do not treat a source merge as deployment.
+November 1 release complete: PRs #26–#30 are merged, and both public hostnames run
+`9d4095c0ecfbee76773097600750738e0a238540`. Off-server image builds and
+digest-verified pull-only deployment passed exact-revision CI and live checks.
+#8 is closed as completed. Follow [the release evidence](deployment/2026-11-01-off-server-contact-release.md),
+[current handoff](HANDOFF.md) and [release procedure](DEPLOYMENT.md#secrets-and-release).
 
 October 17: [sharing metadata and icon package](design/2026-10-sharing/README.md)
 prepared locally: Open Graph/X image cards, square Google/browser favicon, Apple
@@ -25,9 +24,9 @@ External platform cache/preview refresh and Google's icon selection remain unver
 ## Current priority — V1 live; prepare V2 when ready
 
 V1 is live at https://wipost165.org and https://www.wipost165.org, revision
-`c257c1a1d3ba641792c7e0c2234e85a53ef4a998` after the owner's October 28 approval
-of the Service Officer phone label.
-[Release evidence](deployment/2026-10-28-service-officer-label.md).
+`9d4095c0ecfbee76773097600750738e0a238540` after the owner's November 1 approval
+of off-server builds and deployment, including the contact fallback and Rack repair.
+[Release evidence](deployment/2026-11-01-off-server-contact-release.md).
 The October 17 sharing/icon release remains `76f4f5c`. The
 [production release record](deployment/2026-10-12-v1-launch.md) covers CI, remote
 container checks, six live events, browser/metadata/TLS checks, protected services,
@@ -105,7 +104,8 @@ dues amount. The revision retains a substantive About page and leads Membership
 with visiting and participation.
 The approved V1 is already deployed. November 1 review confirmed the content
 implementation and found an email-disabled empty state in Membership and Contact;
-the repair and regression coverage merged in PR #27 and await deployment.
+the repair and regression coverage merged in PR #27 and were deployed and verified
+November 1. #8 is closed as completed.
 The Commander confirmed the first Tuesday of every month at 6:30 p.m. at the
 Manitowoc Rifle & Pistol Club. Membership now matches Home and First visit;
 the skipped-summer follow-up is superseded. Calendar integration is outside this PR.
@@ -138,13 +138,13 @@ These are recorded results, not a new production inspection.
 
 | Area | Evidence and state |
 | --- | --- |
-| Hosting | Last recorded V1 revision is `c257c1a` on apex/www with HTTPS and indexing; [October 28 release evidence](deployment/2026-10-28-service-officer-label.md). No new production inspection on November 1. |
+| Hosting | V1 revision `9d4095c` on apex/www with HTTPS and indexing; [November 1 release evidence](deployment/2026-11-01-off-server-contact-release.md). Production builds now run on GitHub Actions; the VPS pulls a verified digest. |
 | Public experience | Owner-approved V1 with the harbor and invitation imagery, current information pages, event dialog, and separated official marks. V2 remains available separately. |
-| Public consumer | Database-free authenticated consumer. November 1 local Rack/contact changes passed CI: 96 tests / 2,176 assertions plus 10 adapter tests. V1 requests events only and blocks people/portrait routes. |
+| Public consumer | Database-free authenticated consumer. November 1 full local CI passed 106 tests / 2,263 assertions plus 10 adapter tests. Exact master CI/image checks and deployed-image synthetic contact checks passed. V1 requests events only and blocks people/portrait routes. |
 | Publisher | Post-owned read-only website token retained. November 1 synthetic publisher checks passed 59 tests / 1,212 assertions; [revision, commands and deployment applicability](companion-work-queue.md#november-1-2026--publisher-evidence-handback). Production editorial writes and permissions were not exercised. |
-| Integration | Six real upcoming events and all six details passed live readback. V1 event dialogs, unavailable/404 behavior, and assets passed container and browser checks. |
+| Integration | November 1 authenticated preflight verified four real upcoming events and their details. Live V1 event dialogs, contact/visit actions, page metadata and people-route guards passed. Synthetic failure/empty states remain separately covered in CI. |
 | Content | Approved local facts, public channels, arrival guidance and joining/help content are live. Consented real people/photos remain V2 work. |
-| Source continuity | PR #10 is merged and `master` contains the launched V1. PR #25 records the October 28 release. PR #26's Rack/Bootsnap update merged as `0364374` after green CI. PR #27 carries the contact/doc follow-up on `codex/contact-fallback-and-issue-evidence`, now targeting `master` with integration approved after CI. Consult GitHub for its current merge/CI state and inspect Git before subsequent work. |
+| Source continuity | PR #10 and #26–#30 are merged. `9d4095c` is the verified runtime source; later documentation commits do not imply deployment. Inspect Git and the latest release record before subsequent work. |
 
 ## Work order
 
@@ -161,8 +161,8 @@ IDs remain stable for historical links; the scopes below supersede earlier entri
 | SITE-05 | Technical launch preparation, final real content, then release | V1 done — [production and container evidence](deployment/2026-10-12-v1-launch.md); V2 later | Consented real people/content and separate V2 authorization |
 | SITE-06 | Improvements based on use | later | Evidence of an actual visitor or editor need |
 
-**Next work:** review #8's disposition after the contact fallback integration,
-respond to V1 feedback, and prepare consented V2 content when the owner is ready.
+**Next work:** respond to V1 feedback and prepare consented V2 content when the
+owner is ready. #8 is deployed, verified and closed.
 The reviewed publisher lifecycle cases now have local evidence. Real publishing
 grants, consented content, current deployment inspection and V2 release remain
 separate private/operational actions.
@@ -176,7 +176,7 @@ separate private/operational actions.
 | [#5 Improvements based on use](https://github.com/AndreRobitaille/wipost165/issues/5) | Later. No visitor/editor need has been selected; candidate features are not promised scope. |
 | [#6 Launch](https://github.com/AndreRobitaille/wipost165/issues/6) | V1 complete; retain only consented V2 content, fictional-content withdrawal, final readback and separately authorized release. |
 | [#7 About](https://github.com/AndreRobitaille/wipost165/issues/7) | Closed as completed after owner approval; delivered in PR #10, with supported history and unknown charter/namesake omitted. |
-| [#8 Membership](https://github.com/AndreRobitaille/wipost165/issues/8) | Guide delivered in PR #10; dues intentionally omitted. Email-disabled fallback repair merged in PR #27; closure is authorized after deployment and successful live verification. |
+| [#8 Membership](https://github.com/AndreRobitaille/wipost165/issues/8) | Closed as completed after the authorized November 1 deployment and live verification. Guide and contact fallback are live; dues remain intentionally omitted. |
 | [#9 Veteran help](https://github.com/AndreRobitaille/wipost165/issues/9) | Closed as completed after owner approval; PR #10 content and PR #24 Service Officer label. Official resource details rechecked November 1. |
 
 ### SITE-01 — Establish the next development baseline
