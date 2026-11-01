@@ -1,5 +1,9 @@
 # Public Post 165 deployment
 
+Follow the [shared Hetzner deployment agreement](SHARED_HOST_DEPLOYMENT.md) for
+the common operator sequence, authorization, serialization and failure rules.
+This guide owns the public site's identities, credentials and verification.
+
 This application owns `legion_post_165_wi_public` on `178.156.250.235`, using
 `ghcr.io/andrerobitaille/legion-post-165-wi-public`. It serves `wipost165.org` and
 `www.wipost165.org`. It has no database, uploads, or worker. Never deploy it under
@@ -40,7 +44,8 @@ Rollback to holding mode uses coming-soon `1` / launch-ready `0`; noindex alone
 does not hide content. No DNS or global proxy change is needed for this launch.
 
 The [earlier release preparation](verification/2026-09-27-release-preparation.md)
-records the local Docker permission limit and rollback commands. A candidate
+records historical local Docker limitations; its rollback recipe is superseded
+by this guide. The normal build/publication path needs no local Docker daemon. A candidate
 container can be checked through the same release tunnel before app replacement;
 never open another outer connection for that check. Use only a task-owned smoke
 container with no network and dummy credentials; preserve shared services.
@@ -63,6 +68,8 @@ Production images are built and smoke-tested on isolated GitHub Actions runners.
 This VPS only pulls a verified image and replaces the public container.
 `release_setup` and `release_deploy` require `RELEASE_IMAGE_DIGEST` and always use
 Kamal's `--skip-push`; a missing digest cannot fall back to an on-server build.
+The active pre-build hook refuses Kamal builds, and the deployment configuration
+does not select a production remote builder.
 The shared builder's normal 1,536 MiB limit is unchanged and unused by this path.
 
 **One operation uses one outer connection from first inspection to final
@@ -70,7 +77,16 @@ verification.** Finish local checks and push first. Run `bin/release session`
 once. It opens and verifies the persistent tunnel and leaves an interactive
 `post165-release>` shell. Run `release_setup` for first provisioning or
 `release_deploy` for later releases. Run `release_verify` and `release_ssh` for
-follow-up checks in that same shell. Exit once, only after the operation is done.
+follow-up checks in that same shell. Use `release_kamal app details` or another
+authorized Kamal inspection there; the helper checks the existing tunnel, unsets
+`SSH_AUTH_SOCK` for that call, runs from `APP_ROOT` even after an operator changes
+directory, and selects the generated session configuration.
+Do not pass `-c`/`--config-file` or run bare `bin/kamal` against production.
+`release_kamal` does not grant authority to mutate production; normal deployment
+remains `release_deploy`. Exit once, only after the operation is done.
+The release shell clears inherited exit/prompt settings and writes its command
+history to `/dev/null` so failed commands retain the session and typed secrets
+are not saved to the operator's history file.
 
 `bin/release check` now performs local validation only. Standalone setup/deploy
 commands are disabled to prevent preflight/disconnect/reconnect sequences.
@@ -136,13 +152,11 @@ initial pull and again by the pre-deploy hook after Kamal's final pull, before
 container replacement. A wrong digest, revision, service or architecture stops
 deployment. There is no on-server-build fallback.
 
-When this release-wrapper update is installed while a release shell is already
-open, run `source "$APP_ROOT/lib/release_image.sh"` in that shell to load its
-tested image functions. Keep the original tunnel; do not start a new session.
-Before replacement, record a fresh protected-service baseline if another
-authorized deployment changed an adjacent service while CI was building, retaining
-both observations in the release evidence. Image extraction and the brief overlap
-of old/new public containers still need application headroom.
+Finish wrapper changes, checks and publication before opening the production
+session. Coordinate one app deployment at a time across the shared host. If an
+adjacent service changes during this operation, stop and establish the cause
+before updating a baseline; retain both observations. Image extraction and the
+brief overlap of old/new public containers still need application headroom.
 
 Generate a unique `POST165_PUBLIC_SECRET_KEY_BASE` once. Store it outside Git in
 a mode-0600 operator file, such as `.env.production.local` in the development
@@ -195,11 +209,31 @@ public DNS results. Recheck members `/up` and `/session/new`, and the Two Rivers
 homepage. Record that protected container IDs/revisions remain unchanged.
 
 Keep DNS success, HTTPS success, application health, and full-site readiness
-separate. The coming-soon release does not finish the publishing integration.
-Keep NixiHost hosting available until the migration is accepted. Roll back only
-the public service to its recorded previous image using the same guarded release
-workflow. Earlier images may predate the required revision metadata; do not assume
-they satisfy the new image guard. Prepare reviewed rollback source through the
-current build/check/publish procedure when necessary. Restoring an old apex is a
-separate explicitly authorized DNS action with cache delay. Never remove the shared
-proxy as a rollback.
+separate. `/up` does not prove publisher availability. The wrapper automatically
+compares protected container IDs/names and checks HTTP responses; proxy identity,
+routes, running-image identity, content, DNS and certificate expiry still need
+operator verification. Capacity, cross-app serialization and exact-head normal CI
+are operator gates, not automatic release guards.
+
+For an authorized rollback, select a clean reviewed checkout of the intended
+known-good source on a named branch that matches origin. Preserve the current
+operation's tunnel throughout diagnosis and recovery. Use that checkout's tested
+release tooling in the existing session, retaining its generated transport
+configuration and owned master; do not open another session to change revisions.
+Prepare any required tooling compatibility before the production operation.
+Verify successful normal CI and image checks for the rollback HEAD, publish its
+artifact when authorized, and set its matching `RELEASE_IMAGE_DIGEST`. Then use
+the same `release_deploy`/`release_verify` path for that reviewed HEAD. If suitable
+source, tooling or image evidence is unavailable, stop rather than bypass a guard.
+Earlier images may lack required metadata and need a compatible reviewed rollback
+through the current build/check/publication procedure.
+
+Do not run `release_kamal rollback OLD_VERSION` or bare `bin/kamal rollback` as a
+shortcut. The pre-deploy image guard rejects `KAMAL_VERSION` when it differs from
+reviewed HEAD; this prevents checking the candidate image while booting another
+revision. Holding-mode recovery requires reviewed coming-soon `1` / launch-ready
+`0` configuration through the same guarded path. There is no database or durable
+content store here to migrate or restore; preserve this app's credentials and
+release identities. Publisher data and backups remain LegionPostTools' concern.
+Restoring an old apex is a separate explicitly authorized DNS action with cache
+delay. Never remove the shared proxy as a rollback.
