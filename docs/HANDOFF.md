@@ -9,7 +9,8 @@ The owner authorized that narrow commit and push. Local CI passed 95 tests /
 advisory database reported no vulnerabilities. The four upstream defect classes
 were reproduced on 3.2.7 and passed on 3.2.8.
 [GitHub CI passed at the pushed revision](https://github.com/AndreRobitaille/wipost165/actions/runs/41319120653).
-No merge or deployment was performed.
+The owner subsequently approved integration, and PR #26 merged into `master` as
+`03643746c06a750b644a2cc63bfd2af87d9bc95b`. No deployment was performed.
 
 Issues #3, #7 and #9 are implemented; PR #10 merged October 16. #8's Membership
 guide is implemented with the owner's dues omission, but an email-disabled
@@ -23,9 +24,10 @@ Membership/Contact in both editions at 320px and 1440px with email disabled and 
 synthetic phone configured: postal fallback, no empty contact section, no phone
 leak, no horizontal overflow, and visible 3px keyboard focus. The owner approved
 the follow-up commit and push on `codex/contact-fallback-and-issue-evidence`.
-It targets PR #26's branch until that dependency is merged; retain the October 28
-release records carried by PR #25. The follow-up still requires review and does
-not authorize a merge or deployment.
+[PR #27](https://github.com/AndreRobitaille/wipost165/pull/27) now targets `master`
+after PR #26's merge and retains the October 28 release records carried by PR #25.
+The owner approved PR #27's integration once CI passes against that base.
+Deployment remains a separate action. GitHub records the current PR/CI state.
 
 Issue #4 has a [publisher evidence handback](companion-work-queue.md#november-1-2026--publisher-evidence-handback):
 59 tests / 1,212 assertions passed in an isolated synthetic companion test database
@@ -37,7 +39,7 @@ and separately authorized release. See [current issue dispositions](ROADMAP.md#n
 
 After reviewing the completed work, the owner authorized closure of issues #3,
 #4, #7 and #9. They are closed as completed. #5, #6 and #8 remain open; #8 tracks
-review of the contact fallback follow-up.
+the contact fallback follow-up in PR #27; its closure remains separate.
 
 Start future sessions with this section and the current roadmap. The older
 September resume checklist and October design/merge requests below preserve

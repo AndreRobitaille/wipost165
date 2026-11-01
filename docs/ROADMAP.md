@@ -137,7 +137,7 @@ These are recorded results, not a new production inspection.
 | Publisher | Post-owned read-only website token retained. November 1 synthetic publisher checks passed 59 tests / 1,212 assertions; [revision, commands and deployment applicability](companion-work-queue.md#november-1-2026--publisher-evidence-handback). Production editorial writes and permissions were not exercised. |
 | Integration | Six real upcoming events and all six details passed live readback. V1 event dialogs, unavailable/404 behavior, and assets passed container and browser checks. |
 | Content | Approved local facts, public channels, arrival guidance and joining/help content are live. Consented real people/photos remain V2 work. |
-| Source continuity | PR #10 is merged and `master` contains the launched V1. PR #25 records the October 28 release. PR #26 has the pushed Rack security fix at `09fb1a0` with green GitHub CI. The authorized contact/doc follow-up is on `codex/contact-fallback-and-issue-evidence`, targeting PR #26's branch until that dependency is merged. Inspect Git before subsequent work. |
+| Source continuity | PR #10 is merged and `master` contains the launched V1. PR #25 records the October 28 release. PR #26's Rack/Bootsnap update merged as `0364374` after green CI. PR #27 carries the contact/doc follow-up on `codex/contact-fallback-and-issue-evidence`, now targeting `master` with integration approved after CI. Consult GitHub for its current merge/CI state and inspect Git before subsequent work. |
 
 ## Work order
 
@@ -154,7 +154,7 @@ IDs remain stable for historical links; the scopes below supersede earlier entri
 | SITE-05 | Technical launch preparation, final real content, then release | V1 done — [production and container evidence](deployment/2026-10-12-v1-launch.md); V2 later | Consented real people/content and separate V2 authorization |
 | SITE-06 | Improvements based on use | later | Evidence of an actual visitor or editor need |
 
-**Next work:** review the contact fallback follow-up after PR #26,
+**Next work:** review #8's disposition after the contact fallback integration,
 respond to V1 feedback, and prepare consented V2 content when the owner is ready.
 The reviewed publisher lifecycle cases now have local evidence. Real publishing
 grants, consented content, current deployment inspection and V2 release remain
