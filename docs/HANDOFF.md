@@ -1,5 +1,24 @@
 # Project handoff
 
+## November 1 — off-server production builds
+
+PRs #26, #27 and #28 are merged into `master` through `15f1a0b`. The owner
+authorized off-server builds followed by commit, push, merge, deployment, live
+verification and closure of #8 if successful. Production remains at the October
+28 revision until that release is verified; the sections below retain earlier
+observations.
+
+The new GitHub Actions workflow builds and tests a production image without
+production credentials, including both contact editions and the real startup
+command. `bin/publish-image` verifies and publishes the exact successful source
+revision without a local Docker daemon. Releases require its registry digest,
+verify image identity twice and use `--skip-push`, preventing a fallback to a
+build on the shared VPS. The existing builder cap and `bundle install --jobs 1`
+remain unchanged. See [the release procedure](DEPLOYMENT.md#secrets-and-release).
+One release shell remains open through this operation; no replacement tunnel is
+needed to load the new image functions. GitHub and the eventual release record
+provide final CI, integration and production evidence.
+
 ## November 1 — PR #26 repair and open-issue reconciliation
 
 [PR #26](https://github.com/AndreRobitaille/wipost165/pull/26) now includes
