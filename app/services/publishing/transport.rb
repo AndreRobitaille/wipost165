@@ -23,7 +23,7 @@ module Publishing
           end
         end
       end
-    rescue IOError, SystemCallError, Timeout::Error, OpenSSL::SSL::SSLError, Net::HTTPBadResponse => error
+    rescue IOError, SystemCallError, Timeout::Error, OpenSSL::SSL::SSLError, Net::HTTPBadResponse, Net::HTTPHeaderSyntaxError => error
       raise Unavailable, error.class.name
     end
   end
