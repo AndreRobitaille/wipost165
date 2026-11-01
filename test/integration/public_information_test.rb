@@ -23,11 +23,32 @@ class PublicInformationTest < ActionDispatch::IntegrationTest
                   assert_select ".post-contact-unavailable", count: email.blank? && phone.blank? ? 1 : 0
                 else
                   assert_select "a[href^='tel:']", count: 0
+                  assert_select ".post-join-contact", count: email.present? ? 1 : 0
                   assert_select ".post-join a[href='/visit']", count: 1
                   assert_select "details, summary", count: 0
                   assert_not_includes response.body, "dues and public contact details are being confirmed"
                 end
               end
+            end
+          end
+        end
+      end
+    end
+  end
+
+  test "contact with email disabled offers postal mail without an empty contact section" do
+    %w[v1 v2].each do |edition|
+      with_information_settings(edition) do
+        [ "", "+1 (920) 555-0123" ].each do |phone|
+          Rails.configuration.x.stub(:public_contact_email, "") do
+            Rails.configuration.x.stub(:public_contact_phone, phone) do
+              get contact_path
+              assert_response :success
+              assert_select "a[href^='mailto:'], a[href^='tel:'], .launch-contact-methods", count: 0
+              assert_select ".launch-contact-pending, .contact-pending", text: /You can write to the Post at the mailing address below/, count: 1
+              assert_not_includes response.body, "Please allow time for a reply."
+              assert_includes response.body, "PO Box 11"
+              assert_select "a[href='/visit']", minimum: 1
             end
           end
         end

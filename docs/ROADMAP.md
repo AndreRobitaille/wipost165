@@ -1,6 +1,6 @@
 # Public website development roadmap
 
-Updated October 17, 2026. This is the working backlog for future sessions.
+Updated November 1, 2026. This is the working backlog for future sessions.
 It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
@@ -18,12 +18,16 @@ External platform cache/preview refresh and Google's icon selection remain unver
 ## Current priority — V1 live; prepare V2 when ready
 
 V1 is live at https://wipost165.org and https://www.wipost165.org, revision
-`76f4f5c` after the owner's October 17 sharing/icon deployment authorization. The
+`c257c1a1d3ba641792c7e0c2234e85a53ef4a998` after the owner's October 28 approval
+of the Service Officer phone label.
+[Release evidence](deployment/2026-10-28-service-officer-label.md).
+The October 17 sharing/icon release remains `76f4f5c`. The
 [production release record](deployment/2026-10-12-v1-launch.md) covers CI, remote
 container checks, six live events, browser/metadata/TLS checks, protected services,
 and the single persistent tunnel retained through verification and then closed.
 PR #11 is merged; its analytics and search changes are [deployed and verified](deployment/2026-10-12-pr11-analytics.md).
-PR #10 remains open for owner merge. The
+[PR #10](https://github.com/AndreRobitaille/wipost165/pull/10) merged October 16;
+its content is integrated into `master`. The
 [V1 Sites preview](https://post165-v1-launch-preview.andretr.chatgpt.site) and
 people-based V2 concept remain available and were not changed by this deployment.
 [Preview refresh instructions](design/2026-10-harbor-study/sites-preview/README.md).
@@ -56,7 +60,8 @@ across the live public pages. The owner subsequently requested
 [national imagery research](design/2026-10-harbor-study/national-references/README.md)
 to strengthen the veteran-service subject. The people-free harbor remains in use
 while the distinction between anonymous illustrated people and V2 member profiles
-is under discussion. Next: settle that image treatment and remaining V1 gates.
+was part of the earlier design review. V1 subsequently launched; current work is
+issue reconciliation, the contact fallback repair, and separately prepared V2.
 
 ## Start here each session
 
@@ -86,13 +91,14 @@ Current content follow-up: the owner supplied local facts for
 [About #7](https://github.com/AndreRobitaille/wipost165/issues/7),
 [Membership #8](https://github.com/AndreRobitaille/wipost165/issues/8), and
 [Veteran help #9](https://github.com/AndreRobitaille/wipost165/issues/9).
-The shared pages are rewritten on `codex/public-page-content`, with the
+The shared pages were delivered through merged PR #10, with the
 [source record](public-page-facts.md) and [current layout verification](design/2026-10-footer-content/design-revision/README.md).
 The owner requested that these pages match the current V1 design and omit the
 dues amount. The revision retains a substantive About page and leads Membership
 with visiting and participation.
-Next: owner merges PR #10 into `main` when ready. The approved V1 is already
-deployed; that merge alone does not run Kamal.
+The approved V1 is already deployed. November 1 review confirmed the content
+implementation and found an email-disabled empty state in Membership and Contact;
+the local repair and regression coverage await their own commit/review.
 The Commander confirmed the first Tuesday of every month at 6:30 p.m. at the
 Manitowoc Rifle & Pistol Club. Membership now matches Home and First visit;
 the skipped-summer follow-up is superseded. Calendar integration is outside this PR.
@@ -125,13 +131,13 @@ These are recorded results, not a new production inspection.
 
 | Area | Evidence and state |
 | --- | --- |
-| Hosting | V1 revision `77f5102` is live on apex/www with HTTPS and indexing; [release evidence](deployment/2026-10-12-v1-launch.md). |
+| Hosting | Last recorded V1 revision is `c257c1a` on apex/www with HTTPS and indexing; [October 28 release evidence](deployment/2026-10-28-service-officer-label.md). No new production inspection on November 1. |
 | Public experience | Owner-approved V1 with the harbor and invitation imagery, current information pages, event dialog, and separated official marks. V2 remains available separately. |
-| Public consumer | Database-free authenticated consumer; CI passed 91 tests / 1,443 assertions plus nine adapter tests. V1 requests events only and blocks people/portrait routes. |
-| Publisher | Post-owned read-only website token retained. Companion editorial writes and permissions were not exercised in this release. |
+| Public consumer | Database-free authenticated consumer. November 1 local Rack/contact changes passed CI: 96 tests / 2,176 assertions plus 10 adapter tests. V1 requests events only and blocks people/portrait routes. |
+| Publisher | Post-owned read-only website token retained. November 1 synthetic publisher checks passed 59 tests / 1,212 assertions; [revision, commands and deployment applicability](companion-work-queue.md#november-1-2026--publisher-evidence-handback). Production editorial writes and permissions were not exercised. |
 | Integration | Six real upcoming events and all six details passed live readback. V1 event dialogs, unavailable/404 behavior, and assets passed container and browser checks. |
 | Content | Approved local facts, public channels, arrival guidance and joining/help content are live. Consented real people/photos remain V2 work. |
-| Source continuity | Release is on `codex/public-page-content` / PR #10. PR remains open for owner merge; inspect Git before subsequent work. |
+| Source continuity | PR #10 is merged and `master` contains the launched V1. PR #25 records the October 28 release. PR #26 has the pushed Rack security fix at `09fb1a0` with green GitHub CI. The authorized contact/doc follow-up is on `codex/contact-fallback-and-issue-evidence`, targeting PR #26's branch until that dependency is merged. Inspect Git before subsequent work. |
 
 ## Work order
 
@@ -144,13 +150,27 @@ IDs remain stable for historical links; the scopes below supersede earlier entri
 | SITE-01 | One understood development/release baseline | done — consolidated on `main`; see handoff | Local source inspection |
 | SITE-02 | Distinctive, intuitive public experience refined | done for V1 — owner approved and launched; V2 retained separately | Respond to actual visitor feedback |
 | SITE-03 | Verified static facts and content ownership | done — [contact/visit facts, links, and ownership recorded](launch-content-readiness.md) | Unknown optional facts remain omitted; real people/photos moved to SITE-05 |
-| SITE-04 | Consumer verified within available access; publisher evidence accounted for | active — [consumer review/fix complete](verification/2026-09-27-consumer-coverage.md); companion evidence pending | Editorial cases require evidence from an authorized companion session, not a personal token in this app |
+| SITE-04 | Consumer verified within available access; publisher evidence accounted for | done for reviewed paths — [consumer evidence](verification/2026-09-27-consumer-coverage.md) and [November 1 publisher handback](companion-work-queue.md#november-1-2026--publisher-evidence-handback) | Current local/test evidence; no claim of a new production editorial exercise |
 | SITE-05 | Technical launch preparation, final real content, then release | V1 done — [production and container evidence](deployment/2026-10-12-v1-launch.md); V2 later | Consented real people/content and separate V2 authorization |
 | SITE-06 | Improvements based on use | later | Evidence of an actual visitor or editor need |
 
-**Next work:** respond to V1 feedback and prepare consented V2 content when the
-owner is ready. Retain SITE-04's unverified companion editorial-lifecycle cases;
-this release verified public reads, not private publishing permissions.
+**Next work:** review the contact fallback follow-up after PR #26,
+respond to V1 feedback, and prepare consented V2 content when the owner is ready.
+The reviewed publisher lifecycle cases now have local evidence. Real publishing
+grants, consented content, current deployment inspection and V2 release remain
+separate private/operational actions.
+
+### November 1 issue reconciliation
+
+| Issue | Disposition and remaining work |
+| --- | --- |
+| [#3 Static facts](https://github.com/AndreRobitaille/wipost165/issues/3) | Closed as completed after owner approval; sources, owner and recheck triggers are recorded. |
+| [#4 Publisher evidence](https://github.com/AndreRobitaille/wipost165/issues/4) | Closed as completed after owner approval; local handback at companion `879e2e8`, 59 tests / 1,212 assertions, within the documented limits. |
+| [#5 Improvements based on use](https://github.com/AndreRobitaille/wipost165/issues/5) | Later. No visitor/editor need has been selected; candidate features are not promised scope. |
+| [#6 Launch](https://github.com/AndreRobitaille/wipost165/issues/6) | V1 complete; retain only consented V2 content, fictional-content withdrawal, final readback and separately authorized release. |
+| [#7 About](https://github.com/AndreRobitaille/wipost165/issues/7) | Closed as completed after owner approval; delivered in PR #10, with supported history and unknown charter/namesake omitted. |
+| [#8 Membership](https://github.com/AndreRobitaille/wipost165/issues/8) | Guide delivered in PR #10; dues intentionally omitted. Verified email-disabled fallback repair is on the authorized follow-up branch; keep open until review. |
+| [#9 Veteran help](https://github.com/AndreRobitaille/wipost165/issues/9) | Closed as completed after owner approval; PR #10 content and PR #24 Service Officer label. Official resource details rechecked November 1. |
 
 ### SITE-01 — Establish the next development baseline
 
@@ -197,6 +217,10 @@ SITE-05's final content step; they do not block technical development.
 
 ### SITE-04 — Verify within the actual access boundary
 
+November 1: the [publisher handback](companion-work-queue.md#november-1-2026--publisher-evidence-handback)
+supplies the local evidence requested below. Preserve the distinction between
+tested source, recorded deployment applicability, and current production behavior.
+
 Follow [contract revision 3 with the authenticated-access amendment](public-publishing-api-v1.md)
 and the [companion queue](companion-work-queue.md). The website token reads only;
 it cannot edit, publish, withdraw, replace portraits, change consent, or manage
@@ -226,6 +250,10 @@ mutation to prove it. Local/test publisher evidence is acceptable when its scope
 and deployment applicability are recorded. Real people/photos are not required.
 
 ### SITE-05 — Prepare technically, add real content last, then release
+
+V1 is complete; [issue #6](https://github.com/AndreRobitaille/wipost165/issues/6)
+now retains V2 only. The historical preparation order below applies to enabling
+the people experience, not to relaunching the already live V1 site.
 
 Complete in this order:
 
@@ -271,6 +299,8 @@ API request only when the data actually belongs in the companion; establish fiel
 ownership, publication consent, withdrawal, and maintenance before implementation.
 
 ## Session record
+
+- **2026-11-01 — Issues #3–#9 and PR #26:** patched Rack 3.2.8 in PR #26 after reproducing the four upstream defect classes; no audit exceptions. Reconciled merged PR #10 and completed V1 milestones. Executed synthetic companion evidence at `879e2e8` (59 tests / 1,212 assertions) without changing companion source or live data. Fixed email-disabled Membership/Contact empty states locally; regression checks fail before and pass after the repair. Final local CI passed 96 tests / 2,176 assertions plus 10 adapter tests after removing generated V1 assets that masked V2 preview assets on a repeat run. V2 content and publication remain separate.
 
 - **2026-10-12 — V1 launched:** owner-authorized Kamal release `e2a88f2` now
   serves the approved site on both public domains. CI, isolated remote container,

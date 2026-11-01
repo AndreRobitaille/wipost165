@@ -43,7 +43,59 @@ credentials in this application. An authorized companion session owns any editor
 exercise. Production mutations are not required when scoped local/test publisher
 evidence can establish the behavior. See the [roadmap verification matrix](ROADMAP.md#site-04--verify-within-the-actual-access-boundary).
 
-## Remaining evidence handback
+## November 1, 2026 — publisher evidence handback
+
+SITE-04 / [public-site issue #4](https://github.com/AndreRobitaille/wipost165/issues/4)
+now has independently executed synthetic publisher evidence. The owner of the
+publisher behavior remains LegionPostTools; this session changed no companion
+source, permissions, tokens, or live records.
+
+Tested companion revision:
+[`879e2e8b11b0c7c8e227ca8402a4a511743f7883`](https://github.com/AndreRobitaille/LegionPostTools/commit/879e2e8b11b0c7c8e227ca8402a4a511743f7883).
+An isolated copy used Ruby 4.0.7, PostgreSQL, `RAILS_ENV=test`, and a new database
+named `legion_post_tools_publisher_audit_20261101_test`, loaded from the checked-in
+schema and synthetic fixtures. Development/production data and credentials were
+not read or copied. Commands ran serially with `PARALLEL_WORKERS=1`.
+
+| Requirement / companion owner | Evidence at the tested revision | Result and limits |
+| --- | --- | --- |
+| CP-01 / [LegionPostTools #60](https://github.com/AndreRobitaille/LegionPostTools/issues/60): eligibility, role enforcement, private fields, atomic restrictions | `website_publication_test.rb`, `website_publication_concurrency_test.rb`, `website_access_authentication_test.rb`, `website_publishing_admin_test.rb`, `api/website_publications_api_test.rb` | Passed model, HTML and bearer API authority/eligibility checks; private/internal restrictions, tenant isolation, revoked authority, and both real transaction orders. Website read credentials cannot obtain editorial/private authority. |
+| CP-02 / [LegionPostTools #61](https://github.com/AndreRobitaille/LegionPostTools/issues/61): story lifecycle, consent, portraits | `public_publishing_test.rb`, `website_publication_test.rb`, `website_publication_concurrency_test.rb`, `api/website_publications_api_test.rb` | Passed later-request readback after draft changes, publication, selection rotation, portrait replacement, withdrawal and consent revocation, including old conditional validators and concurrent publication. Uses generated color-field portraits and fictional introductions. |
+| CP-03 / [LegionPostTools #62](https://github.com/AndreRobitaille/LegionPostTools/issues/62): event lifecycle and intervals | `public_publishing_test.rb`, model/controller `website_calendar_test.rb`, `website_publication_concurrency_test.rb` | Passed complete 93-day intervals, inclusive/exclusive boundaries, all-day and point events, spring/fall DST, moves, cancellation, restrictions, deletion, automatic calendar activation, and private-parent exclusion. |
+| CP-04 / public site: provenance and applicability | Commands/results below; the reviewed publisher paths and eight test files have no changes between this revision and `524ec571739a61c1cb78e17ee620e554f2f186b2`, the members revision in the [October 28 release record](deployment/2026-10-28-service-officer-label.md) | Satisfies the local/test evidence handback. The recorded deployment makes the tested paths applicable to that release; it does not establish the current live revision or exercise production permissions. |
+
+Commands in the isolated companion copy (the test database URL was explicitly set
+for schema loading and every test command):
+
+```sh
+RAILS_ENV=test DATABASE_URL=postgresql:///legion_post_tools_publisher_audit_20261101_test bin/rails db:schema:load
+RAILS_ENV=test DATABASE_URL=postgresql:///legion_post_tools_publisher_audit_20261101_test PARALLEL_WORKERS=1 bin/rails test \
+  test/controllers/public_publishing_test.rb \
+  test/controllers/website_access_authentication_test.rb \
+  test/models/website_publication_test.rb \
+  test/models/website_publication_concurrency_test.rb \
+  test/models/website_calendar_test.rb \
+  test/controllers/website_calendar_test.rb
+RAILS_ENV=test DATABASE_URL=postgresql:///legion_post_tools_publisher_audit_20261101_test PARALLEL_WORKERS=1 bin/rails test \
+  test/controllers/website_publishing_admin_test.rb \
+  test/controllers/api/website_publications_api_test.rb
+```
+
+The first group passed **41 tests / 934 assertions** (seed 46150); the second
+passed **18 tests / 278 assertions** (seed 59980), with no failures/errors/skips.
+The initial isolated run needed `bin/rails tailwindcss:build` before one HTML
+workspace test could render; the clean rerun above includes that test.
+Source links: [publisher/controller tests](https://github.com/AndreRobitaille/LegionPostTools/tree/879e2e8b11b0c7c8e227ca8402a4a511743f7883/test/controllers),
+[publisher/model tests](https://github.com/AndreRobitaille/LegionPostTools/tree/879e2e8b11b0c7c8e227ca8402a4a511743f7883/test/models),
+and [synthetic setup](https://github.com/AndreRobitaille/LegionPostTools/blob/879e2e8b11b0c7c8e227ca8402a4a511743f7883/test/support/website_publishing_support.rb).
+
+No browser system tests, production editorial transitions, real grants/consent,
+or live token revocation were exercised here. V2 still requires approved content,
+withdrawal of reachable fictional content, and an authorized release. The three
+companion issues remain under their owner's control; their open state alone does
+not negate the evidence above or require rebuilding the publisher.
+
+## September 27 evidence requests (historical)
 
 The [public consumer coverage review](verification/2026-09-27-consumer-coverage.md)
 is complete: conditional validator handling was repaired and simulated lifecycle
