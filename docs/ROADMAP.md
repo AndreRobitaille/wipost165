@@ -5,10 +5,11 @@ It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
 
-November 1 release complete: PRs #26–#30 are merged, and both public hostnames run
-`9d4095c0ecfbee76773097600750738e0a238540`. Off-server image builds and
-digest-verified pull-only deployment passed exact-revision CI and live checks.
-#8 is closed as completed. Follow [the release evidence](deployment/2026-11-01-off-server-contact-release.md),
+November 1 dependency release complete: PRs #13, #14, #16, #17 and #18 are merged,
+and both public hostnames run `71010d990acab468b18cd948860652c0f17e879d`.
+Off-server image builds and digest-verified pull-only deployment passed
+exact-revision CI and live checks. #8 remains closed as completed after the
+earlier contact release. Follow [the latest release evidence](deployment/2026-11-01-dependency-updates.md),
 [current handoff](HANDOFF.md) and [release procedure](DEPLOYMENT.md#secrets-and-release).
 
 October 17: [sharing metadata and icon package](design/2026-10-sharing/README.md)
@@ -24,9 +25,9 @@ External platform cache/preview refresh and Google's icon selection remain unver
 ## Current priority — V1 live; prepare V2 when ready
 
 V1 is live at https://wipost165.org and https://www.wipost165.org, revision
-`9d4095c0ecfbee76773097600750738e0a238540` after the owner's November 1 approval
-of off-server builds and deployment, including the contact fallback and Rack repair.
-[Release evidence](deployment/2026-11-01-off-server-contact-release.md).
+`71010d990acab468b18cd948860652c0f17e879d` after the authorized November 1 dependency
+updates, compatibility repair, deployment and live verification.
+[Release evidence](deployment/2026-11-01-dependency-updates.md).
 The October 17 sharing/icon release remains `76f4f5c`. The
 [production release record](deployment/2026-10-12-v1-launch.md) covers CI, remote
 container checks, six live events, browser/metadata/TLS checks, protected services,
@@ -138,13 +139,13 @@ These are recorded results, not a new production inspection.
 
 | Area | Evidence and state |
 | --- | --- |
-| Hosting | V1 revision `9d4095c` on apex/www with HTTPS and indexing; [November 1 release evidence](deployment/2026-11-01-off-server-contact-release.md). Production builds now run on GitHub Actions; the VPS pulls a verified digest. |
+| Hosting | V1 revision `71010d9` on apex/www with HTTPS and indexing; [latest November 1 release evidence](deployment/2026-11-01-dependency-updates.md). Builds run on GitHub Actions; the VPS pulls a verified digest. |
 | Public experience | Owner-approved V1 with the harbor and invitation imagery, current information pages, event dialog, and separated official marks. V2 remains available separately. |
-| Public consumer | Database-free authenticated consumer. November 1 full local CI passed 106 tests / 2,263 assertions plus 10 adapter tests. Exact master CI/image checks and deployed-image synthetic contact checks passed. V1 requests events only and blocks people/portrait routes. |
+| Public consumer | Database-free authenticated consumer. Full local CI passed 108 tests / 2,274 assertions plus 10 adapter tests. Exact master CI/image checks, real HTTP framing tests and deployed-image synthetic checks passed. V1 requests events only and blocks people/portrait routes. |
 | Publisher | Post-owned read-only website token retained. November 1 synthetic publisher checks passed 59 tests / 1,212 assertions; [revision, commands and deployment applicability](companion-work-queue.md#november-1-2026--publisher-evidence-handback). Production editorial writes and permissions were not exercised. |
 | Integration | November 1 authenticated preflight verified four real upcoming events and their details. Live V1 event dialogs, contact/visit actions, page metadata and people-route guards passed. Synthetic failure/empty states remain separately covered in CI. |
 | Content | Approved local facts, public channels, arrival guidance and joining/help content are live. Consented real people/photos remain V2 work. |
-| Source continuity | PR #10 and #26–#30 are merged. `9d4095c` is the verified runtime source; later documentation commits do not imply deployment. Inspect Git and the latest release record before subsequent work. |
+| Source continuity | PR #10, #13, #14, #16–#18 and #26–#31 are merged. #25 was closed as superseded. `71010d9` is the verified runtime source; later documentation commits do not imply deployment. Inspect Git and the latest release record before subsequent work. |
 
 ## Work order
 

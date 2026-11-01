@@ -1,5 +1,27 @@
 # Project handoff
 
+## November 1 — dependency updates deployed
+
+PRs #13, #14, #16, #17 and #18 are merged after fresh CI against each successive
+master base. Both public hostnames now run
+`71010d990acab468b18cd948860652c0f17e879d`, replacing `9d4095c`.
+[Release evidence](deployment/2026-11-01-dependency-updates.md).
+
+CI uses checkout/setup-node v7 and Brakeman 8.1.0; the deployed image contains
+net-http 0.10.0, URI 1.1.2 and Thruster 0.1.27. Checkout v7 also covers the newer
+production-image workflow. The stricter HTTP parser exposed an uncaught response
+header error; PR #17 now converts it to normal publishing unavailability, with
+real socket regression tests. Full local CI passed 108 tests / 2,274 assertions
+and 10 adapter tests, and its source tree matches the deployed revision.
+
+Exact master CI and the off-server image build/startup checks passed. Both live
+hostnames passed page/metadata/DNS/TLS checks, and Chromium passed contact pages
+at 320/390/1440px, keyboard navigation and event dialogs. The deployed image passed
+synthetic contact and malformed-framing checks without network or credentials.
+Members, Two Rivers and the shared proxy were unchanged across this deployment.
+One outer SSH connection persisted through final verification and then closed;
+owned connection cleanup was verified. Older sections below record earlier states.
+
 ## November 1 — off-server production builds
 
 PRs #26–#30 are merged. Both public hostnames now run
