@@ -11,17 +11,19 @@ readonly PROD_URL="https://wipost165.org"
 readonly MEMBERS_URL="https://members.wipost165.org"
 readonly COHOSTED_URL="https://tworiversmatters.com"
 readonly SSH_CONFIG="${RELEASE_SSH_CONFIG:-$HOME/.ssh/config}"
-SYSTEM_SSH="$(command -v ssh)"
+SYSTEM_SSH="${RELEASE_SYSTEM_SSH:-$(command -v ssh)}"
 readonly SYSTEM_SSH
 
 release_temp_config=""
 release_temp_dir=""
-release_control_path=""
+release_control_path="${RELEASE_CONTROL_PATH:-}"
+
+source "$APP_ROOT/lib/release_image.sh"
 
 cd "$APP_ROOT"
 
 usage() {
-  echo "Usage: bin/release check|push|session" >&2
+  echo "Usage: bin/release check|push|session|verify-image" >&2
   exit 64
 }
 
@@ -162,6 +164,7 @@ WRAPPER
   export release_temp_config release_temp_dir release_control_path
   export -f fail current_branch remote_head assert_remote_matches_head assert_clean_worktree
   export -f assert_http_status release_ssh release_preflight release_run release_setup release_deploy release_verify
+  export -f require_image_digest verify_prebuilt_image
   cat > "$release_temp_dir/session.rc" <<'SESSION'
 PS1='post165-release> '
 echo "One tunnel is open. Keep this shell for the entire operation."
@@ -193,21 +196,6 @@ release_preflight() {
   echo "Transport and protected-service baseline verified. Keep this tunnel open."
 }
 
-release_run() (
-  set -Eeuo pipefail
-  [[ "${RELEASE_PREFLIGHT_OK:-}" == "1" ]] || fail "run release_preflight successfully in this session first"
-  assert_clean_worktree
-  assert_remote_matches_head
-  release_ssh true
-  if ruby -ryaml -e 'exit(YAML.safe_load_file("config/deploy.yml").dig("env", "clear", "PUBLIC_SITE_COMING_SOON") == "1" ? 0 : 1)'; then
-    echo "Coming-soon release: publishing feed is intentionally unused."
-  else
-    bin/publisher-check
-  fi
-  bin/kamal "$1" -c "$release_temp_config"
-  release_verify
-)
-
 release_setup() { release_run setup; }
 release_deploy() { release_run deploy; }
 
@@ -231,7 +219,10 @@ release_verify() (
 )
 
 local_check() {
-  bash -n bin/release
+  local script
+  for script in bin/release lib/release_image.sh .kamal/hooks/pre-deploy script/build_production_image bin/publish-image; do
+    bash -n "$script"
+  done
   ruby -ryaml -e 'c=YAML.safe_load_file("config/deploy.yml"); abort "wrong service" unless c["service"] == "legion_post_165_wi_public"; abort "wrong hosts" unless c.dig("proxy", "hosts").sort == %w[wipost165.org www.wipost165.org]; abort "TLS required" unless c.dig("proxy", "ssl") == true'
   echo "Local release checks passed. No SSH connection opened. Use one bin/release session for all production work."
 }
@@ -243,6 +234,11 @@ case "$command" in
   check) local_check ;;
   push) push_head ;;
   session) with_production_connection; exit ;;
+  verify-image)
+    [[ -n "${RELEASE_CONTROL_PATH:-}" ]] || fail "image verification requires an active release session"
+    require_image_digest
+    verify_prebuilt_image "$(git rev-parse HEAD)"
+    ;;
   setup|deploy|push-deploy)
     fail "standalone production commands are disabled: use bin/release session, then release_setup or release_deploy inside that same shell"
     ;;
