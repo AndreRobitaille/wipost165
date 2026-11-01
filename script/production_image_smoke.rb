@@ -30,8 +30,9 @@ checks = []
       else
         verify!(main.css('a[href^="tel:"]').empty? && !main.text.include?("555-0123"), "Service Officer phone leaked")
       end
-      email_links = main.css('a[href="mailto:help@example.test"]')
-      verify!(email.present? ? !email_links.empty? : email_links.empty?, "Wrong email availability")
+      email_links = main.css('a[href^="mailto:"]')
+      shows_email = email_links.any? { |link| link["href"].split("?", 2).first == "mailto:help@example.test" }
+      verify!(email.present? ? shows_email : email_links.empty?, "#{edition} #{path}: wrong email availability")
       if path == "/membership"
         verify!(main.at_css(".post-join-contact").present? == email.present?, "Empty membership enquiry")
         verify!(main.at_css('a[href="/visit"]'), "Missing meeting-visit action")
