@@ -1,5 +1,14 @@
 # Launch content readiness
 
+November 1 maintenance review: SITE-03 is complete and V1 is already launched.
+Merged PR #10 supplies the About, Membership and Veteran help pages; local
+source notes are in [the fact sheets](public-page-facts.md). The owner's October
+28 decision labels the phone as the Service Officer's on Veteran help and keeps
+it off Membership and Contact. Missing email must show postal fallback on Contact
+and omit Membership's email-only enquiry section. Consented people/content and
+withdrawal of fictional story/portrait routes are V2 preparation, not unfinished
+V1 launch gates. See [the current roadmap](ROADMAP.md#work-order).
+
 October 7 scope update: V1 launches without people/photos/stories. The recorded
 static facts and actual published events support V1; real introductions/photos
 and fictional-story withdrawal are V2's final content step. V1 must keep story
@@ -51,7 +60,7 @@ obscured it. No form was submitted and no email or call was sent.
 | Fact | Approved public wording | Confirmed date and source/approving role | Content owner | Recheck trigger |
 | --- | --- | --- | --- | --- |
 | Public email | wipost165@gmail.com | September 27, 2026; owner-designated public source | Owner | Channel or responder changes |
-| Public phone | (920) 860-7478 | September 27, 2026; owner-designated public source | Owner | Channel or responder changes |
+| Service Officer phone | (920) 860-7478, labeled "Call our Service Officer" on Veteran help; omitted from Membership and Contact | September 27 source; October 28 owner clarification in PR #24 | Owner | Channel or responder changes |
 | Mailing address | American Legion Post 165, PO Box 11, Two Rivers, WI 54241 | September 27, 2026; owner-designated public source | Owner | Postal address changes |
 | Regular meeting venue | Manitowoc Rifle & Pistol Club, 7227 Sandy Hill Ln, Two Rivers, WI 54241 | September 27, 2026; owner-designated public source | Owner | Venue changes or a meeting-specific exception |
 | Regular meeting time | First Tuesday of each month at 6:30 p.m. | September 27, 2026; owner-designated public source | Owner | Schedule changes or a meeting-specific exception |
@@ -69,8 +78,8 @@ newly verified official minutes.
 | --- | --- | --- |
 | Annual dues | Confirmed in the source record; omit the amount from public pages and metadata at the owner's subsequent October 7 request | Adjutant, October 2026, recorded in the fact sheet; recheck when dues change. |
 | Join / renew | Join with a paper application, proof of eligibility and dues at a meeting; renew at a meeting or online through National | Commander, October 7; recheck when local procedures change. |
-| Service Officer | A first point of contact for any veteran; ask through the Post's configured public phone/email; connect claims, appeals and formal benefits applications with the county office | Commander, October 7; recheck on role or contact-practice changes. No promise of Post claims representation, direct payments or office hours. |
-| Meeting schedule | First Tuesday of every month at 6:30 p.m. at the Manitowoc Rifle & Pistol Club | Commander, October 7; supersedes the skipped-month wording. The public calendar excludes regular member meetings under the publishing contract; no calendar integration in this PR. |
+| Service Officer | A first point of contact for any veteran; phone action on Veteran help goes to the Service Officer, with general Post email also available; connect claims, appeals and formal benefits applications with the county office | Commander, October 7 scope and October 28 phone clarification; recheck on role or contact-practice changes. No promise of Post claims representation, direct payments or office hours. |
+| Meeting schedule | First Tuesday of every month at 6:30 p.m. at the Manitowoc Rifle & Pistol Club | Commander, October 7; supersedes the skipped-month wording. Static visit guidance does not create recurring calendar entries; displayed notices follow the publisher's approved calendar settings. |
 
 The [content review](design/2026-10-footer-content/design-revision/README.md) records source
 differences and deliberate omissions. County hours remain on the county website;
@@ -104,7 +113,7 @@ destinations in the owner's content checks and review them after reported proble
 | --- | --- | --- | --- |
 | As known | Specific entrance/greeter and any further access details | Meeting attendance, gravel parking, and no steps are confirmed; other specifics remain omitted | `/visit` suggests an event first and also permits an unarranged meeting visit; other locations remain event-specific. |
 | Before publishing | Individual publishing grants in the companion | Owner is the current content contact; formal grants remain a separate private action | No permissions assigned here. General enquiries/corrections can use the monitored public channels. |
-| Final prelaunch content step | Willing regulars and their approved introductions/photos | Public display name, introduction, story, optional conversation starter, approved portrait and alt text | Add real material after technical readiness. Fictional records currently support live-feed development behind coming-soon; full public launch needs approved content or an honest empty state. |
+| Before a separately authorized V2 launch | Willing regulars and their approved introductions/photos | Public display name, introduction, story, optional conversation starter, approved portrait and alt text | Add approved material and withdraw reachable fictional stories/portraits before enabling V2. V1 is live with people routes disabled; synthetic development uses explicit offline preview. |
 | Per occasion | Guest/child participation, costs, timing/location changes, and cancellations | Accurate event-specific details in the publisher's supported fields/description | No blanket promise that every event suits every household. |
 | Confirmed October 7 | Post dues and local joining/contact process are settled | Paper application and payment at a meeting; proof of eligibility; renew at a meeting or online. Keep the dues amount off the public site at the owner's request. | `/membership` leads with visiting and optional participation, then gives the local process, transfers and renewals. The confirmed amount stays in the [editorial source record](public-page-facts.md#8-membership). |
 

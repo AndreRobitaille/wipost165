@@ -67,7 +67,13 @@ class PublicPageMetadataTest < ActionDispatch::IntegrationTest
           assert_select 'link[rel="canonical"][href=?]', "https://wipost165.org#{path}"
           assert_select 'link[rel="canonical"]', count: 1
           assert_no_match(/[?&]utm_source|[?&]person=/, css_select('link[rel="canonical"]').first["href"])
-          assert_select 'meta[property^="og:"], meta[name^="twitter:"], meta[property="og:image"]', count: 0
+          if response.headers["X-Robots-Tag"].present?
+            assert_select 'meta[property^="og:"], meta[name^="twitter:"]', count: 0
+          else
+            assert_select 'meta[property="og:title"][content=?]', title
+            assert_select 'meta[property="og:description"][content=?]', description
+            assert_select 'meta[property="og:url"][content=?]', "https://wipost165.org#{path}"
+          end
         end
       end
     end
@@ -96,6 +102,8 @@ class PublicPageMetadataTest < ActionDispatch::IntegrationTest
       assert_includes response.body, "We’re preparing our new website."
       assert_select 'link[rel="canonical"][href="https://wipost165.org/visit"]'
       assert_select 'meta[property^="og:"], meta[name^="twitter:"]', count: 0
+      assert_select 'link[rel="icon"][href="/favicon-96x96.png"][sizes="96x96"]'
+      assert_select 'link[rel="apple-touch-icon"][sizes="180x180"]'
     end
   end
 

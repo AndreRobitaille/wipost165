@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Publish an already-tested Actions artifact without a local Docker daemon.
+set -Eeuo pipefail
+umask 077
+cd "$(dirname "$0")/.."
+run_id="${1:?usage: bin/publish-image ACTIONS_RUN_ID}"
+[[ "$run_id" =~ ^[0-9]+$ ]] || exit 64
+head="$(git rev-parse HEAD)"
+repository="AndreRobitaille/wipost165"
+image="ghcr.io/andrerobitaille/legion-post-165-wi-public"
+crane="${CRANE:-crane}"
+command -v "$crane" >/dev/null || { echo "Install crane or set CRANE to its executable path" >&2; exit 1; }
+gh api "repos/$repository/actions/runs/$run_id" | ruby -rjson -e '
+  run = JSON.parse(STDIN.read)
+  abort "Image workflow did not pass" unless run["status"] == "completed" && run["conclusion"] == "success"
+  abort "Image workflow revision mismatch" unless run["head_sha"] == ARGV[0]
+  abort "Wrong image workflow" unless run["path"] == ".github/workflows/production_image.yml"
+  abort "Pull-request images cannot be released" unless %w[push workflow_dispatch].include?(run["event"])
+' "$head"
+staging="$(mktemp -d /tmp/post165-public-image.XXXXXX)"
+trap 'rm -rf -- "$staging"' EXIT
+gh run download "$run_id" --repo "$repository" --name "production-image-$head" --dir "$staging"
+(cd "$staging" && sha256sum --check SHA256SUMS)
+[[ "$(cat "$staging/revision.txt")" == "$head" ]] || { echo "Archive revision mismatch" >&2; exit 1; }
+gzip --decompress --stdout "$staging/image.tar.gz" > "$staging/image.tar"
+export DOCKER_CONFIG="$staging/auth"
+mkdir "$DOCKER_CONFIG"
+gh auth token | "$crane" auth login ghcr.io --username "$(gh api user --jq .login)" --password-stdin
+"$crane" push "$staging/image.tar" "$image:$head"
+digest="$("$crane" digest "$image:$head")"
+"$crane" config "$image@$digest" | ruby -rjson -e '
+  image = JSON.parse(STDIN.read)
+  labels = image.fetch("config").fetch("Labels")
+  abort "Published revision mismatch" unless labels["org.opencontainers.image.revision"] == ARGV[0]
+  abort "Published service mismatch" unless labels["service"] == "legion_post_165_wi_public"
+  abort "Published image must be linux/amd64" unless image["os"] == "linux" && image["architecture"] == "amd64"
+' "$head"
+printf 'RELEASE_IMAGE_DIGEST=%s\n' "$digest"

@@ -48,7 +48,11 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
       assert_select "link[rel='stylesheet'][href*='company'], link[rel='stylesheet'][href*='post_pages'], link[rel='stylesheet'][href*='why_legion'], link[rel='stylesheet'][href*='application']", count: 0
       assert_select ".launch-brand source[type='image/webp'][srcset*='1x'][srcset*='2x'][srcset*='legion-white-408'][srcset*='3x']", count: 1
       assert_select ".launch-brand img[src*='legion-white'][width='1500'][height='413']", count: 1
-      assert_select "link[rel='icon'][href*='legion-white-favicon']", count: 1
+      assert_select "link[rel='icon'][href='/favicon-96x96.png'][sizes='96x96'][type='image/png']", count: 1
+      assert_select "link[rel='icon'][href='/favicon.ico']", count: 1
+      assert_select "link[rel='apple-touch-icon'][sizes='180x180']", count: 1
+      assert_select "link[rel='manifest'][href='/site.webmanifest']", count: 1
+      assert_select 'meta[property="og:title"][content=?]', PublicSiteHelper::DOCUMENT_TITLE
       assert_select 'img[src*="portrait"], img[src*="people"]', count: 0
       assert_select '.launch-harbor a[href="https://creativecommons.org/licenses/by-sa/4.0/"]'
       assert_not_includes response.body, "?person="

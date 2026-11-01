@@ -14,6 +14,8 @@ module PublicSiteHelper
     [ "two-rivers-harbor-illustration.webp", "1536w" ]
   ].freeze
   DOCUMENT_TITLE = "American Legion Post 165, Two Rivers".freeze
+  SHARING_IMAGE_URL = "#{PUBLIC_ORIGIN}/sharing/post-165-v1.jpg".freeze
+  SHARING_IMAGE_ALT = "The American Legion logo on the left, beside Post 165 and Two Rivers on the right, on a blue background.".freeze
   # Static public pages. Event and person URLs follow the publisher feed.
   SITEMAP_PATHS = %w[/ /why-the-legion /events /visit /about /contact /membership /veteran-help].freeze
   PAGE_HEADINGS = {
@@ -68,6 +70,15 @@ module PublicSiteHelper
     else request.path
     end
     "#{PUBLIC_ORIGIN}#{path}"
+  end
+
+  def public_website_schema
+    {
+      "@context" => "https://schema.org", "@type" => "WebSite",
+      "name" => DOCUMENT_TITLE,
+      "alternateName" => [ "Robert E. Burns American Legion Post 165", "wipost165.org" ],
+      "url" => "#{PUBLIC_ORIGIN}/"
+    }
   end
 
   def person_context

@@ -30,6 +30,29 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
     assert_includes response.headers["X-Robots-Tag"], "noindex"
     assert_select 'meta[name="robots"][content*="noindex"]'
     assert_select 'meta[property^="og:"], meta[name^="twitter:"]', count: 0
+    assert_select 'script[type="application/ld+json"]', count: 0
+  end
+
+  def assert_sharing_metadata
+    title = css_select("title").first.text
+    description = css_select('meta[name="description"]').first["content"]
+    canonical = css_select('link[rel="canonical"]').first["href"]
+    assert_select 'meta[property="og:title"][content=?]', title, count: 1
+    assert_select 'meta[property="og:description"][content=?]', description, count: 1
+    assert_select 'meta[property="og:url"][content=?]', canonical, count: 1
+    assert_select 'meta[property="og:type"][content="website"]', count: 1
+    assert_select 'meta[property="og:site_name"][content=?]', PublicSiteHelper::DOCUMENT_TITLE
+    assert_select 'meta[property="og:locale"][content="en_US"]'
+    assert_select 'meta[property="og:image"][content="https://wipost165.org/sharing/post-165-v1.jpg"]', count: 1
+    assert_select 'meta[property="og:image:type"][content="image/jpeg"]'
+    assert_select 'meta[property="og:image:width"][content="1200"]'
+    assert_select 'meta[property="og:image:height"][content="630"]'
+    assert_select 'meta[property="og:image:alt"][content=?]', PublicSiteHelper::SHARING_IMAGE_ALT
+    assert_select 'meta[name="twitter:card"][content="summary_large_image"]'
+    assert_select 'meta[name="twitter:title"][content=?]', title
+    assert_select 'meta[name="twitter:description"][content=?]', description
+    assert_select 'meta[name="twitter:image"][content="https://wipost165.org/sharing/post-165-v1.jpg"]'
+    assert_select 'meta[name="twitter:image:alt"][content=?]', PublicSiteHelper::SHARING_IMAGE_ALT
   end
 
   def assert_apex_canonical(path)
@@ -85,7 +108,15 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
           assert_nil response.headers["X-Robots-Tag"]
           assert_select 'meta[name="robots"]', count: 0
           assert_apex_canonical(path)
-          assert_select 'meta[property^="og:"], meta[name^="twitter:"]', count: 0
+          assert_sharing_metadata
+          if path == "/"
+            data = JSON.parse(css_select('script[type="application/ld+json"]').sole.text)
+            assert_equal "WebSite", data["@type"]
+            assert_equal PublicSiteHelper::DOCUMENT_TITLE, data["name"]
+            assert_equal "https://wipost165.org/", data["url"]
+          else
+            assert_select 'script[type="application/ld+json"]', count: 0
+          end
           assert_select 'meta[name="description"]' do |tags|
             descriptions << tags.first["content"] if host == "wipost165.org"
           end
@@ -104,7 +135,7 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
     using_feed { get visit_path, params: { person: member["id"], utm_source: "friend" } }
     assert_response :success
     assert_apex_canonical("/visit")
-    assert_select 'meta[property^="og:"], meta[name^="twitter:"]', count: 0
+    assert_sharing_metadata
     assert_select "head" do |head|
       assert_not_includes head.to_s, "unexpected.example"
       assert_not_includes head.to_s, member["id"]
@@ -127,7 +158,7 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
     end
     assert_apex_canonical("/people/#{member['id']}")
     assert_select "head img, head script:not([type='importmap']):not([type='module'])", count: 0
-    assert_select 'meta[property^="og:"], meta[name^="twitter:"]', count: 0
+    assert_sharing_metadata
   end
 
   test "cancelled event metadata leads with its status and includes the public date" do
@@ -143,6 +174,7 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
       assert_operator tags.first["content"].length, :<=, 150
     end
     assert_apex_canonical("/events/#{event['id']}")
+    assert_sharing_metadata
   end
 
   test "withdrawn and unavailable details have error metadata and a self canonical" do

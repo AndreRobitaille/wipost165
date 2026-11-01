@@ -136,6 +136,9 @@ dist = destination.join("dist")
 FileUtils.rm_rf(dist)
 FileUtils.mkdir_p(dist.join("client/assets"))
 assets.children.reject { |path| path.basename.to_s.start_with?(".") }.each { |path| FileUtils.cp_r(path, dist.join("client/assets")) }
+%w[favicon.ico favicon-96x96.png apple-touch-icon.png icon-192.png icon.png site.webmanifest sharing].each do |name|
+  FileUtils.cp_r(Rails.root.join("public", name), dist.join("client", name))
+end
 dist.join("client/robots.txt").write(PublicSiteHelper.robots_txt)
 FileUtils.mkdir_p(destination.join("worker"))
 destination.join("worker/templates.json").write(JSON.pretty_generate(templates) + "\n")

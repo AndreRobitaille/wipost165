@@ -210,7 +210,8 @@ export function createWorker(templates, { fetcher = (...args) => fetch(...args),
       };
       const respond = (html, status = 200) => new Response(request.method === 'HEAD' ? null : html, { status, headers });
       if (!['GET', 'HEAD'].includes(request.method)) { headers.Allow = 'GET, HEAD'; return respond('Method not allowed', 405); }
-      if (path.startsWith('/assets/') || path === '/robots.txt') {
+      const publicAssets = ['/robots.txt', '/favicon.ico', '/favicon-96x96.png', '/apple-touch-icon.png', '/icon-192.png', '/icon.png', '/site.webmanifest'];
+      if (path.startsWith('/assets/') || path.startsWith('/sharing/') || publicAssets.includes(path)) {
         if (env.ASSETS) return env.ASSETS.fetch(request);
         return respond('Not found', 404);
       }

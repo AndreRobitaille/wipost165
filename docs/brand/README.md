@@ -103,3 +103,25 @@ from that package: 911 × 948 RGBA, SHA-256
 `4d8dbb5e2b10fa3d4568d78eca85da3226f4991e7715cf1d3e274d87ca0faa60`.
 It includes the supplied white perimeter and is displayed proportionately with
 clear space. The older companion copy at `docs/brand/al-emblem.png` is not used.
+
+## October 17 — OG draft brand review
+
+Rechecked the main guide linked from National's current branding page: it remains
+the September 14, 2026 edition. Page 12 allows the complete white one-color mark
+on a dark ground, with L-width clear space. The previous OG draft used the correct original
+artwork but its 60px top margin was below the approximately 79px L-width at its
+600px displayed size. That earlier square crop also lost the required side clearance.
+
+National's separate [Sub-branding Guidelines link](https://legion-dam.eos.woodwing.cloud/app/#/s/rJtFagkoVQ)
+currently serves the September 16, 2022 PDF (21 pages). Its pages 3–5 specify label
+fonts, dividers, and proportions; stacking bold Post text under an unchanged
+brandmark does not by itself establish compliance. Its older palette should not
+replace the newer main guide's colors. See the [scoped OG audit](../design/2026-10-sharing/README.md#prior-brand-review-and-correction-rationale).
+The owner then rejected the separate-headline/footer correction and explicitly
+chose a horizontal logo-left / Post 165-and-Two Rivers-right card with tight
+spacing. The current card uses the complete 540px white mark, a thin vertical
+divider, 40px gaps, and 32px outer padding. The right-side text is reduced to
+132/94px following owner review. This is an owner-directed departure
+from the prescribed spacing/proportions, not a claim of National approval. The
+current 320/240px previews are in the scoped note. Existing site layouts were
+not changed, and the retained emblem favicon is byte-for-byte unchanged.
