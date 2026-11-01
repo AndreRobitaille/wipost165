@@ -59,6 +59,12 @@ replace the shared proxy, prune shared images/builders, or modify databases.
 
 ## Required persistent SSH transport
 
+Production images are built and smoke-tested on isolated GitHub Actions runners.
+This VPS only pulls a verified image and replaces the public container.
+`release_setup` and `release_deploy` require `RELEASE_IMAGE_DIGEST` and always use
+Kamal's `--skip-push`; a missing digest cannot fall back to an on-server build.
+The shared builder's normal 1,536 MiB limit is unchanged and unused by this path.
+
 **One operation uses one outer connection from first inspection to final
 verification.** Finish local checks and push first. Run `bin/release session`
 once. It opens and verifies the persistent tunnel and leaves an interactive
@@ -85,7 +91,7 @@ host stanza for `178.156.250.235`, root, and its configured identity file. Keep
 
 It creates an owned temporary SSH master, verifies it, opens a localhost-only forward on port 22222 to remote localhost:22, and routes
 Kamal Net::SSH and Docker/buildx OpenSSH through `socat - TCP:127.0.0.1:22222`.
-An occupied local port is preserved; choose RELEASE_TUNNEL_PORT explicitly if needed. The builder is remote, not local. The wrapper unsets SSH_AUTH_SOCK before
+An occupied local port is preserved; choose RELEASE_TUNNEL_PORT explicitly if needed. Kamal does not build during release. The wrapper unsets SSH_AUTH_SOCK before
 Kamal so Net::SSH uses the configured file key instead of the desktop signing
 agent, which otherwise failed with FrozenError in this environment. The proxy command fails closed when the forward disappears; there is no direct
 connection fallback. Stop
@@ -97,6 +103,46 @@ an already enabled master switches OpenSSH to interactive `ask` mode, causing
 noninteractive channel and termination requests to fail.
 
 ## Secrets and release
+
+The **Build production image** workflow runs for production changes in pull
+requests and every `master` push, and can be dispatched manually at an exact ref.
+It builds linux/amd64 on an isolated runner, smoke-tests both editions with
+synthetic contacts and no network/production credentials, starts the actual
+entrypoint/Thruster, and saves build-memory and startup evidence. Successful
+`master`/manual runs export `production-image-<full SHA>` for three days. PR runs
+check the image but do not export a release artifact. No registry credentials,
+production Rails keys, website token, or SSH key are supplied to CI.
+
+From a clean checkout of the tested release revision:
+
+```sh
+# Find the successful Build production image run for this exact HEAD.
+CRANE=/path/to/crane bin/publish-image ACTIONS_RUN_ID
+# Copy its printed digest; this is not a Git SHA or archive checksum.
+export RELEASE_IMAGE_DIGEST=sha256:THE_PRINTED_REGISTRY_DIGEST
+```
+
+`bin/publish-image` uses GitHub CLI and crane (no Docker daemon). It verifies the
+workflow, successful run, exact revision and artifact checksums, publishes only
+that SHA tag to the existing registry, and checks revision/service/architecture
+labels. Registry authentication stays in a temporary local directory that is
+removed on exit; the maintainer's token is never sent to CI. A missing/expired
+artifact requires another workflow run at the same reviewed ref.
+
+Finish the normal local checks and `bin/release push`, then open one
+`bin/release session` and call `release_deploy`. Export the digest before opening
+the session or inside its existing shell. Image identity is checked after the
+initial pull and again by the pre-deploy hook after Kamal's final pull, before
+container replacement. A wrong digest, revision, service or architecture stops
+deployment. There is no on-server-build fallback.
+
+When this release-wrapper update is installed while a release shell is already
+open, run `source "$APP_ROOT/lib/release_image.sh"` in that shell to load its
+tested image functions. Keep the original tunnel; do not start a new session.
+Before replacement, record a fresh protected-service baseline if another
+authorized deployment changed an adjacent service while CI was building, retaining
+both observations in the release evidence. Image extraction and the brief overlap
+of old/new public containers still need application headroom.
 
 Generate a unique `POST165_PUBLIC_SECRET_KEY_BASE` once. Store it outside Git in
 a mode-0600 operator file, such as `.env.production.local` in the development

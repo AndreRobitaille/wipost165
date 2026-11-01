@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# This command is for isolated CI runners, never the shared production VPS.
+set -Eeuo pipefail
+revision="$(git rev-parse "${1:?usage: script/build_production_image REVISION OUTPUT_DIRECTORY}")"
+output="${2:?missing output directory}"
+[[ "${GITHUB_ACTIONS:-}" == true ]] || { echo "Run image builds on an isolated GitHub Actions runner" >&2; exit 1; }
+[[ -z "${DOCKER_HOST:-}" ]] || { echo "A remote Docker host is not allowed" >&2; exit 1; }
+mkdir -p "$output/checks"
+output="$(cd "$output" && pwd)"
+context="$(mktemp -d)"
+builder="post165-public-${GITHUB_RUN_ID:-local}-${GITHUB_RUN_ATTEMPT:-1}"
+app="${builder}-app"
+cleanup() {
+  docker rm -f "$app" >/dev/null 2>&1 || true
+  docker buildx rm "$builder" >/dev/null 2>&1 || true
+  rm -rf "$context"
+}
+trap cleanup EXIT
+git archive "$revision" | tar -x -C "$context"
+printf '%s\n' "$revision" > "$output/checks/revision.txt"
+docker buildx create --name "$builder" --driver docker-container \
+  --driver-opt image=moby/buildkit:v0.32.2,memory=1536m,memory-swap=1536m
+docker buildx inspect "$builder" --bootstrap
+container="buildx_buildkit_${builder}0"
+docker inspect --format '{{json .HostConfig}}' "$container" > "$output/checks/builder-config.json"
+build_status=0
+docker buildx build --builder "$builder" --platform linux/amd64 --progress plain \
+  --label service=legion_post_165_wi_public \
+  --label "org.opencontainers.image.revision=$revision" \
+  --label org.opencontainers.image.source=https://github.com/AndreRobitaille/wipost165 \
+  --provenance=false --load --tag post165-public:verified "$context" \
+  2>&1 | tee "$output/checks/build.log" || build_status="$?"
+builder_pid="$(docker inspect --format '{{.State.Pid}}' "$container")"
+cgroup="/sys/fs/cgroup$(awk -F: '$1 == "0" {print $3}' "/proc/$builder_pid/cgroup")"
+cat "$cgroup/memory.peak" > "$output/checks/memory.peak"
+cat "$cgroup/memory.events" > "$output/checks/memory.events"
+[[ "$build_status" == 0 ]] || exit "$build_status"
+docker image inspect post165-public:verified > "$output/checks/image.json"
+docker run --rm --network none --memory 512m --memory-swap 512m \
+  --env SECRET_KEY_BASE_DUMMY=1 --entrypoint /rails/bin/rails \
+  post165-public:verified runner script/production_image_smoke.rb | tee "$output/checks/smoke.txt"
+docker run -d --name "$app" --network none --memory 512m --memory-swap 512m \
+  --env SECRET_KEY_BASE_DUMMY=1 post165-public:verified
+healthy=false
+for attempt in {1..30}; do
+  if docker exec "$app" curl --fail --silent --max-time 3 \
+    --header 'X-Forwarded-Proto: https' http://127.0.0.1/up > "$output/checks/health.html"; then
+    healthy=true
+    break
+  fi
+  sleep 1
+done
+docker logs "$app" > "$output/checks/startup.log" 2>&1
+[[ "$healthy" == true ]] || { echo "Production entrypoint did not become healthy" >&2; exit 1; }

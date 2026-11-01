@@ -5,6 +5,13 @@ It records outcomes and dependencies, not a fixed visual specification. Improve
 the design as we learn; preserve the public/private boundary and coordinate any
 change to the reviewed API contract.
 
+November 1 release work: PRs #26, #27 and #28 are merged through `15f1a0b`.
+Off-server production-image builds and digest-verified pull-only deployment are
+prepared; the owner authorized their integration and deployment, live checks,
+and #8 closure if those pass. Follow [the current handoff](HANDOFF.md) and
+[release procedure](DEPLOYMENT.md#secrets-and-release). The runtime observations
+below predate that pending release; do not treat a source merge as deployment.
+
 October 17: [sharing metadata and icon package](design/2026-10-sharing/README.md)
 prepared locally: Open Graph/X image cards, square Google/browser favicon, Apple
 touch and bookmark icons, manifest MIME type, and homepage site-name JSON-LD.
@@ -98,7 +105,7 @@ dues amount. The revision retains a substantive About page and leads Membership
 with visiting and participation.
 The approved V1 is already deployed. November 1 review confirmed the content
 implementation and found an email-disabled empty state in Membership and Contact;
-the local repair and regression coverage await their own commit/review.
+the repair and regression coverage merged in PR #27 and await deployment.
 The Commander confirmed the first Tuesday of every month at 6:30 p.m. at the
 Manitowoc Rifle & Pistol Club. Membership now matches Home and First visit;
 the skipped-summer follow-up is superseded. Calendar integration is outside this PR.
@@ -169,7 +176,7 @@ separate private/operational actions.
 | [#5 Improvements based on use](https://github.com/AndreRobitaille/wipost165/issues/5) | Later. No visitor/editor need has been selected; candidate features are not promised scope. |
 | [#6 Launch](https://github.com/AndreRobitaille/wipost165/issues/6) | V1 complete; retain only consented V2 content, fictional-content withdrawal, final readback and separately authorized release. |
 | [#7 About](https://github.com/AndreRobitaille/wipost165/issues/7) | Closed as completed after owner approval; delivered in PR #10, with supported history and unknown charter/namesake omitted. |
-| [#8 Membership](https://github.com/AndreRobitaille/wipost165/issues/8) | Guide delivered in PR #10; dues intentionally omitted. Verified email-disabled fallback repair is on the authorized follow-up branch; keep open until review. |
+| [#8 Membership](https://github.com/AndreRobitaille/wipost165/issues/8) | Guide delivered in PR #10; dues intentionally omitted. Email-disabled fallback repair merged in PR #27; closure is authorized after deployment and successful live verification. |
 | [#9 Veteran help](https://github.com/AndreRobitaille/wipost165/issues/9) | Closed as completed after owner approval; PR #10 content and PR #24 Service Officer label. Official resource details rechecked November 1. |
 
 ### SITE-01 — Establish the next development baseline
