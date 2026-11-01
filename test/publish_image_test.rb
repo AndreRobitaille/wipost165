@@ -3,6 +3,7 @@ require "tmpdir"
 require "fileutils"
 require "open3"
 require "digest"
+require "zlib"
 
 class PublishImageTest < ActiveSupport::TestCase
   HEAD = "f" * 40
@@ -43,6 +44,18 @@ class PublishImageTest < ActiveSupport::TestCase
     end
   end
 
+  test "invalid compression with valid checksums stops before registry login" do
+    with_artifact do |root, environment|
+      File.write("#{root}/artifact/image.tar.gz", "not gzip")
+      checksum = Digest::SHA256.file("#{root}/artifact/image.tar.gz").hexdigest
+      File.write("#{root}/artifact/SHA256SUMS", "#{checksum}  image.tar.gz\n")
+      output, status = publish(root, environment)
+      refute status.success?, output
+      assert_includes output, "not in gzip format"
+      refute File.exist?("#{root}/calls")
+    end
+  end
+
   test "image build command refuses workstation and remote Docker contexts" do
     output, status = Open3.capture2e({ "GITHUB_ACTIONS" => "", "DOCKER_HOST" => "" }, "bash", Rails.root.join("script/build_production_image").to_s, "HEAD", "/tmp/not-created-post165")
     refute status.success?, output
@@ -67,7 +80,7 @@ class PublishImageTest < ActiveSupport::TestCase
     Dir.mktmpdir("publish-image-test") do |root|
       %w[bin fake artifact].each { |path| FileUtils.mkdir_p("#{root}/#{path}") }
       FileUtils.cp(Rails.root.join("bin/publish-image"), "#{root}/bin/publish-image")
-      File.write("#{root}/artifact/image.tar.gz", "synthetic archive")
+      Zlib::GzipWriter.open("#{root}/artifact/image.tar.gz") { |archive| archive.write("synthetic archive") }
       File.write("#{root}/artifact/revision.txt", "#{HEAD}\n")
       checksums = %w[image.tar.gz revision.txt].map { |name| "#{Digest::SHA256.file("#{root}/artifact/#{name}").hexdigest}  #{name}" }
       File.write("#{root}/artifact/SHA256SUMS", checksums.join("\n") + "\n")
@@ -92,6 +105,8 @@ class PublishImageTest < ActiveSupport::TestCase
         end
         case ARGV.first
         when "auth" then STDIN.read
+        when "push"
+          abort "Expected an uncompressed archive" unless File.read(ARGV[1]) == "synthetic archive" && ARGV[1].end_with?("image.tar")
         when "digest" then puts ENV.fetch("TEST_DIGEST")
         when "config"
           puts JSON.generate("os" => "linux", "architecture" => "amd64", "config" => { "Labels" => {

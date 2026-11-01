@@ -22,10 +22,11 @@ trap 'rm -rf -- "$staging"' EXIT
 gh run download "$run_id" --repo "$repository" --name "production-image-$head" --dir "$staging"
 (cd "$staging" && sha256sum --check SHA256SUMS)
 [[ "$(cat "$staging/revision.txt")" == "$head" ]] || { echo "Archive revision mismatch" >&2; exit 1; }
+gzip --decompress --stdout "$staging/image.tar.gz" > "$staging/image.tar"
 export DOCKER_CONFIG="$staging/auth"
 mkdir "$DOCKER_CONFIG"
 gh auth token | "$crane" auth login ghcr.io --username "$(gh api user --jq .login)" --password-stdin
-"$crane" push "$staging/image.tar.gz" "$image:$head"
+"$crane" push "$staging/image.tar" "$image:$head"
 digest="$("$crane" digest "$image:$head")"
 "$crane" config "$image@$digest" | ruby -rjson -e '
   image = JSON.parse(STDIN.read)
