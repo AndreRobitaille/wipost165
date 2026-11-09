@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   end
 
   root "public_site#home"
+  # Previous public site. Query strings stay on the destination.
+  get "home", to: redirect(path: "/", status: 301), format: false
+  get "contact-us", to: redirect(path: "/contact", status: 301), format: false
+  get "about-post-165", to: redirect(path: "/about", status: 301), format: false
   get "people/:id/portrait/:revision/:size.webp", to: "portraits#show", as: :published_portrait,
     constraints: { id: /[A-Za-z0-9_-]+/, revision: /[A-Za-z0-9_-]+/, size: /small|large/ }, format: false
   get "people/:slug", to: "public_site#person", as: :person
