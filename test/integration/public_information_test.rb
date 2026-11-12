@@ -96,6 +96,23 @@ class PublicInformationTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "the Post Facebook page is linked from the footer and the contact page" do
+    %w[v1 v2].each do |edition|
+      with_information_settings(edition) do
+        [ about_path, contact_path ].each do |path|
+          get path
+          assert_response :success
+          assert_select "footer nav a[href='https://www.facebook.com/wiPost165'][rel='noopener']", text: "Facebook", count: 1
+          assert_select "script[src*='facebook'], iframe[src*='facebook']", count: 0
+          assert_no_match(/fbq\(|connect\.facebook\.net|facebook\.com\/plugins/, response.body)
+        end
+
+        get contact_path
+        assert_select "main a[href='https://www.facebook.com/wiPost165'][rel='noopener']", text: "Follow the Post on Facebook", count: 1
+      end
+    end
+  end
+
   test "crisis contact is the first service route and membership stays a separate page" do
     %w[v1 v2].each do |edition|
       with_information_settings(edition) do

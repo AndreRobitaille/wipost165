@@ -106,6 +106,10 @@ module PublicSiteHelper
     public_contact_email.present? || public_contact_phone.present?
   end
 
+  def post_facebook_url
+    "https://www.facebook.com/wiPost165"
+  end
+
   def public_phone_href
     "tel:#{public_contact_phone.to_s.gsub(/[^+0-9]/, '')}"
   end
