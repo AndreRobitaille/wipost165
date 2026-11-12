@@ -102,13 +102,20 @@ class PublicInformationTest < ActionDispatch::IntegrationTest
         [ about_path, contact_path ].each do |path|
           get path
           assert_response :success
-          assert_select "footer nav a[href='https://www.facebook.com/wiPost165'][rel='noopener']", text: "Facebook", count: 1
+          assert_select "footer nav a[href='https://www.facebook.com/wiPost165']", text: "Facebook", count: 1
+          assert_select "a[href='https://www.facebook.com/wiPost165'][rel], a[href='https://www.facebook.com/wiPost165'][target]", count: 0
           assert_select "script[src*='facebook'], iframe[src*='facebook']", count: 0
           assert_no_match(/fbq\(|connect\.facebook\.net|facebook\.com\/plugins/, response.body)
         end
 
         get contact_path
-        assert_select "main a[href='https://www.facebook.com/wiPost165'][rel='noopener']", text: "Follow the Post on Facebook", count: 1
+        assert_select "main a[href='https://www.facebook.com/wiPost165']", text: "Follow the Post on Facebook", count: 1
+        assert_select "section[aria-labelledby='mail-title'] a[href='https://www.facebook.com/wiPost165']", count: 0
+        if edition == "v1"
+          assert_select ".launch-contact-methods + p a[href='https://www.facebook.com/wiPost165']", text: "Follow the Post on Facebook", count: 1
+        else
+          assert_select "p.small-note + p.quiet-link a[href='https://www.facebook.com/wiPost165']", text: "Follow the Post on Facebook", count: 1
+        end
       end
     end
   end
