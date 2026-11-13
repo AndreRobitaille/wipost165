@@ -34,5 +34,3 @@ env:
 asset_path: /rails/public/assets
 builder:
   arch: amd64
-  local: false
-  remote: ssh://root@178.156.250.235

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+echo "release: Kamal builds are disabled. Build in GitHub Actions, publish with bin/publish-image, then use release_deploy with RELEASE_IMAGE_DIGEST." >&2
+exit 1
