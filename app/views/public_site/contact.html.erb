@@ -8,6 +8,7 @@
     <p class="contact-pending">Email and phone contact details aren’t available here. You can write to the Post at the mailing address below.</p>
     <p class="quiet-link"><%= link_to "See published event details →", events_path(person_context) %></p>
   <% end %>
+  <p class="quiet-link"><%= link_to "Follow the Post on Facebook", post_facebook_url %></p>
   <h2>Mailing address</h2>
   <p class="body-copy compact">American Legion Post 165<br>PO Box 11<br>Two Rivers, WI 54241</p>
   <p class="quiet-link"><%= link_to "Meeting location and first visits →", visit_path(person_context) %></p>

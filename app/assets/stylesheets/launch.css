@@ -159,7 +159,7 @@ body { margin: 0; }
 #launch .launch-mail { padding-top: 24px; }
 #launch .launch-mail h2 { margin-bottom: 10px; font-size: 15px; letter-spacing: 0; color: var(--blue); }
 #launch .launch-mail address { font-size: 15px; color: var(--muted); }
-#launch .launch-mail .text-action { margin-top: 10px; font-size: 13px; font-weight: 400; color: var(--blue); }
+#launch :is(.launch-mail, .launch-contact-sheet > p) .text-action { margin-top: 10px; font-size: 13px; font-weight: 400; color: var(--blue); }
 #launch .launch-contact-pending { padding-top: 16px; color: var(--muted); }
 #launch .launch-footer { display: flex; align-items: start; justify-content: space-between; gap: 28px; padding: 28px max(24px, calc((100% - 1280px) / 2)); border-top: 3px solid var(--red); background: var(--deep); color: white; }
 #launch .launch-service { display: inline-block; padding-block: 8px; font-size: 18px; font-weight: 700; }
