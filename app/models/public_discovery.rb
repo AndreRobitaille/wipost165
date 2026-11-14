@@ -52,7 +52,7 @@ class PublicDiscovery
 
   def self.sitemap_xml(events: FETCH)
     records = published_events(events)
-    entries = sitemap_pages(records) + sitemap_events(records)
+    entries = sitemap_pages + sitemap_events(records)
     body = entries.map { |entry| url_element(entry) }.join("\n")
     <<~XML
       <?xml version="1.0" encoding="UTF-8"?>
@@ -162,29 +162,17 @@ class PublicDiscovery
   end
   private_class_method :feed_events
 
-  def self.sitemap_pages(events)
+  def self.sitemap_pages
     if Rails.configuration.x.public_site_coming_soon
       return [ { loc: "#{ORIGIN}/", lastmod: PublicPageRevisions.at("coming_soon") } ]
     end
 
     edition = Rails.configuration.x.public_site_edition
     PublicSiteHelper::SITEMAP_PATHS.map do |path|
-      { loc: "#{ORIGIN}#{path}", lastmod: page_lastmod(edition, path, events) }
+      { loc: "#{ORIGIN}#{path}", lastmod: PublicPageRevisions.at(edition, path) }
     end
   end
   private_class_method :sitemap_pages
-
-  def self.page_lastmod(edition, path, events)
-    times = [ PublicPageRevisions.at(edition, path) ]
-    if path == "/events"
-      times.concat(events.filter_map(&:updated_at))
-    elsif path == "/" && edition == "v1"
-      shown = events.find(&:upcoming?)
-      times << shown.updated_at if shown&.updated_at
-    end
-    times.max
-  end
-  private_class_method :page_lastmod
 
   def self.sitemap_events(events)
     events.select { |event| event.upcoming? && event.updated_at }.map do |event|
@@ -195,10 +183,15 @@ class PublicDiscovery
 
   def self.url_element(entry)
     loc = ERB::Util.html_escape(entry.fetch(:loc))
-    lastmod = entry.fetch(:lastmod).utc.iso8601
+    lastmod = sitemap_timestamp(entry.fetch(:lastmod))
     "  <url><loc>#{loc}</loc><lastmod>#{lastmod}</lastmod></url>"
   end
   private_class_method :url_element
+
+  def self.sitemap_timestamp(value)
+    value.is_a?(Date) ? value.iso8601 : value.utc.iso8601
+  end
+  private_class_method :sitemap_timestamp
 
   def self.event_path(event)
     "/events/#{ERB::Util.url_encode(event.slug)}"

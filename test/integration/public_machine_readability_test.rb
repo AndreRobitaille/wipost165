@@ -47,6 +47,15 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
     css_select('script[type="application/ld+json"]').map { |node| JSON.parse(node.text) }
   end
 
+  def sitemap_lastmod(path)
+    response.body[%r{<loc>#{Regexp.escape("#{ORIGIN}#{path}")}</loc><lastmod>([^<]+)</lastmod>}, 1]
+  end
+
+  def assert_valid_content_date(lastmod)
+    assert_match(/\A\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?\z/, lastmod)
+    assert_operator Date.iso8601(lastmod[0, 10]), :<=, Date.current
+  end
+
   def refute_phone(data)
     json = JSON.generate(data)
     assert_nil data["telephone"]
@@ -141,7 +150,7 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
         assert_includes response.body, "<loc>#{ORIGIN}/events/no_address_public</loc>"
         assert_includes response.body, "<loc>#{ORIGIN}/events/all_day_public</loc>"
         assert_includes response.body, "<lastmod>2026-12-01T16:30:00Z</lastmod>"
-        assert_includes response.body, "<lastmod>#{PublicPageRevisions.at("v1", "/visit").utc.iso8601}</lastmod>"
+        assert_includes response.body, "<lastmod>#{PublicPageRevisions.at("v1", "/visit").iso8601}</lastmod>"
         assert_not_includes response.body, "past_public"
         assert_not_includes response.body, "cancelled_public"
         assert_not_includes response.body, "event_withheld_1"
@@ -308,13 +317,27 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
     refute_phone(organization)
   end
 
+  test "sitemap main pages have recorded content dates" do
+    %w[v1 v2].each do |edition|
+      Rails.configuration.x.public_site_edition = edition
+      get "/sitemap.xml"
+      assert_response :success
+      PublicSiteHelper::SITEMAP_PATHS.each do |path|
+        lastmod = sitemap_lastmod(path)
+        assert lastmod, "#{edition} #{path} is missing lastmod"
+        assert_valid_content_date(lastmod)
+      end
+    end
+  end
+
   test "coming soon sitemap and llms.txt stay on the holding page" do
     Rails.configuration.x.public_site_coming_soon = true
     Publishing::Client.stub(:new, -> { raise "Publisher must not be contacted" }) do
       get "/sitemap.xml"
       assert_response :success
       assert_includes response.body, "<loc>#{ORIGIN}/</loc>"
-      assert_includes response.body, "<lastmod>#{PublicPageRevisions.at("coming_soon").utc.iso8601}</lastmod>"
+      assert_includes response.body, "<lastmod>#{PublicPageRevisions.at("coming_soon").iso8601}</lastmod>"
+      assert_valid_content_date(sitemap_lastmod("/"))
       assert_not_includes response.body, "<loc>#{ORIGIN}/events</loc>"
       assert_not_includes response.body, "/events/"
 

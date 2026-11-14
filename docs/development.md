@@ -144,9 +144,9 @@ fictional story/portrait withdrawal before public exposure. `/robots.txt` allows
 crawling so crawlers can read per-response noindex rules, including while the
 coming-soon page is public, and references `https://wipost165.org/sitemap.xml`.
 While coming soon is on, that sitemap lists only the homepage: every public route
-serves the same holding page. Otherwise each main page includes `lastmod` from the
-latest commit of that page's templates, and upcoming public event pages include
-`lastmod` from the event's published `updated_at`. Past events stay off the sitemap
+serves the same holding page. Otherwise each main page includes `lastmod` from a recorded content date for
+that page, and upcoming public event pages include `lastmod` from the event's
+published `updated_at`. Past events stay off the sitemap
 and their pages keep returning 200. Honor funerals and other withheld categories
 stay off the calendar, the sitemap, `/llms.txt`, and structured data. Person URLs
 stay off the sitemap and rely on their canonical tags. `/llms.txt` is generated
