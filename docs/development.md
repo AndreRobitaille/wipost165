@@ -110,8 +110,10 @@ Contact, Membership, and Veteran Help. The document title is
 `https://wipost165.org` and omits query strings, including V2 recognition context.
 Indexable pages include matching Open Graph and X/Twitter large-image card tags,
 with a shared public 1200×630 JPEG, dimensions, MIME type, and image description.
-The homepage also provides `WebSite` JSON-LD for Google's site name. All image and
-sharing URLs use the fixed public origin. Development, preview, coming soon,
+The homepage provides `WebSite` JSON-LD for Google's site name, with the Post's
+`Organization` as its publisher. Indexable pages include that Organization block.
+Event pages add `Event` JSON-LD from the fields already shown on the page.
+All image and sharing URLs use the fixed public origin. Development, preview, coming soon,
 missing pages, and feed outages stay `noindex, nofollow, nosnippet, noimageindex`.
 `PUBLIC_SITE_LAUNCH_READY=1` takes effect only in production. The deployment
 configuration enables it for the approved V1 launch; coming-soon and static preview
@@ -142,8 +144,13 @@ fictional story/portrait withdrawal before public exposure. `/robots.txt` allows
 crawling so crawlers can read per-response noindex rules, including while the
 coming-soon page is public, and references `https://wipost165.org/sitemap.xml`.
 While coming soon is on, that sitemap lists only the homepage: every public route
-serves the same holding page. Otherwise it lists the static public pages and leaves
-publisher-driven event and person URLs to their own canonical tags. Optional
+serves the same holding page. Otherwise each main page includes `lastmod` from the
+latest commit of that page's templates, and upcoming public event pages include
+`lastmod` from the event's published `updated_at`. Past events stay off the sitemap
+and their pages keep returning 200. Honor funerals and other withheld categories
+stay off the calendar, the sitemap, `/llms.txt`, and structured data. Person URLs
+stay off the sitemap and rely on their canonical tags. `/llms.txt` is generated
+from the same published facts and upcoming public events. Optional
 `GA4_MEASUREMENT_ID` adds the Google tag on public pages, including coming soon,
 when set. A blank value omits it. `/up` and event-dialog fragments do not load
 the tag. This app has no members or admin area, and no active

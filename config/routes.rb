@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   scope format: false do
     get "robots.txt", to: "public_crawl#robots", as: :robots
     get "sitemap.xml", to: "public_crawl#sitemap", as: :sitemap
+    get "llms.txt", to: "public_crawl#llms", as: :llms
   end
 
   root "public_site#home"

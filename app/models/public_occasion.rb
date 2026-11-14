@@ -1,5 +1,6 @@
 class PublicOccasion
-  attr_reader :slug, :title, :description, :location_name, :starts_at, :ends_at, :starts_on, :ends_on_exclusive, :timezone
+  attr_reader :slug, :title, :description, :location_name, :starts_at, :ends_at, :starts_on, :ends_on_exclusive,
+    :timezone, :category, :updated_at
 
   def initialize(data, timezone:)
     @slug = data.fetch("id")
@@ -7,12 +8,23 @@ class PublicOccasion
     @description = data["description"]
     @location_name = data["location"]
     @timezone = timezone
+    @category = data["category"]
     @all_day = data["all_day"]
     @cancelled = data["cancelled"]
     @starts_at = Time.iso8601(data["starts_at"]).in_time_zone(timezone) if data["starts_at"]
     @ends_at = Time.iso8601(data["ends_at"]).in_time_zone(timezone) if data["ends_at"]
     @starts_on = Date.iso8601(data["starts_on"]) if data["starts_on"]
     @ends_on_exclusive = Date.iso8601(data["ends_on_exclusive"]) if data["ends_on_exclusive"]
+    @updated_at = Time.iso8601(data["updated_at"]) if data["updated_at"]
+  end
+
+  # Full ISO 8601 in the event's zone, including the Central offset for all-day dates.
+  def start_date_iso
+    if starts_at
+      starts_at.in_time_zone(timezone).iso8601
+    elsif starts_on
+      Time.find_zone!(timezone).local(starts_on.year, starts_on.month, starts_on.day).iso8601
+    end
   end
 
   def to_param = slug
