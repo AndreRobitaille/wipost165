@@ -55,6 +55,10 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
     assert_select 'meta[name="twitter:image:alt"][content=?]', PublicSiteHelper::SHARING_IMAGE_ALT
   end
 
+  def json_ld_blocks
+    css_select('script[type="application/ld+json"]').map { |node| JSON.parse(node.text) }
+  end
+
   def assert_apex_canonical(path)
     assert_select 'link[rel="canonical"][href=?]', "https://wipost165.org#{path}", count: 1
   end
@@ -109,13 +113,18 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
           assert_select 'meta[name="robots"]', count: 0
           assert_apex_canonical(path)
           assert_sharing_metadata
+          blocks = json_ld_blocks
+          organization = blocks.find { |data| data["@type"] == "Organization" }
+          assert_equal "https://wipost165.org/#organization", organization["@id"]
+          assert_nil organization["telephone"]
+          assert_not_includes organization.to_json, "860-7478"
           if path == "/"
-            data = JSON.parse(css_select('script[type="application/ld+json"]').sole.text)
-            assert_equal "WebSite", data["@type"]
-            assert_equal PublicSiteHelper::DOCUMENT_TITLE, data["name"]
-            assert_equal "https://wipost165.org/", data["url"]
+            website = blocks.find { |data| data["@type"] == "WebSite" }
+            assert_equal PublicSiteHelper::DOCUMENT_TITLE, website["name"]
+            assert_equal "https://wipost165.org/", website["url"]
+            assert_equal "https://wipost165.org/#organization", website.dig("publisher", "@id")
           else
-            assert_select 'script[type="application/ld+json"]', count: 0
+            assert_equal [ "Organization" ], blocks.map { |data| data["@type"] }
           end
           assert_select 'meta[name="description"]' do |tags|
             descriptions << tags.first["content"] if host == "wipost165.org"
@@ -157,7 +166,8 @@ class PublicMetadataTest < ActionDispatch::IntegrationTest
       assert_operator tags.first["content"].length, :<=, 150
     end
     assert_apex_canonical("/people/#{member['id']}")
-    assert_select "head img, head script:not([type='importmap']):not([type='module'])", count: 0
+    assert_select "head img, head script:not([type='importmap']):not([type='module']):not([type='application/ld+json'])", count: 0
+    assert_equal [ "Organization" ], json_ld_blocks.map { |data| data["@type"] }
     assert_sharing_metadata
   end
 
