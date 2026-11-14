@@ -7,7 +7,7 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
 
   ORIGIN = PublicSiteHelper::PUBLIC_ORIGIN
   ORGANIZATION_ID = "#{ORIGIN}/#organization"
-  ATTENDANCE = PublicPost::ATTENDANCE_NOTE
+  GUESTS_LINE = "Please check with the Post before making plans."
 
   setup do
     build_client
@@ -192,6 +192,7 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
         assert_not_includes response.body, "Cancelled public gathering"
         assert_not_includes response.body, "860-7478"
         assert_not_includes response.body, "920-683-4055"
+        assert_not_includes response.body, GUESTS_LINE
 
         get event_path(upcoming.fetch("id"))
         assert_response :success
@@ -204,8 +205,11 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
         assert_equal "https://schema.org/OfflineEventAttendanceMode", event_ld["eventAttendanceMode"]
         assert_equal({ "@id" => ORGANIZATION_ID }, event_ld["organizer"])
         assert_equal "#{ORIGIN}/events/upcoming_public", event_ld["url"]
-        assert_equal ATTENDANCE, event_ld["description"]
-        assert_includes response.body, ATTENDANCE
+        assert_equal "Synthetic event for contract testing.", event_ld["description"]
+        json_ld_blocks.each { |block| assert_not_includes block.to_json, GUESTS_LINE }
+        blank = PublicOccasion.new(upcoming.merge("description" => " \n "), timezone: "America/Chicago")
+        refute PublicDiscovery.event_schema(blank, url: "#{ORIGIN}/events/upcoming_public").key?("description")
+        assert_includes response.body, GUESTS_LINE
         assert_equal "Place", event_ld.dig("location", "@type")
         assert_equal upcoming.fetch("location"), event_ld.dig("location", "name")
         assert_equal "7227 Sandy Hill Ln", event_ld.dig("location", "address", "streetAddress")
@@ -243,6 +247,8 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
         assert_equal "2026-12-01T00:00:00-06:00", day["startDate"]
         assert_equal "Example location — not a real event", day.dig("location", "name")
         refute day["location"].key?("address")
+        refute day.key?("description")
+        assert_not_includes day.to_json, GUESTS_LINE
 
         get event_path(past.fetch("id"))
         assert_response :success
@@ -285,8 +291,9 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
         assert_response :success
         assert_select "#company"
         v2_event = json_ld_blocks.find { |data| data["@type"] == "Event" }
-        assert_equal ATTENDANCE, v2_event["description"]
-        assert_includes response.body, ATTENDANCE
+        assert_equal "Synthetic event for contract testing.", v2_event["description"]
+        assert_not_includes v2_event.to_json, GUESTS_LINE
+        assert_includes response.body, GUESTS_LINE
       end
     end
   end

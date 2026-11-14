@@ -113,6 +113,7 @@ with a shared public 1200×630 JPEG, dimensions, MIME type, and image descriptio
 The homepage provides `WebSite` JSON-LD for Google's site name, with the Post's
 `Organization` as its publisher. Indexable pages include that Organization block.
 Event pages add `Event` JSON-LD from the fields already shown on the page.
+Its description is the event's own text when that text is present.
 All image and sharing URLs use the fixed public origin. Development, preview, coming soon,
 missing pages, and feed outages stay `noindex, nofollow, nosnippet, noimageindex`.
 `PUBLIC_SITE_LAUNCH_READY=1` takes effect only in production. The deployment

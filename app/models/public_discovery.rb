@@ -108,9 +108,10 @@ class PublicDiscovery
       "eventStatus" => "https://schema.org/EventScheduled",
       "eventAttendanceMode" => "https://schema.org/OfflineEventAttendanceMode",
       "organizer" => { "@id" => ORGANIZATION_ID },
-      "url" => url,
-      "description" => PublicPost::ATTENDANCE_NOTE
+      "url" => url
     }
+    description = event.description.to_s.squish
+    data["description"] = description if description.present?
     place = place_for(event.location_name)
     data["location"] = place if place
     data

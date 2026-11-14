@@ -8,8 +8,6 @@ class PublicPost
   FACEBOOK_URL = "https://www.facebook.com/wiPost165"
   PARENT_NAME = "The American Legion"
   PARENT_URL = "https://www.legion.org/"
-  # Guests and children line shown on every event page.
-  ATTENDANCE_NOTE = "Please check with the Post before making plans."
   PUBLIC_EVENT_CATEGORY = "public_event"
   MEETING_SCHEDULE = "First Tuesday of each month at 6:30 p.m."
   MEETING_NAME = "Manitowoc Rifle & Pistol Club"
