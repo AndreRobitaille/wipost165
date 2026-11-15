@@ -22,8 +22,8 @@
   <%= tag.meta name: "twitter:description", content: public_page_description %>
   <%= tag.meta name: "twitter:image", content: PublicSiteHelper::SHARING_IMAGE_URL %>
   <%= tag.meta name: "twitter:image:alt", content: PublicSiteHelper::SHARING_IMAGE_ALT %>
-  <% if action_name == "home" %>
-    <script type="application/ld+json"><%= raw json_escape(public_website_schema.to_json) %></script>
+  <% public_json_ld_blocks.each do |data| %>
+    <script type="application/ld+json"><%= raw json_escape(data.to_json) %></script>
   <% end %>
 <% end %>
 <%= public_google_tag %>

@@ -2,6 +2,11 @@ require "uri"
 
 module Publishing
   class Contract
+    PUBLIC_EVENT_CATEGORY = "public_event"
+    # Accepted so one withheld record cannot invalidate the rest of a collection.
+    # The public site drops these before display, sitemap, llms.txt, and JSON-LD.
+    WITHHELD_EVENT_CATEGORIES = %w[funeral honor_funeral honor_guard military_funeral].freeze
+
     def initialize(origin:)
       @origin = origin
     end
@@ -106,7 +111,8 @@ module Publishing
       %w[id title].each { |field| string!(event.fetch(field)) }
       %w[description location].each { |field| string!(event.fetch(field), nullable: true) }
       check([ true, false ].include?(event.fetch("all_day")) && [ true, false ].include?(event.fetch("cancelled")))
-      check(event.fetch("category") == "public_event")
+      category = event.fetch("category")
+      check(category == PUBLIC_EVENT_CATEGORY || WITHHELD_EVENT_CATEGORIES.include?(category))
       timestamp!(event.fetch("updated_at"))
       if event["all_day"]
         check(event.fetch("starts_at").nil? && event.fetch("ends_at").nil?)

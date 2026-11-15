@@ -30,7 +30,11 @@ class PublicContent
 
     # The Post's site uses its configured local date; the feed supplies event timezone.
     data = @client.events(from: Date.current, to: Date.current + 90)
-    data.fetch("events").map { |record| PublicOccasion.new(record, timezone: data.fetch("timezone")) }
+    data.fetch("events").filter_map do |record|
+      next if PublicPost.withheld_event?(record)
+
+      PublicOccasion.new(record, timezone: data.fetch("timezone"))
+    end
   rescue Publishing::Unavailable
     @events_unavailable = true
     []
@@ -42,6 +46,9 @@ class PublicContent
     end
 
     data = @client.event(id)
-    PublicOccasion.new(data.fetch("event"), timezone: data.fetch("timezone"))
+    record = data.fetch("event")
+    raise Publishing::NotFound if PublicPost.withheld_event?(record)
+
+    PublicOccasion.new(record, timezone: data.fetch("timezone"))
   end
 end

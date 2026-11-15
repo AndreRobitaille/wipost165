@@ -16,7 +16,7 @@ module PublicSiteHelper
   DOCUMENT_TITLE = "American Legion Post 165, Two Rivers".freeze
   SHARING_IMAGE_URL = "#{PUBLIC_ORIGIN}/sharing/post-165-v1.jpg".freeze
   SHARING_IMAGE_ALT = "The American Legion logo on the left, beside Post 165 and Two Rivers on the right, on a blue background.".freeze
-  # Static public pages. Event and person URLs follow the publisher feed.
+  # Static public pages. Upcoming public event URLs are added from the feed.
   SITEMAP_PATHS = %w[/ /why-the-legion /events /visit /about /contact /membership /veteran-help].freeze
   PAGE_HEADINGS = {
     "events" => "Events", "visit" => "Visit Us", "about" => "About the Post",
@@ -73,12 +73,21 @@ module PublicSiteHelper
   end
 
   def public_website_schema
-    {
-      "@context" => "https://schema.org", "@type" => "WebSite",
-      "name" => DOCUMENT_TITLE,
-      "alternateName" => [ "Robert E. Burns American Legion Post 165", "wipost165.org" ],
-      "url" => "#{PUBLIC_ORIGIN}/"
-    }
+    PublicDiscovery.website_schema
+  end
+
+  def public_organization_schema
+    PublicDiscovery.organization_schema
+  end
+
+  def public_json_ld_blocks
+    blocks = []
+    blocks << public_website_schema if action_name == "home"
+    blocks << public_organization_schema
+    if action_name == "event" && PublicDiscovery.event_schema?(@event)
+      blocks << PublicDiscovery.event_schema(@event, url: public_canonical_url)
+    end
+    blocks
   end
 
   def person_context
@@ -94,8 +103,7 @@ module PublicSiteHelper
   end
 
   def public_contact_email
-    value = Rails.configuration.x.public_contact_email.to_s
-    value if value.match?(URI::MailTo::EMAIL_REGEXP) && !value.match?(/[\r\n]/)
+    PublicPost.email
   end
 
   def public_contact_phone
@@ -107,7 +115,7 @@ module PublicSiteHelper
   end
 
   def post_facebook_url
-    "https://www.facebook.com/wiPost165"
+    PublicPost::FACEBOOK_URL
   end
 
   def public_phone_href
@@ -126,13 +134,6 @@ module PublicSiteHelper
     javascript_tag(google_tag_script(id), script_options)
   end
 
-  def self.sitemap_paths
-    # Coming soon serves one holding page at every public route.
-    return %w[/] if Rails.configuration.x.public_site_coming_soon
-
-    SITEMAP_PATHS
-  end
-
   def self.robots_txt
     <<~TEXT
       # Allow crawlers to read each page's noindex directive during preparation.
@@ -142,16 +143,6 @@ module PublicSiteHelper
 
       Sitemap: #{PUBLIC_ORIGIN}/sitemap.xml
     TEXT
-  end
-
-  def self.sitemap_xml
-    entries = sitemap_paths.map { |path| "  <url><loc>#{ERB::Util.html_escape("#{PUBLIC_ORIGIN}#{path}")}</loc></url>" }
-    <<~XML
-      <?xml version="1.0" encoding="UTF-8"?>
-      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      #{entries.join("\n")}
-      </urlset>
-    XML
   end
 
   def harbor_illustration_srcset
