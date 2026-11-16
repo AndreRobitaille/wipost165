@@ -11,6 +11,10 @@ verify_prebuilt_image() {
   require_image_digest || return
   local head="$1" repository="ghcr.io/andrerobitaille/legion-post-165-wi-public" format
   [[ "$head" =~ ^[a-f0-9]{40}$ ]] || return 1
+  [[ "${KAMAL_VERSION:-$head}" == "$head" ]] || {
+    echo "release: KAMAL_VERSION must match reviewed HEAD; select a clean reviewed rollback checkout and its matching digest" >&2
+    return 1
+  }
   format='{"digests":{{json .RepoDigests}},"os":{{json .Os}},"architecture":{{json .Architecture}},"labels":{{json .Config.Labels}}}'
   release_ssh "docker image inspect --format '$format' '$repository:$head'" | ruby -rjson -e '
     head, digest, repository = ARGV
@@ -36,8 +40,8 @@ release_run() (
   else
     bin/publisher-check
   fi
-  bin/kamal build pull -c "$release_temp_config"
+  release_kamal build pull
   verify_prebuilt_image "$(git rev-parse HEAD)"
-  bin/kamal "$1" --skip-push -c "$release_temp_config"
+  release_kamal "$1" --skip-push
   release_verify
 )

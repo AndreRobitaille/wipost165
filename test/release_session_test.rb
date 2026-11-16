@@ -80,6 +80,74 @@ class ReleaseSessionTest < ActiveSupport::TestCase
     end
   end
 
+  test "session Kamal helper selects tunnel configuration without retaining the agent" do
+    with_release do |root, environment|
+      output, status = command(root, environment, "session", "export SSH_AUTH_SOCK=synthetic-agent\ncd /\nrelease_kamal app details\nexit\n")
+      assert status.success?, output
+      calls = events(root).grep(/^KAMAL /)
+      assert calls.any? { |event| event.match?(%r{\AKAMAL app details -c /tmp/post165-public-release\.[^/]+/deploy\.yml\z}) }, calls.inspect
+      assert_includes events(root), "SESSION_CONFIG_VERIFIED"
+      assert_includes events(root), "KAMAL_APP_DETAILS_DIRECTORY #{root}"
+      assert_equal 1, events(root).count("OPEN")
+      assert_equal 1, events(root).count("CLOSE")
+      refute_includes output, "Agent leaked"
+    end
+  end
+
+  test "release shell ignores inherited exit options prompt commands and history file" do
+    with_release do |root, environment|
+      history = "#{root}/operator-history"
+      File.write(history, "existing history\n")
+      inherited = environment.merge(
+        "SHELLOPTS" => "braceexpand:errexit:hashall",
+        "BASHOPTS" => "checkwinsize:cmdhist",
+        "PROMPT_COMMAND" => "echo PROMPT_LEAK >> \"$TEST_ROOT/events\"; exit 89",
+        "HISTFILE" => history,
+        "HISTSIZE" => "1000",
+        "HISTFILESIZE" => "1000"
+      )
+      output, status = command(root, inherited, "session", "echo synthetic-release-secret >/dev/null\nfalse\nrelease_ssh hostname </dev/null\nexit\n")
+      assert status.success?, output
+      assert_equal "existing history\n", File.read(history)
+      refute_includes events(root), "PROMPT_LEAK"
+      assert_equal 1, events(root).count("OPEN")
+      assert_equal 1, events(root).count("CLOSE")
+      assert_equal "CLOSE", events(root).last
+    end
+  end
+
+  test "session Kamal helper refuses another configuration and a lost master" do
+    with_release do |root, environment|
+      input = "release_kamal app details --config-file=/tmp/another.yml\ntouch disconnected\nrelease_kamal app details\nexit\n"
+      output, = command(root, environment, "session", input)
+      assert_includes output, "release_kamal selects the session configuration"
+      assert_includes output, "Release tunnel is unavailable"
+      refute events(root).any? { |event| event.start_with?("KAMAL app details") }
+      assert_equal 1, events(root).count("OPEN")
+      assert_equal 1, events(root).count("CLOSE")
+    end
+  end
+
+  test "Kamal build refusal runs offline before a build can proceed" do
+    with_release do |root, environment|
+      output, status = Open3.capture2e(environment, "#{root}/.kamal/hooks/pre-build", chdir: root)
+      refute status.success?, output
+      assert_includes output, "Kamal builds are disabled"
+      refute File.exist?("#{root}/events"), "The refusal hook must not contact SSH, Kamal or Docker"
+    end
+  end
+
+  test "rollback version mismatch stops at the image guard before boot" do
+    with_release do |root, environment|
+      output, = command(root, environment, "session", "release_kamal rollback #{'e' * 40}\nexit\n")
+      assert_includes output, "KAMAL_VERSION must match reviewed HEAD"
+      assert_equal 0, events(root).count("VERIFY"), "A different rollback target must fail before inspecting the HEAD image"
+      refute_includes events(root), "BOOT"
+      assert_equal 1, events(root).count("OPEN")
+      assert_equal 1, events(root).count("CLOSE")
+    end
+  end
+
   test "image verification cannot run outside the owned session" do
     with_release do |root, environment|
       output, status = command(root, environment, "verify-image")
@@ -107,7 +175,7 @@ class ReleaseSessionTest < ActiveSupport::TestCase
   def with_release
     Dir.mktmpdir("release-session-test") do |root|
       %w[bin lib config fake .kamal/hooks script].each { |path| FileUtils.mkdir_p("#{root}/#{path}") }
-      %w[bin/release bin/publish-image lib/release_image.sh config/deploy.yml .kamal/hooks/pre-deploy script/build_production_image].each do |path|
+      %w[bin/release bin/publish-image lib/release_image.sh config/deploy.yml .kamal/hooks/pre-build .kamal/hooks/pre-deploy script/build_production_image].each do |path|
         FileUtils.cp(Rails.root.join(path), "#{root}/#{path}")
       end
       File.write("#{root}/identity", "test-only")
@@ -140,8 +208,21 @@ class ReleaseSessionTest < ActiveSupport::TestCase
           publisher-check) echo PUBLISHER_READ >> "$TEST_ROOT/events" ;;
           kamal)
             echo "KAMAL $*" >> "$TEST_ROOT/events"
+            [[ -z "${SSH_AUTH_SOCK:-}" ]] || { echo "Agent leaked" >&2; exit 1; }
+            [[ "$1 $2" != "app details" ]] || echo "KAMAL_APP_DETAILS_DIRECTORY $PWD" >> "$TEST_ROOT/events"
+            if [[ "$1" == config ]]; then
+              "$TEST_RUBY" -ryaml -e '
+                config = YAML.safe_load_file(ARGV[0])
+                abort "Remote builder selected" if config.dig("builder", "remote")
+                abort "Wrong tunnel" unless config.dig("ssh", "proxy_command") == "socat - TCP:127.0.0.1:#{ENV.fetch("RELEASE_TUNNEL_PORT")}"
+                abort "Wrong identity" unless config.dig("ssh", "keys") == [ ENV.fetch("RELEASE_IDENTITY_FILE") ]
+              ' "${@: -1}" || exit "$?"
+              echo SESSION_CONFIG_VERIFIED >> "$TEST_ROOT/events"
+            fi
             [[ "$1" != setup ]] || exit 1
-            if [[ "$1" == deploy ]]; then
+            if [[ "$1" == deploy || "$1" == rollback ]]; then
+              export KAMAL_VERSION="$TEST_HEAD"
+              [[ "$1" != rollback ]] || export KAMAL_VERSION="$2"
               [[ -z "${POST_PULL_IMAGE_METADATA:-}" ]] || export IMAGE_METADATA="$POST_PULL_IMAGE_METADATA"
               .kamal/hooks/pre-deploy || exit "$?"
               echo BOOT >> "$TEST_ROOT/events"
