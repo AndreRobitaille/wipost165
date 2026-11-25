@@ -73,11 +73,16 @@ Do not deploy this site until Andre says so. Agents may work on the code. A merg
 is not a deploy; production updates only when Kamal runs. Do not copy production
 data anywhere without Andre's explicit yes.
 
-Read `docs/DEPLOYMENT.md` before server work. **One operation means one outer SSH
+Read `docs/SHARED_HOST_DEPLOYMENT.md` and `docs/DEPLOYMENT.md` before server work.
+The [shared agreement](docs/SHARED_HOST_DEPLOYMENT.md) defines the common operator
+sequence; this app's deployment guide owns its configuration and exceptions.
+**One operation means one outer SSH
 connection**, from the first production inspection through build, deployment,
 certificate issuance, and final verification. Use `bin/release session` and keep
 that same shell/tunnel open throughout. Use `release_setup`, `release_deploy`,
-`release_verify`, and `release_ssh` inside it. A failed command returns to the
+`release_verify`, `release_ssh`, and `release_kamal` inside it. Use `release_kamal`
+for additional authorized Kamal commands; it checks the existing tunnel and uses
+the generated session configuration. A failed command returns to the
 same session for diagnosis; it is not permission to close and recreate the tunnel.
 
 `bin/release check` is local-only. Never sequence a standalone remote preflight,
@@ -87,8 +92,14 @@ forward. No direct fallback, parallel outer connections, or automatic reconnect.
 If the tunnel itself fails, stop. Wait at least five minutes before one explicitly
 chosen replacement attempt; preserve the next successful tunnel until finished.
 Close only the tunnel owned by this operation, once, at the end. Preserve the
-members and Two Rivers services. Latest status:
-`docs/deployment/2026-09-27-coming-soon-status.md`.
+members and Two Rivers services. Current recorded status is in `docs/HANDOFF.md`;
+dated release records do not establish the next operation's live baseline.
+
+Production images build in GitHub Actions. The pre-build hook refuses Kamal
+builds. Normal deployment remains `release_deploy` with a verified
+`RELEASE_IMAGE_DIGEST`. Rollback requires a clean reviewed checkout and its
+matching verified image through that same guarded path; do not invoke arbitrary
+Kamal rollback versions.
 
 ## Verification
 

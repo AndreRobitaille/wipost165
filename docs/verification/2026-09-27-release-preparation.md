@@ -1,5 +1,9 @@
 # Full-site release preparation — September 27, 2026
 
+Historical preparation only. The [shared agreement](../SHARED_HOST_DEPLOYMENT.md)
+and [current deployment guide](../DEPLOYMENT.md) supersede its operator commands,
+local Docker requirements and rollback procedure. Current images build in Actions.
+
 This is a prepared procedure, not release authorization or a production-state
 claim. Current local code is `c7b716e` plus uncommitted changes. The last recorded
 public deployment is `5d1533248e604de4b8690b7974be7103f1b3d7c7` in coming-soon mode;
@@ -110,36 +114,12 @@ public domains, and unchanged members/Two Rivers containers. In addition, check:
 - TLS, HTTP-to-HTTPS behavior, public DNS, and protected members/Two Rivers health
   match the deployment guide. No mail or DNS changes are part of this release.
 
-## Prepared rollback procedure — do not run without release authorization
+## Superseded rollback procedure
 
-Record the pre-release public revision from live inspection; do not substitute
-`main`, an old note, or the historical `5d15332` without checking. Rollback requires
-that version's container/image to remain available. The installed Kamal 2.12 code
-checks for the old container before rollback, then boots its image using the
-supplied configuration. Therefore prepare a holding-mode copy of the **session's
-generated configuration**, preserving its tunnel settings:
-
-```sh
-# Inside the same still-open bin/release session; set this from its live inspection.
-rollback_version='<verified-pre-release-public-revision>'
-rollback_config="$release_temp_dir/rollback.yml"
-ruby -ryaml -e '
-  config = YAML.safe_load_file(ARGV[0], aliases: true)
-  config.fetch("env").fetch("clear")["PUBLIC_SITE_COMING_SOON"] = "1"
-  config.fetch("env").fetch("clear")["PUBLIC_SITE_LAUNCH_READY"] = "0"
-  File.write(ARGV[1], YAML.dump(config))
-' "$release_temp_config" "$rollback_config"
-bin/kamal rollback "$rollback_version" -c "$rollback_config"
-```
-
-This affects only the public service and retains the operation's outer tunnel.
-If that candidate is absent, stop and diagnose in the same session; do not pick
-another image, reconnect, or use a direct transport automatically. The rollback
-command is prepared from installed Kamal source, not production-tested here.
-
-After rollback, manually verify the public container name/revision equals the
-selected rollback version, both domains show coming-soon, `/up` responds, and the
-members/Two Rivers container IDs and health match the session's before snapshot.
-Do not use `release_verify` as proof of rollback: it deliberately expects local
-HEAD, which differs from an older rollback version. Record the actual restored
-revision and close the owned tunnel once after all checks finish.
+The former arbitrary-version `bin/kamal rollback` recipe is retired. It predates
+the current image guard, which verifies reviewed HEAD and rejects a differing
+`KAMAL_VERSION`. A rollback must select clean reviewed source and its matching
+verified digest through the [current guarded release path](../DEPLOYMENT.md#verification-and-rollback),
+retaining the existing operation's tunnel. Holding-mode configuration also needs
+review and image evidence; do not override the session configuration or bypass
+the image guard. No production rollback rehearsal was performed for this record.
