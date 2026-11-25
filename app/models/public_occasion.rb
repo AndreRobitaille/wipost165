@@ -27,6 +27,11 @@ class PublicOccasion
     end
   end
 
+  # ISO 8601 end in the event's zone. Absent unless the publisher supplied an end time.
+  def end_date_iso
+    ends_at&.in_time_zone(timezone)&.iso8601
+  end
+
   def to_param = slug
   def cancelled? = @cancelled == true
   def all_day? = @all_day == true

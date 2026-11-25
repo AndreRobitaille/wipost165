@@ -4,6 +4,19 @@ class PublicDiscovery
   ORGANIZATION_ID = "#{PublicSiteHelper::PUBLIC_ORIGIN}/#organization".freeze
   ORIGIN = PublicSiteHelper::PUBLIC_ORIGIN
   FETCH = Object.new.freeze
+  # Full words that mean the same street as the meeting place's abbreviations.
+  STREET_SUFFIXES = {
+    "avenue" => "ave",
+    "boulevard" => "blvd",
+    "court" => "ct",
+    "drive" => "dr",
+    "lane" => "ln",
+    "place" => "pl",
+    "road" => "rd",
+    "street" => "st"
+  }.freeze
+  LOCATION_TAIL = /\A(?<prefix>.+),\s*(?<locality>[A-Za-z][A-Za-z .'-]*),\s*(?<region>[A-Z]{2})\s+(?<postal>\d{5}(?:-\d{4})?)\s*\z/
+  private_constant :STREET_SUFFIXES, :LOCATION_TAIL
 
   def self.llms_txt(events: FETCH)
     records = upcoming_events(events)
@@ -110,6 +123,8 @@ class PublicDiscovery
       "organizer" => { "@id" => ORGANIZATION_ID },
       "url" => url
     }
+    end_date = event.end_date_iso
+    data["endDate"] = end_date if end_date
     description = event.description.to_s.squish
     data["description"] = description if description.present?
     place = place_for(event.location_name)
@@ -117,33 +132,67 @@ class PublicDiscovery
     data
   end
 
+  # Home events use the Organization block's meeting place, so the venue name
+  # and postal address cannot drift. Any other location is a PostalAddress only
+  # when it already contains a venue name, a numbered street, and city, state,
+  # and ZIP. Otherwise the name is one line and the address is omitted.
   def self.place_for(name)
     text = name.to_s.strip
     return if text.empty?
+    return PublicPost.meeting_place if home_venue?(text)
 
-    place = { "@type" => "Place", "name" => text }
-    address = address_from_location(text)
-    place["address"] = address if address
-    place
+    place_from_location(text) || { "@type" => "Place", "name" => text.squish }
   end
 
-  # Use only city, state, ZIP, and a numbered street that are already in the
-  # location text. A venue name stays on the Place and is not turned into a street.
-  def self.address_from_location(text)
-    match = text.match(/\A(?<prefix>.+),\s*(?<locality>[A-Za-z][A-Za-z .'-]*),\s*(?<region>[A-Z]{2})\s+(?<postal>\d{5}(?:-\d{4})?)\z/)
+  def self.home_venue?(text)
+    key = venue_key(text)
+    key.present? && home_venue_keys.include?(key)
+  end
+
+  def self.home_venue_keys
+    place = PublicPost.meeting_place
+    address = place.fetch("address")
+    line = [
+      address.fetch("streetAddress"),
+      address.fetch("addressLocality"),
+      "#{address.fetch("addressRegion")} #{address.fetch("postalCode")}"
+    ].join(", ")
+    name = place.fetch("name")
+    [ name, line, "#{name}, #{line}" ].map { |form| venue_key(form) }
+  end
+
+  def self.venue_key(text)
+    pattern = /\b(?:#{STREET_SUFFIXES.keys.join("|")})\b/
+    text.to_s.downcase
+      .gsub("&", " and ")
+      .gsub(/\b(\d{5})-\d{4}\b/, "\\1")
+      .gsub(pattern, STREET_SUFFIXES)
+      .gsub(/[^a-z0-9]+/, " ")
+      .squish
+  end
+
+  def self.place_from_location(text)
+    match = text.gsub(/\s*[\r\n]+\s*/, ", ").match(LOCATION_TAIL)
     return unless match
 
-    street = match[:prefix].split(",").map(&:strip).compact_blank.last
-    return unless street&.match?(/\d/)
+    parts = match[:prefix].split(",").map(&:strip).compact_blank
+    street = parts.last
+    return unless parts.size > 1 && street_line?(street)
+
+    name = parts[0..-2].join(", ").squish
+    return if name.empty?
 
     {
-      "@type" => "PostalAddress",
-      "streetAddress" => street,
-      "addressLocality" => match[:locality],
-      "addressRegion" => match[:region],
-      "postalCode" => match[:postal]
+      "@type" => "Place",
+      "name" => name,
+      "address" => PublicPost.postal_address(street, match[:locality].squish, match[:region], match[:postal])
     }
   end
+
+  def self.street_line?(text)
+    text.match?(/\A\d/) && text.match?(/[A-Za-z]/)
+  end
+  private_class_method :home_venue?, :home_venue_keys, :venue_key, :place_from_location, :street_line?
 
   def self.published_events(events)
     records = events.equal?(FETCH) ? feed_events : events

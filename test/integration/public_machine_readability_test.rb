@@ -51,6 +51,15 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
     response.body[%r{<loc>#{Regexp.escape("#{ORIGIN}#{path}")}</loc><lastmod>([^<]+)</lastmod>}, 1]
   end
 
+  def where_text
+    css_select("dt").find { |node| node.text == "Where" }.parent.at_css("dd").text
+  end
+
+  def event_schema_for(attrs)
+    record = PublicOccasion.new(base_event.merge(attrs), timezone: "America/Chicago")
+    PublicDiscovery.event_schema(record, url: "#{ORIGIN}/events/#{record.slug}")
+  end
+
   def assert_valid_content_date(lastmod)
     assert_match(/\A\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?\z/, lastmod)
     assert_operator Date.iso8601(lastmod[0, 10]), :<=, Date.current
@@ -211,12 +220,17 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
         refute PublicDiscovery.event_schema(blank, url: "#{ORIGIN}/events/upcoming_public").key?("description")
         assert_includes response.body, GUESTS_LINE
         assert_equal "Place", event_ld.dig("location", "@type")
-        assert_equal upcoming.fetch("location"), event_ld.dig("location", "name")
+        assert_equal PublicPost::MEETING_NAME, event_ld.dig("location", "name")
+        assert_not_includes event_ld.dig("location", "name"), "\n"
+        assert_equal PublicPost.meeting_place, event_ld["location"]
+        assert_equal organization["location"], event_ld["location"]
         assert_equal "7227 Sandy Hill Ln", event_ld.dig("location", "address", "streetAddress")
         assert_equal "Two Rivers", event_ld.dig("location", "address", "addressLocality")
         assert_equal "WI", event_ld.dig("location", "address", "addressRegion")
         assert_equal "54241", event_ld.dig("location", "address", "postalCode")
-        assert_nil event_ld.dig("location", "address", "addressCountry")
+        assert_equal "US", event_ld.dig("location", "address", "addressCountry")
+        assert_equal "2026-10-20T20:00:00-05:00", event_ld["endDate"]
+        assert_equal upcoming.fetch("location"), where_text
         refute_phone(event_ld)
         assert_equal ORGANIZATION_ID, organization["@id"]
         assert_equal PublicPost::NAME, organization["name"]
@@ -239,6 +253,7 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
         plain = json_ld_blocks.find { |data| data["@type"] == "Event" }
         assert_equal "Gathering without a street address", plain["name"]
         refute plain.key?("location")
+        refute plain.key?("endDate")
         refute_phone(plain)
 
         get event_path(all_day.fetch("id"))
@@ -247,6 +262,7 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
         assert_equal "2026-12-01T00:00:00-06:00", day["startDate"]
         assert_equal "Example location — not a real event", day.dig("location", "name")
         refute day["location"].key?("address")
+        refute day.key?("endDate")
         refute day.key?("description")
         assert_not_includes day.to_json, GUESTS_LINE
 
@@ -292,10 +308,130 @@ class PublicMachineReadabilityTest < ActionDispatch::IntegrationTest
         assert_select "#company"
         v2_event = json_ld_blocks.find { |data| data["@type"] == "Event" }
         assert_equal "Synthetic event for contract testing.", v2_event["description"]
+        assert_equal PublicPost.meeting_place, v2_event["location"]
+        assert_equal "2026-10-20T20:00:00-05:00", v2_event["endDate"]
+        assert_equal upcoming.fetch("location"), where_text
         assert_not_includes v2_event.to_json, GUESTS_LINE
         assert_includes response.body, GUESTS_LINE
       end
     end
+  end
+
+  test "event JSON-LD uses the shared venue address and an end time only when one exists" do
+    location = "Manitowoc Rifle and Pistol Club, 7227 Sandy Hill Lane\nTwo Rivers, WI 54241"
+    home = base_event.merge(
+      "id" => "home_venue",
+      "title" => "Post meeting",
+      "starts_at" => "2026-10-20T18:00:00-05:00",
+      "ends_at" => "2026-10-20T20:00:00-05:00",
+      "location" => location,
+      "updated_at" => "2026-10-02T12:00:00Z"
+    )
+
+    travel_to Time.utc(2026, 10, 5, 16) do
+      @replies << publisher_response(detail(home))
+      using_feed do
+        get event_path(home.fetch("id"))
+        assert_response :success
+        event_ld = json_ld_blocks.find { |data| data["@type"] == "Event" }
+        organization = json_ld_blocks.find { |data| data["@type"] == "Organization" }
+        assert_equal PublicPost.meeting_place, event_ld["location"]
+        assert_equal organization["location"], event_ld["location"]
+        assert_equal PublicPost::MEETING_NAME, event_ld.dig("location", "name")
+        assert_not_includes event_ld.dig("location", "name"), "\n"
+        assert_equal "PostalAddress", event_ld.dig("location", "address", "@type")
+        assert_equal "7227 Sandy Hill Ln", event_ld.dig("location", "address", "streetAddress")
+        assert_equal "Two Rivers", event_ld.dig("location", "address", "addressLocality")
+        assert_equal "WI", event_ld.dig("location", "address", "addressRegion")
+        assert_equal "54241", event_ld.dig("location", "address", "postalCode")
+        assert_equal "US", event_ld.dig("location", "address", "addressCountry")
+        assert_equal "2026-10-20T20:00:00-05:00", event_ld["endDate"]
+        assert_equal location, where_text
+        script = css_select('script[type="application/ld+json"]').map(&:text).join
+        assert_not_includes script, "Sandy Hill Lane"
+        assert_not_includes script, "Rifle and Pistol"
+      end
+    end
+
+    open_home = event_schema_for("id" => "open_home", "ends_at" => nil, "location" => "Manitowoc Rifle & Pistol Club")
+    assert_equal PublicPost.meeting_place, open_home["location"]
+    refute open_home.key?("endDate")
+
+    zip4 = event_schema_for(
+      "id" => "zip4_home",
+      "ends_at" => nil,
+      "location" => "Manitowoc Rifle and Pistol Club, 7227 Sandy Hill Lane, Two Rivers, WI 54241-1234"
+    )
+    assert_equal PublicPost.meeting_place, zip4["location"]
+
+    lines = event_schema_for(
+      "id" => "line_home",
+      "ends_at" => nil,
+      "location" => "Manitowoc Rifle and Pistol Club\n7227 Sandy Hill Lane\nTwo Rivers, WI 54241"
+    )
+    assert_equal PublicPost.meeting_place, lines["location"]
+    refute lines.key?("endDate")
+
+    same_street = event_schema_for(
+      "id" => "same_street",
+      "ends_at" => nil,
+      "location" => "Auxiliary room, 7227 Sandy Hill Lane, Two Rivers, WI 54241"
+    )
+    assert_equal "Auxiliary room", same_street.dig("location", "name")
+    assert_equal "7227 Sandy Hill Lane", same_street.dig("location", "address", "streetAddress")
+    assert_equal "US", same_street.dig("location", "address", "addressCountry")
+    refute_equal PublicPost.meeting_place, same_street["location"]
+
+    other = event_schema_for(
+      "id" => "other_venue",
+      "ends_at" => "2026-10-03T20:00:00-05:00",
+      "location" => "City Hall, 900 Quay Street\nManitowoc, WI 54220"
+    )
+    assert_equal "City Hall", other.dig("location", "name")
+    assert_not_includes other.dig("location", "name"), "\n"
+    refute_equal PublicPost.meeting_place, other["location"]
+    assert_equal "PostalAddress", other.dig("location", "address", "@type")
+    assert_equal "900 Quay Street", other.dig("location", "address", "streetAddress")
+    assert_equal "Manitowoc", other.dig("location", "address", "addressLocality")
+    assert_equal "WI", other.dig("location", "address", "addressRegion")
+    assert_equal "54220", other.dig("location", "address", "postalCode")
+    assert_equal "US", other.dig("location", "address", "addressCountry")
+    assert_equal "2026-10-03T20:00:00-05:00", other["endDate"]
+
+    span = event_schema_for(
+      "id" => "span_venue",
+      "all_day" => true,
+      "starts_at" => nil,
+      "ends_at" => nil,
+      "starts_on" => "2026-12-01",
+      "ends_on_exclusive" => "2026-12-03",
+      "location" => "City Hall, 900 Quay Street, Manitowoc, WI 54220"
+    )
+    assert_equal "2026-12-01T00:00:00-06:00", span["startDate"]
+    refute span.key?("endDate")
+    assert_equal "City Hall", span.dig("location", "name")
+
+    loose = event_schema_for("id" => "loose_venue", "ends_at" => nil, "location" => "Riverside park\nnear the band shell")
+    assert_equal "Riverside park near the band shell", loose.dig("location", "name")
+    refute loose["location"].key?("address")
+    refute loose.key?("endDate")
+
+    street_only = event_schema_for("id" => "street_only", "ends_at" => nil, "location" => "100 Main Street\nManitowoc, WI 54220")
+    assert_equal "100 Main Street Manitowoc, WI 54220", street_only.dig("location", "name")
+    refute street_only["location"].key?("address")
+
+    ambiguous = event_schema_for(
+      "id" => "ambiguous_venue",
+      "ends_at" => nil,
+      "location" => "City Hall, 100 Main Street, Suite 4, Manitowoc, WI 54220"
+    )
+    assert_equal "City Hall, 100 Main Street, Suite 4, Manitowoc, WI 54220", ambiguous.dig("location", "name")
+    refute ambiguous["location"].key?("address")
+
+    point = event_schema_for("id" => "point_venue", "ends_at" => "2026-10-03T18:00:00-05:00", "location" => nil)
+    assert_equal "2026-10-03T18:00:00-05:00", point["startDate"]
+    assert_equal "2026-10-03T18:00:00-05:00", point["endDate"]
+    refute point.key?("location")
   end
 
   test "llms.txt repeats the visit and contact facts and omits a blank email" do
