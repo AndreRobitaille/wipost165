@@ -56,3 +56,5 @@ gem "minitest-mock", "~> 5.27", group: :test
 
 # JSON 3 takes parser options as keywords. Rails 8.1.4+ ActiveSupport::JSON.decode matches that.
 gem "json", "~> 3.1"
+
+gem "icalendar", "~> 2.14"

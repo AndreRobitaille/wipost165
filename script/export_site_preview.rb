@@ -52,6 +52,7 @@ def template_event(state: :active, timing: :timed)
   }, timezone: "America/Chicago")
   event.define_singleton_method(:upcoming?) { state == :active }
   event.define_singleton_method(:past?) { state == :past }
+  event.define_singleton_method(:add_to_calendar?) { state == :active }
   event
 end
 
@@ -69,6 +70,7 @@ end
 SitesTemplateContent.event = template_event
 pages = %w[/why-the-legion /visit /contact /about /membership /veteran-help].to_h { |route| [ route, render_page.call(route).to_html ] }
 templates = { "pages" => pages, "home" => {}, "calendar" => {}, "details" => {}, "errors" => {} }
+templates["non_map_locations"] = PublicSiteHelper::NON_MAP_LOCATIONS.map(&:source)
 
 home = render_page.call("/")
 invitation = home.at_css(".launch-invitation")
@@ -112,6 +114,15 @@ SitesTemplateContent.state = :event
   details.at_css("time")["datetime"] = "__SITES_starts_at__" if details.at_css("time")
   details.at_css("dd small").content = "Until __SITES_until__" if details.at_css("dd small")
   details.at_css(".body-copy").inner_html = "__SITES_description_html__"
+  location = details.at_css(".event-location")
+  location.at_css("a")["href"] = "__SITES_map_url__"
+  templates["details"]["mapped_location"] = location.inner_html
+  location.inner_html = "__SITES_location_html__"
+  if (calendar = details.at_css(".event-calendar"))
+    calendar.at_css('a[href^="https://calendar.google.com"]')["href"] = "__SITES_google_url__"
+    templates["details"]["add_to_calendar"] = calendar.to_html
+    calendar.replace("__SITES_calendar_actions__")
+  end
   templates["details"][[ state, timing, modal ? "modal" : "page" ].join("_")] = details.to_html
   if state == "active" && timing == "timed"
     details.replace("__SITES_details__")

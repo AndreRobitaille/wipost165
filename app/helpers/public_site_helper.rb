@@ -1,5 +1,10 @@
 module PublicSiteHelper
   PUBLIC_ORIGIN = "https://wipost165.org".freeze
+  NON_MAP_LOCATIONS = [
+    /\b(t\.?b\.?[adc]|unknown|undecided|pending|(to be|will be) (confirmed|determined|announced|decided|advised)|not (yet )?(recorded|set|known|confirmed|specified))\b/i,
+    %r{^(n/?a|none|not applicable|[-?–—]+|teams)$}i,
+    %r{https?://|www\.|\b(online|virtual|zoom|webex|skype|webinar|teleconference|conference call|phone (call|only)|(by|via) phone|dial[- ]in|google meet|teams meeting|(microsoft|ms) teams|meet\.google\.com)\b}i
+  ].freeze
   # Below 900px the harbor is the full page width. Above that, object-fit: cover in a
   # row at least 590px tall paints about 885–893px of the 3:2 artwork (measured), so a
   # flat 900px slot is the drawn width. 52vw described the column and selected 480/768.
@@ -156,6 +161,7 @@ module PublicSiteHelper
   # Home and the practical pages only need the launch sheet. Interior pages add their own.
   def launch_stylesheets
     sheets = %w[launch]
+    sheets << "event_actions" if %w[events event].include?(action_name)
     sheets << "post_pages" if %w[about membership help].include?(action_name)
     sheets << "why_legion" if action_name == "why_legion"
     sheets
@@ -176,6 +182,18 @@ module PublicSiteHelper
     return "Date and time to be confirmed" unless event.starts_at
 
     event.starts_at.strftime("%A, %B %-d, %Y · %-I:%M %p %Z")
+  end
+
+  def event_map_url(location)
+    place = location.to_s.squish
+    return if place.blank? || NON_MAP_LOCATIONS.any? { |pattern| pattern.match?(place) }
+
+    "https://www.google.com/maps/search/?api=1&query=#{ERB::Util.url_encode(place)}"
+  end
+
+  def event_google_calendar_url(event)
+    calendar = EventCalendar.new(event, url: public_canonical_url)
+    "https://calendar.google.com/calendar/r/eventedit?#{calendar.google_query}"
   end
 
   private
