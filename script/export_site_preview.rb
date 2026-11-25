@@ -70,6 +70,7 @@ end
 SitesTemplateContent.event = template_event
 pages = %w[/why-the-legion /visit /contact /about /membership /veteran-help].to_h { |route| [ route, render_page.call(route).to_html ] }
 templates = { "pages" => pages, "home" => {}, "calendar" => {}, "details" => {}, "errors" => {} }
+templates["event_map_prefixes"] = PublicSiteHelper::EVENT_MAP_PREFIXES
 templates["non_map_locations"] = PublicSiteHelper::NON_MAP_LOCATIONS.map(&:source)
 
 home = render_page.call("/")
@@ -115,7 +116,10 @@ SitesTemplateContent.state = :event
   details.at_css("dd small").content = "Until __SITES_until__" if details.at_css("dd small")
   details.at_css(".body-copy").inner_html = "__SITES_description_html__"
   location = details.at_css(".event-location")
-  location.at_css("a")["href"] = "__SITES_map_url__"
+  details.at_css(".event-details")["data-event-device"] = "__SITES_device__"
+  map = location.at_css(".event-map")
+  map["href"] = "__SITES_map_url__"
+  map["data-ios-href"] = "__SITES_ios_map_url__"
   templates["details"]["mapped_location"] = location.inner_html
   location.inner_html = "__SITES_location_html__"
   if (calendar = details.at_css(".event-calendar"))

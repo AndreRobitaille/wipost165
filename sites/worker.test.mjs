@@ -124,11 +124,23 @@ test('published details and downloads use the same calendar dates, location and 
   assert.match(html, /href="\/events\/public-1\/calendar\.ics"/);
   const href = html.match(/href="(https:\/\/calendar\.google\.com[^"]+)"/)[1].replaceAll('&amp;', '&');
   const google = new URL(href);
+  assert.equal(google.pathname, '/calendar/render');
   assert.equal(google.searchParams.get('dates'), '20261024T133000Z/20261024T153000Z');
   assert.equal(google.searchParams.get('details'), 'https://wipost165.org/events/public-1');
   assert.equal(google.searchParams.get('location'), event.location);
-  assert.match(html, /www\.google\.com\/maps\/search\/\?api=1&amp;query=Park%2C\+12\+Main\+St/);
+  assert.match(html, /www\.google\.com\/maps\/search\/\?api=1&amp;query=Park%2C%2012%20Main%20St/);
+  assert.match(html, /data-event-device="desktop"/);
+  for (const [agent, device, map] of [
+    ['Android', 'android', 'geo:0,0?q='],
+    ['iPhone', 'ios', 'https://maps.apple.com/?q=']
+  ]) {
+    const mobile = await request(path, fetchEvent, { request: { headers: { 'User-Agent': agent, 'Turbo-Frame': 'event-details' } } });
+    assert.ok(mobile.html.includes(`data-event-device="${device}"`));
+    assert.ok(mobile.html.includes(`href="${map}Park%2C%2012%20Main%20St"`));
+    assert.match(mobile.html, /class="event-tool event-native-calendar"/);
+  }
   const download = await request(path + '/calendar.ics', fetchEvent);
+  assert.match(download.response.headers.get('Content-Disposition'), /^inline;/);
   assert.equal(download.response.headers.get('content-type'), 'text/calendar; charset=utf-8');
   assert.match(download.html, /DTSTART:20261024T133000Z\r\nDTEND:20261024T153000Z/);
   assert.ok(download.html.includes('SUMMARY:Dinner\\, music & friends'));
