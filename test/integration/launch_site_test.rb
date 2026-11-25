@@ -42,18 +42,20 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
       using_feed do
         [ {}, { "Turbo-Frame" => "event-details" } ].each do |headers|
           get path, headers: headers
+          assert_select ".event-details[data-event-device=desktop]"
           assert_select ".event-when details:not([open]) > summary span", text: "Add to calendar"
-          assert_select ".event-calendar a[href=?][data-turbo=false]", event_calendar_path(event["id"]) do
+          assert_select ".event-calendar-picker a[href=?][data-turbo=false][target=_top]:not([download])", event_calendar_path(event["id"]) do
             assert_select "span", text: "Apple Calendar"
-            assert_select ".event-calendar-hint", text: "iPhone or iPad"
+            assert_select ".event-calendar-hint", text: /open it in Calendar/
           end
-          assert_select ".event-calendar a[href^='https://calendar.google.com'] .event-calendar-hint", text: "Android or Google account"
+          assert_select ".event-calendar a[href^='https://calendar.google.com'] .event-calendar-hint", text: "Sign in to Google to save"
           google = css_select(".event-calendar a").last
-          query = Rack::Utils.parse_query(URI(google["href"]).query)
-          assert_equal "calendar.google.com", URI(google["href"]).host
+          google_url = URI(google["href"])
+          query = Rack::Utils.parse_query(google_url.query)
+          assert_equal [ "calendar.google.com", "/calendar/render", "_blank" ], [ google_url.host, google_url.path, google["target"] ]
           assert_equal [ event["title"], "20261003T230000Z/20261004T020000Z", event["location"], url ],
             query.values_at("text", "dates", "location", "details")
-          map = URI(css_select(".event-location a").first["href"])
+          map = URI(css_select("a.event-map").sole["href"])
           assert_select ".event-map[aria-label=?] .event-tool", "View on map — #{event["location"]}", text: "View on map"
           assert_equal "www.google.com", map.host
           assert_equal({ "api" => "1", "query" => event["location"] }, Rack::Utils.parse_query(map.query))
@@ -62,11 +64,34 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
         assert_response :success
         assert_equal "text/calendar", response.media_type
         assert_equal "no-store", response.headers["Cache-Control"]
-        assert_match(/attachment;.*\.ics/, response.headers["Content-Disposition"])
+        assert_match(/inline;.*\.ics/, response.headers["Content-Disposition"])
         saved = Icalendar::Calendar.parse(response.body).sole.events.sole
         assert_equal [ event["title"], event["location"], url, url ], [ saved.summary, saved.location, saved.url, saved.uid ].map(&:to_s)
         assert_equal "20261003T230000Z", saved.dtstart.value_ical
         assert_equal "20261004T020000Z", saved.dtend.value_ical
+      end
+    end
+  end
+
+  test "mobile calendar and map actions hand off the same published event in the page and dialog" do
+    event = fixture("events").fetch("events").first.merge("location" => "Main St & River Rd")
+    @replies << publisher_response({ "schema_version" => 1, "timezone" => "America/Chicago", "event" => event })
+    path = event_path(event["id"])
+    query = "Main%20St%20%26%20River%20Rd"
+
+    travel_to Time.utc(2026, 10, 1) do
+      using_feed do
+        [
+          [ { "User-Agent" => "iPhone" }, "ios", "https://maps.apple.com/?q=#{query}" ],
+          [ { "Sec-CH-UA-Platform" => '"Android"', "Turbo-Frame" => "event-details" }, "android", "geo:0,0?q=#{query}" ]
+        ].each do |headers, device, map|
+          get path, headers: headers
+          assert_response :success
+          assert_select ".event-details[data-event-device=?]", device
+          assert_select ".event-native-calendar[href=?][target=_top][type='text/calendar'][data-turbo=false]", event_calendar_path(event["id"]), text: "Add to calendar"
+          assert_select "a.event-map[href=?]", map, count: 1
+          assert_select ".event-location details", count: 0
+        end
       end
     end
   end

@@ -181,7 +181,7 @@ function googleCalendarURL(event, zone) {
   const [start, end] = calendarDates(event);
   const query = new URLSearchParams({ action: 'TEMPLATE', text: event.title, dates: `${start}/${end || start}`, details: calendarDetails(event), stz: zone, etz: zone });
   if (event.location) query.set('location', event.location);
-  return `https://calendar.google.com/calendar/r/eventedit?${query}`;
+  return `https://calendar.google.com/calendar/render?${query}`;
 }
 // Fold at 75 UTF-8 bytes, counting the leading space on each continuation.
 function foldCalendarLine(line) {
@@ -225,7 +225,15 @@ function renderCalendar(templates, data) {
   const calendar = months.size ? [...months.values()].map(values => fill(templates.calendar.month, values)).join('') + templates.calendar.note : templates.calendar.empty;
   return fill(templates.calendar.shell, { calendar });
 }
-function renderDetail(templates, data, modal, now) {
+function eventLinkDevice(headers) {
+  const agent = headers.get('User-Agent') || '';
+  const platform = headers.get('Sec-CH-UA-Platform');
+  if (platform === '"Android"' || /Android/i.test(agent)) return 'android';
+  if (platform === '"iOS"' || /iPhone|iPad|iPod|Macintosh.*Mobile\//i.test(agent)) return 'ios';
+  return 'desktop';
+}
+
+function renderDetail(templates, data, modal, now, device) {
   const event = data.event;
   let state = 'active';
   if (event.cancelled) state = 'cancelled';
@@ -235,11 +243,15 @@ function renderDetail(templates, data, modal, now) {
   else if (event.ends_at) timing = 'with_end';
   const kind = modal ? 'modal' : 'page';
   const values = eventValues(event, data.timezone);
+  values.device = device;
   values.location_html = escapeHTML(event.location?.trim() || 'To be confirmed');
   const place = event.location?.trim().replace(/\s+/g, ' ');
   if (place && !templates.non_map_locations.some(pattern => new RegExp(pattern, 'i').test(place))) {
-    const query = new URLSearchParams({ api: '1', query: place });
-    values.location_html = fill(templates.details.mapped_location, { ...values, map_url: escapeHTML(`https://www.google.com/maps/search/?${query}`) });
+    const query = encodeURIComponent(place);
+    values.location_html = fill(templates.details.mapped_location, { ...values,
+      map_url: escapeHTML(templates.event_map_prefixes[device] + query),
+      ios_map_url: escapeHTML(templates.event_map_prefixes.ios + query)
+    });
   }
   values.calendar_actions = canSaveEvent(event, data.timezone, now)
     ? fill(templates.details.add_to_calendar, { ...values, google_url: escapeHTML(googleCalendarURL(event, data.timezone)) }) : '';
@@ -287,13 +299,13 @@ export function createWorker(templates, { fetcher = (...args) => fetch(...args),
           const file = eventCalendarFile(data.event);
           requireValid(clock() < deadline);
           headers['Content-Type'] = 'text/calendar; charset=utf-8';
-          headers['Content-Disposition'] = 'attachment; filename="post-165-event.ics"';
+          headers['Content-Disposition'] = 'inline; filename="post-165-event.ics"';
           return respond(file);
         }
         let html;
         if (path === '/') html = renderHome(templates, data, clock());
         else if (path === '/events') html = renderCalendar(templates, data);
-        else html = renderDetail(templates, data, modal, clock());
+        else html = renderDetail(templates, data, modal, clock(), eventLinkDevice(request.headers));
         requireValid(clock() < deadline);
         return respond(html);
       } catch (error) {

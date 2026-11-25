@@ -43,7 +43,7 @@
   border-width: 0 1.5px 1.5px 0;
   transform: rotate(45deg);
 }
-.event-calendar[open] summary::after { margin-top: 3px; transform: rotate(225deg); }
+.event-calendar-picker[open] summary::after { margin-top: 3px; transform: rotate(225deg); }
 .event-tool:hover > span, .event-map:hover .event-tool > span { text-decoration-thickness: 2px; }
 .event-tool:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
 .event-calendar-options {
@@ -85,7 +85,9 @@
     align-items: flex-start;
     gap: 0;
   }
-  .event-calendar-options { inset-inline: 0 auto; }
+  .event-calendar { position: static; }
+  .event-calendar { inline-size: auto; }
+  .event-calendar-options { position: static; margin-top: 4px; box-shadow: none; }
 }
 
 /* Use the space beside short fact headings before wrapping actions below the value. */
@@ -96,12 +98,26 @@
     padding-block: 7px 14px;
   }
   .event-details > div:has(.event-tool) dt {
+    position: absolute;
+    inset-block-start: 7px;
+    inset-inline-start: 0;
     display: flex;
     align-items: center;
     min-height: 44px;
     max-width: 4em;
   }
-  .event-calendar, .event-map .event-tool { position: absolute; inset-block-start: 7px; inset-inline-end: 0; }
-  .event-calendar-options { inset-inline: auto 0; }
+  .event-details .event-when { align-items: stretch; }
+  .event-calendar { order: -1; }
+  .event-details .event-map { flex-direction: column-reverse; align-items: stretch; }
+  .event-calendar .event-tool, .event-map .event-tool {
+    display: grid;
+    margin-inline-start: auto;
+    inline-size: min(11rem, calc(100% - 4em));
+  }
+  .event-calendar-options { margin-inline-start: auto; }
   .event-map:focus-visible .event-tool { outline: 3px solid var(--blue); outline-offset: 2px; }
 }
+
+/* Use the phone's event handler even on wide tablets and keep the picker on narrow desktop windows. */
+.event-details[data-event-device="desktop"] .event-native-calendar,
+.event-details:not([data-event-device="desktop"]) .event-calendar-picker { display: none; }

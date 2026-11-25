@@ -12,7 +12,8 @@ class EventCalendarsController < ApplicationController
     body = calendar.to_ical
     raise Publishing::Unavailable if content.expired?
 
-    send_data body, filename: "post-165-event.ics", type: "text/calendar; charset=utf-8"
+    filename = event.title.parameterize.first(75).presence || "post-165-event"
+    send_data body, filename: "#{filename}.ics", disposition: "inline", type: "text/calendar; charset=utf-8"
   rescue Publishing::NotFound
     head :not_found
   rescue Publishing::Unavailable

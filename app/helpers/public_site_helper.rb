@@ -1,5 +1,10 @@
 module PublicSiteHelper
   PUBLIC_ORIGIN = "https://wipost165.org".freeze
+  EVENT_MAP_PREFIXES = {
+    android: "geo:0,0?q=",
+    ios: "https://maps.apple.com/?q=",
+    desktop: "https://www.google.com/maps/search/?api=1&query="
+  }.freeze
   NON_MAP_LOCATIONS = [
     /\b(t\.?b\.?[adc]|unknown|undecided|pending|(to be|will be) (confirmed|determined|announced|decided|advised)|not (yet )?(recorded|set|known|confirmed|specified))\b/i,
     %r{^(n/?a|none|not applicable|[-?–—]+|teams)$}i,
@@ -184,16 +189,26 @@ module PublicSiteHelper
     event.starts_at.strftime("%A, %B %-d, %Y · %-I:%M %p %Z")
   end
 
-  def event_map_url(location)
+  def event_link_device
+    platform = request.headers["Sec-CH-UA-Platform"]
+    agent = request.user_agent.to_s
+    return :android if platform == '"Android"' || agent.match?(/Android/i)
+    return :ios if platform == '"iOS"' || agent.match?(%r{iPhone|iPad|iPod|Macintosh.*Mobile/}i)
+
+    :desktop
+  end
+
+  def event_map_urls(location)
     place = location.to_s.squish
     return if place.blank? || NON_MAP_LOCATIONS.any? { |pattern| pattern.match?(place) }
 
-    "https://www.google.com/maps/search/?api=1&query=#{ERB::Util.url_encode(place)}"
+    query = ERB::Util.url_encode(place)
+    EVENT_MAP_PREFIXES.transform_values { |prefix| "#{prefix}#{query}" }
   end
 
   def event_google_calendar_url(event)
     calendar = EventCalendar.new(event, url: public_canonical_url)
-    "https://calendar.google.com/calendar/r/eventedit?#{calendar.google_query}"
+    "https://calendar.google.com/calendar/render?#{calendar.google_query}"
   end
 
   private
