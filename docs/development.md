@@ -94,6 +94,12 @@ modal requests. Direct URLs and JavaScript-disabled links still render full even
 pages. Hover prefetch is disabled on these cards so a full-page response cannot
 be substituted for the modal fragment. Closing clears the frame; reopening reads
 through the same authenticated client and freshness checks.
+Both editions offer a one-event Apple Calendar download and a prefilled Google
+Calendar entry on eligible event details. Both include the public detail URL for
+schedule changes. All-day entries retain their exclusive end date. Start-only
+entries identify the missing end time. The download rechecks the published
+event on each request. Physical locations link to a Google Maps search using
+the published place text, with no API key or embedded map.
 If content expires while other request work is running, the page is replaced with
 an unavailable state rather than returning expired dynamic content.
 

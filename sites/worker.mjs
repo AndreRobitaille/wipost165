@@ -167,6 +167,48 @@ function isPast(event, zone, now) {
   if (event.all_day) return (event.ends_on_exclusive || addDays(event.starts_on, 1)) <= today;
   return localDate(event.ends_at || event.starts_at, zone) < today;
 }
+function canSaveEvent(event, zone, now) {
+  return !event.cancelled && (event.all_day ? !isPast(event, zone, now) : Date.parse(event.ends_at || event.starts_at) >= now);
+}
+const calendarTimestamp = value => new Date(value).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
+const publicEventURL = event => `https://wipost165.org/events/${encodeURIComponent(event.id)}`;
+const calendarDetails = event => (event.all_day || event.ends_at ? '' : 'End time not specified.\n') + publicEventURL(event);
+function calendarDates(event) {
+  if (event.all_day) return [event.starts_on, event.ends_on_exclusive || addDays(event.starts_on, 1)].map(date => date.replaceAll('-', ''));
+  return [calendarTimestamp(event.starts_at), Date.parse(event.ends_at) > Date.parse(event.starts_at) ? calendarTimestamp(event.ends_at) : null];
+}
+function googleCalendarURL(event, zone) {
+  const [start, end] = calendarDates(event);
+  const query = new URLSearchParams({ action: 'TEMPLATE', text: event.title, dates: `${start}/${end || start}`, details: calendarDetails(event), stz: zone, etz: zone });
+  if (event.location) query.set('location', event.location);
+  return `https://calendar.google.com/calendar/r/eventedit?${query}`;
+}
+// Fold at 75 UTF-8 bytes, counting the leading space on each continuation.
+function foldCalendarLine(line) {
+  const encoder = new TextEncoder();
+  if (encoder.encode(line).length <= 75) return line;
+  let result = '', length = 0;
+  for (const char of line) {
+    const size = encoder.encode(char).length;
+    if (length + size > 75) { result += '\r\n '; length = 1; }
+    result += char;
+    length += size;
+  }
+  return result;
+}
+function eventCalendarFile(event) {
+  const text = value => value.replace(/[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g, '').replace(/[\\;,]/g, '\\$&').replace(/\r\n?|\n/g, '\\n');
+  const [start, end] = calendarDates(event);
+  const type = event.all_day ? ';VALUE=DATE' : '';
+  const url = publicEventURL(event);
+  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//American Legion Post 165//Public Calendar//EN', 'BEGIN:VEVENT',
+    `UID:${url}`, `DTSTAMP:${calendarTimestamp(event.updated_at)}`, `DTSTART${type}:${start}`];
+  if (end) lines.push(`DTEND${type}:${end}`);
+  lines.push(`SUMMARY:${text(event.title)}`);
+  if (event.location) lines.push(`LOCATION:${text(event.location)}`);
+  lines.push(`URL:${url}`, `DESCRIPTION:${text(calendarDetails(event))}`, 'END:VEVENT', 'END:VCALENDAR', '');
+  return lines.map(foldCalendarLine).join('\r\n');
+}
 function renderHome(templates, data, now) {
   const event = data.events.find(event => !event.cancelled && (event.all_day ? !isPast(event, data.timezone, now) : Date.parse(event.starts_at) > now));
   const invitation = event ? fill(templates.home.invitation, eventValues(event, data.timezone)) : templates.home.empty;
@@ -193,7 +235,14 @@ function renderDetail(templates, data, modal, now) {
   else if (event.ends_at) timing = 'with_end';
   const kind = modal ? 'modal' : 'page';
   const values = eventValues(event, data.timezone);
-  if (!event.location?.trim()) values.location = 'To be confirmed';
+  values.location_html = escapeHTML(event.location?.trim() || 'To be confirmed');
+  const place = event.location?.trim().replace(/\s+/g, ' ');
+  if (place && !templates.non_map_locations.some(pattern => new RegExp(pattern, 'i').test(place))) {
+    const query = new URLSearchParams({ api: '1', query: place });
+    values.location_html = fill(templates.details.mapped_location, { ...values, map_url: escapeHTML(`https://www.google.com/maps/search/?${query}`) });
+  }
+  values.calendar_actions = canSaveEvent(event, data.timezone, now)
+    ? fill(templates.details.add_to_calendar, { ...values, google_url: escapeHTML(googleCalendarURL(event, data.timezone)) }) : '';
   const details = fill(templates.details[`${state}_${timing}_${kind}`], values);
   return fill(templates.details[`${kind}_shell`], { details });
 }
@@ -221,7 +270,8 @@ export function createWorker(templates, { fetcher = (...args) => fetch(...args),
         headers.Location = path.slice(0, -5);
         return respond('', 302);
       }
-      const match = path.match(/^\/events\/([^/]+)$/);
+      const match = path.match(/^\/events\/([^/]+)(\/calendar\.ics)?$/);
+      const download = Boolean(match?.[2]);
       const modal = !!match && request.headers.get('Turbo-Frame') === 'event-details';
       if (path !== '/' && path !== '/events' && !match) return respond(templates.errors['404_page'], 404);
       try {
@@ -231,6 +281,15 @@ export function createWorker(templates, { fetcher = (...args) => fetch(...args),
         }
         const from = localDate(clock(), POST_ZONE);
         const { data, deadline } = await loadFeed(env.PUBLISHER_TOKEN, { from, to: addDays(from, 90) }, id, fetcher, clock);
+        if (id !== null && /\bfunerals?\b/i.test(data.event.title)) throw new NotFound();
+        if (download) {
+          if (!canSaveEvent(data.event, data.timezone, clock())) throw new NotFound();
+          const file = eventCalendarFile(data.event);
+          requireValid(clock() < deadline);
+          headers['Content-Type'] = 'text/calendar; charset=utf-8';
+          headers['Content-Disposition'] = 'attachment; filename="post-165-event.ics"';
+          return respond(file);
+        }
         let html;
         if (path === '/') html = renderHome(templates, data, clock());
         else if (path === '/events') html = renderCalendar(templates, data);

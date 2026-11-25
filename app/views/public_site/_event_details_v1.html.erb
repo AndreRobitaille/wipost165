@@ -6,11 +6,7 @@
   <% elsif @event.past? %>
     <p class="event-notice">This event has already taken place.</p>
   <% end %>
-  <dl class="event-details">
-    <div><dt>When</dt><dd><% if @event.starts_at %><%= time_tag @event.starts_at, event_time(@event) %><% else %><%= event_time(@event) %><% end %><% if @event.ends_at %><small>Until <%= @event.ends_at.strftime("%b %-d, %-I:%M %p %Z") %></small><% end %></dd></div>
-    <div><dt>Where</dt><dd><%= @event.location_name.presence || "To be confirmed" %></dd></div>
-    <div><dt>Guests &amp; children</dt><dd>Please check with the Post before making plans.</dd></div>
-  </dl>
+  <%= render "event_facts", event: @event %>
   <div class="body-copy compact"><%= simple_format(h(@event.description), {}, sanitize: false) %></div>
   <div class="launch-detail-actions">
     <% unless @event.cancelled? || @event.past? %><%= link_to "Plan your first visit →", visit_path, class: "main-action", data: { turbo_frame: "_top" } %><% end %>

@@ -32,6 +32,12 @@ class PublicOccasion
   def all_day? = @all_day == true
   def date = starts_on || starts_at&.to_date
 
+  def add_to_calendar?
+    return false if cancelled? || date.nil?
+
+    all_day? ? !past? : (ends_at || starts_at) >= Time.current
+  end
+
   def upcoming?
     return false if cancelled? || date.nil?
 

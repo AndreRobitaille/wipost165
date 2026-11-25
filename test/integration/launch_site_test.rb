@@ -30,6 +30,103 @@ class LaunchSiteTest < ActionDispatch::IntegrationTest
     fixture("events").merge("from" => Date.current.iso8601, "to" => (Date.current + 90).iso8601, "events" => events)
   end
 
+  test "calendar and map links use the published occasion on direct pages and in the dialog" do
+    event = fixture("events").fetch("events").first.merge(
+      "title" => "Brat fry, lunch & music", "location" => "Riverside Park, 1 Main St, Two Rivers, WI",
+      "ends_at" => "2026-10-03T21:00:00-05:00")
+    path = event_path(event["id"])
+    url = "https://wipost165.org#{path}"
+    @replies << publisher_response({ "schema_version" => 1, "timezone" => "America/Chicago", "event" => event })
+
+    travel_to Time.utc(2026, 10, 3, 23, 30) do
+      using_feed do
+        [ {}, { "Turbo-Frame" => "event-details" } ].each do |headers|
+          get path, headers: headers
+          assert_select ".event-when details:not([open]) > summary span", text: "Add to calendar"
+          assert_select ".event-calendar a[href=?][data-turbo=false]", event_calendar_path(event["id"]) do
+            assert_select "span", text: "Apple Calendar"
+            assert_select ".event-calendar-hint", text: "iPhone or iPad"
+          end
+          assert_select ".event-calendar a[href^='https://calendar.google.com'] .event-calendar-hint", text: "Android or Google account"
+          google = css_select(".event-calendar a").last
+          query = Rack::Utils.parse_query(URI(google["href"]).query)
+          assert_equal "calendar.google.com", URI(google["href"]).host
+          assert_equal [ event["title"], "20261003T230000Z/20261004T020000Z", event["location"], url ],
+            query.values_at("text", "dates", "location", "details")
+          map = URI(css_select(".event-location a").first["href"])
+          assert_select ".event-map[aria-label=?] .event-tool", "View on map — #{event["location"]}", text: "View on map"
+          assert_equal "www.google.com", map.host
+          assert_equal({ "api" => "1", "query" => event["location"] }, Rack::Utils.parse_query(map.query))
+        end
+        get event_calendar_path(event["id"])
+        assert_response :success
+        assert_equal "text/calendar", response.media_type
+        assert_equal "no-store", response.headers["Cache-Control"]
+        assert_match(/attachment;.*\.ics/, response.headers["Content-Disposition"])
+        saved = Icalendar::Calendar.parse(response.body).sole.events.sole
+        assert_equal [ event["title"], event["location"], url, url ], [ saved.summary, saved.location, saved.url, saved.uid ].map(&:to_s)
+        assert_equal "20261003T230000Z", saved.dtstart.value_ical
+        assert_equal "20261004T020000Z", saved.dtend.value_ical
+      end
+    end
+  end
+
+  test "all-day and point events preserve their timing and literal text" do
+    timed, all_day = fixture("events").fetch("events")
+    timed["title"] = "Back\\nine; " + "café, " * 18 + "\rSecond line"
+    travel_to Time.utc(2026, 10, 1) do
+      [ timed, all_day.merge("cancelled" => false) ].each do |event|
+        @replies << publisher_response({ "schema_version" => 1, "timezone" => "America/Chicago", "event" => event })
+        using_feed { get event_calendar_path(event["id"]) }
+        assert_response :success
+        saved = Icalendar::Calendar.parse(response.body).sole.events.sole
+        if event["all_day"]
+          assert_includes response.body, "DTSTART;VALUE=DATE:20261010\r\n"
+          assert_includes response.body, "DTEND;VALUE=DATE:20261012\r\n"
+        else
+          assert_equal timed["title"].tr("\r", "\n"), saved.summary.to_s
+          assert_nil saved.dtend
+          assert_includes saved.description.to_s, "End time not specified."
+        end
+      end
+    end
+  end
+
+  test "unconfirmed and remote locations are readable without a map destination" do
+    event = fixture("events").fetch("events").first
+    [ nil, "Location TBD", "N/A", "Microsoft Teams", "https://meet.example/room" ].each_with_index do |place, i|
+      record = event.merge("id" => "place-#{i}", "location" => place)
+      @replies << publisher_response({ "schema_version" => 1, "timezone" => "America/Chicago", "event" => record })
+      using_feed { get event_path(record["id"]), headers: { "Turbo-Frame" => "event-details" } }
+      assert_select ".event-location", text: place || "To be confirmed"
+      assert_select ".event-location a", count: 0
+    end
+  end
+
+  test "unavailable, withheld, cancelled, past, and preview events cannot be downloaded" do
+    event = fixture("events").fetch("events").first
+    travel_to Time.utc(2026, 10, 3, 23, 30) do
+      [ { "id" => "past", "starts_at" => event.fetch("starts_at") },
+        { "id" => "cancelled", "cancelled" => true },
+        { "id" => "withheld", "category" => "honor_funeral" } ].each do |changes|
+        record = event.merge("starts_at" => "2026-10-04T17:00:00-05:00").merge(changes)
+        @replies << publisher_response({ "schema_version" => 1, "timezone" => "America/Chicago", "event" => record })
+        using_feed { get event_calendar_path(record["id"]) }
+        assert_response :not_found
+        assert_empty response.body
+      end
+      @replies << publisher_response(nil, status: 404)
+      using_feed { get event_calendar_path("withdrawn") }
+      assert_response :not_found
+      @replies << Publishing::Unavailable.new("offline")
+      using_feed { get event_calendar_path("unavailable") }
+      assert_response :service_unavailable
+      Rails.configuration.x.public_site_preview = true
+      using_feed { get event_calendar_path("example-gathering") }
+      assert_response :not_found
+    end
+  end
+
   test "launch home selects the earliest active occasion and only reads events" do
     travel_to Time.utc(2026, 10, 1, 12) do
       events = fixture("events").fetch("events")

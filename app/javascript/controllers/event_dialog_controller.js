@@ -59,7 +59,8 @@ export default class extends Controller {
   trapFocus(event) {
     if (event.key !== "Tab") return
 
-    const controls = this.dialogTarget.querySelectorAll("a[href], button:not([disabled])")
+    const controls = Array.from(this.dialogTarget.querySelectorAll("summary, a[href], button:not([disabled])"))
+      .filter(control => control.getClientRects().length)
     const first = controls[0]
     const last = controls[controls.length - 1]
     if (controls.length === 1 || (event.shiftKey && document.activeElement === first) || (!event.shiftKey && document.activeElement === last)) {

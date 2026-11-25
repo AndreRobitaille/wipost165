@@ -116,6 +116,33 @@ test('all-day exclusive ends, DST times, past state and unknown locations match 
   assert.match(result.html, /already taken place/);
 });
 
+test('published details and downloads use the same calendar dates, location and canonical URL', async () => {
+  const path = '/events/public-1';
+  const event = { ...baseEvent, title: 'Dinner, music & friends', location: 'Park, 12 Main St', ends_at: '2026-10-24T10:30:00-05:00' };
+  const fetchEvent = async () => upstream(detail(event));
+  const { html } = await request(path, fetchEvent);
+  assert.match(html, /href="\/events\/public-1\/calendar\.ics"/);
+  const href = html.match(/href="(https:\/\/calendar\.google\.com[^"]+)"/)[1].replaceAll('&amp;', '&');
+  const google = new URL(href);
+  assert.equal(google.searchParams.get('dates'), '20261024T133000Z/20261024T153000Z');
+  assert.equal(google.searchParams.get('details'), 'https://wipost165.org/events/public-1');
+  assert.equal(google.searchParams.get('location'), event.location);
+  assert.match(html, /www\.google\.com\/maps\/search\/\?api=1&amp;query=Park%2C\+12\+Main\+St/);
+  const download = await request(path + '/calendar.ics', fetchEvent);
+  assert.equal(download.response.headers.get('content-type'), 'text/calendar; charset=utf-8');
+  assert.match(download.html, /DTSTART:20261024T133000Z\r\nDTEND:20261024T153000Z/);
+  assert.ok(download.html.includes('SUMMARY:Dinner\\, music & friends'));
+  const allDay = { ...baseEvent, all_day: true, starts_at: null, starts_on: '2026-11-01', ends_on_exclusive: '2026-11-03', location: 'To be confirmed' };
+  const allDayFile = await request(path + '/calendar.ics', async () => upstream(detail(allDay)));
+  assert.match(allDayFile.html, /DTSTART;VALUE=DATE:20261101\r\nDTEND;VALUE=DATE:20261103/);
+  assert.doesNotMatch((await request(path, async () => upstream(detail(allDay)))).html, /View on map/);
+  for (const changes of [{ cancelled: true }, { starts_at: '2026-10-07T08:00:00-05:00' }, { title: 'Honor funeral' }]) {
+    const load = async () => upstream(detail({ ...baseEvent, ...changes }));
+    assert.doesNotMatch((await request(path, load)).html, /Apple Calendar|Google Calendar/);
+    assert.equal((await request(path + '/calendar.ics', load)).response.status, 404);
+  }
+});
+
 test('empty calendar differs from unavailable and unavailable has no sample fallback', async () => {
   assert.match((await request('/events', async () => upstream(feed([])))).html, /No upcoming public dates/);
   for (const status of [401, 429, 500, 503, 302]) {

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     constraints: { id: /[A-Za-z0-9_-]+/, revision: /[A-Za-z0-9_-]+/, size: /small|large/ }, format: false
   get "people/:slug", to: "public_site#person", as: :person
   get "events", to: "public_site#events", as: :events
+  get "events/:slug/calendar.ics", to: "event_calendars#show", as: :event_calendar, format: false
   get "events/:slug", to: "public_site#event", as: :event
   get "visit", to: "public_site#visit", as: :visit
   get "why-the-legion", to: "public_site#why_legion", as: :why_legion

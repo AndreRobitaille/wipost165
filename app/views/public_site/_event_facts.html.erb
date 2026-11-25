@@ -1,0 +1,50 @@
+<dl class="event-details">
+  <div>
+    <dt>When</dt>
+    <dd class="event-when">
+      <span>
+        <% if event.starts_at %><%= time_tag event.starts_at, event_time(event) %><% else %><%= event_time(event) %><% end %>
+        <% if event.ends_at %><small>Until <%= event.ends_at.strftime("%b %-d, %-I:%M %p %Z") %></small><% end %>
+      </span>
+      <% if !preview_mode? && event.add_to_calendar? %>
+        <details class="event-calendar" data-controller="calendar-options" data-action="click@document->calendar-options#dismiss focusin@document->calendar-options#dismiss keydown.esc->calendar-options#escape">
+          <summary class="event-tool">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M12 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v6M7 2v4m9-4v4M3 9h17m-2 5v8m-4-4h8"/>
+            </svg>
+            <span>Add to calendar</span>
+          </summary>
+          <div class="event-calendar-options">
+            <%= link_to event_calendar_path(event), data: { turbo: false } do %>
+              <span>Apple Calendar</span>
+              <span class="event-calendar-hint">iPhone or iPad</span>
+            <% end %>
+            <%= link_to event_google_calendar_url(event), data: { turbo: false } do %>
+              <span>Google Calendar</span>
+              <span class="event-calendar-hint">Android or Google account</span>
+            <% end %>
+          </div>
+        </details>
+      <% end %>
+    </dd>
+  </div>
+  <div>
+    <dt>Where</dt>
+    <dd class="event-location">
+      <% if (map_url = event_map_url(event.location_name)) %>
+        <%= link_to map_url, class: "event-map", aria: { label: "View on map — #{event.location_name}" }, data: { turbo: false } do %>
+          <span><%= event.location_name %></span>
+          <span class="event-tool" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/>
+            </svg>
+            <span>View on map</span>
+          </span>
+        <% end %>
+      <% else %>
+        <%= event.location_name.presence || "To be confirmed" %>
+      <% end %>
+    </dd>
+  </div>
+  <div><dt>Guests &amp; children</dt><dd>Please check with the Post before making plans.</dd></div>
+</dl>
